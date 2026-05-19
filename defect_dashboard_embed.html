@@ -1,0 +1,1119 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>결함 대시보드</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #0f172a;
+      --panel: #111c33;
+      --panel2: #16233d;
+      --line: rgba(148, 163, 184, .22);
+      --text: #e5edf8;
+      --muted: #96a5ba;
+      --blue: #38bdf8;
+      --green: #34d399;
+      --yellow: #fbbf24;
+      --red: #fb7185;
+      --violet: #a78bfa;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      letter-spacing: 0;
+    }
+    .wrap { width: 100%; min-height: 100vh; padding: 24px; }
+    header {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 16px;
+      align-items: start;
+      margin-bottom: 18px;
+    }
+    h1 { margin: 0 0 8px; font-size: 26px; font-weight: 760; }
+    .lead { margin: 0; max-width: 980px; color: var(--muted); font-size: 14px; line-height: 1.55; }
+    .notice { margin-top: 8px; color: #c8d3e3; font-size: 12px; }
+    .stamp { text-align: right; color: var(--muted); font-size: 12px; white-space: nowrap; }
+    .tabs { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 18px; }
+    .tab, .range-btn {
+      border: 1px solid var(--line);
+      background: #0b1220;
+      color: var(--muted);
+      padding: 9px 13px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 13px;
+    }
+    .tab.active, .range-btn.active { color: var(--text); border-color: rgba(56, 189, 248, .7); background: rgba(56, 189, 248, .12); }
+    .panel-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 12px; }
+    .panel-head h2 { margin: 0; }
+    .range-controls { display: flex; gap: 6px; }
+    .range-btn { padding: 7px 10px; font-size: 12px; }
+    .summary { display: grid; grid-template-columns: repeat(7, minmax(130px, 1fr)); gap: 10px; margin-bottom: 18px; }
+    .card, .panel { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; box-shadow: 0 12px 30px rgba(0,0,0,.18); }
+    .card { padding: 14px; min-height: 94px; }
+    .card span { display: block; color: var(--muted); font-size: 12px; margin-bottom: 9px; }
+    .card strong { display: block; font-size: 29px; line-height: 1; }
+    .card em { display: block; margin-top: 8px; color: var(--muted); font-size: 12px; font-style: normal; }
+    .up { color: var(--red) !important; }
+    .down { color: var(--green) !important; }
+    .grid { display: grid; grid-template-columns: minmax(360px, .95fr) minmax(520px, 1.45fr); gap: 14px; }
+    .grid.three { grid-template-columns: repeat(3, 1fr); }
+    .panel { padding: 16px; min-width: 0; }
+    .panel h2 { margin: 0 0 12px; font-size: 16px; font-weight: 720; }
+    .view { display: none; }
+    .view.active { display: block; }
+    .funnel { display: grid; gap: 8px; align-items: center; justify-items: center; padding: 4px 0; }
+    .funnel-row {
+      display: grid;
+      grid-template-columns: 86px 1fr 76px;
+      align-items: center;
+      width: 100%;
+      gap: 10px;
+      color: #d8e4f2;
+      font-size: 13px;
+    }
+    .funnel-bar {
+      height: 38px;
+      border-radius: 6px;
+      background: linear-gradient(90deg, rgba(56,189,248,.9), rgba(52,211,153,.86));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #06111f;
+      font-weight: 800;
+      min-width: 72px;
+    }
+    .chart { height: 270px; display: flex; align-items: end; gap: 8px; padding-top: 8px; border-bottom: 1px solid var(--line); overflow: hidden; }
+    .day { flex: 1; min-width: 8px; display: grid; grid-template-rows: 1fr auto; gap: 6px; height: 100%; }
+    .bars { display: flex; gap: 3px; align-items: end; height: 100%; }
+    .bar { flex: 1; min-height: 2px; border-radius: 3px 3px 0 0; }
+    .bar.new { background: var(--blue); }
+    .bar.fixed { background: var(--yellow); }
+    .bar.closed { background: var(--green); }
+    .label { color: var(--muted); font-size: 10px; text-align: center; }
+    .legend { display: flex; gap: 12px; margin-top: 10px; color: var(--muted); font-size: 12px; }
+    .dot { width: 9px; height: 9px; display: inline-block; border-radius: 50%; margin-right: 5px; }
+    .version-list, .dist-list { display: grid; gap: 9px; }
+    .row { display: grid; grid-template-columns: 150px 1fr 62px; gap: 10px; align-items: center; font-size: 13px; }
+    .track { height: 10px; background: rgba(148,163,184,.16); border-radius: 999px; overflow: hidden; }
+    .fill { height: 100%; background: linear-gradient(90deg, var(--blue), var(--green)); }
+    .meta { color: var(--muted); font-size: 12px; }
+    .heatmap { display: grid; grid-template-columns: repeat(30, 1fr); gap: 4px; }
+    .tile { aspect-ratio: 1; border-radius: 4px; background: #172036; border: 1px solid rgba(148,163,184,.12); }
+    .tile[data-level="1"] { background: rgba(56,189,248,.28); }
+    .tile[data-level="2"] { background: rgba(56,189,248,.48); }
+    .tile[data-level="3"] { background: rgba(251,191,36,.68); }
+    .tile[data-level="4"] { background: rgba(251,113,133,.84); }
+    table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    th, td { padding: 11px 9px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+    th { color: var(--muted); font-size: 12px; font-weight: 650; }
+    td a { color: var(--text); text-decoration: none; }
+    .pill { display: inline-flex; max-width: 150px; padding: 4px 8px; border-radius: 999px; background: rgba(56,189,248,.14); color: #bfeeff; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .empty { color: var(--muted); padding: 20px; text-align: center; border: 1px dashed var(--line); border-radius: 8px; }
+    @media (max-width: 1100px) {
+      .summary { grid-template-columns: repeat(4, 1fr); }
+      .grid, .grid.three { grid-template-columns: 1fr; }
+      header { grid-template-columns: 1fr; }
+      .stamp { text-align: left; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div>
+        <h1>결함 대시보드</h1>
+        <p class="lead">본 대시보드는 결함 등록, 검토, 배정, 수정 및 종료 현황을 기반으로 서비스 품질 흐름을 시각화한 내부 관리자 전용 화면입니다.</p>
+        <div class="notice">승인된 담당자 외 접근·열람·수정·공유를 제한하며, 모든 결함 정보 및 이력 데이터는 내부 품질 관리 목적으로만 사용됩니다.</div>
+      </div>
+      <div class="stamp" id="stamp"></div>
+    </header>
+    <nav class="tabs" aria-label="대시보드 탭">
+      <button class="tab active" data-view="overview">흐름 요약</button>
+      <button class="tab" data-view="trend">일별 추이</button>
+      <button class="tab" data-view="version">버전/분포</button>
+      <button class="tab" data-view="recent">최근 결함</button>
+    </nav>
+    <section class="summary" id="summary"></section>
+    <main>
+      <section class="view active" id="overview">
+        <div class="grid">
+          <article class="panel"><h2>결함 처리 퍼널</h2><div class="funnel" id="funnel"></div></article>
+          <article class="panel"><h2>최근 30일 등록 히트맵</h2><div class="heatmap" id="heatmap"></div></article>
+        </div>
+      </section>
+      <section class="view" id="trend">
+        <article class="panel"><div class="panel-head"><h2>일별 결함 변동 추이</h2><div class="range-controls"><button class="range-btn" data-days="7">7일</button><button class="range-btn" data-days="14">14일</button><button class="range-btn active" data-days="30">30일</button></div></div><div class="chart" id="dailyChart"></div><div class="legend"><span><i class="dot" style="background:var(--blue)"></i>신규</span><span><i class="dot" style="background:var(--yellow)"></i>수정완료</span><span><i class="dot" style="background:var(--green)"></i>종료</span></div><div class="meta" id="trendNote" style="margin-top:10px"></div></article>
+      </section>
+      <section class="view" id="version">
+        <div class="grid">
+          <article class="panel"><h2>버전별 결함 추이</h2><div class="version-list" id="versions"></div></article>
+          <article class="panel"><h2>상태/심각도/우선순위/OS 분포</h2><div class="grid three" id="distributions"></div></article>
+        </div>
+      </section>
+      <section class="view" id="recent">
+        <article class="panel"><h2>최근 등록 결함 10건</h2><div id="recentList"></div></article>
+      </section>
+    </main>
+  </div>
+  <script id="dashboard-data" type="application/json">{
+  "generatedAt": "2026-05-19T17:29:02+09:00",
+  "days": 30,
+  "summary": {
+    "total": 607,
+    "new": 110,
+    "inProgress": 7,
+    "fixed": 0,
+    "closed": 367,
+    "todayNew": 2,
+    "newDelta": 1
+  },
+  "funnel": [
+    {
+      "stage": "등록",
+      "count": 110,
+      "rate": 18.1,
+      "width": 100
+    },
+    {
+      "stage": "검토",
+      "count": 0,
+      "rate": 0.0,
+      "width": 93
+    },
+    {
+      "stage": "배정",
+      "count": 4,
+      "rate": 0.7,
+      "width": 86
+    },
+    {
+      "stage": "진행중",
+      "count": 7,
+      "rate": 1.2,
+      "width": 79
+    },
+    {
+      "stage": "수정완료",
+      "count": 0,
+      "rate": 0.0,
+      "width": 72
+    },
+    {
+      "stage": "QA확인",
+      "count": 119,
+      "rate": 19.6,
+      "width": 65
+    },
+    {
+      "stage": "종료",
+      "count": 367,
+      "rate": 60.5,
+      "width": 58
+    }
+  ],
+  "daily": [
+    {
+      "date": "2026-04-20",
+      "new": 0,
+      "fixed": 0,
+      "closed": 0,
+      "deltaNew": 0
+    },
+    {
+      "date": "2026-04-21",
+      "new": 0,
+      "fixed": 0,
+      "closed": 0,
+      "deltaNew": 0
+    },
+    {
+      "date": "2026-04-22",
+      "new": 0,
+      "fixed": 0,
+      "closed": 0,
+      "deltaNew": 0
+    },
+    {
+      "date": "2026-04-23",
+      "new": 0,
+      "fixed": 0,
+      "closed": 0,
+      "deltaNew": 0
+    },
+    {
+      "date": "2026-04-24",
+      "new": 0,
+      "fixed": 0,
+      "closed": 0,
+      "deltaNew": 0
+    },
+    {
+      "date": "2026-04-25",
+      "new": 0,
+      "fixed": 0,
+      "closed": 0,
+      "deltaNew": 0
+    },
+    {
+      "date": "2026-04-26",
+      "new": 0,
+      "fixed": 0,
+      "closed": 0,
+      "deltaNew": 0
+    },
+    {
+      "date": "2026-04-27",
+      "new": 0,
+      "fixed": 0,
+      "closed": 0,
+      "deltaNew": 0
+    },
+    {
+      "date": "2026-04-28",
+      "new": 0,
+      "fixed": 1,
+      "closed": 0,
+      "deltaNew": 0
+    },
+    {
+      "date": "2026-04-29",
+      "new": 16,
+      "fixed": 0,
+      "closed": 0,
+      "deltaNew": 16
+    },
+    {
+      "date": "2026-04-30",
+      "new": 18,
+      "fixed": 0,
+      "closed": 0,
+      "deltaNew": 2
+    },
+    {
+      "date": "2026-05-01",
+      "new": 0,
+      "fixed": 0,
+      "closed": 0,
+      "deltaNew": -18
+    },
+    {
+      "date": "2026-05-02",
+      "new": 0,
+      "fixed": 0,
+      "closed": 0,
+      "deltaNew": 0
+    },
+    {
+      "date": "2026-05-03",
+      "new": 0,
+      "fixed": 0,
+      "closed": 0,
+      "deltaNew": 0
+    },
+    {
+      "date": "2026-05-04",
+      "new": 9,
+      "fixed": 0,
+      "closed": 0,
+      "deltaNew": 9
+    },
+    {
+      "date": "2026-05-05",
+      "new": 0,
+      "fixed": 0,
+      "closed": 0,
+      "deltaNew": -9
+    },
+    {
+      "date": "2026-05-06",
+      "new": 8,
+      "fixed": 0,
+      "closed": 0,
+      "deltaNew": 8
+    },
+    {
+      "date": "2026-05-07",
+      "new": 30,
+      "fixed": 0,
+      "closed": 0,
+      "deltaNew": 22
+    },
+    {
+      "date": "2026-05-08",
+      "new": 22,
+      "fixed": 55,
+      "closed": 11,
+      "deltaNew": -8
+    },
+    {
+      "date": "2026-05-09",
+      "new": 0,
+      "fixed": 0,
+      "closed": 0,
+      "deltaNew": -22
+    },
+    {
+      "date": "2026-05-10",
+      "new": 0,
+      "fixed": 0,
+      "closed": 0,
+      "deltaNew": 0
+    },
+    {
+      "date": "2026-05-11",
+      "new": 5,
+      "fixed": 23,
+      "closed": 6,
+      "deltaNew": 5
+    },
+    {
+      "date": "2026-05-12",
+      "new": 60,
+      "fixed": 4,
+      "closed": 3,
+      "deltaNew": 55
+    },
+    {
+      "date": "2026-05-13",
+      "new": 11,
+      "fixed": 0,
+      "closed": 0,
+      "deltaNew": -49
+    },
+    {
+      "date": "2026-05-14",
+      "new": 19,
+      "fixed": 2,
+      "closed": 2,
+      "deltaNew": 8
+    },
+    {
+      "date": "2026-05-15",
+      "new": 11,
+      "fixed": 13,
+      "closed": 5,
+      "deltaNew": -8
+    },
+    {
+      "date": "2026-05-16",
+      "new": 0,
+      "fixed": 0,
+      "closed": 0,
+      "deltaNew": -11
+    },
+    {
+      "date": "2026-05-17",
+      "new": 0,
+      "fixed": 0,
+      "closed": 0,
+      "deltaNew": 0
+    },
+    {
+      "date": "2026-05-18",
+      "new": 1,
+      "fixed": 78,
+      "closed": 70,
+      "deltaNew": 1
+    },
+    {
+      "date": "2026-05-19",
+      "new": 2,
+      "fixed": 26,
+      "closed": 17,
+      "deltaNew": 1
+    }
+  ],
+  "versions": [
+    {
+      "version": "5.21.0",
+      "total": 110,
+      "criticalMajor": 41,
+      "doneRate": 90.0
+    },
+    {
+      "version": "[G.H]v1.0.0",
+      "total": 102,
+      "criticalMajor": 21,
+      "doneRate": 38.2
+    },
+    {
+      "version": "5.20.0",
+      "total": 82,
+      "criticalMajor": 19,
+      "doneRate": 97.6
+    },
+    {
+      "version": "5.17.0",
+      "total": 67,
+      "criticalMajor": 35,
+      "doneRate": 86.6
+    },
+    {
+      "version": "대출비교",
+      "total": 47,
+      "criticalMajor": 11,
+      "doneRate": 87.2
+    },
+    {
+      "version": "5.18.0",
+      "total": 36,
+      "criticalMajor": 10,
+      "doneRate": 86.1
+    },
+    {
+      "version": "5.12.0",
+      "total": 33,
+      "criticalMajor": 0,
+      "doneRate": 90.9
+    },
+    {
+      "version": "5.16.0",
+      "total": 33,
+      "criticalMajor": 10,
+      "doneRate": 87.9
+    },
+    {
+      "version": "5.13.0",
+      "total": 27,
+      "criticalMajor": 0,
+      "doneRate": 81.5
+    },
+    {
+      "version": "5.19.0",
+      "total": 24,
+      "criticalMajor": 3,
+      "doneRate": 79.2
+    },
+    {
+      "version": "고속/시외버스",
+      "total": 21,
+      "criticalMajor": 3,
+      "doneRate": 76.2
+    },
+    {
+      "version": "미지정",
+      "total": 8,
+      "criticalMajor": 0,
+      "doneRate": 87.5
+    }
+  ],
+  "distributions": {
+    "status": [
+      {
+        "label": "등록",
+        "count": 110
+      },
+      {
+        "label": "배정",
+        "count": 4
+      },
+      {
+        "label": "진행중",
+        "count": 7
+      },
+      {
+        "label": "QA확인",
+        "count": 119
+      },
+      {
+        "label": "종료",
+        "count": 367
+      }
+    ],
+    "severity": [
+      {
+        "label": "Critical",
+        "count": 30
+      },
+      {
+        "label": "Major",
+        "count": 126
+      },
+      {
+        "label": "Minor",
+        "count": 355
+      },
+      {
+        "label": "미지정",
+        "count": 74
+      },
+      {
+        "label": "개선 의견",
+        "count": 20
+      },
+      {
+        "label": "기획 문의",
+        "count": 2
+      }
+    ],
+    "priority": [
+      {
+        "label": "High",
+        "count": 12
+      },
+      {
+        "label": "Medium",
+        "count": 565
+      },
+      {
+        "label": "Low",
+        "count": 21
+      },
+      {
+        "label": "긴급",
+        "count": 8
+      },
+      {
+        "label": "완료",
+        "count": 1
+      }
+    ],
+    "os": [
+      {
+        "label": "미지정",
+        "count": 607
+      }
+    ]
+  },
+  "heatmap": [
+    {
+      "date": "2026-04-20",
+      "new": 0,
+      "fixed": 0,
+      "closed": 0,
+      "deltaNew": 0
+    },
+    {
+      "date": "2026-04-21",
+      "new": 0,
+      "fixed": 0,
+      "closed": 0,
+      "deltaNew": 0
+    },
+    {
+      "date": "2026-04-22",
+      "new": 0,
+      "fixed": 0,
+      "closed": 0,
+      "deltaNew": 0
+    },
+    {
+      "date": "2026-04-23",
+      "new": 0,
+      "fixed": 0,
+      "closed": 0,
+      "deltaNew": 0
+    },
+    {
+      "date": "2026-04-24",
+      "new": 0,
+      "fixed": 0,
+      "closed": 0,
+      "deltaNew": 0
+    },
+    {
+      "date": "2026-04-25",
+      "new": 0,
+      "fixed": 0,
+      "closed": 0,
+      "deltaNew": 0
+    },
+    {
+      "date": "2026-04-26",
+      "new": 0,
+      "fixed": 0,
+      "closed": 0,
+      "deltaNew": 0
+    },
+    {
+      "date": "2026-04-27",
+      "new": 0,
+      "fixed": 0,
+      "closed": 0,
+      "deltaNew": 0
+    },
+    {
+      "date": "2026-04-28",
+      "new": 0,
+      "fixed": 1,
+      "closed": 0,
+      "deltaNew": 0
+    },
+    {
+      "date": "2026-04-29",
+      "new": 16,
+      "fixed": 0,
+      "closed": 0,
+      "deltaNew": 16
+    },
+    {
+      "date": "2026-04-30",
+      "new": 18,
+      "fixed": 0,
+      "closed": 0,
+      "deltaNew": 2
+    },
+    {
+      "date": "2026-05-01",
+      "new": 0,
+      "fixed": 0,
+      "closed": 0,
+      "deltaNew": -18
+    },
+    {
+      "date": "2026-05-02",
+      "new": 0,
+      "fixed": 0,
+      "closed": 0,
+      "deltaNew": 0
+    },
+    {
+      "date": "2026-05-03",
+      "new": 0,
+      "fixed": 0,
+      "closed": 0,
+      "deltaNew": 0
+    },
+    {
+      "date": "2026-05-04",
+      "new": 9,
+      "fixed": 0,
+      "closed": 0,
+      "deltaNew": 9
+    },
+    {
+      "date": "2026-05-05",
+      "new": 0,
+      "fixed": 0,
+      "closed": 0,
+      "deltaNew": -9
+    },
+    {
+      "date": "2026-05-06",
+      "new": 8,
+      "fixed": 0,
+      "closed": 0,
+      "deltaNew": 8
+    },
+    {
+      "date": "2026-05-07",
+      "new": 30,
+      "fixed": 0,
+      "closed": 0,
+      "deltaNew": 22
+    },
+    {
+      "date": "2026-05-08",
+      "new": 22,
+      "fixed": 55,
+      "closed": 11,
+      "deltaNew": -8
+    },
+    {
+      "date": "2026-05-09",
+      "new": 0,
+      "fixed": 0,
+      "closed": 0,
+      "deltaNew": -22
+    },
+    {
+      "date": "2026-05-10",
+      "new": 0,
+      "fixed": 0,
+      "closed": 0,
+      "deltaNew": 0
+    },
+    {
+      "date": "2026-05-11",
+      "new": 5,
+      "fixed": 23,
+      "closed": 6,
+      "deltaNew": 5
+    },
+    {
+      "date": "2026-05-12",
+      "new": 60,
+      "fixed": 4,
+      "closed": 3,
+      "deltaNew": 55
+    },
+    {
+      "date": "2026-05-13",
+      "new": 11,
+      "fixed": 0,
+      "closed": 0,
+      "deltaNew": -49
+    },
+    {
+      "date": "2026-05-14",
+      "new": 19,
+      "fixed": 2,
+      "closed": 2,
+      "deltaNew": 8
+    },
+    {
+      "date": "2026-05-15",
+      "new": 11,
+      "fixed": 13,
+      "closed": 5,
+      "deltaNew": -8
+    },
+    {
+      "date": "2026-05-16",
+      "new": 0,
+      "fixed": 0,
+      "closed": 0,
+      "deltaNew": -11
+    },
+    {
+      "date": "2026-05-17",
+      "new": 0,
+      "fixed": 0,
+      "closed": 0,
+      "deltaNew": 0
+    },
+    {
+      "date": "2026-05-18",
+      "new": 1,
+      "fixed": 78,
+      "closed": 70,
+      "deltaNew": 1
+    },
+    {
+      "date": "2026-05-19",
+      "new": 2,
+      "fixed": 26,
+      "closed": 17,
+      "deltaNew": 1
+    }
+  ],
+  "recent": [
+    {
+      "id": "ISSUE-820",
+      "title": "[게이미피케이션][만보기]→미션 리스트 진입 시 뒤로 가기 두번 선택해야 이전 페이지(혜택 홈)로 이동하는 현상",
+      "status": "등록 (Registered)",
+      "stage": "등록",
+      "severity": "Major",
+      "priority": "Medium",
+      "assignee": "미지정",
+      "version": "5.21.0",
+      "os": "미지정",
+      "createdAt": "2026-05-19T05:10:00.000Z",
+      "createdDate": "2026-05-19",
+      "fixedAt": "",
+      "fixedDate": "",
+      "closedAt": "",
+      "closedDate": "",
+      "url": "https://www.notion.so/36573fbd195180aabcd1d6bfbd256030",
+      "lastEditedAt": "2026-05-19T05:19:00.000Z"
+    },
+    {
+      "id": "ISSUE-819",
+      "title": "[다크모드][AOS] 삼성 인터넷 브라우저 강제 다크 모드 적용 시 GO Hanpass 웹 화면 색상 비정상 노출 현상",
+      "status": "등록 (Registered)",
+      "stage": "등록",
+      "severity": "Minor",
+      "priority": "Medium",
+      "assignee": "미지정",
+      "version": "[G.H]v1.0.0",
+      "os": "미지정",
+      "createdAt": "2026-05-19T04:21:00.000Z",
+      "createdDate": "2026-05-19",
+      "fixedAt": "",
+      "fixedDate": "",
+      "closedAt": "",
+      "closedDate": "",
+      "url": "https://www.notion.so/AOS-GO-Hanpass-36573fbd195180ca9b2eda8ce0657e65",
+      "lastEditedAt": "2026-05-19T04:44:00.000Z"
+    },
+    {
+      "id": "ISSUE-818",
+      "title": "[게이미피케이션][AOS] 앱 흔들기 완료 후 ‘40001 에러’ 팝업 노출 되는 현상",
+      "status": "QA 검증 -회귀 (QA Verification)",
+      "stage": "QA확인",
+      "severity": "Major",
+      "priority": "Medium",
+      "assignee": "미지정",
+      "version": "5.21.0",
+      "os": "미지정",
+      "createdAt": "2026-05-18T07:27:00.000Z",
+      "createdDate": "2026-05-18",
+      "fixedAt": "2026-05-19T05:09:00.000Z",
+      "fixedDate": "2026-05-19",
+      "closedAt": "",
+      "closedDate": "",
+      "url": "https://www.notion.so/AOS-40001-36473fbd195180d6aae4c33f12f97ccd",
+      "lastEditedAt": "2026-05-19T05:09:00.000Z"
+    },
+    {
+      "id": "ISSUE-814",
+      "title": "[관광객카드] 결제 방식 선택 BS 내 ‘나중에 결제’ 안내 문구 기획서와 상이",
+      "status": "QA 검증 -회귀 (QA Verification)",
+      "stage": "QA확인",
+      "severity": "Minor",
+      "priority": "Medium",
+      "assignee": "미지정",
+      "version": "[G.H]v1.0.0",
+      "os": "미지정",
+      "createdAt": "2026-05-15T08:32:00.000Z",
+      "createdDate": "2026-05-15",
+      "fixedAt": "2026-05-19T00:36:00.000Z",
+      "fixedDate": "2026-05-19",
+      "closedAt": "",
+      "closedDate": "",
+      "url": "https://www.notion.so/BS-36173fbd195180d4bb3ae9c8d7723349",
+      "lastEditedAt": "2026-05-19T00:36:00.000Z"
+    },
+    {
+      "id": "ISSUE-813",
+      "title": "[관광객카드] PIN입력 페이지에서 물리백 선택 시 이전화면으로 (TravelCard_067_결제하기) 이동하지 않는 현상",
+      "status": "개발 완료 (Dev Done)",
+      "stage": "종료",
+      "severity": "Minor",
+      "priority": "Medium",
+      "assignee": "미지정",
+      "version": "[G.H]v1.0.0",
+      "os": "미지정",
+      "createdAt": "2026-05-15T07:45:00.000Z",
+      "createdDate": "2026-05-15",
+      "fixedAt": "2026-05-19T04:21:00.000Z",
+      "fixedDate": "2026-05-19",
+      "closedAt": "2026-05-19T04:21:00.000Z",
+      "closedDate": "2026-05-19",
+      "url": "https://www.notion.so/PIN-TravelCard_067_-36173fbd195180329925e3e6ca1165b6",
+      "lastEditedAt": "2026-05-19T04:21:00.000Z"
+    },
+    {
+      "id": "ISSUE-812",
+      "title": "[관광객카드][AOS] KT 결제 실패 화면 - OS 물리백 동작 시 반응하는 현상 ",
+      "status": "기획서 수정",
+      "stage": "등록",
+      "severity": "Minor",
+      "priority": "Medium",
+      "assignee": "미지정",
+      "version": "[G.H]v1.0.0",
+      "os": "미지정",
+      "createdAt": "2026-05-15T07:42:00.000Z",
+      "createdDate": "2026-05-15",
+      "fixedAt": "",
+      "fixedDate": "",
+      "closedAt": "",
+      "closedDate": "",
+      "url": "https://www.notion.so/AOS-KT-OS-36173fbd1951804c9c40c6d49ccf5c15",
+      "lastEditedAt": "2026-05-18T08:29:00.000Z"
+    },
+    {
+      "id": "ISSUE-811",
+      "title": "[관광객카드][AOS][카드디자인선택] 특정 단말에서 ‘뒷면보기’ 버튼과 인디케이터 겹치는 현상",
+      "status": "QA 검증 -회귀 (QA Verification)",
+      "stage": "QA확인",
+      "severity": "Minor",
+      "priority": "Medium",
+      "assignee": "미지정",
+      "version": "[G.H]v1.0.0",
+      "os": "미지정",
+      "createdAt": "2026-05-15T07:34:00.000Z",
+      "createdDate": "2026-05-15",
+      "fixedAt": "2026-05-19T00:16:00.000Z",
+      "fixedDate": "2026-05-19",
+      "closedAt": "",
+      "closedDate": "",
+      "url": "https://www.notion.so/AOS-36173fbd195180e5849dfdcf69138f16",
+      "lastEditedAt": "2026-05-19T00:16:00.000Z"
+    },
+    {
+      "id": "ISSUE-810",
+      "title": "[관광객카드][공통] 중복 로그인(세션 만료) 상태에서 동작 시 팝업 중복 노출 (시스템 장애 팝업 및 로그아웃 팝업)",
+      "status": "등록 (Registered)",
+      "stage": "등록",
+      "severity": "Minor",
+      "priority": "Medium",
+      "assignee": "미지정",
+      "version": "[G.H]v1.0.0",
+      "os": "미지정",
+      "createdAt": "2026-05-15T06:44:00.000Z",
+      "createdDate": "2026-05-15",
+      "fixedAt": "",
+      "fixedDate": "",
+      "closedAt": "",
+      "closedDate": "",
+      "url": "https://www.notion.so/36173fbd195180a58199fe70125fe78d",
+      "lastEditedAt": "2026-05-15T07:38:00.000Z"
+    },
+    {
+      "id": "ISSUE-809",
+      "title": "[관광객카드] [iOS] ‘방문 예정일’ Date Picker ‘재설정’ 클릭 후  확인 시 이전 선택값이 아닌 마지막 선택값으로 지정되는 현상",
+      "status": "등록 (Registered)",
+      "stage": "등록",
+      "severity": "Minor",
+      "priority": "Medium",
+      "assignee": "미지정",
+      "version": "[G.H]v1.0.0",
+      "os": "미지정",
+      "createdAt": "2026-05-15T05:41:00.000Z",
+      "createdDate": "2026-05-15",
+      "fixedAt": "",
+      "fixedDate": "",
+      "closedAt": "",
+      "closedDate": "",
+      "url": "https://www.notion.so/iOS-Date-Picker-36173fbd195180878386d0b856978cc0",
+      "lastEditedAt": "2026-05-15T06:19:00.000Z"
+    },
+    {
+      "id": "ISSUE-808",
+      "title": "[이미지][AOS] OS 날짜 수동(과거) 변경 시 이미지 리소스 로드 실패하는 현상",
+      "status": "결함 아님 (Not an issue)",
+      "stage": "종료",
+      "severity": "Major",
+      "priority": "Medium",
+      "assignee": "미지정",
+      "version": "[G.H]v1.0.0",
+      "os": "미지정",
+      "createdAt": "2026-05-15T05:29:00.000Z",
+      "createdDate": "2026-05-15",
+      "fixedAt": "2026-05-19T01:09:00.000Z",
+      "fixedDate": "2026-05-19",
+      "closedAt": "2026-05-19T01:09:00.000Z",
+      "closedDate": "2026-05-19",
+      "url": "https://www.notion.so/AOS-OS-36173fbd195180459e1de56a92398e18",
+      "lastEditedAt": "2026-05-19T01:09:00.000Z"
+    }
+  ]
+}</script>
+  <script>
+    const DATA = JSON.parse(document.getElementById("dashboard-data").textContent);
+    const $ = (id) => document.getElementById(id);
+    const esc = (v) => String(v ?? "").replace(/[&<>"']/g, (c) => ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]));
+    const pct = (n) => `${Number(n || 0).toFixed(1)}%`;
+    $("stamp").textContent = `생성: ${DATA.generatedAt.replace("T", " ")} · 기준 ${DATA.days}일`;
+
+    function renderSummary() {
+      const s = DATA.summary;
+      const cards = [
+        ["전체 결함", s.total, "Notion DB 전체 조회 기준"],
+        ["신규 등록", s.new, "등록 단계"],
+        ["진행중", s.inProgress, "개발/수정 진행"],
+        ["수정완료", s.fixed, "QA 확인 전후"],
+        ["종료/완료", s.closed, "종료 단계"],
+        ["금일 신규", s.todayNew, "오늘 등록 수"],
+        ["전일 대비", s.newDelta, s.newDelta > 0 ? "증가" : s.newDelta < 0 ? "감소" : "변동 없음"],
+      ];
+      $("summary").innerHTML = cards.map(([label, value, note]) => `
+        <article class="card"><span>${esc(label)}</span><strong>${esc(value)}</strong><em class="${label === "전일 대비" ? (value > 0 ? "up" : value < 0 ? "down" : "") : ""}">${esc(note)}</em></article>
+      `).join("");
+    }
+
+    function renderFunnel() {
+      const max = Math.max(...DATA.funnel.map((d) => d.count), 1);
+      $("funnel").innerHTML = DATA.funnel.map((d) => `
+        <div class="funnel-row">
+          <div>${esc(d.stage)}</div>
+          <div class="funnel-bar" style="width:${d.width}%; opacity:${0.45 + d.count / max * 0.55}">${d.count}건</div>
+          <div class="meta">${pct(d.rate)}</div>
+        </div>
+      `).join("");
+    }
+
+    function renderDaily(days = DATA.days) {
+      const rows = DATA.daily.slice(-days);
+      const max = Math.max(...rows.flatMap((d) => [d.new, d.fixed, d.closed]), 1);
+      $("dailyChart").innerHTML = rows.map((d) => `
+        <div class="day" title="${d.date} 신규 ${d.new}, 수정완료 ${d.fixed}, 종료 ${d.closed}">
+          <div class="bars">
+            <div class="bar new" style="height:${Math.max(2, d.new / max * 100)}%"></div>
+            <div class="bar fixed" style="height:${Math.max(2, d.fixed / max * 100)}%"></div>
+            <div class="bar closed" style="height:${Math.max(2, d.closed / max * 100)}%"></div>
+          </div>
+          <div class="label">${d.date.slice(5)}</div>
+        </div>
+      `).join("");
+      const last = rows[rows.length - 1] || {new:0, deltaNew:0};
+      const direction = last.deltaNew > 0 ? "증가" : last.deltaNew < 0 ? "감소" : "변동 없음";
+      $("trendNote").textContent = `최근일 신규 등록 ${last.new}건, 전일 대비 ${Math.abs(last.deltaNew)}건 ${direction}`;
+    }
+
+    function renderHeatmap() {
+      const max = Math.max(...DATA.heatmap.map((d) => d.new), 1);
+      $("heatmap").innerHTML = DATA.heatmap.map((d) => {
+        const level = d.new === 0 ? 0 : Math.min(4, Math.ceil(d.new / max * 4));
+        return `<div class="tile" data-level="${level}" title="${d.date} 등록 ${d.new}건"></div>`;
+      }).join("");
+    }
+
+    function renderVersions() {
+      const max = Math.max(...DATA.versions.map((d) => d.total), 1);
+      $("versions").innerHTML = DATA.versions.length ? DATA.versions.map((d) => `
+        <div class="row">
+          <div><strong>${esc(d.version)}</strong><div class="meta">Major/Critical ${d.criticalMajor}건 · 완료율 ${pct(d.doneRate)}</div></div>
+          <div class="track"><div class="fill" style="width:${d.total / max * 100}%"></div></div>
+          <div>${d.total}건</div>
+        </div>
+      `).join("") : `<div class="empty">표시할 버전 데이터가 없습니다.</div>`;
+    }
+
+    function renderDistBox(title, rows) {
+      const max = Math.max(...rows.map((d) => d.count), 1);
+      return `<div class="dist-list"><h2>${esc(title)}</h2>${rows.map((d) => `
+        <div class="row" style="grid-template-columns:90px 1fr 42px">
+          <div class="meta">${esc(d.label)}</div><div class="track"><div class="fill" style="width:${d.count / max * 100}%"></div></div><div>${d.count}</div>
+        </div>`).join("")}</div>`;
+    }
+
+    function renderDistributions() {
+      const d = DATA.distributions;
+      $("distributions").innerHTML = [
+        renderDistBox("상태", d.status),
+        renderDistBox("심각도", d.severity),
+        renderDistBox("우선순위", d.priority),
+        renderDistBox("OS", d.os),
+      ].join("");
+    }
+
+    function renderRecent() {
+      if (!DATA.recent.length) {
+        $("recentList").innerHTML = `<div class="empty">최근 결함 데이터가 없습니다.</div>`;
+        return;
+      }
+      $("recentList").innerHTML = `<table><thead><tr><th>제목</th><th>상태</th><th>심각도</th><th>담당자</th><th>등록일</th><th>버전</th></tr></thead><tbody>${DATA.recent.map((r) => `
+        <tr>
+          <td><a href="${esc(r.url)}" target="_blank" rel="noreferrer">${esc(r.title)}</a></td>
+          <td><span class="pill">${esc(r.status)}</span></td>
+          <td>${esc(r.severity)}</td>
+          <td>${esc(r.assignee)}</td>
+          <td>${esc(r.createdDate || r.createdAt)}</td>
+          <td>${esc(r.version)}</td>
+        </tr>`).join("")}</tbody></table>`;
+    }
+
+    document.querySelectorAll(".tab").forEach((button) => {
+      button.addEventListener("click", () => {
+        document.querySelectorAll(".tab").forEach((item) => item.classList.toggle("active", item === button));
+        document.querySelectorAll(".view").forEach((view) => view.classList.toggle("active", view.id === button.dataset.view));
+      });
+    });
+
+    document.querySelectorAll(".range-btn").forEach((button) => {
+      button.classList.toggle("active", Number(button.dataset.days) === DATA.days);
+      button.addEventListener("click", () => {
+        document.querySelectorAll(".range-btn").forEach((item) => item.classList.toggle("active", item === button));
+        renderDaily(Number(button.dataset.days));
+      });
+    });
+
+    renderSummary();
+    renderFunnel();
+    renderDaily();
+    renderHeatmap();
+    renderVersions();
+    renderDistributions();
+    renderRecent();
+  </script>
+</body>
+</html>

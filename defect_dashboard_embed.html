@@ -163,22 +163,22 @@
     </main>
   </div>
   <script id="dashboard-data" type="application/json">{
-  "generatedAt": "2026-05-19T17:29:02+09:00",
+  "generatedAt": "2026-05-20T08:45:44+09:00",
   "days": 30,
   "summary": {
-    "total": 607,
-    "new": 110,
-    "inProgress": 7,
+    "total": 611,
+    "new": 112,
+    "inProgress": 5,
     "fixed": 0,
-    "closed": 367,
-    "todayNew": 2,
-    "newDelta": 1
+    "closed": 371,
+    "todayNew": 0,
+    "newDelta": -6
   },
   "funnel": [
     {
       "stage": "등록",
-      "count": 110,
-      "rate": 18.1,
+      "count": 112,
+      "rate": 18.3,
       "width": 100
     },
     {
@@ -195,8 +195,8 @@
     },
     {
       "stage": "진행중",
-      "count": 7,
-      "rate": 1.2,
+      "count": 5,
+      "rate": 0.8,
       "width": 79
     },
     {
@@ -208,24 +208,17 @@
     {
       "stage": "QA확인",
       "count": 119,
-      "rate": 19.6,
+      "rate": 19.5,
       "width": 65
     },
     {
       "stage": "종료",
-      "count": 367,
-      "rate": 60.5,
+      "count": 371,
+      "rate": 60.7,
       "width": 58
     }
   ],
   "daily": [
-    {
-      "date": "2026-04-20",
-      "new": 0,
-      "fixed": 0,
-      "closed": 0,
-      "deltaNew": 0
-    },
     {
       "date": "2026-04-21",
       "new": 0,
@@ -424,24 +417,31 @@
     },
     {
       "date": "2026-05-19",
-      "new": 2,
-      "fixed": 26,
-      "closed": 17,
-      "deltaNew": 1
+      "new": 6,
+      "fixed": 30,
+      "closed": 21,
+      "deltaNew": 5
+    },
+    {
+      "date": "2026-05-20",
+      "new": 0,
+      "fixed": 0,
+      "closed": 0,
+      "deltaNew": -6
     }
   ],
   "versions": [
     {
       "version": "5.21.0",
-      "total": 110,
-      "criticalMajor": 41,
-      "doneRate": 90.0
+      "total": 113,
+      "criticalMajor": 42,
+      "doneRate": 87.6
     },
     {
       "version": "[G.H]v1.0.0",
-      "total": 102,
-      "criticalMajor": 21,
-      "doneRate": 38.2
+      "total": 103,
+      "criticalMajor": 22,
+      "doneRate": 41.7
     },
     {
       "version": "5.20.0",
@@ -508,7 +508,7 @@
     "status": [
       {
         "label": "등록",
-        "count": 110
+        "count": 112
       },
       {
         "label": "배정",
@@ -516,7 +516,7 @@
       },
       {
         "label": "진행중",
-        "count": 7
+        "count": 5
       },
       {
         "label": "QA확인",
@@ -524,7 +524,7 @@
       },
       {
         "label": "종료",
-        "count": 367
+        "count": 371
       }
     ],
     "severity": [
@@ -534,11 +534,11 @@
       },
       {
         "label": "Major",
-        "count": 126
+        "count": 128
       },
       {
         "label": "Minor",
-        "count": 355
+        "count": 357
       },
       {
         "label": "미지정",
@@ -560,7 +560,7 @@
       },
       {
         "label": "Medium",
-        "count": 565
+        "count": 569
       },
       {
         "label": "Low",
@@ -578,18 +578,11 @@
     "os": [
       {
         "label": "미지정",
-        "count": 607
+        "count": 611
       }
     ]
   },
   "heatmap": [
-    {
-      "date": "2026-04-20",
-      "new": 0,
-      "fixed": 0,
-      "closed": 0,
-      "deltaNew": 0
-    },
     {
       "date": "2026-04-21",
       "new": 0,
@@ -788,13 +781,96 @@
     },
     {
       "date": "2026-05-19",
-      "new": 2,
-      "fixed": 26,
-      "closed": 17,
-      "deltaNew": 1
+      "new": 6,
+      "fixed": 30,
+      "closed": 21,
+      "deltaNew": 5
+    },
+    {
+      "date": "2026-05-20",
+      "new": 0,
+      "fixed": 0,
+      "closed": 0,
+      "deltaNew": -6
     }
   ],
   "recent": [
+    {
+      "id": "ISSUE-825",
+      "title": "[게이미피케이션][혜택][공통] ‘만 보 걷고’ 포인트 기획서와 상이",
+      "status": "등록 (Registered)",
+      "stage": "등록",
+      "severity": "Minor",
+      "priority": "Medium",
+      "assignee": "미지정",
+      "version": "5.21.0",
+      "os": "미지정",
+      "createdAt": "2026-05-19T09:05:00.000Z",
+      "createdDate": "2026-05-19",
+      "fixedAt": "",
+      "fixedDate": "",
+      "closedAt": "",
+      "closedDate": "",
+      "url": "https://www.notion.so/36573fbd195180048996dbc893a6d119",
+      "lastEditedAt": "2026-05-19T09:10:00.000Z"
+    },
+    {
+      "id": "ISSUE-824",
+      "title": "[게이미피케이션][만보기] 미수령 포인트 안내 팝업 내 버튼 문구 불일치",
+      "status": "등록 (Registered)",
+      "stage": "등록",
+      "severity": "Minor",
+      "priority": "Medium",
+      "assignee": "미지정",
+      "version": "5.21.0",
+      "os": "미지정",
+      "createdAt": "2026-05-19T09:00:00.000Z",
+      "createdDate": "2026-05-19",
+      "fixedAt": "",
+      "fixedDate": "",
+      "closedAt": "",
+      "closedDate": "",
+      "url": "https://www.notion.so/36573fbd19518000ae7ec285c49c7f14",
+      "lastEditedAt": "2026-05-19T09:05:00.000Z"
+    },
+    {
+      "id": "ISSUE-823",
+      "title": "[결제탭][공통] 월렛 영역 내 ‘내역’ 선택 시 ‘월렛내역조회’ 화면으로 이동하는 현상",
+      "status": "등록 (Registered)",
+      "stage": "등록",
+      "severity": "Major",
+      "priority": "Medium",
+      "assignee": "미지정",
+      "version": "[G.H]v1.0.0",
+      "os": "미지정",
+      "createdAt": "2026-05-19T08:57:00.000Z",
+      "createdDate": "2026-05-19",
+      "fixedAt": "",
+      "fixedDate": "",
+      "closedAt": "",
+      "closedDate": "",
+      "url": "https://www.notion.so/36573fbd195180339ffcf66fbdbcaeee",
+      "lastEditedAt": "2026-05-19T08:59:00.000Z"
+    },
+    {
+      "id": "ISSUE-822",
+      "title": "[게이미피케이션][만보기][iOS] ‘동작 및 피트니스’ 권한 거부 후 재 진입 시 ‘권한 허용 브릿지’ 팝업 미노출",
+      "status": "등록 (Registered)",
+      "stage": "등록",
+      "severity": "Major",
+      "priority": "Medium",
+      "assignee": "미지정",
+      "version": "5.21.0",
+      "os": "미지정",
+      "createdAt": "2026-05-19T08:52:00.000Z",
+      "createdDate": "2026-05-19",
+      "fixedAt": "",
+      "fixedDate": "",
+      "closedAt": "",
+      "closedDate": "",
+      "url": "https://www.notion.so/iOS-36573fbd1951800690c3cd1cd688beaf",
+      "lastEditedAt": "2026-05-19T08:56:00.000Z"
+    },
     {
       "id": "ISSUE-820",
       "title": "[게이미피케이션][만보기]→미션 리스트 진입 시 뒤로 가기 두번 선택해야 이전 페이지(혜택 홈)로 이동하는 현상",
@@ -908,82 +984,6 @@
       "closedDate": "",
       "url": "https://www.notion.so/AOS-KT-OS-36173fbd1951804c9c40c6d49ccf5c15",
       "lastEditedAt": "2026-05-18T08:29:00.000Z"
-    },
-    {
-      "id": "ISSUE-811",
-      "title": "[관광객카드][AOS][카드디자인선택] 특정 단말에서 ‘뒷면보기’ 버튼과 인디케이터 겹치는 현상",
-      "status": "QA 검증 -회귀 (QA Verification)",
-      "stage": "QA확인",
-      "severity": "Minor",
-      "priority": "Medium",
-      "assignee": "미지정",
-      "version": "[G.H]v1.0.0",
-      "os": "미지정",
-      "createdAt": "2026-05-15T07:34:00.000Z",
-      "createdDate": "2026-05-15",
-      "fixedAt": "2026-05-19T00:16:00.000Z",
-      "fixedDate": "2026-05-19",
-      "closedAt": "",
-      "closedDate": "",
-      "url": "https://www.notion.so/AOS-36173fbd195180e5849dfdcf69138f16",
-      "lastEditedAt": "2026-05-19T00:16:00.000Z"
-    },
-    {
-      "id": "ISSUE-810",
-      "title": "[관광객카드][공통] 중복 로그인(세션 만료) 상태에서 동작 시 팝업 중복 노출 (시스템 장애 팝업 및 로그아웃 팝업)",
-      "status": "등록 (Registered)",
-      "stage": "등록",
-      "severity": "Minor",
-      "priority": "Medium",
-      "assignee": "미지정",
-      "version": "[G.H]v1.0.0",
-      "os": "미지정",
-      "createdAt": "2026-05-15T06:44:00.000Z",
-      "createdDate": "2026-05-15",
-      "fixedAt": "",
-      "fixedDate": "",
-      "closedAt": "",
-      "closedDate": "",
-      "url": "https://www.notion.so/36173fbd195180a58199fe70125fe78d",
-      "lastEditedAt": "2026-05-15T07:38:00.000Z"
-    },
-    {
-      "id": "ISSUE-809",
-      "title": "[관광객카드] [iOS] ‘방문 예정일’ Date Picker ‘재설정’ 클릭 후  확인 시 이전 선택값이 아닌 마지막 선택값으로 지정되는 현상",
-      "status": "등록 (Registered)",
-      "stage": "등록",
-      "severity": "Minor",
-      "priority": "Medium",
-      "assignee": "미지정",
-      "version": "[G.H]v1.0.0",
-      "os": "미지정",
-      "createdAt": "2026-05-15T05:41:00.000Z",
-      "createdDate": "2026-05-15",
-      "fixedAt": "",
-      "fixedDate": "",
-      "closedAt": "",
-      "closedDate": "",
-      "url": "https://www.notion.so/iOS-Date-Picker-36173fbd195180878386d0b856978cc0",
-      "lastEditedAt": "2026-05-15T06:19:00.000Z"
-    },
-    {
-      "id": "ISSUE-808",
-      "title": "[이미지][AOS] OS 날짜 수동(과거) 변경 시 이미지 리소스 로드 실패하는 현상",
-      "status": "결함 아님 (Not an issue)",
-      "stage": "종료",
-      "severity": "Major",
-      "priority": "Medium",
-      "assignee": "미지정",
-      "version": "[G.H]v1.0.0",
-      "os": "미지정",
-      "createdAt": "2026-05-15T05:29:00.000Z",
-      "createdDate": "2026-05-15",
-      "fixedAt": "2026-05-19T01:09:00.000Z",
-      "fixedDate": "2026-05-19",
-      "closedAt": "2026-05-19T01:09:00.000Z",
-      "closedDate": "2026-05-19",
-      "url": "https://www.notion.so/AOS-OS-36173fbd195180459e1de56a92398e18",
-      "lastEditedAt": "2026-05-19T01:09:00.000Z"
     }
   ]
 }</script>

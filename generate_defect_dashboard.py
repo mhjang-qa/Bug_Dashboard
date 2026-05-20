@@ -566,6 +566,9 @@ def build_html(payload: dict[str, Any]) -> str:
     th, td {{ padding: 11px 9px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }}
     th {{ color: var(--muted); font-size: 12px; font-weight: 650; }}
     td a {{ color: var(--text); text-decoration: none; }}
+    .recent-row {{ cursor: pointer; }}
+    .recent-row:hover {{ background: rgba(29, 134, 242, .05); }}
+    .recent-row:focus {{ outline: 2px solid rgba(29, 134, 242, .35); outline-offset: -2px; }}
     .pill {{ display: inline-flex; max-width: 150px; padding: 4px 8px; border-radius: 999px; background: rgba(29,134,242,.10); color: var(--text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }}
     .empty {{ color: var(--muted); padding: 20px; text-align: center; border: 1px dashed var(--line); border-radius: 8px; }}
     .table-wrap {{ overflow-x: auto; }}
@@ -761,14 +764,27 @@ def build_html(payload: dict[str, Any]) -> str:
         return;
       }}
       $("recentList").innerHTML = `<table><thead><tr><th>제목</th><th>상태</th><th>심각도</th><th>담당자</th><th>등록일</th><th>버전</th></tr></thead><tbody>${{DATA.recent.map((r) => `
-        <tr>
-          <td><a href="${{esc(r.url)}}" target="_blank" rel="noreferrer">${{esc(r.title)}}</a></td>
+        <tr class="recent-row" data-url="${{esc(r.url)}}" tabindex="0" role="link" aria-label="${{esc(r.title)}} Notion에서 열기">
+          <td><a href="${{esc(r.url)}}" target="_blank" rel="noreferrer" tabindex="-1">${{esc(r.title)}}</a></td>
           <td><span class="pill">${{esc(r.status)}}</span></td>
           <td>${{esc(r.severity)}}</td>
           <td>${{esc(r.assignee)}}</td>
           <td>${{esc(r.createdDate || r.createdAt)}}</td>
           <td>${{esc(r.version)}}</td>
         </tr>`).join("")}}</tbody></table>`;
+      document.querySelectorAll(".recent-row").forEach((row) => {{
+        const open = () => {{
+          const url = row.dataset.url;
+          if (url) window.open(url, "_blank", "noopener,noreferrer");
+        }};
+        row.addEventListener("click", open);
+        row.addEventListener("keydown", (event) => {{
+          if (event.key === "Enter" || event.key === " ") {{
+            event.preventDefault();
+            open();
+          }}
+        }});
+      }});
     }}
 
     document.querySelectorAll(".tab").forEach((button) => {{

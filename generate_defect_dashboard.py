@@ -369,6 +369,9 @@ def build_versions(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
                 "total": total,
                 "criticalMajor": critical_major,
                 "doneRate": round(done / total * 100, 1) if total else 0,
+                "status": ordered_counts(Counter(item["stage"] for item in items), FUNNEL_STAGES),
+                "severity": ordered_counts(Counter(item["severity"] for item in items), SEVERITY_ORDER),
+                "priority": ordered_counts(Counter(item["priority"] for item in items), PRIORITY_ORDER),
             }
         )
     return sorted(versions, key=lambda item: (-item["total"], item["version"]))[:12]
@@ -412,11 +415,13 @@ def build_payload(rows: list[dict[str, Any]], days: int) -> dict[str, Any]:
         "funnel": funnel,
         "daily": daily,
         "versions": build_versions(rows),
+        "selectedVersion": "ALL",
         "distributions": {
-            "status": ordered_counts(Counter(row["stage"] for row in rows), FUNNEL_STAGES),
-            "severity": ordered_counts(Counter(row["severity"] for row in rows), SEVERITY_ORDER),
-            "priority": ordered_counts(Counter(row["priority"] for row in rows), PRIORITY_ORDER),
-            "os": ordered_counts(Counter(row["os"] for row in rows), OS_ORDER),
+            "ALL": {
+                "status": ordered_counts(Counter(row["stage"] for row in rows), FUNNEL_STAGES),
+                "severity": ordered_counts(Counter(row["severity"] for row in rows), SEVERITY_ORDER),
+                "priority": ordered_counts(Counter(row["priority"] for row in rows), PRIORITY_ORDER),
+            }
         },
         "heatmap": heatmap,
         "recent": recent,
@@ -433,18 +438,19 @@ def build_html(payload: dict[str, Any]) -> str:
   <title>결함 대시보드</title>
   <style>
     :root {{
-      color-scheme: dark;
-      --bg: #0f172a;
-      --panel: #111c33;
-      --panel2: #16233d;
-      --line: rgba(148, 163, 184, .22);
-      --text: #e5edf8;
-      --muted: #96a5ba;
-      --blue: #38bdf8;
-      --green: #34d399;
-      --yellow: #fbbf24;
-      --red: #fb7185;
-      --violet: #a78bfa;
+      color-scheme: light;
+      --bg: #f4f7fb;
+      --panel: #ffffff;
+      --panel-soft: #f8fbff;
+      --line: rgba(31, 41, 55, .10);
+      --text: #172033;
+      --muted: #5f6b7e;
+      --blue: #1d86f2;
+      --green: #1ea97c;
+      --yellow: #d99a00;
+      --red: #d14a61;
+      --violet: #7b61ff;
+      --shadow: 0 12px 30px rgba(17, 24, 39, .07);
     }}
     * {{ box-sizing: border-box; }}
     body {{
@@ -464,35 +470,36 @@ def build_html(payload: dict[str, Any]) -> str:
     }}
     h1 {{ margin: 0 0 8px; font-size: 26px; font-weight: 760; }}
     .lead {{ margin: 0; max-width: 980px; color: var(--muted); font-size: 14px; line-height: 1.55; }}
-    .notice {{ margin-top: 8px; color: #c8d3e3; font-size: 12px; }}
+    .notice {{ margin-top: 8px; color: var(--muted); font-size: 12px; }}
     .stamp {{ text-align: right; color: var(--muted); font-size: 12px; white-space: nowrap; }}
     .tabs {{ display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 18px; }}
     .tab, .range-btn {{
       border: 1px solid var(--line);
-      background: #0b1220;
+      background: var(--panel);
       color: var(--muted);
       padding: 9px 13px;
       border-radius: 8px;
       cursor: pointer;
       font-size: 13px;
     }}
-    .tab.active, .range-btn.active {{ color: var(--text); border-color: rgba(56, 189, 248, .7); background: rgba(56, 189, 248, .12); }}
+    .tab.active, .range-btn.active {{ color: var(--text); border-color: rgba(29, 134, 242, .45); background: rgba(29, 134, 242, .08); }}
     .panel-head {{ display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 12px; }}
     .panel-head h2 {{ margin: 0; }}
     .range-controls {{ display: flex; gap: 6px; }}
     .range-btn {{ padding: 7px 10px; font-size: 12px; }}
-    .summary {{ display: grid; grid-template-columns: repeat(7, minmax(130px, 1fr)); gap: 10px; margin-bottom: 18px; }}
-    .card, .panel {{ background: var(--panel); border: 1px solid var(--line); border-radius: 8px; box-shadow: 0 12px 30px rgba(0,0,0,.18); }}
+    .summary {{ display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin-bottom: 18px; }}
+    .card, .panel {{ background: var(--panel); border: 1px solid var(--line); border-radius: 8px; box-shadow: var(--shadow); }}
     .card {{ padding: 14px; min-height: 94px; }}
     .card span {{ display: block; color: var(--muted); font-size: 12px; margin-bottom: 9px; }}
     .card strong {{ display: block; font-size: 29px; line-height: 1; }}
     .card em {{ display: block; margin-top: 8px; color: var(--muted); font-size: 12px; font-style: normal; }}
     .up {{ color: var(--red) !important; }}
     .down {{ color: var(--green) !important; }}
-    .grid {{ display: grid; grid-template-columns: minmax(360px, .95fr) minmax(520px, 1.45fr); gap: 14px; }}
-    .grid.three {{ grid-template-columns: repeat(3, 1fr); }}
+    .grid {{ display: grid; grid-template-columns: minmax(320px, .95fr) minmax(420px, 1.45fr); gap: 14px; }}
+    .grid.three {{ grid-template-columns: repeat(3, minmax(180px, 1fr)); gap: 10px; }}
     .panel {{ padding: 16px; min-width: 0; }}
     .panel h2 {{ margin: 0 0 12px; font-size: 16px; font-weight: 720; }}
+    .subtle {{ color: var(--muted); font-size: 12px; }}
     .view {{ display: none; }}
     .view.active {{ display: block; }}
     .funnel {{ display: grid; gap: 8px; align-items: center; justify-items: center; padding: 4px 0; }}
@@ -502,21 +509,21 @@ def build_html(payload: dict[str, Any]) -> str:
       align-items: center;
       width: 100%;
       gap: 10px;
-      color: #d8e4f2;
+      color: var(--text);
       font-size: 13px;
     }}
     .funnel-bar {{
       height: 38px;
       border-radius: 6px;
-      background: linear-gradient(90deg, rgba(56,189,248,.9), rgba(52,211,153,.86));
+      background: linear-gradient(90deg, rgba(29,134,242,.92), rgba(30,169,124,.88));
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #06111f;
+      color: #ffffff;
       font-weight: 800;
       min-width: 72px;
     }}
-    .chart {{ height: 270px; display: flex; align-items: end; gap: 8px; padding-top: 8px; border-bottom: 1px solid var(--line); overflow: hidden; }}
+    .chart {{ height: 270px; display: flex; align-items: end; gap: 8px; padding-top: 8px; border-bottom: 1px solid var(--line); overflow-x: auto; overflow-y: hidden; }}
     .day {{ flex: 1; min-width: 8px; display: grid; grid-template-rows: 1fr auto; gap: 6px; height: 100%; }}
     .bars {{ display: flex; gap: 3px; align-items: end; height: 100%; }}
     .bar {{ flex: 1; min-height: 2px; border-radius: 3px 3px 0 0; }}
@@ -524,30 +531,70 @@ def build_html(payload: dict[str, Any]) -> str:
     .bar.fixed {{ background: var(--yellow); }}
     .bar.closed {{ background: var(--green); }}
     .label {{ color: var(--muted); font-size: 10px; text-align: center; }}
-    .legend {{ display: flex; gap: 12px; margin-top: 10px; color: var(--muted); font-size: 12px; }}
+    .legend {{ display: flex; flex-wrap: wrap; gap: 12px; margin-top: 10px; color: var(--muted); font-size: 12px; }}
     .dot {{ width: 9px; height: 9px; display: inline-block; border-radius: 50%; margin-right: 5px; }}
     .version-list, .dist-list {{ display: grid; gap: 9px; }}
-    .row {{ display: grid; grid-template-columns: 150px 1fr 62px; gap: 10px; align-items: center; font-size: 13px; }}
+    .version-list {{ max-height: 480px; overflow: auto; padding-right: 4px; }}
+    .version-item {{
+      display: grid;
+      grid-template-columns: minmax(110px, 170px) 1fr 68px;
+      gap: 10px;
+      align-items: center;
+      width: 100%;
+      border: 1px solid var(--line);
+      background: var(--panel-soft);
+      border-radius: 8px;
+      padding: 10px;
+      text-align: left;
+      cursor: pointer;
+    }}
+    .version-item.active {{ border-color: rgba(29, 134, 242, .45); box-shadow: 0 0 0 2px rgba(29, 134, 242, .08) inset; }}
+    .row {{ display: grid; grid-template-columns: minmax(120px, 160px) 1fr 62px; gap: 10px; align-items: center; font-size: 13px; }}
     .track {{ height: 10px; background: rgba(148,163,184,.16); border-radius: 999px; overflow: hidden; }}
     .fill {{ height: 100%; background: linear-gradient(90deg, var(--blue), var(--green)); }}
     .meta {{ color: var(--muted); font-size: 12px; }}
-    .heatmap {{ display: grid; grid-template-columns: repeat(30, 1fr); gap: 4px; }}
-    .tile {{ aspect-ratio: 1; border-radius: 4px; background: #172036; border: 1px solid rgba(148,163,184,.12); }}
-    .tile[data-level="1"] {{ background: rgba(56,189,248,.28); }}
-    .tile[data-level="2"] {{ background: rgba(56,189,248,.48); }}
-    .tile[data-level="3"] {{ background: rgba(251,191,36,.68); }}
-    .tile[data-level="4"] {{ background: rgba(251,113,133,.84); }}
+    .heatmap-wrap {{ display: grid; gap: 12px; }}
+    .heatmap {{ display: grid; grid-template-columns: repeat(30, minmax(10px, 1fr)); gap: 4px; }}
+    .tile {{ aspect-ratio: 1; border-radius: 4px; background: #e5edf7; border: 1px solid rgba(31,41,55,.06); }}
+    .tile[data-level="1"] {{ background: rgba(29,134,242,.22); }}
+    .tile[data-level="2"] {{ background: rgba(29,134,242,.40); }}
+    .tile[data-level="3"] {{ background: rgba(29,134,242,.60); }}
+    .tile[data-level="4"] {{ background: rgba(30,169,124,.80); }}
+    .heatmap-scale {{ display: flex; flex-wrap: wrap; gap: 10px; align-items: center; color: var(--muted); font-size: 12px; }}
+    .scale-swatch {{ width: 14px; height: 14px; border-radius: 4px; border: 1px solid rgba(31,41,55,.06); display: inline-block; margin-right: 6px; vertical-align: middle; }}
     table {{ width: 100%; border-collapse: collapse; font-size: 13px; }}
     th, td {{ padding: 11px 9px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }}
     th {{ color: var(--muted); font-size: 12px; font-weight: 650; }}
     td a {{ color: var(--text); text-decoration: none; }}
-    .pill {{ display: inline-flex; max-width: 150px; padding: 4px 8px; border-radius: 999px; background: rgba(56,189,248,.14); color: #bfeeff; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }}
+    .pill {{ display: inline-flex; max-width: 150px; padding: 4px 8px; border-radius: 999px; background: rgba(29,134,242,.10); color: var(--text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }}
     .empty {{ color: var(--muted); padding: 20px; text-align: center; border: 1px dashed var(--line); border-radius: 8px; }}
+    .table-wrap {{ overflow-x: auto; }}
     @media (max-width: 1100px) {{
-      .summary {{ grid-template-columns: repeat(4, 1fr); }}
       .grid, .grid.three {{ grid-template-columns: 1fr; }}
+      .summary {{ grid-template-columns: repeat(2, minmax(0, 1fr)); }}
+      .version-list {{ max-height: none; }}
       header {{ grid-template-columns: 1fr; }}
       .stamp {{ text-align: left; }}
+    }}
+    @media (prefers-color-scheme: dark) {{
+      :root {{
+        color-scheme: dark;
+        --bg: #0f172a;
+        --panel: #111c33;
+        --panel-soft: #16233d;
+        --line: rgba(148, 163, 184, .18);
+        --text: #e7eef9;
+        --muted: #9db0c8;
+        --blue: #61b7ff;
+        --green: #47d19b;
+        --yellow: #ffd166;
+        --red: #ff7a8a;
+        --violet: #a78bfa;
+        --shadow: 0 14px 32px rgba(0, 0, 0, .22);
+      }}
+      .tile {{ background: #172036; border-color: rgba(148,163,184,.10); }}
+      .tab, .range-btn, .version-item {{ background: #0b1220; }}
+      .version-item.active {{ border-color: rgba(97, 183, 255, .45); box-shadow: 0 0 0 2px rgba(97, 183, 255, .08) inset; }}
     }}
   </style>
 </head>
@@ -572,7 +619,18 @@ def build_html(payload: dict[str, Any]) -> str:
       <section class="view active" id="overview">
         <div class="grid">
           <article class="panel"><h2>결함 처리 퍼널</h2><div class="funnel" id="funnel"></div></article>
-          <article class="panel"><h2>최근 30일 등록 히트맵</h2><div class="heatmap" id="heatmap"></div></article>
+          <article class="panel">
+            <h2>최근 30일 등록 히트맵</h2>
+            <div class="heatmap-wrap">
+              <div class="heatmap" id="heatmap"></div>
+              <div class="heatmap-scale" aria-label="히트맵 범례">
+                <span><i class="scale-swatch" style="background:rgba(29,134,242,.12)"></i>낮음</span>
+                <span><i class="scale-swatch" style="background:rgba(29,134,242,.32)"></i>보통</span>
+                <span><i class="scale-swatch" style="background:rgba(29,134,242,.58)"></i>높음</span>
+                <span><i class="scale-swatch" style="background:rgba(30,169,124,.80)"></i>최고</span>
+              </div>
+            </div>
+          </article>
         </div>
       </section>
       <section class="view" id="trend">
@@ -580,12 +638,12 @@ def build_html(payload: dict[str, Any]) -> str:
       </section>
       <section class="view" id="version">
         <div class="grid">
-          <article class="panel"><h2>버전별 결함 추이</h2><div class="version-list" id="versions"></div></article>
-          <article class="panel"><h2>상태/심각도/우선순위/OS 분포</h2><div class="grid three" id="distributions"></div></article>
+          <article class="panel"><div class="panel-head"><h2>버전별 결함 추이</h2><div class="subtle" id="selectedVersionLabel">전체</div></div><div class="version-list" id="versions"></div></article>
+          <article class="panel"><div class="panel-head"><h2>상태/심각도/우선순위 분포</h2><div class="subtle" id="distributionScope">전체 기준</div></div><div class="grid three" id="distributions"></div></article>
         </div>
       </section>
       <section class="view" id="recent">
-        <article class="panel"><h2>최근 등록 결함 10건</h2><div id="recentList"></div></article>
+        <article class="panel"><h2>최근 등록 결함 10건</h2><div class="table-wrap" id="recentList"></div></article>
       </section>
     </main>
   </div>
@@ -595,6 +653,7 @@ def build_html(payload: dict[str, Any]) -> str:
     const $ = (id) => document.getElementById(id);
     const esc = (v) => String(v ?? "").replace(/[&<>"']/g, (c) => ({{"&":"&amp;","<":"&lt;",">":"&gt;","\\"":"&quot;","'":"&#39;"}}[c]));
     const pct = (n) => `${{Number(n || 0).toFixed(1)}}%`;
+    let selectedVersion = DATA.selectedVersion || "ALL";
     $("stamp").textContent = `생성: ${{DATA.generatedAt.replace("T", " ")}} · 기준 ${{DATA.days}}일`;
 
     function renderSummary() {{
@@ -652,13 +711,28 @@ def build_html(payload: dict[str, Any]) -> str:
 
     function renderVersions() {{
       const max = Math.max(...DATA.versions.map((d) => d.total), 1);
-      $("versions").innerHTML = DATA.versions.length ? DATA.versions.map((d) => `
-        <div class="row">
-          <div><strong>${{esc(d.version)}}</strong><div class="meta">Major/Critical ${{d.criticalMajor}}건 · 완료율 ${{pct(d.doneRate)}}</div></div>
-          <div class="track"><div class="fill" style="width:${{d.total / max * 100}}%"></div></div>
+      const allItem = {{
+        version: "ALL",
+        label: "전체",
+        total: DATA.summary.total,
+        criticalMajor: DATA.versions.reduce((sum, item) => sum + (item.criticalMajor || 0), 0),
+        doneRate: DATA.summary.total ? Math.round((DATA.summary.closed / DATA.summary.total) * 1000) / 10 : 0,
+      }};
+      const items = [allItem, ...DATA.versions];
+      $("versions").innerHTML = items.length ? items.map((d) => `
+        <button class="version-item ${{selectedVersion === d.version ? "active" : ""}}" data-version="${{esc(d.version)}}">
+          <div><strong>${{esc(d.version === "ALL" ? d.label : d.version)}}</strong><div class="meta">Major/Critical ${{d.criticalMajor}}건 · 완료율 ${{pct(d.doneRate)}}</div></div>
+          <div class="track"><div class="fill" style="width:${{Math.max(8, d.total / max * 100)}}%"></div></div>
           <div>${{d.total}}건</div>
-        </div>
+        </button>
       `).join("") : `<div class="empty">표시할 버전 데이터가 없습니다.</div>`;
+      document.querySelectorAll(".version-item").forEach((button) => {{
+        button.addEventListener("click", () => {{
+          selectedVersion = button.dataset.version || "ALL";
+          renderVersions();
+          renderDistributions();
+        }});
+      }});
     }}
 
     function renderDistBox(title, rows) {{
@@ -670,12 +744,14 @@ def build_html(payload: dict[str, Any]) -> str:
     }}
 
     function renderDistributions() {{
-      const d = DATA.distributions;
+      const version = selectedVersion === "ALL" ? null : DATA.versions.find((item) => item.version === selectedVersion);
+      const d = version || DATA.distributions.ALL;
+      $("selectedVersionLabel").textContent = version ? version.version : "전체";
+      $("distributionScope").textContent = version ? `${{version.version}} 기준` : "전체 기준";
       $("distributions").innerHTML = [
         renderDistBox("상태", d.status),
         renderDistBox("심각도", d.severity),
         renderDistBox("우선순위", d.priority),
-        renderDistBox("OS", d.os),
       ].join("");
     }}
 

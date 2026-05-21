@@ -21,6 +21,10 @@ ROOT_DIR = SCRIPT_DIR.parent
 OUT_FILE = "defect_dashboard_embed.html"
 NOTION_VERSION = "2022-06-28"
 DEFAULT_DEFECT_DB_ID = "21473fbd1951800d8321fc2e34c2548e"
+REPORT_DB_IDS = {
+    "한패스": "36073fbd19518054b59ae4de5c74baeb",
+    "Go Hanpass": "36073fbd19518003b5caebbdb84839fb",
+}
 DEFAULT_REPO_URL = "https://github.com/mhjang-qa/Bug_Dashboard.git"
 DEFAULT_BRANCH = "main"
 
@@ -123,9 +127,8 @@ def notion_request(path: str, payload: dict[str, Any] | None = None) -> dict[str
         raise StepError(f"Notion API request failed: {exc.reason}") from exc
 
 
-def fetch_pages() -> list[dict[str, Any]]:
-    db_id = database_id()
-    log(f"query Notion database: {db_id}")
+def fetch_database_pages(db_id: str, label: str) -> list[dict[str, Any]]:
+    log(f"query Notion database: {label} ({db_id})")
     pages: list[dict[str, Any]] = []
     payload: dict[str, Any] = {"page_size": 100}
     page_no = 1
@@ -138,6 +141,10 @@ def fetch_pages() -> list[dict[str, Any]]:
             return pages
         payload["start_cursor"] = data.get("next_cursor")
         page_no += 1
+
+
+def fetch_pages() -> list[dict[str, Any]]:
+    return fetch_database_pages(database_id(), "defect")
 
 
 def plain_text(prop: dict[str, Any] | None) -> str:
@@ -340,6 +347,61 @@ def ordered_counts(counter: Counter[str], preferred: list[str] | None = None) ->
     return [{"label": key, "count": int(count)} for key, count in items]
 
 
+def is_recent_date(value: str, days: int) -> bool:
+    parsed = parse_dt(value)
+    if not parsed:
+        return False
+    return parsed.date() >= (datetime.now().date() - timedelta(days=days - 1))
+
+
+def normalize_report_page(page: dict[str, Any], domain: str) -> dict[str, Any]:
+    properties = page.get("properties", {})
+    created = plain_text(properties.get("생성 일시")) or page.get("created_time", "")
+    relation_prop = properties.get("⚠️ QA_ISSUES", {})
+    relations = relation_prop.get("relation", []) if relation_prop.get("type") == "relation" else []
+    return {
+        "domain": domain,
+        "title": plain_text(properties.get("제목")) or "제목 없음",
+        "status": plain_text(properties.get("상태")) or "미지정",
+        "processingStatus": plain_text(properties.get("처리 상태")) or "미지정",
+        "bugType": plain_text(properties.get("결함 여부")) or "미지정",
+        "platform": plain_text(properties.get("발생 플랫폼")) or "미지정",
+        "reporter": plain_text(properties.get("제보자")) or "미지정",
+        "createdAt": created,
+        "createdDate": date_key(created),
+        "qaLinked": len(relations),
+        "url": page.get("url", ""),
+    }
+
+
+def fetch_report_rows() -> dict[str, list[dict[str, Any]]]:
+    rows_by_domain: dict[str, list[dict[str, Any]]] = {}
+    for domain, db_id in REPORT_DB_IDS.items():
+        pages = fetch_database_pages(db_id, f"report-{domain}")
+        rows_by_domain[domain] = [normalize_report_page(page, domain) for page in pages]
+    return rows_by_domain
+
+
+def build_report_board(rows: list[dict[str, Any]], days: int = 30) -> dict[str, Any]:
+    recent_rows = [row for row in rows if is_recent_date(row["createdAt"], days)]
+    recent_rows.sort(key=lambda item: item.get("createdAt") or "", reverse=True)
+    total = len(recent_rows)
+    pending = sum(1 for row in recent_rows if row["status"] not in {"완료"})
+    completed = sum(1 for row in recent_rows if row["status"] == "완료")
+    qa_registered = sum(1 for row in recent_rows if row["processingStatus"] == "결함 등록 완료" or row["qaLinked"] > 0)
+    not_bug = sum(1 for row in recent_rows if row["processingStatus"] == "결함 아님")
+    return {
+        "summary": [
+            {"label": "최근 30일 제보", "count": total},
+            {"label": "미완료", "count": pending},
+            {"label": "완료", "count": completed},
+            {"label": "결함 등록 완료", "count": qa_registered},
+            {"label": "결함 아님", "count": not_bug},
+        ],
+        "recent": recent_rows[:3],
+    }
+
+
 def daily_range(days: int) -> list[date]:
     today = datetime.now().date()
     return [today - timedelta(days=offset) for offset in range(days - 1, -1, -1)]
@@ -390,7 +452,7 @@ def build_versions(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
     return sorted(versions, key=lambda item: (-item["total"], item["version"]))[:12]
 
 
-def build_scope_payload(rows: list[dict[str, Any]], days: int) -> dict[str, Any]:
+def build_scope_payload(rows: list[dict[str, Any]], days: int, report_board: dict[str, Any]) -> dict[str, Any]:
     today = datetime.now().date().isoformat()
     yesterday = (datetime.now().date() - timedelta(days=1)).isoformat()
     total = len(rows)
@@ -437,18 +499,28 @@ def build_scope_payload(rows: list[dict[str, Any]], days: int) -> dict[str, Any]
             }
         },
         "heatmap": heatmap,
+        "reportBoard": report_board,
         "recent": recent,
     }
 
 
 def build_payload(rows: list[dict[str, Any]], days: int) -> dict[str, Any]:
+    report_rows_by_domain = fetch_report_rows()
     grouped_rows: dict[str, list[dict[str, Any]]] = {
         "ALL": rows,
         "한패스": [row for row in rows if row["domain"] == "한패스"],
         "Go Hanpass": [row for row in rows if row["domain"] == "Go Hanpass"],
     }
+    report_scopes = {
+        "한패스": build_report_board(report_rows_by_domain.get("한패스", []), days=30),
+        "Go Hanpass": build_report_board(report_rows_by_domain.get("Go Hanpass", []), days=30),
+    }
+    report_scopes["ALL"] = build_report_board(
+        report_rows_by_domain.get("한패스", []) + report_rows_by_domain.get("Go Hanpass", []),
+        days=30,
+    )
     domains = {
-        name: build_scope_payload(items, days)
+        name: build_scope_payload(items, days, report_scopes[name])
         for name, items in grouped_rows.items()
     }
     return {
@@ -596,6 +668,15 @@ def build_html(payload: dict[str, Any]) -> str:
     .tile[data-level="4"] {{ background: rgba(30,169,124,.80); }}
     .heatmap-scale {{ display: flex; flex-wrap: wrap; gap: 10px; align-items: center; color: var(--muted); font-size: 12px; }}
     .scale-swatch {{ width: 14px; height: 14px; border-radius: 4px; border: 1px solid rgba(31,41,55,.06); display: inline-block; margin-right: 6px; vertical-align: middle; }}
+    .report-board {{ border-top: 1px solid var(--line); padding-top: 12px; display: grid; gap: 10px; }}
+    .report-summary {{ display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 8px; }}
+    .report-card {{ background: var(--panel-soft); border: 1px solid var(--line); border-radius: 8px; padding: 10px 10px 8px; min-height: 70px; }}
+    .report-card span {{ display: block; color: var(--muted); font-size: 11px; margin-bottom: 6px; }}
+    .report-card strong {{ display: block; font-size: 22px; line-height: 1; }}
+    .report-list {{ display: grid; gap: 6px; }}
+    .report-item {{ display: grid; grid-template-columns: 1fr auto; gap: 10px; align-items: center; padding: 8px 10px; border: 1px solid var(--line); border-radius: 8px; background: var(--panel-soft); color: var(--text); text-decoration: none; }}
+    .report-item small {{ display: block; color: var(--muted); font-size: 11px; margin-top: 3px; }}
+    .report-badge {{ color: var(--muted); font-size: 11px; white-space: nowrap; }}
     table {{ width: 100%; border-collapse: collapse; font-size: 13px; }}
     th, td {{ padding: 11px 9px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }}
     th {{ color: var(--muted); font-size: 12px; font-weight: 650; }}
@@ -610,6 +691,7 @@ def build_html(payload: dict[str, Any]) -> str:
       .grid, .grid.three {{ grid-template-columns: 1fr; }}
       .summary {{ grid-template-columns: repeat(2, minmax(0, 1fr)); }}
       .version-list {{ max-height: none; }}
+      .report-summary {{ grid-template-columns: repeat(2, minmax(0, 1fr)); }}
       header {{ grid-template-columns: 1fr; }}
       .stamp {{ text-align: left; }}
     }}
@@ -668,6 +750,14 @@ def build_html(payload: dict[str, Any]) -> str:
                 <span><i class="scale-swatch" style="background:rgba(29,134,242,.58)"></i>높음</span>
                 <span><i class="scale-swatch" style="background:rgba(30,169,124,.80)"></i>최고</span>
               </div>
+              <div class="report-board">
+                <div class="panel-head" style="margin-bottom:0">
+                  <h2 style="font-size:15px">결함 제보 현황</h2>
+                  <div class="subtle" id="reportBoardScope">최근 30일</div>
+                </div>
+                <div class="report-summary" id="reportSummary"></div>
+                <div class="report-list" id="reportList"></div>
+              </div>
             </div>
           </article>
         </div>
@@ -721,6 +811,7 @@ def build_html(payload: dict[str, Any]) -> str:
           renderFunnel();
           renderDaily();
           renderHeatmap();
+          renderReportBoard();
           renderVersions();
           renderDistributions();
           renderRecent();
@@ -781,6 +872,26 @@ def build_html(payload: dict[str, Any]) -> str:
         const level = d.new === 0 ? 0 : Math.min(4, Math.ceil(d.new / max * 4));
         return `<div class="tile" data-level="${{level}}" title="${{d.date}} 등록 ${{d.new}}건"></div>`;
       }}).join("");
+    }}
+
+    function renderReportBoard() {{
+      const reportBoard = currentScope().reportBoard;
+      $("reportBoardScope").textContent = `${{selectedDomain === "ALL" ? "전체" : selectedDomain}} · 최근 30일`;
+      $("reportSummary").innerHTML = reportBoard.summary.map((item) => `
+        <article class="report-card">
+          <span>${{esc(item.label)}}</span>
+          <strong>${{esc(item.count)}}</strong>
+        </article>
+      `).join("");
+      $("reportList").innerHTML = reportBoard.recent.length ? reportBoard.recent.map((item) => `
+        <a class="report-item" href="${{esc(item.url)}}" target="_blank" rel="noreferrer">
+          <div>
+            <div>${{esc(item.title)}}</div>
+            <small>${{esc(item.status)}} · ${{esc(item.processingStatus)}} · ${{esc(item.platform)}}</small>
+          </div>
+          <div class="report-badge">${{esc(item.createdDate || item.createdAt)}}</div>
+        </a>
+      `).join("") : `<div class="empty">최근 30일 제보 내역이 없습니다.</div>`;
     }}
 
     function renderVersions() {{
@@ -881,6 +992,7 @@ def build_html(payload: dict[str, Any]) -> str:
     renderFunnel();
     renderDaily();
     renderHeatmap();
+    renderReportBoard();
     renderVersions();
     renderDistributions();
     renderRecent();

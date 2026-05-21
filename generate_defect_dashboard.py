@@ -281,9 +281,21 @@ def normalize_priority(value: str) -> str:
     return text or "미지정"
 
 
+def classify_domain(version: str, title: str = "", url: str = "") -> str:
+    source = " ".join(part for part in [version, title, url] if part).lower()
+    if any(token in source for token in ["go hanpass", "gohanpass", "go.hanpass", "[g.h]", "g.h"]):
+        return "Go Hanpass"
+    if "hanpass" in source:
+        return "한패스"
+    if re.search(r"\b\d+\.\d+\.\d+\b", version or ""):
+        return "한패스"
+    return "한패스"
+
+
 def normalize_page(page: dict[str, Any]) -> dict[str, Any]:
     properties = page.get("properties", {})
     created = first_value(properties, "created_at") or page.get("created_time", "")
+    title = first_value(properties, "title") or "제목 없음"
     status_raw = first_value(properties, "status")
     status_stage = normalize_status(status_raw)
     fixed_at = first_value(properties, "fixed_at")
@@ -295,13 +307,14 @@ def normalize_page(page: dict[str, Any]) -> dict[str, Any]:
 
     return {
         "id": first_value(properties, "id") or page.get("id", ""),
-        "title": first_value(properties, "title") or "제목 없음",
+        "title": title,
         "status": status_raw or "미지정",
         "stage": status_stage if status_stage in FUNNEL_STAGES else "등록",
         "severity": normalize_severity(first_value(properties, "severity")),
         "priority": normalize_priority(first_value(properties, "priority")),
         "assignee": first_value(properties, "assignee") or "미지정",
         "version": first_value(properties, "version") or "미지정",
+        "domain": classify_domain(first_value(properties, "version"), title, page.get("url", "")),
         "os": normalize_os(first_value(properties, "os")),
         "createdAt": created,
         "createdDate": date_key(created),
@@ -377,17 +390,18 @@ def build_versions(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
     return sorted(versions, key=lambda item: (-item["total"], item["version"]))[:12]
 
 
-def build_payload(rows: list[dict[str, Any]], days: int) -> dict[str, Any]:
+def build_scope_payload(rows: list[dict[str, Any]], days: int) -> dict[str, Any]:
     today = datetime.now().date().isoformat()
     yesterday = (datetime.now().date() - timedelta(days=1)).isoformat()
     total = len(rows)
     stage_counts = Counter(row["stage"] for row in rows)
+    max_stage_count = max(stage_counts.values(), default=1)
     today_new = sum(1 for row in rows if row["createdDate"] == today)
     yesterday_new = sum(1 for row in rows if row["createdDate"] == yesterday)
     funnel = []
     for index, stage in enumerate(FUNNEL_STAGES):
         count = int(stage_counts[stage])
-        width = max(42, 100 - index * 7)
+        width = max(18, round((count / max_stage_count) * 100)) if total else 18
         funnel.append(
             {
                 "stage": stage,
@@ -400,9 +414,8 @@ def build_payload(rows: list[dict[str, Any]], days: int) -> dict[str, Any]:
     recent = sorted(rows, key=lambda item: item.get("createdAt") or "", reverse=True)[:10]
     daily = build_daily(rows, max(days, 30))
     heatmap = daily[-90:]
+    versions = build_versions(rows)
     return {
-        "generatedAt": datetime.now(timezone.utc).astimezone().isoformat(timespec="seconds"),
-        "days": days,
         "summary": {
             "total": total,
             "new": int(stage_counts["등록"]),
@@ -414,7 +427,7 @@ def build_payload(rows: list[dict[str, Any]], days: int) -> dict[str, Any]:
         },
         "funnel": funnel,
         "daily": daily,
-        "versions": build_versions(rows),
+        "versions": versions,
         "selectedVersion": "ALL",
         "distributions": {
             "ALL": {
@@ -425,6 +438,24 @@ def build_payload(rows: list[dict[str, Any]], days: int) -> dict[str, Any]:
         },
         "heatmap": heatmap,
         "recent": recent,
+    }
+
+
+def build_payload(rows: list[dict[str, Any]], days: int) -> dict[str, Any]:
+    grouped_rows: dict[str, list[dict[str, Any]]] = {
+        "ALL": rows,
+        "한패스": [row for row in rows if row["domain"] == "한패스"],
+        "Go Hanpass": [row for row in rows if row["domain"] == "Go Hanpass"],
+    }
+    domains = {
+        name: build_scope_payload(items, days)
+        for name, items in grouped_rows.items()
+    }
+    return {
+        "generatedAt": datetime.now(timezone.utc).astimezone().isoformat(timespec="seconds"),
+        "days": days,
+        "domainOrder": ["한패스", "Go Hanpass"],
+        "domains": domains,
     }
 
 
@@ -473,6 +504,7 @@ def build_html(payload: dict[str, Any]) -> str:
     .notice {{ margin-top: 8px; color: var(--muted); font-size: 12px; }}
     .stamp {{ text-align: right; color: var(--muted); font-size: 12px; white-space: nowrap; }}
     .tabs {{ display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 18px; }}
+    .domain-switch {{ display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 12px; }}
     .tab, .range-btn {{
       border: 1px solid var(--line);
       background: var(--panel);
@@ -482,6 +514,8 @@ def build_html(payload: dict[str, Any]) -> str:
       cursor: pointer;
       font-size: 13px;
     }}
+    .domain-btn {{ border: 1px solid var(--line); background: var(--panel); color: var(--muted); padding: 9px 13px; border-radius: 999px; cursor: pointer; font-size: 13px; }}
+    .domain-btn.active {{ color: var(--text); border-color: rgba(29, 134, 242, .45); background: rgba(29, 134, 242, .08); }}
     .tab.active, .range-btn.active {{ color: var(--text); border-color: rgba(29, 134, 242, .45); background: rgba(29, 134, 242, .08); }}
     .panel-head {{ display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 12px; }}
     .panel-head h2 {{ margin: 0; }}
@@ -521,7 +555,7 @@ def build_html(payload: dict[str, Any]) -> str:
       justify-content: center;
       color: #ffffff;
       font-weight: 800;
-      min-width: 72px;
+      min-width: 18px;
     }}
     .chart {{ height: 270px; display: flex; align-items: end; gap: 8px; padding-top: 8px; border-bottom: 1px solid var(--line); overflow-x: auto; overflow-y: hidden; }}
     .day {{ flex: 1; min-width: 8px; display: grid; grid-template-rows: 1fr auto; gap: 6px; height: 100%; }}
@@ -596,8 +630,9 @@ def build_html(payload: dict[str, Any]) -> str:
         --shadow: 0 14px 32px rgba(0, 0, 0, .22);
       }}
       .tile {{ background: #172036; border-color: rgba(148,163,184,.10); }}
-      .tab, .range-btn, .version-item {{ background: #0b1220; }}
+      .tab, .range-btn, .version-item, .domain-btn {{ background: #0b1220; }}
       .version-item.active {{ border-color: rgba(97, 183, 255, .45); box-shadow: 0 0 0 2px rgba(97, 183, 255, .08) inset; }}
+      .domain-btn.active {{ border-color: rgba(97, 183, 255, .45); background: rgba(97, 183, 255, .10); }}
     }}
   </style>
 </head>
@@ -611,6 +646,7 @@ def build_html(payload: dict[str, Any]) -> str:
       </div>
       <div class="stamp" id="stamp"></div>
     </header>
+    <div class="domain-switch" id="domainSwitch" aria-label="도메인 분기"></div>
     <nav class="tabs" aria-label="대시보드 탭">
       <button class="tab active" data-view="overview">흐름 요약</button>
       <button class="tab" data-view="trend">일별 추이</button>
@@ -656,11 +692,44 @@ def build_html(payload: dict[str, Any]) -> str:
     const $ = (id) => document.getElementById(id);
     const esc = (v) => String(v ?? "").replace(/[&<>"']/g, (c) => ({{"&":"&amp;","<":"&lt;",">":"&gt;","\\"":"&quot;","'":"&#39;"}}[c]));
     const pct = (n) => `${{Number(n || 0).toFixed(1)}}%`;
+    const domainNames = ["한패스", "Go Hanpass"];
+    let selectedDomain = "ALL";
     let selectedVersion = DATA.selectedVersion || "ALL";
     $("stamp").textContent = `생성: ${{DATA.generatedAt.replace("T", " ")}} · 기준 ${{DATA.days}}일`;
 
+    function currentScope() {{
+      return DATA.domains[selectedDomain] || DATA.domains.ALL;
+    }}
+
+    function renderDomainSwitch() {{
+      const scopeCounts = {{
+        ALL: DATA.domains.ALL.summary.total,
+        "한패스": DATA.domains["한패스"].summary.total,
+        "Go Hanpass": DATA.domains["Go Hanpass"].summary.total,
+      }};
+      const buttons = [
+        ...domainNames.map((name) => `<button class="domain-btn ${{selectedDomain === name ? "active" : ""}}" data-domain="${{name}}">${{name}} <span class="subtle">(${{scopeCounts[name] || 0}})</span></button>`),
+        `<button class="domain-btn ${{selectedDomain === "ALL" ? "active" : ""}}" data-domain="ALL">전체 <span class="subtle">(${{scopeCounts.ALL || 0}})</span></button>`,
+      ];
+      $("domainSwitch").innerHTML = buttons.join("");
+      document.querySelectorAll(".domain-btn").forEach((button) => {{
+        button.addEventListener("click", () => {{
+          selectedDomain = button.dataset.domain || "ALL";
+          selectedVersion = "ALL";
+          renderDomainSwitch();
+          renderSummary();
+          renderFunnel();
+          renderDaily();
+          renderHeatmap();
+          renderVersions();
+          renderDistributions();
+          renderRecent();
+        }});
+      }});
+    }}
+
     function renderSummary() {{
-      const s = DATA.summary;
+      const s = currentScope().summary;
       const cards = [
         ["전체 결함", s.total, "Notion DB 전체 조회 기준"],
         ["신규 등록", s.new, "등록 단계"],
@@ -676,18 +745,19 @@ def build_html(payload: dict[str, Any]) -> str:
     }}
 
     function renderFunnel() {{
-      const max = Math.max(...DATA.funnel.map((d) => d.count), 1);
-      $("funnel").innerHTML = DATA.funnel.map((d) => `
+      const funnel = currentScope().funnel;
+      const max = Math.max(...funnel.map((d) => d.count), 1);
+      $("funnel").innerHTML = funnel.map((d) => `
         <div class="funnel-row">
           <div>${{esc(d.stage)}}</div>
-          <div class="funnel-bar" style="width:${{d.width}}%; opacity:${{0.45 + d.count / max * 0.55}}">${{d.count}}건</div>
+          <div class="funnel-bar" style="width:${{Math.max(18, d.width)}}%; opacity:${{0.45 + d.count / max * 0.55}}">${{d.count}}건</div>
           <div class="meta">${{pct(d.rate)}}</div>
         </div>
       `).join("");
     }}
 
     function renderDaily(days = DATA.days) {{
-      const rows = DATA.daily.slice(-days);
+      const rows = currentScope().daily.slice(-days);
       const max = Math.max(...rows.flatMap((d) => [d.new, d.fixed, d.closed]), 1);
       $("dailyChart").innerHTML = rows.map((d) => `
         <div class="day" title="${{d.date}} 신규 ${{d.new}}, 수정완료 ${{d.fixed}}, 종료 ${{d.closed}}">
@@ -705,23 +775,25 @@ def build_html(payload: dict[str, Any]) -> str:
     }}
 
     function renderHeatmap() {{
-      const max = Math.max(...DATA.heatmap.map((d) => d.new), 1);
-      $("heatmap").innerHTML = DATA.heatmap.map((d) => {{
+      const heatmap = currentScope().heatmap;
+      const max = Math.max(...heatmap.map((d) => d.new), 1);
+      $("heatmap").innerHTML = heatmap.map((d) => {{
         const level = d.new === 0 ? 0 : Math.min(4, Math.ceil(d.new / max * 4));
         return `<div class="tile" data-level="${{level}}" title="${{d.date}} 등록 ${{d.new}}건"></div>`;
       }}).join("");
     }}
 
     function renderVersions() {{
-      const max = Math.max(...DATA.versions.map((d) => d.total), 1);
+      const scope = currentScope();
+      const max = Math.max(...scope.versions.map((d) => d.total), 1);
       const allItem = {{
         version: "ALL",
         label: "전체",
-        total: DATA.summary.total,
-        criticalMajor: DATA.versions.reduce((sum, item) => sum + (item.criticalMajor || 0), 0),
-        doneRate: DATA.summary.total ? Math.round((DATA.summary.closed / DATA.summary.total) * 1000) / 10 : 0,
+        total: scope.summary.total,
+        criticalMajor: scope.versions.reduce((sum, item) => sum + (item.criticalMajor || 0), 0),
+        doneRate: scope.summary.total ? Math.round((scope.summary.closed / scope.summary.total) * 1000) / 10 : 0,
       }};
-      const items = [allItem, ...DATA.versions];
+      const items = [allItem, ...scope.versions];
       $("versions").innerHTML = items.length ? items.map((d) => `
         <button class="version-item ${{selectedVersion === d.version ? "active" : ""}}" data-version="${{esc(d.version)}}">
           <div><strong>${{esc(d.version === "ALL" ? d.label : d.version)}}</strong><div class="meta">Major/Critical ${{d.criticalMajor}}건 · 완료율 ${{pct(d.doneRate)}}</div></div>
@@ -747,10 +819,11 @@ def build_html(payload: dict[str, Any]) -> str:
     }}
 
     function renderDistributions() {{
-      const version = selectedVersion === "ALL" ? null : DATA.versions.find((item) => item.version === selectedVersion);
-      const d = version || DATA.distributions.ALL;
-      $("selectedVersionLabel").textContent = version ? version.version : "전체";
-      $("distributionScope").textContent = version ? `${{version.version}} 기준` : "전체 기준";
+      const scope = currentScope();
+      const version = selectedVersion === "ALL" ? null : scope.versions.find((item) => item.version === selectedVersion);
+      const d = version || scope.distributions.ALL;
+      $("selectedVersionLabel").textContent = `${{selectedDomain === "ALL" ? "전체" : selectedDomain}} / ${{version ? version.version : "전체"}}`;
+      $("distributionScope").textContent = version ? `${{selectedDomain === "ALL" ? "전체" : selectedDomain}} · ${{version.version}} 기준` : `${{selectedDomain === "ALL" ? "전체" : selectedDomain}} 기준`;
       $("distributions").innerHTML = [
         renderDistBox("상태", d.status),
         renderDistBox("심각도", d.severity),
@@ -759,11 +832,12 @@ def build_html(payload: dict[str, Any]) -> str:
     }}
 
     function renderRecent() {{
-      if (!DATA.recent.length) {{
+      const recent = currentScope().recent;
+      if (!recent.length) {{
         $("recentList").innerHTML = `<div class="empty">최근 결함 데이터가 없습니다.</div>`;
         return;
       }}
-      $("recentList").innerHTML = `<table><thead><tr><th>제목</th><th>상태</th><th>심각도</th><th>담당자</th><th>등록일</th><th>버전</th></tr></thead><tbody>${{DATA.recent.map((r) => `
+      $("recentList").innerHTML = `<table><thead><tr><th>제목</th><th>상태</th><th>심각도</th><th>담당자</th><th>등록일</th><th>버전</th></tr></thead><tbody>${{recent.map((r) => `
         <tr class="recent-row" data-url="${{esc(r.url)}}" tabindex="0" role="link" aria-label="${{esc(r.title)}} Notion에서 열기">
           <td><a href="${{esc(r.url)}}" target="_blank" rel="noreferrer" tabindex="-1">${{esc(r.title)}}</a></td>
           <td><span class="pill">${{esc(r.status)}}</span></td>
@@ -802,6 +876,7 @@ def build_html(payload: dict[str, Any]) -> str:
       }});
     }});
 
+    renderDomainSwitch();
     renderSummary();
     renderFunnel();
     renderDaily();
@@ -896,7 +971,7 @@ def main() -> int:
         "output": str(output_path),
         "published": published,
         "generatedAt": payload["generatedAt"],
-        "summary": payload["summary"],
+        "summary": payload["domains"]["ALL"]["summary"],
     }
     print(json.dumps(summary, ensure_ascii=False, indent=2))
     return 0

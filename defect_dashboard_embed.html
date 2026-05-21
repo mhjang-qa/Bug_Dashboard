@@ -41,6 +41,7 @@
     .notice { margin-top: 8px; color: var(--muted); font-size: 12px; }
     .stamp { text-align: right; color: var(--muted); font-size: 12px; white-space: nowrap; }
     .tabs { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 18px; }
+    .domain-switch { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 12px; }
     .tab, .range-btn {
       border: 1px solid var(--line);
       background: var(--panel);
@@ -50,6 +51,8 @@
       cursor: pointer;
       font-size: 13px;
     }
+    .domain-btn { border: 1px solid var(--line); background: var(--panel); color: var(--muted); padding: 9px 13px; border-radius: 999px; cursor: pointer; font-size: 13px; }
+    .domain-btn.active { color: var(--text); border-color: rgba(29, 134, 242, .45); background: rgba(29, 134, 242, .08); }
     .tab.active, .range-btn.active { color: var(--text); border-color: rgba(29, 134, 242, .45); background: rgba(29, 134, 242, .08); }
     .panel-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 12px; }
     .panel-head h2 { margin: 0; }
@@ -89,7 +92,7 @@
       justify-content: center;
       color: #ffffff;
       font-weight: 800;
-      min-width: 72px;
+      min-width: 18px;
     }
     .chart { height: 270px; display: flex; align-items: end; gap: 8px; padding-top: 8px; border-bottom: 1px solid var(--line); overflow-x: auto; overflow-y: hidden; }
     .day { flex: 1; min-width: 8px; display: grid; grid-template-rows: 1fr auto; gap: 6px; height: 100%; }
@@ -164,8 +167,9 @@
         --shadow: 0 14px 32px rgba(0, 0, 0, .22);
       }
       .tile { background: #172036; border-color: rgba(148,163,184,.10); }
-      .tab, .range-btn, .version-item { background: #0b1220; }
+      .tab, .range-btn, .version-item, .domain-btn { background: #0b1220; }
       .version-item.active { border-color: rgba(97, 183, 255, .45); box-shadow: 0 0 0 2px rgba(97, 183, 255, .08) inset; }
+      .domain-btn.active { border-color: rgba(97, 183, 255, .45); background: rgba(97, 183, 255, .10); }
     }
   </style>
 </head>
@@ -179,6 +183,7 @@
       </div>
       <div class="stamp" id="stamp"></div>
     </header>
+    <div class="domain-switch" id="domainSwitch" aria-label="도메인 분기"></div>
     <nav class="tabs" aria-label="대시보드 탭">
       <button class="tab active" data-view="overview">흐름 요약</button>
       <button class="tab" data-view="trend">일별 추이</button>
@@ -219,1257 +224,3324 @@
     </main>
   </div>
   <script id="dashboard-data" type="application/json">{
-  "generatedAt": "2026-05-21T09:33:47+09:00",
+  "generatedAt": "2026-05-21T13:23:40+09:00",
   "days": 30,
-  "summary": {
-    "total": 611,
-    "new": 108,
-    "inProgress": 4,
-    "fixed": 0,
-    "closed": 375,
-    "todayNew": 0,
-    "newDelta": 0
-  },
-  "funnel": [
-    {
-      "stage": "등록",
-      "count": 108,
-      "rate": 17.7,
-      "width": 100
-    },
-    {
-      "stage": "검토",
-      "count": 0,
-      "rate": 0.0,
-      "width": 93
-    },
-    {
-      "stage": "배정",
-      "count": 4,
-      "rate": 0.7,
-      "width": 86
-    },
-    {
-      "stage": "진행중",
-      "count": 4,
-      "rate": 0.7,
-      "width": 79
-    },
-    {
-      "stage": "수정완료",
-      "count": 0,
-      "rate": 0.0,
-      "width": 72
-    },
-    {
-      "stage": "QA확인",
-      "count": 120,
-      "rate": 19.6,
-      "width": 65
-    },
-    {
-      "stage": "종료",
-      "count": 375,
-      "rate": 61.4,
-      "width": 58
-    }
+  "domainOrder": [
+    "한패스",
+    "Go Hanpass"
   ],
-  "daily": [
-    {
-      "date": "2026-04-22",
-      "new": 0,
-      "fixed": 0,
-      "closed": 0,
-      "deltaNew": 0
-    },
-    {
-      "date": "2026-04-23",
-      "new": 0,
-      "fixed": 0,
-      "closed": 0,
-      "deltaNew": 0
-    },
-    {
-      "date": "2026-04-24",
-      "new": 0,
-      "fixed": 0,
-      "closed": 0,
-      "deltaNew": 0
-    },
-    {
-      "date": "2026-04-25",
-      "new": 0,
-      "fixed": 0,
-      "closed": 0,
-      "deltaNew": 0
-    },
-    {
-      "date": "2026-04-26",
-      "new": 0,
-      "fixed": 0,
-      "closed": 0,
-      "deltaNew": 0
-    },
-    {
-      "date": "2026-04-27",
-      "new": 0,
-      "fixed": 0,
-      "closed": 0,
-      "deltaNew": 0
-    },
-    {
-      "date": "2026-04-28",
-      "new": 0,
-      "fixed": 1,
-      "closed": 0,
-      "deltaNew": 0
-    },
-    {
-      "date": "2026-04-29",
-      "new": 16,
-      "fixed": 0,
-      "closed": 0,
-      "deltaNew": 16
-    },
-    {
-      "date": "2026-04-30",
-      "new": 18,
-      "fixed": 0,
-      "closed": 0,
-      "deltaNew": 2
-    },
-    {
-      "date": "2026-05-01",
-      "new": 0,
-      "fixed": 0,
-      "closed": 0,
-      "deltaNew": -18
-    },
-    {
-      "date": "2026-05-02",
-      "new": 0,
-      "fixed": 0,
-      "closed": 0,
-      "deltaNew": 0
-    },
-    {
-      "date": "2026-05-03",
-      "new": 0,
-      "fixed": 0,
-      "closed": 0,
-      "deltaNew": 0
-    },
-    {
-      "date": "2026-05-04",
-      "new": 9,
-      "fixed": 0,
-      "closed": 0,
-      "deltaNew": 9
-    },
-    {
-      "date": "2026-05-05",
-      "new": 0,
-      "fixed": 0,
-      "closed": 0,
-      "deltaNew": -9
-    },
-    {
-      "date": "2026-05-06",
-      "new": 8,
-      "fixed": 0,
-      "closed": 0,
-      "deltaNew": 8
-    },
-    {
-      "date": "2026-05-07",
-      "new": 30,
-      "fixed": 0,
-      "closed": 0,
-      "deltaNew": 22
-    },
-    {
-      "date": "2026-05-08",
-      "new": 22,
-      "fixed": 55,
-      "closed": 11,
-      "deltaNew": -8
-    },
-    {
-      "date": "2026-05-09",
-      "new": 0,
-      "fixed": 0,
-      "closed": 0,
-      "deltaNew": -22
-    },
-    {
-      "date": "2026-05-10",
-      "new": 0,
-      "fixed": 0,
-      "closed": 0,
-      "deltaNew": 0
-    },
-    {
-      "date": "2026-05-11",
-      "new": 5,
-      "fixed": 22,
-      "closed": 6,
-      "deltaNew": 5
-    },
-    {
-      "date": "2026-05-12",
-      "new": 60,
-      "fixed": 2,
-      "closed": 1,
-      "deltaNew": 55
-    },
-    {
-      "date": "2026-05-13",
-      "new": 11,
-      "fixed": 0,
-      "closed": 0,
-      "deltaNew": -49
-    },
-    {
-      "date": "2026-05-14",
-      "new": 19,
-      "fixed": 1,
-      "closed": 1,
-      "deltaNew": 8
-    },
-    {
-      "date": "2026-05-15",
-      "new": 11,
-      "fixed": 8,
-      "closed": 1,
-      "deltaNew": -8
-    },
-    {
-      "date": "2026-05-16",
-      "new": 0,
-      "fixed": 0,
-      "closed": 0,
-      "deltaNew": -11
-    },
-    {
-      "date": "2026-05-17",
-      "new": 0,
-      "fixed": 0,
-      "closed": 0,
-      "deltaNew": 0
-    },
-    {
-      "date": "2026-05-18",
-      "new": 1,
-      "fixed": 70,
-      "closed": 63,
-      "deltaNew": 1
-    },
-    {
-      "date": "2026-05-19",
-      "new": 6,
-      "fixed": 10,
-      "closed": 5,
-      "deltaNew": 5
-    },
-    {
-      "date": "2026-05-20",
-      "new": 0,
-      "fixed": 35,
-      "closed": 28,
-      "deltaNew": -6
-    },
-    {
-      "date": "2026-05-21",
-      "new": 0,
-      "fixed": 7,
-      "closed": 6,
-      "deltaNew": 0
-    }
-  ],
-  "versions": [
-    {
-      "version": "5.21.0",
-      "total": 113,
-      "criticalMajor": 42,
-      "doneRate": 85.8,
-      "status": [
-        {
-          "label": "등록",
-          "count": 15
-        },
-        {
-          "label": "진행중",
-          "count": 1
-        },
-        {
-          "label": "QA확인",
-          "count": 72
-        },
-        {
-          "label": "종료",
-          "count": 25
-        }
-      ],
-      "severity": [
-        {
-          "label": "Critical",
-          "count": 9
-        },
-        {
-          "label": "Major",
-          "count": 33
-        },
-        {
-          "label": "Minor",
-          "count": 69
-        },
-        {
-          "label": "개선 의견",
-          "count": 2
-        }
-      ],
-      "priority": [
-        {
-          "label": "Medium",
-          "count": 113
-        }
-      ]
-    },
-    {
-      "version": "[G.H]v1.0.0",
-      "total": 103,
-      "criticalMajor": 22,
-      "doneRate": 48.5,
-      "status": [
-        {
-          "label": "등록",
-          "count": 46
-        },
-        {
-          "label": "배정",
-          "count": 4
-        },
-        {
-          "label": "진행중",
-          "count": 3
-        },
-        {
-          "label": "QA확인",
-          "count": 16
-        },
-        {
-          "label": "종료",
-          "count": 34
-        }
-      ],
-      "severity": [
-        {
-          "label": "Critical",
-          "count": 1
-        },
-        {
-          "label": "Major",
-          "count": 21
-        },
-        {
-          "label": "Minor",
-          "count": 81
-        }
-      ],
-      "priority": [
-        {
-          "label": "Medium",
-          "count": 103
-        }
-      ]
-    },
-    {
-      "version": "5.20.0",
-      "total": 82,
-      "criticalMajor": 19,
-      "doneRate": 97.6,
-      "status": [
-        {
-          "label": "등록",
-          "count": 2
-        },
-        {
-          "label": "종료",
-          "count": 80
-        }
-      ],
-      "severity": [
-        {
-          "label": "Critical",
-          "count": 7
-        },
-        {
-          "label": "Major",
-          "count": 12
-        },
-        {
-          "label": "Minor",
-          "count": 63
-        }
-      ],
-      "priority": [
-        {
-          "label": "Medium",
-          "count": 81
-        },
-        {
-          "label": "Low",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "version": "5.17.0",
-      "total": 67,
-      "criticalMajor": 35,
-      "doneRate": 86.6,
-      "status": [
-        {
-          "label": "등록",
-          "count": 9
-        },
-        {
-          "label": "종료",
-          "count": 58
-        }
-      ],
-      "severity": [
-        {
-          "label": "Critical",
-          "count": 9
-        },
-        {
-          "label": "Major",
-          "count": 26
-        },
-        {
-          "label": "Minor",
-          "count": 27
-        },
-        {
-          "label": "개선 의견",
-          "count": 3
-        },
-        {
-          "label": "기획 문의",
-          "count": 2
-        }
-      ],
-      "priority": [
-        {
-          "label": "High",
-          "count": 4
-        },
-        {
-          "label": "Medium",
-          "count": 47
-        },
-        {
-          "label": "Low",
-          "count": 7
-        },
-        {
-          "label": "긴급",
-          "count": 8
-        },
-        {
-          "label": "완료",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "version": "대출비교",
-      "total": 47,
-      "criticalMajor": 11,
-      "doneRate": 87.2,
-      "status": [
-        {
-          "label": "등록",
-          "count": 6
-        },
-        {
-          "label": "QA확인",
-          "count": 32
-        },
-        {
-          "label": "종료",
-          "count": 9
-        }
-      ],
-      "severity": [
-        {
-          "label": "Major",
-          "count": 11
-        },
-        {
-          "label": "Minor",
-          "count": 34
-        },
-        {
-          "label": "개선 의견",
-          "count": 2
-        }
-      ],
-      "priority": [
-        {
-          "label": "Medium",
-          "count": 46
-        },
-        {
-          "label": "Low",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "version": "5.18.0",
-      "total": 36,
-      "criticalMajor": 10,
-      "doneRate": 86.1,
-      "status": [
-        {
-          "label": "등록",
-          "count": 5
-        },
-        {
-          "label": "종료",
-          "count": 31
-        }
-      ],
-      "severity": [
-        {
-          "label": "Critical",
-          "count": 3
-        },
-        {
-          "label": "Major",
-          "count": 7
-        },
-        {
-          "label": "Minor",
-          "count": 23
-        },
-        {
-          "label": "개선 의견",
-          "count": 3
-        }
-      ],
-      "priority": [
-        {
-          "label": "Medium",
-          "count": 36
-        }
-      ]
-    },
-    {
-      "version": "5.12.0",
-      "total": 33,
-      "criticalMajor": 0,
-      "doneRate": 90.9,
-      "status": [
-        {
-          "label": "등록",
-          "count": 3
-        },
-        {
-          "label": "종료",
-          "count": 30
-        }
-      ],
-      "severity": [
-        {
-          "label": "미지정",
-          "count": 33
-        }
-      ],
-      "priority": [
-        {
-          "label": "High",
-          "count": 3
-        },
-        {
-          "label": "Medium",
-          "count": 30
-        }
-      ]
-    },
-    {
-      "version": "5.16.0",
-      "total": 33,
-      "criticalMajor": 10,
-      "doneRate": 87.9,
-      "status": [
-        {
-          "label": "등록",
-          "count": 4
-        },
-        {
-          "label": "종료",
-          "count": 29
-        }
-      ],
-      "severity": [
-        {
-          "label": "Critical",
-          "count": 1
-        },
-        {
-          "label": "Major",
-          "count": 9
-        },
-        {
-          "label": "Minor",
-          "count": 16
-        },
-        {
-          "label": "개선 의견",
-          "count": 7
-        }
-      ],
-      "priority": [
-        {
-          "label": "High",
-          "count": 2
-        },
-        {
-          "label": "Medium",
-          "count": 29
-        },
-        {
-          "label": "Low",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "version": "5.13.0",
-      "total": 27,
-      "criticalMajor": 0,
-      "doneRate": 81.5,
-      "status": [
-        {
-          "label": "등록",
-          "count": 5
-        },
-        {
-          "label": "종료",
-          "count": 22
-        }
-      ],
-      "severity": [
-        {
-          "label": "미지정",
-          "count": 27
-        }
-      ],
-      "priority": [
-        {
-          "label": "High",
-          "count": 3
-        },
-        {
-          "label": "Medium",
-          "count": 23
-        },
-        {
-          "label": "Low",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "version": "5.19.0",
-      "total": 24,
-      "criticalMajor": 3,
-      "doneRate": 79.2,
-      "status": [
-        {
-          "label": "등록",
-          "count": 5
-        },
-        {
-          "label": "종료",
-          "count": 19
-        }
-      ],
-      "severity": [
-        {
-          "label": "Major",
-          "count": 3
-        },
-        {
-          "label": "Minor",
-          "count": 21
-        }
-      ],
-      "priority": [
-        {
-          "label": "Medium",
-          "count": 24
-        }
-      ]
-    },
-    {
-      "version": "고속/시외버스",
-      "total": 21,
-      "criticalMajor": 3,
-      "doneRate": 76.2,
-      "status": [
-        {
-          "label": "등록",
-          "count": 5
-        },
-        {
-          "label": "종료",
-          "count": 16
-        }
-      ],
-      "severity": [
-        {
-          "label": "Major",
-          "count": 3
-        },
-        {
-          "label": "Minor",
-          "count": 16
-        },
-        {
-          "label": "개선 의견",
-          "count": 2
-        }
-      ],
-      "priority": [
-        {
-          "label": "Medium",
-          "count": 21
-        }
-      ]
-    },
-    {
-      "version": "미지정",
-      "total": 8,
-      "criticalMajor": 0,
-      "doneRate": 87.5,
-      "status": [
-        {
-          "label": "등록",
-          "count": 1
-        },
-        {
-          "label": "종료",
-          "count": 7
-        }
-      ],
-      "severity": [
-        {
-          "label": "미지정",
-          "count": 8
-        }
-      ],
-      "priority": [
-        {
-          "label": "Medium",
-          "count": 8
-        }
-      ]
-    }
-  ],
-  "selectedVersion": "ALL",
-  "distributions": {
+  "domains": {
     "ALL": {
-      "status": [
+      "summary": {
+        "total": 611,
+        "new": 100,
+        "inProgress": 9,
+        "fixed": 0,
+        "closed": 415,
+        "todayNew": 0,
+        "newDelta": 0
+      },
+      "funnel": [
         {
-          "label": "등록",
-          "count": 108
+          "stage": "등록",
+          "count": 100,
+          "rate": 16.4,
+          "width": 24
         },
         {
-          "label": "배정",
-          "count": 4
+          "stage": "검토",
+          "count": 0,
+          "rate": 0.0,
+          "width": 18
         },
         {
-          "label": "진행중",
-          "count": 4
+          "stage": "배정",
+          "count": 4,
+          "rate": 0.7,
+          "width": 18
         },
         {
-          "label": "QA확인",
-          "count": 120
+          "stage": "진행중",
+          "count": 9,
+          "rate": 1.5,
+          "width": 18
         },
         {
-          "label": "종료",
-          "count": 375
+          "stage": "수정완료",
+          "count": 0,
+          "rate": 0.0,
+          "width": 18
+        },
+        {
+          "stage": "QA확인",
+          "count": 83,
+          "rate": 13.6,
+          "width": 20
+        },
+        {
+          "stage": "종료",
+          "count": 415,
+          "rate": 67.9,
+          "width": 100
         }
       ],
-      "severity": [
+      "daily": [
         {
-          "label": "Critical",
-          "count": 30
+          "date": "2026-04-22",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
         },
         {
-          "label": "Major",
-          "count": 128
+          "date": "2026-04-23",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
         },
         {
-          "label": "Minor",
-          "count": 357
+          "date": "2026-04-24",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
         },
         {
-          "label": "미지정",
-          "count": 74
+          "date": "2026-04-25",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
         },
         {
-          "label": "개선 의견",
-          "count": 20
+          "date": "2026-04-26",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
         },
         {
-          "label": "기획 문의",
-          "count": 2
+          "date": "2026-04-27",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-04-28",
+          "new": 0,
+          "fixed": 1,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-04-29",
+          "new": 16,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 16
+        },
+        {
+          "date": "2026-04-30",
+          "new": 18,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 2
+        },
+        {
+          "date": "2026-05-01",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": -18
+        },
+        {
+          "date": "2026-05-02",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-05-03",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-05-04",
+          "new": 9,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 9
+        },
+        {
+          "date": "2026-05-05",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": -9
+        },
+        {
+          "date": "2026-05-06",
+          "new": 8,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 8
+        },
+        {
+          "date": "2026-05-07",
+          "new": 30,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 22
+        },
+        {
+          "date": "2026-05-08",
+          "new": 22,
+          "fixed": 37,
+          "closed": 11,
+          "deltaNew": -8
+        },
+        {
+          "date": "2026-05-09",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": -22
+        },
+        {
+          "date": "2026-05-10",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-05-11",
+          "new": 5,
+          "fixed": 11,
+          "closed": 6,
+          "deltaNew": 5
+        },
+        {
+          "date": "2026-05-12",
+          "new": 60,
+          "fixed": 1,
+          "closed": 1,
+          "deltaNew": 55
+        },
+        {
+          "date": "2026-05-13",
+          "new": 11,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": -49
+        },
+        {
+          "date": "2026-05-14",
+          "new": 19,
+          "fixed": 1,
+          "closed": 1,
+          "deltaNew": 8
+        },
+        {
+          "date": "2026-05-15",
+          "new": 11,
+          "fixed": 5,
+          "closed": 1,
+          "deltaNew": -8
+        },
+        {
+          "date": "2026-05-16",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": -11
+        },
+        {
+          "date": "2026-05-17",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-05-18",
+          "new": 1,
+          "fixed": 66,
+          "closed": 63,
+          "deltaNew": 1
+        },
+        {
+          "date": "2026-05-19",
+          "new": 6,
+          "fixed": 10,
+          "closed": 5,
+          "deltaNew": 5
+        },
+        {
+          "date": "2026-05-20",
+          "new": 0,
+          "fixed": 35,
+          "closed": 28,
+          "deltaNew": -6
+        },
+        {
+          "date": "2026-05-21",
+          "new": 0,
+          "fixed": 47,
+          "closed": 46,
+          "deltaNew": 0
         }
       ],
-      "priority": [
+      "versions": [
         {
-          "label": "High",
-          "count": 12
+          "version": "5.21.0",
+          "total": 113,
+          "criticalMajor": 42,
+          "doneRate": 85.8,
+          "status": [
+            {
+              "label": "등록",
+              "count": 10
+            },
+            {
+              "label": "진행중",
+              "count": 6
+            },
+            {
+              "label": "QA확인",
+              "count": 35
+            },
+            {
+              "label": "종료",
+              "count": 62
+            }
+          ],
+          "severity": [
+            {
+              "label": "Critical",
+              "count": 9
+            },
+            {
+              "label": "Major",
+              "count": 33
+            },
+            {
+              "label": "Minor",
+              "count": 69
+            },
+            {
+              "label": "개선 의견",
+              "count": 2
+            }
+          ],
+          "priority": [
+            {
+              "label": "Medium",
+              "count": 113
+            }
+          ]
         },
         {
-          "label": "Medium",
-          "count": 569
+          "version": "[G.H]v1.0.0",
+          "total": 103,
+          "criticalMajor": 22,
+          "doneRate": 51.5,
+          "status": [
+            {
+              "label": "등록",
+              "count": 43
+            },
+            {
+              "label": "배정",
+              "count": 4
+            },
+            {
+              "label": "진행중",
+              "count": 3
+            },
+            {
+              "label": "QA확인",
+              "count": 16
+            },
+            {
+              "label": "종료",
+              "count": 37
+            }
+          ],
+          "severity": [
+            {
+              "label": "Critical",
+              "count": 1
+            },
+            {
+              "label": "Major",
+              "count": 21
+            },
+            {
+              "label": "Minor",
+              "count": 81
+            }
+          ],
+          "priority": [
+            {
+              "label": "Medium",
+              "count": 103
+            }
+          ]
         },
         {
-          "label": "Low",
-          "count": 21
+          "version": "5.20.0",
+          "total": 82,
+          "criticalMajor": 19,
+          "doneRate": 97.6,
+          "status": [
+            {
+              "label": "등록",
+              "count": 2
+            },
+            {
+              "label": "종료",
+              "count": 80
+            }
+          ],
+          "severity": [
+            {
+              "label": "Critical",
+              "count": 7
+            },
+            {
+              "label": "Major",
+              "count": 12
+            },
+            {
+              "label": "Minor",
+              "count": 63
+            }
+          ],
+          "priority": [
+            {
+              "label": "Medium",
+              "count": 81
+            },
+            {
+              "label": "Low",
+              "count": 1
+            }
+          ]
         },
         {
-          "label": "긴급",
-          "count": 8
+          "version": "5.17.0",
+          "total": 67,
+          "criticalMajor": 35,
+          "doneRate": 86.6,
+          "status": [
+            {
+              "label": "등록",
+              "count": 9
+            },
+            {
+              "label": "종료",
+              "count": 58
+            }
+          ],
+          "severity": [
+            {
+              "label": "Critical",
+              "count": 9
+            },
+            {
+              "label": "Major",
+              "count": 26
+            },
+            {
+              "label": "Minor",
+              "count": 27
+            },
+            {
+              "label": "개선 의견",
+              "count": 3
+            },
+            {
+              "label": "기획 문의",
+              "count": 2
+            }
+          ],
+          "priority": [
+            {
+              "label": "High",
+              "count": 4
+            },
+            {
+              "label": "Medium",
+              "count": 47
+            },
+            {
+              "label": "Low",
+              "count": 7
+            },
+            {
+              "label": "긴급",
+              "count": 8
+            },
+            {
+              "label": "완료",
+              "count": 1
+            }
+          ]
         },
         {
-          "label": "완료",
-          "count": 1
+          "version": "대출비교",
+          "total": 47,
+          "criticalMajor": 11,
+          "doneRate": 87.2,
+          "status": [
+            {
+              "label": "등록",
+              "count": 6
+            },
+            {
+              "label": "QA확인",
+              "count": 32
+            },
+            {
+              "label": "종료",
+              "count": 9
+            }
+          ],
+          "severity": [
+            {
+              "label": "Major",
+              "count": 11
+            },
+            {
+              "label": "Minor",
+              "count": 34
+            },
+            {
+              "label": "개선 의견",
+              "count": 2
+            }
+          ],
+          "priority": [
+            {
+              "label": "Medium",
+              "count": 46
+            },
+            {
+              "label": "Low",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "version": "5.18.0",
+          "total": 36,
+          "criticalMajor": 10,
+          "doneRate": 86.1,
+          "status": [
+            {
+              "label": "등록",
+              "count": 5
+            },
+            {
+              "label": "종료",
+              "count": 31
+            }
+          ],
+          "severity": [
+            {
+              "label": "Critical",
+              "count": 3
+            },
+            {
+              "label": "Major",
+              "count": 7
+            },
+            {
+              "label": "Minor",
+              "count": 23
+            },
+            {
+              "label": "개선 의견",
+              "count": 3
+            }
+          ],
+          "priority": [
+            {
+              "label": "Medium",
+              "count": 36
+            }
+          ]
+        },
+        {
+          "version": "5.12.0",
+          "total": 33,
+          "criticalMajor": 0,
+          "doneRate": 90.9,
+          "status": [
+            {
+              "label": "등록",
+              "count": 3
+            },
+            {
+              "label": "종료",
+              "count": 30
+            }
+          ],
+          "severity": [
+            {
+              "label": "미지정",
+              "count": 33
+            }
+          ],
+          "priority": [
+            {
+              "label": "High",
+              "count": 3
+            },
+            {
+              "label": "Medium",
+              "count": 30
+            }
+          ]
+        },
+        {
+          "version": "5.16.0",
+          "total": 33,
+          "criticalMajor": 10,
+          "doneRate": 87.9,
+          "status": [
+            {
+              "label": "등록",
+              "count": 4
+            },
+            {
+              "label": "종료",
+              "count": 29
+            }
+          ],
+          "severity": [
+            {
+              "label": "Critical",
+              "count": 1
+            },
+            {
+              "label": "Major",
+              "count": 9
+            },
+            {
+              "label": "Minor",
+              "count": 16
+            },
+            {
+              "label": "개선 의견",
+              "count": 7
+            }
+          ],
+          "priority": [
+            {
+              "label": "High",
+              "count": 2
+            },
+            {
+              "label": "Medium",
+              "count": 29
+            },
+            {
+              "label": "Low",
+              "count": 2
+            }
+          ]
+        },
+        {
+          "version": "5.13.0",
+          "total": 27,
+          "criticalMajor": 0,
+          "doneRate": 81.5,
+          "status": [
+            {
+              "label": "등록",
+              "count": 5
+            },
+            {
+              "label": "종료",
+              "count": 22
+            }
+          ],
+          "severity": [
+            {
+              "label": "미지정",
+              "count": 27
+            }
+          ],
+          "priority": [
+            {
+              "label": "High",
+              "count": 3
+            },
+            {
+              "label": "Medium",
+              "count": 23
+            },
+            {
+              "label": "Low",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "version": "5.19.0",
+          "total": 24,
+          "criticalMajor": 3,
+          "doneRate": 79.2,
+          "status": [
+            {
+              "label": "등록",
+              "count": 5
+            },
+            {
+              "label": "종료",
+              "count": 19
+            }
+          ],
+          "severity": [
+            {
+              "label": "Major",
+              "count": 3
+            },
+            {
+              "label": "Minor",
+              "count": 21
+            }
+          ],
+          "priority": [
+            {
+              "label": "Medium",
+              "count": 24
+            }
+          ]
+        },
+        {
+          "version": "고속/시외버스",
+          "total": 21,
+          "criticalMajor": 3,
+          "doneRate": 76.2,
+          "status": [
+            {
+              "label": "등록",
+              "count": 5
+            },
+            {
+              "label": "종료",
+              "count": 16
+            }
+          ],
+          "severity": [
+            {
+              "label": "Major",
+              "count": 3
+            },
+            {
+              "label": "Minor",
+              "count": 16
+            },
+            {
+              "label": "개선 의견",
+              "count": 2
+            }
+          ],
+          "priority": [
+            {
+              "label": "Medium",
+              "count": 21
+            }
+          ]
+        },
+        {
+          "version": "미지정",
+          "total": 8,
+          "criticalMajor": 0,
+          "doneRate": 87.5,
+          "status": [
+            {
+              "label": "등록",
+              "count": 1
+            },
+            {
+              "label": "종료",
+              "count": 7
+            }
+          ],
+          "severity": [
+            {
+              "label": "미지정",
+              "count": 8
+            }
+          ],
+          "priority": [
+            {
+              "label": "Medium",
+              "count": 8
+            }
+          ]
+        }
+      ],
+      "selectedVersion": "ALL",
+      "distributions": {
+        "ALL": {
+          "status": [
+            {
+              "label": "등록",
+              "count": 100
+            },
+            {
+              "label": "배정",
+              "count": 4
+            },
+            {
+              "label": "진행중",
+              "count": 9
+            },
+            {
+              "label": "QA확인",
+              "count": 83
+            },
+            {
+              "label": "종료",
+              "count": 415
+            }
+          ],
+          "severity": [
+            {
+              "label": "Critical",
+              "count": 30
+            },
+            {
+              "label": "Major",
+              "count": 128
+            },
+            {
+              "label": "Minor",
+              "count": 357
+            },
+            {
+              "label": "미지정",
+              "count": 74
+            },
+            {
+              "label": "개선 의견",
+              "count": 20
+            },
+            {
+              "label": "기획 문의",
+              "count": 2
+            }
+          ],
+          "priority": [
+            {
+              "label": "High",
+              "count": 12
+            },
+            {
+              "label": "Medium",
+              "count": 569
+            },
+            {
+              "label": "Low",
+              "count": 21
+            },
+            {
+              "label": "긴급",
+              "count": 8
+            },
+            {
+              "label": "완료",
+              "count": 1
+            }
+          ]
+        }
+      },
+      "heatmap": [
+        {
+          "date": "2026-04-22",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-04-23",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-04-24",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-04-25",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-04-26",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-04-27",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-04-28",
+          "new": 0,
+          "fixed": 1,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-04-29",
+          "new": 16,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 16
+        },
+        {
+          "date": "2026-04-30",
+          "new": 18,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 2
+        },
+        {
+          "date": "2026-05-01",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": -18
+        },
+        {
+          "date": "2026-05-02",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-05-03",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-05-04",
+          "new": 9,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 9
+        },
+        {
+          "date": "2026-05-05",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": -9
+        },
+        {
+          "date": "2026-05-06",
+          "new": 8,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 8
+        },
+        {
+          "date": "2026-05-07",
+          "new": 30,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 22
+        },
+        {
+          "date": "2026-05-08",
+          "new": 22,
+          "fixed": 37,
+          "closed": 11,
+          "deltaNew": -8
+        },
+        {
+          "date": "2026-05-09",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": -22
+        },
+        {
+          "date": "2026-05-10",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-05-11",
+          "new": 5,
+          "fixed": 11,
+          "closed": 6,
+          "deltaNew": 5
+        },
+        {
+          "date": "2026-05-12",
+          "new": 60,
+          "fixed": 1,
+          "closed": 1,
+          "deltaNew": 55
+        },
+        {
+          "date": "2026-05-13",
+          "new": 11,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": -49
+        },
+        {
+          "date": "2026-05-14",
+          "new": 19,
+          "fixed": 1,
+          "closed": 1,
+          "deltaNew": 8
+        },
+        {
+          "date": "2026-05-15",
+          "new": 11,
+          "fixed": 5,
+          "closed": 1,
+          "deltaNew": -8
+        },
+        {
+          "date": "2026-05-16",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": -11
+        },
+        {
+          "date": "2026-05-17",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-05-18",
+          "new": 1,
+          "fixed": 66,
+          "closed": 63,
+          "deltaNew": 1
+        },
+        {
+          "date": "2026-05-19",
+          "new": 6,
+          "fixed": 10,
+          "closed": 5,
+          "deltaNew": 5
+        },
+        {
+          "date": "2026-05-20",
+          "new": 0,
+          "fixed": 35,
+          "closed": 28,
+          "deltaNew": -6
+        },
+        {
+          "date": "2026-05-21",
+          "new": 0,
+          "fixed": 47,
+          "closed": 46,
+          "deltaNew": 0
+        }
+      ],
+      "recent": [
+        {
+          "id": "ISSUE-825",
+          "title": "[게이미피케이션][혜택][공통] ‘만 보 걷고’ 포인트 기획서와 상이",
+          "status": "처리중 (In Progress)",
+          "stage": "진행중",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "5.21.0",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-05-19T09:05:00.000Z",
+          "createdDate": "2026-05-19",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://www.notion.so/36573fbd195180048996dbc893a6d119",
+          "lastEditedAt": "2026-05-21T00:49:00.000Z"
+        },
+        {
+          "id": "ISSUE-824",
+          "title": "[게이미피케이션][만보기] 미수령 포인트 안내 팝업 내 버튼 문구 불일치",
+          "status": "처리중 (In Progress)",
+          "stage": "진행중",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "5.21.0",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-05-19T09:00:00.000Z",
+          "createdDate": "2026-05-19",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://www.notion.so/36573fbd19518000ae7ec285c49c7f14",
+          "lastEditedAt": "2026-05-21T01:45:00.000Z"
+        },
+        {
+          "id": "ISSUE-823",
+          "title": "[결제탭][공통] 월렛 영역 내 ‘내역’ 선택 시 ‘월렛내역조회’ 화면으로 이동하는 현상",
+          "status": "완료 (Done)",
+          "stage": "종료",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[G.H]v1.0.0",
+          "domain": "Go Hanpass",
+          "os": "미지정",
+          "createdAt": "2026-05-19T08:57:00.000Z",
+          "createdDate": "2026-05-19",
+          "fixedAt": "2026-05-20T23:59:00.000Z",
+          "fixedDate": "2026-05-21",
+          "closedAt": "2026-05-20T23:59:00.000Z",
+          "closedDate": "2026-05-21",
+          "url": "https://www.notion.so/36573fbd195180339ffcf66fbdbcaeee",
+          "lastEditedAt": "2026-05-20T23:59:00.000Z"
+        },
+        {
+          "id": "ISSUE-822",
+          "title": "[게이미피케이션][만보기][iOS] ‘동작 및 피트니스’ 권한 거부 후 재 진입 시 ‘권한 허용 브릿지’ 팝업 미노출",
+          "status": "처리중 (In Progress)",
+          "stage": "진행중",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "5.21.0",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-05-19T08:52:00.000Z",
+          "createdDate": "2026-05-19",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://www.notion.so/iOS-36573fbd1951800690c3cd1cd688beaf",
+          "lastEditedAt": "2026-05-21T02:44:00.000Z"
+        },
+        {
+          "id": "ISSUE-820",
+          "title": "[게이미피케이션][만보기]→미션 리스트 진입 시 뒤로 가기 두번 선택해야 이전 페이지(혜택 홈)로 이동하는 현상",
+          "status": "처리중 (In Progress)",
+          "stage": "진행중",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "5.21.0",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-05-19T05:10:00.000Z",
+          "createdDate": "2026-05-19",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://www.notion.so/36573fbd195180aabcd1d6bfbd256030",
+          "lastEditedAt": "2026-05-21T01:43:00.000Z"
+        },
+        {
+          "id": "ISSUE-819",
+          "title": "[다크모드][AOS] 삼성 인터넷 브라우저 강제 다크 모드 적용 시 GO Hanpass 웹 화면 색상 비정상 노출 현상",
+          "status": "추척 관찰-백로그",
+          "stage": "등록",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[G.H]v1.0.0",
+          "domain": "Go Hanpass",
+          "os": "미지정",
+          "createdAt": "2026-05-19T04:21:00.000Z",
+          "createdDate": "2026-05-19",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://www.notion.so/AOS-GO-Hanpass-36573fbd195180ca9b2eda8ce0657e65",
+          "lastEditedAt": "2026-05-21T00:21:00.000Z"
+        },
+        {
+          "id": "ISSUE-818",
+          "title": "[게이미피케이션][AOS] 앱 흔들기 완료 후 ‘40001 에러’ 팝업 노출 되는 현상",
+          "status": "완료 (Done)",
+          "stage": "종료",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "5.21.0",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-05-18T07:27:00.000Z",
+          "createdDate": "2026-05-18",
+          "fixedAt": "2026-05-21T00:22:00.000Z",
+          "fixedDate": "2026-05-21",
+          "closedAt": "2026-05-21T00:22:00.000Z",
+          "closedDate": "2026-05-21",
+          "url": "https://www.notion.so/AOS-40001-36473fbd195180d6aae4c33f12f97ccd",
+          "lastEditedAt": "2026-05-21T00:22:00.000Z"
+        },
+        {
+          "id": "ISSUE-814",
+          "title": "[관광객카드] 결제 방식 선택 BS 내 ‘나중에 결제’ 안내 문구 기획서와 상이",
+          "status": "QA 검증 -회귀 (QA Verification)",
+          "stage": "QA확인",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[G.H]v1.0.0",
+          "domain": "Go Hanpass",
+          "os": "미지정",
+          "createdAt": "2026-05-15T08:32:00.000Z",
+          "createdDate": "2026-05-15",
+          "fixedAt": "2026-05-19T00:36:00.000Z",
+          "fixedDate": "2026-05-19",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://www.notion.so/BS-36173fbd195180d4bb3ae9c8d7723349",
+          "lastEditedAt": "2026-05-19T00:36:00.000Z"
+        },
+        {
+          "id": "ISSUE-813",
+          "title": "[관광객카드] PIN입력 페이지에서 물리백 선택 시 이전화면으로 (TravelCard_067_결제하기) 이동하지 않는 현상",
+          "status": "QA 검증 -회귀 (QA Verification)",
+          "stage": "QA확인",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[G.H]v1.0.0",
+          "domain": "Go Hanpass",
+          "os": "미지정",
+          "createdAt": "2026-05-15T07:45:00.000Z",
+          "createdDate": "2026-05-15",
+          "fixedAt": "2026-05-20T02:44:00.000Z",
+          "fixedDate": "2026-05-20",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://www.notion.so/PIN-TravelCard_067_-36173fbd195180329925e3e6ca1165b6",
+          "lastEditedAt": "2026-05-20T02:44:00.000Z"
+        },
+        {
+          "id": "ISSUE-812",
+          "title": "[관광객카드][AOS] KT 결제 실패 화면 - OS 물리백 동작 시 반응하는 현상 ",
+          "status": "기획서 수정",
+          "stage": "등록",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[G.H]v1.0.0",
+          "domain": "Go Hanpass",
+          "os": "미지정",
+          "createdAt": "2026-05-15T07:42:00.000Z",
+          "createdDate": "2026-05-15",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://www.notion.so/AOS-KT-OS-36173fbd1951804c9c40c6d49ccf5c15",
+          "lastEditedAt": "2026-05-18T08:29:00.000Z"
+        }
+      ]
+    },
+    "한패스": {
+      "summary": {
+        "total": 508,
+        "new": 57,
+        "inProgress": 6,
+        "fixed": 0,
+        "closed": 378,
+        "todayNew": 0,
+        "newDelta": 0
+      },
+      "funnel": [
+        {
+          "stage": "등록",
+          "count": 57,
+          "rate": 11.2,
+          "width": 18
+        },
+        {
+          "stage": "검토",
+          "count": 0,
+          "rate": 0.0,
+          "width": 18
+        },
+        {
+          "stage": "배정",
+          "count": 0,
+          "rate": 0.0,
+          "width": 18
+        },
+        {
+          "stage": "진행중",
+          "count": 6,
+          "rate": 1.2,
+          "width": 18
+        },
+        {
+          "stage": "수정완료",
+          "count": 0,
+          "rate": 0.0,
+          "width": 18
+        },
+        {
+          "stage": "QA확인",
+          "count": 67,
+          "rate": 13.2,
+          "width": 18
+        },
+        {
+          "stage": "종료",
+          "count": 378,
+          "rate": 74.4,
+          "width": 100
+        }
+      ],
+      "daily": [
+        {
+          "date": "2026-04-22",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-04-23",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-04-24",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-04-25",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-04-26",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-04-27",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-04-28",
+          "new": 0,
+          "fixed": 1,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-04-29",
+          "new": 16,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 16
+        },
+        {
+          "date": "2026-04-30",
+          "new": 18,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 2
+        },
+        {
+          "date": "2026-05-01",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": -18
+        },
+        {
+          "date": "2026-05-02",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-05-03",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-05-04",
+          "new": 9,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 9
+        },
+        {
+          "date": "2026-05-05",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": -9
+        },
+        {
+          "date": "2026-05-06",
+          "new": 8,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 8
+        },
+        {
+          "date": "2026-05-07",
+          "new": 30,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 22
+        },
+        {
+          "date": "2026-05-08",
+          "new": 22,
+          "fixed": 37,
+          "closed": 11,
+          "deltaNew": -8
+        },
+        {
+          "date": "2026-05-09",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": -22
+        },
+        {
+          "date": "2026-05-10",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-05-11",
+          "new": 5,
+          "fixed": 11,
+          "closed": 6,
+          "deltaNew": 5
+        },
+        {
+          "date": "2026-05-12",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": -5
+        },
+        {
+          "date": "2026-05-13",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-05-14",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-05-15",
+          "new": 0,
+          "fixed": 4,
+          "closed": 1,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-05-16",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-05-17",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-05-18",
+          "new": 1,
+          "fixed": 64,
+          "closed": 63,
+          "deltaNew": 1
+        },
+        {
+          "date": "2026-05-19",
+          "new": 4,
+          "fixed": 4,
+          "closed": 4,
+          "deltaNew": 3
+        },
+        {
+          "date": "2026-05-20",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": -4
+        },
+        {
+          "date": "2026-05-21",
+          "new": 0,
+          "fixed": 40,
+          "closed": 40,
+          "deltaNew": 0
+        }
+      ],
+      "versions": [
+        {
+          "version": "5.21.0",
+          "total": 113,
+          "criticalMajor": 42,
+          "doneRate": 85.8,
+          "status": [
+            {
+              "label": "등록",
+              "count": 10
+            },
+            {
+              "label": "진행중",
+              "count": 6
+            },
+            {
+              "label": "QA확인",
+              "count": 35
+            },
+            {
+              "label": "종료",
+              "count": 62
+            }
+          ],
+          "severity": [
+            {
+              "label": "Critical",
+              "count": 9
+            },
+            {
+              "label": "Major",
+              "count": 33
+            },
+            {
+              "label": "Minor",
+              "count": 69
+            },
+            {
+              "label": "개선 의견",
+              "count": 2
+            }
+          ],
+          "priority": [
+            {
+              "label": "Medium",
+              "count": 113
+            }
+          ]
+        },
+        {
+          "version": "5.20.0",
+          "total": 82,
+          "criticalMajor": 19,
+          "doneRate": 97.6,
+          "status": [
+            {
+              "label": "등록",
+              "count": 2
+            },
+            {
+              "label": "종료",
+              "count": 80
+            }
+          ],
+          "severity": [
+            {
+              "label": "Critical",
+              "count": 7
+            },
+            {
+              "label": "Major",
+              "count": 12
+            },
+            {
+              "label": "Minor",
+              "count": 63
+            }
+          ],
+          "priority": [
+            {
+              "label": "Medium",
+              "count": 81
+            },
+            {
+              "label": "Low",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "version": "5.17.0",
+          "total": 67,
+          "criticalMajor": 35,
+          "doneRate": 86.6,
+          "status": [
+            {
+              "label": "등록",
+              "count": 9
+            },
+            {
+              "label": "종료",
+              "count": 58
+            }
+          ],
+          "severity": [
+            {
+              "label": "Critical",
+              "count": 9
+            },
+            {
+              "label": "Major",
+              "count": 26
+            },
+            {
+              "label": "Minor",
+              "count": 27
+            },
+            {
+              "label": "개선 의견",
+              "count": 3
+            },
+            {
+              "label": "기획 문의",
+              "count": 2
+            }
+          ],
+          "priority": [
+            {
+              "label": "High",
+              "count": 4
+            },
+            {
+              "label": "Medium",
+              "count": 47
+            },
+            {
+              "label": "Low",
+              "count": 7
+            },
+            {
+              "label": "긴급",
+              "count": 8
+            },
+            {
+              "label": "완료",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "version": "대출비교",
+          "total": 47,
+          "criticalMajor": 11,
+          "doneRate": 87.2,
+          "status": [
+            {
+              "label": "등록",
+              "count": 6
+            },
+            {
+              "label": "QA확인",
+              "count": 32
+            },
+            {
+              "label": "종료",
+              "count": 9
+            }
+          ],
+          "severity": [
+            {
+              "label": "Major",
+              "count": 11
+            },
+            {
+              "label": "Minor",
+              "count": 34
+            },
+            {
+              "label": "개선 의견",
+              "count": 2
+            }
+          ],
+          "priority": [
+            {
+              "label": "Medium",
+              "count": 46
+            },
+            {
+              "label": "Low",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "version": "5.18.0",
+          "total": 36,
+          "criticalMajor": 10,
+          "doneRate": 86.1,
+          "status": [
+            {
+              "label": "등록",
+              "count": 5
+            },
+            {
+              "label": "종료",
+              "count": 31
+            }
+          ],
+          "severity": [
+            {
+              "label": "Critical",
+              "count": 3
+            },
+            {
+              "label": "Major",
+              "count": 7
+            },
+            {
+              "label": "Minor",
+              "count": 23
+            },
+            {
+              "label": "개선 의견",
+              "count": 3
+            }
+          ],
+          "priority": [
+            {
+              "label": "Medium",
+              "count": 36
+            }
+          ]
+        },
+        {
+          "version": "5.12.0",
+          "total": 33,
+          "criticalMajor": 0,
+          "doneRate": 90.9,
+          "status": [
+            {
+              "label": "등록",
+              "count": 3
+            },
+            {
+              "label": "종료",
+              "count": 30
+            }
+          ],
+          "severity": [
+            {
+              "label": "미지정",
+              "count": 33
+            }
+          ],
+          "priority": [
+            {
+              "label": "High",
+              "count": 3
+            },
+            {
+              "label": "Medium",
+              "count": 30
+            }
+          ]
+        },
+        {
+          "version": "5.16.0",
+          "total": 33,
+          "criticalMajor": 10,
+          "doneRate": 87.9,
+          "status": [
+            {
+              "label": "등록",
+              "count": 4
+            },
+            {
+              "label": "종료",
+              "count": 29
+            }
+          ],
+          "severity": [
+            {
+              "label": "Critical",
+              "count": 1
+            },
+            {
+              "label": "Major",
+              "count": 9
+            },
+            {
+              "label": "Minor",
+              "count": 16
+            },
+            {
+              "label": "개선 의견",
+              "count": 7
+            }
+          ],
+          "priority": [
+            {
+              "label": "High",
+              "count": 2
+            },
+            {
+              "label": "Medium",
+              "count": 29
+            },
+            {
+              "label": "Low",
+              "count": 2
+            }
+          ]
+        },
+        {
+          "version": "5.13.0",
+          "total": 27,
+          "criticalMajor": 0,
+          "doneRate": 81.5,
+          "status": [
+            {
+              "label": "등록",
+              "count": 5
+            },
+            {
+              "label": "종료",
+              "count": 22
+            }
+          ],
+          "severity": [
+            {
+              "label": "미지정",
+              "count": 27
+            }
+          ],
+          "priority": [
+            {
+              "label": "High",
+              "count": 3
+            },
+            {
+              "label": "Medium",
+              "count": 23
+            },
+            {
+              "label": "Low",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "version": "5.19.0",
+          "total": 24,
+          "criticalMajor": 3,
+          "doneRate": 79.2,
+          "status": [
+            {
+              "label": "등록",
+              "count": 5
+            },
+            {
+              "label": "종료",
+              "count": 19
+            }
+          ],
+          "severity": [
+            {
+              "label": "Major",
+              "count": 3
+            },
+            {
+              "label": "Minor",
+              "count": 21
+            }
+          ],
+          "priority": [
+            {
+              "label": "Medium",
+              "count": 24
+            }
+          ]
+        },
+        {
+          "version": "고속/시외버스",
+          "total": 21,
+          "criticalMajor": 3,
+          "doneRate": 76.2,
+          "status": [
+            {
+              "label": "등록",
+              "count": 5
+            },
+            {
+              "label": "종료",
+              "count": 16
+            }
+          ],
+          "severity": [
+            {
+              "label": "Major",
+              "count": 3
+            },
+            {
+              "label": "Minor",
+              "count": 16
+            },
+            {
+              "label": "개선 의견",
+              "count": 2
+            }
+          ],
+          "priority": [
+            {
+              "label": "Medium",
+              "count": 21
+            }
+          ]
+        },
+        {
+          "version": "미지정",
+          "total": 8,
+          "criticalMajor": 0,
+          "doneRate": 87.5,
+          "status": [
+            {
+              "label": "등록",
+              "count": 1
+            },
+            {
+              "label": "종료",
+              "count": 7
+            }
+          ],
+          "severity": [
+            {
+              "label": "미지정",
+              "count": 8
+            }
+          ],
+          "priority": [
+            {
+              "label": "Medium",
+              "count": 8
+            }
+          ]
+        },
+        {
+          "version": "Backlog",
+          "total": 6,
+          "criticalMajor": 2,
+          "doneRate": 83.3,
+          "status": [
+            {
+              "label": "등록",
+              "count": 1
+            },
+            {
+              "label": "종료",
+              "count": 5
+            }
+          ],
+          "severity": [
+            {
+              "label": "Major",
+              "count": 2
+            },
+            {
+              "label": "Minor",
+              "count": 3
+            },
+            {
+              "label": "미지정",
+              "count": 1
+            }
+          ],
+          "priority": [
+            {
+              "label": "Medium",
+              "count": 3
+            },
+            {
+              "label": "Low",
+              "count": 3
+            }
+          ]
+        }
+      ],
+      "selectedVersion": "ALL",
+      "distributions": {
+        "ALL": {
+          "status": [
+            {
+              "label": "등록",
+              "count": 57
+            },
+            {
+              "label": "진행중",
+              "count": 6
+            },
+            {
+              "label": "QA확인",
+              "count": 67
+            },
+            {
+              "label": "종료",
+              "count": 378
+            }
+          ],
+          "severity": [
+            {
+              "label": "Critical",
+              "count": 29
+            },
+            {
+              "label": "Major",
+              "count": 107
+            },
+            {
+              "label": "Minor",
+              "count": 276
+            },
+            {
+              "label": "미지정",
+              "count": 74
+            },
+            {
+              "label": "개선 의견",
+              "count": 20
+            },
+            {
+              "label": "기획 문의",
+              "count": 2
+            }
+          ],
+          "priority": [
+            {
+              "label": "High",
+              "count": 12
+            },
+            {
+              "label": "Medium",
+              "count": 466
+            },
+            {
+              "label": "Low",
+              "count": 21
+            },
+            {
+              "label": "긴급",
+              "count": 8
+            },
+            {
+              "label": "완료",
+              "count": 1
+            }
+          ]
+        }
+      },
+      "heatmap": [
+        {
+          "date": "2026-04-22",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-04-23",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-04-24",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-04-25",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-04-26",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-04-27",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-04-28",
+          "new": 0,
+          "fixed": 1,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-04-29",
+          "new": 16,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 16
+        },
+        {
+          "date": "2026-04-30",
+          "new": 18,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 2
+        },
+        {
+          "date": "2026-05-01",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": -18
+        },
+        {
+          "date": "2026-05-02",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-05-03",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-05-04",
+          "new": 9,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 9
+        },
+        {
+          "date": "2026-05-05",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": -9
+        },
+        {
+          "date": "2026-05-06",
+          "new": 8,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 8
+        },
+        {
+          "date": "2026-05-07",
+          "new": 30,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 22
+        },
+        {
+          "date": "2026-05-08",
+          "new": 22,
+          "fixed": 37,
+          "closed": 11,
+          "deltaNew": -8
+        },
+        {
+          "date": "2026-05-09",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": -22
+        },
+        {
+          "date": "2026-05-10",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-05-11",
+          "new": 5,
+          "fixed": 11,
+          "closed": 6,
+          "deltaNew": 5
+        },
+        {
+          "date": "2026-05-12",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": -5
+        },
+        {
+          "date": "2026-05-13",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-05-14",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-05-15",
+          "new": 0,
+          "fixed": 4,
+          "closed": 1,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-05-16",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-05-17",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-05-18",
+          "new": 1,
+          "fixed": 64,
+          "closed": 63,
+          "deltaNew": 1
+        },
+        {
+          "date": "2026-05-19",
+          "new": 4,
+          "fixed": 4,
+          "closed": 4,
+          "deltaNew": 3
+        },
+        {
+          "date": "2026-05-20",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": -4
+        },
+        {
+          "date": "2026-05-21",
+          "new": 0,
+          "fixed": 40,
+          "closed": 40,
+          "deltaNew": 0
+        }
+      ],
+      "recent": [
+        {
+          "id": "ISSUE-825",
+          "title": "[게이미피케이션][혜택][공통] ‘만 보 걷고’ 포인트 기획서와 상이",
+          "status": "처리중 (In Progress)",
+          "stage": "진행중",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "5.21.0",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-05-19T09:05:00.000Z",
+          "createdDate": "2026-05-19",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://www.notion.so/36573fbd195180048996dbc893a6d119",
+          "lastEditedAt": "2026-05-21T00:49:00.000Z"
+        },
+        {
+          "id": "ISSUE-824",
+          "title": "[게이미피케이션][만보기] 미수령 포인트 안내 팝업 내 버튼 문구 불일치",
+          "status": "처리중 (In Progress)",
+          "stage": "진행중",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "5.21.0",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-05-19T09:00:00.000Z",
+          "createdDate": "2026-05-19",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://www.notion.so/36573fbd19518000ae7ec285c49c7f14",
+          "lastEditedAt": "2026-05-21T01:45:00.000Z"
+        },
+        {
+          "id": "ISSUE-822",
+          "title": "[게이미피케이션][만보기][iOS] ‘동작 및 피트니스’ 권한 거부 후 재 진입 시 ‘권한 허용 브릿지’ 팝업 미노출",
+          "status": "처리중 (In Progress)",
+          "stage": "진행중",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "5.21.0",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-05-19T08:52:00.000Z",
+          "createdDate": "2026-05-19",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://www.notion.so/iOS-36573fbd1951800690c3cd1cd688beaf",
+          "lastEditedAt": "2026-05-21T02:44:00.000Z"
+        },
+        {
+          "id": "ISSUE-820",
+          "title": "[게이미피케이션][만보기]→미션 리스트 진입 시 뒤로 가기 두번 선택해야 이전 페이지(혜택 홈)로 이동하는 현상",
+          "status": "처리중 (In Progress)",
+          "stage": "진행중",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "5.21.0",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-05-19T05:10:00.000Z",
+          "createdDate": "2026-05-19",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://www.notion.so/36573fbd195180aabcd1d6bfbd256030",
+          "lastEditedAt": "2026-05-21T01:43:00.000Z"
+        },
+        {
+          "id": "ISSUE-818",
+          "title": "[게이미피케이션][AOS] 앱 흔들기 완료 후 ‘40001 에러’ 팝업 노출 되는 현상",
+          "status": "완료 (Done)",
+          "stage": "종료",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "5.21.0",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-05-18T07:27:00.000Z",
+          "createdDate": "2026-05-18",
+          "fixedAt": "2026-05-21T00:22:00.000Z",
+          "fixedDate": "2026-05-21",
+          "closedAt": "2026-05-21T00:22:00.000Z",
+          "closedDate": "2026-05-21",
+          "url": "https://www.notion.so/AOS-40001-36473fbd195180d6aae4c33f12f97ccd",
+          "lastEditedAt": "2026-05-21T00:22:00.000Z"
+        },
+        {
+          "id": "ISSUE-666",
+          "title": "[게이미피케이션] 앱 흔들기 완료 시 포인트 획득 팝업 노출 안되는 현상",
+          "status": "완료 (Done)",
+          "stage": "종료",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "5.21.0",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-05-11T06:32:00.000Z",
+          "createdDate": "2026-05-11",
+          "fixedAt": "2026-05-21T00:19:00.000Z",
+          "fixedDate": "2026-05-21",
+          "closedAt": "2026-05-21T00:19:00.000Z",
+          "closedDate": "2026-05-21",
+          "url": "https://www.notion.so/35d73fbd1951807c9c58e943c06e0908",
+          "lastEditedAt": "2026-05-21T00:19:00.000Z"
+        },
+        {
+          "id": "ISSUE-664",
+          "title": "[게이미피케이션] ‘포인트 획득 팝업’ 배경(딤 처리) 영역 클릭 시 시트 안 닫히는 현상 ",
+          "status": "완료 (Done)",
+          "stage": "종료",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "5.21.0",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-05-11T06:03:00.000Z",
+          "createdDate": "2026-05-11",
+          "fixedAt": "2026-05-21T00:21:00.000Z",
+          "fixedDate": "2026-05-21",
+          "closedAt": "2026-05-21T00:21:00.000Z",
+          "closedDate": "2026-05-21",
+          "url": "https://www.notion.so/35d73fbd195180dc9d5ef82591e37204",
+          "lastEditedAt": "2026-05-21T00:21:00.000Z"
+        },
+        {
+          "id": "ISSUE-663",
+          "title": "[게이미피케이션] [AOS] 만보기 최초 진입 헬스커넥트 미허용 시 노출되는 팝업 기획서와 상이한 현상",
+          "status": "완료 (Done)",
+          "stage": "종료",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "5.21.0",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-05-11T05:57:00.000Z",
+          "createdDate": "2026-05-11",
+          "fixedAt": "2026-05-21T01:17:00.000Z",
+          "fixedDate": "2026-05-21",
+          "closedAt": "2026-05-21T01:17:00.000Z",
+          "closedDate": "2026-05-21",
+          "url": "https://www.notion.so/AOS-35d73fbd195180759435d1ef0eff03ee",
+          "lastEditedAt": "2026-05-21T01:17:00.000Z"
+        },
+        {
+          "id": "ISSUE-662",
+          "title": "[게이미피케이션] [iOS] 본인인증’ 화면 내 추가 인증 CTA 버튼 클릭 시 추가 인증 Flow 시작 안되는 현상",
+          "status": "완료 (Done)",
+          "stage": "종료",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "5.21.0",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-05-11T05:35:00.000Z",
+          "createdDate": "2026-05-11",
+          "fixedAt": "2026-05-21T02:38:00.000Z",
+          "fixedDate": "2026-05-21",
+          "closedAt": "2026-05-21T02:38:00.000Z",
+          "closedDate": "2026-05-21",
+          "url": "https://www.notion.so/iOS-CTA-Flow-35d73fbd195180229fa1f0d5b2bebbe7",
+          "lastEditedAt": "2026-05-21T02:38:00.000Z"
+        },
+        {
+          "id": "ISSUE-661",
+          "title": "[게이미피케이션] 특정단말에서 만보기 현재 걸음 수 실시간으로 업데이트 안되는 현상",
+          "status": "완료 (Done)",
+          "stage": "종료",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "5.21.0",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-05-11T05:28:00.000Z",
+          "createdDate": "2026-05-11",
+          "fixedAt": "2026-05-19T07:51:00.000Z",
+          "fixedDate": "2026-05-19",
+          "closedAt": "2026-05-19T07:51:00.000Z",
+          "closedDate": "2026-05-19",
+          "url": "https://www.notion.so/35d73fbd1951808682b3c0997189b44c",
+          "lastEditedAt": "2026-05-19T07:51:00.000Z"
+        }
+      ]
+    },
+    "Go Hanpass": {
+      "summary": {
+        "total": 103,
+        "new": 43,
+        "inProgress": 3,
+        "fixed": 0,
+        "closed": 37,
+        "todayNew": 0,
+        "newDelta": 0
+      },
+      "funnel": [
+        {
+          "stage": "등록",
+          "count": 43,
+          "rate": 41.7,
+          "width": 100
+        },
+        {
+          "stage": "검토",
+          "count": 0,
+          "rate": 0.0,
+          "width": 18
+        },
+        {
+          "stage": "배정",
+          "count": 4,
+          "rate": 3.9,
+          "width": 18
+        },
+        {
+          "stage": "진행중",
+          "count": 3,
+          "rate": 2.9,
+          "width": 18
+        },
+        {
+          "stage": "수정완료",
+          "count": 0,
+          "rate": 0.0,
+          "width": 18
+        },
+        {
+          "stage": "QA확인",
+          "count": 16,
+          "rate": 15.5,
+          "width": 37
+        },
+        {
+          "stage": "종료",
+          "count": 37,
+          "rate": 35.9,
+          "width": 86
+        }
+      ],
+      "daily": [
+        {
+          "date": "2026-04-22",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-04-23",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-04-24",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-04-25",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-04-26",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-04-27",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-04-28",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-04-29",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-04-30",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-05-01",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-05-02",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-05-03",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-05-04",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-05-05",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-05-06",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-05-07",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-05-08",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-05-09",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-05-10",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-05-11",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-05-12",
+          "new": 60,
+          "fixed": 1,
+          "closed": 1,
+          "deltaNew": 60
+        },
+        {
+          "date": "2026-05-13",
+          "new": 11,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": -49
+        },
+        {
+          "date": "2026-05-14",
+          "new": 19,
+          "fixed": 1,
+          "closed": 1,
+          "deltaNew": 8
+        },
+        {
+          "date": "2026-05-15",
+          "new": 11,
+          "fixed": 1,
+          "closed": 0,
+          "deltaNew": -8
+        },
+        {
+          "date": "2026-05-16",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": -11
+        },
+        {
+          "date": "2026-05-17",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-05-18",
+          "new": 0,
+          "fixed": 2,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-05-19",
+          "new": 2,
+          "fixed": 6,
+          "closed": 1,
+          "deltaNew": 2
+        },
+        {
+          "date": "2026-05-20",
+          "new": 0,
+          "fixed": 35,
+          "closed": 28,
+          "deltaNew": -2
+        },
+        {
+          "date": "2026-05-21",
+          "new": 0,
+          "fixed": 7,
+          "closed": 6,
+          "deltaNew": 0
+        }
+      ],
+      "versions": [
+        {
+          "version": "[G.H]v1.0.0",
+          "total": 103,
+          "criticalMajor": 22,
+          "doneRate": 51.5,
+          "status": [
+            {
+              "label": "등록",
+              "count": 43
+            },
+            {
+              "label": "배정",
+              "count": 4
+            },
+            {
+              "label": "진행중",
+              "count": 3
+            },
+            {
+              "label": "QA확인",
+              "count": 16
+            },
+            {
+              "label": "종료",
+              "count": 37
+            }
+          ],
+          "severity": [
+            {
+              "label": "Critical",
+              "count": 1
+            },
+            {
+              "label": "Major",
+              "count": 21
+            },
+            {
+              "label": "Minor",
+              "count": 81
+            }
+          ],
+          "priority": [
+            {
+              "label": "Medium",
+              "count": 103
+            }
+          ]
+        }
+      ],
+      "selectedVersion": "ALL",
+      "distributions": {
+        "ALL": {
+          "status": [
+            {
+              "label": "등록",
+              "count": 43
+            },
+            {
+              "label": "배정",
+              "count": 4
+            },
+            {
+              "label": "진행중",
+              "count": 3
+            },
+            {
+              "label": "QA확인",
+              "count": 16
+            },
+            {
+              "label": "종료",
+              "count": 37
+            }
+          ],
+          "severity": [
+            {
+              "label": "Critical",
+              "count": 1
+            },
+            {
+              "label": "Major",
+              "count": 21
+            },
+            {
+              "label": "Minor",
+              "count": 81
+            }
+          ],
+          "priority": [
+            {
+              "label": "Medium",
+              "count": 103
+            }
+          ]
+        }
+      },
+      "heatmap": [
+        {
+          "date": "2026-04-22",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-04-23",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-04-24",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-04-25",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-04-26",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-04-27",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-04-28",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-04-29",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-04-30",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-05-01",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-05-02",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-05-03",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-05-04",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-05-05",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-05-06",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-05-07",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-05-08",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-05-09",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-05-10",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-05-11",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-05-12",
+          "new": 60,
+          "fixed": 1,
+          "closed": 1,
+          "deltaNew": 60
+        },
+        {
+          "date": "2026-05-13",
+          "new": 11,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": -49
+        },
+        {
+          "date": "2026-05-14",
+          "new": 19,
+          "fixed": 1,
+          "closed": 1,
+          "deltaNew": 8
+        },
+        {
+          "date": "2026-05-15",
+          "new": 11,
+          "fixed": 1,
+          "closed": 0,
+          "deltaNew": -8
+        },
+        {
+          "date": "2026-05-16",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": -11
+        },
+        {
+          "date": "2026-05-17",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-05-18",
+          "new": 0,
+          "fixed": 2,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-05-19",
+          "new": 2,
+          "fixed": 6,
+          "closed": 1,
+          "deltaNew": 2
+        },
+        {
+          "date": "2026-05-20",
+          "new": 0,
+          "fixed": 35,
+          "closed": 28,
+          "deltaNew": -2
+        },
+        {
+          "date": "2026-05-21",
+          "new": 0,
+          "fixed": 7,
+          "closed": 6,
+          "deltaNew": 0
+        }
+      ],
+      "recent": [
+        {
+          "id": "ISSUE-823",
+          "title": "[결제탭][공통] 월렛 영역 내 ‘내역’ 선택 시 ‘월렛내역조회’ 화면으로 이동하는 현상",
+          "status": "완료 (Done)",
+          "stage": "종료",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[G.H]v1.0.0",
+          "domain": "Go Hanpass",
+          "os": "미지정",
+          "createdAt": "2026-05-19T08:57:00.000Z",
+          "createdDate": "2026-05-19",
+          "fixedAt": "2026-05-20T23:59:00.000Z",
+          "fixedDate": "2026-05-21",
+          "closedAt": "2026-05-20T23:59:00.000Z",
+          "closedDate": "2026-05-21",
+          "url": "https://www.notion.so/36573fbd195180339ffcf66fbdbcaeee",
+          "lastEditedAt": "2026-05-20T23:59:00.000Z"
+        },
+        {
+          "id": "ISSUE-819",
+          "title": "[다크모드][AOS] 삼성 인터넷 브라우저 강제 다크 모드 적용 시 GO Hanpass 웹 화면 색상 비정상 노출 현상",
+          "status": "추척 관찰-백로그",
+          "stage": "등록",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[G.H]v1.0.0",
+          "domain": "Go Hanpass",
+          "os": "미지정",
+          "createdAt": "2026-05-19T04:21:00.000Z",
+          "createdDate": "2026-05-19",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://www.notion.so/AOS-GO-Hanpass-36573fbd195180ca9b2eda8ce0657e65",
+          "lastEditedAt": "2026-05-21T00:21:00.000Z"
+        },
+        {
+          "id": "ISSUE-814",
+          "title": "[관광객카드] 결제 방식 선택 BS 내 ‘나중에 결제’ 안내 문구 기획서와 상이",
+          "status": "QA 검증 -회귀 (QA Verification)",
+          "stage": "QA확인",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[G.H]v1.0.0",
+          "domain": "Go Hanpass",
+          "os": "미지정",
+          "createdAt": "2026-05-15T08:32:00.000Z",
+          "createdDate": "2026-05-15",
+          "fixedAt": "2026-05-19T00:36:00.000Z",
+          "fixedDate": "2026-05-19",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://www.notion.so/BS-36173fbd195180d4bb3ae9c8d7723349",
+          "lastEditedAt": "2026-05-19T00:36:00.000Z"
+        },
+        {
+          "id": "ISSUE-813",
+          "title": "[관광객카드] PIN입력 페이지에서 물리백 선택 시 이전화면으로 (TravelCard_067_결제하기) 이동하지 않는 현상",
+          "status": "QA 검증 -회귀 (QA Verification)",
+          "stage": "QA확인",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[G.H]v1.0.0",
+          "domain": "Go Hanpass",
+          "os": "미지정",
+          "createdAt": "2026-05-15T07:45:00.000Z",
+          "createdDate": "2026-05-15",
+          "fixedAt": "2026-05-20T02:44:00.000Z",
+          "fixedDate": "2026-05-20",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://www.notion.so/PIN-TravelCard_067_-36173fbd195180329925e3e6ca1165b6",
+          "lastEditedAt": "2026-05-20T02:44:00.000Z"
+        },
+        {
+          "id": "ISSUE-812",
+          "title": "[관광객카드][AOS] KT 결제 실패 화면 - OS 물리백 동작 시 반응하는 현상 ",
+          "status": "기획서 수정",
+          "stage": "등록",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[G.H]v1.0.0",
+          "domain": "Go Hanpass",
+          "os": "미지정",
+          "createdAt": "2026-05-15T07:42:00.000Z",
+          "createdDate": "2026-05-15",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://www.notion.so/AOS-KT-OS-36173fbd1951804c9c40c6d49ccf5c15",
+          "lastEditedAt": "2026-05-18T08:29:00.000Z"
+        },
+        {
+          "id": "ISSUE-811",
+          "title": "[관광객카드][AOS][카드디자인선택] 특정 단말에서 ‘뒷면보기’ 버튼과 인디케이터 겹치는 현상",
+          "status": "QA 검증 -회귀 (QA Verification)",
+          "stage": "QA확인",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[G.H]v1.0.0",
+          "domain": "Go Hanpass",
+          "os": "미지정",
+          "createdAt": "2026-05-15T07:34:00.000Z",
+          "createdDate": "2026-05-15",
+          "fixedAt": "2026-05-19T00:16:00.000Z",
+          "fixedDate": "2026-05-19",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://www.notion.so/AOS-36173fbd195180e5849dfdcf69138f16",
+          "lastEditedAt": "2026-05-19T00:16:00.000Z"
+        },
+        {
+          "id": "ISSUE-810",
+          "title": "[관광객카드][공통] 중복 로그인(세션 만료) 상태에서 동작 시 팝업 중복 노출 (시스템 장애 팝업 및 로그아웃 팝업)",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[G.H]v1.0.0",
+          "domain": "Go Hanpass",
+          "os": "미지정",
+          "createdAt": "2026-05-15T06:44:00.000Z",
+          "createdDate": "2026-05-15",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://www.notion.so/36173fbd195180a58199fe70125fe78d",
+          "lastEditedAt": "2026-05-21T01:06:00.000Z"
+        },
+        {
+          "id": "ISSUE-809",
+          "title": "[관광객카드] [iOS] ‘방문 예정일’ Date Picker ‘재설정’ 클릭 후  확인 시 이전 선택값이 아닌 마지막 선택값으로 지정되는 현상",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[G.H]v1.0.0",
+          "domain": "Go Hanpass",
+          "os": "미지정",
+          "createdAt": "2026-05-15T05:41:00.000Z",
+          "createdDate": "2026-05-15",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://www.notion.so/iOS-Date-Picker-36173fbd195180878386d0b856978cc0",
+          "lastEditedAt": "2026-05-15T06:19:00.000Z"
+        },
+        {
+          "id": "ISSUE-808",
+          "title": "[이미지][AOS] OS 날짜 수동(과거) 변경 시 이미지 리소스 로드 실패하는 현상",
+          "status": "결함 아님 (Not an issue)",
+          "stage": "종료",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[G.H]v1.0.0",
+          "domain": "Go Hanpass",
+          "os": "미지정",
+          "createdAt": "2026-05-15T05:29:00.000Z",
+          "createdDate": "2026-05-15",
+          "fixedAt": "2026-05-19T01:09:00.000Z",
+          "fixedDate": "2026-05-19",
+          "closedAt": "2026-05-19T01:09:00.000Z",
+          "closedDate": "2026-05-19",
+          "url": "https://www.notion.so/AOS-OS-36173fbd195180459e1de56a92398e18",
+          "lastEditedAt": "2026-05-19T01:09:00.000Z"
+        },
+        {
+          "id": "ISSUE-807",
+          "title": "[관광객카드] [공통]카드 등록 후 ‘한패스 카드 목록 진입 시 신청하기 BTN 미노출 현상",
+          "status": "완료 (Done)",
+          "stage": "종료",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[G.H]v1.0.0",
+          "domain": "Go Hanpass",
+          "os": "미지정",
+          "createdAt": "2026-05-15T02:00:00.000Z",
+          "createdDate": "2026-05-15",
+          "fixedAt": "2026-05-20T07:33:00.000Z",
+          "fixedDate": "2026-05-20",
+          "closedAt": "2026-05-20T07:33:00.000Z",
+          "closedDate": "2026-05-20",
+          "url": "https://www.notion.so/BTN-36173fbd1951804f9860c3f392ec9320",
+          "lastEditedAt": "2026-05-20T07:33:00.000Z"
         }
       ]
     }
-  },
-  "heatmap": [
-    {
-      "date": "2026-04-22",
-      "new": 0,
-      "fixed": 0,
-      "closed": 0,
-      "deltaNew": 0
-    },
-    {
-      "date": "2026-04-23",
-      "new": 0,
-      "fixed": 0,
-      "closed": 0,
-      "deltaNew": 0
-    },
-    {
-      "date": "2026-04-24",
-      "new": 0,
-      "fixed": 0,
-      "closed": 0,
-      "deltaNew": 0
-    },
-    {
-      "date": "2026-04-25",
-      "new": 0,
-      "fixed": 0,
-      "closed": 0,
-      "deltaNew": 0
-    },
-    {
-      "date": "2026-04-26",
-      "new": 0,
-      "fixed": 0,
-      "closed": 0,
-      "deltaNew": 0
-    },
-    {
-      "date": "2026-04-27",
-      "new": 0,
-      "fixed": 0,
-      "closed": 0,
-      "deltaNew": 0
-    },
-    {
-      "date": "2026-04-28",
-      "new": 0,
-      "fixed": 1,
-      "closed": 0,
-      "deltaNew": 0
-    },
-    {
-      "date": "2026-04-29",
-      "new": 16,
-      "fixed": 0,
-      "closed": 0,
-      "deltaNew": 16
-    },
-    {
-      "date": "2026-04-30",
-      "new": 18,
-      "fixed": 0,
-      "closed": 0,
-      "deltaNew": 2
-    },
-    {
-      "date": "2026-05-01",
-      "new": 0,
-      "fixed": 0,
-      "closed": 0,
-      "deltaNew": -18
-    },
-    {
-      "date": "2026-05-02",
-      "new": 0,
-      "fixed": 0,
-      "closed": 0,
-      "deltaNew": 0
-    },
-    {
-      "date": "2026-05-03",
-      "new": 0,
-      "fixed": 0,
-      "closed": 0,
-      "deltaNew": 0
-    },
-    {
-      "date": "2026-05-04",
-      "new": 9,
-      "fixed": 0,
-      "closed": 0,
-      "deltaNew": 9
-    },
-    {
-      "date": "2026-05-05",
-      "new": 0,
-      "fixed": 0,
-      "closed": 0,
-      "deltaNew": -9
-    },
-    {
-      "date": "2026-05-06",
-      "new": 8,
-      "fixed": 0,
-      "closed": 0,
-      "deltaNew": 8
-    },
-    {
-      "date": "2026-05-07",
-      "new": 30,
-      "fixed": 0,
-      "closed": 0,
-      "deltaNew": 22
-    },
-    {
-      "date": "2026-05-08",
-      "new": 22,
-      "fixed": 55,
-      "closed": 11,
-      "deltaNew": -8
-    },
-    {
-      "date": "2026-05-09",
-      "new": 0,
-      "fixed": 0,
-      "closed": 0,
-      "deltaNew": -22
-    },
-    {
-      "date": "2026-05-10",
-      "new": 0,
-      "fixed": 0,
-      "closed": 0,
-      "deltaNew": 0
-    },
-    {
-      "date": "2026-05-11",
-      "new": 5,
-      "fixed": 22,
-      "closed": 6,
-      "deltaNew": 5
-    },
-    {
-      "date": "2026-05-12",
-      "new": 60,
-      "fixed": 2,
-      "closed": 1,
-      "deltaNew": 55
-    },
-    {
-      "date": "2026-05-13",
-      "new": 11,
-      "fixed": 0,
-      "closed": 0,
-      "deltaNew": -49
-    },
-    {
-      "date": "2026-05-14",
-      "new": 19,
-      "fixed": 1,
-      "closed": 1,
-      "deltaNew": 8
-    },
-    {
-      "date": "2026-05-15",
-      "new": 11,
-      "fixed": 8,
-      "closed": 1,
-      "deltaNew": -8
-    },
-    {
-      "date": "2026-05-16",
-      "new": 0,
-      "fixed": 0,
-      "closed": 0,
-      "deltaNew": -11
-    },
-    {
-      "date": "2026-05-17",
-      "new": 0,
-      "fixed": 0,
-      "closed": 0,
-      "deltaNew": 0
-    },
-    {
-      "date": "2026-05-18",
-      "new": 1,
-      "fixed": 70,
-      "closed": 63,
-      "deltaNew": 1
-    },
-    {
-      "date": "2026-05-19",
-      "new": 6,
-      "fixed": 10,
-      "closed": 5,
-      "deltaNew": 5
-    },
-    {
-      "date": "2026-05-20",
-      "new": 0,
-      "fixed": 35,
-      "closed": 28,
-      "deltaNew": -6
-    },
-    {
-      "date": "2026-05-21",
-      "new": 0,
-      "fixed": 7,
-      "closed": 6,
-      "deltaNew": 0
-    }
-  ],
-  "recent": [
-    {
-      "id": "ISSUE-825",
-      "title": "[게이미피케이션][혜택][공통] ‘만 보 걷고’ 포인트 기획서와 상이",
-      "status": "등록 (Registered)",
-      "stage": "등록",
-      "severity": "Minor",
-      "priority": "Medium",
-      "assignee": "미지정",
-      "version": "5.21.0",
-      "os": "미지정",
-      "createdAt": "2026-05-19T09:05:00.000Z",
-      "createdDate": "2026-05-19",
-      "fixedAt": "",
-      "fixedDate": "",
-      "closedAt": "",
-      "closedDate": "",
-      "url": "https://www.notion.so/36573fbd195180048996dbc893a6d119",
-      "lastEditedAt": "2026-05-19T09:10:00.000Z"
-    },
-    {
-      "id": "ISSUE-824",
-      "title": "[게이미피케이션][만보기] 미수령 포인트 안내 팝업 내 버튼 문구 불일치",
-      "status": "등록 (Registered)",
-      "stage": "등록",
-      "severity": "Minor",
-      "priority": "Medium",
-      "assignee": "미지정",
-      "version": "5.21.0",
-      "os": "미지정",
-      "createdAt": "2026-05-19T09:00:00.000Z",
-      "createdDate": "2026-05-19",
-      "fixedAt": "",
-      "fixedDate": "",
-      "closedAt": "",
-      "closedDate": "",
-      "url": "https://www.notion.so/36573fbd19518000ae7ec285c49c7f14",
-      "lastEditedAt": "2026-05-19T09:05:00.000Z"
-    },
-    {
-      "id": "ISSUE-823",
-      "title": "[결제탭][공통] 월렛 영역 내 ‘내역’ 선택 시 ‘월렛내역조회’ 화면으로 이동하는 현상",
-      "status": "완료 (Done)",
-      "stage": "종료",
-      "severity": "Major",
-      "priority": "Medium",
-      "assignee": "미지정",
-      "version": "[G.H]v1.0.0",
-      "os": "미지정",
-      "createdAt": "2026-05-19T08:57:00.000Z",
-      "createdDate": "2026-05-19",
-      "fixedAt": "2026-05-20T23:59:00.000Z",
-      "fixedDate": "2026-05-21",
-      "closedAt": "2026-05-20T23:59:00.000Z",
-      "closedDate": "2026-05-21",
-      "url": "https://www.notion.so/36573fbd195180339ffcf66fbdbcaeee",
-      "lastEditedAt": "2026-05-20T23:59:00.000Z"
-    },
-    {
-      "id": "ISSUE-822",
-      "title": "[게이미피케이션][만보기][iOS] ‘동작 및 피트니스’ 권한 거부 후 재 진입 시 ‘권한 허용 브릿지’ 팝업 미노출",
-      "status": "등록 (Registered)",
-      "stage": "등록",
-      "severity": "Major",
-      "priority": "Medium",
-      "assignee": "미지정",
-      "version": "5.21.0",
-      "os": "미지정",
-      "createdAt": "2026-05-19T08:52:00.000Z",
-      "createdDate": "2026-05-19",
-      "fixedAt": "",
-      "fixedDate": "",
-      "closedAt": "",
-      "closedDate": "",
-      "url": "https://www.notion.so/iOS-36573fbd1951800690c3cd1cd688beaf",
-      "lastEditedAt": "2026-05-19T08:56:00.000Z"
-    },
-    {
-      "id": "ISSUE-820",
-      "title": "[게이미피케이션][만보기]→미션 리스트 진입 시 뒤로 가기 두번 선택해야 이전 페이지(혜택 홈)로 이동하는 현상",
-      "status": "등록 (Registered)",
-      "stage": "등록",
-      "severity": "Major",
-      "priority": "Medium",
-      "assignee": "미지정",
-      "version": "5.21.0",
-      "os": "미지정",
-      "createdAt": "2026-05-19T05:10:00.000Z",
-      "createdDate": "2026-05-19",
-      "fixedAt": "",
-      "fixedDate": "",
-      "closedAt": "",
-      "closedDate": "",
-      "url": "https://www.notion.so/36573fbd195180aabcd1d6bfbd256030",
-      "lastEditedAt": "2026-05-19T05:19:00.000Z"
-    },
-    {
-      "id": "ISSUE-819",
-      "title": "[다크모드][AOS] 삼성 인터넷 브라우저 강제 다크 모드 적용 시 GO Hanpass 웹 화면 색상 비정상 노출 현상",
-      "status": "추척 관찰-백로그",
-      "stage": "등록",
-      "severity": "Minor",
-      "priority": "Medium",
-      "assignee": "미지정",
-      "version": "[G.H]v1.0.0",
-      "os": "미지정",
-      "createdAt": "2026-05-19T04:21:00.000Z",
-      "createdDate": "2026-05-19",
-      "fixedAt": "",
-      "fixedDate": "",
-      "closedAt": "",
-      "closedDate": "",
-      "url": "https://www.notion.so/AOS-GO-Hanpass-36573fbd195180ca9b2eda8ce0657e65",
-      "lastEditedAt": "2026-05-21T00:21:00.000Z"
-    },
-    {
-      "id": "ISSUE-818",
-      "title": "[게이미피케이션][AOS] 앱 흔들기 완료 후 ‘40001 에러’ 팝업 노출 되는 현상",
-      "status": "완료 (Done)",
-      "stage": "종료",
-      "severity": "Major",
-      "priority": "Medium",
-      "assignee": "미지정",
-      "version": "5.21.0",
-      "os": "미지정",
-      "createdAt": "2026-05-18T07:27:00.000Z",
-      "createdDate": "2026-05-18",
-      "fixedAt": "2026-05-21T00:22:00.000Z",
-      "fixedDate": "2026-05-21",
-      "closedAt": "2026-05-21T00:22:00.000Z",
-      "closedDate": "2026-05-21",
-      "url": "https://www.notion.so/AOS-40001-36473fbd195180d6aae4c33f12f97ccd",
-      "lastEditedAt": "2026-05-21T00:22:00.000Z"
-    },
-    {
-      "id": "ISSUE-814",
-      "title": "[관광객카드] 결제 방식 선택 BS 내 ‘나중에 결제’ 안내 문구 기획서와 상이",
-      "status": "QA 검증 -회귀 (QA Verification)",
-      "stage": "QA확인",
-      "severity": "Minor",
-      "priority": "Medium",
-      "assignee": "미지정",
-      "version": "[G.H]v1.0.0",
-      "os": "미지정",
-      "createdAt": "2026-05-15T08:32:00.000Z",
-      "createdDate": "2026-05-15",
-      "fixedAt": "2026-05-19T00:36:00.000Z",
-      "fixedDate": "2026-05-19",
-      "closedAt": "",
-      "closedDate": "",
-      "url": "https://www.notion.so/BS-36173fbd195180d4bb3ae9c8d7723349",
-      "lastEditedAt": "2026-05-19T00:36:00.000Z"
-    },
-    {
-      "id": "ISSUE-813",
-      "title": "[관광객카드] PIN입력 페이지에서 물리백 선택 시 이전화면으로 (TravelCard_067_결제하기) 이동하지 않는 현상",
-      "status": "QA 검증 -회귀 (QA Verification)",
-      "stage": "QA확인",
-      "severity": "Minor",
-      "priority": "Medium",
-      "assignee": "미지정",
-      "version": "[G.H]v1.0.0",
-      "os": "미지정",
-      "createdAt": "2026-05-15T07:45:00.000Z",
-      "createdDate": "2026-05-15",
-      "fixedAt": "2026-05-20T02:44:00.000Z",
-      "fixedDate": "2026-05-20",
-      "closedAt": "",
-      "closedDate": "",
-      "url": "https://www.notion.so/PIN-TravelCard_067_-36173fbd195180329925e3e6ca1165b6",
-      "lastEditedAt": "2026-05-20T02:44:00.000Z"
-    },
-    {
-      "id": "ISSUE-812",
-      "title": "[관광객카드][AOS] KT 결제 실패 화면 - OS 물리백 동작 시 반응하는 현상 ",
-      "status": "기획서 수정",
-      "stage": "등록",
-      "severity": "Minor",
-      "priority": "Medium",
-      "assignee": "미지정",
-      "version": "[G.H]v1.0.0",
-      "os": "미지정",
-      "createdAt": "2026-05-15T07:42:00.000Z",
-      "createdDate": "2026-05-15",
-      "fixedAt": "",
-      "fixedDate": "",
-      "closedAt": "",
-      "closedDate": "",
-      "url": "https://www.notion.so/AOS-KT-OS-36173fbd1951804c9c40c6d49ccf5c15",
-      "lastEditedAt": "2026-05-18T08:29:00.000Z"
-    }
-  ]
+  }
 }</script>
   <script>
     const DATA = JSON.parse(document.getElementById("dashboard-data").textContent);
     const $ = (id) => document.getElementById(id);
     const esc = (v) => String(v ?? "").replace(/[&<>"']/g, (c) => ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]));
     const pct = (n) => `${Number(n || 0).toFixed(1)}%`;
+    const domainNames = ["한패스", "Go Hanpass"];
+    let selectedDomain = "ALL";
     let selectedVersion = DATA.selectedVersion || "ALL";
     $("stamp").textContent = `생성: ${DATA.generatedAt.replace("T", " ")} · 기준 ${DATA.days}일`;
 
+    function currentScope() {
+      return DATA.domains[selectedDomain] || DATA.domains.ALL;
+    }
+
+    function renderDomainSwitch() {
+      const scopeCounts = {
+        ALL: DATA.domains.ALL.summary.total,
+        "한패스": DATA.domains["한패스"].summary.total,
+        "Go Hanpass": DATA.domains["Go Hanpass"].summary.total,
+      };
+      const buttons = [
+        ...domainNames.map((name) => `<button class="domain-btn ${selectedDomain === name ? "active" : ""}" data-domain="${name}">${name} <span class="subtle">(${scopeCounts[name] || 0})</span></button>`),
+        `<button class="domain-btn ${selectedDomain === "ALL" ? "active" : ""}" data-domain="ALL">전체 <span class="subtle">(${scopeCounts.ALL || 0})</span></button>`,
+      ];
+      $("domainSwitch").innerHTML = buttons.join("");
+      document.querySelectorAll(".domain-btn").forEach((button) => {
+        button.addEventListener("click", () => {
+          selectedDomain = button.dataset.domain || "ALL";
+          selectedVersion = "ALL";
+          renderDomainSwitch();
+          renderSummary();
+          renderFunnel();
+          renderDaily();
+          renderHeatmap();
+          renderVersions();
+          renderDistributions();
+          renderRecent();
+        });
+      });
+    }
+
     function renderSummary() {
-      const s = DATA.summary;
+      const s = currentScope().summary;
       const cards = [
         ["전체 결함", s.total, "Notion DB 전체 조회 기준"],
         ["신규 등록", s.new, "등록 단계"],
@@ -1485,18 +3557,19 @@
     }
 
     function renderFunnel() {
-      const max = Math.max(...DATA.funnel.map((d) => d.count), 1);
-      $("funnel").innerHTML = DATA.funnel.map((d) => `
+      const funnel = currentScope().funnel;
+      const max = Math.max(...funnel.map((d) => d.count), 1);
+      $("funnel").innerHTML = funnel.map((d) => `
         <div class="funnel-row">
           <div>${esc(d.stage)}</div>
-          <div class="funnel-bar" style="width:${d.width}%; opacity:${0.45 + d.count / max * 0.55}">${d.count}건</div>
+          <div class="funnel-bar" style="width:${Math.max(18, d.width)}%; opacity:${0.45 + d.count / max * 0.55}">${d.count}건</div>
           <div class="meta">${pct(d.rate)}</div>
         </div>
       `).join("");
     }
 
     function renderDaily(days = DATA.days) {
-      const rows = DATA.daily.slice(-days);
+      const rows = currentScope().daily.slice(-days);
       const max = Math.max(...rows.flatMap((d) => [d.new, d.fixed, d.closed]), 1);
       $("dailyChart").innerHTML = rows.map((d) => `
         <div class="day" title="${d.date} 신규 ${d.new}, 수정완료 ${d.fixed}, 종료 ${d.closed}">
@@ -1514,23 +3587,25 @@
     }
 
     function renderHeatmap() {
-      const max = Math.max(...DATA.heatmap.map((d) => d.new), 1);
-      $("heatmap").innerHTML = DATA.heatmap.map((d) => {
+      const heatmap = currentScope().heatmap;
+      const max = Math.max(...heatmap.map((d) => d.new), 1);
+      $("heatmap").innerHTML = heatmap.map((d) => {
         const level = d.new === 0 ? 0 : Math.min(4, Math.ceil(d.new / max * 4));
         return `<div class="tile" data-level="${level}" title="${d.date} 등록 ${d.new}건"></div>`;
       }).join("");
     }
 
     function renderVersions() {
-      const max = Math.max(...DATA.versions.map((d) => d.total), 1);
+      const scope = currentScope();
+      const max = Math.max(...scope.versions.map((d) => d.total), 1);
       const allItem = {
         version: "ALL",
         label: "전체",
-        total: DATA.summary.total,
-        criticalMajor: DATA.versions.reduce((sum, item) => sum + (item.criticalMajor || 0), 0),
-        doneRate: DATA.summary.total ? Math.round((DATA.summary.closed / DATA.summary.total) * 1000) / 10 : 0,
+        total: scope.summary.total,
+        criticalMajor: scope.versions.reduce((sum, item) => sum + (item.criticalMajor || 0), 0),
+        doneRate: scope.summary.total ? Math.round((scope.summary.closed / scope.summary.total) * 1000) / 10 : 0,
       };
-      const items = [allItem, ...DATA.versions];
+      const items = [allItem, ...scope.versions];
       $("versions").innerHTML = items.length ? items.map((d) => `
         <button class="version-item ${selectedVersion === d.version ? "active" : ""}" data-version="${esc(d.version)}">
           <div><strong>${esc(d.version === "ALL" ? d.label : d.version)}</strong><div class="meta">Major/Critical ${d.criticalMajor}건 · 완료율 ${pct(d.doneRate)}</div></div>
@@ -1556,10 +3631,11 @@
     }
 
     function renderDistributions() {
-      const version = selectedVersion === "ALL" ? null : DATA.versions.find((item) => item.version === selectedVersion);
-      const d = version || DATA.distributions.ALL;
-      $("selectedVersionLabel").textContent = version ? version.version : "전체";
-      $("distributionScope").textContent = version ? `${version.version} 기준` : "전체 기준";
+      const scope = currentScope();
+      const version = selectedVersion === "ALL" ? null : scope.versions.find((item) => item.version === selectedVersion);
+      const d = version || scope.distributions.ALL;
+      $("selectedVersionLabel").textContent = `${selectedDomain === "ALL" ? "전체" : selectedDomain} / ${version ? version.version : "전체"}`;
+      $("distributionScope").textContent = version ? `${selectedDomain === "ALL" ? "전체" : selectedDomain} · ${version.version} 기준` : `${selectedDomain === "ALL" ? "전체" : selectedDomain} 기준`;
       $("distributions").innerHTML = [
         renderDistBox("상태", d.status),
         renderDistBox("심각도", d.severity),
@@ -1568,11 +3644,12 @@
     }
 
     function renderRecent() {
-      if (!DATA.recent.length) {
+      const recent = currentScope().recent;
+      if (!recent.length) {
         $("recentList").innerHTML = `<div class="empty">최근 결함 데이터가 없습니다.</div>`;
         return;
       }
-      $("recentList").innerHTML = `<table><thead><tr><th>제목</th><th>상태</th><th>심각도</th><th>담당자</th><th>등록일</th><th>버전</th></tr></thead><tbody>${DATA.recent.map((r) => `
+      $("recentList").innerHTML = `<table><thead><tr><th>제목</th><th>상태</th><th>심각도</th><th>담당자</th><th>등록일</th><th>버전</th></tr></thead><tbody>${recent.map((r) => `
         <tr class="recent-row" data-url="${esc(r.url)}" tabindex="0" role="link" aria-label="${esc(r.title)} Notion에서 열기">
           <td><a href="${esc(r.url)}" target="_blank" rel="noreferrer" tabindex="-1">${esc(r.title)}</a></td>
           <td><span class="pill">${esc(r.status)}</span></td>
@@ -1611,6 +3688,7 @@
       });
     });
 
+    renderDomainSwitch();
     renderSummary();
     renderFunnel();
     renderDaily();

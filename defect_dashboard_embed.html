@@ -36,10 +36,44 @@
       align-items: start;
       margin-bottom: 18px;
     }
+    .hero-head {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 8px;
+    }
     h1 { margin: 0 0 8px; font-size: 26px; font-weight: 760; }
+    .hero-head h1 { margin: 0; }
     .lead { margin: 0; max-width: 980px; color: var(--muted); font-size: 14px; line-height: 1.55; }
     .notice { margin-top: 8px; color: var(--muted); font-size: 12px; }
     .stamp { text-align: right; color: var(--muted); font-size: 12px; white-space: nowrap; }
+    .sync-btn {
+      border: 1px solid rgba(29, 134, 242, .28);
+      background: rgba(29, 134, 242, .10);
+      color: var(--blue);
+      border-radius: 999px;
+      padding: 8px 14px;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .sync-btn:disabled {
+      opacity: .55;
+      cursor: wait;
+    }
+    .sync-meta {
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 12px;
+      min-height: 18px;
+    }
+    .sync-meta.is-error { color: var(--red); }
+    .sync-meta.is-success { color: var(--green); }
+    .sync-link {
+      color: var(--blue);
+      text-decoration: none;
+    }
     .tabs { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 18px; }
     .domain-switch { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 12px; }
     .tab, .range-btn {
@@ -152,6 +186,76 @@
     .pill { display: inline-flex; max-width: 150px; padding: 4px 8px; border-radius: 999px; background: rgba(29,134,242,.10); color: var(--text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
     .empty { color: var(--muted); padding: 20px; text-align: center; border: 1px dashed var(--line); border-radius: 8px; }
     .table-wrap { overflow-x: auto; }
+    .sync-modal[hidden] { display: none; }
+    .sync-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 50;
+      display: grid;
+      place-items: center;
+      background: rgba(15, 23, 42, .38);
+      padding: 20px;
+    }
+    .sync-dialog {
+      width: min(460px, 100%);
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      box-shadow: var(--shadow);
+      padding: 18px;
+      display: grid;
+      gap: 14px;
+    }
+    .sync-dialog h2 {
+      margin: 0;
+      font-size: 18px;
+      font-weight: 720;
+    }
+    .sync-dialog p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+    .sync-field {
+      display: grid;
+      gap: 8px;
+    }
+    .sync-field label {
+      font-size: 12px;
+      color: var(--muted);
+      font-weight: 600;
+    }
+    .sync-field input {
+      width: 100%;
+      border: 1px solid var(--line);
+      background: var(--panel-soft);
+      color: var(--text);
+      border-radius: 10px;
+      padding: 11px 12px;
+      font-size: 13px;
+    }
+    .sync-actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .sync-action-btn {
+      border: 1px solid var(--line);
+      background: var(--panel-soft);
+      color: var(--text);
+      border-radius: 10px;
+      padding: 10px 14px;
+      font-size: 13px;
+      font-weight: 650;
+      cursor: pointer;
+    }
+    .sync-action-btn.primary {
+      border-color: rgba(29, 134, 242, .28);
+      background: var(--blue);
+      color: #ffffff;
+    }
     @media (max-width: 1100px) {
       .grid, .grid.three { grid-template-columns: 1fr; }
       .summary { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -187,9 +291,13 @@
   <div class="wrap">
     <header>
       <div>
-        <h1>결함 대시보드</h1>
+        <div class="hero-head">
+          <h1>결함 대시보드</h1>
+          <button class="sync-btn" id="syncButton" type="button">동기화</button>
+        </div>
         <p class="lead">본 대시보드는 결함 등록, 검토, 배정, 수정 및 종료 현황을 기반으로 서비스 품질 흐름을 시각화한 내부 관리자 전용 화면입니다.</p>
         <div class="notice">승인된 담당자 외 접근·열람·수정·공유를 제한하며, 모든 결함 정보 및 이력 데이터는 내부 품질 관리 목적으로만 사용됩니다.</div>
+        <div class="sync-meta" id="syncStatus"></div>
       </div>
       <div class="stamp" id="stamp"></div>
     </header>
@@ -241,8 +349,25 @@
       </section>
     </main>
   </div>
+  <div class="sync-modal" id="syncModal" hidden>
+    <div class="sync-dialog" role="dialog" aria-modal="true" aria-labelledby="syncDialogTitle">
+      <div>
+        <h2 id="syncDialogTitle">통합 실행기 동기화</h2>
+        <p>GitHub Actions로 <code>run_all_notion.py</code> 실행을 요청합니다. 토큰은 브라우저 세션에만 저장됩니다.</p>
+      </div>
+      <div class="sync-field">
+        <label for="syncTokenInput">GitHub Personal Access Token</label>
+        <input id="syncTokenInput" type="password" placeholder="workflow dispatch 권한이 있는 토큰">
+      </div>
+      <p>대상 저장소: <a class="sync-link" href="https://github.com/mhjang-qa/run_all_notion" target="_blank" rel="noreferrer">mhjang-qa/run_all_notion</a></p>
+      <div class="sync-actions">
+        <button class="sync-action-btn" id="syncCancelButton" type="button">취소</button>
+        <button class="sync-action-btn primary" id="syncSubmitButton" type="button">실행 요청</button>
+      </div>
+    </div>
+  </div>
   <script id="dashboard-data" type="application/json">{
-  "generatedAt": "2026-05-26T13:13:43+09:00",
+  "generatedAt": "2026-05-26T13:22:45+09:00",
   "days": 30,
   "domainOrder": [
     "한패스",
@@ -255,7 +380,7 @@
         "new": 72,
         "inProgress": 9,
         "fixed": 0,
-        "closed": 486,
+        "closed": 491,
         "todayNew": 0,
         "newDelta": 0
       },
@@ -292,14 +417,14 @@
         },
         {
           "stage": "QA확인",
-          "count": 50,
-          "rate": 8.1,
+          "count": 45,
+          "rate": 7.3,
           "width": 18
         },
         {
           "stage": "종료",
-          "count": 486,
-          "rate": 78.8,
+          "count": 491,
+          "rate": 79.6,
           "width": 100
         }
       ],
@@ -468,7 +593,7 @@
         {
           "date": "2026-05-20",
           "new": 0,
-          "fixed": 28,
+          "fixed": 24,
           "closed": 23,
           "deltaNew": -6
         },
@@ -510,8 +635,8 @@
         {
           "date": "2026-05-26",
           "new": 0,
-          "fixed": 16,
-          "closed": 6,
+          "fixed": 20,
+          "closed": 11,
           "deltaNew": 0
         }
       ],
@@ -572,11 +697,11 @@
             },
             {
               "label": "QA확인",
-              "count": 18
+              "count": 13
             },
             {
               "label": "종료",
-              "count": 57
+              "count": 62
             }
           ],
           "severity": [
@@ -1011,11 +1136,11 @@
             },
             {
               "label": "QA확인",
-              "count": 50
+              "count": 45
             },
             {
               "label": "종료",
-              "count": 486
+              "count": 491
             }
           ],
           "severity": [
@@ -1233,7 +1358,7 @@
         {
           "date": "2026-05-20",
           "new": 0,
-          "fixed": 28,
+          "fixed": 24,
           "closed": 23,
           "deltaNew": -6
         },
@@ -1275,8 +1400,8 @@
         {
           "date": "2026-05-26",
           "new": 0,
-          "fixed": 16,
-          "closed": 6,
+          "fixed": 20,
+          "closed": 11,
           "deltaNew": 0
         }
       ],
@@ -2832,7 +2957,7 @@
         "new": 19,
         "inProgress": 9,
         "fixed": 0,
-        "closed": 57,
+        "closed": 62,
         "todayNew": 0,
         "newDelta": 0
       },
@@ -2841,7 +2966,7 @@
           "stage": "등록",
           "count": 19,
           "rate": 18.4,
-          "width": 33
+          "width": 31
         },
         {
           "stage": "검토",
@@ -2869,14 +2994,14 @@
         },
         {
           "stage": "QA확인",
-          "count": 18,
-          "rate": 17.5,
-          "width": 32
+          "count": 13,
+          "rate": 12.6,
+          "width": 21
         },
         {
           "stage": "종료",
-          "count": 57,
-          "rate": 55.3,
+          "count": 62,
+          "rate": 60.2,
           "width": 100
         }
       ],
@@ -3045,7 +3170,7 @@
         {
           "date": "2026-05-20",
           "new": 0,
-          "fixed": 28,
+          "fixed": 24,
           "closed": 23,
           "deltaNew": -2
         },
@@ -3087,8 +3212,8 @@
         {
           "date": "2026-05-26",
           "new": 0,
-          "fixed": 13,
-          "closed": 3,
+          "fixed": 17,
+          "closed": 8,
           "deltaNew": 0
         }
       ],
@@ -3109,11 +3234,11 @@
             },
             {
               "label": "QA확인",
-              "count": 18
+              "count": 13
             },
             {
               "label": "종료",
-              "count": 57
+              "count": 62
             }
           ],
           "severity": [
@@ -3152,11 +3277,11 @@
             },
             {
               "label": "QA확인",
-              "count": 18
+              "count": 13
             },
             {
               "label": "종료",
-              "count": 57
+              "count": 62
             }
           ],
           "severity": [
@@ -3346,7 +3471,7 @@
         {
           "date": "2026-05-20",
           "new": 0,
-          "fixed": 28,
+          "fixed": 24,
           "closed": 23,
           "deltaNew": -2
         },
@@ -3388,8 +3513,8 @@
         {
           "date": "2026-05-26",
           "new": 0,
-          "fixed": 13,
-          "closed": 3,
+          "fixed": 17,
+          "closed": 8,
           "deltaNew": 0
         }
       ],
@@ -3522,8 +3647,8 @@
         {
           "id": "ISSUE-813",
           "title": "[관광객카드] PIN입력 페이지에서 물리백 선택 시 이전화면으로 (TravelCard_067_결제하기) 이동하지 않는 현상",
-          "status": "QA 검증 -회귀 (QA Verification)",
-          "stage": "QA확인",
+          "status": "완료 (Done)",
+          "stage": "종료",
           "severity": "Minor",
           "priority": "Medium",
           "assignee": "미지정",
@@ -3532,12 +3657,12 @@
           "os": "미지정",
           "createdAt": "2026-05-15T07:45:00.000Z",
           "createdDate": "2026-05-15",
-          "fixedAt": "2026-05-20T02:44:00.000Z",
-          "fixedDate": "2026-05-20",
-          "closedAt": "",
-          "closedDate": "",
+          "fixedAt": "2026-05-26T04:19:00.000Z",
+          "fixedDate": "2026-05-26",
+          "closedAt": "2026-05-26T04:19:00.000Z",
+          "closedDate": "2026-05-26",
           "url": "https://www.notion.so/PIN-TravelCard_067_-36173fbd195180329925e3e6ca1165b6",
-          "lastEditedAt": "2026-05-20T02:44:00.000Z"
+          "lastEditedAt": "2026-05-26T04:19:00.000Z"
         },
         {
           "id": "ISSUE-812",
@@ -3668,10 +3793,90 @@
     const $ = (id) => document.getElementById(id);
     const esc = (v) => String(v ?? "").replace(/[&<>"']/g, (c) => ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]));
     const pct = (n) => `${Number(n || 0).toFixed(1)}%`;
+    const SYNC_CONFIG = {
+      owner: "mhjang-qa",
+      repo: "run_all_notion",
+      workflow: "run_all_notion.yml",
+      ref: "main",
+      sessionKey: "run_all_notion_dispatch_token",
+      actionsUrl: "https://github.com/mhjang-qa/run_all_notion/actions",
+      repoUrl: "https://github.com/mhjang-qa/run_all_notion",
+    };
     const domainNames = ["한패스", "Go Hanpass"];
     let selectedDomain = "ALL";
     let selectedVersion = DATA.selectedVersion || "ALL";
     $("stamp").textContent = `생성: ${DATA.generatedAt.replace("T", " ")} · 기준 ${DATA.days}일`;
+
+    function setSyncStatus(message, tone = "") {
+      const node = $("syncStatus");
+      node.className = `sync-meta${tone ? ` is-${tone}` : ""}`;
+      node.innerHTML = message;
+    }
+
+    function openSyncModal() {
+      $("syncTokenInput").value = sessionStorage.getItem(SYNC_CONFIG.sessionKey) || "";
+      $("syncModal").hidden = false;
+      window.setTimeout(() => $("syncTokenInput").focus(), 0);
+    }
+
+    function closeSyncModal() {
+      $("syncModal").hidden = true;
+    }
+
+    async function dispatchSync() {
+      const token = $("syncTokenInput").value.trim();
+      if (!token) {
+        setSyncStatus("GitHub 토큰을 입력해야 동기화를 요청할 수 있습니다.", "error");
+        $("syncTokenInput").focus();
+        return;
+      }
+
+      sessionStorage.setItem(SYNC_CONFIG.sessionKey, token);
+      $("syncSubmitButton").disabled = true;
+      $("syncButton").disabled = true;
+      setSyncStatus("동기화 요청을 전송하는 중입니다.", "");
+
+      try {
+        const response = await fetch(
+          `https://api.github.com/repos/${SYNC_CONFIG.owner}/${SYNC_CONFIG.repo}/actions/workflows/${SYNC_CONFIG.workflow}/dispatches`,
+          {
+            method: "POST",
+            headers: {
+              "Accept": "application/vnd.github+json",
+              "Authorization": `Bearer ${token}`,
+              "X-GitHub-Api-Version": "2022-11-28",
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ ref: SYNC_CONFIG.ref }),
+          }
+        );
+
+        if (response.status === 204) {
+          closeSyncModal();
+          setSyncStatus(`동기화 요청을 보냈습니다. <a class="sync-link" href="${SYNC_CONFIG.actionsUrl}" target="_blank" rel="noreferrer">GitHub Actions</a>에서 실행 상태를 확인하세요.`, "success");
+          return;
+        }
+
+        let message = `GitHub 요청 실패 (${response.status})`;
+        try {
+          const data = await response.json();
+          if (data.message) {
+            message = data.message;
+          }
+        } catch (_) {}
+
+        if (response.status === 404) {
+          message = `워크플로를 찾지 못했습니다. <a class="sync-link" href="${SYNC_CONFIG.repoUrl}" target="_blank" rel="noreferrer">run_all_notion 저장소</a>에 <code>.github/workflows/${SYNC_CONFIG.workflow}</code>가 있어야 합니다.`;
+        }
+
+        setSyncStatus(message, "error");
+      } catch (error) {
+        setSyncStatus(`동기화 요청 중 오류가 발생했습니다: ${esc(error.message)}`, "error");
+      } finally {
+        $("syncSubmitButton").disabled = false;
+        $("syncButton").disabled = false;
+      }
+    }
 
     function currentScope() {
       return DATA.domains[selectedDomain] || DATA.domains.ALL;
@@ -3871,6 +4076,13 @@
         document.querySelectorAll(".range-btn").forEach((item) => item.classList.toggle("active", item === button));
         renderDaily(Number(button.dataset.days));
       });
+    });
+
+    $("syncButton").addEventListener("click", openSyncModal);
+    $("syncCancelButton").addEventListener("click", closeSyncModal);
+    $("syncSubmitButton").addEventListener("click", dispatchSync);
+    $("syncModal").addEventListener("click", (event) => {
+      if (event.target === $("syncModal")) closeSyncModal();
     });
 
     renderDomainSwitch();

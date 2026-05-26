@@ -776,6 +776,14 @@ def build_html(payload: dict[str, Any]) -> str:
       gap: 8px;
       flex-wrap: wrap;
     }}
+    .sync-feedback {{
+      min-height: 18px;
+      color: var(--muted);
+      font-size: 12px;
+    }}
+    .sync-feedback.is-error {{ color: var(--red); }}
+    .sync-feedback.is-success {{ color: var(--green); }}
+    .sync-feedback.is-loading {{ color: var(--blue); }}
     .sync-action-btn {{
       border: 1px solid var(--line);
       background: var(--panel-soft);
@@ -895,6 +903,7 @@ def build_html(payload: dict[str, Any]) -> str:
         <input id="syncTokenInput" type="password" placeholder="workflow dispatch 권한이 있는 토큰">
       </div>
       <p>대상 저장소: <a class="sync-link" href="https://github.com/mhjang-qa/run_all_notion" target="_blank" rel="noreferrer">mhjang-qa/run_all_notion</a></p>
+      <div class="sync-feedback" id="syncDialogStatus"></div>
       <div class="sync-actions">
         <button class="sync-action-btn" id="syncCancelButton" type="button">취소</button>
         <button class="sync-action-btn primary" id="syncSubmitButton" type="button">실행 요청</button>
@@ -925,6 +934,9 @@ def build_html(payload: dict[str, Any]) -> str:
       const node = $("syncStatus");
       node.className = `sync-meta${{tone ? ` is-${{tone}}` : ""}}`;
       node.innerHTML = message;
+      const dialogNode = $("syncDialogStatus");
+      dialogNode.className = `sync-feedback${{tone ? ` is-${{tone}}` : ""}}`;
+      dialogNode.innerHTML = message;
     }}
 
     function openSyncModal() {{
@@ -947,8 +959,10 @@ def build_html(payload: dict[str, Any]) -> str:
 
       sessionStorage.setItem(SYNC_CONFIG.sessionKey, token);
       $("syncSubmitButton").disabled = true;
+      $("syncCancelButton").disabled = true;
       $("syncButton").disabled = true;
-      setSyncStatus("동기화 요청을 전송하는 중입니다.", "");
+      $("syncSubmitButton").textContent = "실행 요청 중...";
+      setSyncStatus("동기화 요청을 전송하는 중입니다.", "loading");
 
       try {{
         const response = await fetch(
@@ -988,7 +1002,9 @@ def build_html(payload: dict[str, Any]) -> str:
         setSyncStatus(`동기화 요청 중 오류가 발생했습니다: ${{esc(error.message)}}`, "error");
       }} finally {{
         $("syncSubmitButton").disabled = false;
+        $("syncCancelButton").disabled = false;
         $("syncButton").disabled = false;
+        $("syncSubmitButton").textContent = "실행 요청";
       }}
     }}
 

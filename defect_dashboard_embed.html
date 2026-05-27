@@ -3802,6 +3802,21 @@
     const $ = (id) => document.getElementById(id);
     const esc = (v) => String(v ?? "").replace(/[&<>"']/g, (c) => ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]));
     const pct = (n) => `${Number(n || 0).toFixed(1)}%`;
+    const formatSeoulDateTime = (value) => {
+      if (!value) return "-";
+      const parsed = new Date(value);
+      if (Number.isNaN(parsed.getTime())) return String(value).replace("T", " ");
+      return new Intl.DateTimeFormat("ko-KR", {
+        timeZone: "Asia/Seoul",
+        year: "numeric",
+        month: "2-digit",
+        day: "2-digit",
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit",
+        hour12: false,
+      }).format(parsed);
+    };
     const SYNC_CONFIG = {
       owner: "mhjang-qa",
       repo: "run_all_notion",
@@ -3814,7 +3829,7 @@
     const domainNames = ["한패스", "Go Hanpass"];
     let selectedDomain = "ALL";
     let selectedVersion = DATA.selectedVersion || "ALL";
-    $("stamp").textContent = `생성: ${DATA.generatedAt.replace("T", " ")} · 기준 ${DATA.days}일`;
+    $("stamp").textContent = `생성: ${formatSeoulDateTime(DATA.generatedAt)} · 기준 ${DATA.days}일`;
 
     function setSyncStatus(message, tone = "") {
       const node = $("syncStatus");

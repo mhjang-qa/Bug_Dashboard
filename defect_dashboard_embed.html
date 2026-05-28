@@ -376,7 +376,7 @@
     </div>
   </div>
   <script id="dashboard-data" type="application/json">{
-  "generatedAt": "2026-05-28T13:32:52+09:00",
+  "generatedAt": "2026-05-28T20:23:21+09:00",
   "days": 30,
   "domainOrder": [
     "한패스",
@@ -385,18 +385,18 @@
   "domains": {
     "ALL": {
       "summary": {
-        "total": 620,
-        "new": 73,
-        "inProgress": 7,
+        "total": 629,
+        "new": 74,
+        "inProgress": 11,
         "fixed": 0,
-        "closed": 507,
-        "todayNew": 2,
-        "newDelta": 1
+        "closed": 510,
+        "todayNew": 11,
+        "newDelta": 10
       },
       "funnel": [
         {
           "stage": "등록",
-          "count": 73,
+          "count": 74,
           "rate": 11.8,
           "width": 18
         },
@@ -408,14 +408,14 @@
         },
         {
           "stage": "배정",
-          "count": 0,
-          "rate": 0.0,
+          "count": 1,
+          "rate": 0.2,
           "width": 18
         },
         {
           "stage": "진행중",
-          "count": 7,
-          "rate": 1.1,
+          "count": 11,
+          "rate": 1.7,
           "width": 18
         },
         {
@@ -427,13 +427,13 @@
         {
           "stage": "QA확인",
           "count": 33,
-          "rate": 5.3,
+          "rate": 5.2,
           "width": 18
         },
         {
           "stage": "종료",
-          "count": 507,
-          "rate": 81.8,
+          "count": 510,
+          "rate": 81.1,
           "width": 100
         }
       ],
@@ -643,10 +643,10 @@
         },
         {
           "date": "2026-05-28",
-          "new": 2,
-          "fixed": 1,
-          "closed": 1,
-          "deltaNew": 1
+          "new": 11,
+          "fixed": 4,
+          "closed": 4,
+          "deltaNew": 10
         }
       ],
       "versions": [
@@ -692,17 +692,21 @@
         },
         {
           "version": "[G.H]v1.0.0",
-          "total": 106,
-          "criticalMajor": 23,
-          "doneRate": 74.5,
+          "total": 108,
+          "criticalMajor": 24,
+          "doneRate": 75.9,
           "status": [
             {
               "label": "등록",
-              "count": 20
+              "count": 17
+            },
+            {
+              "label": "배정",
+              "count": 1
             },
             {
               "label": "진행중",
-              "count": 7
+              "count": 8
             },
             {
               "label": "QA확인",
@@ -710,7 +714,7 @@
             },
             {
               "label": "종료",
-              "count": 78
+              "count": 81
             }
           ],
           "severity": [
@@ -720,17 +724,17 @@
             },
             {
               "label": "Major",
-              "count": 22
+              "count": 23
             },
             {
               "label": "Minor",
-              "count": 83
+              "count": 84
             }
           ],
           "priority": [
             {
               "label": "Medium",
-              "count": 106
+              "count": 108
             }
           ]
         },
@@ -1137,11 +1141,15 @@
           "status": [
             {
               "label": "등록",
-              "count": 73
+              "count": 74
+            },
+            {
+              "label": "배정",
+              "count": 1
             },
             {
               "label": "진행중",
-              "count": 7
+              "count": 11
             },
             {
               "label": "QA확인",
@@ -1149,7 +1157,7 @@
             },
             {
               "label": "종료",
-              "count": 507
+              "count": 510
             }
           ],
           "severity": [
@@ -1159,11 +1167,11 @@
             },
             {
               "label": "Major",
-              "count": 133
+              "count": 136
             },
             {
               "label": "Minor",
-              "count": 361
+              "count": 367
             },
             {
               "label": "미지정",
@@ -1185,7 +1193,7 @@
             },
             {
               "label": "Medium",
-              "count": 578
+              "count": 587
             },
             {
               "label": "Low",
@@ -1408,10 +1416,10 @@
         },
         {
           "date": "2026-05-28",
-          "new": 2,
-          "fixed": 1,
-          "closed": 1,
-          "deltaNew": 1
+          "new": 11,
+          "fixed": 4,
+          "closed": 4,
+          "deltaNew": 10
         }
       ],
       "reportBoard": {
@@ -1481,9 +1489,189 @@
       },
       "recent": [
         {
+          "id": "ISSUE-848",
+          "title": "[인터네셔널][iOS] 송금 이력 존재 시 배너 미노출 되는 현상 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "5.22.0",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-05-28T09:23:00.000Z",
+          "createdDate": "2026-05-28",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://www.notion.so/iOS-36e73fbd19518068a6e2f96c083258b3",
+          "lastEditedAt": "2026-05-28T09:26:00.000Z"
+        },
+        {
+          "id": "ISSUE-847",
+          "title": "[충전대기금][iOS] 라오스어 - 충전대기 안내 BS 다국어 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "5.22.0",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-05-28T09:17:00.000Z",
+          "createdDate": "2026-05-28",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://www.notion.so/iOS-BS-36e73fbd195180da8770c5b57d6ee9ad",
+          "lastEditedAt": "2026-05-28T09:23:00.000Z"
+        },
+        {
+          "id": "ISSUE-846",
+          "title": "[보이스피싱 메시지 개선]ATM 선택 페이지 - 하단 보이스피싱 배너 미노출",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "5.22.0",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-05-28T08:26:00.000Z",
+          "createdDate": "2026-05-28",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://www.notion.so/ATM-36e73fbd195180fb82d9ff4185b124ec",
+          "lastEditedAt": "2026-05-28T09:16:00.000Z"
+        },
+        {
+          "id": "ISSUE-845",
+          "title": "[충전대기금][AOS] 충전대기 안내 BS 스크롤 시 닫기 ‘x’ 버튼 미고정 ",
+          "status": "처리중 (In Progress)",
+          "stage": "진행중",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "5.22.0",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-05-28T07:59:00.000Z",
+          "createdDate": "2026-05-28",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://www.notion.so/AOS-BS-x-36e73fbd195180ff912efef824ac5617",
+          "lastEditedAt": "2026-05-28T08:55:00.000Z"
+        },
+        {
+          "id": "ISSUE-844",
+          "title": "[지문인증 화면 개선][AOS]앱 상태 변경 시 지문 인증 페이지 유지 안되는 현상",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "5.22.0",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-05-28T06:52:00.000Z",
+          "createdDate": "2026-05-28",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://www.notion.so/AOS-36e73fbd19518030906ef034b43889d2",
+          "lastEditedAt": "2026-05-28T08:33:00.000Z"
+        },
+        {
+          "id": "ISSUE-843",
+          "title": "[인터네셔널][iOS] 러시아어 - ‘핸드폰 할부 구매’ 배너 문구 불일치 ",
+          "status": "처리중 (In Progress)",
+          "stage": "진행중",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "5.22.0",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-05-28T06:26:00.000Z",
+          "createdDate": "2026-05-28",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://www.notion.so/iOS-36e73fbd195180829e9cc3ae6cee3f09",
+          "lastEditedAt": "2026-05-28T08:58:00.000Z"
+        },
+        {
+          "id": "ISSUE-842",
+          "title": "[인터네셔널][iOS] 비로그인 시 배너 미노출 되는 현상",
+          "status": "처리중 (In Progress)",
+          "stage": "진행중",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "5.22.0",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-05-28T06:00:00.000Z",
+          "createdDate": "2026-05-28",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://www.notion.so/iOS-36e73fbd195180f78362c1940da2c5b4",
+          "lastEditedAt": "2026-05-28T08:59:00.000Z"
+        },
+        {
+          "id": "ISSUE-841",
+          "title": "[길찾기][AOS] 위치 권한 미허용 선택 후 ‘내위치’ 아이콘 선택 시 위치 허용 팝업 미노출 현상",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[G.H]v1.0.0",
+          "domain": "Go Hanpass",
+          "os": "미지정",
+          "createdAt": "2026-05-28T05:01:00.000Z",
+          "createdDate": "2026-05-28",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://www.notion.so/AOS-36e73fbd195180d69634d2fe907f3c8c",
+          "lastEditedAt": "2026-05-28T05:10:00.000Z"
+        },
+        {
+          "id": "ISSUE-840",
+          "title": "[약관][iOS] 상세약관 진입 시 강제 이탈 현상",
+          "status": "처리중 (In Progress)",
+          "stage": "진행중",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[G.H]v1.0.0",
+          "domain": "Go Hanpass",
+          "os": "미지정",
+          "createdAt": "2026-05-28T04:55:00.000Z",
+          "createdDate": "2026-05-28",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://www.notion.so/iOS-36e73fbd19518076a207e4eaff3c4a9d",
+          "lastEditedAt": "2026-05-28T05:20:00.000Z"
+        },
+        {
           "id": "ISSUE-839",
           "title": "[약관]제목 잘려서 노출 되는 현상",
-          "status": "등록 (Registered)",
+          "status": "추척 관찰-백로그",
           "stage": "등록",
           "severity": "Minor",
           "priority": "Medium",
@@ -1498,205 +1686,25 @@
           "closedAt": "",
           "closedDate": "",
           "url": "https://www.notion.so/36e73fbd1951801aa769f65dea75b170",
-          "lastEditedAt": "2026-05-28T04:31:00.000Z"
-        },
-        {
-          "id": "ISSUE-838",
-          "title": "[저장한장소][공통] 장소 상세 정보 화면 내 저장 아이콘 노출되는 현상 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[G.H]v1.0.0",
-          "domain": "Go Hanpass",
-          "os": "미지정",
-          "createdAt": "2026-05-28T01:54:00.000Z",
-          "createdDate": "2026-05-28",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://www.notion.so/36e73fbd195180b095dcfe3060ad3ad5",
-          "lastEditedAt": "2026-05-28T02:06:00.000Z"
-        },
-        {
-          "id": "ISSUE-837",
-          "title": "[관광객카드][받는장소선택][iOS] ‘방문 예정일’ Date Picker 자동 닫힘 현상",
-          "status": "완료 (Done)",
-          "stage": "종료",
-          "severity": "Major",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[G.H]v1.0.0",
-          "domain": "Go Hanpass",
-          "os": "미지정",
-          "createdAt": "2026-05-27T00:22:00.000Z",
-          "createdDate": "2026-05-27",
-          "fixedAt": "2026-05-27T02:06:00.000Z",
-          "fixedDate": "2026-05-27",
-          "closedAt": "2026-05-27T02:06:00.000Z",
-          "closedDate": "2026-05-27",
-          "url": "https://www.notion.so/iOS-Date-Picker-36d73fbd195180028eacd88538c4fd92",
-          "lastEditedAt": "2026-05-27T02:06:00.000Z"
-        },
-        {
-          "id": "ISSUE-836",
-          "title": "[게이미피케이션][공통] 회원가입/본인인증 화면 내 적립 포인트 기획서와 상이 ",
-          "status": "완료 (Done)",
-          "stage": "종료",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "5.21.0",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-05-22T07:48:00.000Z",
-          "createdDate": "2026-05-22",
-          "fixedAt": "2026-05-22T08:26:00.000Z",
-          "fixedDate": "2026-05-22",
-          "closedAt": "2026-05-22T08:26:00.000Z",
-          "closedDate": "2026-05-22",
-          "url": "https://www.notion.so/36873fbd1951804b99ecc017407d7d76",
-          "lastEditedAt": "2026-05-22T08:26:00.000Z"
-        },
-        {
-          "id": "ISSUE-835",
-          "title": "[QR결제] 무기명 계정 상태에서 통합 QR 결제 진입 시 ‘자동출금계좌 등록’ 유도 팝업 미노출 현상\n",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Major",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "5.21.0",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-05-22T07:18:00.000Z",
-          "createdDate": "2026-05-22",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://www.notion.so/QR-QR-36873fbd19518013b8aadc2d27d16492",
-          "lastEditedAt": "2026-05-22T07:26:00.000Z"
-        },
-        {
-          "id": "ISSUE-834",
-          "title": "[게이미피케이션][만보기][AOS] 권한 허용 브릿지 팝업 내 ‘설정하기’ 버튼 선택 시 동작하지 않는 현상",
-          "status": "완료 (Done)",
-          "stage": "종료",
-          "severity": "Major",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "5.21.0",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-05-22T04:21:00.000Z",
-          "createdDate": "2026-05-22",
-          "fixedAt": "2026-05-22T07:26:00.000Z",
-          "fixedDate": "2026-05-22",
-          "closedAt": "2026-05-22T07:26:00.000Z",
-          "closedDate": "2026-05-22",
-          "url": "https://www.notion.so/AOS-36873fbd195180fb81c7d22e679a0dab",
-          "lastEditedAt": "2026-05-22T07:26:00.000Z"
-        },
-        {
-          "id": "ISSUE-833",
-          "title": "\n[게이미피케이션][공통] 외국인 무기명 계정 상태에서 ‘추가인증 하고’ 영역에 ‘이어하기’ 뱃지 노출되는 현상\n",
-          "status": "완료 (Done)",
-          "stage": "종료",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "5.21.0",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-05-22T04:06:00.000Z",
-          "createdDate": "2026-05-22",
-          "fixedAt": "2026-05-26T02:30:00.000Z",
-          "fixedDate": "2026-05-26",
-          "closedAt": "2026-05-26T02:30:00.000Z",
-          "closedDate": "2026-05-26",
-          "url": "https://www.notion.so/36873fbd1951809c8a41fa006f849883",
-          "lastEditedAt": "2026-05-26T02:30:00.000Z"
-        },
-        {
-          "id": "ISSUE-832",
-          "title": "[게이미피케이션][공통] 회원가입/추가인증 포인트 지급 설정값이 기획과 상이한 현상",
-          "status": "완료 (Done)",
-          "stage": "종료",
-          "severity": "Major",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "5.21.0",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-05-22T04:04:00.000Z",
-          "createdDate": "2026-05-22",
-          "fixedAt": "2026-05-22T07:46:00.000Z",
-          "fixedDate": "2026-05-22",
-          "closedAt": "2026-05-22T07:46:00.000Z",
-          "closedDate": "2026-05-22",
-          "url": "https://www.notion.so/36873fbd1951802c9e78f1c93c65dfba",
-          "lastEditedAt": "2026-05-22T07:46:00.000Z"
-        },
-        {
-          "id": "ISSUE-831",
-          "title": "[게이미피케이션][만보기][iOS] 최초 권한 요청 팝업 내 ‘허용’ 버튼 선택 시 동작하지 않는 현상",
-          "status": "완료 (Done)",
-          "stage": "종료",
-          "severity": "Major",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "5.21.0",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-05-22T03:58:00.000Z",
-          "createdDate": "2026-05-22",
-          "fixedAt": "2026-05-22T07:39:00.000Z",
-          "fixedDate": "2026-05-22",
-          "closedAt": "2026-05-22T07:39:00.000Z",
-          "closedDate": "2026-05-22",
-          "url": "https://www.notion.so/iOS-36873fbd1951803fbc39d2ffead7a4c7",
-          "lastEditedAt": "2026-05-22T07:39:00.000Z"
-        },
-        {
-          "id": "ISSUE-825",
-          "title": "[게이미피케이션][혜택][공통] ‘만 보 걷고’ 포인트 기획서와 상이",
-          "status": "완료 (Done)",
-          "stage": "종료",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "5.21.0",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-05-19T09:05:00.000Z",
-          "createdDate": "2026-05-19",
-          "fixedAt": "2026-05-22T05:30:00.000Z",
-          "fixedDate": "2026-05-22",
-          "closedAt": "2026-05-22T05:30:00.000Z",
-          "closedDate": "2026-05-22",
-          "url": "https://www.notion.so/36573fbd195180048996dbc893a6d119",
-          "lastEditedAt": "2026-05-22T05:30:00.000Z"
+          "lastEditedAt": "2026-05-28T05:21:00.000Z"
         }
       ]
     },
     "한패스": {
       "summary": {
-        "total": 514,
-        "new": 53,
-        "inProgress": 0,
+        "total": 521,
+        "new": 57,
+        "inProgress": 3,
         "fixed": 0,
         "closed": 429,
-        "todayNew": 0,
-        "newDelta": 0
+        "todayNew": 7,
+        "newDelta": 7
       },
       "funnel": [
         {
           "stage": "등록",
-          "count": 53,
-          "rate": 10.3,
+          "count": 57,
+          "rate": 10.9,
           "width": 18
         },
         {
@@ -1713,8 +1721,8 @@
         },
         {
           "stage": "진행중",
-          "count": 0,
-          "rate": 0.0,
+          "count": 3,
+          "rate": 0.6,
           "width": 18
         },
         {
@@ -1726,13 +1734,13 @@
         {
           "stage": "QA확인",
           "count": 32,
-          "rate": 6.2,
+          "rate": 6.1,
           "width": 18
         },
         {
           "stage": "종료",
           "count": 429,
-          "rate": 83.5,
+          "rate": 82.3,
           "width": 100
         }
       ],
@@ -1942,10 +1950,10 @@
         },
         {
           "date": "2026-05-28",
-          "new": 0,
+          "new": 7,
           "fixed": 0,
           "closed": 0,
-          "deltaNew": 0
+          "deltaNew": 7
         }
       ],
       "versions": [
@@ -2386,18 +2394,18 @@
           ]
         },
         {
-          "version": "Backlog",
-          "total": 6,
+          "version": "5.22.0",
+          "total": 7,
           "criticalMajor": 2,
-          "doneRate": 83.3,
+          "doneRate": 0.0,
           "status": [
             {
               "label": "등록",
-              "count": 1
+              "count": 4
             },
             {
-              "label": "종료",
-              "count": 5
+              "label": "진행중",
+              "count": 3
             }
           ],
           "severity": [
@@ -2407,21 +2415,13 @@
             },
             {
               "label": "Minor",
-              "count": 3
-            },
-            {
-              "label": "미지정",
-              "count": 1
+              "count": 5
             }
           ],
           "priority": [
             {
               "label": "Medium",
-              "count": 3
-            },
-            {
-              "label": "Low",
-              "count": 3
+              "count": 7
             }
           ]
         }
@@ -2432,7 +2432,11 @@
           "status": [
             {
               "label": "등록",
-              "count": 53
+              "count": 57
+            },
+            {
+              "label": "진행중",
+              "count": 3
             },
             {
               "label": "QA확인",
@@ -2450,11 +2454,11 @@
             },
             {
               "label": "Major",
-              "count": 111
+              "count": 113
             },
             {
               "label": "Minor",
-              "count": 278
+              "count": 283
             },
             {
               "label": "미지정",
@@ -2476,7 +2480,7 @@
             },
             {
               "label": "Medium",
-              "count": 472
+              "count": 479
             },
             {
               "label": "Low",
@@ -2699,10 +2703,10 @@
         },
         {
           "date": "2026-05-28",
-          "new": 0,
+          "new": 7,
           "fixed": 0,
           "closed": 0,
-          "deltaNew": 0
+          "deltaNew": 7
         }
       ],
       "reportBoard": {
@@ -2758,6 +2762,146 @@
         ]
       },
       "recent": [
+        {
+          "id": "ISSUE-848",
+          "title": "[인터네셔널][iOS] 송금 이력 존재 시 배너 미노출 되는 현상 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "5.22.0",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-05-28T09:23:00.000Z",
+          "createdDate": "2026-05-28",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://www.notion.so/iOS-36e73fbd19518068a6e2f96c083258b3",
+          "lastEditedAt": "2026-05-28T09:26:00.000Z"
+        },
+        {
+          "id": "ISSUE-847",
+          "title": "[충전대기금][iOS] 라오스어 - 충전대기 안내 BS 다국어 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "5.22.0",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-05-28T09:17:00.000Z",
+          "createdDate": "2026-05-28",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://www.notion.so/iOS-BS-36e73fbd195180da8770c5b57d6ee9ad",
+          "lastEditedAt": "2026-05-28T09:23:00.000Z"
+        },
+        {
+          "id": "ISSUE-846",
+          "title": "[보이스피싱 메시지 개선]ATM 선택 페이지 - 하단 보이스피싱 배너 미노출",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "5.22.0",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-05-28T08:26:00.000Z",
+          "createdDate": "2026-05-28",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://www.notion.so/ATM-36e73fbd195180fb82d9ff4185b124ec",
+          "lastEditedAt": "2026-05-28T09:16:00.000Z"
+        },
+        {
+          "id": "ISSUE-845",
+          "title": "[충전대기금][AOS] 충전대기 안내 BS 스크롤 시 닫기 ‘x’ 버튼 미고정 ",
+          "status": "처리중 (In Progress)",
+          "stage": "진행중",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "5.22.0",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-05-28T07:59:00.000Z",
+          "createdDate": "2026-05-28",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://www.notion.so/AOS-BS-x-36e73fbd195180ff912efef824ac5617",
+          "lastEditedAt": "2026-05-28T08:55:00.000Z"
+        },
+        {
+          "id": "ISSUE-844",
+          "title": "[지문인증 화면 개선][AOS]앱 상태 변경 시 지문 인증 페이지 유지 안되는 현상",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "5.22.0",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-05-28T06:52:00.000Z",
+          "createdDate": "2026-05-28",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://www.notion.so/AOS-36e73fbd19518030906ef034b43889d2",
+          "lastEditedAt": "2026-05-28T08:33:00.000Z"
+        },
+        {
+          "id": "ISSUE-843",
+          "title": "[인터네셔널][iOS] 러시아어 - ‘핸드폰 할부 구매’ 배너 문구 불일치 ",
+          "status": "처리중 (In Progress)",
+          "stage": "진행중",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "5.22.0",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-05-28T06:26:00.000Z",
+          "createdDate": "2026-05-28",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://www.notion.so/iOS-36e73fbd195180829e9cc3ae6cee3f09",
+          "lastEditedAt": "2026-05-28T08:58:00.000Z"
+        },
+        {
+          "id": "ISSUE-842",
+          "title": "[인터네셔널][iOS] 비로그인 시 배너 미노출 되는 현상",
+          "status": "처리중 (In Progress)",
+          "stage": "진행중",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "5.22.0",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-05-28T06:00:00.000Z",
+          "createdDate": "2026-05-28",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://www.notion.so/iOS-36e73fbd195180f78362c1940da2c5b4",
+          "lastEditedAt": "2026-05-28T08:59:00.000Z"
+        },
         {
           "id": "ISSUE-836",
           "title": "[게이미피케이션][공통] 회원가입/본인인증 화면 내 적립 포인트 기획서와 상이 ",
@@ -2817,165 +2961,25 @@
           "closedDate": "2026-05-22",
           "url": "https://www.notion.so/AOS-36873fbd195180fb81c7d22e679a0dab",
           "lastEditedAt": "2026-05-22T07:26:00.000Z"
-        },
-        {
-          "id": "ISSUE-833",
-          "title": "\n[게이미피케이션][공통] 외국인 무기명 계정 상태에서 ‘추가인증 하고’ 영역에 ‘이어하기’ 뱃지 노출되는 현상\n",
-          "status": "완료 (Done)",
-          "stage": "종료",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "5.21.0",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-05-22T04:06:00.000Z",
-          "createdDate": "2026-05-22",
-          "fixedAt": "2026-05-26T02:30:00.000Z",
-          "fixedDate": "2026-05-26",
-          "closedAt": "2026-05-26T02:30:00.000Z",
-          "closedDate": "2026-05-26",
-          "url": "https://www.notion.so/36873fbd1951809c8a41fa006f849883",
-          "lastEditedAt": "2026-05-26T02:30:00.000Z"
-        },
-        {
-          "id": "ISSUE-832",
-          "title": "[게이미피케이션][공통] 회원가입/추가인증 포인트 지급 설정값이 기획과 상이한 현상",
-          "status": "완료 (Done)",
-          "stage": "종료",
-          "severity": "Major",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "5.21.0",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-05-22T04:04:00.000Z",
-          "createdDate": "2026-05-22",
-          "fixedAt": "2026-05-22T07:46:00.000Z",
-          "fixedDate": "2026-05-22",
-          "closedAt": "2026-05-22T07:46:00.000Z",
-          "closedDate": "2026-05-22",
-          "url": "https://www.notion.so/36873fbd1951802c9e78f1c93c65dfba",
-          "lastEditedAt": "2026-05-22T07:46:00.000Z"
-        },
-        {
-          "id": "ISSUE-831",
-          "title": "[게이미피케이션][만보기][iOS] 최초 권한 요청 팝업 내 ‘허용’ 버튼 선택 시 동작하지 않는 현상",
-          "status": "완료 (Done)",
-          "stage": "종료",
-          "severity": "Major",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "5.21.0",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-05-22T03:58:00.000Z",
-          "createdDate": "2026-05-22",
-          "fixedAt": "2026-05-22T07:39:00.000Z",
-          "fixedDate": "2026-05-22",
-          "closedAt": "2026-05-22T07:39:00.000Z",
-          "closedDate": "2026-05-22",
-          "url": "https://www.notion.so/iOS-36873fbd1951803fbc39d2ffead7a4c7",
-          "lastEditedAt": "2026-05-22T07:39:00.000Z"
-        },
-        {
-          "id": "ISSUE-825",
-          "title": "[게이미피케이션][혜택][공통] ‘만 보 걷고’ 포인트 기획서와 상이",
-          "status": "완료 (Done)",
-          "stage": "종료",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "5.21.0",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-05-19T09:05:00.000Z",
-          "createdDate": "2026-05-19",
-          "fixedAt": "2026-05-22T05:30:00.000Z",
-          "fixedDate": "2026-05-22",
-          "closedAt": "2026-05-22T05:30:00.000Z",
-          "closedDate": "2026-05-22",
-          "url": "https://www.notion.so/36573fbd195180048996dbc893a6d119",
-          "lastEditedAt": "2026-05-22T05:30:00.000Z"
-        },
-        {
-          "id": "ISSUE-824",
-          "title": "[게이미피케이션][만보기] 미수령 포인트 안내 팝업 내 버튼 문구 불일치",
-          "status": "완료 (Done)",
-          "stage": "종료",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "5.21.0",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-05-19T09:00:00.000Z",
-          "createdDate": "2026-05-19",
-          "fixedAt": "2026-05-26T02:01:00.000Z",
-          "fixedDate": "2026-05-26",
-          "closedAt": "2026-05-26T02:01:00.000Z",
-          "closedDate": "2026-05-26",
-          "url": "https://www.notion.so/36573fbd19518000ae7ec285c49c7f14",
-          "lastEditedAt": "2026-05-26T02:01:00.000Z"
-        },
-        {
-          "id": "ISSUE-822",
-          "title": "[게이미피케이션][만보기][iOS] ‘동작 및 피트니스’ 권한 거부 후 재 진입 시 ‘권한 허용 브릿지’ 팝업 미노출",
-          "status": "완료 (Done)",
-          "stage": "종료",
-          "severity": "Major",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "5.21.0",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-05-19T08:52:00.000Z",
-          "createdDate": "2026-05-19",
-          "fixedAt": "2026-05-22T05:30:00.000Z",
-          "fixedDate": "2026-05-22",
-          "closedAt": "2026-05-22T05:30:00.000Z",
-          "closedDate": "2026-05-22",
-          "url": "https://www.notion.so/iOS-36573fbd1951800690c3cd1cd688beaf",
-          "lastEditedAt": "2026-05-22T05:30:00.000Z"
-        },
-        {
-          "id": "ISSUE-820",
-          "title": "[게이미피케이션][만보기]→미션 리스트 진입 시 뒤로 가기 두번 선택해야 이전 페이지(혜택 홈)로 이동하는 현상",
-          "status": "완료 (Done)",
-          "stage": "종료",
-          "severity": "Major",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "5.21.0",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-05-19T05:10:00.000Z",
-          "createdDate": "2026-05-19",
-          "fixedAt": "2026-05-22T05:31:00.000Z",
-          "fixedDate": "2026-05-22",
-          "closedAt": "2026-05-22T05:31:00.000Z",
-          "closedDate": "2026-05-22",
-          "url": "https://www.notion.so/36573fbd195180aabcd1d6bfbd256030",
-          "lastEditedAt": "2026-05-22T05:31:00.000Z"
         }
       ]
     },
     "Go Hanpass": {
       "summary": {
-        "total": 106,
-        "new": 20,
-        "inProgress": 7,
+        "total": 108,
+        "new": 17,
+        "inProgress": 8,
         "fixed": 0,
-        "closed": 78,
-        "todayNew": 2,
-        "newDelta": 1
+        "closed": 81,
+        "todayNew": 4,
+        "newDelta": 3
       },
       "funnel": [
         {
           "stage": "등록",
-          "count": 20,
-          "rate": 18.9,
-          "width": 26
+          "count": 17,
+          "rate": 15.7,
+          "width": 21
         },
         {
           "stage": "검토",
@@ -2985,14 +2989,14 @@
         },
         {
           "stage": "배정",
-          "count": 0,
-          "rate": 0.0,
+          "count": 1,
+          "rate": 0.9,
           "width": 18
         },
         {
           "stage": "진행중",
-          "count": 7,
-          "rate": 6.6,
+          "count": 8,
+          "rate": 7.4,
           "width": 18
         },
         {
@@ -3009,8 +3013,8 @@
         },
         {
           "stage": "종료",
-          "count": 78,
-          "rate": 73.6,
+          "count": 81,
+          "rate": 75.0,
           "width": 100
         }
       ],
@@ -3220,26 +3224,30 @@
         },
         {
           "date": "2026-05-28",
-          "new": 2,
-          "fixed": 1,
-          "closed": 1,
-          "deltaNew": 1
+          "new": 4,
+          "fixed": 4,
+          "closed": 4,
+          "deltaNew": 3
         }
       ],
       "versions": [
         {
           "version": "[G.H]v1.0.0",
-          "total": 106,
-          "criticalMajor": 23,
-          "doneRate": 74.5,
+          "total": 108,
+          "criticalMajor": 24,
+          "doneRate": 75.9,
           "status": [
             {
               "label": "등록",
-              "count": 20
+              "count": 17
+            },
+            {
+              "label": "배정",
+              "count": 1
             },
             {
               "label": "진행중",
-              "count": 7
+              "count": 8
             },
             {
               "label": "QA확인",
@@ -3247,7 +3255,7 @@
             },
             {
               "label": "종료",
-              "count": 78
+              "count": 81
             }
           ],
           "severity": [
@@ -3257,17 +3265,17 @@
             },
             {
               "label": "Major",
-              "count": 22
+              "count": 23
             },
             {
               "label": "Minor",
-              "count": 83
+              "count": 84
             }
           ],
           "priority": [
             {
               "label": "Medium",
-              "count": 106
+              "count": 108
             }
           ]
         }
@@ -3278,11 +3286,15 @@
           "status": [
             {
               "label": "등록",
-              "count": 20
+              "count": 17
+            },
+            {
+              "label": "배정",
+              "count": 1
             },
             {
               "label": "진행중",
-              "count": 7
+              "count": 8
             },
             {
               "label": "QA확인",
@@ -3290,7 +3302,7 @@
             },
             {
               "label": "종료",
-              "count": 78
+              "count": 81
             }
           ],
           "severity": [
@@ -3300,17 +3312,17 @@
             },
             {
               "label": "Major",
-              "count": 22
+              "count": 23
             },
             {
               "label": "Minor",
-              "count": 83
+              "count": 84
             }
           ],
           "priority": [
             {
               "label": "Medium",
-              "count": 106
+              "count": 108
             }
           ]
         }
@@ -3521,10 +3533,10 @@
         },
         {
           "date": "2026-05-28",
-          "new": 2,
-          "fixed": 1,
-          "closed": 1,
-          "deltaNew": 1
+          "new": 4,
+          "fixed": 4,
+          "closed": 4,
+          "deltaNew": 3
         }
       ],
       "reportBoard": {
@@ -3594,9 +3606,49 @@
       },
       "recent": [
         {
+          "id": "ISSUE-841",
+          "title": "[길찾기][AOS] 위치 권한 미허용 선택 후 ‘내위치’ 아이콘 선택 시 위치 허용 팝업 미노출 현상",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[G.H]v1.0.0",
+          "domain": "Go Hanpass",
+          "os": "미지정",
+          "createdAt": "2026-05-28T05:01:00.000Z",
+          "createdDate": "2026-05-28",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://www.notion.so/AOS-36e73fbd195180d69634d2fe907f3c8c",
+          "lastEditedAt": "2026-05-28T05:10:00.000Z"
+        },
+        {
+          "id": "ISSUE-840",
+          "title": "[약관][iOS] 상세약관 진입 시 강제 이탈 현상",
+          "status": "처리중 (In Progress)",
+          "stage": "진행중",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[G.H]v1.0.0",
+          "domain": "Go Hanpass",
+          "os": "미지정",
+          "createdAt": "2026-05-28T04:55:00.000Z",
+          "createdDate": "2026-05-28",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://www.notion.so/iOS-36e73fbd19518076a207e4eaff3c4a9d",
+          "lastEditedAt": "2026-05-28T05:20:00.000Z"
+        },
+        {
           "id": "ISSUE-839",
           "title": "[약관]제목 잘려서 노출 되는 현상",
-          "status": "등록 (Registered)",
+          "status": "추척 관찰-백로그",
           "stage": "등록",
           "severity": "Minor",
           "priority": "Medium",
@@ -3611,13 +3663,13 @@
           "closedAt": "",
           "closedDate": "",
           "url": "https://www.notion.so/36e73fbd1951801aa769f65dea75b170",
-          "lastEditedAt": "2026-05-28T04:31:00.000Z"
+          "lastEditedAt": "2026-05-28T05:21:00.000Z"
         },
         {
           "id": "ISSUE-838",
           "title": "[저장한장소][공통] 장소 상세 정보 화면 내 저장 아이콘 노출되는 현상 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
+          "status": "처리중 (In Progress)",
+          "stage": "진행중",
           "severity": "Minor",
           "priority": "Medium",
           "assignee": "미지정",
@@ -3631,7 +3683,7 @@
           "closedAt": "",
           "closedDate": "",
           "url": "https://www.notion.so/36e73fbd195180b095dcfe3060ad3ad5",
-          "lastEditedAt": "2026-05-28T02:06:00.000Z"
+          "lastEditedAt": "2026-05-28T08:48:00.000Z"
         },
         {
           "id": "ISSUE-837",
@@ -3752,46 +3804,6 @@
           "closedDate": "2026-05-21",
           "url": "https://www.notion.so/AOS-KT-OS-36173fbd1951804c9c40c6d49ccf5c15",
           "lastEditedAt": "2026-05-21T07:20:00.000Z"
-        },
-        {
-          "id": "ISSUE-811",
-          "title": "[관광객카드][AOS][카드디자인선택] 특정 단말에서 ‘뒷면보기’ 버튼과 인디케이터 겹치는 현상",
-          "status": "완료 (Done)",
-          "stage": "종료",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[G.H]v1.0.0",
-          "domain": "Go Hanpass",
-          "os": "미지정",
-          "createdAt": "2026-05-15T07:34:00.000Z",
-          "createdDate": "2026-05-15",
-          "fixedAt": "2026-05-22T00:17:00.000Z",
-          "fixedDate": "2026-05-22",
-          "closedAt": "2026-05-22T00:17:00.000Z",
-          "closedDate": "2026-05-22",
-          "url": "https://www.notion.so/AOS-36173fbd195180e5849dfdcf69138f16",
-          "lastEditedAt": "2026-05-22T00:17:00.000Z"
-        },
-        {
-          "id": "ISSUE-810",
-          "title": "[관광객카드][공통] 중복 로그인(세션 만료) 상태에서 동작 시 팝업 중복 노출 (시스템 장애 팝업 및 로그아웃 팝업)",
-          "status": "완료 (Done)",
-          "stage": "종료",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[G.H]v1.0.0",
-          "domain": "Go Hanpass",
-          "os": "미지정",
-          "createdAt": "2026-05-15T06:44:00.000Z",
-          "createdDate": "2026-05-15",
-          "fixedAt": "2026-05-27T02:07:00.000Z",
-          "fixedDate": "2026-05-27",
-          "closedAt": "2026-05-27T02:07:00.000Z",
-          "closedDate": "2026-05-27",
-          "url": "https://www.notion.so/36173fbd195180a58199fe70125fe78d",
-          "lastEditedAt": "2026-05-27T02:07:00.000Z"
         }
       ]
     }

@@ -376,7 +376,7 @@
     </div>
   </div>
   <script id="dashboard-data" type="application/json">{
-  "generatedAt": "2026-06-02T15:10:19+09:00",
+  "generatedAt": "2026-06-02T15:50:07+09:00",
   "days": 30,
   "domainOrder": [
     "한패스",
@@ -386,18 +386,18 @@
     "ALL": {
       "summary": {
         "total": 639,
-        "new": 69,
+        "new": 68,
         "inProgress": 1,
         "fixed": 0,
-        "closed": 532,
+        "closed": 533,
         "todayNew": 2,
         "newDelta": -5
       },
       "funnel": [
         {
           "stage": "등록",
-          "count": 69,
-          "rate": 10.8,
+          "count": 68,
+          "rate": 10.6,
           "width": 18
         },
         {
@@ -432,8 +432,8 @@
         },
         {
           "stage": "종료",
-          "count": 532,
-          "rate": 83.3,
+          "count": 533,
+          "rate": 83.4,
           "width": 100
         }
       ],
@@ -644,8 +644,8 @@
         {
           "date": "2026-06-02",
           "new": 2,
-          "fixed": 14,
-          "closed": 13,
+          "fixed": 15,
+          "closed": 14,
           "deltaNew": -5
         }
       ],
@@ -1094,11 +1094,11 @@
           "version": "[G.H]v1.0.1",
           "total": 20,
           "criticalMajor": 9,
-          "doneRate": 20.0,
+          "doneRate": 25.0,
           "status": [
             {
               "label": "등록",
-              "count": 15
+              "count": 14
             },
             {
               "label": "진행중",
@@ -1110,7 +1110,7 @@
             },
             {
               "label": "종료",
-              "count": 3
+              "count": 4
             }
           ],
           "severity": [
@@ -1137,7 +1137,7 @@
           "status": [
             {
               "label": "등록",
-              "count": 69
+              "count": 68
             },
             {
               "label": "진행중",
@@ -1149,7 +1149,7 @@
             },
             {
               "label": "종료",
-              "count": 532
+              "count": 533
             }
           ],
           "severity": [
@@ -1409,8 +1409,8 @@
         {
           "date": "2026-06-02",
           "new": 2,
-          "fixed": 14,
-          "closed": 13,
+          "fixed": 15,
+          "closed": 14,
           "deltaNew": -5
         }
       ],
@@ -2955,18 +2955,18 @@
     "Go Hanpass": {
       "summary": {
         "total": 115,
-        "new": 15,
+        "new": 14,
         "inProgress": 1,
         "fixed": 0,
-        "closed": 98,
+        "closed": 99,
         "todayNew": 0,
         "newDelta": -7
       },
       "funnel": [
         {
           "stage": "등록",
-          "count": 15,
-          "rate": 13.0,
+          "count": 14,
+          "rate": 12.2,
           "width": 18
         },
         {
@@ -3001,8 +3001,8 @@
         },
         {
           "stage": "종료",
-          "count": 98,
-          "rate": 85.2,
+          "count": 99,
+          "rate": 86.1,
           "width": 100
         }
       ],
@@ -3213,8 +3213,8 @@
         {
           "date": "2026-06-02",
           "new": 0,
-          "fixed": 9,
-          "closed": 8,
+          "fixed": 10,
+          "closed": 9,
           "deltaNew": -7
         }
       ],
@@ -3255,11 +3255,11 @@
           "version": "[G.H]v1.0.1",
           "total": 20,
           "criticalMajor": 9,
-          "doneRate": 20.0,
+          "doneRate": 25.0,
           "status": [
             {
               "label": "등록",
-              "count": 15
+              "count": 14
             },
             {
               "label": "진행중",
@@ -3271,7 +3271,7 @@
             },
             {
               "label": "종료",
-              "count": 3
+              "count": 4
             }
           ],
           "severity": [
@@ -3298,7 +3298,7 @@
           "status": [
             {
               "label": "등록",
-              "count": 15
+              "count": 14
             },
             {
               "label": "진행중",
@@ -3310,7 +3310,7 @@
             },
             {
               "label": "종료",
-              "count": 98
+              "count": 99
             }
           ],
           "severity": [
@@ -3542,8 +3542,8 @@
         {
           "date": "2026-06-02",
           "new": 0,
-          "fixed": 9,
-          "closed": 8,
+          "fixed": 10,
+          "closed": 9,
           "deltaNew": -7
         }
       ],
@@ -3822,21 +3822,6 @@
     const $ = (id) => document.getElementById(id);
     const esc = (v) => String(v ?? "").replace(/[&<>"']/g, (c) => ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]));
     const pct = (n) => `${Number(n || 0).toFixed(1)}%`;
-    const formatSeoulDateTime = (value) => {
-      if (!value) return "-";
-      const parsed = new Date(value);
-      if (Number.isNaN(parsed.getTime())) return String(value).replace("T", " ");
-      return new Intl.DateTimeFormat("ko-KR", {
-        timeZone: "Asia/Seoul",
-        year: "numeric",
-        month: "2-digit",
-        day: "2-digit",
-        hour: "2-digit",
-        minute: "2-digit",
-        second: "2-digit",
-        hour12: false,
-      }).format(parsed);
-    };
     const SYNC_CONFIG = {
       owner: "mhjang-qa",
       repo: "run_all_notion",
@@ -3849,7 +3834,7 @@
     const domainNames = ["한패스", "Go Hanpass"];
     let selectedDomain = "ALL";
     let selectedVersion = DATA.selectedVersion || "ALL";
-    $("stamp").textContent = `생성: ${formatSeoulDateTime(DATA.generatedAt)} · 기준 ${DATA.days}일`;
+    $("stamp").textContent = `생성: ${DATA.generatedAt.replace("T", " ")} · 기준 ${DATA.days}일`;
 
     function setSyncStatus(message, tone = "") {
       const node = $("syncStatus");

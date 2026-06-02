@@ -376,7 +376,7 @@
     </div>
   </div>
   <script id="dashboard-data" type="application/json">{
-  "generatedAt": "2026-06-02T14:06:07+09:00",
+  "generatedAt": "2026-06-02T14:32:36+09:00",
   "days": 30,
   "domainOrder": [
     "한패스",
@@ -386,8 +386,8 @@
     "ALL": {
       "summary": {
         "total": 639,
-        "new": 71,
-        "inProgress": 1,
+        "new": 70,
+        "inProgress": 2,
         "fixed": 0,
         "closed": 530,
         "todayNew": 2,
@@ -396,8 +396,8 @@
       "funnel": [
         {
           "stage": "등록",
-          "count": 71,
-          "rate": 11.1,
+          "count": 70,
+          "rate": 11.0,
           "width": 18
         },
         {
@@ -414,8 +414,8 @@
         },
         {
           "stage": "진행중",
-          "count": 1,
-          "rate": 0.2,
+          "count": 2,
+          "rate": 0.3,
           "width": 18
         },
         {
@@ -1137,11 +1137,11 @@
           "status": [
             {
               "label": "등록",
-              "count": 71
+              "count": 70
             },
             {
               "label": "진행중",
-              "count": 1
+              "count": 2
             },
             {
               "label": "QA확인",
@@ -1503,8 +1503,8 @@
         {
           "id": "ISSUE-865",
           "title": "[타발_9PAY]송금인 정보 입력 화면 내 주민등록증 - 인라인 에러 메시지 상이 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
+          "status": "처리중 (In Progress)",
+          "stage": "진행중",
           "severity": "Minor",
           "priority": "Medium",
           "assignee": "미지정",
@@ -1518,7 +1518,7 @@
           "closedAt": "",
           "closedDate": "",
           "url": "https://www.notion.so/_9PAY-37373fbd19518018ba96e56e230b91cb",
-          "lastEditedAt": "2026-06-02T05:02:00.000Z"
+          "lastEditedAt": "2026-06-02T05:13:00.000Z"
         },
         {
           "id": "ISSUE-861",
@@ -1685,8 +1685,8 @@
     "한패스": {
       "summary": {
         "total": 524,
-        "new": 55,
-        "inProgress": 0,
+        "new": 54,
+        "inProgress": 1,
         "fixed": 0,
         "closed": 433,
         "todayNew": 2,
@@ -1695,8 +1695,8 @@
       "funnel": [
         {
           "stage": "등록",
-          "count": 55,
-          "rate": 10.5,
+          "count": 54,
+          "rate": 10.3,
           "width": 18
         },
         {
@@ -1713,8 +1713,8 @@
         },
         {
           "stage": "진행중",
-          "count": 0,
-          "rate": 0.0,
+          "count": 1,
+          "rate": 0.2,
           "width": 18
         },
         {
@@ -2424,7 +2424,11 @@
           "status": [
             {
               "label": "등록",
-              "count": 55
+              "count": 54
+            },
+            {
+              "label": "진행중",
+              "count": 1
             },
             {
               "label": "QA확인",
@@ -2773,8 +2777,8 @@
         {
           "id": "ISSUE-865",
           "title": "[타발_9PAY]송금인 정보 입력 화면 내 주민등록증 - 인라인 에러 메시지 상이 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
+          "status": "처리중 (In Progress)",
+          "stage": "진행중",
           "severity": "Minor",
           "priority": "Medium",
           "assignee": "미지정",
@@ -2788,7 +2792,7 @@
           "closedAt": "",
           "closedDate": "",
           "url": "https://www.notion.so/_9PAY-37373fbd19518018ba96e56e230b91cb",
-          "lastEditedAt": "2026-06-02T05:02:00.000Z"
+          "lastEditedAt": "2026-06-02T05:13:00.000Z"
         },
         {
           "id": "ISSUE-852",
@@ -3822,21 +3826,6 @@
     const $ = (id) => document.getElementById(id);
     const esc = (v) => String(v ?? "").replace(/[&<>"']/g, (c) => ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]));
     const pct = (n) => `${Number(n || 0).toFixed(1)}%`;
-    const formatSeoulDateTime = (value) => {
-      if (!value) return "-";
-      const parsed = new Date(value);
-      if (Number.isNaN(parsed.getTime())) return String(value).replace("T", " ");
-      return new Intl.DateTimeFormat("ko-KR", {
-        timeZone: "Asia/Seoul",
-        year: "numeric",
-        month: "2-digit",
-        day: "2-digit",
-        hour: "2-digit",
-        minute: "2-digit",
-        second: "2-digit",
-        hour12: false,
-      }).format(parsed);
-    };
     const SYNC_CONFIG = {
       owner: "mhjang-qa",
       repo: "run_all_notion",
@@ -3849,7 +3838,7 @@
     const domainNames = ["한패스", "Go Hanpass"];
     let selectedDomain = "ALL";
     let selectedVersion = DATA.selectedVersion || "ALL";
-    $("stamp").textContent = `생성: ${formatSeoulDateTime(DATA.generatedAt)} · 기준 ${DATA.days}일`;
+    $("stamp").textContent = `생성: ${DATA.generatedAt.replace("T", " ")} · 기준 ${DATA.days}일`;
 
     function setSyncStatus(message, tone = "") {
       const node = $("syncStatus");

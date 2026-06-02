@@ -376,7 +376,7 @@
     </div>
   </div>
   <script id="dashboard-data" type="application/json">{
-  "generatedAt": "2026-06-02T09:46:45+09:00",
+  "generatedAt": "2026-06-02T14:06:07+09:00",
   "days": 30,
   "domainOrder": [
     "한패스",
@@ -385,19 +385,19 @@
   "domains": {
     "ALL": {
       "summary": {
-        "total": 637,
-        "new": 70,
+        "total": 639,
+        "new": 71,
         "inProgress": 1,
         "fixed": 0,
-        "closed": 529,
-        "todayNew": 0,
-        "newDelta": -7
+        "closed": 530,
+        "todayNew": 2,
+        "newDelta": -5
       },
       "funnel": [
         {
           "stage": "등록",
-          "count": 70,
-          "rate": 11.0,
+          "count": 71,
+          "rate": 11.1,
           "width": 18
         },
         {
@@ -432,8 +432,8 @@
         },
         {
           "stage": "종료",
-          "count": 529,
-          "rate": 83.0,
+          "count": 530,
+          "rate": 82.9,
           "width": 100
         }
       ],
@@ -567,8 +567,8 @@
         {
           "date": "2026-05-22",
           "new": 6,
-          "fixed": 111,
-          "closed": 111,
+          "fixed": 110,
+          "closed": 110,
           "deltaNew": 6
         },
         {
@@ -637,16 +637,16 @@
         {
           "date": "2026-06-01",
           "new": 7,
-          "fixed": 19,
+          "fixed": 18,
           "closed": 14,
           "deltaNew": 7
         },
         {
           "date": "2026-06-02",
-          "new": 0,
-          "fixed": 9,
-          "closed": 9,
-          "deltaNew": -7
+          "new": 2,
+          "fixed": 12,
+          "closed": 11,
+          "deltaNew": -5
         }
       ],
       "versions": [
@@ -692,25 +692,13 @@
         },
         {
           "version": "[G.H]v1.0.0",
-          "total": 115,
-          "criticalMajor": 28,
-          "doneRate": 84.3,
+          "total": 95,
+          "criticalMajor": 19,
+          "doneRate": 100.0,
           "status": [
             {
-              "label": "등록",
-              "count": 17
-            },
-            {
-              "label": "진행중",
-              "count": 1
-            },
-            {
-              "label": "QA확인",
-              "count": 1
-            },
-            {
               "label": "종료",
-              "count": 96
+              "count": 95
             }
           ],
           "severity": [
@@ -720,17 +708,17 @@
             },
             {
               "label": "Major",
-              "count": 27
+              "count": 18
             },
             {
               "label": "Minor",
-              "count": 87
+              "count": 76
             }
           ],
           "priority": [
             {
               "label": "Medium",
-              "count": 115
+              "count": 95
             }
           ]
         },
@@ -1103,34 +1091,42 @@
           ]
         },
         {
-          "version": "5.22.0",
-          "total": 8,
-          "criticalMajor": 2,
-          "doneRate": 100.0,
+          "version": "[G.H]v1.0.1",
+          "total": 20,
+          "criticalMajor": 9,
+          "doneRate": 15.0,
           "status": [
             {
+              "label": "등록",
+              "count": 16
+            },
+            {
+              "label": "진행중",
+              "count": 1
+            },
+            {
               "label": "QA확인",
-              "count": 4
+              "count": 1
             },
             {
               "label": "종료",
-              "count": 4
+              "count": 2
             }
           ],
           "severity": [
             {
               "label": "Major",
-              "count": 2
+              "count": 9
             },
             {
               "label": "Minor",
-              "count": 6
+              "count": 11
             }
           ],
           "priority": [
             {
               "label": "Medium",
-              "count": 8
+              "count": 20
             }
           ]
         }
@@ -1141,7 +1137,7 @@
           "status": [
             {
               "label": "등록",
-              "count": 70
+              "count": 71
             },
             {
               "label": "진행중",
@@ -1153,7 +1149,7 @@
             },
             {
               "label": "종료",
-              "count": 529
+              "count": 530
             }
           ],
           "severity": [
@@ -1167,11 +1163,11 @@
             },
             {
               "label": "Minor",
-              "count": 371
+              "count": 372
             },
             {
               "label": "미지정",
-              "count": 73
+              "count": 74
             },
             {
               "label": "개선 의견",
@@ -1189,7 +1185,7 @@
             },
             {
               "label": "Medium",
-              "count": 595
+              "count": 597
             },
             {
               "label": "Low",
@@ -1336,8 +1332,8 @@
         {
           "date": "2026-05-22",
           "new": 6,
-          "fixed": 111,
-          "closed": 111,
+          "fixed": 110,
+          "closed": 110,
           "deltaNew": 6
         },
         {
@@ -1406,16 +1402,16 @@
         {
           "date": "2026-06-01",
           "new": 7,
-          "fixed": 19,
+          "fixed": 18,
           "closed": 14,
           "deltaNew": 7
         },
         {
           "date": "2026-06-02",
-          "new": 0,
-          "fixed": 9,
-          "closed": 9,
-          "deltaNew": -7
+          "new": 2,
+          "fixed": 12,
+          "closed": 11,
+          "deltaNew": -5
         }
       ],
       "reportBoard": {
@@ -1485,6 +1481,46 @@
       },
       "recent": [
         {
+          "id": "ISSUE-866",
+          "title": "제목 없음",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "미지정",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[타발]베트남/9PAY",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-06-02T04:54:00.000Z",
+          "createdDate": "2026-06-02",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://www.notion.so/37373fbd1951802c8edcdfc0aaf8fa7e",
+          "lastEditedAt": "2026-06-02T04:54:00.000Z"
+        },
+        {
+          "id": "ISSUE-865",
+          "title": "[타발_9PAY]송금인 정보 입력 화면 내 주민등록증 - 인라인 에러 메시지 상이 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[타발]베트남/9PAY",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-06-02T04:10:00.000Z",
+          "createdDate": "2026-06-02",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://www.notion.so/_9PAY-37373fbd19518018ba96e56e230b91cb",
+          "lastEditedAt": "2026-06-02T05:02:00.000Z"
+        },
+        {
           "id": "ISSUE-861",
           "title": "[결제탭] 카드 보유 case - 카드 맨 뒤 4자리 미노출 현상",
           "status": "완료 (Done)",
@@ -1532,7 +1568,7 @@
           "severity": "Major",
           "priority": "Medium",
           "assignee": "미지정",
-          "version": "[G.H]v1.0.0",
+          "version": "[G.H]v1.0.1",
           "domain": "Go Hanpass",
           "os": "미지정",
           "createdAt": "2026-06-01T02:12:00.000Z",
@@ -1542,7 +1578,7 @@
           "closedAt": "",
           "closedDate": "",
           "url": "https://www.notion.so/37273fbd1951807caedad43eb2a196c0",
-          "lastEditedAt": "2026-06-01T02:33:00.000Z"
+          "lastEditedAt": "2026-06-02T04:07:00.000Z"
         },
         {
           "id": "ISSUE-858",
@@ -1643,64 +1679,24 @@
           "closedDate": "2026-06-02",
           "url": "https://www.notion.so/36f73fbd195180f98f1ff157ef2c5545",
           "lastEditedAt": "2026-06-01T23:46:00.000Z"
-        },
-        {
-          "id": "ISSUE-850",
-          "title": "[게이미피케이션][만보기][AOS] 권한 허용 후 앱 흔들기 진입 시 ‘동작 및 피트니스 권한’ 팝업 노출 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Major",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "5.21.0",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-05-29T01:02:00.000Z",
-          "createdDate": "2026-05-29",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://www.notion.so/AOS-36f73fbd19518099a5f5c0992f45b99c",
-          "lastEditedAt": "2026-05-29T01:21:00.000Z"
-        },
-        {
-          "id": "ISSUE-848",
-          "title": "[인터네셔널][iOS] 송금 이력 존재 시 배너 미노출 되는 현상 ",
-          "status": "QA 검증 -회귀 (QA Verification)",
-          "stage": "QA확인",
-          "severity": "Major",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "5.22.0",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-05-28T09:23:00.000Z",
-          "createdDate": "2026-05-28",
-          "fixedAt": "2026-06-01T00:25:00.000Z",
-          "fixedDate": "2026-06-01",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://www.notion.so/iOS-36e73fbd19518068a6e2f96c083258b3",
-          "lastEditedAt": "2026-06-01T00:25:00.000Z"
         }
       ]
     },
     "한패스": {
       "summary": {
-        "total": 522,
-        "new": 53,
+        "total": 524,
+        "new": 55,
         "inProgress": 0,
         "fixed": 0,
         "closed": 433,
-        "todayNew": 0,
-        "newDelta": 0
+        "todayNew": 2,
+        "newDelta": 2
       },
       "funnel": [
         {
           "stage": "등록",
-          "count": 53,
-          "rate": 10.2,
+          "count": 55,
+          "rate": 10.5,
           "width": 18
         },
         {
@@ -1736,7 +1732,7 @@
         {
           "stage": "종료",
           "count": 433,
-          "rate": 83.0,
+          "rate": 82.6,
           "width": 100
         }
       ],
@@ -1946,10 +1942,10 @@
         },
         {
           "date": "2026-06-02",
-          "new": 0,
+          "new": 2,
           "fixed": 4,
           "closed": 4,
-          "deltaNew": 0
+          "deltaNew": 2
         }
       ],
       "versions": [
@@ -2428,7 +2424,7 @@
           "status": [
             {
               "label": "등록",
-              "count": 53
+              "count": 55
             },
             {
               "label": "QA확인",
@@ -2450,11 +2446,11 @@
             },
             {
               "label": "Minor",
-              "count": 284
+              "count": 285
             },
             {
               "label": "미지정",
-              "count": 73
+              "count": 74
             },
             {
               "label": "개선 의견",
@@ -2472,7 +2468,7 @@
             },
             {
               "label": "Medium",
-              "count": 480
+              "count": 482
             },
             {
               "label": "Low",
@@ -2695,10 +2691,10 @@
         },
         {
           "date": "2026-06-02",
-          "new": 0,
+          "new": 2,
           "fixed": 4,
           "closed": 4,
-          "deltaNew": 0
+          "deltaNew": 2
         }
       ],
       "reportBoard": {
@@ -2754,6 +2750,46 @@
         ]
       },
       "recent": [
+        {
+          "id": "ISSUE-866",
+          "title": "제목 없음",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "미지정",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[타발]베트남/9PAY",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-06-02T04:54:00.000Z",
+          "createdDate": "2026-06-02",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://www.notion.so/37373fbd1951802c8edcdfc0aaf8fa7e",
+          "lastEditedAt": "2026-06-02T04:54:00.000Z"
+        },
+        {
+          "id": "ISSUE-865",
+          "title": "[타발_9PAY]송금인 정보 입력 화면 내 주민등록증 - 인라인 에러 메시지 상이 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[타발]베트남/9PAY",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-06-02T04:10:00.000Z",
+          "createdDate": "2026-06-02",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://www.notion.so/_9PAY-37373fbd19518018ba96e56e230b91cb",
+          "lastEditedAt": "2026-06-02T05:02:00.000Z"
+        },
         {
           "id": "ISSUE-852",
           "title": "[보이스피싱 메시지 개선][공통]일본어-보이스피싱 메세지 다국어 결함",
@@ -2913,64 +2949,24 @@
           "closedDate": "",
           "url": "https://www.notion.so/iOS-36e73fbd195180829e9cc3ae6cee3f09",
           "lastEditedAt": "2026-06-01T04:15:00.000Z"
-        },
-        {
-          "id": "ISSUE-842",
-          "title": "[인터네셔널][iOS] 비로그인 시 배너 미노출 되는 현상",
-          "status": "QA 검증 -회귀 (QA Verification)",
-          "stage": "QA확인",
-          "severity": "Major",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "5.22.0",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-05-28T06:00:00.000Z",
-          "createdDate": "2026-05-28",
-          "fixedAt": "2026-06-01T04:22:00.000Z",
-          "fixedDate": "2026-06-01",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://www.notion.so/iOS-36e73fbd195180f78362c1940da2c5b4",
-          "lastEditedAt": "2026-06-01T04:22:00.000Z"
-        },
-        {
-          "id": "ISSUE-836",
-          "title": "[게이미피케이션][공통] 회원가입/본인인증 화면 내 적립 포인트 기획서와 상이 ",
-          "status": "완료 (Done)",
-          "stage": "종료",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "5.21.0",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-05-22T07:48:00.000Z",
-          "createdDate": "2026-05-22",
-          "fixedAt": "2026-05-22T08:26:00.000Z",
-          "fixedDate": "2026-05-22",
-          "closedAt": "2026-05-22T08:26:00.000Z",
-          "closedDate": "2026-05-22",
-          "url": "https://www.notion.so/36873fbd1951804b99ecc017407d7d76",
-          "lastEditedAt": "2026-05-22T08:26:00.000Z"
         }
       ]
     },
     "Go Hanpass": {
       "summary": {
         "total": 115,
-        "new": 17,
+        "new": 16,
         "inProgress": 1,
         "fixed": 0,
-        "closed": 96,
+        "closed": 97,
         "todayNew": 0,
         "newDelta": -7
       },
       "funnel": [
         {
           "stage": "등록",
-          "count": 17,
-          "rate": 14.8,
+          "count": 16,
+          "rate": 13.9,
           "width": 18
         },
         {
@@ -3005,8 +3001,8 @@
         },
         {
           "stage": "종료",
-          "count": 96,
-          "rate": 83.5,
+          "count": 97,
+          "rate": 84.3,
           "width": 100
         }
       ],
@@ -3140,8 +3136,8 @@
         {
           "date": "2026-05-22",
           "new": 0,
-          "fixed": 15,
-          "closed": 15,
+          "fixed": 14,
+          "closed": 14,
           "deltaNew": 0
         },
         {
@@ -3210,28 +3206,60 @@
         {
           "date": "2026-06-01",
           "new": 7,
-          "fixed": 15,
+          "fixed": 14,
           "closed": 14,
           "deltaNew": 7
         },
         {
           "date": "2026-06-02",
           "new": 0,
-          "fixed": 5,
-          "closed": 5,
+          "fixed": 8,
+          "closed": 7,
           "deltaNew": -7
         }
       ],
       "versions": [
         {
           "version": "[G.H]v1.0.0",
-          "total": 115,
-          "criticalMajor": 28,
-          "doneRate": 84.3,
+          "total": 95,
+          "criticalMajor": 19,
+          "doneRate": 100.0,
+          "status": [
+            {
+              "label": "종료",
+              "count": 95
+            }
+          ],
+          "severity": [
+            {
+              "label": "Critical",
+              "count": 1
+            },
+            {
+              "label": "Major",
+              "count": 18
+            },
+            {
+              "label": "Minor",
+              "count": 76
+            }
+          ],
+          "priority": [
+            {
+              "label": "Medium",
+              "count": 95
+            }
+          ]
+        },
+        {
+          "version": "[G.H]v1.0.1",
+          "total": 20,
+          "criticalMajor": 9,
+          "doneRate": 15.0,
           "status": [
             {
               "label": "등록",
-              "count": 17
+              "count": 16
             },
             {
               "label": "진행중",
@@ -3243,27 +3271,23 @@
             },
             {
               "label": "종료",
-              "count": 96
+              "count": 2
             }
           ],
           "severity": [
             {
-              "label": "Critical",
-              "count": 1
-            },
-            {
               "label": "Major",
-              "count": 27
+              "count": 9
             },
             {
               "label": "Minor",
-              "count": 87
+              "count": 11
             }
           ],
           "priority": [
             {
               "label": "Medium",
-              "count": 115
+              "count": 20
             }
           ]
         }
@@ -3274,7 +3298,7 @@
           "status": [
             {
               "label": "등록",
-              "count": 17
+              "count": 16
             },
             {
               "label": "진행중",
@@ -3286,7 +3310,7 @@
             },
             {
               "label": "종료",
-              "count": 96
+              "count": 97
             }
           ],
           "severity": [
@@ -3441,8 +3465,8 @@
         {
           "date": "2026-05-22",
           "new": 0,
-          "fixed": 15,
-          "closed": 15,
+          "fixed": 14,
+          "closed": 14,
           "deltaNew": 0
         },
         {
@@ -3511,15 +3535,15 @@
         {
           "date": "2026-06-01",
           "new": 7,
-          "fixed": 15,
+          "fixed": 14,
           "closed": 14,
           "deltaNew": 7
         },
         {
           "date": "2026-06-02",
           "new": 0,
-          "fixed": 5,
-          "closed": 5,
+          "fixed": 8,
+          "closed": 7,
           "deltaNew": -7
         }
       ],
@@ -3637,7 +3661,7 @@
           "severity": "Major",
           "priority": "Medium",
           "assignee": "미지정",
-          "version": "[G.H]v1.0.0",
+          "version": "[G.H]v1.0.1",
           "domain": "Go Hanpass",
           "os": "미지정",
           "createdAt": "2026-06-01T02:12:00.000Z",
@@ -3647,7 +3671,7 @@
           "closedAt": "",
           "closedDate": "",
           "url": "https://www.notion.so/37273fbd1951807caedad43eb2a196c0",
-          "lastEditedAt": "2026-06-01T02:33:00.000Z"
+          "lastEditedAt": "2026-06-02T04:07:00.000Z"
         },
         {
           "id": "ISSUE-858",
@@ -3737,17 +3761,17 @@
           "severity": "Minor",
           "priority": "Medium",
           "assignee": "미지정",
-          "version": "[G.H]v1.0.0",
+          "version": "[G.H]v1.0.1",
           "domain": "Go Hanpass",
           "os": "미지정",
           "createdAt": "2026-05-28T05:01:00.000Z",
           "createdDate": "2026-05-28",
-          "fixedAt": "2026-06-01T08:28:00.000Z",
-          "fixedDate": "2026-06-01",
+          "fixedAt": "2026-06-02T04:08:00.000Z",
+          "fixedDate": "2026-06-02",
           "closedAt": "",
           "closedDate": "",
           "url": "https://www.notion.so/AOS-36e73fbd195180d69634d2fe907f3c8c",
-          "lastEditedAt": "2026-06-01T08:28:00.000Z"
+          "lastEditedAt": "2026-06-02T04:08:00.000Z"
         },
         {
           "id": "ISSUE-840",
@@ -3772,22 +3796,22 @@
         {
           "id": "ISSUE-839",
           "title": "[약관]제목 잘려서 노출 되는 현상",
-          "status": "추척 관찰-백로그",
-          "stage": "등록",
+          "status": "완료 (Done)",
+          "stage": "종료",
           "severity": "Minor",
           "priority": "Medium",
           "assignee": "미지정",
-          "version": "[G.H]v1.0.0",
+          "version": "[G.H]v1.0.1",
           "domain": "Go Hanpass",
           "os": "미지정",
           "createdAt": "2026-05-28T02:44:00.000Z",
           "createdDate": "2026-05-28",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
+          "fixedAt": "2026-06-02T04:57:00.000Z",
+          "fixedDate": "2026-06-02",
+          "closedAt": "2026-06-02T04:57:00.000Z",
+          "closedDate": "2026-06-02",
           "url": "https://www.notion.so/36e73fbd1951801aa769f65dea75b170",
-          "lastEditedAt": "2026-05-28T05:21:00.000Z"
+          "lastEditedAt": "2026-06-02T04:57:00.000Z"
         }
       ]
     }

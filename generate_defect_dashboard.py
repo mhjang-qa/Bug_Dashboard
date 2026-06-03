@@ -524,7 +524,7 @@ def build_payload(rows: list[dict[str, Any]], days: int) -> dict[str, Any]:
         for name, items in grouped_rows.items()
     }
     return {
-        "generatedAt": datetime.now(timezone.utc).astimezone().isoformat(timespec="seconds"),
+        "generatedAt": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "days": days,
         "domainOrder": ["한패스", "Go Hanpass"],
         "domains": domains,
@@ -916,12 +916,22 @@ def build_html(payload: dict[str, Any]) -> str:
     const $ = (id) => document.getElementById(id);
     const esc = (v) => String(v ?? "").replace(/[&<>"']/g, (c) => ({{"&":"&amp;","<":"&lt;",">":"&gt;","\\"":"&quot;","'":"&#39;"}}[c]));
     const pct = (n) => `${{Number(n || 0).toFixed(1)}}%`;
-    const formatSeoulDateTime = (value) => {{
+    const KST_TIME_ZONE = "Asia/Seoul";
+    const normalizeDateInput = (value) => {{
+      const text = String(value ?? "").trim();
+      if (!text) return "";
+      if (/[zZ]$|[+-]\\d{{2}}:\\d{{2}}$/.test(text)) return text;
+      if (/^\\d{{4}}-\\d{{2}}-\\d{{2}}[T ]\\d{{2}}:\\d{{2}}:\\d{{2}}(?:\\.\\d+)?$/.test(text)) {{
+        return `${{text.replace(" ", "T")}}+09:00`;
+      }}
+      return text;
+    }};
+    const formatKstDateTime = (value) => {{
       if (!value) return "-";
-      const parsed = new Date(value);
+      const parsed = new Date(normalizeDateInput(value));
       if (Number.isNaN(parsed.getTime())) return String(value).replace("T", " ");
-      return new Intl.DateTimeFormat("ko-KR", {{
-        timeZone: "Asia/Seoul",
+      const parts = new Intl.DateTimeFormat("sv-SE", {{
+        timeZone: KST_TIME_ZONE,
         year: "numeric",
         month: "2-digit",
         day: "2-digit",
@@ -929,7 +939,32 @@ def build_html(payload: dict[str, Any]) -> str:
         minute: "2-digit",
         second: "2-digit",
         hour12: false,
-      }}).format(parsed);
+      }}).formatToParts(parsed);
+      const lookup = Object.fromEntries(parts.filter((part) => part.type !== "literal").map((part) => [part.type, part.value]));
+      return `${{lookup.year}}-${{lookup.month}}-${{lookup.day}} ${{lookup.hour}}:${{lookup.minute}}:${{lookup.second}}`;
+    }};
+    const formatDisplayDateTime = (value) => {{
+      if (!value) return "-";
+      const text = String(value);
+      if (/^\\d{{4}}-\\d{{2}}-\\d{{2}}$/.test(text)) return text;
+      return formatKstDateTime(value);
+    }};
+    const formatRelativeTime = (value) => {{
+      if (!value) return "";
+      const parsed = new Date(normalizeDateInput(value));
+      if (Number.isNaN(parsed.getTime())) return "";
+      const diffMs = parsed.getTime() - Date.now();
+      const absMs = Math.abs(diffMs);
+      const suffix = diffMs <= 0 ? "전" : "후";
+      if (absMs < 60 * 1000) return "방금 전";
+      if (absMs < 60 * 60 * 1000) return `${{Math.round(absMs / (60 * 1000))}}분 ${{suffix}}`;
+      if (absMs < 24 * 60 * 60 * 1000) return `${{Math.round(absMs / (60 * 60 * 1000))}}시간 ${{suffix}}`;
+      return `${{Math.round(absMs / (24 * 60 * 60 * 1000))}}일 ${{suffix}}`;
+    }};
+    const formatKstDateTimeWithRelative = (value) => {{
+      const formatted = formatKstDateTime(value);
+      const relative = formatRelativeTime(value);
+      return relative ? `${{formatted}} (${{relative}})` : formatted;
     }};
     const SYNC_CONFIG = {{
       owner: "mhjang-qa",
@@ -943,7 +978,7 @@ def build_html(payload: dict[str, Any]) -> str:
     const domainNames = ["한패스", "Go Hanpass"];
     let selectedDomain = "ALL";
     let selectedVersion = DATA.selectedVersion || "ALL";
-    $("stamp").textContent = `생성: ${{formatSeoulDateTime(DATA.generatedAt)}} · 기준 ${{DATA.days}}일`;
+    $("stamp").textContent = `생성: ${{formatKstDateTimeWithRelative(DATA.generatedAt)}} · 기준 ${{DATA.days}}일`;
 
     function setSyncStatus(message, tone = "") {{
       const node = $("syncStatus");
@@ -1125,7 +1160,7 @@ def build_html(payload: dict[str, Any]) -> str:
             <div>${{esc(item.title)}}</div>
             <small>${{esc(item.status)}} · ${{esc(item.processingStatus)}} · ${{esc(item.platform)}}</small>
           </div>
-          <div class="report-badge">${{esc(item.createdDate || item.createdAt)}}</div>
+          <div class="report-badge">${{esc(formatDisplayDateTime(item.createdDate || item.createdAt))}}</div>
         </a>
       `).join("") : `<div class="empty">최근 30일 제보 내역이 없습니다.</div>`;
     }}
@@ -1190,7 +1225,7 @@ def build_html(payload: dict[str, Any]) -> str:
           <td><span class="pill">${{esc(r.status)}}</span></td>
           <td>${{esc(r.severity)}}</td>
           <td>${{esc(r.assignee)}}</td>
-          <td>${{esc(r.createdDate || r.createdAt)}}</td>
+          <td>${{esc(formatDisplayDateTime(r.createdDate || r.createdAt))}}</td>
           <td>${{esc(r.version)}}</td>
         </tr>`).join("")}}</tbody></table>`;
       document.querySelectorAll(".recent-row").forEach((row) => {{

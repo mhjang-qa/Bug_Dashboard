@@ -376,7 +376,7 @@
     </div>
   </div>
   <script id="dashboard-data" type="application/json">{
-  "generatedAt": "2026-06-04T13:20:57+09:00",
+  "generatedAt": "2026-06-05T08:42:41+09:00",
   "days": 30,
   "domainOrder": [
     "한패스",
@@ -385,19 +385,19 @@
   "domains": {
     "ALL": {
       "summary": {
-        "total": 644,
-        "new": 69,
-        "inProgress": 1,
+        "total": 653,
+        "new": 76,
+        "inProgress": 3,
         "fixed": 0,
         "closed": 540,
-        "todayNew": 2,
-        "newDelta": 2
+        "todayNew": 0,
+        "newDelta": -11
       },
       "funnel": [
         {
           "stage": "등록",
-          "count": 69,
-          "rate": 10.7,
+          "count": 76,
+          "rate": 11.6,
           "width": 18
         },
         {
@@ -414,8 +414,8 @@
         },
         {
           "stage": "진행중",
-          "count": 1,
-          "rate": 0.2,
+          "count": 3,
+          "rate": 0.5,
           "width": 18
         },
         {
@@ -427,30 +427,23 @@
         {
           "stage": "QA확인",
           "count": 34,
-          "rate": 5.3,
+          "rate": 5.2,
           "width": 18
         },
         {
           "stage": "종료",
           "count": 540,
-          "rate": 83.9,
+          "rate": 82.7,
           "width": 100
         }
       ],
       "daily": [
         {
-          "date": "2026-05-06",
-          "new": 8,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": 8
-        },
-        {
           "date": "2026-05-07",
           "new": 30,
           "fixed": 0,
           "closed": 0,
-          "deltaNew": 22
+          "deltaNew": 30
         },
         {
           "date": "2026-05-08",
@@ -630,8 +623,8 @@
         {
           "date": "2026-06-02",
           "new": 5,
-          "fixed": 16,
-          "closed": 16,
+          "fixed": 13,
+          "closed": 13,
           "deltaNew": -2
         },
         {
@@ -643,10 +636,17 @@
         },
         {
           "date": "2026-06-04",
-          "new": 2,
-          "fixed": 6,
-          "closed": 6,
-          "deltaNew": 2
+          "new": 11,
+          "fixed": 9,
+          "closed": 9,
+          "deltaNew": 11
+        },
+        {
+          "date": "2026-06-05",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": -11
         }
       ],
       "versions": [
@@ -1133,11 +1133,11 @@
           "status": [
             {
               "label": "등록",
-              "count": 69
+              "count": 76
             },
             {
               "label": "진행중",
-              "count": 1
+              "count": 3
             },
             {
               "label": "QA확인",
@@ -1155,11 +1155,11 @@
             },
             {
               "label": "Major",
-              "count": 141
+              "count": 143
             },
             {
               "label": "Minor",
-              "count": 378
+              "count": 385
             },
             {
               "label": "미지정",
@@ -1181,7 +1181,7 @@
             },
             {
               "label": "Medium",
-              "count": 602
+              "count": 611
             },
             {
               "label": "Low",
@@ -1200,18 +1200,11 @@
       },
       "heatmap": [
         {
-          "date": "2026-05-06",
-          "new": 8,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": 8
-        },
-        {
           "date": "2026-05-07",
           "new": 30,
           "fixed": 0,
           "closed": 0,
-          "deltaNew": 22
+          "deltaNew": 30
         },
         {
           "date": "2026-05-08",
@@ -1391,8 +1384,8 @@
         {
           "date": "2026-06-02",
           "new": 5,
-          "fixed": 16,
-          "closed": 16,
+          "fixed": 13,
+          "closed": 13,
           "deltaNew": -2
         },
         {
@@ -1404,10 +1397,17 @@
         },
         {
           "date": "2026-06-04",
-          "new": 2,
-          "fixed": 6,
-          "closed": 6,
-          "deltaNew": 2
+          "new": 11,
+          "fixed": 9,
+          "closed": 9,
+          "deltaNew": 11
+        },
+        {
+          "date": "2026-06-05",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": -11
         }
       ],
       "reportBoard": {
@@ -1477,10 +1477,190 @@
       },
       "recent": [
         {
-          "id": "ISSUE-873",
-          "title": "[타발_9PAY]등록방법 선택 BS 내 문구 기획서와 상이",
+          "id": "ISSUE-882",
+          "title": "[타발_9PAY]QR 송금정보 화면 내 문구 기획서와 상이",
           "status": "등록 (Registered)",
           "stage": "등록",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[타발]베트남/9PAY",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-06-04T08:40:00.000Z",
+          "createdDate": "2026-06-04",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/_9PAY-QR-37573fbd195180889e86fe845ec31b06",
+          "lastEditedAt": "2026-06-04T08:53:00.000Z"
+        },
+        {
+          "id": "ISSUE-881",
+          "title": "[타발_9PAY]송금 진행 상황 BS 화면 내 날짜 영역 ‘KST’ 미노출",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[타발]베트남/9PAY",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-06-04T08:33:00.000Z",
+          "createdDate": "2026-06-04",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/_9PAY-BS-KST-37573fbd19518010b56ac41adc6f53e2",
+          "lastEditedAt": "2026-06-04T08:37:00.000Z"
+        },
+        {
+          "id": "ISSUE-880",
+          "title": "[타발_9PAY]‘송금 내역’ 화면 내 계좌번호 마스킹 미처리 현상",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[타발]베트남/9PAY",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-06-04T08:26:00.000Z",
+          "createdDate": "2026-06-04",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/_9PAY-37573fbd195180e59093e1af092e5f33",
+          "lastEditedAt": "2026-06-04T09:09:00.000Z"
+        },
+        {
+          "id": "ISSUE-879",
+          "title": "[타발_9PAY]’신청 완료(QR생성)’ 화면 내 입금 만료일 ‘KST’ 미표출 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[타발]베트남/9PAY",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-06-04T07:02:00.000Z",
+          "createdDate": "2026-06-04",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/_9PAY-QR-KST-37573fbd195180959df9eb0515726e46",
+          "lastEditedAt": "2026-06-04T07:28:00.000Z"
+        },
+        {
+          "id": "ISSUE-878",
+          "title": "[타발_9PAY]추가 서류 제출 선택 - 송금인 촬영 준비 화면 내 인증서류 미노출",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[타발]베트남/9PAY",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-06-04T06:31:00.000Z",
+          "createdDate": "2026-06-04",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/_9PAY-37573fbd1951807db295c74fc378fbb7",
+          "lastEditedAt": "2026-06-04T07:40:00.000Z"
+        },
+        {
+          "id": "ISSUE-877",
+          "title": "[타발_9PAY]’받을 계좌 선택’ 화면 내 계좌 출력 순서 기획서와 상이",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[타발]베트남/9PAY",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-06-04T06:25:00.000Z",
+          "createdDate": "2026-06-04",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/_9PAY-37573fbd19518053a08fe6aa14cfbfda",
+          "lastEditedAt": "2026-06-04T06:30:00.000Z"
+        },
+        {
+          "id": "ISSUE-876",
+          "title": "[타발_9PAY]‘해외송금 받기 금액 입력’ 화면 내 연간 한도 초과 에러 메시지 천 단위 콤마(”,”) 미적용 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[타발]베트남/9PAY",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-06-04T05:26:00.000Z",
+          "createdDate": "2026-06-04",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/_9PAY-37573fbd19518014ab85fa8bfc04a9b5",
+          "lastEditedAt": "2026-06-04T06:30:00.000Z"
+        },
+        {
+          "id": "ISSUE-875",
+          "title": "[타발_9PAY][iOS] 단말기 카메라 권한 허용 후 홈 화면으로 이동하는 현상",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[타발]베트남/9PAY",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-06-04T05:18:00.000Z",
+          "createdDate": "2026-06-04",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/_9PAY-iOS-37573fbd19518072857dfec67a30c39d",
+          "lastEditedAt": "2026-06-04T06:37:00.000Z"
+        },
+        {
+          "id": "ISSUE-874",
+          "title": "[QR송금하기][iOS] PIN 번호 입력 페이지 ‘6자리 비밀번호(PIN) 변경’ 완료 후 복귀 시 ‘1원 계좌인증’ 화면(이전화면) 으로 이동하는 현상 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "5.23.0",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-06-04T04:37:00.000Z",
+          "createdDate": "2026-06-04",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/QR-iOS-PIN-6-PIN-1-37573fbd195180328fe7facc96294714",
+          "lastEditedAt": "2026-06-04T04:52:00.000Z"
+        },
+        {
+          "id": "ISSUE-873",
+          "title": "[타발_9PAY]등록방법 선택 BS 내 문구 기획서와 상이",
+          "status": "처리중 (In Progress)",
+          "stage": "진행중",
           "severity": "Minor",
           "priority": "Medium",
           "assignee": "미지정",
@@ -1494,205 +1674,25 @@
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/_9PAY-BS-37573fbd1951806b9f08ceefb626181b",
-          "lastEditedAt": "2026-06-04T04:19:00.000Z"
-        },
-        {
-          "id": "ISSUE-872",
-          "title": "[타발_9PAY][AOS] 촬영 Tip 바텀시트 내 안내 문구 기획서와 상이",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[타발]베트남/9PAY",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-06-04T01:52:00.000Z",
-          "createdDate": "2026-06-04",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/_9PAY-AOS-Tip-37573fbd195180c8b455d6f34318a6b4",
-          "lastEditedAt": "2026-06-04T02:45:00.000Z"
-        },
-        {
-          "id": "ISSUE-869",
-          "title": "[타발_9PAY][iOS] 이용 약관 [필수] → ‘[Required]’ 로 노출",
-          "status": "개발 완료 (Dev Done)",
-          "stage": "종료",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[타발]베트남/9PAY",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-06-02T07:49:00.000Z",
-          "createdDate": "2026-06-02",
-          "fixedAt": "2026-06-02T08:44:00.000Z",
-          "fixedDate": "2026-06-02",
-          "closedAt": "2026-06-02T08:44:00.000Z",
-          "closedDate": "2026-06-02",
-          "url": "https://app.notion.com/p/_9PAY-iOS-Required-37373fbd1951805a9425c905bf9814f7",
-          "lastEditedAt": "2026-06-02T08:44:00.000Z"
-        },
-        {
-          "id": "ISSUE-868",
-          "title": "[타발_9PAY]계좌 검증 실패 시에도 송금인 정보 확인 팝업 노출되는 현상 ",
-          "status": "추후 수정 백로그 이관",
-          "stage": "등록",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[타발]베트남/9PAY",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-06-02T07:39:00.000Z",
-          "createdDate": "2026-06-02",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/_9PAY-37373fbd19518031b97fcbb210442373",
-          "lastEditedAt": "2026-06-04T02:47:00.000Z"
-        },
-        {
-          "id": "ISSUE-867",
-          "title": "[타발_9PAY]송금인 촬영 준비 화면 내 타이틀 문구 기획서와 상이",
-          "status": "개발 완료 (Dev Done)",
-          "stage": "종료",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[타발]베트남/9PAY",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-06-02T07:33:00.000Z",
-          "createdDate": "2026-06-02",
-          "fixedAt": "2026-06-02T08:53:00.000Z",
-          "fixedDate": "2026-06-02",
-          "closedAt": "2026-06-02T08:53:00.000Z",
-          "closedDate": "2026-06-02",
-          "url": "https://app.notion.com/p/_9PAY-37373fbd19518077bc24cd3f7b7468a7",
-          "lastEditedAt": "2026-06-02T08:53:00.000Z"
-        },
-        {
-          "id": "ISSUE-866",
-          "title": "[타발_9PAY]송금인 정보 입력 화면 내 신분증 정보 영역 상이",
-          "status": "개발 완료 (Dev Done)",
-          "stage": "종료",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[타발]베트남/9PAY",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-06-02T04:54:00.000Z",
-          "createdDate": "2026-06-02",
-          "fixedAt": "2026-06-02T08:49:00.000Z",
-          "fixedDate": "2026-06-02",
-          "closedAt": "2026-06-02T08:49:00.000Z",
-          "closedDate": "2026-06-02",
-          "url": "https://app.notion.com/p/_9PAY-37373fbd1951802c8edcdfc0aaf8fa7e",
-          "lastEditedAt": "2026-06-02T08:49:00.000Z"
-        },
-        {
-          "id": "ISSUE-865",
-          "title": "[타발_9PAY]송금인 정보 입력 화면 내 주민등록증 - 인라인 에러 메시지 상이 ",
-          "status": "개발 완료 (Dev Done)",
-          "stage": "종료",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[타발]베트남/9PAY",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-06-02T04:10:00.000Z",
-          "createdDate": "2026-06-02",
-          "fixedAt": "2026-06-02T07:26:00.000Z",
-          "fixedDate": "2026-06-02",
-          "closedAt": "2026-06-02T07:26:00.000Z",
-          "closedDate": "2026-06-02",
-          "url": "https://app.notion.com/p/_9PAY-37373fbd19518018ba96e56e230b91cb",
-          "lastEditedAt": "2026-06-02T07:26:00.000Z"
-        },
-        {
-          "id": "ISSUE-861",
-          "title": "[결제탭] 카드 보유 case - 카드 맨 뒤 4자리 미노출 현상",
-          "status": "완료 (Done)",
-          "stage": "종료",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[G.H]v1.0.0",
-          "domain": "Go Hanpass",
-          "os": "미지정",
-          "createdAt": "2026-06-01T05:03:00.000Z",
-          "createdDate": "2026-06-01",
-          "fixedAt": "2026-06-01T08:17:00.000Z",
-          "fixedDate": "2026-06-01",
-          "closedAt": "2026-06-01T08:17:00.000Z",
-          "closedDate": "2026-06-01",
-          "url": "https://app.notion.com/p/case-4-37273fbd1951805e8c49c1b78efda14c",
-          "lastEditedAt": "2026-06-01T08:17:00.000Z"
-        },
-        {
-          "id": "ISSUE-860",
-          "title": "[로그인][iOS] ‘로그인/회원가입’ 화면 내 ‘고객센터 문의’ 선택 시 화면 이탈 현상 (AOS 정상)",
-          "status": "완료 (Done)",
-          "stage": "종료",
-          "severity": "Major",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[G.H]v1.0.0",
-          "domain": "Go Hanpass",
-          "os": "미지정",
-          "createdAt": "2026-06-01T02:20:00.000Z",
-          "createdDate": "2026-06-01",
-          "fixedAt": "2026-06-02T00:23:00.000Z",
-          "fixedDate": "2026-06-02",
-          "closedAt": "2026-06-02T00:23:00.000Z",
-          "closedDate": "2026-06-02",
-          "url": "https://app.notion.com/p/iOS-AOS-37273fbd195180239c11d44dca429fc3",
-          "lastEditedAt": "2026-06-02T00:23:00.000Z"
-        },
-        {
-          "id": "ISSUE-859",
-          "title": "[관광객카드][편의점에서받기][공통] ‘나중에 결제하기’ 선택 시 오류 팝업 노출 및 결제 실패 화면 노출 되는 현상",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Major",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[G.H]v1.0.1",
-          "domain": "Go Hanpass",
-          "os": "미지정",
-          "createdAt": "2026-06-01T02:12:00.000Z",
-          "createdDate": "2026-06-01",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/37273fbd1951807caedad43eb2a196c0",
-          "lastEditedAt": "2026-06-02T04:07:00.000Z"
+          "lastEditedAt": "2026-06-04T06:20:00.000Z"
         }
       ]
     },
     "한패스": {
       "summary": {
-        "total": 529,
-        "new": 56,
-        "inProgress": 0,
+        "total": 538,
+        "new": 63,
+        "inProgress": 2,
         "fixed": 0,
         "closed": 439,
-        "todayNew": 2,
-        "newDelta": 2
+        "todayNew": 0,
+        "newDelta": -11
       },
       "funnel": [
         {
           "stage": "등록",
-          "count": 56,
-          "rate": 10.6,
+          "count": 63,
+          "rate": 11.7,
           "width": 18
         },
         {
@@ -1709,8 +1709,8 @@
         },
         {
           "stage": "진행중",
-          "count": 0,
-          "rate": 0.0,
+          "count": 2,
+          "rate": 0.4,
           "width": 18
         },
         {
@@ -1722,30 +1722,23 @@
         {
           "stage": "QA확인",
           "count": 34,
-          "rate": 6.4,
+          "rate": 6.3,
           "width": 18
         },
         {
           "stage": "종료",
           "count": 439,
-          "rate": 83.0,
+          "rate": 81.6,
           "width": 100
         }
       ],
       "daily": [
         {
-          "date": "2026-05-06",
-          "new": 8,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": 8
-        },
-        {
           "date": "2026-05-07",
           "new": 30,
           "fixed": 0,
           "closed": 0,
-          "deltaNew": 22
+          "deltaNew": 30
         },
         {
           "date": "2026-05-08",
@@ -1925,8 +1918,8 @@
         {
           "date": "2026-06-02",
           "new": 5,
-          "fixed": 8,
-          "closed": 8,
+          "fixed": 5,
+          "closed": 5,
           "deltaNew": 5
         },
         {
@@ -1938,10 +1931,17 @@
         },
         {
           "date": "2026-06-04",
-          "new": 2,
-          "fixed": 2,
-          "closed": 2,
-          "deltaNew": 2
+          "new": 11,
+          "fixed": 5,
+          "closed": 5,
+          "deltaNew": 11
+        },
+        {
+          "date": "2026-06-05",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": -11
         }
       ],
       "versions": [
@@ -2354,6 +2354,42 @@
           ]
         },
         {
+          "version": "[타발]베트남/9PAY",
+          "total": 15,
+          "criticalMajor": 1,
+          "doneRate": 26.7,
+          "status": [
+            {
+              "label": "등록",
+              "count": 9
+            },
+            {
+              "label": "진행중",
+              "count": 2
+            },
+            {
+              "label": "종료",
+              "count": 4
+            }
+          ],
+          "severity": [
+            {
+              "label": "Major",
+              "count": 1
+            },
+            {
+              "label": "Minor",
+              "count": 14
+            }
+          ],
+          "priority": [
+            {
+              "label": "Medium",
+              "count": 15
+            }
+          ]
+        },
+        {
           "version": "5.22.0",
           "total": 8,
           "criticalMajor": 2,
@@ -2384,34 +2420,6 @@
               "count": 8
             }
           ]
-        },
-        {
-          "version": "미지정",
-          "total": 8,
-          "criticalMajor": 0,
-          "doneRate": 87.5,
-          "status": [
-            {
-              "label": "등록",
-              "count": 1
-            },
-            {
-              "label": "종료",
-              "count": 7
-            }
-          ],
-          "severity": [
-            {
-              "label": "미지정",
-              "count": 8
-            }
-          ],
-          "priority": [
-            {
-              "label": "Medium",
-              "count": 8
-            }
-          ]
         }
       ],
       "selectedVersion": "ALL",
@@ -2420,7 +2428,11 @@
           "status": [
             {
               "label": "등록",
-              "count": 56
+              "count": 63
+            },
+            {
+              "label": "진행중",
+              "count": 2
             },
             {
               "label": "QA확인",
@@ -2438,11 +2450,11 @@
             },
             {
               "label": "Major",
-              "count": 114
+              "count": 116
             },
             {
               "label": "Minor",
-              "count": 291
+              "count": 298
             },
             {
               "label": "미지정",
@@ -2464,7 +2476,7 @@
             },
             {
               "label": "Medium",
-              "count": 487
+              "count": 496
             },
             {
               "label": "Low",
@@ -2483,18 +2495,11 @@
       },
       "heatmap": [
         {
-          "date": "2026-05-06",
-          "new": 8,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": 8
-        },
-        {
           "date": "2026-05-07",
           "new": 30,
           "fixed": 0,
           "closed": 0,
-          "deltaNew": 22
+          "deltaNew": 30
         },
         {
           "date": "2026-05-08",
@@ -2674,8 +2679,8 @@
         {
           "date": "2026-06-02",
           "new": 5,
-          "fixed": 8,
-          "closed": 8,
+          "fixed": 5,
+          "closed": 5,
           "deltaNew": 5
         },
         {
@@ -2687,10 +2692,17 @@
         },
         {
           "date": "2026-06-04",
-          "new": 2,
-          "fixed": 2,
-          "closed": 2,
-          "deltaNew": 2
+          "new": 11,
+          "fixed": 5,
+          "closed": 5,
+          "deltaNew": 11
+        },
+        {
+          "date": "2026-06-05",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": -11
         }
       ],
       "reportBoard": {
@@ -2747,10 +2759,190 @@
       },
       "recent": [
         {
-          "id": "ISSUE-873",
-          "title": "[타발_9PAY]등록방법 선택 BS 내 문구 기획서와 상이",
+          "id": "ISSUE-882",
+          "title": "[타발_9PAY]QR 송금정보 화면 내 문구 기획서와 상이",
           "status": "등록 (Registered)",
           "stage": "등록",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[타발]베트남/9PAY",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-06-04T08:40:00.000Z",
+          "createdDate": "2026-06-04",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/_9PAY-QR-37573fbd195180889e86fe845ec31b06",
+          "lastEditedAt": "2026-06-04T08:53:00.000Z"
+        },
+        {
+          "id": "ISSUE-881",
+          "title": "[타발_9PAY]송금 진행 상황 BS 화면 내 날짜 영역 ‘KST’ 미노출",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[타발]베트남/9PAY",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-06-04T08:33:00.000Z",
+          "createdDate": "2026-06-04",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/_9PAY-BS-KST-37573fbd19518010b56ac41adc6f53e2",
+          "lastEditedAt": "2026-06-04T08:37:00.000Z"
+        },
+        {
+          "id": "ISSUE-880",
+          "title": "[타발_9PAY]‘송금 내역’ 화면 내 계좌번호 마스킹 미처리 현상",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[타발]베트남/9PAY",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-06-04T08:26:00.000Z",
+          "createdDate": "2026-06-04",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/_9PAY-37573fbd195180e59093e1af092e5f33",
+          "lastEditedAt": "2026-06-04T09:09:00.000Z"
+        },
+        {
+          "id": "ISSUE-879",
+          "title": "[타발_9PAY]’신청 완료(QR생성)’ 화면 내 입금 만료일 ‘KST’ 미표출 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[타발]베트남/9PAY",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-06-04T07:02:00.000Z",
+          "createdDate": "2026-06-04",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/_9PAY-QR-KST-37573fbd195180959df9eb0515726e46",
+          "lastEditedAt": "2026-06-04T07:28:00.000Z"
+        },
+        {
+          "id": "ISSUE-878",
+          "title": "[타발_9PAY]추가 서류 제출 선택 - 송금인 촬영 준비 화면 내 인증서류 미노출",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[타발]베트남/9PAY",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-06-04T06:31:00.000Z",
+          "createdDate": "2026-06-04",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/_9PAY-37573fbd1951807db295c74fc378fbb7",
+          "lastEditedAt": "2026-06-04T07:40:00.000Z"
+        },
+        {
+          "id": "ISSUE-877",
+          "title": "[타발_9PAY]’받을 계좌 선택’ 화면 내 계좌 출력 순서 기획서와 상이",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[타발]베트남/9PAY",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-06-04T06:25:00.000Z",
+          "createdDate": "2026-06-04",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/_9PAY-37573fbd19518053a08fe6aa14cfbfda",
+          "lastEditedAt": "2026-06-04T06:30:00.000Z"
+        },
+        {
+          "id": "ISSUE-876",
+          "title": "[타발_9PAY]‘해외송금 받기 금액 입력’ 화면 내 연간 한도 초과 에러 메시지 천 단위 콤마(”,”) 미적용 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[타발]베트남/9PAY",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-06-04T05:26:00.000Z",
+          "createdDate": "2026-06-04",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/_9PAY-37573fbd19518014ab85fa8bfc04a9b5",
+          "lastEditedAt": "2026-06-04T06:30:00.000Z"
+        },
+        {
+          "id": "ISSUE-875",
+          "title": "[타발_9PAY][iOS] 단말기 카메라 권한 허용 후 홈 화면으로 이동하는 현상",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[타발]베트남/9PAY",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-06-04T05:18:00.000Z",
+          "createdDate": "2026-06-04",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/_9PAY-iOS-37573fbd19518072857dfec67a30c39d",
+          "lastEditedAt": "2026-06-04T06:37:00.000Z"
+        },
+        {
+          "id": "ISSUE-874",
+          "title": "[QR송금하기][iOS] PIN 번호 입력 페이지 ‘6자리 비밀번호(PIN) 변경’ 완료 후 복귀 시 ‘1원 계좌인증’ 화면(이전화면) 으로 이동하는 현상 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "5.23.0",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-06-04T04:37:00.000Z",
+          "createdDate": "2026-06-04",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/QR-iOS-PIN-6-PIN-1-37573fbd195180328fe7facc96294714",
+          "lastEditedAt": "2026-06-04T04:52:00.000Z"
+        },
+        {
+          "id": "ISSUE-873",
+          "title": "[타발_9PAY]등록방법 선택 BS 내 문구 기획서와 상이",
+          "status": "처리중 (In Progress)",
+          "stage": "진행중",
           "severity": "Minor",
           "priority": "Medium",
           "assignee": "미지정",
@@ -2764,187 +2956,7 @@
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/_9PAY-BS-37573fbd1951806b9f08ceefb626181b",
-          "lastEditedAt": "2026-06-04T04:19:00.000Z"
-        },
-        {
-          "id": "ISSUE-872",
-          "title": "[타발_9PAY][AOS] 촬영 Tip 바텀시트 내 안내 문구 기획서와 상이",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[타발]베트남/9PAY",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-06-04T01:52:00.000Z",
-          "createdDate": "2026-06-04",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/_9PAY-AOS-Tip-37573fbd195180c8b455d6f34318a6b4",
-          "lastEditedAt": "2026-06-04T02:45:00.000Z"
-        },
-        {
-          "id": "ISSUE-869",
-          "title": "[타발_9PAY][iOS] 이용 약관 [필수] → ‘[Required]’ 로 노출",
-          "status": "개발 완료 (Dev Done)",
-          "stage": "종료",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[타발]베트남/9PAY",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-06-02T07:49:00.000Z",
-          "createdDate": "2026-06-02",
-          "fixedAt": "2026-06-02T08:44:00.000Z",
-          "fixedDate": "2026-06-02",
-          "closedAt": "2026-06-02T08:44:00.000Z",
-          "closedDate": "2026-06-02",
-          "url": "https://app.notion.com/p/_9PAY-iOS-Required-37373fbd1951805a9425c905bf9814f7",
-          "lastEditedAt": "2026-06-02T08:44:00.000Z"
-        },
-        {
-          "id": "ISSUE-868",
-          "title": "[타발_9PAY]계좌 검증 실패 시에도 송금인 정보 확인 팝업 노출되는 현상 ",
-          "status": "추후 수정 백로그 이관",
-          "stage": "등록",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[타발]베트남/9PAY",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-06-02T07:39:00.000Z",
-          "createdDate": "2026-06-02",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/_9PAY-37373fbd19518031b97fcbb210442373",
-          "lastEditedAt": "2026-06-04T02:47:00.000Z"
-        },
-        {
-          "id": "ISSUE-867",
-          "title": "[타발_9PAY]송금인 촬영 준비 화면 내 타이틀 문구 기획서와 상이",
-          "status": "개발 완료 (Dev Done)",
-          "stage": "종료",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[타발]베트남/9PAY",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-06-02T07:33:00.000Z",
-          "createdDate": "2026-06-02",
-          "fixedAt": "2026-06-02T08:53:00.000Z",
-          "fixedDate": "2026-06-02",
-          "closedAt": "2026-06-02T08:53:00.000Z",
-          "closedDate": "2026-06-02",
-          "url": "https://app.notion.com/p/_9PAY-37373fbd19518077bc24cd3f7b7468a7",
-          "lastEditedAt": "2026-06-02T08:53:00.000Z"
-        },
-        {
-          "id": "ISSUE-866",
-          "title": "[타발_9PAY]송금인 정보 입력 화면 내 신분증 정보 영역 상이",
-          "status": "개발 완료 (Dev Done)",
-          "stage": "종료",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[타발]베트남/9PAY",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-06-02T04:54:00.000Z",
-          "createdDate": "2026-06-02",
-          "fixedAt": "2026-06-02T08:49:00.000Z",
-          "fixedDate": "2026-06-02",
-          "closedAt": "2026-06-02T08:49:00.000Z",
-          "closedDate": "2026-06-02",
-          "url": "https://app.notion.com/p/_9PAY-37373fbd1951802c8edcdfc0aaf8fa7e",
-          "lastEditedAt": "2026-06-02T08:49:00.000Z"
-        },
-        {
-          "id": "ISSUE-865",
-          "title": "[타발_9PAY]송금인 정보 입력 화면 내 주민등록증 - 인라인 에러 메시지 상이 ",
-          "status": "개발 완료 (Dev Done)",
-          "stage": "종료",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[타발]베트남/9PAY",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-06-02T04:10:00.000Z",
-          "createdDate": "2026-06-02",
-          "fixedAt": "2026-06-02T07:26:00.000Z",
-          "fixedDate": "2026-06-02",
-          "closedAt": "2026-06-02T07:26:00.000Z",
-          "closedDate": "2026-06-02",
-          "url": "https://app.notion.com/p/_9PAY-37373fbd19518018ba96e56e230b91cb",
-          "lastEditedAt": "2026-06-02T07:26:00.000Z"
-        },
-        {
-          "id": "ISSUE-852",
-          "title": "[보이스피싱 메시지 개선][공통]일본어-보이스피싱 메세지 다국어 결함",
-          "status": "완료 (Done)",
-          "stage": "종료",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "5.22.0",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-05-29T02:47:00.000Z",
-          "createdDate": "2026-05-29",
-          "fixedAt": "2026-06-01T23:46:00.000Z",
-          "fixedDate": "2026-06-02",
-          "closedAt": "2026-06-01T23:46:00.000Z",
-          "closedDate": "2026-06-02",
-          "url": "https://app.notion.com/p/36f73fbd195180f98f1ff157ef2c5545",
-          "lastEditedAt": "2026-06-01T23:46:00.000Z"
-        },
-        {
-          "id": "ISSUE-850",
-          "title": "[게이미피케이션][만보기][AOS] 권한 허용 후 앱 흔들기 진입 시 ‘동작 및 피트니스 권한’ 팝업 노출 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Major",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "5.21.0",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-05-29T01:02:00.000Z",
-          "createdDate": "2026-05-29",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/AOS-36f73fbd19518099a5f5c0992f45b99c",
-          "lastEditedAt": "2026-05-29T01:21:00.000Z"
-        },
-        {
-          "id": "ISSUE-848",
-          "title": "[인터네셔널][iOS] 송금 이력 존재 시 배너 미노출 되는 현상 ",
-          "status": "QA 검증 -회귀 (QA Verification)",
-          "stage": "QA확인",
-          "severity": "Major",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "5.22.0",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-05-28T09:23:00.000Z",
-          "createdDate": "2026-05-28",
-          "fixedAt": "2026-06-01T00:25:00.000Z",
-          "fixedDate": "2026-06-01",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/iOS-36e73fbd19518068a6e2f96c083258b3",
-          "lastEditedAt": "2026-06-01T00:25:00.000Z"
+          "lastEditedAt": "2026-06-04T06:20:00.000Z"
         }
       ]
     },
@@ -3003,13 +3015,6 @@
         }
       ],
       "daily": [
-        {
-          "date": "2026-05-06",
-          "new": 0,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": 0
-        },
         {
           "date": "2026-05-07",
           "new": 0,
@@ -3211,6 +3216,13 @@
           "new": 0,
           "fixed": 4,
           "closed": 4,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-06-05",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
           "deltaNew": 0
         }
       ],
@@ -3325,13 +3337,6 @@
       },
       "heatmap": [
         {
-          "date": "2026-05-06",
-          "new": 0,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": 0
-        },
-        {
           "date": "2026-05-07",
           "new": 0,
           "fixed": 0,
@@ -3532,6 +3537,13 @@
           "new": 0,
           "fixed": 4,
           "closed": 4,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-06-05",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
           "deltaNew": 0
         }
       ],

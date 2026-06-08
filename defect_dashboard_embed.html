@@ -376,7 +376,7 @@
     </div>
   </div>
   <script id="dashboard-data" type="application/json">{
-  "generatedAt": "2026-06-07T23:49:52+00:00",
+  "generatedAt": "2026-06-08T17:56:02+09:00",
   "days": 30,
   "domainOrder": [
     "한패스",
@@ -385,19 +385,19 @@
   "domains": {
     "ALL": {
       "summary": {
-        "total": 665,
-        "new": 75,
-        "inProgress": 3,
+        "total": 667,
+        "new": 70,
+        "inProgress": 2,
         "fixed": 0,
-        "closed": 554,
-        "todayNew": 0,
-        "newDelta": 0
+        "closed": 540,
+        "todayNew": 2,
+        "newDelta": 2
       },
       "funnel": [
         {
           "stage": "등록",
-          "count": 75,
-          "rate": 11.3,
+          "count": 70,
+          "rate": 10.5,
           "width": 18
         },
         {
@@ -414,8 +414,8 @@
         },
         {
           "stage": "진행중",
-          "count": 3,
-          "rate": 0.5,
+          "count": 2,
+          "rate": 0.3,
           "width": 18
         },
         {
@@ -426,37 +426,30 @@
         },
         {
           "stage": "QA확인",
-          "count": 33,
-          "rate": 5.0,
+          "count": 55,
+          "rate": 8.2,
           "width": 18
         },
         {
           "stage": "종료",
-          "count": 554,
-          "rate": 83.3,
+          "count": 540,
+          "rate": 81.0,
           "width": 100
         }
       ],
       "daily": [
         {
-          "date": "2026-05-09",
+          "date": "2026-05-10",
           "new": 0,
           "fixed": 0,
           "closed": 0,
           "deltaNew": 0
         },
         {
-          "date": "2026-05-10",
-          "new": 0,
-          "fixed": 1,
-          "closed": 1,
-          "deltaNew": 0
-        },
-        {
           "date": "2026-05-11",
           "new": 5,
-          "fixed": 2,
-          "closed": 2,
+          "fixed": 3,
+          "closed": 3,
           "deltaNew": 5
         },
         {
@@ -518,15 +511,15 @@
         {
           "date": "2026-05-20",
           "new": 0,
-          "fixed": 24,
-          "closed": 24,
+          "fixed": 23,
+          "closed": 23,
           "deltaNew": -6
         },
         {
           "date": "2026-05-21",
           "new": 0,
-          "fixed": 13,
-          "closed": 13,
+          "fixed": 14,
+          "closed": 14,
           "deltaNew": 0
         },
         {
@@ -595,43 +588,43 @@
         {
           "date": "2026-05-31",
           "new": 0,
-          "fixed": 1,
-          "closed": 1,
+          "fixed": 0,
+          "closed": 0,
           "deltaNew": 0
         },
         {
           "date": "2026-06-01",
           "new": 7,
-          "fixed": 20,
-          "closed": 19,
+          "fixed": 15,
+          "closed": 14,
           "deltaNew": 7
         },
         {
           "date": "2026-06-02",
           "new": 5,
-          "fixed": 7,
-          "closed": 7,
+          "fixed": 12,
+          "closed": 12,
           "deltaNew": -2
         },
         {
           "date": "2026-06-03",
           "new": 0,
-          "fixed": 1,
-          "closed": 1,
+          "fixed": 0,
+          "closed": 0,
           "deltaNew": -5
         },
         {
           "date": "2026-06-04",
           "new": 11,
-          "fixed": 8,
-          "closed": 8,
+          "fixed": 5,
+          "closed": 5,
           "deltaNew": 11
         },
         {
           "date": "2026-06-05",
           "new": 12,
-          "fixed": 14,
-          "closed": 14,
+          "fixed": 1,
+          "closed": 1,
           "deltaNew": 1
         },
         {
@@ -647,6 +640,13 @@
           "fixed": 0,
           "closed": 0,
           "deltaNew": 0
+        },
+        {
+          "date": "2026-06-08",
+          "new": 2,
+          "fixed": 26,
+          "closed": 4,
+          "deltaNew": 2
         }
       ],
       "versions": [
@@ -987,6 +987,42 @@
           ]
         },
         {
+          "version": "5.22.1",
+          "total": 29,
+          "criticalMajor": 7,
+          "doneRate": 86.2,
+          "status": [
+            {
+              "label": "등록",
+              "count": 4
+            },
+            {
+              "label": "QA확인",
+              "count": 22
+            },
+            {
+              "label": "종료",
+              "count": 3
+            }
+          ],
+          "severity": [
+            {
+              "label": "Major",
+              "count": 7
+            },
+            {
+              "label": "Minor",
+              "count": 22
+            }
+          ],
+          "priority": [
+            {
+              "label": "Medium",
+              "count": 29
+            }
+          ]
+        },
+        {
           "version": "5.13.0",
           "total": 27,
           "criticalMajor": 0,
@@ -1023,42 +1059,6 @@
           ]
         },
         {
-          "version": "[타발]베트남/9PAY",
-          "total": 27,
-          "criticalMajor": 5,
-          "doneRate": 59.3,
-          "status": [
-            {
-              "label": "등록",
-              "count": 9
-            },
-            {
-              "label": "진행중",
-              "count": 2
-            },
-            {
-              "label": "종료",
-              "count": 16
-            }
-          ],
-          "severity": [
-            {
-              "label": "Major",
-              "count": 5
-            },
-            {
-              "label": "Minor",
-              "count": 22
-            }
-          ],
-          "priority": [
-            {
-              "label": "Medium",
-              "count": 27
-            }
-          ]
-        },
-        {
           "version": "5.19.0",
           "total": 24,
           "criticalMajor": 3,
@@ -1091,32 +1091,32 @@
           ]
         },
         {
-          "version": "고속/시외버스",
+          "version": "[G.H]v1.0.1",
           "total": 21,
-          "criticalMajor": 3,
-          "doneRate": 76.2,
+          "criticalMajor": 9,
+          "doneRate": 28.6,
           "status": [
             {
               "label": "등록",
-              "count": 5
+              "count": 13
+            },
+            {
+              "label": "진행중",
+              "count": 2
             },
             {
               "label": "종료",
-              "count": 16
+              "count": 6
             }
           ],
           "severity": [
             {
               "label": "Major",
-              "count": 3
+              "count": 9
             },
             {
               "label": "Minor",
-              "count": 16
-            },
-            {
-              "label": "개선 의견",
-              "count": 2
+              "count": 12
             }
           ],
           "priority": [
@@ -1133,19 +1133,19 @@
           "status": [
             {
               "label": "등록",
-              "count": 75
+              "count": 70
             },
             {
               "label": "진행중",
-              "count": 3
+              "count": 2
             },
             {
               "label": "QA확인",
-              "count": 33
+              "count": 55
             },
             {
               "label": "종료",
-              "count": 554
+              "count": 540
             }
           ],
           "severity": [
@@ -1155,11 +1155,11 @@
             },
             {
               "label": "Major",
-              "count": 147
+              "count": 148
             },
             {
               "label": "Minor",
-              "count": 393
+              "count": 394
             },
             {
               "label": "미지정",
@@ -1181,7 +1181,7 @@
             },
             {
               "label": "Medium",
-              "count": 623
+              "count": 625
             },
             {
               "label": "Low",
@@ -1200,24 +1200,17 @@
       },
       "heatmap": [
         {
-          "date": "2026-05-09",
+          "date": "2026-05-10",
           "new": 0,
           "fixed": 0,
           "closed": 0,
           "deltaNew": 0
         },
         {
-          "date": "2026-05-10",
-          "new": 0,
-          "fixed": 1,
-          "closed": 1,
-          "deltaNew": 0
-        },
-        {
           "date": "2026-05-11",
           "new": 5,
-          "fixed": 2,
-          "closed": 2,
+          "fixed": 3,
+          "closed": 3,
           "deltaNew": 5
         },
         {
@@ -1279,15 +1272,15 @@
         {
           "date": "2026-05-20",
           "new": 0,
-          "fixed": 24,
-          "closed": 24,
+          "fixed": 23,
+          "closed": 23,
           "deltaNew": -6
         },
         {
           "date": "2026-05-21",
           "new": 0,
-          "fixed": 13,
-          "closed": 13,
+          "fixed": 14,
+          "closed": 14,
           "deltaNew": 0
         },
         {
@@ -1356,43 +1349,43 @@
         {
           "date": "2026-05-31",
           "new": 0,
-          "fixed": 1,
-          "closed": 1,
+          "fixed": 0,
+          "closed": 0,
           "deltaNew": 0
         },
         {
           "date": "2026-06-01",
           "new": 7,
-          "fixed": 20,
-          "closed": 19,
+          "fixed": 15,
+          "closed": 14,
           "deltaNew": 7
         },
         {
           "date": "2026-06-02",
           "new": 5,
-          "fixed": 7,
-          "closed": 7,
+          "fixed": 12,
+          "closed": 12,
           "deltaNew": -2
         },
         {
           "date": "2026-06-03",
           "new": 0,
-          "fixed": 1,
-          "closed": 1,
+          "fixed": 0,
+          "closed": 0,
           "deltaNew": -5
         },
         {
           "date": "2026-06-04",
           "new": 11,
-          "fixed": 8,
-          "closed": 8,
+          "fixed": 5,
+          "closed": 5,
           "deltaNew": 11
         },
         {
           "date": "2026-06-05",
           "new": 12,
-          "fixed": 14,
-          "closed": 14,
+          "fixed": 1,
+          "closed": 1,
           "deltaNew": 1
         },
         {
@@ -1408,6 +1401,13 @@
           "fixed": 0,
           "closed": 0,
           "deltaNew": 0
+        },
+        {
+          "date": "2026-06-08",
+          "new": 2,
+          "fixed": 26,
+          "closed": 4,
+          "deltaNew": 2
         }
       ],
       "reportBoard": {
@@ -1477,222 +1477,222 @@
       },
       "recent": [
         {
-          "id": "ISSUE-894",
+          "id": "ISSUE-896",
+          "title": "제목 없음",
+          "status": "처리중 (In Progress)",
+          "stage": "진행중",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[G.H]v1.0.1",
+          "domain": "Go Hanpass",
+          "os": "미지정",
+          "createdAt": "2026-06-08T06:17:00.000Z",
+          "createdDate": "2026-06-08",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/37973fbd19518018b905c4bdd2286a92",
+          "lastEditedAt": "2026-06-08T06:32:00.000Z"
+        },
+        {
+          "id": "ISSUE-895",
           "title": "제목 없음",
           "status": "등록 (Registered)",
           "stage": "등록",
           "severity": "Major",
           "priority": "Medium",
           "assignee": "미지정",
-          "version": "[타발]베트남/9PAY",
+          "version": "5.22.1",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-06-08T01:07:00.000Z",
+          "createdDate": "2026-06-08",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/_9PAY-37973fbd195180a9afded21b001adb2c",
+          "lastEditedAt": "2026-06-08T06:59:00.000Z"
+        },
+        {
+          "id": "ISSUE-894",
+          "title": "제목 없음",
+          "status": "개발 완료 (Dev Done)",
+          "stage": "종료",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "5.22.1",
           "domain": "한패스",
           "os": "미지정",
           "createdAt": "2026-06-05T07:41:00.000Z",
           "createdDate": "2026-06-05",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
+          "fixedAt": "2026-06-08T06:59:00.000Z",
+          "fixedDate": "2026-06-08",
+          "closedAt": "2026-06-08T06:59:00.000Z",
+          "closedDate": "2026-06-08",
           "url": "https://app.notion.com/p/_9PAY-37673fbd195180cd8d51e830a90f66e6",
-          "lastEditedAt": "2026-06-05T07:44:00.000Z"
+          "lastEditedAt": "2026-06-08T06:59:00.000Z"
         },
         {
           "id": "ISSUE-893",
           "title": "제목 없음",
-          "status": "등록 (Registered)",
-          "stage": "등록",
+          "status": "QA 검증 -회귀 (QA Verification)",
+          "stage": "QA확인",
           "severity": "Minor",
           "priority": "Medium",
           "assignee": "미지정",
-          "version": "[타발]베트남/9PAY",
+          "version": "5.22.1",
           "domain": "한패스",
           "os": "미지정",
           "createdAt": "2026-06-05T07:37:00.000Z",
           "createdDate": "2026-06-05",
-          "fixedAt": "",
-          "fixedDate": "",
+          "fixedAt": "2026-06-08T07:54:00.000Z",
+          "fixedDate": "2026-06-08",
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/_9PAY-prefill-37673fbd1951804a98d2c23c89cc68f7",
-          "lastEditedAt": "2026-06-05T07:40:00.000Z"
+          "lastEditedAt": "2026-06-08T07:54:00.000Z"
         },
         {
           "id": "ISSUE-892",
           "title": "제목 없음",
-          "status": "등록 (Registered)",
-          "stage": "등록",
+          "status": "QA 검증 -회귀 (QA Verification)",
+          "stage": "QA확인",
           "severity": "Minor",
           "priority": "Medium",
           "assignee": "미지정",
-          "version": "[타발]베트남/9PAY",
+          "version": "5.22.1",
           "domain": "한패스",
           "os": "미지정",
           "createdAt": "2026-06-05T07:33:00.000Z",
           "createdDate": "2026-06-05",
-          "fixedAt": "",
-          "fixedDate": "",
+          "fixedAt": "2026-06-08T07:00:00.000Z",
+          "fixedDate": "2026-06-08",
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/_9PAY-37673fbd195180daa2f4fee09a289877",
-          "lastEditedAt": "2026-06-05T07:36:00.000Z"
+          "lastEditedAt": "2026-06-08T07:00:00.000Z"
         },
         {
           "id": "ISSUE-891",
           "title": "제목 없음",
-          "status": "등록 (Registered)",
-          "stage": "등록",
+          "status": "QA 검증 -회귀 (QA Verification)",
+          "stage": "QA확인",
           "severity": "Minor",
           "priority": "Medium",
           "assignee": "미지정",
-          "version": "[타발]베트남/9PAY",
+          "version": "5.22.1",
           "domain": "한패스",
           "os": "미지정",
           "createdAt": "2026-06-05T07:27:00.000Z",
           "createdDate": "2026-06-05",
-          "fixedAt": "",
-          "fixedDate": "",
+          "fixedAt": "2026-06-08T07:00:00.000Z",
+          "fixedDate": "2026-06-08",
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/_9PAY-KST-37673fbd195180c4a0cacca0e3a664c0",
-          "lastEditedAt": "2026-06-05T07:30:00.000Z"
+          "lastEditedAt": "2026-06-08T07:00:00.000Z"
         },
         {
           "id": "ISSUE-890",
           "title": "제목 없음",
-          "status": "등록 (Registered)",
-          "stage": "등록",
+          "status": "QA 검증 -회귀 (QA Verification)",
+          "stage": "QA확인",
           "severity": "Minor",
           "priority": "Medium",
           "assignee": "미지정",
-          "version": "[타발]베트남/9PAY",
+          "version": "5.22.1",
           "domain": "한패스",
           "os": "미지정",
           "createdAt": "2026-06-05T07:22:00.000Z",
           "createdDate": "2026-06-05",
-          "fixedAt": "",
-          "fixedDate": "",
+          "fixedAt": "2026-06-08T07:00:00.000Z",
+          "fixedDate": "2026-06-08",
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/_9PAY-37673fbd19518002ba22e524964c6e0f",
-          "lastEditedAt": "2026-06-05T07:30:00.000Z"
+          "lastEditedAt": "2026-06-08T07:00:00.000Z"
         },
         {
           "id": "ISSUE-889",
           "title": "제목 없음",
-          "status": "등록 (Registered)",
-          "stage": "등록",
+          "status": "개발 완료 (Dev Done)",
+          "stage": "종료",
           "severity": "Major",
           "priority": "Medium",
           "assignee": "미지정",
-          "version": "[타발]베트남/9PAY",
+          "version": "5.22.1",
           "domain": "한패스",
           "os": "미지정",
           "createdAt": "2026-06-05T07:08:00.000Z",
           "createdDate": "2026-06-05",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
+          "fixedAt": "2026-06-08T07:00:00.000Z",
+          "fixedDate": "2026-06-08",
+          "closedAt": "2026-06-08T07:00:00.000Z",
+          "closedDate": "2026-06-08",
           "url": "https://app.notion.com/p/_9PAY-37673fbd1951809ca995ffd7d2d505a8",
-          "lastEditedAt": "2026-06-05T07:29:00.000Z"
+          "lastEditedAt": "2026-06-08T07:00:00.000Z"
         },
         {
           "id": "ISSUE-888",
           "title": "제목 없음",
-          "status": "개발 완료 (Dev Done)",
-          "stage": "종료",
+          "status": "QA 검증 -회귀 (QA Verification)",
+          "stage": "QA확인",
           "severity": "Major",
           "priority": "Medium",
           "assignee": "미지정",
-          "version": "[타발]베트남/9PAY",
+          "version": "5.22.1",
           "domain": "한패스",
           "os": "미지정",
           "createdAt": "2026-06-05T05:19:00.000Z",
           "createdDate": "2026-06-05",
-          "fixedAt": "2026-06-05T07:29:00.000Z",
-          "fixedDate": "2026-06-05",
-          "closedAt": "2026-06-05T07:29:00.000Z",
-          "closedDate": "2026-06-05",
+          "fixedAt": "2026-06-08T07:00:00.000Z",
+          "fixedDate": "2026-06-08",
+          "closedAt": "",
+          "closedDate": "",
           "url": "https://app.notion.com/p/_9PAY-37673fbd19518032ba5cdbe9ce9c010d",
-          "lastEditedAt": "2026-06-05T07:29:00.000Z"
+          "lastEditedAt": "2026-06-08T07:00:00.000Z"
         },
         {
           "id": "ISSUE-887",
           "title": "제목 없음",
-          "status": "개발 완료 (Dev Done)",
-          "stage": "종료",
+          "status": "QA 검증 -회귀 (QA Verification)",
+          "stage": "QA확인",
           "severity": "Minor",
           "priority": "Medium",
           "assignee": "미지정",
-          "version": "[타발]베트남/9PAY",
+          "version": "5.22.1",
           "domain": "한패스",
           "os": "미지정",
           "createdAt": "2026-06-05T02:40:00.000Z",
           "createdDate": "2026-06-05",
-          "fixedAt": "2026-06-05T04:17:00.000Z",
-          "fixedDate": "2026-06-05",
-          "closedAt": "2026-06-05T04:17:00.000Z",
-          "closedDate": "2026-06-05",
+          "fixedAt": "2026-06-08T07:59:00.000Z",
+          "fixedDate": "2026-06-08",
+          "closedAt": "",
+          "closedDate": "",
           "url": "https://app.notion.com/p/_9PAY-iOS-37673fbd195180b4b587f0afd59217b1",
-          "lastEditedAt": "2026-06-05T04:17:00.000Z"
-        },
-        {
-          "id": "ISSUE-886",
-          "title": "제목 없음",
-          "status": "개발 완료 (Dev Done)",
-          "stage": "종료",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[타발]베트남/9PAY",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-06-05T02:35:00.000Z",
-          "createdDate": "2026-06-05",
-          "fixedAt": "2026-06-05T04:28:00.000Z",
-          "fixedDate": "2026-06-05",
-          "closedAt": "2026-06-05T04:28:00.000Z",
-          "closedDate": "2026-06-05",
-          "url": "https://app.notion.com/p/_9PAY-37673fbd195180549e3fe6d11949be89",
-          "lastEditedAt": "2026-06-05T04:28:00.000Z"
-        },
-        {
-          "id": "ISSUE-885",
-          "title": "제목 없음",
-          "status": "개발 완료 (Dev Done)",
-          "stage": "종료",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[타발]베트남/9PAY",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-06-05T02:30:00.000Z",
-          "createdDate": "2026-06-05",
-          "fixedAt": "2026-06-05T04:45:00.000Z",
-          "fixedDate": "2026-06-05",
-          "closedAt": "2026-06-05T04:45:00.000Z",
-          "closedDate": "2026-06-05",
-          "url": "https://app.notion.com/p/_9PAY-37673fbd1951800fa25fddc5aed4b016",
-          "lastEditedAt": "2026-06-05T04:45:00.000Z"
+          "lastEditedAt": "2026-06-08T07:59:00.000Z"
         }
       ]
     },
     "한패스": {
       "summary": {
-        "total": 550,
-        "new": 62,
-        "inProgress": 2,
+        "total": 551,
+        "new": 57,
+        "inProgress": 0,
         "fixed": 0,
-        "closed": 453,
-        "todayNew": 0,
-        "newDelta": 0
+        "closed": 439,
+        "todayNew": 1,
+        "newDelta": 1
       },
       "funnel": [
         {
           "stage": "등록",
-          "count": 62,
-          "rate": 11.3,
+          "count": 57,
+          "rate": 10.3,
           "width": 18
         },
         {
@@ -1709,8 +1709,8 @@
         },
         {
           "stage": "진행중",
-          "count": 2,
-          "rate": 0.4,
+          "count": 0,
+          "rate": 0.0,
           "width": 18
         },
         {
@@ -1721,37 +1721,30 @@
         },
         {
           "stage": "QA확인",
-          "count": 33,
-          "rate": 6.0,
+          "count": 55,
+          "rate": 10.0,
           "width": 18
         },
         {
           "stage": "종료",
-          "count": 453,
-          "rate": 82.4,
+          "count": 439,
+          "rate": 79.7,
           "width": 100
         }
       ],
       "daily": [
         {
-          "date": "2026-05-09",
+          "date": "2026-05-10",
           "new": 0,
           "fixed": 0,
           "closed": 0,
           "deltaNew": 0
         },
         {
-          "date": "2026-05-10",
-          "new": 0,
-          "fixed": 1,
-          "closed": 1,
-          "deltaNew": 0
-        },
-        {
           "date": "2026-05-11",
           "new": 5,
-          "fixed": 2,
-          "closed": 2,
+          "fixed": 3,
+          "closed": 3,
           "deltaNew": 5
         },
         {
@@ -1897,15 +1890,15 @@
         {
           "date": "2026-06-01",
           "new": 0,
-          "fixed": 5,
-          "closed": 4,
+          "fixed": 1,
+          "closed": 0,
           "deltaNew": 0
         },
         {
           "date": "2026-06-02",
           "new": 5,
-          "fixed": 1,
-          "closed": 1,
+          "fixed": 4,
+          "closed": 4,
           "deltaNew": 5
         },
         {
@@ -1918,15 +1911,15 @@
         {
           "date": "2026-06-04",
           "new": 11,
-          "fixed": 5,
-          "closed": 5,
+          "fixed": 2,
+          "closed": 2,
           "deltaNew": 11
         },
         {
           "date": "2026-06-05",
           "new": 12,
-          "fixed": 14,
-          "closed": 14,
+          "fixed": 1,
+          "closed": 1,
           "deltaNew": 1
         },
         {
@@ -1942,6 +1935,13 @@
           "fixed": 0,
           "closed": 0,
           "deltaNew": 0
+        },
+        {
+          "date": "2026-06-08",
+          "new": 1,
+          "fixed": 25,
+          "closed": 3,
+          "deltaNew": 1
         }
       ],
       "versions": [
@@ -2250,6 +2250,42 @@
           ]
         },
         {
+          "version": "5.22.1",
+          "total": 29,
+          "criticalMajor": 7,
+          "doneRate": 86.2,
+          "status": [
+            {
+              "label": "등록",
+              "count": 4
+            },
+            {
+              "label": "QA확인",
+              "count": 22
+            },
+            {
+              "label": "종료",
+              "count": 3
+            }
+          ],
+          "severity": [
+            {
+              "label": "Major",
+              "count": 7
+            },
+            {
+              "label": "Minor",
+              "count": 22
+            }
+          ],
+          "priority": [
+            {
+              "label": "Medium",
+              "count": 29
+            }
+          ]
+        },
+        {
           "version": "5.13.0",
           "total": 27,
           "criticalMajor": 0,
@@ -2282,42 +2318,6 @@
             {
               "label": "Low",
               "count": 1
-            }
-          ]
-        },
-        {
-          "version": "[타발]베트남/9PAY",
-          "total": 27,
-          "criticalMajor": 5,
-          "doneRate": 59.3,
-          "status": [
-            {
-              "label": "등록",
-              "count": 9
-            },
-            {
-              "label": "진행중",
-              "count": 2
-            },
-            {
-              "label": "종료",
-              "count": 16
-            }
-          ],
-          "severity": [
-            {
-              "label": "Major",
-              "count": 5
-            },
-            {
-              "label": "Minor",
-              "count": 22
-            }
-          ],
-          "priority": [
-            {
-              "label": "Medium",
-              "count": 27
             }
           ]
         },
@@ -2432,19 +2432,15 @@
           "status": [
             {
               "label": "등록",
-              "count": 62
-            },
-            {
-              "label": "진행중",
-              "count": 2
+              "count": 57
             },
             {
               "label": "QA확인",
-              "count": 33
+              "count": 55
             },
             {
               "label": "종료",
-              "count": 453
+              "count": 439
             }
           ],
           "severity": [
@@ -2454,7 +2450,7 @@
             },
             {
               "label": "Major",
-              "count": 120
+              "count": 121
             },
             {
               "label": "Minor",
@@ -2480,7 +2476,7 @@
             },
             {
               "label": "Medium",
-              "count": 508
+              "count": 509
             },
             {
               "label": "Low",
@@ -2499,24 +2495,17 @@
       },
       "heatmap": [
         {
-          "date": "2026-05-09",
+          "date": "2026-05-10",
           "new": 0,
           "fixed": 0,
           "closed": 0,
           "deltaNew": 0
         },
         {
-          "date": "2026-05-10",
-          "new": 0,
-          "fixed": 1,
-          "closed": 1,
-          "deltaNew": 0
-        },
-        {
           "date": "2026-05-11",
           "new": 5,
-          "fixed": 2,
-          "closed": 2,
+          "fixed": 3,
+          "closed": 3,
           "deltaNew": 5
         },
         {
@@ -2662,15 +2651,15 @@
         {
           "date": "2026-06-01",
           "new": 0,
-          "fixed": 5,
-          "closed": 4,
+          "fixed": 1,
+          "closed": 0,
           "deltaNew": 0
         },
         {
           "date": "2026-06-02",
           "new": 5,
-          "fixed": 1,
-          "closed": 1,
+          "fixed": 4,
+          "closed": 4,
           "deltaNew": 5
         },
         {
@@ -2683,15 +2672,15 @@
         {
           "date": "2026-06-04",
           "new": 11,
-          "fixed": 5,
-          "closed": 5,
+          "fixed": 2,
+          "closed": 2,
           "deltaNew": 11
         },
         {
           "date": "2026-06-05",
           "new": 12,
-          "fixed": 14,
-          "closed": 14,
+          "fixed": 1,
+          "closed": 1,
           "deltaNew": 1
         },
         {
@@ -2707,6 +2696,13 @@
           "fixed": 0,
           "closed": 0,
           "deltaNew": 0
+        },
+        {
+          "date": "2026-06-08",
+          "new": 1,
+          "fixed": 25,
+          "closed": 3,
+          "deltaNew": 1
         }
       ],
       "reportBoard": {
@@ -2763,222 +2759,222 @@
       },
       "recent": [
         {
-          "id": "ISSUE-894",
+          "id": "ISSUE-895",
           "title": "제목 없음",
           "status": "등록 (Registered)",
           "stage": "등록",
           "severity": "Major",
           "priority": "Medium",
           "assignee": "미지정",
-          "version": "[타발]베트남/9PAY",
+          "version": "5.22.1",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-06-08T01:07:00.000Z",
+          "createdDate": "2026-06-08",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/_9PAY-37973fbd195180a9afded21b001adb2c",
+          "lastEditedAt": "2026-06-08T06:59:00.000Z"
+        },
+        {
+          "id": "ISSUE-894",
+          "title": "제목 없음",
+          "status": "개발 완료 (Dev Done)",
+          "stage": "종료",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "5.22.1",
           "domain": "한패스",
           "os": "미지정",
           "createdAt": "2026-06-05T07:41:00.000Z",
           "createdDate": "2026-06-05",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
+          "fixedAt": "2026-06-08T06:59:00.000Z",
+          "fixedDate": "2026-06-08",
+          "closedAt": "2026-06-08T06:59:00.000Z",
+          "closedDate": "2026-06-08",
           "url": "https://app.notion.com/p/_9PAY-37673fbd195180cd8d51e830a90f66e6",
-          "lastEditedAt": "2026-06-05T07:44:00.000Z"
+          "lastEditedAt": "2026-06-08T06:59:00.000Z"
         },
         {
           "id": "ISSUE-893",
           "title": "제목 없음",
-          "status": "등록 (Registered)",
-          "stage": "등록",
+          "status": "QA 검증 -회귀 (QA Verification)",
+          "stage": "QA확인",
           "severity": "Minor",
           "priority": "Medium",
           "assignee": "미지정",
-          "version": "[타발]베트남/9PAY",
+          "version": "5.22.1",
           "domain": "한패스",
           "os": "미지정",
           "createdAt": "2026-06-05T07:37:00.000Z",
           "createdDate": "2026-06-05",
-          "fixedAt": "",
-          "fixedDate": "",
+          "fixedAt": "2026-06-08T07:54:00.000Z",
+          "fixedDate": "2026-06-08",
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/_9PAY-prefill-37673fbd1951804a98d2c23c89cc68f7",
-          "lastEditedAt": "2026-06-05T07:40:00.000Z"
+          "lastEditedAt": "2026-06-08T07:54:00.000Z"
         },
         {
           "id": "ISSUE-892",
           "title": "제목 없음",
-          "status": "등록 (Registered)",
-          "stage": "등록",
+          "status": "QA 검증 -회귀 (QA Verification)",
+          "stage": "QA확인",
           "severity": "Minor",
           "priority": "Medium",
           "assignee": "미지정",
-          "version": "[타발]베트남/9PAY",
+          "version": "5.22.1",
           "domain": "한패스",
           "os": "미지정",
           "createdAt": "2026-06-05T07:33:00.000Z",
           "createdDate": "2026-06-05",
-          "fixedAt": "",
-          "fixedDate": "",
+          "fixedAt": "2026-06-08T07:00:00.000Z",
+          "fixedDate": "2026-06-08",
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/_9PAY-37673fbd195180daa2f4fee09a289877",
-          "lastEditedAt": "2026-06-05T07:36:00.000Z"
+          "lastEditedAt": "2026-06-08T07:00:00.000Z"
         },
         {
           "id": "ISSUE-891",
           "title": "제목 없음",
-          "status": "등록 (Registered)",
-          "stage": "등록",
+          "status": "QA 검증 -회귀 (QA Verification)",
+          "stage": "QA확인",
           "severity": "Minor",
           "priority": "Medium",
           "assignee": "미지정",
-          "version": "[타발]베트남/9PAY",
+          "version": "5.22.1",
           "domain": "한패스",
           "os": "미지정",
           "createdAt": "2026-06-05T07:27:00.000Z",
           "createdDate": "2026-06-05",
-          "fixedAt": "",
-          "fixedDate": "",
+          "fixedAt": "2026-06-08T07:00:00.000Z",
+          "fixedDate": "2026-06-08",
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/_9PAY-KST-37673fbd195180c4a0cacca0e3a664c0",
-          "lastEditedAt": "2026-06-05T07:30:00.000Z"
+          "lastEditedAt": "2026-06-08T07:00:00.000Z"
         },
         {
           "id": "ISSUE-890",
           "title": "제목 없음",
-          "status": "등록 (Registered)",
-          "stage": "등록",
+          "status": "QA 검증 -회귀 (QA Verification)",
+          "stage": "QA확인",
           "severity": "Minor",
           "priority": "Medium",
           "assignee": "미지정",
-          "version": "[타발]베트남/9PAY",
+          "version": "5.22.1",
           "domain": "한패스",
           "os": "미지정",
           "createdAt": "2026-06-05T07:22:00.000Z",
           "createdDate": "2026-06-05",
-          "fixedAt": "",
-          "fixedDate": "",
+          "fixedAt": "2026-06-08T07:00:00.000Z",
+          "fixedDate": "2026-06-08",
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/_9PAY-37673fbd19518002ba22e524964c6e0f",
-          "lastEditedAt": "2026-06-05T07:30:00.000Z"
+          "lastEditedAt": "2026-06-08T07:00:00.000Z"
         },
         {
           "id": "ISSUE-889",
           "title": "제목 없음",
-          "status": "등록 (Registered)",
-          "stage": "등록",
+          "status": "개발 완료 (Dev Done)",
+          "stage": "종료",
           "severity": "Major",
           "priority": "Medium",
           "assignee": "미지정",
-          "version": "[타발]베트남/9PAY",
+          "version": "5.22.1",
           "domain": "한패스",
           "os": "미지정",
           "createdAt": "2026-06-05T07:08:00.000Z",
           "createdDate": "2026-06-05",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
+          "fixedAt": "2026-06-08T07:00:00.000Z",
+          "fixedDate": "2026-06-08",
+          "closedAt": "2026-06-08T07:00:00.000Z",
+          "closedDate": "2026-06-08",
           "url": "https://app.notion.com/p/_9PAY-37673fbd1951809ca995ffd7d2d505a8",
-          "lastEditedAt": "2026-06-05T07:29:00.000Z"
+          "lastEditedAt": "2026-06-08T07:00:00.000Z"
         },
         {
           "id": "ISSUE-888",
           "title": "제목 없음",
-          "status": "개발 완료 (Dev Done)",
-          "stage": "종료",
+          "status": "QA 검증 -회귀 (QA Verification)",
+          "stage": "QA확인",
           "severity": "Major",
           "priority": "Medium",
           "assignee": "미지정",
-          "version": "[타발]베트남/9PAY",
+          "version": "5.22.1",
           "domain": "한패스",
           "os": "미지정",
           "createdAt": "2026-06-05T05:19:00.000Z",
           "createdDate": "2026-06-05",
-          "fixedAt": "2026-06-05T07:29:00.000Z",
-          "fixedDate": "2026-06-05",
-          "closedAt": "2026-06-05T07:29:00.000Z",
-          "closedDate": "2026-06-05",
+          "fixedAt": "2026-06-08T07:00:00.000Z",
+          "fixedDate": "2026-06-08",
+          "closedAt": "",
+          "closedDate": "",
           "url": "https://app.notion.com/p/_9PAY-37673fbd19518032ba5cdbe9ce9c010d",
-          "lastEditedAt": "2026-06-05T07:29:00.000Z"
+          "lastEditedAt": "2026-06-08T07:00:00.000Z"
         },
         {
           "id": "ISSUE-887",
           "title": "제목 없음",
-          "status": "개발 완료 (Dev Done)",
-          "stage": "종료",
+          "status": "QA 검증 -회귀 (QA Verification)",
+          "stage": "QA확인",
           "severity": "Minor",
           "priority": "Medium",
           "assignee": "미지정",
-          "version": "[타발]베트남/9PAY",
+          "version": "5.22.1",
           "domain": "한패스",
           "os": "미지정",
           "createdAt": "2026-06-05T02:40:00.000Z",
           "createdDate": "2026-06-05",
-          "fixedAt": "2026-06-05T04:17:00.000Z",
-          "fixedDate": "2026-06-05",
-          "closedAt": "2026-06-05T04:17:00.000Z",
-          "closedDate": "2026-06-05",
+          "fixedAt": "2026-06-08T07:59:00.000Z",
+          "fixedDate": "2026-06-08",
+          "closedAt": "",
+          "closedDate": "",
           "url": "https://app.notion.com/p/_9PAY-iOS-37673fbd195180b4b587f0afd59217b1",
-          "lastEditedAt": "2026-06-05T04:17:00.000Z"
+          "lastEditedAt": "2026-06-08T07:59:00.000Z"
         },
         {
           "id": "ISSUE-886",
           "title": "제목 없음",
-          "status": "개발 완료 (Dev Done)",
-          "stage": "종료",
+          "status": "QA 검증 -회귀 (QA Verification)",
+          "stage": "QA확인",
           "severity": "Minor",
           "priority": "Medium",
           "assignee": "미지정",
-          "version": "[타발]베트남/9PAY",
+          "version": "5.22.1",
           "domain": "한패스",
           "os": "미지정",
           "createdAt": "2026-06-05T02:35:00.000Z",
           "createdDate": "2026-06-05",
-          "fixedAt": "2026-06-05T04:28:00.000Z",
-          "fixedDate": "2026-06-05",
-          "closedAt": "2026-06-05T04:28:00.000Z",
-          "closedDate": "2026-06-05",
+          "fixedAt": "2026-06-08T07:01:00.000Z",
+          "fixedDate": "2026-06-08",
+          "closedAt": "",
+          "closedDate": "",
           "url": "https://app.notion.com/p/_9PAY-37673fbd195180549e3fe6d11949be89",
-          "lastEditedAt": "2026-06-05T04:28:00.000Z"
-        },
-        {
-          "id": "ISSUE-885",
-          "title": "제목 없음",
-          "status": "개발 완료 (Dev Done)",
-          "stage": "종료",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[타발]베트남/9PAY",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-06-05T02:30:00.000Z",
-          "createdDate": "2026-06-05",
-          "fixedAt": "2026-06-05T04:45:00.000Z",
-          "fixedDate": "2026-06-05",
-          "closedAt": "2026-06-05T04:45:00.000Z",
-          "closedDate": "2026-06-05",
-          "url": "https://app.notion.com/p/_9PAY-37673fbd1951800fa25fddc5aed4b016",
-          "lastEditedAt": "2026-06-05T04:45:00.000Z"
+          "lastEditedAt": "2026-06-08T07:01:00.000Z"
         }
       ]
     },
     "Go Hanpass": {
       "summary": {
-        "total": 115,
+        "total": 116,
         "new": 13,
-        "inProgress": 1,
+        "inProgress": 2,
         "fixed": 0,
         "closed": 101,
-        "todayNew": 0,
-        "newDelta": 0
+        "todayNew": 1,
+        "newDelta": 1
       },
       "funnel": [
         {
           "stage": "등록",
           "count": 13,
-          "rate": 11.3,
+          "rate": 11.2,
           "width": 18
         },
         {
@@ -2995,8 +2991,8 @@
         },
         {
           "stage": "진행중",
-          "count": 1,
-          "rate": 0.9,
+          "count": 2,
+          "rate": 1.7,
           "width": 18
         },
         {
@@ -3014,18 +3010,11 @@
         {
           "stage": "종료",
           "count": 101,
-          "rate": 87.8,
+          "rate": 87.1,
           "width": 100
         }
       ],
       "daily": [
-        {
-          "date": "2026-05-09",
-          "new": 0,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": 0
-        },
         {
           "date": "2026-05-10",
           "new": 0,
@@ -3099,15 +3088,15 @@
         {
           "date": "2026-05-20",
           "new": 0,
-          "fixed": 24,
-          "closed": 24,
+          "fixed": 23,
+          "closed": 23,
           "deltaNew": -2
         },
         {
           "date": "2026-05-21",
           "new": 0,
-          "fixed": 13,
-          "closed": 13,
+          "fixed": 14,
+          "closed": 14,
           "deltaNew": 0
         },
         {
@@ -3176,29 +3165,29 @@
         {
           "date": "2026-05-31",
           "new": 0,
-          "fixed": 1,
-          "closed": 1,
+          "fixed": 0,
+          "closed": 0,
           "deltaNew": 0
         },
         {
           "date": "2026-06-01",
           "new": 7,
-          "fixed": 15,
-          "closed": 15,
+          "fixed": 14,
+          "closed": 14,
           "deltaNew": 7
         },
         {
           "date": "2026-06-02",
           "new": 0,
-          "fixed": 6,
-          "closed": 6,
+          "fixed": 8,
+          "closed": 8,
           "deltaNew": -7
         },
         {
           "date": "2026-06-03",
           "new": 0,
-          "fixed": 1,
-          "closed": 1,
+          "fixed": 0,
+          "closed": 0,
           "deltaNew": 0
         },
         {
@@ -3228,6 +3217,13 @@
           "fixed": 0,
           "closed": 0,
           "deltaNew": 0
+        },
+        {
+          "date": "2026-06-08",
+          "new": 1,
+          "fixed": 1,
+          "closed": 1,
+          "deltaNew": 1
         }
       ],
       "versions": [
@@ -3265,9 +3261,9 @@
         },
         {
           "version": "[G.H]v1.0.1",
-          "total": 20,
+          "total": 21,
           "criticalMajor": 9,
-          "doneRate": 30.0,
+          "doneRate": 28.6,
           "status": [
             {
               "label": "등록",
@@ -3275,7 +3271,7 @@
             },
             {
               "label": "진행중",
-              "count": 1
+              "count": 2
             },
             {
               "label": "종료",
@@ -3289,13 +3285,13 @@
             },
             {
               "label": "Minor",
-              "count": 11
+              "count": 12
             }
           ],
           "priority": [
             {
               "label": "Medium",
-              "count": 20
+              "count": 21
             }
           ]
         }
@@ -3310,7 +3306,7 @@
             },
             {
               "label": "진행중",
-              "count": 1
+              "count": 2
             },
             {
               "label": "종료",
@@ -3328,25 +3324,18 @@
             },
             {
               "label": "Minor",
-              "count": 87
+              "count": 88
             }
           ],
           "priority": [
             {
               "label": "Medium",
-              "count": 115
+              "count": 116
             }
           ]
         }
       },
       "heatmap": [
-        {
-          "date": "2026-05-09",
-          "new": 0,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": 0
-        },
         {
           "date": "2026-05-10",
           "new": 0,
@@ -3420,15 +3409,15 @@
         {
           "date": "2026-05-20",
           "new": 0,
-          "fixed": 24,
-          "closed": 24,
+          "fixed": 23,
+          "closed": 23,
           "deltaNew": -2
         },
         {
           "date": "2026-05-21",
           "new": 0,
-          "fixed": 13,
-          "closed": 13,
+          "fixed": 14,
+          "closed": 14,
           "deltaNew": 0
         },
         {
@@ -3497,29 +3486,29 @@
         {
           "date": "2026-05-31",
           "new": 0,
-          "fixed": 1,
-          "closed": 1,
+          "fixed": 0,
+          "closed": 0,
           "deltaNew": 0
         },
         {
           "date": "2026-06-01",
           "new": 7,
-          "fixed": 15,
-          "closed": 15,
+          "fixed": 14,
+          "closed": 14,
           "deltaNew": 7
         },
         {
           "date": "2026-06-02",
           "new": 0,
-          "fixed": 6,
-          "closed": 6,
+          "fixed": 8,
+          "closed": 8,
           "deltaNew": -7
         },
         {
           "date": "2026-06-03",
           "new": 0,
-          "fixed": 1,
-          "closed": 1,
+          "fixed": 0,
+          "closed": 0,
           "deltaNew": 0
         },
         {
@@ -3549,6 +3538,13 @@
           "fixed": 0,
           "closed": 0,
           "deltaNew": 0
+        },
+        {
+          "date": "2026-06-08",
+          "new": 1,
+          "fixed": 1,
+          "closed": 1,
+          "deltaNew": 1
         }
       ],
       "reportBoard": {
@@ -3617,6 +3613,26 @@
         ]
       },
       "recent": [
+        {
+          "id": "ISSUE-896",
+          "title": "제목 없음",
+          "status": "처리중 (In Progress)",
+          "stage": "진행중",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[G.H]v1.0.1",
+          "domain": "Go Hanpass",
+          "os": "미지정",
+          "createdAt": "2026-06-08T06:17:00.000Z",
+          "createdDate": "2026-06-08",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/37973fbd19518018b905c4bdd2286a92",
+          "lastEditedAt": "2026-06-08T06:32:00.000Z"
+        },
         {
           "id": "ISSUE-861",
           "title": "제목 없음",
@@ -3731,9 +3747,9 @@
           "createdAt": "2026-06-01T01:50:00.000Z",
           "createdDate": "2026-06-01",
           "fixedAt": "2026-06-01T23:59:00.000Z",
-          "fixedDate": "2026-06-01",
+          "fixedDate": "2026-06-02",
           "closedAt": "2026-06-01T23:59:00.000Z",
-          "closedDate": "2026-06-01",
+          "closedDate": "2026-06-02",
           "url": "https://app.notion.com/p/50-50-37273fbd195180639705fb4eb4b48bc8",
           "lastEditedAt": "2026-06-01T23:59:00.000Z"
         },
@@ -3796,26 +3812,6 @@
           "closedDate": "2026-06-01",
           "url": "https://app.notion.com/p/iOS-36e73fbd19518076a207e4eaff3c4a9d",
           "lastEditedAt": "2026-06-01T00:01:00.000Z"
-        },
-        {
-          "id": "ISSUE-839",
-          "title": "제목 없음",
-          "status": "완료 (Done)",
-          "stage": "종료",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[G.H]v1.0.1",
-          "domain": "Go Hanpass",
-          "os": "미지정",
-          "createdAt": "2026-05-28T02:44:00.000Z",
-          "createdDate": "2026-05-28",
-          "fixedAt": "2026-06-02T04:57:00.000Z",
-          "fixedDate": "2026-06-02",
-          "closedAt": "2026-06-02T04:57:00.000Z",
-          "closedDate": "2026-06-02",
-          "url": "https://app.notion.com/p/36e73fbd1951801aa769f65dea75b170",
-          "lastEditedAt": "2026-06-02T04:57:00.000Z"
         }
       ]
     }
@@ -3826,56 +3822,6 @@
     const $ = (id) => document.getElementById(id);
     const esc = (v) => String(v ?? "").replace(/[&<>"']/g, (c) => ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]));
     const pct = (n) => `${Number(n || 0).toFixed(1)}%`;
-    const KST_TIME_ZONE = "Asia/Seoul";
-    const normalizeDateInput = (value) => {
-      const text = String(value ?? "").trim();
-      if (!text) return "";
-      if (/[zZ]$|[+-]\d{2}:\d{2}$/.test(text)) return text;
-      if (/^\d{4}-\d{2}-\d{2}[T ]\d{2}:\d{2}:\d{2}(?:\.\d+)?$/.test(text)) {
-        return `${text.replace(" ", "T")}+09:00`;
-      }
-      return text;
-    };
-    const formatKstDateTime = (value) => {
-      if (!value) return "-";
-      const parsed = new Date(normalizeDateInput(value));
-      if (Number.isNaN(parsed.getTime())) return String(value).replace("T", " ");
-      const parts = new Intl.DateTimeFormat("sv-SE", {
-        timeZone: KST_TIME_ZONE,
-        year: "numeric",
-        month: "2-digit",
-        day: "2-digit",
-        hour: "2-digit",
-        minute: "2-digit",
-        second: "2-digit",
-        hour12: false,
-      }).formatToParts(parsed);
-      const lookup = Object.fromEntries(parts.filter((part) => part.type !== "literal").map((part) => [part.type, part.value]));
-      return `${lookup.year}-${lookup.month}-${lookup.day} ${lookup.hour}:${lookup.minute}:${lookup.second}`;
-    };
-    const formatDisplayDateTime = (value) => {
-      if (!value) return "-";
-      const text = String(value);
-      if (/^\d{4}-\d{2}-\d{2}$/.test(text)) return text;
-      return formatKstDateTime(value);
-    };
-    const formatRelativeTime = (value) => {
-      if (!value) return "";
-      const parsed = new Date(normalizeDateInput(value));
-      if (Number.isNaN(parsed.getTime())) return "";
-      const diffMs = parsed.getTime() - Date.now();
-      const absMs = Math.abs(diffMs);
-      const suffix = diffMs <= 0 ? "전" : "후";
-      if (absMs < 60 * 1000) return "방금 전";
-      if (absMs < 60 * 60 * 1000) return `${Math.round(absMs / (60 * 1000))}분 ${suffix}`;
-      if (absMs < 24 * 60 * 60 * 1000) return `${Math.round(absMs / (60 * 60 * 1000))}시간 ${suffix}`;
-      return `${Math.round(absMs / (24 * 60 * 60 * 1000))}일 ${suffix}`;
-    };
-    const formatKstDateTimeWithRelative = (value) => {
-      const formatted = formatKstDateTime(value);
-      const relative = formatRelativeTime(value);
-      return relative ? `${formatted} (${relative})` : formatted;
-    };
     const SYNC_CONFIG = {
       owner: "mhjang-qa",
       repo: "run_all_notion",
@@ -3888,7 +3834,7 @@
     const domainNames = ["한패스", "Go Hanpass"];
     let selectedDomain = "ALL";
     let selectedVersion = DATA.selectedVersion || "ALL";
-    $("stamp").textContent = `생성: ${formatKstDateTimeWithRelative(DATA.generatedAt)} · 기준 ${DATA.days}일`;
+    $("stamp").textContent = `생성: ${DATA.generatedAt.replace("T", " ")} · 기준 ${DATA.days}일`;
 
     function setSyncStatus(message, tone = "") {
       const node = $("syncStatus");
@@ -4070,7 +4016,7 @@
             <div>${esc(item.title)}</div>
             <small>${esc(item.status)} · ${esc(item.processingStatus)} · ${esc(item.platform)}</small>
           </div>
-          <div class="report-badge">${esc(formatDisplayDateTime(item.createdDate || item.createdAt))}</div>
+          <div class="report-badge">${esc(item.createdDate || item.createdAt)}</div>
         </a>
       `).join("") : `<div class="empty">최근 30일 제보 내역이 없습니다.</div>`;
     }
@@ -4135,7 +4081,7 @@
           <td><span class="pill">${esc(r.status)}</span></td>
           <td>${esc(r.severity)}</td>
           <td>${esc(r.assignee)}</td>
-          <td>${esc(formatDisplayDateTime(r.createdDate || r.createdAt))}</td>
+          <td>${esc(r.createdDate || r.createdAt)}</td>
           <td>${esc(r.version)}</td>
         </tr>`).join("")}</tbody></table>`;
       document.querySelectorAll(".recent-row").forEach((row) => {

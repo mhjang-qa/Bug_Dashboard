@@ -376,7 +376,7 @@
     </div>
   </div>
   <script id="dashboard-data" type="application/json">{
-  "generatedAt": "2026-06-09T07:13:42+00:00",
+  "generatedAt": "2026-06-09T07:43:41+00:00",
   "days": 30,
   "domainOrder": [
     "한패스",
@@ -385,19 +385,19 @@
   "domains": {
     "ALL": {
       "summary": {
-        "total": 669,
-        "new": 68,
-        "inProgress": 4,
+        "total": 671,
+        "new": 69,
+        "inProgress": 5,
         "fixed": 0,
         "closed": 540,
-        "todayNew": 2,
-        "newDelta": 0
+        "todayNew": 4,
+        "newDelta": 2
       },
       "funnel": [
         {
           "stage": "등록",
-          "count": 68,
-          "rate": 10.2,
+          "count": 69,
+          "rate": 10.3,
           "width": 18
         },
         {
@@ -414,8 +414,8 @@
         },
         {
           "stage": "진행중",
-          "count": 4,
-          "rate": 0.6,
+          "count": 5,
+          "rate": 0.7,
           "width": 18
         },
         {
@@ -433,7 +433,7 @@
         {
           "stage": "종료",
           "count": 540,
-          "rate": 80.7,
+          "rate": 80.5,
           "width": 100
         }
       ],
@@ -643,10 +643,10 @@
         },
         {
           "date": "2026-06-09",
-          "new": 2,
+          "new": 4,
           "fixed": 27,
           "closed": 24,
-          "deltaNew": 0
+          "deltaNew": 2
         }
       ],
       "versions": [
@@ -1091,30 +1091,34 @@
           ]
         },
         {
-          "version": "5.22.0",
-          "total": 9,
-          "criticalMajor": 2,
-          "doneRate": 100.0,
+          "version": "[G.H]v1.0.1-26.06",
+          "total": 10,
+          "criticalMajor": 5,
+          "doneRate": 0.0,
           "status": [
             {
-              "label": "종료",
-              "count": 9
+              "label": "등록",
+              "count": 5
+            },
+            {
+              "label": "진행중",
+              "count": 5
             }
           ],
           "severity": [
             {
               "label": "Major",
-              "count": 2
+              "count": 5
             },
             {
               "label": "Minor",
-              "count": 7
+              "count": 5
             }
           ],
           "priority": [
             {
               "label": "Medium",
-              "count": 9
+              "count": 10
             }
           ]
         }
@@ -1125,11 +1129,11 @@
           "status": [
             {
               "label": "등록",
-              "count": 68
+              "count": 69
             },
             {
               "label": "진행중",
-              "count": 4
+              "count": 5
             },
             {
               "label": "QA확인",
@@ -1151,7 +1155,7 @@
             },
             {
               "label": "Minor",
-              "count": 394
+              "count": 396
             },
             {
               "label": "미지정",
@@ -1173,7 +1177,7 @@
             },
             {
               "label": "Medium",
-              "count": 627
+              "count": 629
             },
             {
               "label": "Low",
@@ -1396,10 +1400,10 @@
         },
         {
           "date": "2026-06-09",
-          "new": 2,
+          "new": 4,
           "fixed": 27,
           "closed": 24,
-          "deltaNew": 0
+          "deltaNew": 2
         }
       ],
       "reportBoard": {
@@ -1468,6 +1472,48 @@
         ]
       },
       "recent": [
+        {
+          "id": "ISSUE-902",
+          "title": "제목 없음",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[G.H]v1.0.1-26.06",
+          "versionRaw": "[G.H]v1.0.1-26.06",
+          "domain": "Go Hanpass",
+          "os": "미지정",
+          "createdAt": "2026-06-09T07:28:00.000Z",
+          "createdDate": "2026-06-09",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/37a73fbd195180698e2dff2fab202bb2",
+          "lastEditedAt": "2026-06-09T07:38:00.000Z"
+        },
+        {
+          "id": "ISSUE-901",
+          "title": "제목 없음",
+          "status": "처리중 (In Progress)",
+          "stage": "진행중",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[G.H]v1.0.1-26.06",
+          "versionRaw": "[G.H]v1.0.1-26.06",
+          "domain": "Go Hanpass",
+          "os": "미지정",
+          "createdAt": "2026-06-09T07:17:00.000Z",
+          "createdDate": "2026-06-09",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/37a73fbd195180e99b50d125e7182d3b",
+          "lastEditedAt": "2026-06-09T07:34:00.000Z"
+        },
         {
           "id": "ISSUE-900",
           "title": "제목 없음",
@@ -1635,48 +1681,6 @@
           "closedDate": "",
           "url": "https://app.notion.com/p/_9PAY-KST-37673fbd195180c4a0cacca0e3a664c0",
           "lastEditedAt": "2026-06-08T07:00:00.000Z"
-        },
-        {
-          "id": "ISSUE-890",
-          "title": "제목 없음",
-          "status": "QA 검증 -회귀 (QA Verification)",
-          "stage": "QA확인",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "5.22.1",
-          "versionRaw": "5.22.1",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-06-05T07:22:00.000Z",
-          "createdDate": "2026-06-05",
-          "fixedAt": "2026-06-08T07:00:00.000Z",
-          "fixedDate": "2026-06-08",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/_9PAY-37673fbd19518002ba22e524964c6e0f",
-          "lastEditedAt": "2026-06-08T07:00:00.000Z"
-        },
-        {
-          "id": "ISSUE-889",
-          "title": "제목 없음",
-          "status": "QA 검증 -회귀 (QA Verification)",
-          "stage": "QA확인",
-          "severity": "Major",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "5.22.1",
-          "versionRaw": "5.22.1",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-06-05T07:08:00.000Z",
-          "createdDate": "2026-06-05",
-          "fixedAt": "2026-06-09T01:20:00.000Z",
-          "fixedDate": "2026-06-09",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/_9PAY-37673fbd1951809ca995ffd7d2d505a8",
-          "lastEditedAt": "2026-06-09T01:20:00.000Z"
         }
       ]
     },
@@ -2958,19 +2962,19 @@
     },
     "Go Hanpass": {
       "summary": {
-        "total": 118,
-        "new": 13,
-        "inProgress": 4,
+        "total": 120,
+        "new": 14,
+        "inProgress": 5,
         "fixed": 0,
         "closed": 101,
-        "todayNew": 2,
-        "newDelta": 1
+        "todayNew": 4,
+        "newDelta": 3
       },
       "funnel": [
         {
           "stage": "등록",
-          "count": 13,
-          "rate": 11.0,
+          "count": 14,
+          "rate": 11.7,
           "width": 18
         },
         {
@@ -2987,8 +2991,8 @@
         },
         {
           "stage": "진행중",
-          "count": 4,
-          "rate": 3.4,
+          "count": 5,
+          "rate": 4.2,
           "width": 18
         },
         {
@@ -3006,7 +3010,7 @@
         {
           "stage": "종료",
           "count": 101,
-          "rate": 85.6,
+          "rate": 84.2,
           "width": 100
         }
       ],
@@ -3216,10 +3220,10 @@
         },
         {
           "date": "2026-06-09",
-          "new": 2,
+          "new": 4,
           "fixed": 6,
           "closed": 6,
-          "deltaNew": 1
+          "deltaNew": 3
         }
       ],
       "versions": [
@@ -3257,17 +3261,17 @@
         },
         {
           "version": "[G.H]v1.0.1-26.06",
-          "total": 8,
+          "total": 10,
           "criticalMajor": 5,
           "doneRate": 0.0,
           "status": [
             {
               "label": "등록",
-              "count": 4
+              "count": 5
             },
             {
               "label": "진행중",
-              "count": 4
+              "count": 5
             }
           ],
           "severity": [
@@ -3277,13 +3281,13 @@
             },
             {
               "label": "Minor",
-              "count": 3
+              "count": 5
             }
           ],
           "priority": [
             {
               "label": "Medium",
-              "count": 8
+              "count": 10
             }
           ]
         },
@@ -3350,11 +3354,11 @@
           "status": [
             {
               "label": "등록",
-              "count": 13
+              "count": 14
             },
             {
               "label": "진행중",
-              "count": 4
+              "count": 5
             },
             {
               "label": "종료",
@@ -3372,13 +3376,13 @@
             },
             {
               "label": "Minor",
-              "count": 88
+              "count": 90
             }
           ],
           "priority": [
             {
               "label": "Medium",
-              "count": 118
+              "count": 120
             }
           ]
         }
@@ -3589,10 +3593,10 @@
         },
         {
           "date": "2026-06-09",
-          "new": 2,
+          "new": 4,
           "fixed": 6,
           "closed": 6,
-          "deltaNew": 1
+          "deltaNew": 3
         }
       ],
       "reportBoard": {
@@ -3661,6 +3665,48 @@
         ]
       },
       "recent": [
+        {
+          "id": "ISSUE-902",
+          "title": "제목 없음",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[G.H]v1.0.1-26.06",
+          "versionRaw": "[G.H]v1.0.1-26.06",
+          "domain": "Go Hanpass",
+          "os": "미지정",
+          "createdAt": "2026-06-09T07:28:00.000Z",
+          "createdDate": "2026-06-09",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/37a73fbd195180698e2dff2fab202bb2",
+          "lastEditedAt": "2026-06-09T07:38:00.000Z"
+        },
+        {
+          "id": "ISSUE-901",
+          "title": "제목 없음",
+          "status": "처리중 (In Progress)",
+          "stage": "진행중",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[G.H]v1.0.1-26.06",
+          "versionRaw": "[G.H]v1.0.1-26.06",
+          "domain": "Go Hanpass",
+          "os": "미지정",
+          "createdAt": "2026-06-09T07:17:00.000Z",
+          "createdDate": "2026-06-09",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/37a73fbd195180e99b50d125e7182d3b",
+          "lastEditedAt": "2026-06-09T07:34:00.000Z"
+        },
         {
           "id": "ISSUE-900",
           "title": "제목 없음",
@@ -3828,48 +3874,6 @@
           "closedDate": "2026-06-01",
           "url": "https://app.notion.com/p/37273fbd195180f2b64ee32b4d639605",
           "lastEditedAt": "2026-06-01T05:53:00.000Z"
-        },
-        {
-          "id": "ISSUE-856",
-          "title": "제목 없음",
-          "status": "완료 (Done)",
-          "stage": "종료",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[G.H]v1.0.0",
-          "versionRaw": "[G.H]v1.0.0",
-          "domain": "Go Hanpass",
-          "os": "미지정",
-          "createdAt": "2026-06-01T01:50:00.000Z",
-          "createdDate": "2026-06-01",
-          "fixedAt": "2026-06-01T23:59:00.000Z",
-          "fixedDate": "2026-06-02",
-          "closedAt": "2026-06-01T23:59:00.000Z",
-          "closedDate": "2026-06-02",
-          "url": "https://app.notion.com/p/50-50-37273fbd195180639705fb4eb4b48bc8",
-          "lastEditedAt": "2026-06-01T23:59:00.000Z"
-        },
-        {
-          "id": "ISSUE-855",
-          "title": "제목 없음",
-          "status": "완료 (Done)",
-          "stage": "종료",
-          "severity": "Major",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[G.H]v1.0.0",
-          "versionRaw": "[G.H]v1.0.0",
-          "domain": "Go Hanpass",
-          "os": "미지정",
-          "createdAt": "2026-06-01T01:46:00.000Z",
-          "createdDate": "2026-06-01",
-          "fixedAt": "2026-06-01T04:21:00.000Z",
-          "fixedDate": "2026-06-01",
-          "closedAt": "2026-06-01T04:21:00.000Z",
-          "closedDate": "2026-06-01",
-          "url": "https://app.notion.com/p/37273fbd195180c89665daff0b331616",
-          "lastEditedAt": "2026-06-01T04:21:00.000Z"
         }
       ]
     }

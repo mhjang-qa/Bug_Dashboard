@@ -46,6 +46,7 @@ FUNNEL_STAGES = ["등록", "검토", "배정", "진행중", "수정완료", "QA�
 SEVERITY_ORDER = ["Blocker", "Critical", "Major", "Minor", "Trivial", "미지정"]
 PRIORITY_ORDER = ["P0", "P1", "P2", "P3", "High", "Medium", "Low", "미지정"]
 OS_ORDER = ["AOS", "iOS", "Web", "공통", "미지정"]
+GO_HANPASS_KEYWORDS = ("go hanpass", "gohanpass", "go.hanpass", "[g.h]", "g.h", "방한홈", "고한패스")
 
 
 class StepError(RuntimeError):
@@ -288,13 +289,75 @@ def normalize_priority(value: str) -> str:
     return text or "미지정"
 
 
+def has_go_hanpass_keyword(value: str) -> bool:
+    text = (value or "").strip().lower()
+    return any(keyword in text for keyword in GO_HANPASS_KEYWORDS)
+
+
+def extract_semver(value: str) -> tuple[int, int, int] | None:
+    match = re.search(r"(?<!\d)(\d+)\.(\d+)(?:\.(\d+))?(?!\d)", value or "")
+    if not match:
+        return None
+    return tuple(int(part or 0) for part in match.groups())
+
+
+def extract_year_month_suffix(value: str) -> tuple[int, int] | None:
+    match = re.search(r"(?<!\d)(\d{2})\.(\d{2})(?!\d)", value or "")
+    if not match:
+        return None
+    return int(match.group(1)), int(match.group(2))
+
+
+def normalize_version_label(value: str, domain: str = "") -> str:
+    text = (value or "").strip()
+    if not text:
+        return "미지정"
+    if domain == "Go Hanpass" or has_go_hanpass_keyword(text):
+        version = extract_semver(text)
+        suffix = extract_year_month_suffix(text)
+        if version:
+            label = f"[G.H]v{version[0]}.{version[1]}.{version[2]}"
+            if suffix:
+                label += f"-{suffix[0]:02d}.{suffix[1]:02d}"
+            return label
+        body = re.sub(
+            r"^(?:\[?\s*g\.?\s*h\.?\s*\]?|go\.?\s*hanpass|gohanpass|방한홈|고한패스)\s*",
+            "",
+            text,
+            flags=re.I,
+        ).strip()
+        body = body.lstrip(" :-_")
+        return f"[G.H]{body}" if body else "[G.H]"
+    version = extract_semver(text)
+    if version:
+        return f"{version[0]}.{version[1]}.{version[2]}"
+    return text
+
+
+def version_sort_key(version: str) -> tuple[Any, ...]:
+    text = (version or "").strip()
+    if not text or text == "미지정":
+        return (3, text)
+    if text.startswith("[G.H]") or has_go_hanpass_keyword(text):
+        version_key = extract_semver(text)
+        if version_key:
+            suffix = extract_year_month_suffix(text) or (0, 0)
+            return (0, version_key[0], version_key[1], version_key[2], suffix[0], suffix[1], text)
+        return (0, text)
+    version_key = extract_semver(text)
+    if version_key:
+        suffix = extract_year_month_suffix(text) or (0, 0)
+        return (1, version_key[0], version_key[1], version_key[2], suffix[0], suffix[1], text)
+    return (2, text)
+
+
 def classify_domain(version: str, title: str = "", url: str = "") -> str:
     source = " ".join(part for part in [version, title, url] if part).lower()
-    if any(token in source for token in ["go hanpass", "gohanpass", "go.hanpass", "[g.h]", "g.h"]):
+    if has_go_hanpass_keyword(source):
         return "Go Hanpass"
     if "hanpass" in source:
         return "한패스"
-    if re.search(r"\b\d+\.\d+\.\d+\b", version or ""):
+    if extract_semver(version or ""):
         return "한패스"
     return "한패스"
 
@@ -304,6 +367,8 @@ def normalize_page(page: dict[str, Any]) -> dict[str, Any]:
     created = first_value(properties, "created_at") or page.get("created_time", "")
     title = first_value(properties, "title") or "제목 없음"
     status_raw = first_value(properties, "status")
+    version_raw = first_value(properties, "version") or "미지정"
+    domain = classify_domain(version_raw, title, page.get("url", ""))
     status_stage = normalize_status(status_raw)
     fixed_at = first_value(properties, "fixed_at")
     closed_at = first_value(properties, "closed_at")
@@ -320,8 +385,9 @@ def normalize_page(page: dict[str, Any]) -> dict[str, Any]:
         "severity": normalize_severity(first_value(properties, "severity")),
         "priority": normalize_priority(first_value(properties, "priority")),
         "assignee": first_value(properties, "assignee") or "미지정",
-        "version": first_value(properties, "version") or "미지정",
-        "domain": classify_domain(first_value(properties, "version"), title, page.get("url", "")),
+        "version": normalize_version_label(version_raw, domain),
+        "versionRaw": version_raw,
+        "domain": domain,
         "os": normalize_os(first_value(properties, "os")),
         "createdAt": created,
         "createdDate": date_key(created),
@@ -449,7 +515,7 @@ def build_versions(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
                 "priority": ordered_counts(Counter(item["priority"] for item in items), PRIORITY_ORDER),
             }
         )
-    return sorted(versions, key=lambda item: (-item["total"], item["version"]))[:12]
+    return sorted(versions, key=lambda item: (-item["total"], version_sort_key(item["version"])))[:12]
 
 
 def build_scope_payload(rows: list[dict[str, Any]], days: int, report_board: dict[str, Any]) -> dict[str, Any]:

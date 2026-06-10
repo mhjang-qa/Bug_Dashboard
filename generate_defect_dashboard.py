@@ -198,6 +198,14 @@ def first_value(properties: dict[str, Any], key: str) -> str:
             value = plain_text(properties.get(name))
             if value:
                 return value
+    # title 필드는 Notion DB마다 이름이 다를 수 있으므로,
+    # type == "title"인 프로퍼티를 자동 탐색하여 fallback
+    if key == "title":
+        for prop in properties.values():
+            if prop.get("type") == "title":
+                value = plain_text(prop)
+                if value:
+                    return value
     return ""
 
 

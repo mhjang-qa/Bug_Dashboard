@@ -376,7 +376,7 @@
     </div>
   </div>
   <script id="dashboard-data" type="application/json">{
-  "generatedAt": "2026-06-10T04:10:25+00:00",
+  "generatedAt": "2026-06-10T07:06:29+00:00",
   "days": 30,
   "domainOrder": [
     "한패스",
@@ -385,19 +385,19 @@
   "domains": {
     "ALL": {
       "summary": {
-        "total": 679,
-        "new": 74,
-        "inProgress": 7,
+        "total": 683,
+        "new": 78,
+        "inProgress": 5,
         "fixed": 0,
-        "closed": 541,
-        "todayNew": 5,
-        "newDelta": -2
+        "closed": 542,
+        "todayNew": 9,
+        "newDelta": 2
       },
       "funnel": [
         {
           "stage": "등록",
-          "count": 74,
-          "rate": 10.9,
+          "count": 78,
+          "rate": 11.4,
           "width": 18
         },
         {
@@ -414,8 +414,8 @@
         },
         {
           "stage": "진행중",
-          "count": 7,
-          "rate": 1.0,
+          "count": 5,
+          "rate": 0.7,
           "width": 18
         },
         {
@@ -426,14 +426,14 @@
         },
         {
           "stage": "QA확인",
-          "count": 57,
-          "rate": 8.4,
+          "count": 58,
+          "rate": 8.5,
           "width": 18
         },
         {
           "stage": "종료",
-          "count": 541,
-          "rate": 79.7,
+          "count": 542,
+          "rate": 79.4,
           "width": 100
         }
       ],
@@ -643,10 +643,10 @@
         },
         {
           "date": "2026-06-10",
-          "new": 5,
-          "fixed": 1,
-          "closed": 1,
-          "deltaNew": -2
+          "new": 9,
+          "fixed": 3,
+          "closed": 2,
+          "deltaNew": 2
         }
       ],
       "versions": [
@@ -1002,11 +1002,11 @@
             },
             {
               "label": "QA확인",
-              "count": 25
+              "count": 26
             },
             {
               "label": "종료",
-              "count": 2
+              "count": 1
             }
           ],
           "severity": [
@@ -1096,37 +1096,41 @@
         },
         {
           "version": "[G.H]v1.0.1-26.06",
-          "total": 18,
-          "criticalMajor": 6,
-          "doneRate": 0.0,
+          "total": 22,
+          "criticalMajor": 8,
+          "doneRate": 9.1,
           "status": [
             {
               "label": "등록",
-              "count": 12
+              "count": 16
             },
             {
               "label": "진행중",
-              "count": 6
+              "count": 4
+            },
+            {
+              "label": "종료",
+              "count": 2
             }
           ],
           "severity": [
             {
               "label": "Major",
-              "count": 6
+              "count": 8
             },
             {
               "label": "Minor",
-              "count": 10
+              "count": 11
             },
             {
               "label": "미지정",
-              "count": 2
+              "count": 3
             }
           ],
           "priority": [
             {
               "label": "Medium",
-              "count": 18
+              "count": 22
             }
           ]
         }
@@ -1137,19 +1141,19 @@
           "status": [
             {
               "label": "등록",
-              "count": 74
+              "count": 78
             },
             {
               "label": "진행중",
-              "count": 7
+              "count": 5
             },
             {
               "label": "QA확인",
-              "count": 57
+              "count": 58
             },
             {
               "label": "종료",
-              "count": 541
+              "count": 542
             }
           ],
           "severity": [
@@ -1159,15 +1163,15 @@
             },
             {
               "label": "Major",
-              "count": 151
+              "count": 153
             },
             {
               "label": "Minor",
-              "count": 401
+              "count": 402
             },
             {
               "label": "미지정",
-              "count": 75
+              "count": 76
             },
             {
               "label": "개선 의견",
@@ -1185,7 +1189,7 @@
             },
             {
               "label": "Medium",
-              "count": 637
+              "count": 641
             },
             {
               "label": "Low",
@@ -1408,10 +1412,10 @@
         },
         {
           "date": "2026-06-10",
-          "new": 5,
-          "fixed": 1,
-          "closed": 1,
-          "deltaNew": -2
+          "new": 9,
+          "fixed": 3,
+          "closed": 2,
+          "deltaNew": 2
         }
       ],
       "reportBoard": {
@@ -1481,6 +1485,90 @@
       },
       "recent": [
         {
+          "id": "ISSUE-916",
+          "title": "[회원가입] 무기명 미완료 상태로 ‘이어하기’ 프로세스 진행 안되는 현상 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[G.H]v1.0.1-26.06",
+          "versionRaw": "[G.H]v1.0.1-26.06",
+          "domain": "Go Hanpass",
+          "os": "미지정",
+          "createdAt": "2026-06-10T06:44:00.000Z",
+          "createdDate": "2026-06-10",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/37b73fbd195180a2b130d8bb2068f37b",
+          "lastEditedAt": "2026-06-10T07:02:00.000Z"
+        },
+        {
+          "id": "ISSUE-915",
+          "title": "[회원가입][추가인증]카메라 접근 허용 필요 팝업 ‘취소’ 선택 시 홈으로 이동하는 현상",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "미지정",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[G.H]v1.0.1-26.06",
+          "versionRaw": "[G.H]v1.0.1-26.06",
+          "domain": "Go Hanpass",
+          "os": "미지정",
+          "createdAt": "2026-06-10T06:28:00.000Z",
+          "createdDate": "2026-06-10",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/37b73fbd195180bd9069cfac501bdf2c",
+          "lastEditedAt": "2026-06-10T07:01:00.000Z"
+        },
+        {
+          "id": "ISSUE-914",
+          "title": "[회원가입][이용약관][공통] 상단 좌측 뒤로가기 ‘<’ 버튼 선택 시 로그인/회원가입 선택 화면으로 이동 안 하는 현상",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[G.H]v1.0.1-26.06",
+          "versionRaw": "[G.H]v1.0.1-26.06",
+          "domain": "Go Hanpass",
+          "os": "미지정",
+          "createdAt": "2026-06-10T05:35:00.000Z",
+          "createdDate": "2026-06-10",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/37b73fbd19518044b857dcbd9d92d191",
+          "lastEditedAt": "2026-06-10T07:01:00.000Z"
+        },
+        {
+          "id": "ISSUE-913",
+          "title": "[다국어] 한패스 미지원 언어로 변경 후 앱 실행 시 다국어 코드 노출 및 빈 화면 노출 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[G.H]v1.0.1-26.06",
+          "versionRaw": "[G.H]v1.0.1-26.06",
+          "domain": "Go Hanpass",
+          "os": "미지정",
+          "createdAt": "2026-06-10T05:05:00.000Z",
+          "createdDate": "2026-06-10",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/37b73fbd195180dda9e9ff817decfed8",
+          "lastEditedAt": "2026-06-10T05:24:00.000Z"
+        },
+        {
           "id": "ISSUE-912",
           "title": "[회원가입][추가인증] ‘주소 직접 입력 하기’ 화면 내 체크박스 문구 기획서와 상이 ",
           "status": "등록 (Registered)",
@@ -1520,7 +1608,7 @@
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/37b73fbd19518068a647f7e8c58cd6a1",
-          "lastEditedAt": "2026-06-10T04:04:00.000Z"
+          "lastEditedAt": "2026-06-10T06:59:00.000Z"
         },
         {
           "id": "ISSUE-910",
@@ -1562,7 +1650,7 @@
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/37b73fbd1951800ba361d5e039e759bf",
-          "lastEditedAt": "2026-06-10T01:16:00.000Z"
+          "lastEditedAt": "2026-06-10T07:06:00.000Z"
         },
         {
           "id": "ISSUE-907",
@@ -1605,90 +1693,6 @@
           "closedDate": "",
           "url": "https://app.notion.com/p/37a73fbd19518009abb7f90978290fc3",
           "lastEditedAt": "2026-06-10T01:01:00.000Z"
-        },
-        {
-          "id": "ISSUE-905",
-          "title": "[회원가입][아이디등록(이메일)][iOS] ‘이메일 형식 확인’ 팝업 노출 시 정의되지 않은 말풍선 노출 ",
-          "status": "처리중 (In Progress)",
-          "stage": "진행중",
-          "severity": "미지정",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[G.H]v1.0.1-26.06",
-          "versionRaw": "[G.H]v1.0.1-26.06",
-          "domain": "Go Hanpass",
-          "os": "미지정",
-          "createdAt": "2026-06-09T08:21:00.000Z",
-          "createdDate": "2026-06-09",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/iOS-37a73fbd195180b7a73ae5ee80853337",
-          "lastEditedAt": "2026-06-10T01:44:00.000Z"
-        },
-        {
-          "id": "ISSUE-904",
-          "title": "[회원가입][추가인증] ‘부가 정보 입력’ 화면 내 ‘다음’ 버튼 활성화 조건 디스크립션 수정 필요 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[G.H]v1.0.1-26.06",
-          "versionRaw": "[G.H]v1.0.1-26.06",
-          "domain": "Go Hanpass",
-          "os": "미지정",
-          "createdAt": "2026-06-09T08:04:00.000Z",
-          "createdDate": "2026-06-09",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/37a73fbd1951803fa2bdf75fdab1f339",
-          "lastEditedAt": "2026-06-09T08:28:00.000Z"
-        },
-        {
-          "id": "ISSUE-902",
-          "title": "[팝업][회원가입] 신분증 촬영모드 - ‘카메라 접근 허용 필요 팝업’ 기획서와 상이",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[G.H]v1.0.1-26.06",
-          "versionRaw": "[G.H]v1.0.1-26.06",
-          "domain": "Go Hanpass",
-          "os": "미지정",
-          "createdAt": "2026-06-09T07:28:00.000Z",
-          "createdDate": "2026-06-09",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/37a73fbd195180698e2dff2fab202bb2",
-          "lastEditedAt": "2026-06-09T07:38:00.000Z"
-        },
-        {
-          "id": "ISSUE-901",
-          "title": "[팝업] 무기명 회원 → 기명 서비스 진입 - ‘추가 인증 필요 안내 팝업’ 버튼 문구 기획서와 상이 ",
-          "status": "처리중 (In Progress)",
-          "stage": "진행중",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[G.H]v1.0.1-26.06",
-          "versionRaw": "[G.H]v1.0.1-26.06",
-          "domain": "Go Hanpass",
-          "os": "미지정",
-          "createdAt": "2026-06-09T07:17:00.000Z",
-          "createdDate": "2026-06-09",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/37a73fbd195180e99b50d125e7182d3b",
-          "lastEditedAt": "2026-06-09T07:46:00.000Z"
         }
       ]
     },
@@ -1698,7 +1702,7 @@
         "new": 53,
         "inProgress": 1,
         "fixed": 0,
-        "closed": 440,
+        "closed": 439,
         "todayNew": 0,
         "newDelta": 0
       },
@@ -1735,14 +1739,14 @@
         },
         {
           "stage": "QA확인",
-          "count": 57,
-          "rate": 10.3,
+          "count": 58,
+          "rate": 10.5,
           "width": 18
         },
         {
           "stage": "종료",
-          "count": 440,
-          "rate": 79.9,
+          "count": 439,
+          "rate": 79.7,
           "width": 100
         }
       ],
@@ -1954,7 +1958,7 @@
           "date": "2026-06-10",
           "new": 0,
           "fixed": 1,
-          "closed": 1,
+          "closed": 0,
           "deltaNew": 0
         }
       ],
@@ -2279,11 +2283,11 @@
             },
             {
               "label": "QA확인",
-              "count": 25
+              "count": 26
             },
             {
               "label": "종료",
-              "count": 2
+              "count": 1
             }
           ],
           "severity": [
@@ -2442,11 +2446,11 @@
             },
             {
               "label": "QA확인",
-              "count": 57
+              "count": 58
             },
             {
               "label": "종료",
-              "count": 440
+              "count": 439
             }
           ],
           "severity": [
@@ -2707,7 +2711,7 @@
           "date": "2026-06-10",
           "new": 0,
           "fixed": 1,
-          "closed": 1,
+          "closed": 0,
           "deltaNew": 0
         }
       ],
@@ -2767,8 +2771,8 @@
         {
           "id": "ISSUE-895",
           "title": "[타발_9PAY] 내역 관리 - 입금 만료일 초과 시에도 ‘입금 대기’ 상태로 노출되는 현상 ",
-          "status": "개발 완료 (Dev Done)",
-          "stage": "종료",
+          "status": "QA 검증 -회귀 (QA Verification)",
+          "stage": "QA확인",
           "severity": "Major",
           "priority": "Medium",
           "assignee": "미지정",
@@ -2778,12 +2782,12 @@
           "os": "미지정",
           "createdAt": "2026-06-08T01:07:00.000Z",
           "createdDate": "2026-06-08",
-          "fixedAt": "2026-06-10T01:53:00.000Z",
+          "fixedAt": "2026-06-10T06:31:00.000Z",
           "fixedDate": "2026-06-10",
-          "closedAt": "2026-06-10T01:53:00.000Z",
-          "closedDate": "2026-06-10",
+          "closedAt": "",
+          "closedDate": "",
           "url": "https://app.notion.com/p/_9PAY-37973fbd195180a9afded21b001adb2c",
-          "lastEditedAt": "2026-06-10T01:53:00.000Z"
+          "lastEditedAt": "2026-06-10T06:31:00.000Z"
         },
         {
           "id": "ISSUE-894",
@@ -2978,20 +2982,20 @@
     },
     "Go Hanpass": {
       "summary": {
-        "total": 128,
-        "new": 21,
-        "inProgress": 6,
+        "total": 132,
+        "new": 25,
+        "inProgress": 4,
         "fixed": 0,
-        "closed": 101,
-        "todayNew": 5,
-        "newDelta": -2
+        "closed": 103,
+        "todayNew": 9,
+        "newDelta": 2
       },
       "funnel": [
         {
           "stage": "등록",
-          "count": 21,
-          "rate": 16.4,
-          "width": 21
+          "count": 25,
+          "rate": 18.9,
+          "width": 24
         },
         {
           "stage": "검토",
@@ -3007,8 +3011,8 @@
         },
         {
           "stage": "진행중",
-          "count": 6,
-          "rate": 4.7,
+          "count": 4,
+          "rate": 3.0,
           "width": 18
         },
         {
@@ -3025,8 +3029,8 @@
         },
         {
           "stage": "종료",
-          "count": 101,
-          "rate": 78.9,
+          "count": 103,
+          "rate": 78.0,
           "width": 100
         }
       ],
@@ -3236,10 +3240,10 @@
         },
         {
           "date": "2026-06-10",
-          "new": 5,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": -2
+          "new": 9,
+          "fixed": 2,
+          "closed": 2,
+          "deltaNew": 2
         }
       ],
       "versions": [
@@ -3277,37 +3281,41 @@
         },
         {
           "version": "[G.H]v1.0.1-26.06",
-          "total": 18,
-          "criticalMajor": 6,
-          "doneRate": 0.0,
+          "total": 22,
+          "criticalMajor": 8,
+          "doneRate": 9.1,
           "status": [
             {
               "label": "등록",
-              "count": 12
+              "count": 16
             },
             {
               "label": "진행중",
-              "count": 6
+              "count": 4
+            },
+            {
+              "label": "종료",
+              "count": 2
             }
           ],
           "severity": [
             {
               "label": "Major",
-              "count": 6
+              "count": 8
             },
             {
               "label": "Minor",
-              "count": 10
+              "count": 11
             },
             {
               "label": "미지정",
-              "count": 2
+              "count": 3
             }
           ],
           "priority": [
             {
               "label": "Medium",
-              "count": 18
+              "count": 22
             }
           ]
         },
@@ -3374,15 +3382,15 @@
           "status": [
             {
               "label": "등록",
-              "count": 21
+              "count": 25
             },
             {
               "label": "진행중",
-              "count": 6
+              "count": 4
             },
             {
               "label": "종료",
-              "count": 101
+              "count": 103
             }
           ],
           "severity": [
@@ -3392,21 +3400,21 @@
             },
             {
               "label": "Major",
-              "count": 30
+              "count": 32
             },
             {
               "label": "Minor",
-              "count": 95
+              "count": 96
             },
             {
               "label": "미지정",
-              "count": 2
+              "count": 3
             }
           ],
           "priority": [
             {
               "label": "Medium",
-              "count": 128
+              "count": 132
             }
           ]
         }
@@ -3617,10 +3625,10 @@
         },
         {
           "date": "2026-06-10",
-          "new": 5,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": -2
+          "new": 9,
+          "fixed": 2,
+          "closed": 2,
+          "deltaNew": 2
         }
       ],
       "reportBoard": {
@@ -3690,6 +3698,90 @@
       },
       "recent": [
         {
+          "id": "ISSUE-916",
+          "title": "[회원가입] 무기명 미완료 상태로 ‘이어하기’ 프로세스 진행 안되는 현상 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[G.H]v1.0.1-26.06",
+          "versionRaw": "[G.H]v1.0.1-26.06",
+          "domain": "Go Hanpass",
+          "os": "미지정",
+          "createdAt": "2026-06-10T06:44:00.000Z",
+          "createdDate": "2026-06-10",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/37b73fbd195180a2b130d8bb2068f37b",
+          "lastEditedAt": "2026-06-10T07:02:00.000Z"
+        },
+        {
+          "id": "ISSUE-915",
+          "title": "[회원가입][추가인증]카메라 접근 허용 필요 팝업 ‘취소’ 선택 시 홈으로 이동하는 현상",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "미지정",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[G.H]v1.0.1-26.06",
+          "versionRaw": "[G.H]v1.0.1-26.06",
+          "domain": "Go Hanpass",
+          "os": "미지정",
+          "createdAt": "2026-06-10T06:28:00.000Z",
+          "createdDate": "2026-06-10",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/37b73fbd195180bd9069cfac501bdf2c",
+          "lastEditedAt": "2026-06-10T07:01:00.000Z"
+        },
+        {
+          "id": "ISSUE-914",
+          "title": "[회원가입][이용약관][공통] 상단 좌측 뒤로가기 ‘<’ 버튼 선택 시 로그인/회원가입 선택 화면으로 이동 안 하는 현상",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[G.H]v1.0.1-26.06",
+          "versionRaw": "[G.H]v1.0.1-26.06",
+          "domain": "Go Hanpass",
+          "os": "미지정",
+          "createdAt": "2026-06-10T05:35:00.000Z",
+          "createdDate": "2026-06-10",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/37b73fbd19518044b857dcbd9d92d191",
+          "lastEditedAt": "2026-06-10T07:01:00.000Z"
+        },
+        {
+          "id": "ISSUE-913",
+          "title": "[다국어] 한패스 미지원 언어로 변경 후 앱 실행 시 다국어 코드 노출 및 빈 화면 노출 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[G.H]v1.0.1-26.06",
+          "versionRaw": "[G.H]v1.0.1-26.06",
+          "domain": "Go Hanpass",
+          "os": "미지정",
+          "createdAt": "2026-06-10T05:05:00.000Z",
+          "createdDate": "2026-06-10",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/37b73fbd195180dda9e9ff817decfed8",
+          "lastEditedAt": "2026-06-10T05:24:00.000Z"
+        },
+        {
           "id": "ISSUE-912",
           "title": "[회원가입][추가인증] ‘주소 직접 입력 하기’ 화면 내 체크박스 문구 기획서와 상이 ",
           "status": "등록 (Registered)",
@@ -3729,7 +3821,7 @@
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/37b73fbd19518068a647f7e8c58cd6a1",
-          "lastEditedAt": "2026-06-10T04:04:00.000Z"
+          "lastEditedAt": "2026-06-10T06:59:00.000Z"
         },
         {
           "id": "ISSUE-910",
@@ -3771,7 +3863,7 @@
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/37b73fbd1951800ba361d5e039e759bf",
-          "lastEditedAt": "2026-06-10T01:16:00.000Z"
+          "lastEditedAt": "2026-06-10T07:06:00.000Z"
         },
         {
           "id": "ISSUE-907",
@@ -3814,90 +3906,6 @@
           "closedDate": "",
           "url": "https://app.notion.com/p/37a73fbd19518009abb7f90978290fc3",
           "lastEditedAt": "2026-06-10T01:01:00.000Z"
-        },
-        {
-          "id": "ISSUE-905",
-          "title": "[회원가입][아이디등록(이메일)][iOS] ‘이메일 형식 확인’ 팝업 노출 시 정의되지 않은 말풍선 노출 ",
-          "status": "처리중 (In Progress)",
-          "stage": "진행중",
-          "severity": "미지정",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[G.H]v1.0.1-26.06",
-          "versionRaw": "[G.H]v1.0.1-26.06",
-          "domain": "Go Hanpass",
-          "os": "미지정",
-          "createdAt": "2026-06-09T08:21:00.000Z",
-          "createdDate": "2026-06-09",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/iOS-37a73fbd195180b7a73ae5ee80853337",
-          "lastEditedAt": "2026-06-10T01:44:00.000Z"
-        },
-        {
-          "id": "ISSUE-904",
-          "title": "[회원가입][추가인증] ‘부가 정보 입력’ 화면 내 ‘다음’ 버튼 활성화 조건 디스크립션 수정 필요 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[G.H]v1.0.1-26.06",
-          "versionRaw": "[G.H]v1.0.1-26.06",
-          "domain": "Go Hanpass",
-          "os": "미지정",
-          "createdAt": "2026-06-09T08:04:00.000Z",
-          "createdDate": "2026-06-09",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/37a73fbd1951803fa2bdf75fdab1f339",
-          "lastEditedAt": "2026-06-09T08:28:00.000Z"
-        },
-        {
-          "id": "ISSUE-902",
-          "title": "[팝업][회원가입] 신분증 촬영모드 - ‘카메라 접근 허용 필요 팝업’ 기획서와 상이",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[G.H]v1.0.1-26.06",
-          "versionRaw": "[G.H]v1.0.1-26.06",
-          "domain": "Go Hanpass",
-          "os": "미지정",
-          "createdAt": "2026-06-09T07:28:00.000Z",
-          "createdDate": "2026-06-09",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/37a73fbd195180698e2dff2fab202bb2",
-          "lastEditedAt": "2026-06-09T07:38:00.000Z"
-        },
-        {
-          "id": "ISSUE-901",
-          "title": "[팝업] 무기명 회원 → 기명 서비스 진입 - ‘추가 인증 필요 안내 팝업’ 버튼 문구 기획서와 상이 ",
-          "status": "처리중 (In Progress)",
-          "stage": "진행중",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[G.H]v1.0.1-26.06",
-          "versionRaw": "[G.H]v1.0.1-26.06",
-          "domain": "Go Hanpass",
-          "os": "미지정",
-          "createdAt": "2026-06-09T07:17:00.000Z",
-          "createdDate": "2026-06-09",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/37a73fbd195180e99b50d125e7182d3b",
-          "lastEditedAt": "2026-06-09T07:46:00.000Z"
         }
       ]
     }

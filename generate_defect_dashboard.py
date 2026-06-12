@@ -23,13 +23,13 @@ NOTION_VERSION = "2022-06-28"
 DEFAULT_DEFECT_DB_ID = "21473fbd1951800d8321fc2e34c2548e"
 REPORT_DB_IDS = {
     "한패스": "36073fbd19518054b59ae4de5c74baeb",
-    "Go Hanpass": "36073fbd19518003b5caebbdb84839fb",
+    "GoHanpass": "36073fbd19518003b5caebbdb84839fb",
 }
 DEFAULT_REPO_URL = "https://github.com/mhjang-qa/Bug_Dashboard.git"
 DEFAULT_BRANCH = "main"
 
 FIELD_MAP: dict[str, list[str]] = {
-    "title": ["결함 요약", "제목", "Name", "Title", "Summary", "Bug"],
+    "title": ["결함 제목", "결함 요약", "제목", "Name", "Title", "Summary", "Bug"],
     "status": ["상태", "Status", "처리상태"],
     "severity": ["심각도", "Severity", "등급"],
     "priority": ["우선순위", "Priority"],
@@ -320,7 +320,7 @@ def normalize_version_label(value: str, domain: str = "") -> str:
     text = (value or "").strip()
     if not text:
         return "미지정"
-    if domain == "Go Hanpass" or has_go_hanpass_keyword(text):
+    if domain == "GoHanpass" or has_go_hanpass_keyword(text):
         version = extract_semver(text)
         suffix = extract_year_month_suffix(text)
         if version:
@@ -362,7 +362,7 @@ def version_sort_key(version: str) -> tuple[Any, ...]:
 def classify_domain(version: str, title: str = "", url: str = "") -> str:
     source = " ".join(part for part in [version, title, url] if part).lower()
     if has_go_hanpass_keyword(source):
-        return "Go Hanpass"
+        return "GoHanpass"
     if "hanpass" in source:
         return "한패스"
     if extract_semver(version or ""):
@@ -583,14 +583,14 @@ def build_payload(rows: list[dict[str, Any]], days: int) -> dict[str, Any]:
     grouped_rows: dict[str, list[dict[str, Any]]] = {
         "ALL": rows,
         "한패스": [row for row in rows if row["domain"] == "한패스"],
-        "Go Hanpass": [row for row in rows if row["domain"] == "Go Hanpass"],
+        "GoHanpass": [row for row in rows if row["domain"] == "GoHanpass"],
     }
     report_scopes = {
         "한패스": build_report_board(report_rows_by_domain.get("한패스", []), days=30),
-        "Go Hanpass": build_report_board(report_rows_by_domain.get("Go Hanpass", []), days=30),
+        "GoHanpass": build_report_board(report_rows_by_domain.get("GoHanpass", []), days=30),
     }
     report_scopes["ALL"] = build_report_board(
-        report_rows_by_domain.get("한패스", []) + report_rows_by_domain.get("Go Hanpass", []),
+        report_rows_by_domain.get("한패스", []) + report_rows_by_domain.get("GoHanpass", []),
         days=30,
     )
     domains = {
@@ -600,7 +600,7 @@ def build_payload(rows: list[dict[str, Any]], days: int) -> dict[str, Any]:
     return {
         "generatedAt": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "days": days,
-        "domainOrder": ["한패스", "Go Hanpass"],
+        "domainOrder": ["한패스", "GoHanpass"],
         "domains": domains,
     }
 
@@ -1049,7 +1049,7 @@ def build_html(payload: dict[str, Any]) -> str:
       actionsUrl: "https://github.com/mhjang-qa/run_all_notion/actions",
       repoUrl: "https://github.com/mhjang-qa/run_all_notion",
     }};
-    const domainNames = ["한패스", "Go Hanpass"];
+    const domainNames = ["한패스", "GoHanpass"];
     let selectedDomain = "ALL";
     let selectedVersion = DATA.selectedVersion || "ALL";
     $("stamp").textContent = `생성: ${{formatKstDateTimeWithRelative(DATA.generatedAt)}} · 기준 ${{DATA.days}}일`;
@@ -1140,7 +1140,7 @@ def build_html(payload: dict[str, Any]) -> str:
       const scopeCounts = {{
         ALL: DATA.domains.ALL.summary.total,
         "한패스": DATA.domains["한패스"].summary.total,
-        "Go Hanpass": DATA.domains["Go Hanpass"].summary.total,
+        "GoHanpass": DATA.domains["GoHanpass"].summary.total,
       }};
       const buttons = [
         ...domainNames.map((name) => `<button class="domain-btn ${{selectedDomain === name ? "active" : ""}}" data-domain="${{name}}">${{name}} <span class="subtle">(${{scopeCounts[name] || 0}})</span></button>`),

@@ -376,7 +376,7 @@
     </div>
   </div>
   <script id="dashboard-data" type="application/json">{
-  "generatedAt": "2026-06-24T08:01:29+00:00",
+  "generatedAt": "2026-06-24T11:26:12+00:00",
   "days": 30,
   "domainOrder": [
     "한패스",
@@ -385,19 +385,19 @@
   "domains": {
     "ALL": {
       "summary": {
-        "total": 726,
-        "new": 76,
+        "total": 727,
+        "new": 77,
         "inProgress": 0,
         "fixed": 0,
         "closed": 591,
-        "todayNew": 0,
-        "newDelta": -3
+        "todayNew": 1,
+        "newDelta": -2
       },
       "funnel": [
         {
           "stage": "등록",
-          "count": 76,
-          "rate": 10.5,
+          "count": 77,
+          "rate": 10.6,
           "width": 18
         },
         {
@@ -433,7 +433,7 @@
         {
           "stage": "종료",
           "count": 591,
-          "rate": 81.4,
+          "rate": 81.3,
           "width": 100
         }
       ],
@@ -643,10 +643,10 @@
         },
         {
           "date": "2026-06-24",
-          "new": 0,
+          "new": 1,
           "fixed": 1,
           "closed": 1,
-          "deltaNew": -3
+          "deltaNew": -2
         }
       ],
       "versions": [
@@ -992,13 +992,13 @@
         },
         {
           "version": "[G.H]v1.0.2-26.07",
-          "total": 31,
-          "criticalMajor": 14,
-          "doneRate": 48.4,
+          "total": 32,
+          "criticalMajor": 15,
+          "doneRate": 46.9,
           "status": [
             {
               "label": "등록",
-              "count": 16
+              "count": 17
             },
             {
               "label": "QA확인",
@@ -1012,7 +1012,7 @@
           "severity": [
             {
               "label": "Major",
-              "count": 14
+              "count": 15
             },
             {
               "label": "Minor",
@@ -1022,7 +1022,7 @@
           "priority": [
             {
               "label": "Medium",
-              "count": 31
+              "count": 32
             }
           ]
         },
@@ -1137,7 +1137,7 @@
           "status": [
             {
               "label": "등록",
-              "count": 76
+              "count": 77
             },
             {
               "label": "QA확인",
@@ -1155,7 +1155,7 @@
             },
             {
               "label": "Major",
-              "count": 175
+              "count": 176
             },
             {
               "label": "Minor",
@@ -1181,7 +1181,7 @@
             },
             {
               "label": "Medium",
-              "count": 683
+              "count": 684
             },
             {
               "label": "Low",
@@ -1404,10 +1404,10 @@
         },
         {
           "date": "2026-06-24",
-          "new": 0,
+          "new": 1,
           "fixed": 1,
           "closed": 1,
-          "deltaNew": -3
+          "deltaNew": -2
         }
       ],
       "reportBoard": {
@@ -1426,7 +1426,7 @@
           },
           {
             "label": "결함 등록 완료",
-            "count": 2
+            "count": 3
           },
           {
             "label": "결함 아님",
@@ -1437,14 +1437,14 @@
           {
             "domain": "GoHanpass",
             "title": "[GoHanpass] 여권 인증 후 셀카 인증 단계 진행 불가",
-            "status": "접수",
-            "processingStatus": "확인중",
+            "status": "검토",
+            "processingStatus": "결함 등록 완료",
             "bugType": "결함",
             "platform": "iOS",
             "reporter": "박세희 (Christy Park)",
             "createdAt": "2026-06-23T08:47:00.000Z",
             "createdDate": "2026-06-23",
-            "qaLinked": 0,
+            "qaLinked": 1,
             "url": "https://app.notion.com/p/GoHanpass-38873fbd1951816584a8f0a3383ed590"
           },
           {
@@ -1476,6 +1476,27 @@
         ]
       },
       "recent": [
+        {
+          "id": "ISSUE-967",
+          "title": "[GoHanpass][iOS] 여권 인증 완료 후 셀카 인증 단계 진행 불가",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[G.H]v1.0.2-26.07",
+          "versionRaw": "[G.H]v1.0.2-26.07",
+          "domain": "GoHanpass",
+          "os": "미지정",
+          "createdAt": "2026-06-24T08:03:00.000Z",
+          "createdDate": "2026-06-24",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/GoHanpass-iOS-38973fbd195180f99375df9a4bdaa6c2",
+          "lastEditedAt": "2026-06-24T08:06:00.000Z"
+        },
         {
           "id": "ISSUE-966",
           "title": "[제로페이][iOS] ‘카메라 권한’ 허용 후 재진입 시 팝업 재노출 되는 현상 ",
@@ -1664,27 +1685,6 @@
           "closedDate": "",
           "url": "https://app.notion.com/p/iOS-38373fbd19518032b38fd5a171735712",
           "lastEditedAt": "2026-06-18T08:54:00.000Z"
-        },
-        {
-          "id": "ISSUE-957",
-          "title": "[바코드페이][PIN번호입력] 키패드 내 ‘재배열’ 아이콘 선택 시 입력값 초기화 안 되는 현상 ",
-          "status": "완료 (Done)",
-          "stage": "종료",
-          "severity": "Major",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[G.H]v1.0.2-26.07",
-          "versionRaw": "[G.H]v1.0.2-26.07",
-          "domain": "GoHanpass",
-          "os": "미지정",
-          "createdAt": "2026-06-18T06:17:00.000Z",
-          "createdDate": "2026-06-18",
-          "fixedAt": "2026-06-23T00:40:00.000Z",
-          "fixedDate": "2026-06-23",
-          "closedAt": "2026-06-23T00:40:00.000Z",
-          "closedDate": "2026-06-23",
-          "url": "https://app.notion.com/p/PIN-38373fbd1951803a9883dd3c21a13537",
-          "lastEditedAt": "2026-06-23T00:40:00.000Z"
         }
       ]
     },
@@ -2935,19 +2935,19 @@
     },
     "GoHanpass": {
       "summary": {
-        "total": 174,
-        "new": 22,
+        "total": 175,
+        "new": 23,
         "inProgress": 0,
         "fixed": 0,
         "closed": 151,
-        "todayNew": 0,
-        "newDelta": -3
+        "todayNew": 1,
+        "newDelta": -2
       },
       "funnel": [
         {
           "stage": "등록",
-          "count": 22,
-          "rate": 12.6,
+          "count": 23,
+          "rate": 13.1,
           "width": 18
         },
         {
@@ -2983,7 +2983,7 @@
         {
           "stage": "종료",
           "count": 151,
-          "rate": 86.8,
+          "rate": 86.3,
           "width": 100
         }
       ],
@@ -3193,10 +3193,10 @@
         },
         {
           "date": "2026-06-24",
-          "new": 0,
+          "new": 1,
           "fixed": 1,
           "closed": 1,
-          "deltaNew": -3
+          "deltaNew": -2
         }
       ],
       "versions": [
@@ -3274,13 +3274,13 @@
         },
         {
           "version": "[G.H]v1.0.2-26.07",
-          "total": 31,
-          "criticalMajor": 14,
-          "doneRate": 48.4,
+          "total": 32,
+          "criticalMajor": 15,
+          "doneRate": 46.9,
           "status": [
             {
               "label": "등록",
-              "count": 16
+              "count": 17
             },
             {
               "label": "QA확인",
@@ -3294,7 +3294,7 @@
           "severity": [
             {
               "label": "Major",
-              "count": 14
+              "count": 15
             },
             {
               "label": "Minor",
@@ -3304,7 +3304,7 @@
           "priority": [
             {
               "label": "Medium",
-              "count": 31
+              "count": 32
             }
           ]
         },
@@ -3343,7 +3343,7 @@
           "status": [
             {
               "label": "등록",
-              "count": 22
+              "count": 23
             },
             {
               "label": "QA확인",
@@ -3361,7 +3361,7 @@
             },
             {
               "label": "Major",
-              "count": 54
+              "count": 55
             },
             {
               "label": "Minor",
@@ -3371,7 +3371,7 @@
           "priority": [
             {
               "label": "Medium",
-              "count": 173
+              "count": 174
             },
             {
               "label": "긴급",
@@ -3586,10 +3586,10 @@
         },
         {
           "date": "2026-06-24",
-          "new": 0,
+          "new": 1,
           "fixed": 1,
           "closed": 1,
-          "deltaNew": -3
+          "deltaNew": -2
         }
       ],
       "reportBoard": {
@@ -3608,7 +3608,7 @@
           },
           {
             "label": "결함 등록 완료",
-            "count": 2
+            "count": 3
           },
           {
             "label": "결함 아님",
@@ -3619,14 +3619,14 @@
           {
             "domain": "GoHanpass",
             "title": "[GoHanpass] 여권 인증 후 셀카 인증 단계 진행 불가",
-            "status": "접수",
-            "processingStatus": "확인중",
+            "status": "검토",
+            "processingStatus": "결함 등록 완료",
             "bugType": "결함",
             "platform": "iOS",
             "reporter": "박세희 (Christy Park)",
             "createdAt": "2026-06-23T08:47:00.000Z",
             "createdDate": "2026-06-23",
-            "qaLinked": 0,
+            "qaLinked": 1,
             "url": "https://app.notion.com/p/GoHanpass-38873fbd1951816584a8f0a3383ed590"
           },
           {
@@ -3658,6 +3658,27 @@
         ]
       },
       "recent": [
+        {
+          "id": "ISSUE-967",
+          "title": "[GoHanpass][iOS] 여권 인증 완료 후 셀카 인증 단계 진행 불가",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[G.H]v1.0.2-26.07",
+          "versionRaw": "[G.H]v1.0.2-26.07",
+          "domain": "GoHanpass",
+          "os": "미지정",
+          "createdAt": "2026-06-24T08:03:00.000Z",
+          "createdDate": "2026-06-24",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/GoHanpass-iOS-38973fbd195180f99375df9a4bdaa6c2",
+          "lastEditedAt": "2026-06-24T08:06:00.000Z"
+        },
         {
           "id": "ISSUE-966",
           "title": "[제로페이][iOS] ‘카메라 권한’ 허용 후 재진입 시 팝업 재노출 되는 현상 ",
@@ -3846,27 +3867,6 @@
           "closedDate": "",
           "url": "https://app.notion.com/p/iOS-38373fbd19518032b38fd5a171735712",
           "lastEditedAt": "2026-06-18T08:54:00.000Z"
-        },
-        {
-          "id": "ISSUE-957",
-          "title": "[바코드페이][PIN번호입력] 키패드 내 ‘재배열’ 아이콘 선택 시 입력값 초기화 안 되는 현상 ",
-          "status": "완료 (Done)",
-          "stage": "종료",
-          "severity": "Major",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[G.H]v1.0.2-26.07",
-          "versionRaw": "[G.H]v1.0.2-26.07",
-          "domain": "GoHanpass",
-          "os": "미지정",
-          "createdAt": "2026-06-18T06:17:00.000Z",
-          "createdDate": "2026-06-18",
-          "fixedAt": "2026-06-23T00:40:00.000Z",
-          "fixedDate": "2026-06-23",
-          "closedAt": "2026-06-23T00:40:00.000Z",
-          "closedDate": "2026-06-23",
-          "url": "https://app.notion.com/p/PIN-38373fbd1951803a9883dd3c21a13537",
-          "lastEditedAt": "2026-06-23T00:40:00.000Z"
         }
       ]
     }

@@ -376,7 +376,7 @@
     </div>
   </div>
   <script id="dashboard-data" type="application/json">{
-  "generatedAt": "2026-06-30T01:31:15+00:00",
+  "generatedAt": "2026-06-30T07:20:56+00:00",
   "days": 30,
   "domainOrder": [
     "한패스",
@@ -385,19 +385,19 @@
   "domains": {
     "ALL": {
       "summary": {
-        "total": 745,
-        "new": 88,
-        "inProgress": 0,
+        "total": 752,
+        "new": 84,
+        "inProgress": 8,
         "fixed": 0,
-        "closed": 598,
-        "todayNew": 2,
-        "newDelta": -1
+        "closed": 600,
+        "todayNew": 9,
+        "newDelta": 6
       },
       "funnel": [
         {
           "stage": "등록",
-          "count": 88,
-          "rate": 11.8,
+          "count": 84,
+          "rate": 11.2,
           "width": 18
         },
         {
@@ -408,14 +408,14 @@
         },
         {
           "stage": "배정",
-          "count": 0,
-          "rate": 0.0,
+          "count": 1,
+          "rate": 0.1,
           "width": 18
         },
         {
           "stage": "진행중",
-          "count": 0,
-          "rate": 0.0,
+          "count": 8,
+          "rate": 1.1,
           "width": 18
         },
         {
@@ -427,13 +427,13 @@
         {
           "stage": "QA확인",
           "count": 59,
-          "rate": 7.9,
+          "rate": 7.8,
           "width": 18
         },
         {
           "stage": "종료",
-          "count": 598,
-          "rate": 80.3,
+          "count": 600,
+          "rate": 79.8,
           "width": 100
         }
       ],
@@ -643,10 +643,10 @@
         },
         {
           "date": "2026-06-30",
-          "new": 2,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": -1
+          "new": 9,
+          "fixed": 2,
+          "closed": 2,
+          "deltaNew": 6
         }
       ],
       "versions": [
@@ -914,11 +914,11 @@
           "version": "[G.H]v1.0.2-26.07",
           "total": 35,
           "criticalMajor": 15,
-          "doneRate": 48.6,
+          "doneRate": 51.4,
           "status": [
             {
               "label": "등록",
-              "count": 18
+              "count": 17
             },
             {
               "label": "QA확인",
@@ -926,7 +926,7 @@
             },
             {
               "label": "종료",
-              "count": 16
+              "count": 17
             }
           ],
           "severity": [
@@ -1141,7 +1141,15 @@
           "status": [
             {
               "label": "등록",
-              "count": 88
+              "count": 84
+            },
+            {
+              "label": "배정",
+              "count": 1
+            },
+            {
+              "label": "진행중",
+              "count": 8
             },
             {
               "label": "QA확인",
@@ -1149,7 +1157,7 @@
             },
             {
               "label": "종료",
-              "count": 598
+              "count": 600
             }
           ],
           "severity": [
@@ -1159,11 +1167,11 @@
             },
             {
               "label": "Major",
-              "count": 181
+              "count": 184
             },
             {
               "label": "Minor",
-              "count": 437
+              "count": 441
             },
             {
               "label": "미지정",
@@ -1185,7 +1193,7 @@
             },
             {
               "label": "Medium",
-              "count": 702
+              "count": 709
             },
             {
               "label": "Low",
@@ -1408,10 +1416,10 @@
         },
         {
           "date": "2026-06-30",
-          "new": 2,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": -1
+          "new": 9,
+          "fixed": 2,
+          "closed": 2,
+          "deltaNew": 6
         }
       ],
       "reportBoard": {
@@ -1422,11 +1430,11 @@
           },
           {
             "label": "미완료",
-            "count": 1
+            "count": 0
           },
           {
             "label": "완료",
-            "count": 3
+            "count": 4
           },
           {
             "label": "결함 등록 완료",
@@ -1441,8 +1449,8 @@
           {
             "domain": "GoHanpass",
             "title": "[GoHanpass] 여권 인증 후 셀카 인증 단계 진행 불가",
-            "status": "검토",
-            "processingStatus": "결함 등록 완료",
+            "status": "완료",
+            "processingStatus": "결함 수정 완료",
             "bugType": "결함",
             "platform": "iOS",
             "reporter": "박세희 (Christy Park)",
@@ -1481,6 +1489,153 @@
       },
       "recent": [
         {
+          "id": "ISSUE-994",
+          "title": "[메인 부가서비스 순서] 계절근로자 보험 신청 가능한 현상 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "5.23.0",
+          "versionRaw": "5.23.0",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-06-30T06:47:00.000Z",
+          "createdDate": "2026-06-30",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/38f73fbd1951801a9f1eff42bca599a8",
+          "lastEditedAt": "2026-06-30T07:00:00.000Z"
+        },
+        {
+          "id": "ISSUE-993",
+          "title": "[VISALOAN][다국어] 미얀마로 설정 시 VISA LOAN 최상단 배너 문구 기획서와 상이 ",
+          "status": "처리중 (In Progress)",
+          "stage": "진행중",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "5.23.0",
+          "versionRaw": "5.23.0",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-06-30T06:20:00.000Z",
+          "createdDate": "2026-06-30",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/VISALOAN-VISA-LOAN-38f73fbd1951803f9af7f93313705c3c",
+          "lastEditedAt": "2026-06-30T06:58:00.000Z"
+        },
+        {
+          "id": "ISSUE-992",
+          "title": "[VISALOAN][다국어] 베트남으로 설정 시 VISA LOAN 최상단 배너 문구 기획서와 상이 ",
+          "status": "처리중 (In Progress)",
+          "stage": "진행중",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "5.23.0",
+          "versionRaw": "5.23.0",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-06-30T05:49:00.000Z",
+          "createdDate": "2026-06-30",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/VISALOAN-VISA-LOAN-38f73fbd19518014a8dac42b58f441ed",
+          "lastEditedAt": "2026-06-30T06:58:00.000Z"
+        },
+        {
+          "id": "ISSUE-991",
+          "title": "[VISALOAN][다국어] 인도네시아로 설정 시 VISA LOAN 최상단 배너 문구 기획서와 상이 ",
+          "status": "처리중 (In Progress)",
+          "stage": "진행중",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "5.23.0",
+          "versionRaw": "5.23.0",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-06-30T05:31:00.000Z",
+          "createdDate": "2026-06-30",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/VISALOAN-VISA-LOAN-38f73fbd195180e89234d288f5d8bc76",
+          "lastEditedAt": "2026-06-30T06:58:00.000Z"
+        },
+        {
+          "id": "ISSUE-990",
+          "title": "[VISALOAN][iOS] 자동계좌 미등록 계정으로 VISA LOAN 배너 선택 시 자동계좌 등록 CASE 화면으로 이동하는 현상 ",
+          "status": "처리중 (In Progress)",
+          "stage": "진행중",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "5.23.0",
+          "versionRaw": "5.23.0",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-06-30T04:46:00.000Z",
+          "createdDate": "2026-06-30",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/VISALOAN-iOS-VISA-LOAN-CASE-38f73fbd19518033b7ccd979dbf3e435",
+          "lastEditedAt": "2026-06-30T05:41:00.000Z"
+        },
+        {
+          "id": "ISSUE-989",
+          "title": "[VISALOAN][iOS] 비로그인 상태로 VISA LOAN 배너 선택 시 로그인 팝업 노출 현상  ",
+          "status": "개발 완료 (Dev Done)",
+          "stage": "종료",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "5.23.0",
+          "versionRaw": "5.23.0",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-06-30T04:19:00.000Z",
+          "createdDate": "2026-06-30",
+          "fixedAt": "2026-06-30T07:20:00.000Z",
+          "fixedDate": "2026-06-30",
+          "closedAt": "2026-06-30T07:20:00.000Z",
+          "closedDate": "2026-06-30",
+          "url": "https://app.notion.com/p/VISALOAN-iOS-VISA-LOAN-38f73fbd1951803abafac0cb5c2c9d2d",
+          "lastEditedAt": "2026-06-30T07:20:00.000Z"
+        },
+        {
+          "id": "ISSUE-988",
+          "title": "[VISALOAN][홈배너][다국어] 인도네시아로 설정 시 배너 문구 기획서와 상이 ",
+          "status": "처리중 (In Progress)",
+          "stage": "진행중",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "5.23.0",
+          "versionRaw": "5.23.0",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-06-30T01:46:00.000Z",
+          "createdDate": "2026-06-30",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/VISALOAN-38f73fbd195180a79ec2cb3cd1fabe2f",
+          "lastEditedAt": "2026-06-30T04:10:00.000Z"
+        },
+        {
           "id": "ISSUE-987",
           "title": "[게이미피케이션] 추가 인증 완료 시 적립금 지급되지 않는 현상 ",
           "status": "등록 (Registered)",
@@ -1499,13 +1654,13 @@
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/38f73fbd19518012adbaf717f595af08",
-          "lastEditedAt": "2026-06-30T01:21:00.000Z"
+          "lastEditedAt": "2026-06-30T01:36:00.000Z"
         },
         {
           "id": "ISSUE-986",
           "title": "[VISALOAN][홈배너][iOS] 홈 배너 아이콘 기획서와 상이 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
+          "status": "배정 (Assigned)",
+          "stage": "배정",
           "severity": "Minor",
           "priority": "Medium",
           "assignee": "미지정",
@@ -1520,11 +1675,11 @@
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/VISALOAN-iOS-38f73fbd1951805dbef8db14201b5f3c",
-          "lastEditedAt": "2026-06-30T00:47:00.000Z"
+          "lastEditedAt": "2026-06-30T04:15:00.000Z"
         },
         {
           "id": "ISSUE-985",
-          "title": "[VISA LOAN][AOS] 대출 상담 신청 페이지 다국어 적용 안 되는 현상 ",
+          "title": "[VISA LOAN]대출 상담 신청 페이지 다국어 적용 안 되는 현상 ",
           "status": "등록 (Registered)",
           "stage": "등록",
           "severity": "Minor",
@@ -1540,173 +1695,26 @@
           "fixedDate": "",
           "closedAt": "",
           "closedDate": "",
-          "url": "https://app.notion.com/p/VISA-LOAN-AOS-38e73fbd195180a3bb89eaf83c2525b8",
-          "lastEditedAt": "2026-06-30T00:00:00.000Z"
-        },
-        {
-          "id": "ISSUE-984",
-          "title": "[구인구직][다국어] 대만으로 언어 변경 시 문구 미노출 되는 현상",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "5.23.0",
-          "versionRaw": "5.23.0",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-06-29T06:25:00.000Z",
-          "createdDate": "2026-06-29",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/38e73fbd195180d0bde5fcbacc89220d",
-          "lastEditedAt": "2026-06-30T00:09:00.000Z"
-        },
-        {
-          "id": "ISSUE-983",
-          "title": "[구인구직][다국어] 크메르어(캄보디아) 외 타다국어 설정 시 배너 문구 기획서와 상이",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "5.23.0",
-          "versionRaw": "5.23.0",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-06-29T04:40:00.000Z",
-          "createdDate": "2026-06-29",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/38e73fbd1951805a9b3ad5432cc9c400",
-          "lastEditedAt": "2026-06-30T00:00:00.000Z"
-        },
-        {
-          "id": "ISSUE-981",
-          "title": "[iOS] 우르드어(파키스탄) 언어로 변경 시 우측 정렬 안 되는 현상 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "5.23.0",
-          "versionRaw": "5.23.0",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-06-26T07:35:00.000Z",
-          "createdDate": "2026-06-26",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/iOS-38b73fbd195180c689c8cbd26f9c5d27",
-          "lastEditedAt": "2026-06-30T00:00:00.000Z"
-        },
-        {
-          "id": "ISSUE-980",
-          "title": "[게이미피케이션][다국어] 일본어로 설정 시 럭키볼/앱 흔들기 한국어 노출 현상",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "5.23.0",
-          "versionRaw": "5.23.0",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-06-26T06:59:00.000Z",
-          "createdDate": "2026-06-26",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/38b73fbd19518046bc1deebe6faa1f0a",
-          "lastEditedAt": "2026-06-30T01:01:00.000Z"
-        },
-        {
-          "id": "ISSUE-979",
-          "title": "[편의점충전][다국어] 중국어 번체 설정 시 ‘세븐일레븐’ → 시간 노출 현상 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "5.23.0",
-          "versionRaw": "5.23.0",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-06-26T06:18:00.000Z",
-          "createdDate": "2026-06-26",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/38b73fbd1951800d94b5cb81e5720e08",
-          "lastEditedAt": "2026-06-30T00:00:00.000Z"
-        },
-        {
-          "id": "ISSUE-978",
-          "title": "[다국어]충전 수단 리스트 목록 내 ‘편의점’ 문구 다국어 미적용 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "Backlog",
-          "versionRaw": "Backlog",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-06-26T06:18:00.000Z",
-          "createdDate": "2026-06-26",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/38b73fbd1951800982c1c3918a044811",
-          "lastEditedAt": "2026-06-26T06:30:00.000Z"
-        },
-        {
-          "id": "ISSUE-977",
-          "title": "[외화충전] 충전 시도 시 ‘월렛 보유 한도 팝업’ 노출 되며 충전 불가능 한 현상 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Major",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "5.23.0",
-          "versionRaw": "5.23.0",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-06-26T05:36:00.000Z",
-          "createdDate": "2026-06-26",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/38b73fbd19518075a7ecd3aea7653632",
-          "lastEditedAt": "2026-06-30T00:00:00.000Z"
+          "url": "https://app.notion.com/p/VISA-LOAN-38e73fbd195180a3bb89eaf83c2525b8",
+          "lastEditedAt": "2026-06-30T05:50:00.000Z"
         }
       ]
     },
     "한패스": {
       "summary": {
-        "total": 567,
-        "new": 64,
-        "inProgress": 0,
+        "total": 574,
+        "new": 61,
+        "inProgress": 8,
         "fixed": 0,
-        "closed": 445,
-        "todayNew": 2,
-        "newDelta": -1
+        "closed": 446,
+        "todayNew": 9,
+        "newDelta": 6
       },
       "funnel": [
         {
           "stage": "등록",
-          "count": 64,
-          "rate": 11.3,
+          "count": 61,
+          "rate": 10.6,
           "width": 18
         },
         {
@@ -1717,14 +1725,14 @@
         },
         {
           "stage": "배정",
-          "count": 0,
-          "rate": 0.0,
+          "count": 1,
+          "rate": 0.2,
           "width": 18
         },
         {
           "stage": "진행중",
-          "count": 0,
-          "rate": 0.0,
+          "count": 8,
+          "rate": 1.4,
           "width": 18
         },
         {
@@ -1736,13 +1744,13 @@
         {
           "stage": "QA확인",
           "count": 58,
-          "rate": 10.2,
+          "rate": 10.1,
           "width": 18
         },
         {
           "stage": "종료",
-          "count": 445,
-          "rate": 78.5,
+          "count": 446,
+          "rate": 77.7,
           "width": 100
         }
       ],
@@ -1952,10 +1960,10 @@
         },
         {
           "date": "2026-06-30",
-          "new": 2,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": -1
+          "new": 9,
+          "fixed": 1,
+          "closed": 1,
+          "deltaNew": 6
         }
       ],
       "versions": [
@@ -2337,29 +2345,41 @@
         },
         {
           "version": "5.23.0",
-          "total": 12,
-          "criticalMajor": 4,
-          "doneRate": 0.0,
+          "total": 19,
+          "criticalMajor": 7,
+          "doneRate": 5.3,
           "status": [
             {
               "label": "등록",
-              "count": 12
+              "count": 9
+            },
+            {
+              "label": "배정",
+              "count": 1
+            },
+            {
+              "label": "진행중",
+              "count": 8
+            },
+            {
+              "label": "종료",
+              "count": 1
             }
           ],
           "severity": [
             {
               "label": "Major",
-              "count": 4
+              "count": 7
             },
             {
               "label": "Minor",
-              "count": 8
+              "count": 12
             }
           ],
           "priority": [
             {
               "label": "Medium",
-              "count": 12
+              "count": 19
             }
           ]
         },
@@ -2426,7 +2446,15 @@
           "status": [
             {
               "label": "등록",
-              "count": 64
+              "count": 61
+            },
+            {
+              "label": "배정",
+              "count": 1
+            },
+            {
+              "label": "진행중",
+              "count": 8
             },
             {
               "label": "QA확인",
@@ -2434,7 +2462,7 @@
             },
             {
               "label": "종료",
-              "count": 445
+              "count": 446
             }
           ],
           "severity": [
@@ -2444,11 +2472,11 @@
             },
             {
               "label": "Major",
-              "count": 126
+              "count": 129
             },
             {
               "label": "Minor",
-              "count": 316
+              "count": 320
             },
             {
               "label": "미지정",
@@ -2470,7 +2498,7 @@
             },
             {
               "label": "Medium",
-              "count": 525
+              "count": 532
             },
             {
               "label": "Low",
@@ -2693,10 +2721,10 @@
         },
         {
           "date": "2026-06-30",
-          "new": 2,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": -1
+          "new": 9,
+          "fixed": 1,
+          "closed": 1,
+          "deltaNew": 6
         }
       ],
       "reportBoard": {
@@ -2726,6 +2754,153 @@
       },
       "recent": [
         {
+          "id": "ISSUE-994",
+          "title": "[메인 부가서비스 순서] 계절근로자 보험 신청 가능한 현상 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "5.23.0",
+          "versionRaw": "5.23.0",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-06-30T06:47:00.000Z",
+          "createdDate": "2026-06-30",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/38f73fbd1951801a9f1eff42bca599a8",
+          "lastEditedAt": "2026-06-30T07:00:00.000Z"
+        },
+        {
+          "id": "ISSUE-993",
+          "title": "[VISALOAN][다국어] 미얀마로 설정 시 VISA LOAN 최상단 배너 문구 기획서와 상이 ",
+          "status": "처리중 (In Progress)",
+          "stage": "진행중",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "5.23.0",
+          "versionRaw": "5.23.0",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-06-30T06:20:00.000Z",
+          "createdDate": "2026-06-30",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/VISALOAN-VISA-LOAN-38f73fbd1951803f9af7f93313705c3c",
+          "lastEditedAt": "2026-06-30T06:58:00.000Z"
+        },
+        {
+          "id": "ISSUE-992",
+          "title": "[VISALOAN][다국어] 베트남으로 설정 시 VISA LOAN 최상단 배너 문구 기획서와 상이 ",
+          "status": "처리중 (In Progress)",
+          "stage": "진행중",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "5.23.0",
+          "versionRaw": "5.23.0",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-06-30T05:49:00.000Z",
+          "createdDate": "2026-06-30",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/VISALOAN-VISA-LOAN-38f73fbd19518014a8dac42b58f441ed",
+          "lastEditedAt": "2026-06-30T06:58:00.000Z"
+        },
+        {
+          "id": "ISSUE-991",
+          "title": "[VISALOAN][다국어] 인도네시아로 설정 시 VISA LOAN 최상단 배너 문구 기획서와 상이 ",
+          "status": "처리중 (In Progress)",
+          "stage": "진행중",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "5.23.0",
+          "versionRaw": "5.23.0",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-06-30T05:31:00.000Z",
+          "createdDate": "2026-06-30",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/VISALOAN-VISA-LOAN-38f73fbd195180e89234d288f5d8bc76",
+          "lastEditedAt": "2026-06-30T06:58:00.000Z"
+        },
+        {
+          "id": "ISSUE-990",
+          "title": "[VISALOAN][iOS] 자동계좌 미등록 계정으로 VISA LOAN 배너 선택 시 자동계좌 등록 CASE 화면으로 이동하는 현상 ",
+          "status": "처리중 (In Progress)",
+          "stage": "진행중",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "5.23.0",
+          "versionRaw": "5.23.0",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-06-30T04:46:00.000Z",
+          "createdDate": "2026-06-30",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/VISALOAN-iOS-VISA-LOAN-CASE-38f73fbd19518033b7ccd979dbf3e435",
+          "lastEditedAt": "2026-06-30T05:41:00.000Z"
+        },
+        {
+          "id": "ISSUE-989",
+          "title": "[VISALOAN][iOS] 비로그인 상태로 VISA LOAN 배너 선택 시 로그인 팝업 노출 현상  ",
+          "status": "개발 완료 (Dev Done)",
+          "stage": "종료",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "5.23.0",
+          "versionRaw": "5.23.0",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-06-30T04:19:00.000Z",
+          "createdDate": "2026-06-30",
+          "fixedAt": "2026-06-30T07:20:00.000Z",
+          "fixedDate": "2026-06-30",
+          "closedAt": "2026-06-30T07:20:00.000Z",
+          "closedDate": "2026-06-30",
+          "url": "https://app.notion.com/p/VISALOAN-iOS-VISA-LOAN-38f73fbd1951803abafac0cb5c2c9d2d",
+          "lastEditedAt": "2026-06-30T07:20:00.000Z"
+        },
+        {
+          "id": "ISSUE-988",
+          "title": "[VISALOAN][홈배너][다국어] 인도네시아로 설정 시 배너 문구 기획서와 상이 ",
+          "status": "처리중 (In Progress)",
+          "stage": "진행중",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "5.23.0",
+          "versionRaw": "5.23.0",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-06-30T01:46:00.000Z",
+          "createdDate": "2026-06-30",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/VISALOAN-38f73fbd195180a79ec2cb3cd1fabe2f",
+          "lastEditedAt": "2026-06-30T04:10:00.000Z"
+        },
+        {
           "id": "ISSUE-987",
           "title": "[게이미피케이션] 추가 인증 완료 시 적립금 지급되지 않는 현상 ",
           "status": "등록 (Registered)",
@@ -2744,13 +2919,13 @@
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/38f73fbd19518012adbaf717f595af08",
-          "lastEditedAt": "2026-06-30T01:21:00.000Z"
+          "lastEditedAt": "2026-06-30T01:36:00.000Z"
         },
         {
           "id": "ISSUE-986",
           "title": "[VISALOAN][홈배너][iOS] 홈 배너 아이콘 기획서와 상이 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
+          "status": "배정 (Assigned)",
+          "stage": "배정",
           "severity": "Minor",
           "priority": "Medium",
           "assignee": "미지정",
@@ -2765,11 +2940,11 @@
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/VISALOAN-iOS-38f73fbd1951805dbef8db14201b5f3c",
-          "lastEditedAt": "2026-06-30T00:47:00.000Z"
+          "lastEditedAt": "2026-06-30T04:15:00.000Z"
         },
         {
           "id": "ISSUE-985",
-          "title": "[VISA LOAN][AOS] 대출 상담 신청 페이지 다국어 적용 안 되는 현상 ",
+          "title": "[VISA LOAN]대출 상담 신청 페이지 다국어 적용 안 되는 현상 ",
           "status": "등록 (Registered)",
           "stage": "등록",
           "severity": "Minor",
@@ -2785,173 +2960,26 @@
           "fixedDate": "",
           "closedAt": "",
           "closedDate": "",
-          "url": "https://app.notion.com/p/VISA-LOAN-AOS-38e73fbd195180a3bb89eaf83c2525b8",
-          "lastEditedAt": "2026-06-30T00:00:00.000Z"
-        },
-        {
-          "id": "ISSUE-984",
-          "title": "[구인구직][다국어] 대만으로 언어 변경 시 문구 미노출 되는 현상",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "5.23.0",
-          "versionRaw": "5.23.0",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-06-29T06:25:00.000Z",
-          "createdDate": "2026-06-29",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/38e73fbd195180d0bde5fcbacc89220d",
-          "lastEditedAt": "2026-06-30T00:09:00.000Z"
-        },
-        {
-          "id": "ISSUE-983",
-          "title": "[구인구직][다국어] 크메르어(캄보디아) 외 타다국어 설정 시 배너 문구 기획서와 상이",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "5.23.0",
-          "versionRaw": "5.23.0",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-06-29T04:40:00.000Z",
-          "createdDate": "2026-06-29",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/38e73fbd1951805a9b3ad5432cc9c400",
-          "lastEditedAt": "2026-06-30T00:00:00.000Z"
-        },
-        {
-          "id": "ISSUE-981",
-          "title": "[iOS] 우르드어(파키스탄) 언어로 변경 시 우측 정렬 안 되는 현상 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "5.23.0",
-          "versionRaw": "5.23.0",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-06-26T07:35:00.000Z",
-          "createdDate": "2026-06-26",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/iOS-38b73fbd195180c689c8cbd26f9c5d27",
-          "lastEditedAt": "2026-06-30T00:00:00.000Z"
-        },
-        {
-          "id": "ISSUE-980",
-          "title": "[게이미피케이션][다국어] 일본어로 설정 시 럭키볼/앱 흔들기 한국어 노출 현상",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "5.23.0",
-          "versionRaw": "5.23.0",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-06-26T06:59:00.000Z",
-          "createdDate": "2026-06-26",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/38b73fbd19518046bc1deebe6faa1f0a",
-          "lastEditedAt": "2026-06-30T01:01:00.000Z"
-        },
-        {
-          "id": "ISSUE-979",
-          "title": "[편의점충전][다국어] 중국어 번체 설정 시 ‘세븐일레븐’ → 시간 노출 현상 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "5.23.0",
-          "versionRaw": "5.23.0",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-06-26T06:18:00.000Z",
-          "createdDate": "2026-06-26",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/38b73fbd1951800d94b5cb81e5720e08",
-          "lastEditedAt": "2026-06-30T00:00:00.000Z"
-        },
-        {
-          "id": "ISSUE-978",
-          "title": "[다국어]충전 수단 리스트 목록 내 ‘편의점’ 문구 다국어 미적용 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "Backlog",
-          "versionRaw": "Backlog",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-06-26T06:18:00.000Z",
-          "createdDate": "2026-06-26",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/38b73fbd1951800982c1c3918a044811",
-          "lastEditedAt": "2026-06-26T06:30:00.000Z"
-        },
-        {
-          "id": "ISSUE-977",
-          "title": "[외화충전] 충전 시도 시 ‘월렛 보유 한도 팝업’ 노출 되며 충전 불가능 한 현상 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Major",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "5.23.0",
-          "versionRaw": "5.23.0",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-06-26T05:36:00.000Z",
-          "createdDate": "2026-06-26",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/38b73fbd19518075a7ecd3aea7653632",
-          "lastEditedAt": "2026-06-30T00:00:00.000Z"
+          "url": "https://app.notion.com/p/VISA-LOAN-38e73fbd195180a3bb89eaf83c2525b8",
+          "lastEditedAt": "2026-06-30T05:50:00.000Z"
         }
       ]
     },
     "GoHanpass": {
       "summary": {
         "total": 178,
-        "new": 24,
+        "new": 23,
         "inProgress": 0,
         "fixed": 0,
-        "closed": 153,
+        "closed": 154,
         "todayNew": 0,
         "newDelta": 0
       },
       "funnel": [
         {
           "stage": "등록",
-          "count": 24,
-          "rate": 13.5,
+          "count": 23,
+          "rate": 12.9,
           "width": 18
         },
         {
@@ -2986,8 +3014,8 @@
         },
         {
           "stage": "종료",
-          "count": 153,
-          "rate": 86.0,
+          "count": 154,
+          "rate": 86.5,
           "width": 100
         }
       ],
@@ -3198,8 +3226,8 @@
         {
           "date": "2026-06-30",
           "new": 0,
-          "fixed": 0,
-          "closed": 0,
+          "fixed": 1,
+          "closed": 1,
           "deltaNew": 0
         }
       ],
@@ -3280,11 +3308,11 @@
           "version": "[G.H]v1.0.2-26.07",
           "total": 35,
           "criticalMajor": 15,
-          "doneRate": 48.6,
+          "doneRate": 51.4,
           "status": [
             {
               "label": "등록",
-              "count": 18
+              "count": 17
             },
             {
               "label": "QA확인",
@@ -3292,7 +3320,7 @@
             },
             {
               "label": "종료",
-              "count": 16
+              "count": 17
             }
           ],
           "severity": [
@@ -3347,7 +3375,7 @@
           "status": [
             {
               "label": "등록",
-              "count": 24
+              "count": 23
             },
             {
               "label": "QA확인",
@@ -3355,7 +3383,7 @@
             },
             {
               "label": "종료",
-              "count": 153
+              "count": 154
             }
           ],
           "severity": [
@@ -3591,8 +3619,8 @@
         {
           "date": "2026-06-30",
           "new": 0,
-          "fixed": 0,
-          "closed": 0,
+          "fixed": 1,
+          "closed": 1,
           "deltaNew": 0
         }
       ],
@@ -3604,11 +3632,11 @@
           },
           {
             "label": "미완료",
-            "count": 1
+            "count": 0
           },
           {
             "label": "완료",
-            "count": 3
+            "count": 4
           },
           {
             "label": "결함 등록 완료",
@@ -3623,8 +3651,8 @@
           {
             "domain": "GoHanpass",
             "title": "[GoHanpass] 여권 인증 후 셀카 인증 단계 진행 불가",
-            "status": "검토",
-            "processingStatus": "결함 등록 완료",
+            "status": "완료",
+            "processingStatus": "결함 수정 완료",
             "bugType": "결함",
             "platform": "iOS",
             "reporter": "박세희 (Christy Park)",
@@ -3728,8 +3756,8 @@
         {
           "id": "ISSUE-967",
           "title": "[iOS] 여권 인증 완료 후 셀카 인증 단계 진행 불가",
-          "status": "등록 (Registered)",
-          "stage": "등록",
+          "status": "완료 (Done)",
+          "stage": "종료",
           "severity": "Major",
           "priority": "Medium",
           "assignee": "미지정",
@@ -3739,12 +3767,12 @@
           "os": "미지정",
           "createdAt": "2026-06-24T08:03:00.000Z",
           "createdDate": "2026-06-24",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
+          "fixedAt": "2026-06-30T06:46:00.000Z",
+          "fixedDate": "2026-06-30",
+          "closedAt": "2026-06-30T06:46:00.000Z",
+          "closedDate": "2026-06-30",
           "url": "https://app.notion.com/p/iOS-38973fbd195180f99375df9a4bdaa6c2",
-          "lastEditedAt": "2026-06-25T00:40:00.000Z"
+          "lastEditedAt": "2026-06-30T06:46:00.000Z"
         },
         {
           "id": "ISSUE-966",

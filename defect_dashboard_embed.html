@@ -376,7 +376,7 @@
     </div>
   </div>
   <script id="dashboard-data" type="application/json">{
-  "generatedAt": "2026-07-06T05:56:29+00:00",
+  "generatedAt": "2026-07-06T12:24:45+00:00",
   "days": 30,
   "domainOrder": [
     "한패스",
@@ -385,19 +385,19 @@
   "domains": {
     "ALL": {
       "summary": {
-        "total": 762,
-        "new": 80,
+        "total": 764,
+        "new": 82,
         "inProgress": 0,
         "fixed": 0,
-        "closed": 606,
-        "todayNew": 0,
-        "newDelta": 0
+        "closed": 605,
+        "todayNew": 2,
+        "newDelta": 2
       },
       "funnel": [
         {
           "stage": "등록",
-          "count": 80,
-          "rate": 10.5,
+          "count": 82,
+          "rate": 10.7,
           "width": 18
         },
         {
@@ -426,14 +426,14 @@
         },
         {
           "stage": "QA확인",
-          "count": 76,
-          "rate": 10.0,
+          "count": 77,
+          "rate": 10.1,
           "width": 18
         },
         {
           "stage": "종료",
-          "count": 606,
-          "rate": 79.5,
+          "count": 605,
+          "rate": 79.2,
           "width": 100
         }
       ],
@@ -643,10 +643,10 @@
         },
         {
           "date": "2026-07-06",
-          "new": 0,
+          "new": 2,
           "fixed": 4,
-          "closed": 3,
-          "deltaNew": 0
+          "closed": 2,
+          "deltaNew": 2
         }
       ],
       "versions": [
@@ -1103,34 +1103,38 @@
           ]
         },
         {
-          "version": "5.19.0",
-          "total": 24,
-          "criticalMajor": 3,
-          "doneRate": 79.2,
+          "version": "5.23.0",
+          "total": 25,
+          "criticalMajor": 9,
+          "doneRate": 88.0,
           "status": [
             {
               "label": "등록",
-              "count": 5
+              "count": 3
+            },
+            {
+              "label": "QA확인",
+              "count": 18
             },
             {
               "label": "종료",
-              "count": 19
+              "count": 4
             }
           ],
           "severity": [
             {
               "label": "Major",
-              "count": 3
+              "count": 9
             },
             {
               "label": "Minor",
-              "count": 21
+              "count": 16
             }
           ],
           "priority": [
             {
               "label": "Medium",
-              "count": 24
+              "count": 25
             }
           ]
         }
@@ -1141,21 +1145,21 @@
           "status": [
             {
               "label": "등록",
-              "count": 80
+              "count": 82
             },
             {
               "label": "QA확인",
-              "count": 76
+              "count": 77
             },
             {
               "label": "종료",
-              "count": 606
+              "count": 605
             }
           ],
           "severity": [
             {
               "label": "Critical",
-              "count": 32
+              "count": 34
             },
             {
               "label": "Major",
@@ -1185,7 +1189,7 @@
             },
             {
               "label": "Medium",
-              "count": 719
+              "count": 720
             },
             {
               "label": "Low",
@@ -1193,7 +1197,7 @@
             },
             {
               "label": "긴급",
-              "count": 9
+              "count": 10
             },
             {
               "label": "완료",
@@ -1408,10 +1412,10 @@
         },
         {
           "date": "2026-07-06",
-          "new": 0,
+          "new": 2,
           "fixed": 4,
-          "closed": 3,
-          "deltaNew": 0
+          "closed": 2,
+          "deltaNew": 2
         }
       ],
       "reportBoard": {
@@ -1480,6 +1484,48 @@
         ]
       },
       "recent": [
+        {
+          "id": "ISSUE-1007",
+          "title": "[충전SDK변경][Hanpass][AOS] 교통카드 충전 시 충전 실패 결제 건 환불 안되는 현상 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Critical",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[교통카드]SDK",
+          "versionRaw": "[교통카드]SDK",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-07-06T08:08:00.000Z",
+          "createdDate": "2026-07-06",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/SDK-Hanpass-AOS-39573fbd1951805496f8c567b5d8038f",
+          "lastEditedAt": "2026-07-06T09:18:00.000Z"
+        },
+        {
+          "id": "ISSUE-1006",
+          "title": "[충전SDK변경][Hanpass] 교통카드 충전 불가 현상 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Critical",
+          "priority": "긴급",
+          "assignee": "미지정",
+          "version": "[교통카드]SDK",
+          "versionRaw": "[교통카드]SDK",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-07-06T06:36:00.000Z",
+          "createdDate": "2026-07-06",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/SDK-Hanpass-39573fbd195180cc8d98e28770c3d98c",
+          "lastEditedAt": "2026-07-06T08:37:00.000Z"
+        },
         {
           "id": "ISSUE-1005",
           "title": "[친구초대] 해외 송금 완료 시 리워드 지급 안 되는 현상",
@@ -1647,66 +1693,24 @@
           "closedDate": "",
           "url": "https://app.notion.com/p/AOS-503-39073fbd1951809b960dcc6609aed196",
           "lastEditedAt": "2026-07-01T05:58:00.000Z"
-        },
-        {
-          "id": "ISSUE-996",
-          "title": "[VISALOAN][다국어][AOS] 특정 단말에서 미얀마어로 설정 시 최상단 배너 문구 잘리는 현상 ",
-          "status": "QA 검증 -회귀 (QA Verification)",
-          "stage": "QA확인",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "5.23.0",
-          "versionRaw": "5.23.0",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-06-30T08:33:00.000Z",
-          "createdDate": "2026-06-30",
-          "fixedAt": "2026-07-02T01:09:00.000Z",
-          "fixedDate": "2026-07-02",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/VISALOAN-AOS-38f73fbd1951808daed2dce138e46b35",
-          "lastEditedAt": "2026-07-02T01:09:00.000Z"
-        },
-        {
-          "id": "ISSUE-995",
-          "title": "[내정보관리][다국어][공통] 수정하기 화면 내 주소 정보 영역 다국어 일부 미적용 현상 ",
-          "status": "추후 수정 백로그 이관",
-          "stage": "등록",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "Backlog",
-          "versionRaw": "Backlog",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-06-30T07:48:00.000Z",
-          "createdDate": "2026-06-30",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/38f73fbd195180c8ab13e6e49d0adf67",
-          "lastEditedAt": "2026-07-01T05:33:00.000Z"
         }
       ]
     },
     "한패스": {
       "summary": {
-        "total": 584,
-        "new": 57,
+        "total": 586,
+        "new": 59,
         "inProgress": 0,
         "fixed": 0,
-        "closed": 452,
-        "todayNew": 0,
-        "newDelta": 0
+        "closed": 451,
+        "todayNew": 2,
+        "newDelta": 2
       },
       "funnel": [
         {
           "stage": "등록",
-          "count": 57,
-          "rate": 9.8,
+          "count": 59,
+          "rate": 10.1,
           "width": 18
         },
         {
@@ -1735,14 +1739,14 @@
         },
         {
           "stage": "QA확인",
-          "count": 75,
-          "rate": 12.8,
+          "count": 76,
+          "rate": 13.0,
           "width": 18
         },
         {
           "stage": "종료",
-          "count": 452,
-          "rate": 77.4,
+          "count": 451,
+          "rate": 77.0,
           "width": 100
         }
       ],
@@ -1952,10 +1956,10 @@
         },
         {
           "date": "2026-07-06",
-          "new": 0,
+          "new": 2,
           "fixed": 4,
-          "closed": 3,
-          "deltaNew": 0
+          "closed": 2,
+          "deltaNew": 2
         }
       ],
       "versions": [
@@ -2304,6 +2308,42 @@
           ]
         },
         {
+          "version": "5.23.0",
+          "total": 25,
+          "criticalMajor": 9,
+          "doneRate": 88.0,
+          "status": [
+            {
+              "label": "등록",
+              "count": 3
+            },
+            {
+              "label": "QA확인",
+              "count": 18
+            },
+            {
+              "label": "종료",
+              "count": 4
+            }
+          ],
+          "severity": [
+            {
+              "label": "Major",
+              "count": 9
+            },
+            {
+              "label": "Minor",
+              "count": 16
+            }
+          ],
+          "priority": [
+            {
+              "label": "Medium",
+              "count": 25
+            }
+          ]
+        },
+        {
           "version": "5.19.0",
           "total": 24,
           "criticalMajor": 3,
@@ -2326,42 +2366,6 @@
             {
               "label": "Minor",
               "count": 21
-            }
-          ],
-          "priority": [
-            {
-              "label": "Medium",
-              "count": 24
-            }
-          ]
-        },
-        {
-          "version": "5.23.0",
-          "total": 24,
-          "criticalMajor": 9,
-          "doneRate": 87.5,
-          "status": [
-            {
-              "label": "등록",
-              "count": 3
-            },
-            {
-              "label": "QA확인",
-              "count": 17
-            },
-            {
-              "label": "종료",
-              "count": 4
-            }
-          ],
-          "severity": [
-            {
-              "label": "Major",
-              "count": 9
-            },
-            {
-              "label": "Minor",
-              "count": 15
             }
           ],
           "priority": [
@@ -2442,21 +2446,21 @@
           "status": [
             {
               "label": "등록",
-              "count": 57
+              "count": 59
             },
             {
               "label": "QA확인",
-              "count": 75
+              "count": 76
             },
             {
               "label": "종료",
-              "count": 452
+              "count": 451
             }
           ],
           "severity": [
             {
               "label": "Critical",
-              "count": 30
+              "count": 32
             },
             {
               "label": "Major",
@@ -2486,7 +2490,7 @@
             },
             {
               "label": "Medium",
-              "count": 542
+              "count": 543
             },
             {
               "label": "Low",
@@ -2494,7 +2498,7 @@
             },
             {
               "label": "긴급",
-              "count": 8
+              "count": 9
             },
             {
               "label": "완료",
@@ -2709,10 +2713,10 @@
         },
         {
           "date": "2026-07-06",
-          "new": 0,
+          "new": 2,
           "fixed": 4,
-          "closed": 3,
-          "deltaNew": 0
+          "closed": 2,
+          "deltaNew": 2
         }
       ],
       "reportBoard": {
@@ -2741,6 +2745,48 @@
         "recent": []
       },
       "recent": [
+        {
+          "id": "ISSUE-1007",
+          "title": "[충전SDK변경][Hanpass][AOS] 교통카드 충전 시 충전 실패 결제 건 환불 안되는 현상 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Critical",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[교통카드]SDK",
+          "versionRaw": "[교통카드]SDK",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-07-06T08:08:00.000Z",
+          "createdDate": "2026-07-06",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/SDK-Hanpass-AOS-39573fbd1951805496f8c567b5d8038f",
+          "lastEditedAt": "2026-07-06T09:18:00.000Z"
+        },
+        {
+          "id": "ISSUE-1006",
+          "title": "[충전SDK변경][Hanpass] 교통카드 충전 불가 현상 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Critical",
+          "priority": "긴급",
+          "assignee": "미지정",
+          "version": "[교통카드]SDK",
+          "versionRaw": "[교통카드]SDK",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-07-06T06:36:00.000Z",
+          "createdDate": "2026-07-06",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/SDK-Hanpass-39573fbd195180cc8d98e28770c3d98c",
+          "lastEditedAt": "2026-07-06T08:37:00.000Z"
+        },
         {
           "id": "ISSUE-1005",
           "title": "[친구초대] 해외 송금 완료 시 리워드 지급 안 되는 현상",
@@ -2908,48 +2954,6 @@
           "closedDate": "",
           "url": "https://app.notion.com/p/AOS-503-39073fbd1951809b960dcc6609aed196",
           "lastEditedAt": "2026-07-01T05:58:00.000Z"
-        },
-        {
-          "id": "ISSUE-996",
-          "title": "[VISALOAN][다국어][AOS] 특정 단말에서 미얀마어로 설정 시 최상단 배너 문구 잘리는 현상 ",
-          "status": "QA 검증 -회귀 (QA Verification)",
-          "stage": "QA확인",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "5.23.0",
-          "versionRaw": "5.23.0",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-06-30T08:33:00.000Z",
-          "createdDate": "2026-06-30",
-          "fixedAt": "2026-07-02T01:09:00.000Z",
-          "fixedDate": "2026-07-02",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/VISALOAN-AOS-38f73fbd1951808daed2dce138e46b35",
-          "lastEditedAt": "2026-07-02T01:09:00.000Z"
-        },
-        {
-          "id": "ISSUE-995",
-          "title": "[내정보관리][다국어][공통] 수정하기 화면 내 주소 정보 영역 다국어 일부 미적용 현상 ",
-          "status": "추후 수정 백로그 이관",
-          "stage": "등록",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "Backlog",
-          "versionRaw": "Backlog",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-06-30T07:48:00.000Z",
-          "createdDate": "2026-06-30",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/38f73fbd195180c8ab13e6e49d0adf67",
-          "lastEditedAt": "2026-07-01T05:33:00.000Z"
         }
       ]
     },

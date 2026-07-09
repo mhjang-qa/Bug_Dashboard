@@ -376,7 +376,7 @@
     </div>
   </div>
   <script id="dashboard-data" type="application/json">{
-  "generatedAt": "2026-07-09T01:10:13+00:00",
+  "generatedAt": "2026-07-09T09:05:52+00:00",
   "days": 30,
   "domainOrder": [
     "한패스",
@@ -386,18 +386,18 @@
     "ALL": {
       "summary": {
         "total": 767,
-        "new": 83,
-        "inProgress": 0,
+        "new": 81,
+        "inProgress": 1,
         "fixed": 0,
-        "closed": 625,
+        "closed": 623,
         "todayNew": 1,
         "newDelta": 1
       },
       "funnel": [
         {
           "stage": "등록",
-          "count": 83,
-          "rate": 10.8,
+          "count": 81,
+          "rate": 10.6,
           "width": 18
         },
         {
@@ -414,8 +414,8 @@
         },
         {
           "stage": "진행중",
-          "count": 0,
-          "rate": 0.0,
+          "count": 1,
+          "rate": 0.1,
           "width": 18
         },
         {
@@ -426,14 +426,14 @@
         },
         {
           "stage": "QA확인",
-          "count": 59,
-          "rate": 7.7,
+          "count": 62,
+          "rate": 8.1,
           "width": 18
         },
         {
           "stage": "종료",
-          "count": 625,
-          "rate": 81.5,
+          "count": 623,
+          "rate": 81.2,
           "width": 100
         }
       ],
@@ -630,21 +630,21 @@
         {
           "date": "2026-07-07",
           "new": 2,
-          "fixed": 28,
-          "closed": 28,
+          "fixed": 27,
+          "closed": 27,
           "deltaNew": 0
         },
         {
           "date": "2026-07-08",
           "new": 0,
-          "fixed": 2,
-          "closed": 2,
+          "fixed": 1,
+          "closed": 1,
           "deltaNew": -2
         },
         {
           "date": "2026-07-09",
           "new": 1,
-          "fixed": 0,
+          "fixed": 3,
           "closed": 0,
           "deltaNew": 1
         }
@@ -1141,21 +1141,25 @@
           "status": [
             {
               "label": "등록",
-              "count": 83
+              "count": 81
+            },
+            {
+              "label": "진행중",
+              "count": 1
             },
             {
               "label": "QA확인",
-              "count": 59
+              "count": 62
             },
             {
               "label": "종료",
-              "count": 625
+              "count": 623
             }
           ],
           "severity": [
             {
               "label": "Critical",
-              "count": 36
+              "count": 37
             },
             {
               "label": "Major",
@@ -1167,7 +1171,7 @@
             },
             {
               "label": "미지정",
-              "count": 74
+              "count": 73
             },
             {
               "label": "개선 의견",
@@ -1395,21 +1399,21 @@
         {
           "date": "2026-07-07",
           "new": 2,
-          "fixed": 28,
-          "closed": 28,
+          "fixed": 27,
+          "closed": 27,
           "deltaNew": 0
         },
         {
           "date": "2026-07-08",
           "new": 0,
-          "fixed": 2,
-          "closed": 2,
+          "fixed": 1,
+          "closed": 1,
           "deltaNew": -2
         },
         {
           "date": "2026-07-09",
           "new": 1,
-          "fixed": 0,
+          "fixed": 3,
           "closed": 0,
           "deltaNew": 1
         }
@@ -1482,14 +1486,14 @@
       "recent": [
         {
           "id": "ISSUE-1011",
-          "title": "[충전SDK변경][Go.Hanpass]교통 카드 충전 시 금액 오충전 되는 현상  ",
-          "status": "등록 (Registered)",
+          "title": "[SDK변경][Go.Hanpass]교통 카드 충전 시 금액 오충전 되는 현상  ",
+          "status": "Known-Issue",
           "stage": "등록",
-          "severity": "미지정",
+          "severity": "Critical",
           "priority": "Medium",
           "assignee": "미지정",
-          "version": "[G.H][교통카드]SDK",
-          "versionRaw": "[교통카드]SDK",
+          "version": "[G.H][교통카드]SDK변경",
+          "versionRaw": "[교통카드]SDK변경",
           "domain": "GoHanpass",
           "os": "미지정",
           "createdAt": "2026-07-09T01:00:00.000Z",
@@ -1499,18 +1503,18 @@
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/SDK-Go-Hanpass-39873fbd1951808e9e74c43d8e63c701",
-          "lastEditedAt": "2026-07-09T01:09:00.000Z"
+          "lastEditedAt": "2026-07-09T07:48:00.000Z"
         },
         {
           "id": "ISSUE-1010",
-          "title": "[충전SDK변경][Hanpass][AOS] 카드 태그 화면에서 다크모드 설정 시 앱 크래시 현상 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
+          "title": "[SDK변경][Hanpass][AOS] 카드 태그 화면에서 다크모드 설정 시 앱 크래시 현상 ",
+          "status": "처리중 (In Progress)",
+          "stage": "진행중",
           "severity": "Critical",
           "priority": "Medium",
           "assignee": "미지정",
-          "version": "[교통카드]SDK",
-          "versionRaw": "[교통카드]SDK",
+          "version": "[교통카드]SDK변경",
+          "versionRaw": "[교통카드]SDK변경",
           "domain": "한패스",
           "os": "미지정",
           "createdAt": "2026-07-07T07:48:00.000Z",
@@ -1520,70 +1524,70 @@
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/SDK-Hanpass-AOS-39673fbd19518003b561c4a49b556ce0",
-          "lastEditedAt": "2026-07-08T08:46:00.000Z"
+          "lastEditedAt": "2026-07-09T06:42:00.000Z"
         },
         {
           "id": "ISSUE-1008",
-          "title": "[충전SDK변경][GOHanpass] 교통 카드 충전 불가 현상 ",
-          "status": "개발 완료 (Dev Done)",
-          "stage": "종료",
+          "title": "[SDK변경][Go.Hanpass] 교통 카드 충전 불가 현상 ",
+          "status": "QA 검증 -회귀 (QA Verification)",
+          "stage": "QA확인",
           "severity": "Critical",
           "priority": "Medium",
           "assignee": "미지정",
-          "version": "[G.H][교통카드]SDK",
-          "versionRaw": "[교통카드]SDK",
+          "version": "[G.H][교통카드]SDK변경",
+          "versionRaw": "[교통카드]SDK변경",
           "domain": "GoHanpass",
           "os": "미지정",
           "createdAt": "2026-07-07T00:42:00.000Z",
           "createdDate": "2026-07-07",
-          "fixedAt": "2026-07-08T07:49:00.000Z",
-          "fixedDate": "2026-07-08",
-          "closedAt": "2026-07-08T07:49:00.000Z",
-          "closedDate": "2026-07-08",
-          "url": "https://app.notion.com/p/SDK-GOHanpass-39673fbd195180f786c6e505187c0033",
-          "lastEditedAt": "2026-07-08T07:49:00.000Z"
+          "fixedAt": "2026-07-09T04:50:00.000Z",
+          "fixedDate": "2026-07-09",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/SDK-Go-Hanpass-39673fbd195180f786c6e505187c0033",
+          "lastEditedAt": "2026-07-09T04:50:00.000Z"
         },
         {
           "id": "ISSUE-1007",
-          "title": "[충전SDK변경][Hanpass][AOS] 교통카드 충전 시 충전 실패 결제 건 환불 안되는 현상 ",
-          "status": "개발 완료 (Dev Done)",
-          "stage": "종료",
+          "title": "[SDK변경][Hanpass][AOS] 교통카드 충전 시 충전 실패 결제 건 환불 안되는 현상 ",
+          "status": "QA 검증 -회귀 (QA Verification)",
+          "stage": "QA확인",
           "severity": "Critical",
           "priority": "Medium",
           "assignee": "미지정",
-          "version": "[교통카드]SDK",
-          "versionRaw": "[교통카드]SDK",
+          "version": "[교통카드]SDK변경",
+          "versionRaw": "[교통카드]SDK변경",
           "domain": "한패스",
           "os": "미지정",
           "createdAt": "2026-07-06T08:08:00.000Z",
           "createdDate": "2026-07-06",
-          "fixedAt": "2026-07-07T05:10:00.000Z",
-          "fixedDate": "2026-07-07",
-          "closedAt": "2026-07-07T05:10:00.000Z",
-          "closedDate": "2026-07-07",
+          "fixedAt": "2026-07-09T04:50:00.000Z",
+          "fixedDate": "2026-07-09",
+          "closedAt": "",
+          "closedDate": "",
           "url": "https://app.notion.com/p/SDK-Hanpass-AOS-39573fbd1951805496f8c567b5d8038f",
-          "lastEditedAt": "2026-07-07T05:10:00.000Z"
+          "lastEditedAt": "2026-07-09T04:50:00.000Z"
         },
         {
           "id": "ISSUE-1006",
-          "title": "[충전SDK변경][Hanpass][AOS] 교통카드 충전 불가 현상 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
+          "title": "[SDK변경][Hanpass][AOS] 교통카드 충전 불가 현상 ",
+          "status": "QA 검증 -회귀 (QA Verification)",
+          "stage": "QA확인",
           "severity": "Critical",
           "priority": "긴급",
           "assignee": "미지정",
-          "version": "[교통카드]SDK",
-          "versionRaw": "[교통카드]SDK",
+          "version": "[교통카드]SDK변경",
+          "versionRaw": "[교통카드]SDK변경",
           "domain": "한패스",
           "os": "미지정",
           "createdAt": "2026-07-06T06:36:00.000Z",
           "createdDate": "2026-07-06",
-          "fixedAt": "",
-          "fixedDate": "",
+          "fixedAt": "2026-07-09T04:50:00.000Z",
+          "fixedDate": "2026-07-09",
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/SDK-Hanpass-AOS-39573fbd195180cc8d98e28770c3d98c",
-          "lastEditedAt": "2026-07-07T00:52:00.000Z"
+          "lastEditedAt": "2026-07-09T04:50:00.000Z"
         },
         {
           "id": "ISSUE-1005",
@@ -1695,18 +1699,18 @@
     "한패스": {
       "summary": {
         "total": 587,
-        "new": 59,
-        "inProgress": 0,
+        "new": 57,
+        "inProgress": 1,
         "fixed": 0,
-        "closed": 470,
+        "closed": 469,
         "todayNew": 0,
         "newDelta": 0
       },
       "funnel": [
         {
           "stage": "등록",
-          "count": 59,
-          "rate": 10.1,
+          "count": 57,
+          "rate": 9.7,
           "width": 18
         },
         {
@@ -1723,8 +1727,8 @@
         },
         {
           "stage": "진행중",
-          "count": 0,
-          "rate": 0.0,
+          "count": 1,
+          "rate": 0.2,
           "width": 18
         },
         {
@@ -1735,14 +1739,14 @@
         },
         {
           "stage": "QA확인",
-          "count": 58,
-          "rate": 9.9,
+          "count": 60,
+          "rate": 10.2,
           "width": 18
         },
         {
           "stage": "종료",
-          "count": 470,
-          "rate": 80.1,
+          "count": 469,
+          "rate": 79.9,
           "width": 100
         }
       ],
@@ -1939,8 +1943,8 @@
         {
           "date": "2026-07-07",
           "new": 1,
-          "fixed": 28,
-          "closed": 28,
+          "fixed": 27,
+          "closed": 27,
           "deltaNew": -1
         },
         {
@@ -1953,7 +1957,7 @@
         {
           "date": "2026-07-09",
           "new": 0,
-          "fixed": 0,
+          "fixed": 2,
           "closed": 0,
           "deltaNew": 0
         }
@@ -2430,15 +2434,19 @@
           "status": [
             {
               "label": "등록",
-              "count": 59
+              "count": 57
+            },
+            {
+              "label": "진행중",
+              "count": 1
             },
             {
               "label": "QA확인",
-              "count": 58
+              "count": 60
             },
             {
               "label": "종료",
-              "count": 470
+              "count": 469
             }
           ],
           "severity": [
@@ -2684,8 +2692,8 @@
         {
           "date": "2026-07-07",
           "new": 1,
-          "fixed": 28,
-          "closed": 28,
+          "fixed": 27,
+          "closed": 27,
           "deltaNew": -1
         },
         {
@@ -2698,7 +2706,7 @@
         {
           "date": "2026-07-09",
           "new": 0,
-          "fixed": 0,
+          "fixed": 2,
           "closed": 0,
           "deltaNew": 0
         }
@@ -2731,14 +2739,14 @@
       "recent": [
         {
           "id": "ISSUE-1010",
-          "title": "[충전SDK변경][Hanpass][AOS] 카드 태그 화면에서 다크모드 설정 시 앱 크래시 현상 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
+          "title": "[SDK변경][Hanpass][AOS] 카드 태그 화면에서 다크모드 설정 시 앱 크래시 현상 ",
+          "status": "처리중 (In Progress)",
+          "stage": "진행중",
           "severity": "Critical",
           "priority": "Medium",
           "assignee": "미지정",
-          "version": "[교통카드]SDK",
-          "versionRaw": "[교통카드]SDK",
+          "version": "[교통카드]SDK변경",
+          "versionRaw": "[교통카드]SDK변경",
           "domain": "한패스",
           "os": "미지정",
           "createdAt": "2026-07-07T07:48:00.000Z",
@@ -2748,49 +2756,49 @@
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/SDK-Hanpass-AOS-39673fbd19518003b561c4a49b556ce0",
-          "lastEditedAt": "2026-07-08T08:46:00.000Z"
+          "lastEditedAt": "2026-07-09T06:42:00.000Z"
         },
         {
           "id": "ISSUE-1007",
-          "title": "[충전SDK변경][Hanpass][AOS] 교통카드 충전 시 충전 실패 결제 건 환불 안되는 현상 ",
-          "status": "개발 완료 (Dev Done)",
-          "stage": "종료",
+          "title": "[SDK변경][Hanpass][AOS] 교통카드 충전 시 충전 실패 결제 건 환불 안되는 현상 ",
+          "status": "QA 검증 -회귀 (QA Verification)",
+          "stage": "QA확인",
           "severity": "Critical",
           "priority": "Medium",
           "assignee": "미지정",
-          "version": "[교통카드]SDK",
-          "versionRaw": "[교통카드]SDK",
+          "version": "[교통카드]SDK변경",
+          "versionRaw": "[교통카드]SDK변경",
           "domain": "한패스",
           "os": "미지정",
           "createdAt": "2026-07-06T08:08:00.000Z",
           "createdDate": "2026-07-06",
-          "fixedAt": "2026-07-07T05:10:00.000Z",
-          "fixedDate": "2026-07-07",
-          "closedAt": "2026-07-07T05:10:00.000Z",
-          "closedDate": "2026-07-07",
+          "fixedAt": "2026-07-09T04:50:00.000Z",
+          "fixedDate": "2026-07-09",
+          "closedAt": "",
+          "closedDate": "",
           "url": "https://app.notion.com/p/SDK-Hanpass-AOS-39573fbd1951805496f8c567b5d8038f",
-          "lastEditedAt": "2026-07-07T05:10:00.000Z"
+          "lastEditedAt": "2026-07-09T04:50:00.000Z"
         },
         {
           "id": "ISSUE-1006",
-          "title": "[충전SDK변경][Hanpass][AOS] 교통카드 충전 불가 현상 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
+          "title": "[SDK변경][Hanpass][AOS] 교통카드 충전 불가 현상 ",
+          "status": "QA 검증 -회귀 (QA Verification)",
+          "stage": "QA확인",
           "severity": "Critical",
           "priority": "긴급",
           "assignee": "미지정",
-          "version": "[교통카드]SDK",
-          "versionRaw": "[교통카드]SDK",
+          "version": "[교통카드]SDK변경",
+          "versionRaw": "[교통카드]SDK변경",
           "domain": "한패스",
           "os": "미지정",
           "createdAt": "2026-07-06T06:36:00.000Z",
           "createdDate": "2026-07-06",
-          "fixedAt": "",
-          "fixedDate": "",
+          "fixedAt": "2026-07-09T04:50:00.000Z",
+          "fixedDate": "2026-07-09",
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/SDK-Hanpass-AOS-39573fbd195180cc8d98e28770c3d98c",
-          "lastEditedAt": "2026-07-07T00:52:00.000Z"
+          "lastEditedAt": "2026-07-09T04:50:00.000Z"
         },
         {
           "id": "ISSUE-1005",
@@ -2947,7 +2955,7 @@
         "new": 24,
         "inProgress": 0,
         "fixed": 0,
-        "closed": 155,
+        "closed": 154,
         "todayNew": 1,
         "newDelta": 1
       },
@@ -2984,14 +2992,14 @@
         },
         {
           "stage": "QA확인",
-          "count": 1,
-          "rate": 0.6,
+          "count": 2,
+          "rate": 1.1,
           "width": 18
         },
         {
           "stage": "종료",
-          "count": 155,
-          "rate": 86.1,
+          "count": 154,
+          "rate": 85.6,
           "width": 100
         }
       ],
@@ -3195,14 +3203,14 @@
         {
           "date": "2026-07-08",
           "new": 0,
-          "fixed": 1,
-          "closed": 1,
+          "fixed": 0,
+          "closed": 0,
           "deltaNew": -1
         },
         {
           "date": "2026-07-09",
           "new": 1,
-          "fixed": 0,
+          "fixed": 1,
           "closed": 0,
           "deltaNew": 1
         }
@@ -3345,9 +3353,9 @@
           ]
         },
         {
-          "version": "[G.H][교통카드]SDK",
+          "version": "[G.H][교통카드]SDK변경",
           "total": 2,
-          "criticalMajor": 1,
+          "criticalMajor": 2,
           "doneRate": 50.0,
           "status": [
             {
@@ -3355,18 +3363,14 @@
               "count": 1
             },
             {
-              "label": "종료",
+              "label": "QA확인",
               "count": 1
             }
           ],
           "severity": [
             {
               "label": "Critical",
-              "count": 1
-            },
-            {
-              "label": "미지정",
-              "count": 1
+              "count": 2
             }
           ],
           "priority": [
@@ -3387,17 +3391,17 @@
             },
             {
               "label": "QA확인",
-              "count": 1
+              "count": 2
             },
             {
               "label": "종료",
-              "count": 155
+              "count": 154
             }
           ],
           "severity": [
             {
               "label": "Critical",
-              "count": 3
+              "count": 4
             },
             {
               "label": "Major",
@@ -3406,10 +3410,6 @@
             {
               "label": "Minor",
               "count": 121
-            },
-            {
-              "label": "미지정",
-              "count": 1
             }
           ],
           "priority": [
@@ -3624,14 +3624,14 @@
         {
           "date": "2026-07-08",
           "new": 0,
-          "fixed": 1,
-          "closed": 1,
+          "fixed": 0,
+          "closed": 0,
           "deltaNew": -1
         },
         {
           "date": "2026-07-09",
           "new": 1,
-          "fixed": 0,
+          "fixed": 1,
           "closed": 0,
           "deltaNew": 1
         }
@@ -3704,14 +3704,14 @@
       "recent": [
         {
           "id": "ISSUE-1011",
-          "title": "[충전SDK변경][Go.Hanpass]교통 카드 충전 시 금액 오충전 되는 현상  ",
-          "status": "등록 (Registered)",
+          "title": "[SDK변경][Go.Hanpass]교통 카드 충전 시 금액 오충전 되는 현상  ",
+          "status": "Known-Issue",
           "stage": "등록",
-          "severity": "미지정",
+          "severity": "Critical",
           "priority": "Medium",
           "assignee": "미지정",
-          "version": "[G.H][교통카드]SDK",
-          "versionRaw": "[교통카드]SDK",
+          "version": "[G.H][교통카드]SDK변경",
+          "versionRaw": "[교통카드]SDK변경",
           "domain": "GoHanpass",
           "os": "미지정",
           "createdAt": "2026-07-09T01:00:00.000Z",
@@ -3721,28 +3721,28 @@
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/SDK-Go-Hanpass-39873fbd1951808e9e74c43d8e63c701",
-          "lastEditedAt": "2026-07-09T01:09:00.000Z"
+          "lastEditedAt": "2026-07-09T07:48:00.000Z"
         },
         {
           "id": "ISSUE-1008",
-          "title": "[충전SDK변경][GOHanpass] 교통 카드 충전 불가 현상 ",
-          "status": "개발 완료 (Dev Done)",
-          "stage": "종료",
+          "title": "[SDK변경][Go.Hanpass] 교통 카드 충전 불가 현상 ",
+          "status": "QA 검증 -회귀 (QA Verification)",
+          "stage": "QA확인",
           "severity": "Critical",
           "priority": "Medium",
           "assignee": "미지정",
-          "version": "[G.H][교통카드]SDK",
-          "versionRaw": "[교통카드]SDK",
+          "version": "[G.H][교통카드]SDK변경",
+          "versionRaw": "[교통카드]SDK변경",
           "domain": "GoHanpass",
           "os": "미지정",
           "createdAt": "2026-07-07T00:42:00.000Z",
           "createdDate": "2026-07-07",
-          "fixedAt": "2026-07-08T07:49:00.000Z",
-          "fixedDate": "2026-07-08",
-          "closedAt": "2026-07-08T07:49:00.000Z",
-          "closedDate": "2026-07-08",
-          "url": "https://app.notion.com/p/SDK-GOHanpass-39673fbd195180f786c6e505187c0033",
-          "lastEditedAt": "2026-07-08T07:49:00.000Z"
+          "fixedAt": "2026-07-09T04:50:00.000Z",
+          "fixedDate": "2026-07-09",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/SDK-Go-Hanpass-39673fbd195180f786c6e505187c0033",
+          "lastEditedAt": "2026-07-09T04:50:00.000Z"
         },
         {
           "id": "ISSUE-976",

@@ -345,18 +345,18 @@ def normalize_version_label(value: str, domain: str = "") -> str:
 def version_sort_key(version: str) -> tuple[Any, ...]:
     text = (version or "").strip()
     if not text or text == "미지정":
-        return (3, text)
+        return (3, 0, 0, 0, 0, 0, text)
     if text.startswith("[G.H]") or has_go_hanpass_keyword(text):
         version_key = extract_semver(text)
         if version_key:
             suffix = extract_year_month_suffix(text) or (0, 0)
             return (0, version_key[0], version_key[1], version_key[2], suffix[0], suffix[1], text)
-        return (0, text)
+        return (0, 0, 0, 0, 0, 0, text)
     version_key = extract_semver(text)
     if version_key:
         suffix = extract_year_month_suffix(text) or (0, 0)
         return (1, version_key[0], version_key[1], version_key[2], suffix[0], suffix[1], text)
-    return (2, text)
+    return (2, 0, 0, 0, 0, 0, text)
 
 
 def classify_domain(version: str, title: str = "", url: str = "") -> str:

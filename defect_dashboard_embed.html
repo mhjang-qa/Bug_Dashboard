@@ -376,7 +376,7 @@
     </div>
   </div>
   <script id="dashboard-data" type="application/json">{
-  "generatedAt": "2026-07-15T01:25:26+00:00",
+  "generatedAt": "2026-07-15T07:04:49+00:00",
   "days": 30,
   "domainOrder": [
     "한패스",
@@ -385,19 +385,19 @@
   "domains": {
     "ALL": {
       "summary": {
-        "total": 780,
-        "new": 89,
+        "total": 786,
+        "new": 94,
         "inProgress": 0,
         "fixed": 0,
-        "closed": 628,
-        "todayNew": 0,
-        "newDelta": -6
+        "closed": 629,
+        "todayNew": 6,
+        "newDelta": 0
       },
       "funnel": [
         {
           "stage": "등록",
-          "count": 89,
-          "rate": 11.4,
+          "count": 94,
+          "rate": 12.0,
           "width": 18
         },
         {
@@ -427,13 +427,13 @@
         {
           "stage": "QA확인",
           "count": 63,
-          "rate": 8.1,
+          "rate": 8.0,
           "width": 18
         },
         {
           "stage": "종료",
-          "count": 628,
-          "rate": 80.5,
+          "count": 629,
+          "rate": 80.0,
           "width": 100
         }
       ],
@@ -643,10 +643,10 @@
         },
         {
           "date": "2026-07-15",
-          "new": 0,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": -6
+          "new": 6,
+          "fixed": 1,
+          "closed": 1,
+          "deltaNew": 0
         }
       ],
       "versions": [
@@ -1067,6 +1067,38 @@
           ]
         },
         {
+          "version": "[G.H]v1.0.2-26.07",
+          "total": 24,
+          "criticalMajor": 6,
+          "doneRate": 4.2,
+          "status": [
+            {
+              "label": "등록",
+              "count": 23
+            },
+            {
+              "label": "QA확인",
+              "count": 1
+            }
+          ],
+          "severity": [
+            {
+              "label": "Major",
+              "count": 6
+            },
+            {
+              "label": "Minor",
+              "count": 18
+            }
+          ],
+          "priority": [
+            {
+              "label": "Medium",
+              "count": 24
+            }
+          ]
+        },
+        {
           "version": "5.19.0",
           "total": 24,
           "criticalMajor": 3,
@@ -1097,34 +1129,6 @@
               "count": 24
             }
           ]
-        },
-        {
-          "version": "5.23.0",
-          "total": 22,
-          "criticalMajor": 7,
-          "doneRate": 100.0,
-          "status": [
-            {
-              "label": "종료",
-              "count": 22
-            }
-          ],
-          "severity": [
-            {
-              "label": "Major",
-              "count": 7
-            },
-            {
-              "label": "Minor",
-              "count": 15
-            }
-          ],
-          "priority": [
-            {
-              "label": "Medium",
-              "count": 22
-            }
-          ]
         }
       ],
       "selectedVersion": "ALL",
@@ -1133,7 +1137,7 @@
           "status": [
             {
               "label": "등록",
-              "count": 89
+              "count": 94
             },
             {
               "label": "QA확인",
@@ -1141,7 +1145,7 @@
             },
             {
               "label": "종료",
-              "count": 628
+              "count": 629
             }
           ],
           "severity": [
@@ -1151,11 +1155,11 @@
             },
             {
               "label": "Major",
-              "count": 190
+              "count": 191
             },
             {
               "label": "Minor",
-              "count": 458
+              "count": 463
             },
             {
               "label": "미지정",
@@ -1177,7 +1181,7 @@
             },
             {
               "label": "Medium",
-              "count": 736
+              "count": 742
             },
             {
               "label": "Low",
@@ -1400,10 +1404,10 @@
         },
         {
           "date": "2026-07-15",
-          "new": 0,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": -6
+          "new": 6,
+          "fixed": 1,
+          "closed": 1,
+          "deltaNew": 0
         }
       ],
       "reportBoard": {
@@ -1473,6 +1477,132 @@
       },
       "recent": [
         {
+          "id": "ISSUE-1035",
+          "title": "[카드][이지카드][다국어] 중국어(간체) 외 타 언어로 변경 시 문구 잘리는 현상",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[카드]신규카드-2종",
+          "versionRaw": "[카드]신규카드-2종",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-07-15T06:43:00.000Z",
+          "createdDate": "2026-07-15",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/39e73fbd195180adbe69d1481bbd6d21",
+          "lastEditedAt": "2026-07-15T07:04:00.000Z"
+        },
+        {
+          "id": "ISSUE-1034",
+          "title": "[카드][이지카드][다국어][iOS] 인도네시아 다국어 미적용",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[카드]신규카드-2종",
+          "versionRaw": "[카드]신규카드-2종",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-07-15T06:43:00.000Z",
+          "createdDate": "2026-07-15",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/iOS-39e73fbd1951804bbf3ef1f5e405dd8d",
+          "lastEditedAt": "2026-07-15T07:03:00.000Z"
+        },
+        {
+          "id": "ISSUE-1033",
+          "title": "[카드][이지카드] 이지카드 상세 화면 내 ‘이용안내’ 영역 기획서와 상이",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[카드]신규카드-2종",
+          "versionRaw": "[카드]신규카드-2종",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-07-15T05:30:00.000Z",
+          "createdDate": "2026-07-15",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/39e73fbd1951800bb533fdc09b35184d",
+          "lastEditedAt": "2026-07-15T05:42:00.000Z"
+        },
+        {
+          "id": "ISSUE-1031",
+          "title": "[카드][이지카드] 상세화면 “혜택 1” 문구 기획서와 상이 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[카드]신규카드-2종",
+          "versionRaw": "[카드]신규카드-2종",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-07-15T05:10:00.000Z",
+          "createdDate": "2026-07-15",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/1-39e73fbd195180b79457d88b6d5bedd6",
+          "lastEditedAt": "2026-07-15T05:26:00.000Z"
+        },
+        {
+          "id": "ISSUE-1032",
+          "title": "[카드][이지카드] 이지카드 상세 화면 내 ‘혜택 2’ 영역 기획서와 상이",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[카드]신규카드-2종",
+          "versionRaw": "[카드]신규카드-2종",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-07-15T05:10:00.000Z",
+          "createdDate": "2026-07-15",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/2-39e73fbd1951806cbd96c7fceda5debb",
+          "lastEditedAt": "2026-07-15T05:42:00.000Z"
+        },
+        {
+          "id": "ISSUE-1030",
+          "title": "[기명무기명][회원가입] 등록되지 않은 이메일로 회원가입 진행 시 ‘이미 등록된 이메일’ 팝업 노출 되는 현상 ",
+          "status": "완료 (Done)",
+          "stage": "종료",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[G.H]v1.0.2",
+          "versionRaw": "[G.H]v1.0.2-기명/무기명",
+          "domain": "GoHanpass",
+          "os": "미지정",
+          "createdAt": "2026-07-15T01:42:00.000Z",
+          "createdDate": "2026-07-15",
+          "fixedAt": "2026-07-15T04:33:00.000Z",
+          "fixedDate": "2026-07-15",
+          "closedAt": "2026-07-15T04:33:00.000Z",
+          "closedDate": "2026-07-15",
+          "url": "https://app.notion.com/p/39e73fbd195180f8b777f397430c7c93",
+          "lastEditedAt": "2026-07-15T04:33:00.000Z"
+        },
+        {
           "id": "ISSUE-1028",
           "title": "[기명무기명][공통] 추가 인증 필요 팝업 문구 기획서와 상이 ",
           "status": "완료 (Done)",
@@ -1522,8 +1652,8 @@
           "severity": "Minor",
           "priority": "Medium",
           "assignee": "미지정",
-          "version": "[G.H]v1.0.2",
-          "versionRaw": "[G.H]v1.0.2-기명/무기명",
+          "version": "[G.H]v1.0.2-26.07",
+          "versionRaw": "[G.H]v1.0.2-26.07",
           "domain": "GoHanpass",
           "os": "미지정",
           "createdAt": "2026-07-14T05:13:00.000Z",
@@ -1533,7 +1663,7 @@
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/39d73fbd1951802d86c9ef5350048a02",
-          "lastEditedAt": "2026-07-14T08:56:00.000Z"
+          "lastEditedAt": "2026-07-15T04:33:00.000Z"
         },
         {
           "id": "ISSUE-1024",
@@ -1543,8 +1673,8 @@
           "severity": "Minor",
           "priority": "Medium",
           "assignee": "미지정",
-          "version": "[G.H]v1.0.2",
-          "versionRaw": "[G.H]v1.0.2-기명/무기명",
+          "version": "[G.H]v1.0.2-26.07",
+          "versionRaw": "[G.H]v1.0.2-26.07",
           "domain": "GoHanpass",
           "os": "미지정",
           "createdAt": "2026-07-14T02:44:00.000Z",
@@ -1554,151 +1684,25 @@
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/39d73fbd195180359e7bf418f15c638e",
-          "lastEditedAt": "2026-07-14T08:26:00.000Z"
-        },
-        {
-          "id": "ISSUE-1023",
-          "title": "[기명무기명][회원가입] 카드 신청 유도 팝업 내 ‘지금 카드 신청하기’ 선택 시 홈으로 이동하는 현상",
-          "status": "완료 (Done)",
-          "stage": "종료",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[G.H]v1.0.2",
-          "versionRaw": "[G.H]v1.0.2-기명/무기명",
-          "domain": "GoHanpass",
-          "os": "미지정",
-          "createdAt": "2026-07-14T01:42:00.000Z",
-          "createdDate": "2026-07-14",
-          "fixedAt": "2026-07-14T08:55:00.000Z",
-          "fixedDate": "2026-07-14",
-          "closedAt": "2026-07-14T08:55:00.000Z",
-          "closedDate": "2026-07-14",
-          "url": "https://app.notion.com/p/39d73fbd1951801ab6d5fff8aeb05279",
-          "lastEditedAt": "2026-07-14T08:55:00.000Z"
-        },
-        {
-          "id": "ISSUE-1022",
-          "title": "[기명무기명][회원가입][AOS] 회원가입 완료 화면 내 OS 물리백 시 인증번호 입력 화면 이동 현상 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Major",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[G.H]v1.0.2",
-          "versionRaw": "[G.H]v1.0.2-기명/무기명",
-          "domain": "GoHanpass",
-          "os": "미지정",
-          "createdAt": "2026-07-14T01:37:00.000Z",
-          "createdDate": "2026-07-14",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/AOS-OS-39d73fbd195180d6abb0eeb19e7f0ed4",
-          "lastEditedAt": "2026-07-14T08:27:00.000Z"
-        },
-        {
-          "id": "ISSUE-1021",
-          "title": "[기명무기명][회원가입][다국어] 우르두어 설정 시 영문 노출 현상",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[G.H]v1.0.2",
-          "versionRaw": "[G.H]v1.0.2-기명/무기명",
-          "domain": "GoHanpass",
-          "os": "미지정",
-          "createdAt": "2026-07-13T23:58:00.000Z",
-          "createdDate": "2026-07-13",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/39c73fbd19518071a40af38e6bf58687",
-          "lastEditedAt": "2026-07-14T08:27:00.000Z"
-        },
-        {
-          "id": "ISSUE-1020",
-          "title": "[기명무기명][회원가입][다국어] 중국어 번체 설정 시 사진 확인 팝업 내 다국어 미적용 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[G.H]v1.0.2",
-          "versionRaw": "[G.H]v1.0.2-기명/무기명",
-          "domain": "GoHanpass",
-          "os": "미지정",
-          "createdAt": "2026-07-13T08:55:00.000Z",
-          "createdDate": "2026-07-13",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/39c73fbd195180269bafd8932ba276b4",
-          "lastEditedAt": "2026-07-14T08:27:00.000Z"
-        },
-        {
-          "id": "ISSUE-1019",
-          "title": "[기명무기명][회원가입][다국어] 일본어 설정 시 사진 확인 팝업 내 다국어 미적용 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[G.H]v1.0.2",
-          "versionRaw": "[G.H]v1.0.2-기명/무기명",
-          "domain": "GoHanpass",
-          "os": "미지정",
-          "createdAt": "2026-07-13T08:44:00.000Z",
-          "createdDate": "2026-07-13",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/39c73fbd195180aca8dbe604de50f74b",
-          "lastEditedAt": "2026-07-14T08:27:00.000Z"
-        },
-        {
-          "id": "ISSUE-1018",
-          "title": "[기명무기명][회원가입][다국어] 중국어 간체 설정 시 사진 확인 팝업 내 영문 노출 현상 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[G.H]v1.0.2",
-          "versionRaw": "[G.H]v1.0.2-기명/무기명",
-          "domain": "GoHanpass",
-          "os": "미지정",
-          "createdAt": "2026-07-13T08:44:00.000Z",
-          "createdDate": "2026-07-13",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/39c73fbd19518023bb98dee9d898c36c",
-          "lastEditedAt": "2026-07-14T08:26:00.000Z"
+          "lastEditedAt": "2026-07-15T04:33:00.000Z"
         }
       ]
     },
     "한패스": {
       "summary": {
-        "total": 587,
-        "new": 57,
+        "total": 592,
+        "new": 62,
         "inProgress": 0,
         "fixed": 0,
         "closed": 469,
-        "todayNew": 0,
-        "newDelta": 0
+        "todayNew": 5,
+        "newDelta": 5
       },
       "funnel": [
         {
           "stage": "등록",
-          "count": 57,
-          "rate": 9.7,
+          "count": 62,
+          "rate": 10.5,
           "width": 18
         },
         {
@@ -1728,13 +1732,13 @@
         {
           "stage": "QA확인",
           "count": 61,
-          "rate": 10.4,
+          "rate": 10.3,
           "width": 18
         },
         {
           "stage": "종료",
           "count": 469,
-          "rate": 79.9,
+          "rate": 79.2,
           "width": 100
         }
       ],
@@ -1944,10 +1948,10 @@
         },
         {
           "date": "2026-07-15",
-          "new": 0,
+          "new": 5,
           "fixed": 0,
           "closed": 0,
-          "deltaNew": 0
+          "deltaNew": 5
         }
       ],
       "versions": [
@@ -2422,7 +2426,7 @@
           "status": [
             {
               "label": "등록",
-              "count": 57
+              "count": 62
             },
             {
               "label": "QA확인",
@@ -2444,7 +2448,7 @@
             },
             {
               "label": "Minor",
-              "count": 327
+              "count": 332
             },
             {
               "label": "미지정",
@@ -2466,7 +2470,7 @@
             },
             {
               "label": "Medium",
-              "count": 544
+              "count": 549
             },
             {
               "label": "Low",
@@ -2689,10 +2693,10 @@
         },
         {
           "date": "2026-07-15",
-          "new": 0,
+          "new": 5,
           "fixed": 0,
           "closed": 0,
-          "deltaNew": 0
+          "deltaNew": 5
         }
       ],
       "reportBoard": {
@@ -2721,6 +2725,111 @@
         "recent": []
       },
       "recent": [
+        {
+          "id": "ISSUE-1035",
+          "title": "[카드][이지카드][다국어] 중국어(간체) 외 타 언어로 변경 시 문구 잘리는 현상",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[카드]신규카드-2종",
+          "versionRaw": "[카드]신규카드-2종",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-07-15T06:43:00.000Z",
+          "createdDate": "2026-07-15",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/39e73fbd195180adbe69d1481bbd6d21",
+          "lastEditedAt": "2026-07-15T07:04:00.000Z"
+        },
+        {
+          "id": "ISSUE-1034",
+          "title": "[카드][이지카드][다국어][iOS] 인도네시아 다국어 미적용",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[카드]신규카드-2종",
+          "versionRaw": "[카드]신규카드-2종",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-07-15T06:43:00.000Z",
+          "createdDate": "2026-07-15",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/iOS-39e73fbd1951804bbf3ef1f5e405dd8d",
+          "lastEditedAt": "2026-07-15T07:03:00.000Z"
+        },
+        {
+          "id": "ISSUE-1033",
+          "title": "[카드][이지카드] 이지카드 상세 화면 내 ‘이용안내’ 영역 기획서와 상이",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[카드]신규카드-2종",
+          "versionRaw": "[카드]신규카드-2종",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-07-15T05:30:00.000Z",
+          "createdDate": "2026-07-15",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/39e73fbd1951800bb533fdc09b35184d",
+          "lastEditedAt": "2026-07-15T05:42:00.000Z"
+        },
+        {
+          "id": "ISSUE-1031",
+          "title": "[카드][이지카드] 상세화면 “혜택 1” 문구 기획서와 상이 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[카드]신규카드-2종",
+          "versionRaw": "[카드]신규카드-2종",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-07-15T05:10:00.000Z",
+          "createdDate": "2026-07-15",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/1-39e73fbd195180b79457d88b6d5bedd6",
+          "lastEditedAt": "2026-07-15T05:26:00.000Z"
+        },
+        {
+          "id": "ISSUE-1032",
+          "title": "[카드][이지카드] 이지카드 상세 화면 내 ‘혜택 2’ 영역 기획서와 상이",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[카드]신규카드-2종",
+          "versionRaw": "[카드]신규카드-2종",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-07-15T05:10:00.000Z",
+          "createdDate": "2026-07-15",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/2-39e73fbd1951806cbd96c7fceda5debb",
+          "lastEditedAt": "2026-07-15T05:42:00.000Z"
+        },
         {
           "id": "ISSUE-1010",
           "title": "[SDK변경][Hanpass][AOS] 카드 태그 화면에서 다크모드 설정 시 앱 크래시 현상 ",
@@ -2825,129 +2934,24 @@
           "closedDate": "2026-07-07",
           "url": "https://app.notion.com/p/39173fbd195180dd9dc2fb4b84253b63",
           "lastEditedAt": "2026-07-07T01:59:00.000Z"
-        },
-        {
-          "id": "ISSUE-1002",
-          "title": "[친구초대][다국어][일본어] 한자로 정의된 안내 문구가 히라가나로 노출되는 현상",
-          "status": "완료 (Done)",
-          "stage": "종료",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "5.23.0",
-          "versionRaw": "5.23.0",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-07-02T01:25:00.000Z",
-          "createdDate": "2026-07-02",
-          "fixedAt": "2026-07-07T02:01:00.000Z",
-          "fixedDate": "2026-07-07",
-          "closedAt": "2026-07-07T02:01:00.000Z",
-          "closedDate": "2026-07-07",
-          "url": "https://app.notion.com/p/39173fbd195180f2aaeaeed566e7bca2",
-          "lastEditedAt": "2026-07-07T02:01:00.000Z"
-        },
-        {
-          "id": "ISSUE-1001",
-          "title": "[친구초대][다국어][iOS] 베트남어,뱅골어 설정 시 리워드 금액 문구가 UI 영역을 초과하여 노출되는 현상",
-          "status": "완료 (Done)",
-          "stage": "종료",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "5.23.0",
-          "versionRaw": "5.23.0",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-07-01T07:50:00.000Z",
-          "createdDate": "2026-07-01",
-          "fixedAt": "2026-07-07T01:36:00.000Z",
-          "fixedDate": "2026-07-07",
-          "closedAt": "2026-07-07T01:36:00.000Z",
-          "closedDate": "2026-07-07",
-          "url": "https://app.notion.com/p/iOS-UI-39073fbd195180569263c796899dee08",
-          "lastEditedAt": "2026-07-07T01:36:00.000Z"
-        },
-        {
-          "id": "ISSUE-1000",
-          "title": "[친구초대][다국어] 인도네시아 설정 시  월렛 캐시백 영역 기획서와 상이",
-          "status": "완료 (Done)",
-          "stage": "종료",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "5.23.0",
-          "versionRaw": "5.23.0",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-07-01T07:17:00.000Z",
-          "createdDate": "2026-07-01",
-          "fixedAt": "2026-07-07T02:01:00.000Z",
-          "fixedDate": "2026-07-07",
-          "closedAt": "2026-07-07T02:01:00.000Z",
-          "closedDate": "2026-07-07",
-          "url": "https://app.notion.com/p/39073fbd1951801197d8ffe1566eed21",
-          "lastEditedAt": "2026-07-07T02:01:00.000Z"
-        },
-        {
-          "id": "ISSUE-999",
-          "title": "[친구초대][다국어] 네팔어 설정 시 캐시백 영역 기획서와 상이 ",
-          "status": "결함 아님 (Not an issue)",
-          "stage": "종료",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "Hanpass - Backlog",
-          "versionRaw": "Hanpass - Backlog",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-07-01T06:25:00.000Z",
-          "createdDate": "2026-07-01",
-          "fixedAt": "2026-07-14T08:49:00.000Z",
-          "fixedDate": "2026-07-14",
-          "closedAt": "2026-07-14T08:49:00.000Z",
-          "closedDate": "2026-07-14",
-          "url": "https://app.notion.com/p/39073fbd195180918ba1fe53f5edb455",
-          "lastEditedAt": "2026-07-14T08:49:00.000Z"
-        },
-        {
-          "id": "ISSUE-998",
-          "title": "[친구초대][다국어] 크메르어(캄보디아) 설정 시 캐시백 영역 기획서와 상이 ",
-          "status": "완료 (Done)",
-          "stage": "종료",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "5.23.0",
-          "versionRaw": "5.23.0",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-07-01T06:07:00.000Z",
-          "createdDate": "2026-07-01",
-          "fixedAt": "2026-07-07T01:57:00.000Z",
-          "fixedDate": "2026-07-07",
-          "closedAt": "2026-07-07T01:57:00.000Z",
-          "closedDate": "2026-07-07",
-          "url": "https://app.notion.com/p/39073fbd1951807a8818fe510fce895c",
-          "lastEditedAt": "2026-07-07T01:57:00.000Z"
         }
       ]
     },
     "GoHanpass": {
       "summary": {
-        "total": 193,
+        "total": 194,
         "new": 32,
         "inProgress": 0,
         "fixed": 0,
-        "closed": 159,
-        "todayNew": 0,
-        "newDelta": -6
+        "closed": 160,
+        "todayNew": 1,
+        "newDelta": -5
       },
       "funnel": [
         {
           "stage": "등록",
           "count": 32,
-          "rate": 16.6,
+          "rate": 16.5,
           "width": 20
         },
         {
@@ -2982,8 +2986,8 @@
         },
         {
           "stage": "종료",
-          "count": 159,
-          "rate": 82.4,
+          "count": 160,
+          "rate": 82.5,
           "width": 100
         }
       ],
@@ -3193,10 +3197,10 @@
         },
         {
           "date": "2026-07-15",
-          "new": 0,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": -6
+          "new": 1,
+          "fixed": 1,
+          "closed": 1,
+          "deltaNew": -5
         }
       ],
       "versions": [
@@ -3274,13 +3278,13 @@
         },
         {
           "version": "[G.H]v1.0.2-26.07",
-          "total": 15,
-          "criticalMajor": 5,
-          "doneRate": 6.7,
+          "total": 24,
+          "criticalMajor": 6,
+          "doneRate": 4.2,
           "status": [
             {
               "label": "등록",
-              "count": 14
+              "count": 23
             },
             {
               "label": "QA확인",
@@ -3290,49 +3294,17 @@
           "severity": [
             {
               "label": "Major",
-              "count": 5
+              "count": 6
             },
             {
               "label": "Minor",
-              "count": 10
+              "count": 18
             }
           ],
           "priority": [
             {
               "label": "Medium",
-              "count": 15
-            }
-          ]
-        },
-        {
-          "version": "[G.H]v1.0.2",
-          "total": 13,
-          "criticalMajor": 3,
-          "doneRate": 30.8,
-          "status": [
-            {
-              "label": "등록",
-              "count": 9
-            },
-            {
-              "label": "종료",
-              "count": 4
-            }
-          ],
-          "severity": [
-            {
-              "label": "Major",
-              "count": 3
-            },
-            {
-              "label": "Minor",
-              "count": 10
-            }
-          ],
-          "priority": [
-            {
-              "label": "Medium",
-              "count": 13
+              "count": 24
             }
           ]
         },
@@ -3344,6 +3316,34 @@
           "status": [
             {
               "label": "등록",
+              "count": 5
+            }
+          ],
+          "severity": [
+            {
+              "label": "Major",
+              "count": 3
+            },
+            {
+              "label": "Minor",
+              "count": 2
+            }
+          ],
+          "priority": [
+            {
+              "label": "Medium",
+              "count": 5
+            }
+          ]
+        },
+        {
+          "version": "[G.H]v1.0.2",
+          "total": 5,
+          "criticalMajor": 3,
+          "doneRate": 100.0,
+          "status": [
+            {
+              "label": "종료",
               "count": 5
             }
           ],
@@ -3455,7 +3455,7 @@
             },
             {
               "label": "종료",
-              "count": 159
+              "count": 160
             }
           ],
           "severity": [
@@ -3465,7 +3465,7 @@
             },
             {
               "label": "Major",
-              "count": 58
+              "count": 59
             },
             {
               "label": "Minor",
@@ -3475,7 +3475,7 @@
           "priority": [
             {
               "label": "Medium",
-              "count": 192
+              "count": 193
             },
             {
               "label": "긴급",
@@ -3690,10 +3690,10 @@
         },
         {
           "date": "2026-07-15",
-          "new": 0,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": -6
+          "new": 1,
+          "fixed": 1,
+          "closed": 1,
+          "deltaNew": -5
         }
       ],
       "reportBoard": {
@@ -3763,6 +3763,27 @@
       },
       "recent": [
         {
+          "id": "ISSUE-1030",
+          "title": "[기명무기명][회원가입] 등록되지 않은 이메일로 회원가입 진행 시 ‘이미 등록된 이메일’ 팝업 노출 되는 현상 ",
+          "status": "완료 (Done)",
+          "stage": "종료",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[G.H]v1.0.2",
+          "versionRaw": "[G.H]v1.0.2-기명/무기명",
+          "domain": "GoHanpass",
+          "os": "미지정",
+          "createdAt": "2026-07-15T01:42:00.000Z",
+          "createdDate": "2026-07-15",
+          "fixedAt": "2026-07-15T04:33:00.000Z",
+          "fixedDate": "2026-07-15",
+          "closedAt": "2026-07-15T04:33:00.000Z",
+          "closedDate": "2026-07-15",
+          "url": "https://app.notion.com/p/39e73fbd195180f8b777f397430c7c93",
+          "lastEditedAt": "2026-07-15T04:33:00.000Z"
+        },
+        {
           "id": "ISSUE-1028",
           "title": "[기명무기명][공통] 추가 인증 필요 팝업 문구 기획서와 상이 ",
           "status": "완료 (Done)",
@@ -3812,8 +3833,8 @@
           "severity": "Minor",
           "priority": "Medium",
           "assignee": "미지정",
-          "version": "[G.H]v1.0.2",
-          "versionRaw": "[G.H]v1.0.2-기명/무기명",
+          "version": "[G.H]v1.0.2-26.07",
+          "versionRaw": "[G.H]v1.0.2-26.07",
           "domain": "GoHanpass",
           "os": "미지정",
           "createdAt": "2026-07-14T05:13:00.000Z",
@@ -3823,7 +3844,7 @@
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/39d73fbd1951802d86c9ef5350048a02",
-          "lastEditedAt": "2026-07-14T08:56:00.000Z"
+          "lastEditedAt": "2026-07-15T04:33:00.000Z"
         },
         {
           "id": "ISSUE-1024",
@@ -3833,8 +3854,8 @@
           "severity": "Minor",
           "priority": "Medium",
           "assignee": "미지정",
-          "version": "[G.H]v1.0.2",
-          "versionRaw": "[G.H]v1.0.2-기명/무기명",
+          "version": "[G.H]v1.0.2-26.07",
+          "versionRaw": "[G.H]v1.0.2-26.07",
           "domain": "GoHanpass",
           "os": "미지정",
           "createdAt": "2026-07-14T02:44:00.000Z",
@@ -3844,7 +3865,7 @@
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/39d73fbd195180359e7bf418f15c638e",
-          "lastEditedAt": "2026-07-14T08:26:00.000Z"
+          "lastEditedAt": "2026-07-15T04:33:00.000Z"
         },
         {
           "id": "ISSUE-1023",
@@ -3875,8 +3896,8 @@
           "severity": "Major",
           "priority": "Medium",
           "assignee": "미지정",
-          "version": "[G.H]v1.0.2",
-          "versionRaw": "[G.H]v1.0.2-기명/무기명",
+          "version": "[G.H]v1.0.2-26.07",
+          "versionRaw": "[G.H]v1.0.2-26.07",
           "domain": "GoHanpass",
           "os": "미지정",
           "createdAt": "2026-07-14T01:37:00.000Z",
@@ -3886,7 +3907,7 @@
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/AOS-OS-39d73fbd195180d6abb0eeb19e7f0ed4",
-          "lastEditedAt": "2026-07-14T08:27:00.000Z"
+          "lastEditedAt": "2026-07-15T04:33:00.000Z"
         },
         {
           "id": "ISSUE-1021",
@@ -3896,8 +3917,8 @@
           "severity": "Minor",
           "priority": "Medium",
           "assignee": "미지정",
-          "version": "[G.H]v1.0.2",
-          "versionRaw": "[G.H]v1.0.2-기명/무기명",
+          "version": "[G.H]v1.0.2-26.07",
+          "versionRaw": "[G.H]v1.0.2-26.07",
           "domain": "GoHanpass",
           "os": "미지정",
           "createdAt": "2026-07-13T23:58:00.000Z",
@@ -3907,7 +3928,7 @@
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/39c73fbd19518071a40af38e6bf58687",
-          "lastEditedAt": "2026-07-14T08:27:00.000Z"
+          "lastEditedAt": "2026-07-15T04:33:00.000Z"
         },
         {
           "id": "ISSUE-1020",
@@ -3917,8 +3938,8 @@
           "severity": "Minor",
           "priority": "Medium",
           "assignee": "미지정",
-          "version": "[G.H]v1.0.2",
-          "versionRaw": "[G.H]v1.0.2-기명/무기명",
+          "version": "[G.H]v1.0.2-26.07",
+          "versionRaw": "[G.H]v1.0.2-26.07",
           "domain": "GoHanpass",
           "os": "미지정",
           "createdAt": "2026-07-13T08:55:00.000Z",
@@ -3928,7 +3949,7 @@
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/39c73fbd195180269bafd8932ba276b4",
-          "lastEditedAt": "2026-07-14T08:27:00.000Z"
+          "lastEditedAt": "2026-07-15T04:33:00.000Z"
         },
         {
           "id": "ISSUE-1019",
@@ -3938,8 +3959,8 @@
           "severity": "Minor",
           "priority": "Medium",
           "assignee": "미지정",
-          "version": "[G.H]v1.0.2",
-          "versionRaw": "[G.H]v1.0.2-기명/무기명",
+          "version": "[G.H]v1.0.2-26.07",
+          "versionRaw": "[G.H]v1.0.2-26.07",
           "domain": "GoHanpass",
           "os": "미지정",
           "createdAt": "2026-07-13T08:44:00.000Z",
@@ -3949,28 +3970,7 @@
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/39c73fbd195180aca8dbe604de50f74b",
-          "lastEditedAt": "2026-07-14T08:27:00.000Z"
-        },
-        {
-          "id": "ISSUE-1018",
-          "title": "[기명무기명][회원가입][다국어] 중국어 간체 설정 시 사진 확인 팝업 내 영문 노출 현상 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[G.H]v1.0.2",
-          "versionRaw": "[G.H]v1.0.2-기명/무기명",
-          "domain": "GoHanpass",
-          "os": "미지정",
-          "createdAt": "2026-07-13T08:44:00.000Z",
-          "createdDate": "2026-07-13",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/39c73fbd19518023bb98dee9d898c36c",
-          "lastEditedAt": "2026-07-14T08:26:00.000Z"
+          "lastEditedAt": "2026-07-15T04:33:00.000Z"
         }
       ]
     }

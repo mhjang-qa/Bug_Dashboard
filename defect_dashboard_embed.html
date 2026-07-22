@@ -376,7 +376,7 @@
     </div>
   </div>
   <script id="dashboard-data" type="application/json">{
-  "generatedAt": "2026-07-21T23:53:38+00:00",
+  "generatedAt": "2026-07-22T00:56:28+00:00",
   "days": 30,
   "domainOrder": [
     "한패스",
@@ -385,19 +385,19 @@
   "domains": {
     "ALL": {
       "summary": {
-        "total": 794,
-        "new": 93,
-        "inProgress": 2,
+        "total": 795,
+        "new": 87,
+        "inProgress": 9,
         "fixed": 0,
-        "closed": 635,
-        "todayNew": 3,
-        "newDelta": -1
+        "closed": 634,
+        "todayNew": 1,
+        "newDelta": -2
       },
       "funnel": [
         {
           "stage": "등록",
-          "count": 93,
-          "rate": 11.7,
+          "count": 87,
+          "rate": 10.9,
           "width": 18
         },
         {
@@ -414,8 +414,8 @@
         },
         {
           "stage": "진행중",
-          "count": 2,
-          "rate": 0.3,
+          "count": 9,
+          "rate": 1.1,
           "width": 18
         },
         {
@@ -426,25 +426,18 @@
         },
         {
           "stage": "QA확인",
-          "count": 64,
-          "rate": 8.1,
+          "count": 65,
+          "rate": 8.2,
           "width": 18
         },
         {
           "stage": "종료",
-          "count": 635,
-          "rate": 80.0,
+          "count": 634,
+          "rate": 79.7,
           "width": 100
         }
       ],
       "daily": [
-        {
-          "date": "2026-06-22",
-          "new": 0,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": 0
-        },
         {
           "date": "2026-06-23",
           "new": 3,
@@ -644,9 +637,16 @@
         {
           "date": "2026-07-21",
           "new": 3,
-          "fixed": 6,
-          "closed": 6,
+          "fixed": 5,
+          "closed": 5,
           "deltaNew": -1
+        },
+        {
+          "date": "2026-07-22",
+          "new": 1,
+          "fixed": 1,
+          "closed": 0,
+          "deltaNew": -2
         }
       ],
       "versions": [
@@ -1038,19 +1038,19 @@
           "status": [
             {
               "label": "등록",
-              "count": 25
+              "count": 18
             },
             {
               "label": "진행중",
-              "count": 2
+              "count": 9
             },
             {
               "label": "QA확인",
-              "count": 2
+              "count": 3
             },
             {
               "label": "종료",
-              "count": 2
+              "count": 1
             }
           ],
           "severity": [
@@ -1141,19 +1141,19 @@
           "status": [
             {
               "label": "등록",
-              "count": 93
+              "count": 87
             },
             {
               "label": "진행중",
-              "count": 2
+              "count": 9
             },
             {
               "label": "QA확인",
-              "count": 64
+              "count": 65
             },
             {
               "label": "종료",
-              "count": 635
+              "count": 634
             }
           ],
           "severity": [
@@ -1167,7 +1167,7 @@
             },
             {
               "label": "Minor",
-              "count": 469
+              "count": 470
             },
             {
               "label": "미지정",
@@ -1189,7 +1189,7 @@
             },
             {
               "label": "Medium",
-              "count": 750
+              "count": 751
             },
             {
               "label": "Low",
@@ -1207,13 +1207,6 @@
         }
       },
       "heatmap": [
-        {
-          "date": "2026-06-22",
-          "new": 0,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": 0
-        },
         {
           "date": "2026-06-23",
           "new": 3,
@@ -1413,9 +1406,16 @@
         {
           "date": "2026-07-21",
           "new": 3,
-          "fixed": 6,
-          "closed": 6,
+          "fixed": 5,
+          "closed": 5,
           "deltaNew": -1
+        },
+        {
+          "date": "2026-07-22",
+          "new": 1,
+          "fixed": 1,
+          "closed": 0,
+          "deltaNew": -2
         }
       ],
       "reportBoard": {
@@ -1472,6 +1472,27 @@
       },
       "recent": [
         {
+          "id": "ISSUE-1046",
+          "title": "[방글라데시/즐겨찾기] 하단 안내 문구 기획서와 상이",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "5.23.2",
+          "versionRaw": "5.23.2",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-07-22T00:26:00.000Z",
+          "createdDate": "2026-07-22",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/3a573fbd19518017a0f8d8b9d81e510d",
+          "lastEditedAt": "2026-07-22T00:49:00.000Z"
+        },
+        {
           "id": "ISSUE-1044",
           "title": "[추가인증][다국어] 싱할라어 설정 시 러시아어 노출 되는 현상 ",
           "status": "등록 (Registered)",
@@ -1516,8 +1537,8 @@
         {
           "id": "ISSUE-1041",
           "title": "[추가인증][특정단말] 주소 직접 입력 화면 내 ‘다시 검색하기’ 버튼 가려지는 현상 ",
-          "status": "개발 완료 (Dev Done)",
-          "stage": "종료",
+          "status": "QA 검증 -회귀 (QA Verification)",
+          "stage": "QA확인",
           "severity": "Major",
           "priority": "Medium",
           "assignee": "미지정",
@@ -1527,18 +1548,18 @@
           "os": "미지정",
           "createdAt": "2026-07-21T01:40:00.000Z",
           "createdDate": "2026-07-21",
-          "fixedAt": "2026-07-21T08:52:00.000Z",
-          "fixedDate": "2026-07-21",
-          "closedAt": "2026-07-21T08:52:00.000Z",
-          "closedDate": "2026-07-21",
+          "fixedAt": "2026-07-22T00:03:00.000Z",
+          "fixedDate": "2026-07-22",
+          "closedAt": "",
+          "closedDate": "",
           "url": "https://app.notion.com/p/3a473fbd1951803f9e2bed0301b3593d",
-          "lastEditedAt": "2026-07-21T08:52:00.000Z"
+          "lastEditedAt": "2026-07-22T00:03:00.000Z"
         },
         {
           "id": "ISSUE-1040",
           "title": "[팝업노출][다국어] 쿠폰 팝업 타이틀 문구 기획서와 상이 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
+          "status": "처리중 (In Progress)",
+          "stage": "진행중",
           "severity": "Minor",
           "priority": "Medium",
           "assignee": "미지정",
@@ -1553,13 +1574,13 @@
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/3a373fbd195180609a3ec590515461c2",
-          "lastEditedAt": "2026-07-21T02:41:00.000Z"
+          "lastEditedAt": "2026-07-22T00:36:00.000Z"
         },
         {
           "id": "ISSUE-1039",
           "title": "[팝업노출][다국어] 벵골어 설정 시 카드 신청 팝업 기획서와 상이 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
+          "status": "처리중 (In Progress)",
+          "stage": "진행중",
           "severity": "Minor",
           "priority": "Medium",
           "assignee": "미지정",
@@ -1574,13 +1595,13 @@
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/3a373fbd195180ba9126eb0ca57b4fa0",
-          "lastEditedAt": "2026-07-21T02:41:00.000Z"
+          "lastEditedAt": "2026-07-22T00:36:00.000Z"
         },
         {
           "id": "ISSUE-1038",
           "title": "[팝업노출][다국어] 카드 신청 팝업 다국어 기획서와 상이",
-          "status": "등록 (Registered)",
-          "stage": "등록",
+          "status": "처리중 (In Progress)",
+          "stage": "진행중",
           "severity": "Minor",
           "priority": "Medium",
           "assignee": "미지정",
@@ -1595,7 +1616,7 @@
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/3a373fbd195180c69fb5e08ae648b4e2",
-          "lastEditedAt": "2026-07-21T02:41:00.000Z"
+          "lastEditedAt": "2026-07-22T00:36:00.000Z"
         },
         {
           "id": "ISSUE-1037",
@@ -1659,45 +1680,24 @@
           "closedDate": "",
           "url": "https://app.notion.com/p/39e73fbd195180adbe69d1481bbd6d21",
           "lastEditedAt": "2026-07-16T05:51:00.000Z"
-        },
-        {
-          "id": "ISSUE-1034",
-          "title": "[카드][이지카드][다국어][공통] 인도네시아 다국어 미적용",
-          "status": "완료 (Done)",
-          "stage": "종료",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "5.23.0",
-          "versionRaw": "5.23.0",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-07-15T06:43:00.000Z",
-          "createdDate": "2026-07-15",
-          "fixedAt": "2026-07-21T02:34:00.000Z",
-          "fixedDate": "2026-07-21",
-          "closedAt": "2026-07-21T02:34:00.000Z",
-          "closedDate": "2026-07-21",
-          "url": "https://app.notion.com/p/39e73fbd1951804bbf3ef1f5e405dd8d",
-          "lastEditedAt": "2026-07-21T02:34:00.000Z"
         }
       ]
     },
     "한패스": {
       "summary": {
-        "total": 593,
-        "new": 59,
+        "total": 594,
+        "new": 60,
         "inProgress": 0,
         "fixed": 0,
         "closed": 473,
-        "todayNew": 0,
-        "newDelta": 0
+        "todayNew": 1,
+        "newDelta": 1
       },
       "funnel": [
         {
           "stage": "등록",
-          "count": 59,
-          "rate": 9.9,
+          "count": 60,
+          "rate": 10.1,
           "width": 18
         },
         {
@@ -1733,18 +1733,11 @@
         {
           "stage": "종료",
           "count": 473,
-          "rate": 79.8,
+          "rate": 79.6,
           "width": 100
         }
       ],
       "daily": [
-        {
-          "date": "2026-06-22",
-          "new": 0,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": 0
-        },
         {
           "date": "2026-06-23",
           "new": 0,
@@ -1947,6 +1940,13 @@
           "fixed": 4,
           "closed": 4,
           "deltaNew": 0
+        },
+        {
+          "date": "2026-07-22",
+          "new": 1,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 1
         }
       ],
       "versions": [
@@ -2421,7 +2421,7 @@
           "status": [
             {
               "label": "등록",
-              "count": 59
+              "count": 60
             },
             {
               "label": "QA확인",
@@ -2443,7 +2443,7 @@
             },
             {
               "label": "Minor",
-              "count": 333
+              "count": 334
             },
             {
               "label": "미지정",
@@ -2465,7 +2465,7 @@
             },
             {
               "label": "Medium",
-              "count": 550
+              "count": 551
             },
             {
               "label": "Low",
@@ -2483,13 +2483,6 @@
         }
       },
       "heatmap": [
-        {
-          "date": "2026-06-22",
-          "new": 0,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": 0
-        },
         {
           "date": "2026-06-23",
           "new": 0,
@@ -2692,6 +2685,13 @@
           "fixed": 4,
           "closed": 4,
           "deltaNew": 0
+        },
+        {
+          "date": "2026-07-22",
+          "new": 1,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 1
         }
       ],
       "reportBoard": {
@@ -2720,6 +2720,27 @@
         "recent": []
       },
       "recent": [
+        {
+          "id": "ISSUE-1046",
+          "title": "[방글라데시/즐겨찾기] 하단 안내 문구 기획서와 상이",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "5.23.2",
+          "versionRaw": "5.23.2",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-07-22T00:26:00.000Z",
+          "createdDate": "2026-07-22",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/3a573fbd19518017a0f8d8b9d81e510d",
+          "lastEditedAt": "2026-07-22T00:49:00.000Z"
+        },
         {
           "id": "ISSUE-1036",
           "title": "[카드][이지카드][다국어]중국어(번체) ‘이용안내’ 영역 기획서와 상이",
@@ -2908,46 +2929,25 @@
           "closedDate": "",
           "url": "https://app.notion.com/p/SDK-Hanpass-AOS-39573fbd195180cc8d98e28770c3d98c",
           "lastEditedAt": "2026-07-09T04:50:00.000Z"
-        },
-        {
-          "id": "ISSUE-1005",
-          "title": "[친구초대] 해외 송금 완료 시 리워드 지급 안 되는 현상",
-          "status": "완료 (Done)",
-          "stage": "종료",
-          "severity": "Major",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "5.23.0",
-          "versionRaw": "5.23.0",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-07-03T04:21:00.000Z",
-          "createdDate": "2026-07-03",
-          "fixedAt": "2026-07-07T01:54:00.000Z",
-          "fixedDate": "2026-07-07",
-          "closedAt": "2026-07-07T01:54:00.000Z",
-          "closedDate": "2026-07-07",
-          "url": "https://app.notion.com/p/39273fbd195180ba9235f5952689e8a7",
-          "lastEditedAt": "2026-07-07T01:54:00.000Z"
         }
       ]
     },
     "GoHanpass": {
       "summary": {
         "total": 201,
-        "new": 34,
-        "inProgress": 2,
+        "new": 27,
+        "inProgress": 9,
         "fixed": 0,
-        "closed": 162,
-        "todayNew": 3,
-        "newDelta": -1
+        "closed": 161,
+        "todayNew": 0,
+        "newDelta": -3
       },
       "funnel": [
         {
           "stage": "등록",
-          "count": 34,
-          "rate": 16.9,
-          "width": 21
+          "count": 27,
+          "rate": 13.4,
+          "width": 18
         },
         {
           "stage": "검토",
@@ -2963,8 +2963,8 @@
         },
         {
           "stage": "진행중",
-          "count": 2,
-          "rate": 1.0,
+          "count": 9,
+          "rate": 4.5,
           "width": 18
         },
         {
@@ -2975,25 +2975,18 @@
         },
         {
           "stage": "QA확인",
-          "count": 3,
-          "rate": 1.5,
+          "count": 4,
+          "rate": 2.0,
           "width": 18
         },
         {
           "stage": "종료",
-          "count": 162,
-          "rate": 80.6,
+          "count": 161,
+          "rate": 80.1,
           "width": 100
         }
       ],
       "daily": [
-        {
-          "date": "2026-06-22",
-          "new": 0,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": 0
-        },
         {
           "date": "2026-06-23",
           "new": 3,
@@ -3193,9 +3186,16 @@
         {
           "date": "2026-07-21",
           "new": 3,
-          "fixed": 2,
-          "closed": 2,
+          "fixed": 1,
+          "closed": 1,
           "deltaNew": -1
+        },
+        {
+          "date": "2026-07-22",
+          "new": 0,
+          "fixed": 1,
+          "closed": 0,
+          "deltaNew": -3
         }
       ],
       "versions": [
@@ -3279,19 +3279,19 @@
           "status": [
             {
               "label": "등록",
-              "count": 25
+              "count": 18
             },
             {
               "label": "진행중",
-              "count": 2
+              "count": 9
             },
             {
               "label": "QA확인",
-              "count": 2
+              "count": 3
             },
             {
               "label": "종료",
-              "count": 2
+              "count": 1
             }
           ],
           "severity": [
@@ -3450,19 +3450,19 @@
           "status": [
             {
               "label": "등록",
-              "count": 34
+              "count": 27
             },
             {
               "label": "진행중",
-              "count": 2
+              "count": 9
             },
             {
               "label": "QA확인",
-              "count": 3
+              "count": 4
             },
             {
               "label": "종료",
-              "count": 162
+              "count": 161
             }
           ],
           "severity": [
@@ -3492,13 +3492,6 @@
         }
       },
       "heatmap": [
-        {
-          "date": "2026-06-22",
-          "new": 0,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": 0
-        },
         {
           "date": "2026-06-23",
           "new": 3,
@@ -3698,9 +3691,16 @@
         {
           "date": "2026-07-21",
           "new": 3,
-          "fixed": 2,
-          "closed": 2,
+          "fixed": 1,
+          "closed": 1,
           "deltaNew": -1
+        },
+        {
+          "date": "2026-07-22",
+          "new": 0,
+          "fixed": 1,
+          "closed": 0,
+          "deltaNew": -3
         }
       ],
       "reportBoard": {
@@ -3801,8 +3801,8 @@
         {
           "id": "ISSUE-1041",
           "title": "[추가인증][특정단말] 주소 직접 입력 화면 내 ‘다시 검색하기’ 버튼 가려지는 현상 ",
-          "status": "개발 완료 (Dev Done)",
-          "stage": "종료",
+          "status": "QA 검증 -회귀 (QA Verification)",
+          "stage": "QA확인",
           "severity": "Major",
           "priority": "Medium",
           "assignee": "미지정",
@@ -3812,18 +3812,18 @@
           "os": "미지정",
           "createdAt": "2026-07-21T01:40:00.000Z",
           "createdDate": "2026-07-21",
-          "fixedAt": "2026-07-21T08:52:00.000Z",
-          "fixedDate": "2026-07-21",
-          "closedAt": "2026-07-21T08:52:00.000Z",
-          "closedDate": "2026-07-21",
+          "fixedAt": "2026-07-22T00:03:00.000Z",
+          "fixedDate": "2026-07-22",
+          "closedAt": "",
+          "closedDate": "",
           "url": "https://app.notion.com/p/3a473fbd1951803f9e2bed0301b3593d",
-          "lastEditedAt": "2026-07-21T08:52:00.000Z"
+          "lastEditedAt": "2026-07-22T00:03:00.000Z"
         },
         {
           "id": "ISSUE-1040",
           "title": "[팝업노출][다국어] 쿠폰 팝업 타이틀 문구 기획서와 상이 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
+          "status": "처리중 (In Progress)",
+          "stage": "진행중",
           "severity": "Minor",
           "priority": "Medium",
           "assignee": "미지정",
@@ -3838,13 +3838,13 @@
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/3a373fbd195180609a3ec590515461c2",
-          "lastEditedAt": "2026-07-21T02:41:00.000Z"
+          "lastEditedAt": "2026-07-22T00:36:00.000Z"
         },
         {
           "id": "ISSUE-1039",
           "title": "[팝업노출][다국어] 벵골어 설정 시 카드 신청 팝업 기획서와 상이 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
+          "status": "처리중 (In Progress)",
+          "stage": "진행중",
           "severity": "Minor",
           "priority": "Medium",
           "assignee": "미지정",
@@ -3859,13 +3859,13 @@
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/3a373fbd195180ba9126eb0ca57b4fa0",
-          "lastEditedAt": "2026-07-21T02:41:00.000Z"
+          "lastEditedAt": "2026-07-22T00:36:00.000Z"
         },
         {
           "id": "ISSUE-1038",
           "title": "[팝업노출][다국어] 카드 신청 팝업 다국어 기획서와 상이",
-          "status": "등록 (Registered)",
-          "stage": "등록",
+          "status": "처리중 (In Progress)",
+          "stage": "진행중",
           "severity": "Minor",
           "priority": "Medium",
           "assignee": "미지정",
@@ -3880,7 +3880,7 @@
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/3a373fbd195180c69fb5e08ae648b4e2",
-          "lastEditedAt": "2026-07-21T02:41:00.000Z"
+          "lastEditedAt": "2026-07-22T00:36:00.000Z"
         },
         {
           "id": "ISSUE-1037",

@@ -376,7 +376,7 @@
     </div>
   </div>
   <script id="dashboard-data" type="application/json">{
-  "generatedAt": "2026-07-24T00:56:14+00:00",
+  "generatedAt": "2026-07-24T10:34:11+00:00",
   "days": 30,
   "domainOrder": [
     "한패스",
@@ -385,19 +385,19 @@
   "domains": {
     "ALL": {
       "summary": {
-        "total": 801,
-        "new": 90,
-        "inProgress": 1,
+        "total": 803,
+        "new": 88,
+        "inProgress": 0,
         "fixed": 0,
-        "closed": 637,
-        "todayNew": 0,
-        "newDelta": 0
+        "closed": 639,
+        "todayNew": 2,
+        "newDelta": 2
       },
       "funnel": [
         {
           "stage": "등록",
-          "count": 90,
-          "rate": 11.2,
+          "count": 88,
+          "rate": 11.0,
           "width": 18
         },
         {
@@ -414,8 +414,8 @@
         },
         {
           "stage": "진행중",
-          "count": 1,
-          "rate": 0.1,
+          "count": 0,
+          "rate": 0.0,
           "width": 18
         },
         {
@@ -426,14 +426,14 @@
         },
         {
           "stage": "QA확인",
-          "count": 73,
-          "rate": 9.1,
+          "count": 76,
+          "rate": 9.5,
           "width": 18
         },
         {
           "stage": "종료",
-          "count": 637,
-          "rate": 79.5,
+          "count": 639,
+          "rate": 79.6,
           "width": 100
         }
       ],
@@ -623,8 +623,8 @@
         {
           "date": "2026-07-21",
           "new": 3,
-          "fixed": 5,
-          "closed": 5,
+          "fixed": 4,
+          "closed": 4,
           "deltaNew": -1
         },
         {
@@ -643,10 +643,10 @@
         },
         {
           "date": "2026-07-24",
-          "new": 0,
-          "fixed": 6,
-          "closed": 0,
-          "deltaNew": 0
+          "new": 2,
+          "fixed": 12,
+          "closed": 3,
+          "deltaNew": 2
         }
       ],
       "versions": [
@@ -1031,46 +1031,6 @@
           ]
         },
         {
-          "version": "[G.H]v1.0.2-26.07",
-          "total": 31,
-          "criticalMajor": 8,
-          "doneRate": 38.7,
-          "status": [
-            {
-              "label": "등록",
-              "count": 18
-            },
-            {
-              "label": "진행중",
-              "count": 1
-            },
-            {
-              "label": "QA확인",
-              "count": 11
-            },
-            {
-              "label": "종료",
-              "count": 1
-            }
-          ],
-          "severity": [
-            {
-              "label": "Major",
-              "count": 8
-            },
-            {
-              "label": "Minor",
-              "count": 23
-            }
-          ],
-          "priority": [
-            {
-              "label": "Medium",
-              "count": 31
-            }
-          ]
-        },
-        {
           "version": "5.13.0",
           "total": 27,
           "criticalMajor": 0,
@@ -1133,6 +1093,38 @@
               "count": 26
             }
           ]
+        },
+        {
+          "version": "5.19.0",
+          "total": 24,
+          "criticalMajor": 3,
+          "doneRate": 79.2,
+          "status": [
+            {
+              "label": "등록",
+              "count": 5
+            },
+            {
+              "label": "종료",
+              "count": 19
+            }
+          ],
+          "severity": [
+            {
+              "label": "Major",
+              "count": 3
+            },
+            {
+              "label": "Minor",
+              "count": 21
+            }
+          ],
+          "priority": [
+            {
+              "label": "Medium",
+              "count": 24
+            }
+          ]
         }
       ],
       "selectedVersion": "ALL",
@@ -1141,19 +1133,15 @@
           "status": [
             {
               "label": "등록",
-              "count": 90
-            },
-            {
-              "label": "진행중",
-              "count": 1
+              "count": 88
             },
             {
               "label": "QA확인",
-              "count": 73
+              "count": 76
             },
             {
               "label": "종료",
-              "count": 637
+              "count": 639
             }
           ],
           "severity": [
@@ -1167,11 +1155,11 @@
             },
             {
               "label": "Minor",
-              "count": 476
+              "count": 477
             },
             {
               "label": "미지정",
-              "count": 73
+              "count": 74
             },
             {
               "label": "개선 의견",
@@ -1189,7 +1177,7 @@
             },
             {
               "label": "Medium",
-              "count": 757
+              "count": 759
             },
             {
               "label": "Low",
@@ -1392,8 +1380,8 @@
         {
           "date": "2026-07-21",
           "new": 3,
-          "fixed": 5,
-          "closed": 5,
+          "fixed": 4,
+          "closed": 4,
           "deltaNew": -1
         },
         {
@@ -1412,10 +1400,10 @@
         },
         {
           "date": "2026-07-24",
-          "new": 0,
-          "fixed": 6,
-          "closed": 0,
-          "deltaNew": 0
+          "new": 2,
+          "fixed": 12,
+          "closed": 3,
+          "deltaNew": 2
         }
       ],
       "reportBoard": {
@@ -1458,6 +1446,48 @@
         ]
       },
       "recent": [
+        {
+          "id": "ISSUE-1058",
+          "title": "작성중",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "미지정",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[G.H]v1.0.2-26.08",
+          "versionRaw": "[G.H]v1.0.2-26.08",
+          "domain": "GoHanpass",
+          "os": "미지정",
+          "createdAt": "2026-07-24T08:56:00.000Z",
+          "createdDate": "2026-07-24",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/3a773fbd195180e2be14df6cbedc26b8",
+          "lastEditedAt": "2026-07-24T09:03:00.000Z"
+        },
+        {
+          "id": "ISSUE-1055",
+          "title": "[추가인증][다국어] 중국어 번체 설정 시 ‘주소 사진 업로드 안내 팝업’ 내 ‘취소’ 버튼 영어로 나오는 현상 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[G.H]v1.0.2-26.08",
+          "versionRaw": "[G.H]v1.0.2-26.08",
+          "domain": "GoHanpass",
+          "os": "미지정",
+          "createdAt": "2026-07-24T07:25:00.000Z",
+          "createdDate": "2026-07-24",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/3a773fbd19518061aebac5d09e20b6b4",
+          "lastEditedAt": "2026-07-24T07:36:00.000Z"
+        },
         {
           "id": "ISSUE-1052",
           "title": "[방글라데시/즐겨찾기][AOS] 즐겨찾기 대상자 송금하기 시 ‘받는 방법’ 미노출 현상 (iOS 정상)",
@@ -1625,48 +1655,6 @@
           "closedDate": "",
           "url": "https://app.notion.com/p/3a473fbd195180529d17f2861d1bb2e6",
           "lastEditedAt": "2026-07-24T00:09:00.000Z"
-        },
-        {
-          "id": "ISSUE-1042",
-          "title": "[추가인증][다국어] 벵골어 설정 시 주소 등록 화면 문구 기획서와 상이 ",
-          "status": "결함 재발생 (Reopen)",
-          "stage": "등록",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[G.H]v1.0.2-26.07",
-          "versionRaw": "[G.H]v1.0.2-26.07",
-          "domain": "GoHanpass",
-          "os": "미지정",
-          "createdAt": "2026-07-21T06:01:00.000Z",
-          "createdDate": "2026-07-21",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/3a473fbd19518015956edb7c8ce4357d",
-          "lastEditedAt": "2026-07-24T00:23:00.000Z"
-        },
-        {
-          "id": "ISSUE-1041",
-          "title": "[추가인증][특정단말] 주소 직접 입력 화면 내 ‘다시 검색하기’ 버튼 가려지는 현상 ",
-          "status": "QA 검증 -회귀 (QA Verification)",
-          "stage": "QA확인",
-          "severity": "Major",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[G.H]v1.0.2-26.07",
-          "versionRaw": "[G.H]v1.0.2-26.07",
-          "domain": "GoHanpass",
-          "os": "미지정",
-          "createdAt": "2026-07-21T01:40:00.000Z",
-          "createdDate": "2026-07-21",
-          "fixedAt": "2026-07-22T00:03:00.000Z",
-          "fixedDate": "2026-07-22",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/3a473fbd1951803f9e2bed0301b3593d",
-          "lastEditedAt": "2026-07-22T00:03:00.000Z"
         }
       ]
     },
@@ -2921,19 +2909,19 @@
     },
     "GoHanpass": {
       "summary": {
-        "total": 201,
-        "new": 27,
-        "inProgress": 1,
+        "total": 203,
+        "new": 25,
+        "inProgress": 0,
         "fixed": 0,
-        "closed": 161,
-        "todayNew": 0,
-        "newDelta": 0
+        "closed": 163,
+        "todayNew": 2,
+        "newDelta": 2
       },
       "funnel": [
         {
           "stage": "등록",
-          "count": 27,
-          "rate": 13.4,
+          "count": 25,
+          "rate": 12.3,
           "width": 18
         },
         {
@@ -2950,8 +2938,8 @@
         },
         {
           "stage": "진행중",
-          "count": 1,
-          "rate": 0.5,
+          "count": 0,
+          "rate": 0.0,
           "width": 18
         },
         {
@@ -2962,14 +2950,14 @@
         },
         {
           "stage": "QA확인",
-          "count": 12,
-          "rate": 6.0,
+          "count": 15,
+          "rate": 7.4,
           "width": 18
         },
         {
           "stage": "종료",
-          "count": 161,
-          "rate": 80.1,
+          "count": 163,
+          "rate": 80.3,
           "width": 100
         }
       ],
@@ -3159,8 +3147,8 @@
         {
           "date": "2026-07-21",
           "new": 3,
-          "fixed": 1,
-          "closed": 1,
+          "fixed": 0,
+          "closed": 0,
           "deltaNew": -1
         },
         {
@@ -3179,10 +3167,10 @@
         },
         {
           "date": "2026-07-24",
-          "new": 0,
-          "fixed": 6,
-          "closed": 0,
-          "deltaNew": 0
+          "new": 2,
+          "fixed": 12,
+          "closed": 3,
+          "deltaNew": 2
         }
       ],
       "versions": [
@@ -3260,41 +3248,65 @@
         },
         {
           "version": "[G.H]v1.0.2-26.07",
-          "total": 31,
-          "criticalMajor": 8,
-          "doneRate": 38.7,
+          "total": 17,
+          "criticalMajor": 4,
+          "doneRate": 100.0,
           "status": [
             {
-              "label": "등록",
-              "count": 18
-            },
-            {
-              "label": "진행중",
-              "count": 1
-            },
-            {
               "label": "QA확인",
-              "count": 11
+              "count": 14
             },
             {
               "label": "종료",
-              "count": 1
+              "count": 3
             }
           ],
           "severity": [
             {
               "label": "Major",
-              "count": 8
+              "count": 4
             },
             {
               "label": "Minor",
-              "count": 23
+              "count": 13
             }
           ],
           "priority": [
             {
               "label": "Medium",
-              "count": 31
+              "count": 17
+            }
+          ]
+        },
+        {
+          "version": "[G.H]v1.0.2-26.08",
+          "total": 17,
+          "criticalMajor": 5,
+          "doneRate": 0.0,
+          "status": [
+            {
+              "label": "등록",
+              "count": 17
+            }
+          ],
+          "severity": [
+            {
+              "label": "Major",
+              "count": 5
+            },
+            {
+              "label": "Minor",
+              "count": 11
+            },
+            {
+              "label": "미지정",
+              "count": 1
+            }
+          ],
+          "priority": [
+            {
+              "label": "Medium",
+              "count": 17
             }
           ]
         },
@@ -3405,30 +3417,6 @@
               "count": 1
             }
           ]
-        },
-        {
-          "version": "[G.H]v1.0.2-26.08",
-          "total": 1,
-          "criticalMajor": 1,
-          "doneRate": 0.0,
-          "status": [
-            {
-              "label": "등록",
-              "count": 1
-            }
-          ],
-          "severity": [
-            {
-              "label": "Major",
-              "count": 1
-            }
-          ],
-          "priority": [
-            {
-              "label": "Medium",
-              "count": 1
-            }
-          ]
         }
       ],
       "selectedVersion": "ALL",
@@ -3437,19 +3425,15 @@
           "status": [
             {
               "label": "등록",
-              "count": 27
-            },
-            {
-              "label": "진행중",
-              "count": 1
+              "count": 25
             },
             {
               "label": "QA확인",
-              "count": 12
+              "count": 15
             },
             {
               "label": "종료",
-              "count": 161
+              "count": 163
             }
           ],
           "severity": [
@@ -3463,13 +3447,17 @@
             },
             {
               "label": "Minor",
-              "count": 136
+              "count": 137
+            },
+            {
+              "label": "미지정",
+              "count": 1
             }
           ],
           "priority": [
             {
               "label": "Medium",
-              "count": 200
+              "count": 202
             },
             {
               "label": "긴급",
@@ -3664,8 +3652,8 @@
         {
           "date": "2026-07-21",
           "new": 3,
-          "fixed": 1,
-          "closed": 1,
+          "fixed": 0,
+          "closed": 0,
           "deltaNew": -1
         },
         {
@@ -3684,10 +3672,10 @@
         },
         {
           "date": "2026-07-24",
-          "new": 0,
-          "fixed": 6,
-          "closed": 0,
-          "deltaNew": 0
+          "new": 2,
+          "fixed": 12,
+          "closed": 3,
+          "deltaNew": 2
         }
       ],
       "reportBoard": {
@@ -3731,6 +3719,48 @@
       },
       "recent": [
         {
+          "id": "ISSUE-1058",
+          "title": "작성중",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "미지정",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[G.H]v1.0.2-26.08",
+          "versionRaw": "[G.H]v1.0.2-26.08",
+          "domain": "GoHanpass",
+          "os": "미지정",
+          "createdAt": "2026-07-24T08:56:00.000Z",
+          "createdDate": "2026-07-24",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/3a773fbd195180e2be14df6cbedc26b8",
+          "lastEditedAt": "2026-07-24T09:03:00.000Z"
+        },
+        {
+          "id": "ISSUE-1055",
+          "title": "[추가인증][다국어] 중국어 번체 설정 시 ‘주소 사진 업로드 안내 팝업’ 내 ‘취소’ 버튼 영어로 나오는 현상 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[G.H]v1.0.2-26.08",
+          "versionRaw": "[G.H]v1.0.2-26.08",
+          "domain": "GoHanpass",
+          "os": "미지정",
+          "createdAt": "2026-07-24T07:25:00.000Z",
+          "createdDate": "2026-07-24",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/3a773fbd19518061aebac5d09e20b6b4",
+          "lastEditedAt": "2026-07-24T07:36:00.000Z"
+        },
+        {
           "id": "ISSUE-1044",
           "title": "[추가인증][다국어] 싱할라어 설정 시 러시아어 노출 되는 현상 ",
           "status": "QA 검증 -회귀 (QA Verification)",
@@ -3754,8 +3784,8 @@
         {
           "id": "ISSUE-1042",
           "title": "[추가인증][다국어] 벵골어 설정 시 주소 등록 화면 문구 기획서와 상이 ",
-          "status": "결함 재발생 (Reopen)",
-          "stage": "등록",
+          "status": "QA 검증 -회귀 (QA Verification)",
+          "stage": "QA확인",
           "severity": "Minor",
           "priority": "Medium",
           "assignee": "미지정",
@@ -3765,12 +3795,12 @@
           "os": "미지정",
           "createdAt": "2026-07-21T06:01:00.000Z",
           "createdDate": "2026-07-21",
-          "fixedAt": "",
-          "fixedDate": "",
+          "fixedAt": "2026-07-24T06:49:00.000Z",
+          "fixedDate": "2026-07-24",
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/3a473fbd19518015956edb7c8ce4357d",
-          "lastEditedAt": "2026-07-24T00:23:00.000Z"
+          "lastEditedAt": "2026-07-24T06:49:00.000Z"
         },
         {
           "id": "ISSUE-1041",
@@ -3849,12 +3879,12 @@
           "os": "미지정",
           "createdAt": "2026-07-20T04:16:00.000Z",
           "createdDate": "2026-07-20",
-          "fixedAt": "2026-07-24T00:07:00.000Z",
+          "fixedAt": "2026-07-24T07:03:00.000Z",
           "fixedDate": "2026-07-24",
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/3a373fbd195180c69fb5e08ae648b4e2",
-          "lastEditedAt": "2026-07-24T00:07:00.000Z"
+          "lastEditedAt": "2026-07-24T07:03:00.000Z"
         },
         {
           "id": "ISSUE-1037",
@@ -3870,12 +3900,12 @@
           "os": "미지정",
           "createdAt": "2026-07-20T04:13:00.000Z",
           "createdDate": "2026-07-20",
-          "fixedAt": "2026-07-21T03:48:00.000Z",
-          "fixedDate": "2026-07-21",
-          "closedAt": "2026-07-21T03:48:00.000Z",
-          "closedDate": "2026-07-21",
+          "fixedAt": "2026-07-24T06:46:00.000Z",
+          "fixedDate": "2026-07-24",
+          "closedAt": "2026-07-24T06:46:00.000Z",
+          "closedDate": "2026-07-24",
           "url": "https://app.notion.com/p/3a373fbd195180638c29e1178fb8268a",
-          "lastEditedAt": "2026-07-21T03:48:00.000Z"
+          "lastEditedAt": "2026-07-24T06:46:00.000Z"
         },
         {
           "id": "ISSUE-1030",
@@ -3897,48 +3927,6 @@
           "closedDate": "2026-07-15",
           "url": "https://app.notion.com/p/39e73fbd195180f8b777f397430c7c93",
           "lastEditedAt": "2026-07-15T04:33:00.000Z"
-        },
-        {
-          "id": "ISSUE-1028",
-          "title": "[기명무기명][공통] 추가 인증 필요 팝업 문구 기획서와 상이 ",
-          "status": "완료 (Done)",
-          "stage": "종료",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[G.H]v1.0.2",
-          "versionRaw": "[G.H]v1.0.2-기명/무기명",
-          "domain": "GoHanpass",
-          "os": "미지정",
-          "createdAt": "2026-07-14T05:57:00.000Z",
-          "createdDate": "2026-07-14",
-          "fixedAt": "2026-07-14T08:26:00.000Z",
-          "fixedDate": "2026-07-14",
-          "closedAt": "2026-07-14T08:26:00.000Z",
-          "closedDate": "2026-07-14",
-          "url": "https://app.notion.com/p/39d73fbd19518033846fff9e3366ae48",
-          "lastEditedAt": "2026-07-14T08:26:00.000Z"
-        },
-        {
-          "id": "ISSUE-1026",
-          "title": "[기명무기명][공통] 기명 → 승인 거절 상태로 변경 시 ‘충전대기 금액’ 영역 노출 및 진입 가능한 현상 ",
-          "status": "완료 (Done)",
-          "stage": "종료",
-          "severity": "Major",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[G.H]v1.0.2",
-          "versionRaw": "[G.H]v1.0.2-기명/무기명",
-          "domain": "GoHanpass",
-          "os": "미지정",
-          "createdAt": "2026-07-14T05:13:00.000Z",
-          "createdDate": "2026-07-14",
-          "fixedAt": "2026-07-14T08:55:00.000Z",
-          "fixedDate": "2026-07-14",
-          "closedAt": "2026-07-14T08:55:00.000Z",
-          "closedDate": "2026-07-14",
-          "url": "https://app.notion.com/p/39d73fbd19518046b090cab74b61722d",
-          "lastEditedAt": "2026-07-14T08:55:00.000Z"
         }
       ]
     }

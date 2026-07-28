@@ -90,8 +90,24 @@
     .tab.active, .range-btn.active { color: var(--text); border-color: rgba(29, 134, 242, .45); background: rgba(29, 134, 242, .08); }
     .panel-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 12px; }
     .panel-head h2 { margin: 0; }
+    .panel-title { display: grid; gap: 3px; }
     .range-controls { display: flex; gap: 6px; }
+    .version-controls { display: flex; gap: 6px; flex-wrap: wrap; justify-content: flex-end; }
     .range-btn { padding: 7px 10px; font-size: 12px; }
+    .version-mode-btn {
+      border: 1px solid var(--line);
+      background: var(--panel-soft);
+      color: var(--muted);
+      border-radius: 8px;
+      padding: 7px 10px;
+      font-size: 12px;
+      cursor: pointer;
+    }
+    .version-mode-btn.active {
+      color: var(--text);
+      border-color: rgba(29, 134, 242, .45);
+      background: rgba(29, 134, 242, .08);
+    }
     .summary { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin-bottom: 18px; }
     .card, .panel { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; box-shadow: var(--shadow); }
     .card { padding: 14px; min-height: 94px; }
@@ -289,8 +305,9 @@
         --shadow: 0 14px 32px rgba(0, 0, 0, .22);
       }
       .tile { background: #172036; border-color: rgba(148,163,184,.10); }
-      .tab, .range-btn, .version-item, .domain-btn { background: #0b1220; }
+      .tab, .range-btn, .version-mode-btn, .version-item, .domain-btn { background: #0b1220; }
       .version-item.active { border-color: rgba(97, 183, 255, .45); box-shadow: 0 0 0 2px rgba(97, 183, 255, .08) inset; }
+      .version-mode-btn.active { border-color: rgba(97, 183, 255, .45); background: rgba(97, 183, 255, .10); }
       .domain-btn.active { border-color: rgba(97, 183, 255, .45); background: rgba(97, 183, 255, .10); }
     }
   </style>
@@ -348,7 +365,7 @@
       </section>
       <section class="view" id="version">
         <div class="grid">
-          <article class="panel"><div class="panel-head"><h2>버전별 결함 추이</h2><div class="subtle" id="selectedVersionLabel">전체</div></div><div class="version-list" id="versions"></div></article>
+          <article class="panel"><div class="panel-head"><div class="panel-title"><h2>버전별 결함 추이</h2><div class="subtle" id="selectedVersionLabel">전체</div></div><div class="version-controls" id="versionControls"></div></div><div class="version-list" id="versions"></div></article>
           <article class="panel"><div class="panel-head"><h2>상태/심각도/우선순위 분포</h2><div class="subtle" id="distributionScope">전체 기준</div></div><div class="grid three" id="distributions"></div></article>
         </div>
       </section>
@@ -376,7 +393,7 @@
     </div>
   </div>
   <script id="dashboard-data" type="application/json">{
-  "generatedAt": "2026-07-28T00:55:36+00:00",
+  "generatedAt": "2026-07-28T02:38:31+00:00",
   "days": 30,
   "domainOrder": [
     "한패스",
@@ -538,24 +555,24 @@
         },
         {
           "date": "2026-07-13",
-          "new": 7,
+          "new": 6,
           "fixed": 0,
           "closed": 0,
-          "deltaNew": 7
+          "deltaNew": 6
         },
         {
           "date": "2026-07-14",
-          "new": 6,
+          "new": 7,
           "fixed": 24,
           "closed": 24,
-          "deltaNew": -1
+          "deltaNew": 1
         },
         {
           "date": "2026-07-15",
           "new": 6,
           "fixed": 1,
           "closed": 1,
-          "deltaNew": 0
+          "deltaNew": -1
         },
         {
           "date": "2026-07-16",
@@ -651,6 +668,154 @@
       ],
       "versions": [
         {
+          "version": "5.24.0",
+          "total": 6,
+          "criticalMajor": 4,
+          "doneRate": 0.0,
+          "status": [
+            {
+              "label": "등록",
+              "count": 6
+            }
+          ],
+          "severity": [
+            {
+              "label": "Major",
+              "count": 4
+            },
+            {
+              "label": "Minor",
+              "count": 2
+            }
+          ],
+          "priority": [
+            {
+              "label": "Medium",
+              "count": 6
+            }
+          ]
+        },
+        {
+          "version": "5.23.2",
+          "total": 3,
+          "criticalMajor": 0,
+          "doneRate": 100.0,
+          "status": [
+            {
+              "label": "종료",
+              "count": 3
+            }
+          ],
+          "severity": [
+            {
+              "label": "Minor",
+              "count": 3
+            }
+          ],
+          "priority": [
+            {
+              "label": "Medium",
+              "count": 3
+            }
+          ]
+        },
+        {
+          "version": "5.23.0",
+          "total": 26,
+          "criticalMajor": 7,
+          "doneRate": 100.0,
+          "status": [
+            {
+              "label": "종료",
+              "count": 26
+            }
+          ],
+          "severity": [
+            {
+              "label": "Major",
+              "count": 7
+            },
+            {
+              "label": "Minor",
+              "count": 19
+            }
+          ],
+          "priority": [
+            {
+              "label": "Medium",
+              "count": 26
+            }
+          ]
+        },
+        {
+          "version": "5.22.1",
+          "total": 34,
+          "criticalMajor": 11,
+          "doneRate": 97.1,
+          "status": [
+            {
+              "label": "등록",
+              "count": 1
+            },
+            {
+              "label": "QA확인",
+              "count": 26
+            },
+            {
+              "label": "종료",
+              "count": 7
+            }
+          ],
+          "severity": [
+            {
+              "label": "Critical",
+              "count": 1
+            },
+            {
+              "label": "Major",
+              "count": 10
+            },
+            {
+              "label": "Minor",
+              "count": 23
+            }
+          ],
+          "priority": [
+            {
+              "label": "Medium",
+              "count": 34
+            }
+          ]
+        },
+        {
+          "version": "5.22.0",
+          "total": 9,
+          "criticalMajor": 2,
+          "doneRate": 100.0,
+          "status": [
+            {
+              "label": "종료",
+              "count": 9
+            }
+          ],
+          "severity": [
+            {
+              "label": "Major",
+              "count": 2
+            },
+            {
+              "label": "Minor",
+              "count": 7
+            }
+          ],
+          "priority": [
+            {
+              "label": "Medium",
+              "count": 9
+            }
+          ]
+        },
+        {
           "version": "5.21.0",
           "total": 117,
           "criticalMajor": 45,
@@ -687,6 +852,78 @@
             {
               "label": "Medium",
               "count": 117
+            }
+          ]
+        },
+        {
+          "version": "5.20.0",
+          "total": 82,
+          "criticalMajor": 19,
+          "doneRate": 97.6,
+          "status": [
+            {
+              "label": "등록",
+              "count": 2
+            },
+            {
+              "label": "종료",
+              "count": 80
+            }
+          ],
+          "severity": [
+            {
+              "label": "Critical",
+              "count": 7
+            },
+            {
+              "label": "Major",
+              "count": 12
+            },
+            {
+              "label": "Minor",
+              "count": 63
+            }
+          ],
+          "priority": [
+            {
+              "label": "Medium",
+              "count": 81
+            },
+            {
+              "label": "Low",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "version": "5.19.0",
+          "total": 24,
+          "criticalMajor": 3,
+          "doneRate": 79.2,
+          "status": [
+            {
+              "label": "등록",
+              "count": 5
+            },
+            {
+              "label": "종료",
+              "count": 19
+            }
+          ],
+          "severity": [
+            {
+              "label": "Major",
+              "count": 3
+            },
+            {
+              "label": "Minor",
+              "count": 21
+            }
+          ],
+          "priority": [
+            {
+              "label": "Medium",
+              "count": 24
             }
           ]
         },
@@ -731,78 +968,6 @@
             {
               "label": "Medium",
               "count": 102
-            },
-            {
-              "label": "Low",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "version": "[G.H]v1.0.0",
-          "total": 101,
-          "criticalMajor": 19,
-          "doneRate": 100.0,
-          "status": [
-            {
-              "label": "종료",
-              "count": 101
-            }
-          ],
-          "severity": [
-            {
-              "label": "Critical",
-              "count": 1
-            },
-            {
-              "label": "Major",
-              "count": 18
-            },
-            {
-              "label": "Minor",
-              "count": 82
-            }
-          ],
-          "priority": [
-            {
-              "label": "Medium",
-              "count": 101
-            }
-          ]
-        },
-        {
-          "version": "5.20.0",
-          "total": 82,
-          "criticalMajor": 19,
-          "doneRate": 97.6,
-          "status": [
-            {
-              "label": "등록",
-              "count": 2
-            },
-            {
-              "label": "종료",
-              "count": 80
-            }
-          ],
-          "severity": [
-            {
-              "label": "Critical",
-              "count": 7
-            },
-            {
-              "label": "Major",
-              "count": 12
-            },
-            {
-              "label": "Minor",
-              "count": 63
-            }
-          ],
-          "priority": [
-            {
-              "label": "Medium",
-              "count": 81
             },
             {
               "label": "Low",
@@ -871,10 +1036,10 @@
           ]
         },
         {
-          "version": "[G.H]v1.0.2-26.06",
-          "total": 55,
-          "criticalMajor": 29,
-          "doneRate": 98.2,
+          "version": "5.16.1",
+          "total": 4,
+          "criticalMajor": 1,
+          "doneRate": 75.0,
           "status": [
             {
               "label": "등록",
@@ -882,31 +1047,31 @@
             },
             {
               "label": "종료",
-              "count": 54
+              "count": 3
             }
           ],
           "severity": [
             {
-              "label": "Critical",
+              "label": "Major",
               "count": 1
             },
             {
-              "label": "Major",
-              "count": 28
+              "label": "Minor",
+              "count": 2
             },
             {
-              "label": "Minor",
-              "count": 26
+              "label": "개선 의견",
+              "count": 1
             }
           ],
           "priority": [
             {
               "label": "Medium",
-              "count": 54
+              "count": 2
             },
             {
-              "label": "긴급",
-              "count": 1
+              "label": "Low",
+              "count": 2
             }
           ]
         },
@@ -959,74 +1124,62 @@
           ]
         },
         {
-          "version": "5.22.1",
-          "total": 34,
-          "criticalMajor": 11,
-          "doneRate": 97.1,
+          "version": "5.15.0",
+          "total": 4,
+          "criticalMajor": 0,
+          "doneRate": 100.0,
           "status": [
             {
-              "label": "등록",
-              "count": 1
-            },
-            {
-              "label": "QA확인",
-              "count": 26
-            },
-            {
               "label": "종료",
-              "count": 7
+              "count": 4
             }
           ],
           "severity": [
             {
-              "label": "Critical",
-              "count": 1
-            },
-            {
-              "label": "Major",
-              "count": 10
-            },
-            {
               "label": "Minor",
-              "count": 23
+              "count": 3
+            },
+            {
+              "label": "미지정",
+              "count": 1
             }
           ],
           "priority": [
             {
               "label": "Medium",
-              "count": 34
+              "count": 1
+            },
+            {
+              "label": "Low",
+              "count": 3
             }
           ]
         },
         {
-          "version": "5.12.0",
-          "total": 33,
+          "version": "5.14.0",
+          "total": 3,
           "criticalMajor": 0,
-          "doneRate": 90.9,
+          "doneRate": 100.0,
           "status": [
             {
-              "label": "등록",
-              "count": 3
-            },
-            {
               "label": "종료",
-              "count": 30
+              "count": 3
             }
           ],
           "severity": [
             {
               "label": "미지정",
-              "count": 33
+              "count": 3
             }
           ],
           "priority": [
             {
-              "label": "High",
-              "count": 3
+              "label": "Medium",
+              "count": 1
             },
             {
-              "label": "Medium",
-              "count": 30
+              "label": "Low",
+              "count": 2
             }
           ]
         },
@@ -1067,14 +1220,46 @@
           ]
         },
         {
-          "version": "5.23.0",
-          "total": 26,
-          "criticalMajor": 7,
-          "doneRate": 100.0,
+          "version": "5.12.0",
+          "total": 33,
+          "criticalMajor": 0,
+          "doneRate": 90.9,
           "status": [
             {
+              "label": "등록",
+              "count": 3
+            },
+            {
               "label": "종료",
-              "count": 26
+              "count": 30
+            }
+          ],
+          "severity": [
+            {
+              "label": "미지정",
+              "count": 33
+            }
+          ],
+          "priority": [
+            {
+              "label": "High",
+              "count": 3
+            },
+            {
+              "label": "Medium",
+              "count": 30
+            }
+          ]
+        },
+        {
+          "version": "[G.H]v1.0.2-26.08",
+          "total": 20,
+          "criticalMajor": 7,
+          "doneRate": 0.0,
+          "status": [
+            {
+              "label": "등록",
+              "count": 20
             }
           ],
           "severity": [
@@ -1084,29 +1269,93 @@
             },
             {
               "label": "Minor",
-              "count": 19
+              "count": 13
             }
           ],
           "priority": [
             {
               "label": "Medium",
-              "count": 26
+              "count": 20
             }
           ]
         },
         {
-          "version": "5.19.0",
-          "total": 24,
-          "criticalMajor": 3,
-          "doneRate": 79.2,
+          "version": "[G.H]v1.0.2-26.07",
+          "total": 15,
+          "criticalMajor": 4,
+          "doneRate": 100.0,
+          "status": [
+            {
+              "label": "종료",
+              "count": 15
+            }
+          ],
+          "severity": [
+            {
+              "label": "Major",
+              "count": 4
+            },
+            {
+              "label": "Minor",
+              "count": 11
+            }
+          ],
+          "priority": [
+            {
+              "label": "Medium",
+              "count": 15
+            }
+          ]
+        },
+        {
+          "version": "[G.H]v1.0.2-26.06",
+          "total": 55,
+          "criticalMajor": 29,
+          "doneRate": 98.2,
           "status": [
             {
               "label": "등록",
-              "count": 5
+              "count": 1
             },
             {
               "label": "종료",
-              "count": 19
+              "count": 54
+            }
+          ],
+          "severity": [
+            {
+              "label": "Critical",
+              "count": 1
+            },
+            {
+              "label": "Major",
+              "count": 28
+            },
+            {
+              "label": "Minor",
+              "count": 26
+            }
+          ],
+          "priority": [
+            {
+              "label": "Medium",
+              "count": 54
+            },
+            {
+              "label": "긴급",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "version": "[G.H]v1.0.2",
+          "total": 5,
+          "criticalMajor": 3,
+          "doneRate": 100.0,
+          "status": [
+            {
+              "label": "종료",
+              "count": 5
             }
           ],
           "severity": [
@@ -1116,17 +1365,292 @@
             },
             {
               "label": "Minor",
-              "count": 21
+              "count": 2
             }
           ],
           "priority": [
             {
               "label": "Medium",
-              "count": 24
+              "count": 5
+            }
+          ]
+        },
+        {
+          "version": "[G.H]v1.0.0",
+          "total": 101,
+          "criticalMajor": 19,
+          "doneRate": 100.0,
+          "status": [
+            {
+              "label": "종료",
+              "count": 101
+            }
+          ],
+          "severity": [
+            {
+              "label": "Critical",
+              "count": 1
+            },
+            {
+              "label": "Major",
+              "count": 18
+            },
+            {
+              "label": "Minor",
+              "count": 82
+            }
+          ],
+          "priority": [
+            {
+              "label": "Medium",
+              "count": 101
+            }
+          ]
+        },
+        {
+          "version": "[G.H][교통카드]SDK변경",
+          "total": 2,
+          "criticalMajor": 2,
+          "doneRate": 50.0,
+          "status": [
+            {
+              "label": "등록",
+              "count": 1
+            },
+            {
+              "label": "QA확인",
+              "count": 1
+            }
+          ],
+          "severity": [
+            {
+              "label": "Critical",
+              "count": 2
+            }
+          ],
+          "priority": [
+            {
+              "label": "Medium",
+              "count": 2
+            }
+          ]
+        },
+        {
+          "version": "[G.H]추후 수정-백로그",
+          "total": 5,
+          "criticalMajor": 3,
+          "doneRate": 0.0,
+          "status": [
+            {
+              "label": "등록",
+              "count": 5
+            }
+          ],
+          "severity": [
+            {
+              "label": "Major",
+              "count": 3
+            },
+            {
+              "label": "Minor",
+              "count": 2
+            }
+          ],
+          "priority": [
+            {
+              "label": "Medium",
+              "count": 5
+            }
+          ]
+        },
+        {
+          "version": "[교통카드]SDK변경",
+          "total": 3,
+          "criticalMajor": 3,
+          "doneRate": 100.0,
+          "status": [
+            {
+              "label": "QA확인",
+              "count": 3
+            }
+          ],
+          "severity": [
+            {
+              "label": "Critical",
+              "count": 3
+            }
+          ],
+          "priority": [
+            {
+              "label": "Medium",
+              "count": 2
+            },
+            {
+              "label": "긴급",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "version": "결함 아님 - Done",
+          "total": 3,
+          "criticalMajor": 0,
+          "doneRate": 100.0,
+          "status": [
+            {
+              "label": "종료",
+              "count": 3
+            }
+          ],
+          "severity": [
+            {
+              "label": "Minor",
+              "count": 2
+            },
+            {
+              "label": "미지정",
+              "count": 1
+            }
+          ],
+          "priority": [
+            {
+              "label": "Medium",
+              "count": 1
+            },
+            {
+              "label": "Low",
+              "count": 2
+            }
+          ]
+        },
+        {
+          "version": "미지정",
+          "total": 8,
+          "criticalMajor": 0,
+          "doneRate": 87.5,
+          "status": [
+            {
+              "label": "등록",
+              "count": 1
+            },
+            {
+              "label": "종료",
+              "count": 7
+            }
+          ],
+          "severity": [
+            {
+              "label": "미지정",
+              "count": 8
+            }
+          ],
+          "priority": [
+            {
+              "label": "Medium",
+              "count": 8
+            }
+          ]
+        },
+        {
+          "version": "[G.H]Backlog",
+          "total": 1,
+          "criticalMajor": 0,
+          "doneRate": 0.0,
+          "status": [
+            {
+              "label": "등록",
+              "count": 1
+            }
+          ],
+          "severity": [
+            {
+              "label": "Minor",
+              "count": 1
+            }
+          ],
+          "priority": [
+            {
+              "label": "Medium",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "version": "Hanpass - Backlog",
+          "total": 13,
+          "criticalMajor": 3,
+          "doneRate": 15.4,
+          "status": [
+            {
+              "label": "등록",
+              "count": 11
+            },
+            {
+              "label": "종료",
+              "count": 2
+            }
+          ],
+          "severity": [
+            {
+              "label": "Major",
+              "count": 3
+            },
+            {
+              "label": "Minor",
+              "count": 10
+            }
+          ],
+          "priority": [
+            {
+              "label": "Medium",
+              "count": 13
             }
           ]
         }
       ],
+      "versionGroups": {
+        "ALL": [
+          "5.24.0",
+          "5.23.2",
+          "5.23.0",
+          "5.22.1",
+          "5.22.0",
+          "5.21.0",
+          "5.20.0",
+          "5.19.0",
+          "5.18.0",
+          "5.17.0",
+          "5.16.1",
+          "5.16.0",
+          "5.15.0",
+          "5.14.0",
+          "5.13.0",
+          "5.12.0",
+          "[G.H]v1.0.2-26.08",
+          "[G.H]v1.0.2-26.07",
+          "[G.H]v1.0.2-26.06",
+          "[G.H]v1.0.2",
+          "[G.H]v1.0.0",
+          "[G.H][교통카드]SDK변경",
+          "[G.H]추후 수정-백로그",
+          "[교통카드]SDK변경",
+          "결함 아님 - Done",
+          "미지정",
+          "[G.H]Backlog",
+          "Hanpass - Backlog"
+        ],
+        "RECENT": [
+          "5.24.0",
+          "5.23.2",
+          "5.23.0",
+          "5.22.1",
+          "5.22.0"
+        ],
+        "BACKLOG": [
+          "[G.H]Backlog",
+          "Hanpass - Backlog"
+        ]
+      },
       "selectedVersion": "ALL",
       "distributions": {
         "ALL": {
@@ -1295,24 +1819,24 @@
         },
         {
           "date": "2026-07-13",
-          "new": 7,
+          "new": 6,
           "fixed": 0,
           "closed": 0,
-          "deltaNew": 7
+          "deltaNew": 6
         },
         {
           "date": "2026-07-14",
-          "new": 6,
+          "new": 7,
           "fixed": 24,
           "closed": 24,
-          "deltaNew": -1
+          "deltaNew": 1
         },
         {
           "date": "2026-07-15",
           "new": 6,
           "fixed": 1,
           "closed": 1,
-          "deltaNew": 0
+          "deltaNew": -1
         },
         {
           "date": "2026-07-16",
@@ -1926,6 +2450,154 @@
       ],
       "versions": [
         {
+          "version": "5.24.0",
+          "total": 6,
+          "criticalMajor": 4,
+          "doneRate": 0.0,
+          "status": [
+            {
+              "label": "등록",
+              "count": 6
+            }
+          ],
+          "severity": [
+            {
+              "label": "Major",
+              "count": 4
+            },
+            {
+              "label": "Minor",
+              "count": 2
+            }
+          ],
+          "priority": [
+            {
+              "label": "Medium",
+              "count": 6
+            }
+          ]
+        },
+        {
+          "version": "5.23.2",
+          "total": 3,
+          "criticalMajor": 0,
+          "doneRate": 100.0,
+          "status": [
+            {
+              "label": "종료",
+              "count": 3
+            }
+          ],
+          "severity": [
+            {
+              "label": "Minor",
+              "count": 3
+            }
+          ],
+          "priority": [
+            {
+              "label": "Medium",
+              "count": 3
+            }
+          ]
+        },
+        {
+          "version": "5.23.0",
+          "total": 26,
+          "criticalMajor": 7,
+          "doneRate": 100.0,
+          "status": [
+            {
+              "label": "종료",
+              "count": 26
+            }
+          ],
+          "severity": [
+            {
+              "label": "Major",
+              "count": 7
+            },
+            {
+              "label": "Minor",
+              "count": 19
+            }
+          ],
+          "priority": [
+            {
+              "label": "Medium",
+              "count": 26
+            }
+          ]
+        },
+        {
+          "version": "5.22.1",
+          "total": 34,
+          "criticalMajor": 11,
+          "doneRate": 97.1,
+          "status": [
+            {
+              "label": "등록",
+              "count": 1
+            },
+            {
+              "label": "QA확인",
+              "count": 26
+            },
+            {
+              "label": "종료",
+              "count": 7
+            }
+          ],
+          "severity": [
+            {
+              "label": "Critical",
+              "count": 1
+            },
+            {
+              "label": "Major",
+              "count": 10
+            },
+            {
+              "label": "Minor",
+              "count": 23
+            }
+          ],
+          "priority": [
+            {
+              "label": "Medium",
+              "count": 34
+            }
+          ]
+        },
+        {
+          "version": "5.22.0",
+          "total": 9,
+          "criticalMajor": 2,
+          "doneRate": 100.0,
+          "status": [
+            {
+              "label": "종료",
+              "count": 9
+            }
+          ],
+          "severity": [
+            {
+              "label": "Major",
+              "count": 2
+            },
+            {
+              "label": "Minor",
+              "count": 7
+            }
+          ],
+          "priority": [
+            {
+              "label": "Medium",
+              "count": 9
+            }
+          ]
+        },
+        {
           "version": "5.21.0",
           "total": 117,
           "criticalMajor": 45,
@@ -1962,6 +2634,78 @@
             {
               "label": "Medium",
               "count": 117
+            }
+          ]
+        },
+        {
+          "version": "5.20.0",
+          "total": 82,
+          "criticalMajor": 19,
+          "doneRate": 97.6,
+          "status": [
+            {
+              "label": "등록",
+              "count": 2
+            },
+            {
+              "label": "종료",
+              "count": 80
+            }
+          ],
+          "severity": [
+            {
+              "label": "Critical",
+              "count": 7
+            },
+            {
+              "label": "Major",
+              "count": 12
+            },
+            {
+              "label": "Minor",
+              "count": 63
+            }
+          ],
+          "priority": [
+            {
+              "label": "Medium",
+              "count": 81
+            },
+            {
+              "label": "Low",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "version": "5.19.0",
+          "total": 24,
+          "criticalMajor": 3,
+          "doneRate": 79.2,
+          "status": [
+            {
+              "label": "등록",
+              "count": 5
+            },
+            {
+              "label": "종료",
+              "count": 19
+            }
+          ],
+          "severity": [
+            {
+              "label": "Major",
+              "count": 3
+            },
+            {
+              "label": "Minor",
+              "count": 21
+            }
+          ],
+          "priority": [
+            {
+              "label": "Medium",
+              "count": 24
             }
           ]
         },
@@ -2006,46 +2750,6 @@
             {
               "label": "Medium",
               "count": 102
-            },
-            {
-              "label": "Low",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "version": "5.20.0",
-          "total": 82,
-          "criticalMajor": 19,
-          "doneRate": 97.6,
-          "status": [
-            {
-              "label": "등록",
-              "count": 2
-            },
-            {
-              "label": "종료",
-              "count": 80
-            }
-          ],
-          "severity": [
-            {
-              "label": "Critical",
-              "count": 7
-            },
-            {
-              "label": "Major",
-              "count": 12
-            },
-            {
-              "label": "Minor",
-              "count": 63
-            }
-          ],
-          "priority": [
-            {
-              "label": "Medium",
-              "count": 81
             },
             {
               "label": "Low",
@@ -2114,6 +2818,46 @@
           ]
         },
         {
+          "version": "5.16.1",
+          "total": 4,
+          "criticalMajor": 1,
+          "doneRate": 75.0,
+          "status": [
+            {
+              "label": "등록",
+              "count": 1
+            },
+            {
+              "label": "종료",
+              "count": 3
+            }
+          ],
+          "severity": [
+            {
+              "label": "Major",
+              "count": 1
+            },
+            {
+              "label": "Minor",
+              "count": 2
+            },
+            {
+              "label": "개선 의견",
+              "count": 1
+            }
+          ],
+          "priority": [
+            {
+              "label": "Medium",
+              "count": 2
+            },
+            {
+              "label": "Low",
+              "count": 2
+            }
+          ]
+        },
+        {
           "version": "5.16.0",
           "total": 35,
           "criticalMajor": 12,
@@ -2162,74 +2906,62 @@
           ]
         },
         {
-          "version": "5.22.1",
-          "total": 34,
-          "criticalMajor": 11,
-          "doneRate": 97.1,
+          "version": "5.15.0",
+          "total": 4,
+          "criticalMajor": 0,
+          "doneRate": 100.0,
           "status": [
             {
-              "label": "등록",
-              "count": 1
-            },
-            {
-              "label": "QA확인",
-              "count": 26
-            },
-            {
               "label": "종료",
-              "count": 7
+              "count": 4
             }
           ],
           "severity": [
             {
-              "label": "Critical",
-              "count": 1
-            },
-            {
-              "label": "Major",
-              "count": 10
-            },
-            {
               "label": "Minor",
-              "count": 23
+              "count": 3
+            },
+            {
+              "label": "미지정",
+              "count": 1
             }
           ],
           "priority": [
             {
               "label": "Medium",
-              "count": 34
+              "count": 1
+            },
+            {
+              "label": "Low",
+              "count": 3
             }
           ]
         },
         {
-          "version": "5.12.0",
-          "total": 33,
+          "version": "5.14.0",
+          "total": 3,
           "criticalMajor": 0,
-          "doneRate": 90.9,
+          "doneRate": 100.0,
           "status": [
             {
-              "label": "등록",
-              "count": 3
-            },
-            {
               "label": "종료",
-              "count": 30
+              "count": 3
             }
           ],
           "severity": [
             {
               "label": "미지정",
-              "count": 33
+              "count": 3
             }
           ],
           "priority": [
             {
-              "label": "High",
-              "count": 3
+              "label": "Medium",
+              "count": 1
             },
             {
-              "label": "Medium",
-              "count": 30
+              "label": "Low",
+              "count": 2
             }
           ]
         },
@@ -2270,62 +3002,122 @@
           ]
         },
         {
-          "version": "5.23.0",
-          "total": 26,
-          "criticalMajor": 7,
-          "doneRate": 100.0,
+          "version": "5.12.0",
+          "total": 33,
+          "criticalMajor": 0,
+          "doneRate": 90.9,
           "status": [
             {
+              "label": "등록",
+              "count": 3
+            },
+            {
               "label": "종료",
-              "count": 26
+              "count": 30
             }
           ],
           "severity": [
             {
-              "label": "Major",
-              "count": 7
-            },
-            {
-              "label": "Minor",
-              "count": 19
+              "label": "미지정",
+              "count": 33
             }
           ],
           "priority": [
             {
+              "label": "High",
+              "count": 3
+            },
+            {
               "label": "Medium",
-              "count": 26
+              "count": 30
             }
           ]
         },
         {
-          "version": "5.19.0",
-          "total": 24,
+          "version": "[교통카드]SDK변경",
+          "total": 3,
           "criticalMajor": 3,
-          "doneRate": 79.2,
+          "doneRate": 100.0,
           "status": [
             {
-              "label": "등록",
-              "count": 5
-            },
-            {
-              "label": "종료",
-              "count": 19
+              "label": "QA확인",
+              "count": 3
             }
           ],
           "severity": [
             {
-              "label": "Major",
+              "label": "Critical",
               "count": 3
-            },
-            {
-              "label": "Minor",
-              "count": 21
             }
           ],
           "priority": [
             {
               "label": "Medium",
-              "count": 24
+              "count": 2
+            },
+            {
+              "label": "긴급",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "version": "결함 아님 - Done",
+          "total": 3,
+          "criticalMajor": 0,
+          "doneRate": 100.0,
+          "status": [
+            {
+              "label": "종료",
+              "count": 3
+            }
+          ],
+          "severity": [
+            {
+              "label": "Minor",
+              "count": 2
+            },
+            {
+              "label": "미지정",
+              "count": 1
+            }
+          ],
+          "priority": [
+            {
+              "label": "Medium",
+              "count": 1
+            },
+            {
+              "label": "Low",
+              "count": 2
+            }
+          ]
+        },
+        {
+          "version": "미지정",
+          "total": 8,
+          "criticalMajor": 0,
+          "doneRate": 87.5,
+          "status": [
+            {
+              "label": "등록",
+              "count": 1
+            },
+            {
+              "label": "종료",
+              "count": 7
+            }
+          ],
+          "severity": [
+            {
+              "label": "미지정",
+              "count": 8
+            }
+          ],
+          "priority": [
+            {
+              "label": "Medium",
+              "count": 8
             }
           ]
         },
@@ -2360,36 +3152,42 @@
               "count": 13
             }
           ]
-        },
-        {
-          "version": "5.22.0",
-          "total": 9,
-          "criticalMajor": 2,
-          "doneRate": 100.0,
-          "status": [
-            {
-              "label": "종료",
-              "count": 9
-            }
-          ],
-          "severity": [
-            {
-              "label": "Major",
-              "count": 2
-            },
-            {
-              "label": "Minor",
-              "count": 7
-            }
-          ],
-          "priority": [
-            {
-              "label": "Medium",
-              "count": 9
-            }
-          ]
         }
       ],
+      "versionGroups": {
+        "ALL": [
+          "5.24.0",
+          "5.23.2",
+          "5.23.0",
+          "5.22.1",
+          "5.22.0",
+          "5.21.0",
+          "5.20.0",
+          "5.19.0",
+          "5.18.0",
+          "5.17.0",
+          "5.16.1",
+          "5.16.0",
+          "5.15.0",
+          "5.14.0",
+          "5.13.0",
+          "5.12.0",
+          "[교통카드]SDK변경",
+          "결함 아님 - Done",
+          "미지정",
+          "Hanpass - Backlog"
+        ],
+        "RECENT": [
+          "5.24.0",
+          "5.23.2",
+          "5.23.0",
+          "5.22.1",
+          "5.22.0"
+        ],
+        "BACKLOG": [
+          "Hanpass - Backlog"
+        ]
+      },
       "selectedVersion": "ALL",
       "distributions": {
         "ALL": {
@@ -3062,24 +3860,24 @@
         },
         {
           "date": "2026-07-13",
-          "new": 7,
+          "new": 6,
           "fixed": 0,
           "closed": 0,
-          "deltaNew": 7
+          "deltaNew": 6
         },
         {
           "date": "2026-07-14",
-          "new": 6,
+          "new": 7,
           "fixed": 22,
           "closed": 22,
-          "deltaNew": -1
+          "deltaNew": 1
         },
         {
           "date": "2026-07-15",
           "new": 1,
           "fixed": 1,
           "closed": 1,
-          "deltaNew": -5
+          "deltaNew": -6
         },
         {
           "date": "2026-07-16",
@@ -3175,78 +3973,6 @@
       ],
       "versions": [
         {
-          "version": "[G.H]v1.0.0",
-          "total": 101,
-          "criticalMajor": 19,
-          "doneRate": 100.0,
-          "status": [
-            {
-              "label": "종료",
-              "count": 101
-            }
-          ],
-          "severity": [
-            {
-              "label": "Critical",
-              "count": 1
-            },
-            {
-              "label": "Major",
-              "count": 18
-            },
-            {
-              "label": "Minor",
-              "count": 82
-            }
-          ],
-          "priority": [
-            {
-              "label": "Medium",
-              "count": 101
-            }
-          ]
-        },
-        {
-          "version": "[G.H]v1.0.2-26.06",
-          "total": 55,
-          "criticalMajor": 29,
-          "doneRate": 98.2,
-          "status": [
-            {
-              "label": "등록",
-              "count": 1
-            },
-            {
-              "label": "종료",
-              "count": 54
-            }
-          ],
-          "severity": [
-            {
-              "label": "Critical",
-              "count": 1
-            },
-            {
-              "label": "Major",
-              "count": 28
-            },
-            {
-              "label": "Minor",
-              "count": 26
-            }
-          ],
-          "priority": [
-            {
-              "label": "Medium",
-              "count": 54
-            },
-            {
-              "label": "긴급",
-              "count": 1
-            }
-          ]
-        },
-        {
           "version": "[G.H]v1.0.2-26.08",
           "total": 20,
           "criticalMajor": 7,
@@ -3303,30 +4029,42 @@
           ]
         },
         {
-          "version": "[G.H]추후 수정-백로그",
-          "total": 5,
-          "criticalMajor": 3,
-          "doneRate": 0.0,
+          "version": "[G.H]v1.0.2-26.06",
+          "total": 55,
+          "criticalMajor": 29,
+          "doneRate": 98.2,
           "status": [
             {
               "label": "등록",
-              "count": 5
+              "count": 1
+            },
+            {
+              "label": "종료",
+              "count": 54
             }
           ],
           "severity": [
             {
+              "label": "Critical",
+              "count": 1
+            },
+            {
               "label": "Major",
-              "count": 3
+              "count": 28
             },
             {
               "label": "Minor",
-              "count": 2
+              "count": 26
             }
           ],
           "priority": [
             {
               "label": "Medium",
-              "count": 5
+              "count": 54
+            },
+            {
+              "label": "긴급",
+              "count": 1
             }
           ]
         },
@@ -3359,6 +4097,38 @@
           ]
         },
         {
+          "version": "[G.H]v1.0.0",
+          "total": 101,
+          "criticalMajor": 19,
+          "doneRate": 100.0,
+          "status": [
+            {
+              "label": "종료",
+              "count": 101
+            }
+          ],
+          "severity": [
+            {
+              "label": "Critical",
+              "count": 1
+            },
+            {
+              "label": "Major",
+              "count": 18
+            },
+            {
+              "label": "Minor",
+              "count": 82
+            }
+          ],
+          "priority": [
+            {
+              "label": "Medium",
+              "count": 101
+            }
+          ]
+        },
+        {
           "version": "[G.H][교통카드]SDK변경",
           "total": 2,
           "criticalMajor": 2,
@@ -3387,6 +4157,34 @@
           ]
         },
         {
+          "version": "[G.H]추후 수정-백로그",
+          "total": 5,
+          "criticalMajor": 3,
+          "doneRate": 0.0,
+          "status": [
+            {
+              "label": "등록",
+              "count": 5
+            }
+          ],
+          "severity": [
+            {
+              "label": "Major",
+              "count": 3
+            },
+            {
+              "label": "Minor",
+              "count": 2
+            }
+          ],
+          "priority": [
+            {
+              "label": "Medium",
+              "count": 5
+            }
+          ]
+        },
+        {
           "version": "[G.H]Backlog",
           "total": 1,
           "criticalMajor": 0,
@@ -3411,6 +4209,28 @@
           ]
         }
       ],
+      "versionGroups": {
+        "ALL": [
+          "[G.H]v1.0.2-26.08",
+          "[G.H]v1.0.2-26.07",
+          "[G.H]v1.0.2-26.06",
+          "[G.H]v1.0.2",
+          "[G.H]v1.0.0",
+          "[G.H][교통카드]SDK변경",
+          "[G.H]추후 수정-백로그",
+          "[G.H]Backlog"
+        ],
+        "RECENT": [
+          "[G.H]v1.0.2-26.08",
+          "[G.H]v1.0.2-26.07",
+          "[G.H]v1.0.2-26.06",
+          "[G.H]v1.0.2",
+          "[G.H]v1.0.0"
+        ],
+        "BACKLOG": [
+          "[G.H]Backlog"
+        ]
+      },
       "selectedVersion": "ALL",
       "distributions": {
         "ALL": {
@@ -3555,24 +4375,24 @@
         },
         {
           "date": "2026-07-13",
-          "new": 7,
+          "new": 6,
           "fixed": 0,
           "closed": 0,
-          "deltaNew": 7
+          "deltaNew": 6
         },
         {
           "date": "2026-07-14",
-          "new": 6,
+          "new": 7,
           "fixed": 22,
           "closed": 22,
-          "deltaNew": -1
+          "deltaNew": 1
         },
         {
           "date": "2026-07-15",
           "new": 1,
           "fixed": 1,
           "closed": 1,
-          "deltaNew": -5
+          "deltaNew": -6
         },
         {
           "date": "2026-07-16",
@@ -3985,8 +4805,14 @@
       repoUrl: "https://github.com/mhjang-qa/run_all_notion",
     };
     const domainNames = ["한패스", "GoHanpass"];
+    const versionModeLabels = {
+      ALL: "전체",
+      RECENT: "최근 5개",
+      BACKLOG: "Backlog",
+    };
     let selectedDomain = "ALL";
     let selectedVersion = DATA.selectedVersion || "ALL";
+    let selectedVersionMode = "RECENT";
     $("stamp").textContent = `생성: ${formatKstDateTimeWithRelative(DATA.generatedAt)} · 기준 ${DATA.days}일`;
 
     function setSyncStatus(message, tone = "") {
@@ -4176,7 +5002,10 @@
 
     function renderVersions() {
       const scope = currentScope();
-      const max = Math.max(...scope.versions.map((d) => d.total), 1);
+      const versionByName = new Map(scope.versions.map((item) => [item.version, item]));
+      const groupNames = (scope.versionGroups && scope.versionGroups[selectedVersionMode]) || scope.versions.map((item) => item.version);
+      const visibleVersions = groupNames.map((name) => versionByName.get(name)).filter(Boolean);
+      const max = Math.max(...visibleVersions.map((d) => d.total), 1);
       const allItem = {
         version: "ALL",
         label: "전체",
@@ -4184,7 +5013,21 @@
         criticalMajor: scope.versions.reduce((sum, item) => sum + (item.criticalMajor || 0), 0),
         doneRate: scope.summary.total ? Math.round((scope.summary.closed / scope.summary.total) * 1000) / 10 : 0,
       };
-      const items = [allItem, ...scope.versions];
+      if (selectedVersion !== "ALL" && !visibleVersions.some((item) => item.version === selectedVersion)) {
+        selectedVersion = "ALL";
+      }
+      $("versionControls").innerHTML = Object.entries(versionModeLabels).map(([mode, label]) => `
+        <button class="version-mode-btn ${selectedVersionMode === mode ? "active" : ""}" data-version-mode="${mode}">${label}</button>
+      `).join("");
+      document.querySelectorAll(".version-mode-btn").forEach((button) => {
+        button.addEventListener("click", () => {
+          selectedVersionMode = button.dataset.versionMode || "RECENT";
+          selectedVersion = "ALL";
+          renderVersions();
+          renderDistributions();
+        });
+      });
+      const items = [allItem, ...visibleVersions];
       $("versions").innerHTML = items.length ? items.map((d) => `
         <button class="version-item ${selectedVersion === d.version ? "active" : ""}" data-version="${esc(d.version)}">
           <div><strong>${esc(d.version === "ALL" ? d.label : d.version)}</strong><div class="meta">Major/Critical ${d.criticalMajor}건 · 완료율 ${pct(d.doneRate)}</div></div>
@@ -4213,7 +5056,7 @@
       const scope = currentScope();
       const version = selectedVersion === "ALL" ? null : scope.versions.find((item) => item.version === selectedVersion);
       const d = version || scope.distributions.ALL;
-      $("selectedVersionLabel").textContent = `${selectedDomain === "ALL" ? "전체" : selectedDomain} / ${version ? version.version : "전체"}`;
+      $("selectedVersionLabel").textContent = `${selectedDomain === "ALL" ? "전체" : selectedDomain} / ${versionModeLabels[selectedVersionMode] || "전체"} / ${version ? version.version : "전체"}`;
       $("distributionScope").textContent = version ? `${selectedDomain === "ALL" ? "전체" : selectedDomain} · ${version.version} 기준` : `${selectedDomain === "ALL" ? "전체" : selectedDomain} 기준`;
       $("distributions").innerHTML = [
         renderDistBox("상태", d.status),

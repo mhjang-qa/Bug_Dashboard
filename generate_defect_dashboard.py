@@ -359,6 +359,19 @@ def version_sort_key(version: str) -> tuple[Any, ...]:
     return (2, 0, 0, 0, 0, 0, text)
 
 
+def version_sort_key_desc(version: str) -> tuple[Any, ...]:
+    version_key = extract_semver(version or "")
+    suffix = extract_year_month_suffix(version or "") or (0, 0)
+    if version_key:
+        return (0, -version_key[0], -version_key[1], -version_key[2], -suffix[0], -suffix[1], version)
+    key = version_sort_key(version)
+    return (1, key[0], key[6])
+
+
+def is_backlog_version(version: str) -> bool:
+    return "backlog" in (version or "").lower()
+
+
 def classify_domain(version: str, title: str = "", url: str = "") -> str:
     source = " ".join(part for part in [version, title, url] if part).lower()
     if has_go_hanpass_keyword(source):
@@ -523,7 +536,28 @@ def build_versions(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
                 "priority": ordered_counts(Counter(item["priority"] for item in items), PRIORITY_ORDER),
             }
         )
-    return sorted(versions, key=lambda item: (-item["total"], version_sort_key(item["version"])))[:12]
+    return sorted(
+        versions,
+        key=lambda item: (
+            1 if is_backlog_version(item["version"]) else 0,
+            version_sort_key_desc(item["version"]),
+            -item["total"],
+        ),
+    )
+
+
+def build_version_groups(versions: list[dict[str, Any]]) -> dict[str, list[str]]:
+    recent = [
+        item["version"]
+        for item in versions
+        if extract_semver(item["version"]) and not is_backlog_version(item["version"])
+    ][:5]
+    backlog = [item["version"] for item in versions if is_backlog_version(item["version"])]
+    return {
+        "ALL": [item["version"] for item in versions],
+        "RECENT": recent,
+        "BACKLOG": backlog,
+    }
 
 
 def build_scope_payload(rows: list[dict[str, Any]], days: int, report_board: dict[str, Any]) -> dict[str, Any]:
@@ -564,6 +598,7 @@ def build_scope_payload(rows: list[dict[str, Any]], days: int, report_board: dic
         "funnel": funnel,
         "daily": daily,
         "versions": versions,
+        "versionGroups": build_version_groups(versions),
         "selectedVersion": "ALL",
         "distributions": {
             "ALL": {
@@ -699,8 +734,24 @@ def build_html(payload: dict[str, Any]) -> str:
     .tab.active, .range-btn.active {{ color: var(--text); border-color: rgba(29, 134, 242, .45); background: rgba(29, 134, 242, .08); }}
     .panel-head {{ display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 12px; }}
     .panel-head h2 {{ margin: 0; }}
+    .panel-title {{ display: grid; gap: 3px; }}
     .range-controls {{ display: flex; gap: 6px; }}
+    .version-controls {{ display: flex; gap: 6px; flex-wrap: wrap; justify-content: flex-end; }}
     .range-btn {{ padding: 7px 10px; font-size: 12px; }}
+    .version-mode-btn {{
+      border: 1px solid var(--line);
+      background: var(--panel-soft);
+      color: var(--muted);
+      border-radius: 8px;
+      padding: 7px 10px;
+      font-size: 12px;
+      cursor: pointer;
+    }}
+    .version-mode-btn.active {{
+      color: var(--text);
+      border-color: rgba(29, 134, 242, .45);
+      background: rgba(29, 134, 242, .08);
+    }}
     .summary {{ display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin-bottom: 18px; }}
     .card, .panel {{ background: var(--panel); border: 1px solid var(--line); border-radius: 8px; box-shadow: var(--shadow); }}
     .card {{ padding: 14px; min-height: 94px; }}
@@ -898,8 +949,9 @@ def build_html(payload: dict[str, Any]) -> str:
         --shadow: 0 14px 32px rgba(0, 0, 0, .22);
       }}
       .tile {{ background: #172036; border-color: rgba(148,163,184,.10); }}
-      .tab, .range-btn, .version-item, .domain-btn {{ background: #0b1220; }}
+      .tab, .range-btn, .version-mode-btn, .version-item, .domain-btn {{ background: #0b1220; }}
       .version-item.active {{ border-color: rgba(97, 183, 255, .45); box-shadow: 0 0 0 2px rgba(97, 183, 255, .08) inset; }}
+      .version-mode-btn.active {{ border-color: rgba(97, 183, 255, .45); background: rgba(97, 183, 255, .10); }}
       .domain-btn.active {{ border-color: rgba(97, 183, 255, .45); background: rgba(97, 183, 255, .10); }}
     }}
   </style>
@@ -957,7 +1009,7 @@ def build_html(payload: dict[str, Any]) -> str:
       </section>
       <section class="view" id="version">
         <div class="grid">
-          <article class="panel"><div class="panel-head"><h2>버전별 결함 추이</h2><div class="subtle" id="selectedVersionLabel">전체</div></div><div class="version-list" id="versions"></div></article>
+          <article class="panel"><div class="panel-head"><div class="panel-title"><h2>버전별 결함 추이</h2><div class="subtle" id="selectedVersionLabel">전체</div></div><div class="version-controls" id="versionControls"></div></div><div class="version-list" id="versions"></div></article>
           <article class="panel"><div class="panel-head"><h2>상태/심각도/우선순위 분포</h2><div class="subtle" id="distributionScope">전체 기준</div></div><div class="grid three" id="distributions"></div></article>
         </div>
       </section>
@@ -1050,8 +1102,14 @@ def build_html(payload: dict[str, Any]) -> str:
       repoUrl: "https://github.com/mhjang-qa/run_all_notion",
     }};
     const domainNames = ["한패스", "GoHanpass"];
+    const versionModeLabels = {{
+      ALL: "전체",
+      RECENT: "최근 5개",
+      BACKLOG: "Backlog",
+    }};
     let selectedDomain = "ALL";
     let selectedVersion = DATA.selectedVersion || "ALL";
+    let selectedVersionMode = "RECENT";
     $("stamp").textContent = `생성: ${{formatKstDateTimeWithRelative(DATA.generatedAt)}} · 기준 ${{DATA.days}}일`;
 
     function setSyncStatus(message, tone = "") {{
@@ -1241,7 +1299,10 @@ def build_html(payload: dict[str, Any]) -> str:
 
     function renderVersions() {{
       const scope = currentScope();
-      const max = Math.max(...scope.versions.map((d) => d.total), 1);
+      const versionByName = new Map(scope.versions.map((item) => [item.version, item]));
+      const groupNames = (scope.versionGroups && scope.versionGroups[selectedVersionMode]) || scope.versions.map((item) => item.version);
+      const visibleVersions = groupNames.map((name) => versionByName.get(name)).filter(Boolean);
+      const max = Math.max(...visibleVersions.map((d) => d.total), 1);
       const allItem = {{
         version: "ALL",
         label: "전체",
@@ -1249,7 +1310,21 @@ def build_html(payload: dict[str, Any]) -> str:
         criticalMajor: scope.versions.reduce((sum, item) => sum + (item.criticalMajor || 0), 0),
         doneRate: scope.summary.total ? Math.round((scope.summary.closed / scope.summary.total) * 1000) / 10 : 0,
       }};
-      const items = [allItem, ...scope.versions];
+      if (selectedVersion !== "ALL" && !visibleVersions.some((item) => item.version === selectedVersion)) {{
+        selectedVersion = "ALL";
+      }}
+      $("versionControls").innerHTML = Object.entries(versionModeLabels).map(([mode, label]) => `
+        <button class="version-mode-btn ${{selectedVersionMode === mode ? "active" : ""}}" data-version-mode="${{mode}}">${{label}}</button>
+      `).join("");
+      document.querySelectorAll(".version-mode-btn").forEach((button) => {{
+        button.addEventListener("click", () => {{
+          selectedVersionMode = button.dataset.versionMode || "RECENT";
+          selectedVersion = "ALL";
+          renderVersions();
+          renderDistributions();
+        }});
+      }});
+      const items = [allItem, ...visibleVersions];
       $("versions").innerHTML = items.length ? items.map((d) => `
         <button class="version-item ${{selectedVersion === d.version ? "active" : ""}}" data-version="${{esc(d.version)}}">
           <div><strong>${{esc(d.version === "ALL" ? d.label : d.version)}}</strong><div class="meta">Major/Critical ${{d.criticalMajor}}건 · 완료율 ${{pct(d.doneRate)}}</div></div>
@@ -1278,7 +1353,7 @@ def build_html(payload: dict[str, Any]) -> str:
       const scope = currentScope();
       const version = selectedVersion === "ALL" ? null : scope.versions.find((item) => item.version === selectedVersion);
       const d = version || scope.distributions.ALL;
-      $("selectedVersionLabel").textContent = `${{selectedDomain === "ALL" ? "전체" : selectedDomain}} / ${{version ? version.version : "전체"}}`;
+      $("selectedVersionLabel").textContent = `${{selectedDomain === "ALL" ? "전체" : selectedDomain}} / ${{versionModeLabels[selectedVersionMode] || "전체"}} / ${{version ? version.version : "전체"}}`;
       $("distributionScope").textContent = version ? `${{selectedDomain === "ALL" ? "전체" : selectedDomain}} · ${{version.version}} 기준` : `${{selectedDomain === "ALL" ? "전체" : selectedDomain}} 기준`;
       $("distributions").innerHTML = [
         renderDistBox("상태", d.status),

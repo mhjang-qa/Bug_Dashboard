@@ -393,7 +393,7 @@
     </div>
   </div>
   <script id="dashboard-data" type="application/json">{
-  "generatedAt": "2026-07-28T02:38:31+00:00",
+  "generatedAt": "2026-07-28T10:58:06+00:00",
   "days": 30,
   "domainOrder": [
     "한패스",
@@ -402,19 +402,19 @@
   "domains": {
     "ALL": {
       "summary": {
-        "total": 809,
-        "new": 96,
+        "total": 812,
+        "new": 92,
         "inProgress": 0,
         "fixed": 0,
-        "closed": 651,
-        "todayNew": 0,
-        "newDelta": -6
+        "closed": 658,
+        "todayNew": 3,
+        "newDelta": -3
       },
       "funnel": [
         {
           "stage": "등록",
-          "count": 96,
-          "rate": 11.9,
+          "count": 92,
+          "rate": 11.3,
           "width": 18
         },
         {
@@ -444,13 +444,13 @@
         {
           "stage": "QA확인",
           "count": 62,
-          "rate": 7.7,
+          "rate": 7.6,
           "width": 18
         },
         {
           "stage": "종료",
-          "count": 651,
-          "rate": 80.5,
+          "count": 658,
+          "rate": 81.0,
           "width": 100
         }
       ],
@@ -555,24 +555,24 @@
         },
         {
           "date": "2026-07-13",
-          "new": 6,
+          "new": 7,
           "fixed": 0,
           "closed": 0,
-          "deltaNew": 6
+          "deltaNew": 7
         },
         {
           "date": "2026-07-14",
-          "new": 7,
+          "new": 6,
           "fixed": 24,
           "closed": 24,
-          "deltaNew": 1
+          "deltaNew": -1
         },
         {
           "date": "2026-07-15",
           "new": 6,
           "fixed": 1,
           "closed": 1,
-          "deltaNew": -1
+          "deltaNew": 0
         },
         {
           "date": "2026-07-16",
@@ -660,38 +660,42 @@
         },
         {
           "date": "2026-07-28",
-          "new": 0,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": -6
+          "new": 3,
+          "fixed": 7,
+          "closed": 7,
+          "deltaNew": -3
         }
       ],
       "versions": [
         {
           "version": "5.24.0",
-          "total": 6,
-          "criticalMajor": 4,
-          "doneRate": 0.0,
+          "total": 9,
+          "criticalMajor": 5,
+          "doneRate": 66.7,
           "status": [
             {
               "label": "등록",
+              "count": 3
+            },
+            {
+              "label": "종료",
               "count": 6
             }
           ],
           "severity": [
             {
               "label": "Major",
-              "count": 4
+              "count": 5
             },
             {
               "label": "Minor",
-              "count": 2
+              "count": 4
             }
           ],
           "priority": [
             {
               "label": "Medium",
-              "count": 6
+              "count": 9
             }
           ]
         },
@@ -1255,11 +1259,15 @@
           "version": "[G.H]v1.0.2-26.08",
           "total": 20,
           "criticalMajor": 7,
-          "doneRate": 0.0,
+          "doneRate": 5.0,
           "status": [
             {
               "label": "등록",
-              "count": 20
+              "count": 19
+            },
+            {
+              "label": "종료",
+              "count": 1
             }
           ],
           "severity": [
@@ -1657,7 +1665,7 @@
           "status": [
             {
               "label": "등록",
-              "count": 96
+              "count": 92
             },
             {
               "label": "QA확인",
@@ -1665,7 +1673,7 @@
             },
             {
               "label": "종료",
-              "count": 651
+              "count": 658
             }
           ],
           "severity": [
@@ -1675,11 +1683,11 @@
             },
             {
               "label": "Major",
-              "count": 199
+              "count": 200
             },
             {
               "label": "Minor",
-              "count": 478
+              "count": 480
             },
             {
               "label": "미지정",
@@ -1701,7 +1709,7 @@
             },
             {
               "label": "Medium",
-              "count": 765
+              "count": 768
             },
             {
               "label": "Low",
@@ -1819,24 +1827,24 @@
         },
         {
           "date": "2026-07-13",
-          "new": 6,
+          "new": 7,
           "fixed": 0,
           "closed": 0,
-          "deltaNew": 6
+          "deltaNew": 7
         },
         {
           "date": "2026-07-14",
-          "new": 7,
+          "new": 6,
           "fixed": 24,
           "closed": 24,
-          "deltaNew": 1
+          "deltaNew": -1
         },
         {
           "date": "2026-07-15",
           "new": 6,
           "fixed": 1,
           "closed": 1,
-          "deltaNew": -1
+          "deltaNew": 0
         },
         {
           "date": "2026-07-16",
@@ -1924,10 +1932,10 @@
         },
         {
           "date": "2026-07-28",
-          "new": 0,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": -6
+          "new": 3,
+          "fixed": 7,
+          "closed": 7,
+          "deltaNew": -3
         }
       ],
       "reportBoard": {
@@ -1971,8 +1979,29 @@
       },
       "recent": [
         {
-          "id": "ISSUE-1065",
-          "title": "[HC][공통] ‘한패스 케어 홈’ 화면 내 메뉴 스크롤 시 메뉴 고정되어 있는 현상 ",
+          "id": "ISSUE-1068",
+          "title": "[HC][공통] 홈 메인 ‘새로 오픈했어요!’ 영역 ‘계절근로자 보험’ 미노출  현상 ",
+          "status": "결함 아님 (Not an issue)",
+          "stage": "종료",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "5.24.0",
+          "versionRaw": "5.24.0",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-07-28T07:38:00.000Z",
+          "createdDate": "2026-07-28",
+          "fixedAt": "2026-07-28T08:03:00.000Z",
+          "fixedDate": "2026-07-28",
+          "closedAt": "2026-07-28T08:03:00.000Z",
+          "closedDate": "2026-07-28",
+          "url": "https://app.notion.com/p/HC-3ab73fbd19518041afe6f5e90d9250d1",
+          "lastEditedAt": "2026-07-28T08:03:00.000Z"
+        },
+        {
+          "id": "ISSUE-1067",
+          "title": "[HC][공통] 자동 로그아웃 시 정의되지 않은 팝업 노출 현상",
           "status": "등록 (Registered)",
           "stage": "등록",
           "severity": "Major",
@@ -1982,60 +2011,18 @@
           "versionRaw": "5.24.0",
           "domain": "한패스",
           "os": "미지정",
-          "createdAt": "2026-07-27T08:52:00.000Z",
-          "createdDate": "2026-07-27",
+          "createdAt": "2026-07-28T07:22:00.000Z",
+          "createdDate": "2026-07-28",
           "fixedAt": "",
           "fixedDate": "",
           "closedAt": "",
           "closedDate": "",
-          "url": "https://app.notion.com/p/HC-3aa73fbd195180b69db3c72de6d9ac4a",
-          "lastEditedAt": "2026-07-27T08:59:00.000Z"
+          "url": "https://app.notion.com/p/HC-3ab73fbd19518043b75efe51608e2672",
+          "lastEditedAt": "2026-07-28T07:31:00.000Z"
         },
         {
-          "id": "ISSUE-1064",
-          "title": "[HC][공통] ‘외국인 근로자 포털', ’가입내역 조회’, ‘보험구 청구’ 선택 시 준비 중 팝업 노출 되는 현상 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Major",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "5.24.0",
-          "versionRaw": "5.24.0",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-07-27T08:39:00.000Z",
-          "createdDate": "2026-07-27",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/HC-3aa73fbd195180ee9ce7ede507c590ba",
-          "lastEditedAt": "2026-07-27T08:52:00.000Z"
-        },
-        {
-          "id": "ISSUE-1063",
-          "title": "[HC][공통] ‘한패스 케어 홈’ 화면 내 메뉴 버튼 선택 시 메뉴가 닫히지 않는 현상 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Major",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "5.24.0",
-          "versionRaw": "5.24.0",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-07-27T08:35:00.000Z",
-          "createdDate": "2026-07-27",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/HC-3aa73fbd19518005841eeac4af223110",
-          "lastEditedAt": "2026-07-27T08:51:00.000Z"
-        },
-        {
-          "id": "ISSUE-1062",
-          "title": "[HC][공통] ‘가입 내역 없음 안내’ 팝업 내 문구 기획서와 상이 ",
+          "id": "ISSUE-1066",
+          "title": "[HC][AOS] 특정 단말에서 화면 레이아웃 불일치 결함 ",
           "status": "등록 (Registered)",
           "stage": "등록",
           "severity": "Minor",
@@ -2045,20 +2032,104 @@
           "versionRaw": "5.24.0",
           "domain": "한패스",
           "os": "미지정",
-          "createdAt": "2026-07-27T07:20:00.000Z",
-          "createdDate": "2026-07-27",
+          "createdAt": "2026-07-28T05:12:00.000Z",
+          "createdDate": "2026-07-28",
           "fixedAt": "",
           "fixedDate": "",
           "closedAt": "",
           "closedDate": "",
+          "url": "https://app.notion.com/p/HC-AOS-3ab73fbd1951802b9e7cc93fda44b83c",
+          "lastEditedAt": "2026-07-28T05:34:00.000Z"
+        },
+        {
+          "id": "ISSUE-1065",
+          "title": "[HC][공통] ‘한패스 케어 홈’ 화면 내 메뉴 스크롤 시 메뉴 고정되어 있는 현상 ",
+          "status": "개발 완료 (Dev Done)",
+          "stage": "종료",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "5.24.0",
+          "versionRaw": "5.24.0",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-07-27T08:52:00.000Z",
+          "createdDate": "2026-07-27",
+          "fixedAt": "2026-07-28T05:59:00.000Z",
+          "fixedDate": "2026-07-28",
+          "closedAt": "2026-07-28T05:59:00.000Z",
+          "closedDate": "2026-07-28",
+          "url": "https://app.notion.com/p/HC-3aa73fbd195180b69db3c72de6d9ac4a",
+          "lastEditedAt": "2026-07-28T05:59:00.000Z"
+        },
+        {
+          "id": "ISSUE-1064",
+          "title": "[HC][공통] ‘외국인 근로자 포털', ’가입내역 조회’, ‘보험구 청구’ 선택 시 준비 중 팝업 노출 되는 현상 ",
+          "status": "결함 아님 (Not an issue)",
+          "stage": "종료",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "5.24.0",
+          "versionRaw": "5.24.0",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-07-27T08:39:00.000Z",
+          "createdDate": "2026-07-27",
+          "fixedAt": "2026-07-28T05:03:00.000Z",
+          "fixedDate": "2026-07-28",
+          "closedAt": "2026-07-28T05:03:00.000Z",
+          "closedDate": "2026-07-28",
+          "url": "https://app.notion.com/p/HC-3aa73fbd195180ee9ce7ede507c590ba",
+          "lastEditedAt": "2026-07-28T05:03:00.000Z"
+        },
+        {
+          "id": "ISSUE-1063",
+          "title": "[HC][공통] ‘한패스 케어 홈’ 화면 내 메뉴 버튼 선택 시 메뉴가 닫히지 않는 현상 ",
+          "status": "개발 완료 (Dev Done)",
+          "stage": "종료",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "5.24.0",
+          "versionRaw": "5.24.0",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-07-27T08:35:00.000Z",
+          "createdDate": "2026-07-27",
+          "fixedAt": "2026-07-28T05:59:00.000Z",
+          "fixedDate": "2026-07-28",
+          "closedAt": "2026-07-28T05:59:00.000Z",
+          "closedDate": "2026-07-28",
+          "url": "https://app.notion.com/p/HC-3aa73fbd19518005841eeac4af223110",
+          "lastEditedAt": "2026-07-28T05:59:00.000Z"
+        },
+        {
+          "id": "ISSUE-1062",
+          "title": "[HC][공통] ‘가입 내역 없음 안내’ 팝업 내 문구 기획서와 상이 ",
+          "status": "개발 완료 (Dev Done)",
+          "stage": "종료",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "5.24.0",
+          "versionRaw": "5.24.0",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-07-27T07:20:00.000Z",
+          "createdDate": "2026-07-27",
+          "fixedAt": "2026-07-28T05:27:00.000Z",
+          "fixedDate": "2026-07-28",
+          "closedAt": "2026-07-28T05:27:00.000Z",
+          "closedDate": "2026-07-28",
           "url": "https://app.notion.com/p/HC-3aa73fbd195180d58734d5e99fa22b63",
-          "lastEditedAt": "2026-07-27T07:30:00.000Z"
+          "lastEditedAt": "2026-07-28T05:27:00.000Z"
         },
         {
           "id": "ISSUE-1060",
           "title": "[HC][공통]보험 신청 페이지, 보험 조회 페이지 상단 좌측 ‘뒤로가기’ 선택 시 무반응인 현상 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
+          "status": "개발 완료 (Dev Done)",
+          "stage": "종료",
           "severity": "Major",
           "priority": "Medium",
           "assignee": "미지정",
@@ -2068,12 +2139,12 @@
           "os": "미지정",
           "createdAt": "2026-07-27T06:13:00.000Z",
           "createdDate": "2026-07-27",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
+          "fixedAt": "2026-07-28T04:10:00.000Z",
+          "fixedDate": "2026-07-28",
+          "closedAt": "2026-07-28T04:10:00.000Z",
+          "closedDate": "2026-07-28",
           "url": "https://app.notion.com/p/HC-3aa73fbd195180f28a77e00f5b0ece05",
-          "lastEditedAt": "2026-07-27T08:12:00.000Z"
+          "lastEditedAt": "2026-07-28T04:10:00.000Z"
         },
         {
           "id": "ISSUE-1059",
@@ -2116,87 +2187,24 @@
           "closedDate": "",
           "url": "https://app.notion.com/p/iOS-x-3a773fbd195180e2be14df6cbedc26b8",
           "lastEditedAt": "2026-07-27T07:00:00.000Z"
-        },
-        {
-          "id": "ISSUE-1055",
-          "title": "[추가인증][다국어] 중국어 번체 설정 시 ‘주소 사진 업로드 안내 팝업’ 내 ‘취소’ 버튼 영어로 나오는 현상 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[G.H]v1.0.2-26.08",
-          "versionRaw": "[G.H]v1.0.2-26.08",
-          "domain": "GoHanpass",
-          "os": "미지정",
-          "createdAt": "2026-07-24T07:25:00.000Z",
-          "createdDate": "2026-07-24",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/3a773fbd19518061aebac5d09e20b6b4",
-          "lastEditedAt": "2026-07-24T07:36:00.000Z"
-        },
-        {
-          "id": "ISSUE-1052",
-          "title": "[방글라데시/즐겨찾기][AOS] 즐겨찾기 대상자 송금하기 시 ‘받는 방법’ 미노출 현상 (iOS 정상)",
-          "status": "추후 수정 백로그 이관",
-          "stage": "등록",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "Hanpass - Backlog",
-          "versionRaw": "Hanpass - Backlog",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-07-22T07:56:00.000Z",
-          "createdDate": "2026-07-22",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/AOS-iOS-3a573fbd1951809c89aad2eb92742afc",
-          "lastEditedAt": "2026-07-24T00:51:00.000Z"
-        },
-        {
-          "id": "ISSUE-1051",
-          "title": "[방글라데시/즐겨찾기] 즐겨찾기/최근 송금내역 존재하지 않는 경우 화면 기획서와 상이",
-          "status": "추후 수정 백로그 이관",
-          "stage": "등록",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "Hanpass - Backlog",
-          "versionRaw": "Hanpass - Backlog",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-07-22T06:46:00.000Z",
-          "createdDate": "2026-07-22",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/3a573fbd1951802d8513f977fe84e2c5",
-          "lastEditedAt": "2026-07-24T00:00:00.000Z"
         }
       ]
     },
     "한패스": {
       "summary": {
-        "total": 605,
-        "new": 68,
+        "total": 608,
+        "new": 65,
         "inProgress": 0,
         "fixed": 0,
-        "closed": 476,
-        "todayNew": 0,
-        "newDelta": -5
+        "closed": 482,
+        "todayNew": 3,
+        "newDelta": -2
       },
       "funnel": [
         {
           "stage": "등록",
-          "count": 68,
-          "rate": 11.2,
+          "count": 65,
+          "rate": 10.7,
           "width": 18
         },
         {
@@ -2226,13 +2234,13 @@
         {
           "stage": "QA확인",
           "count": 61,
-          "rate": 10.1,
+          "rate": 10.0,
           "width": 18
         },
         {
           "stage": "종료",
-          "count": 476,
-          "rate": 78.7,
+          "count": 482,
+          "rate": 79.3,
           "width": 100
         }
       ],
@@ -2442,38 +2450,42 @@
         },
         {
           "date": "2026-07-28",
-          "new": 0,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": -5
+          "new": 3,
+          "fixed": 6,
+          "closed": 6,
+          "deltaNew": -2
         }
       ],
       "versions": [
         {
           "version": "5.24.0",
-          "total": 6,
-          "criticalMajor": 4,
-          "doneRate": 0.0,
+          "total": 9,
+          "criticalMajor": 5,
+          "doneRate": 66.7,
           "status": [
             {
               "label": "등록",
+              "count": 3
+            },
+            {
+              "label": "종료",
               "count": 6
             }
           ],
           "severity": [
             {
               "label": "Major",
-              "count": 4
+              "count": 5
             },
             {
               "label": "Minor",
-              "count": 2
+              "count": 4
             }
           ],
           "priority": [
             {
               "label": "Medium",
-              "count": 6
+              "count": 9
             }
           ]
         },
@@ -3194,7 +3206,7 @@
           "status": [
             {
               "label": "등록",
-              "count": 68
+              "count": 65
             },
             {
               "label": "QA확인",
@@ -3202,7 +3214,7 @@
             },
             {
               "label": "종료",
-              "count": 476
+              "count": 482
             }
           ],
           "severity": [
@@ -3212,11 +3224,11 @@
             },
             {
               "label": "Major",
-              "count": 136
+              "count": 137
             },
             {
               "label": "Minor",
-              "count": 341
+              "count": 343
             },
             {
               "label": "미지정",
@@ -3238,7 +3250,7 @@
             },
             {
               "label": "Medium",
-              "count": 562
+              "count": 565
             },
             {
               "label": "Low",
@@ -3461,10 +3473,10 @@
         },
         {
           "date": "2026-07-28",
-          "new": 0,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": -5
+          "new": 3,
+          "fixed": 6,
+          "closed": 6,
+          "deltaNew": -2
         }
       ],
       "reportBoard": {
@@ -3494,8 +3506,29 @@
       },
       "recent": [
         {
-          "id": "ISSUE-1065",
-          "title": "[HC][공통] ‘한패스 케어 홈’ 화면 내 메뉴 스크롤 시 메뉴 고정되어 있는 현상 ",
+          "id": "ISSUE-1068",
+          "title": "[HC][공통] 홈 메인 ‘새로 오픈했어요!’ 영역 ‘계절근로자 보험’ 미노출  현상 ",
+          "status": "결함 아님 (Not an issue)",
+          "stage": "종료",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "5.24.0",
+          "versionRaw": "5.24.0",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-07-28T07:38:00.000Z",
+          "createdDate": "2026-07-28",
+          "fixedAt": "2026-07-28T08:03:00.000Z",
+          "fixedDate": "2026-07-28",
+          "closedAt": "2026-07-28T08:03:00.000Z",
+          "closedDate": "2026-07-28",
+          "url": "https://app.notion.com/p/HC-3ab73fbd19518041afe6f5e90d9250d1",
+          "lastEditedAt": "2026-07-28T08:03:00.000Z"
+        },
+        {
+          "id": "ISSUE-1067",
+          "title": "[HC][공통] 자동 로그아웃 시 정의되지 않은 팝업 노출 현상",
           "status": "등록 (Registered)",
           "stage": "등록",
           "severity": "Major",
@@ -3505,60 +3538,18 @@
           "versionRaw": "5.24.0",
           "domain": "한패스",
           "os": "미지정",
-          "createdAt": "2026-07-27T08:52:00.000Z",
-          "createdDate": "2026-07-27",
+          "createdAt": "2026-07-28T07:22:00.000Z",
+          "createdDate": "2026-07-28",
           "fixedAt": "",
           "fixedDate": "",
           "closedAt": "",
           "closedDate": "",
-          "url": "https://app.notion.com/p/HC-3aa73fbd195180b69db3c72de6d9ac4a",
-          "lastEditedAt": "2026-07-27T08:59:00.000Z"
+          "url": "https://app.notion.com/p/HC-3ab73fbd19518043b75efe51608e2672",
+          "lastEditedAt": "2026-07-28T07:31:00.000Z"
         },
         {
-          "id": "ISSUE-1064",
-          "title": "[HC][공통] ‘외국인 근로자 포털', ’가입내역 조회’, ‘보험구 청구’ 선택 시 준비 중 팝업 노출 되는 현상 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Major",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "5.24.0",
-          "versionRaw": "5.24.0",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-07-27T08:39:00.000Z",
-          "createdDate": "2026-07-27",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/HC-3aa73fbd195180ee9ce7ede507c590ba",
-          "lastEditedAt": "2026-07-27T08:52:00.000Z"
-        },
-        {
-          "id": "ISSUE-1063",
-          "title": "[HC][공통] ‘한패스 케어 홈’ 화면 내 메뉴 버튼 선택 시 메뉴가 닫히지 않는 현상 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Major",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "5.24.0",
-          "versionRaw": "5.24.0",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-07-27T08:35:00.000Z",
-          "createdDate": "2026-07-27",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/HC-3aa73fbd19518005841eeac4af223110",
-          "lastEditedAt": "2026-07-27T08:51:00.000Z"
-        },
-        {
-          "id": "ISSUE-1062",
-          "title": "[HC][공통] ‘가입 내역 없음 안내’ 팝업 내 문구 기획서와 상이 ",
+          "id": "ISSUE-1066",
+          "title": "[HC][AOS] 특정 단말에서 화면 레이아웃 불일치 결함 ",
           "status": "등록 (Registered)",
           "stage": "등록",
           "severity": "Minor",
@@ -3568,20 +3559,104 @@
           "versionRaw": "5.24.0",
           "domain": "한패스",
           "os": "미지정",
-          "createdAt": "2026-07-27T07:20:00.000Z",
-          "createdDate": "2026-07-27",
+          "createdAt": "2026-07-28T05:12:00.000Z",
+          "createdDate": "2026-07-28",
           "fixedAt": "",
           "fixedDate": "",
           "closedAt": "",
           "closedDate": "",
+          "url": "https://app.notion.com/p/HC-AOS-3ab73fbd1951802b9e7cc93fda44b83c",
+          "lastEditedAt": "2026-07-28T05:34:00.000Z"
+        },
+        {
+          "id": "ISSUE-1065",
+          "title": "[HC][공통] ‘한패스 케어 홈’ 화면 내 메뉴 스크롤 시 메뉴 고정되어 있는 현상 ",
+          "status": "개발 완료 (Dev Done)",
+          "stage": "종료",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "5.24.0",
+          "versionRaw": "5.24.0",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-07-27T08:52:00.000Z",
+          "createdDate": "2026-07-27",
+          "fixedAt": "2026-07-28T05:59:00.000Z",
+          "fixedDate": "2026-07-28",
+          "closedAt": "2026-07-28T05:59:00.000Z",
+          "closedDate": "2026-07-28",
+          "url": "https://app.notion.com/p/HC-3aa73fbd195180b69db3c72de6d9ac4a",
+          "lastEditedAt": "2026-07-28T05:59:00.000Z"
+        },
+        {
+          "id": "ISSUE-1064",
+          "title": "[HC][공통] ‘외국인 근로자 포털', ’가입내역 조회’, ‘보험구 청구’ 선택 시 준비 중 팝업 노출 되는 현상 ",
+          "status": "결함 아님 (Not an issue)",
+          "stage": "종료",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "5.24.0",
+          "versionRaw": "5.24.0",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-07-27T08:39:00.000Z",
+          "createdDate": "2026-07-27",
+          "fixedAt": "2026-07-28T05:03:00.000Z",
+          "fixedDate": "2026-07-28",
+          "closedAt": "2026-07-28T05:03:00.000Z",
+          "closedDate": "2026-07-28",
+          "url": "https://app.notion.com/p/HC-3aa73fbd195180ee9ce7ede507c590ba",
+          "lastEditedAt": "2026-07-28T05:03:00.000Z"
+        },
+        {
+          "id": "ISSUE-1063",
+          "title": "[HC][공통] ‘한패스 케어 홈’ 화면 내 메뉴 버튼 선택 시 메뉴가 닫히지 않는 현상 ",
+          "status": "개발 완료 (Dev Done)",
+          "stage": "종료",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "5.24.0",
+          "versionRaw": "5.24.0",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-07-27T08:35:00.000Z",
+          "createdDate": "2026-07-27",
+          "fixedAt": "2026-07-28T05:59:00.000Z",
+          "fixedDate": "2026-07-28",
+          "closedAt": "2026-07-28T05:59:00.000Z",
+          "closedDate": "2026-07-28",
+          "url": "https://app.notion.com/p/HC-3aa73fbd19518005841eeac4af223110",
+          "lastEditedAt": "2026-07-28T05:59:00.000Z"
+        },
+        {
+          "id": "ISSUE-1062",
+          "title": "[HC][공통] ‘가입 내역 없음 안내’ 팝업 내 문구 기획서와 상이 ",
+          "status": "개발 완료 (Dev Done)",
+          "stage": "종료",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "5.24.0",
+          "versionRaw": "5.24.0",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-07-27T07:20:00.000Z",
+          "createdDate": "2026-07-27",
+          "fixedAt": "2026-07-28T05:27:00.000Z",
+          "fixedDate": "2026-07-28",
+          "closedAt": "2026-07-28T05:27:00.000Z",
+          "closedDate": "2026-07-28",
           "url": "https://app.notion.com/p/HC-3aa73fbd195180d58734d5e99fa22b63",
-          "lastEditedAt": "2026-07-27T07:30:00.000Z"
+          "lastEditedAt": "2026-07-28T05:27:00.000Z"
         },
         {
           "id": "ISSUE-1060",
           "title": "[HC][공통]보험 신청 페이지, 보험 조회 페이지 상단 좌측 ‘뒤로가기’ 선택 시 무반응인 현상 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
+          "status": "개발 완료 (Dev Done)",
+          "stage": "종료",
           "severity": "Major",
           "priority": "Medium",
           "assignee": "미지정",
@@ -3591,12 +3666,12 @@
           "os": "미지정",
           "createdAt": "2026-07-27T06:13:00.000Z",
           "createdDate": "2026-07-27",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
+          "fixedAt": "2026-07-28T04:10:00.000Z",
+          "fixedDate": "2026-07-28",
+          "closedAt": "2026-07-28T04:10:00.000Z",
+          "closedDate": "2026-07-28",
           "url": "https://app.notion.com/p/HC-3aa73fbd195180f28a77e00f5b0ece05",
-          "lastEditedAt": "2026-07-27T08:12:00.000Z"
+          "lastEditedAt": "2026-07-28T04:10:00.000Z"
         },
         {
           "id": "ISSUE-1052",
@@ -3639,87 +3714,24 @@
           "closedDate": "",
           "url": "https://app.notion.com/p/3a573fbd1951802d8513f977fe84e2c5",
           "lastEditedAt": "2026-07-24T00:00:00.000Z"
-        },
-        {
-          "id": "ISSUE-1050",
-          "title": "[방글라데시/즐겨찾기] 즐겨찾기 진입 시 ‘수취인 관리’ → ‘즐겨찾기’ 로 노출되는 현상",
-          "status": "완료 (Done)",
-          "stage": "종료",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "5.23.2",
-          "versionRaw": "5.23.2",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-07-22T06:25:00.000Z",
-          "createdDate": "2026-07-22",
-          "fixedAt": "2026-07-23T07:42:00.000Z",
-          "fixedDate": "2026-07-23",
-          "closedAt": "2026-07-23T07:42:00.000Z",
-          "closedDate": "2026-07-23",
-          "url": "https://app.notion.com/p/3a573fbd195180a19029c1c0399a3c40",
-          "lastEditedAt": "2026-07-23T07:42:00.000Z"
-        },
-        {
-          "id": "ISSUE-1049",
-          "title": "[방글라데시/즐겨찾기][AOS] 즐겨찾기 송금대상자 등록 페이지 내 불필요한 선 노출 되는 현상 ",
-          "status": "추후 수정 백로그 이관",
-          "stage": "등록",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "Hanpass - Backlog",
-          "versionRaw": "Hanpass - Backlog",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-07-22T01:25:00.000Z",
-          "createdDate": "2026-07-22",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/AOS-3a573fbd195180bdbee2ddd7dfd0dd5a",
-          "lastEditedAt": "2026-07-24T00:51:00.000Z"
-        },
-        {
-          "id": "ISSUE-1048",
-          "title": "[게이미피케이션][다국어] 중국어 번체 설정 시 럭키볼 뽑기 ‘처리 중..’ 문구 다국어 미적용 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "5.24.0",
-          "versionRaw": "5.24.0",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-07-22T01:21:00.000Z",
-          "createdDate": "2026-07-22",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/3a573fbd19518025b24bff9030e29d0c",
-          "lastEditedAt": "2026-07-22T07:05:00.000Z"
         }
       ]
     },
     "GoHanpass": {
       "summary": {
         "total": 204,
-        "new": 28,
+        "new": 27,
         "inProgress": 0,
         "fixed": 0,
-        "closed": 175,
+        "closed": 176,
         "todayNew": 0,
         "newDelta": -1
       },
       "funnel": [
         {
           "stage": "등록",
-          "count": 28,
-          "rate": 13.7,
+          "count": 27,
+          "rate": 13.2,
           "width": 18
         },
         {
@@ -3754,8 +3766,8 @@
         },
         {
           "stage": "종료",
-          "count": 175,
-          "rate": 85.8,
+          "count": 176,
+          "rate": 86.3,
           "width": 100
         }
       ],
@@ -3860,24 +3872,24 @@
         },
         {
           "date": "2026-07-13",
-          "new": 6,
+          "new": 7,
           "fixed": 0,
           "closed": 0,
-          "deltaNew": 6
+          "deltaNew": 7
         },
         {
           "date": "2026-07-14",
-          "new": 7,
+          "new": 6,
           "fixed": 22,
           "closed": 22,
-          "deltaNew": 1
+          "deltaNew": -1
         },
         {
           "date": "2026-07-15",
           "new": 1,
           "fixed": 1,
           "closed": 1,
-          "deltaNew": -6
+          "deltaNew": -5
         },
         {
           "date": "2026-07-16",
@@ -3966,8 +3978,8 @@
         {
           "date": "2026-07-28",
           "new": 0,
-          "fixed": 0,
-          "closed": 0,
+          "fixed": 1,
+          "closed": 1,
           "deltaNew": -1
         }
       ],
@@ -3976,11 +3988,15 @@
           "version": "[G.H]v1.0.2-26.08",
           "total": 20,
           "criticalMajor": 7,
-          "doneRate": 0.0,
+          "doneRate": 5.0,
           "status": [
             {
               "label": "등록",
-              "count": 20
+              "count": 19
+            },
+            {
+              "label": "종료",
+              "count": 1
             }
           ],
           "severity": [
@@ -4237,7 +4253,7 @@
           "status": [
             {
               "label": "등록",
-              "count": 28
+              "count": 27
             },
             {
               "label": "QA확인",
@@ -4245,7 +4261,7 @@
             },
             {
               "label": "종료",
-              "count": 175
+              "count": 176
             }
           ],
           "severity": [
@@ -4375,24 +4391,24 @@
         },
         {
           "date": "2026-07-13",
-          "new": 6,
+          "new": 7,
           "fixed": 0,
           "closed": 0,
-          "deltaNew": 6
+          "deltaNew": 7
         },
         {
           "date": "2026-07-14",
-          "new": 7,
+          "new": 6,
           "fixed": 22,
           "closed": 22,
-          "deltaNew": 1
+          "deltaNew": -1
         },
         {
           "date": "2026-07-15",
           "new": 1,
           "fixed": 1,
           "closed": 1,
-          "deltaNew": -6
+          "deltaNew": -5
         },
         {
           "date": "2026-07-16",
@@ -4481,8 +4497,8 @@
         {
           "date": "2026-07-28",
           "new": 0,
-          "fixed": 0,
-          "closed": 0,
+          "fixed": 1,
+          "closed": 1,
           "deltaNew": -1
         }
       ],

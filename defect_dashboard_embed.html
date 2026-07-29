@@ -393,7 +393,7 @@
     </div>
   </div>
   <script id="dashboard-data" type="application/json">{
-  "generatedAt": "2026-07-28T23:59:41+00:00",
+  "generatedAt": "2026-07-29T00:57:37+00:00",
   "days": 30,
   "domainOrder": [
     "한패스",
@@ -402,19 +402,19 @@
   "domains": {
     "ALL": {
       "summary": {
-        "total": 812,
-        "new": 92,
+        "total": 813,
+        "new": 93,
         "inProgress": 0,
         "fixed": 0,
         "closed": 657,
-        "todayNew": 3,
-        "newDelta": -3
+        "todayNew": 1,
+        "newDelta": -2
       },
       "funnel": [
         {
           "stage": "등록",
-          "count": 92,
-          "rate": 11.3,
+          "count": 93,
+          "rate": 11.4,
           "width": 18
         },
         {
@@ -444,30 +444,23 @@
         {
           "stage": "QA확인",
           "count": 63,
-          "rate": 7.8,
+          "rate": 7.7,
           "width": 18
         },
         {
           "stage": "종료",
           "count": 657,
-          "rate": 80.9,
+          "rate": 80.8,
           "width": 100
         }
       ],
       "daily": [
         {
-          "date": "2026-06-29",
-          "new": 3,
-          "fixed": 33,
-          "closed": 7,
-          "deltaNew": 3
-        },
-        {
           "date": "2026-06-30",
           "new": 11,
           "fixed": 0,
           "closed": 0,
-          "deltaNew": 8
+          "deltaNew": 11
         },
         {
           "date": "2026-07-01",
@@ -664,18 +657,25 @@
           "fixed": 7,
           "closed": 6,
           "deltaNew": -3
+        },
+        {
+          "date": "2026-07-29",
+          "new": 1,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": -2
         }
       ],
       "versions": [
         {
           "version": "5.24.0",
-          "total": 9,
+          "total": 10,
           "criticalMajor": 5,
-          "doneRate": 66.7,
+          "doneRate": 60.0,
           "status": [
             {
               "label": "등록",
-              "count": 3
+              "count": 4
             },
             {
               "label": "QA확인",
@@ -694,12 +694,16 @@
             {
               "label": "Minor",
               "count": 4
+            },
+            {
+              "label": "미지정",
+              "count": 1
             }
           ],
           "priority": [
             {
               "label": "Medium",
-              "count": 9
+              "count": 10
             }
           ]
         },
@@ -1669,7 +1673,7 @@
           "status": [
             {
               "label": "등록",
-              "count": 92
+              "count": 93
             },
             {
               "label": "QA확인",
@@ -1695,7 +1699,7 @@
             },
             {
               "label": "미지정",
-              "count": 73
+              "count": 74
             },
             {
               "label": "개선 의견",
@@ -1713,7 +1717,7 @@
             },
             {
               "label": "Medium",
-              "count": 768
+              "count": 769
             },
             {
               "label": "Low",
@@ -1732,18 +1736,11 @@
       },
       "heatmap": [
         {
-          "date": "2026-06-29",
-          "new": 3,
-          "fixed": 33,
-          "closed": 7,
-          "deltaNew": 3
-        },
-        {
           "date": "2026-06-30",
           "new": 11,
           "fixed": 0,
           "closed": 0,
-          "deltaNew": 8
+          "deltaNew": 11
         },
         {
           "date": "2026-07-01",
@@ -1940,6 +1937,13 @@
           "fixed": 7,
           "closed": 6,
           "deltaNew": -3
+        },
+        {
+          "date": "2026-07-29",
+          "new": 1,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": -2
         }
       ],
       "reportBoard": {
@@ -1982,6 +1986,27 @@
         ]
       },
       "recent": [
+        {
+          "id": "ISSUE-1069",
+          "title": "[BO]청구 상세 팝업 내 피보험자 영역 기획서와 상이 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "미지정",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "5.24.0",
+          "versionRaw": "5.24.0",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-07-29T00:51:00.000Z",
+          "createdDate": "2026-07-29",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/BO-3ac73fbd19518014ab4fc055997dcf8d",
+          "lastEditedAt": "2026-07-29T00:57:00.000Z"
+        },
         {
           "id": "ISSUE-1068",
           "title": "[HC][공통] 홈 메인 ‘새로 오픈했어요!’ 영역 ‘계절근로자 보험’ 미노출  현상 ",
@@ -2170,45 +2195,24 @@
           "closedDate": "",
           "url": "https://app.notion.com/p/iOS-3aa73fbd195180cd92b5ff4833fabdae",
           "lastEditedAt": "2026-07-27T07:00:00.000Z"
-        },
-        {
-          "id": "ISSUE-1058",
-          "title": "[팝업노출][추가인증][iOS] 언어 변경 시 ‘카드 신청’ 팝업 내 ‘x’ 버튼 무반응 현상  ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Major",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[G.H]v1.0.2-26.08",
-          "versionRaw": "[G.H]v1.0.2-26.08",
-          "domain": "GoHanpass",
-          "os": "미지정",
-          "createdAt": "2026-07-24T08:56:00.000Z",
-          "createdDate": "2026-07-24",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/iOS-x-3a773fbd195180e2be14df6cbedc26b8",
-          "lastEditedAt": "2026-07-27T07:00:00.000Z"
         }
       ]
     },
     "한패스": {
       "summary": {
-        "total": 608,
-        "new": 65,
+        "total": 609,
+        "new": 66,
         "inProgress": 0,
         "fixed": 0,
         "closed": 481,
-        "todayNew": 3,
+        "todayNew": 1,
         "newDelta": -2
       },
       "funnel": [
         {
           "stage": "등록",
-          "count": 65,
-          "rate": 10.7,
+          "count": 66,
+          "rate": 10.8,
           "width": 18
         },
         {
@@ -2244,24 +2248,17 @@
         {
           "stage": "종료",
           "count": 481,
-          "rate": 79.1,
+          "rate": 79.0,
           "width": 100
         }
       ],
       "daily": [
         {
-          "date": "2026-06-29",
-          "new": 3,
-          "fixed": 33,
-          "closed": 7,
-          "deltaNew": 3
-        },
-        {
           "date": "2026-06-30",
           "new": 11,
           "fixed": 0,
           "closed": 0,
-          "deltaNew": 8
+          "deltaNew": 11
         },
         {
           "date": "2026-07-01",
@@ -2458,18 +2455,25 @@
           "fixed": 6,
           "closed": 5,
           "deltaNew": -2
+        },
+        {
+          "date": "2026-07-29",
+          "new": 1,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": -2
         }
       ],
       "versions": [
         {
           "version": "5.24.0",
-          "total": 9,
+          "total": 10,
           "criticalMajor": 5,
-          "doneRate": 66.7,
+          "doneRate": 60.0,
           "status": [
             {
               "label": "등록",
-              "count": 3
+              "count": 4
             },
             {
               "label": "QA확인",
@@ -2488,12 +2492,16 @@
             {
               "label": "Minor",
               "count": 4
+            },
+            {
+              "label": "미지정",
+              "count": 1
             }
           ],
           "priority": [
             {
               "label": "Medium",
-              "count": 9
+              "count": 10
             }
           ]
         },
@@ -3214,7 +3222,7 @@
           "status": [
             {
               "label": "등록",
-              "count": 65
+              "count": 66
             },
             {
               "label": "QA확인",
@@ -3240,7 +3248,7 @@
             },
             {
               "label": "미지정",
-              "count": 73
+              "count": 74
             },
             {
               "label": "개선 의견",
@@ -3258,7 +3266,7 @@
             },
             {
               "label": "Medium",
-              "count": 565
+              "count": 566
             },
             {
               "label": "Low",
@@ -3277,18 +3285,11 @@
       },
       "heatmap": [
         {
-          "date": "2026-06-29",
-          "new": 3,
-          "fixed": 33,
-          "closed": 7,
-          "deltaNew": 3
-        },
-        {
           "date": "2026-06-30",
           "new": 11,
           "fixed": 0,
           "closed": 0,
-          "deltaNew": 8
+          "deltaNew": 11
         },
         {
           "date": "2026-07-01",
@@ -3485,6 +3486,13 @@
           "fixed": 6,
           "closed": 5,
           "deltaNew": -2
+        },
+        {
+          "date": "2026-07-29",
+          "new": 1,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": -2
         }
       ],
       "reportBoard": {
@@ -3513,6 +3521,27 @@
         "recent": []
       },
       "recent": [
+        {
+          "id": "ISSUE-1069",
+          "title": "[BO]청구 상세 팝업 내 피보험자 영역 기획서와 상이 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "미지정",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "5.24.0",
+          "versionRaw": "5.24.0",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-07-29T00:51:00.000Z",
+          "createdDate": "2026-07-29",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/BO-3ac73fbd19518014ab4fc055997dcf8d",
+          "lastEditedAt": "2026-07-29T00:57:00.000Z"
+        },
         {
           "id": "ISSUE-1068",
           "title": "[HC][공통] 홈 메인 ‘새로 오픈했어요!’ 영역 ‘계절근로자 보험’ 미노출  현상 ",
@@ -3701,27 +3730,6 @@
           "closedDate": "",
           "url": "https://app.notion.com/p/AOS-iOS-3a573fbd1951809c89aad2eb92742afc",
           "lastEditedAt": "2026-07-24T00:51:00.000Z"
-        },
-        {
-          "id": "ISSUE-1051",
-          "title": "[방글라데시/즐겨찾기] 즐겨찾기/최근 송금내역 존재하지 않는 경우 화면 기획서와 상이",
-          "status": "추후 수정 백로그 이관",
-          "stage": "등록",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "Hanpass - Backlog",
-          "versionRaw": "Hanpass - Backlog",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-07-22T06:46:00.000Z",
-          "createdDate": "2026-07-22",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/3a573fbd1951802d8513f977fe84e2c5",
-          "lastEditedAt": "2026-07-24T00:00:00.000Z"
         }
       ]
     },
@@ -3733,7 +3741,7 @@
         "fixed": 0,
         "closed": 176,
         "todayNew": 0,
-        "newDelta": -1
+        "newDelta": 0
       },
       "funnel": [
         {
@@ -3780,13 +3788,6 @@
         }
       ],
       "daily": [
-        {
-          "date": "2026-06-29",
-          "new": 0,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": 0
-        },
         {
           "date": "2026-06-30",
           "new": 0,
@@ -3989,6 +3990,13 @@
           "fixed": 1,
           "closed": 1,
           "deltaNew": -1
+        },
+        {
+          "date": "2026-07-29",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
         }
       ],
       "versions": [
@@ -4300,13 +4308,6 @@
       },
       "heatmap": [
         {
-          "date": "2026-06-29",
-          "new": 0,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": 0
-        },
-        {
           "date": "2026-06-30",
           "new": 0,
           "fixed": 0,
@@ -4508,6 +4509,13 @@
           "fixed": 1,
           "closed": 1,
           "deltaNew": -1
+        },
+        {
+          "date": "2026-07-29",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
         }
       ],
       "reportBoard": {

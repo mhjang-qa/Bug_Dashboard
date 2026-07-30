@@ -393,7 +393,7 @@
     </div>
   </div>
   <script id="dashboard-data" type="application/json">{
-  "generatedAt": "2026-07-30T00:55:19+00:00",
+  "generatedAt": "2026-07-30T06:40:08+00:00",
   "days": 30,
   "domainOrder": [
     "한패스",
@@ -402,19 +402,19 @@
   "domains": {
     "ALL": {
       "summary": {
-        "total": 817,
-        "new": 91,
-        "inProgress": 1,
+        "total": 818,
+        "new": 90,
+        "inProgress": 2,
         "fixed": 0,
         "closed": 654,
-        "todayNew": 0,
-        "newDelta": -5
+        "todayNew": 1,
+        "newDelta": -4
       },
       "funnel": [
         {
           "stage": "등록",
-          "count": 91,
-          "rate": 11.1,
+          "count": 90,
+          "rate": 11.0,
           "width": 18
         },
         {
@@ -425,14 +425,14 @@
         },
         {
           "stage": "배정",
-          "count": 1,
-          "rate": 0.1,
+          "count": 0,
+          "rate": 0.0,
           "width": 18
         },
         {
           "stage": "진행중",
-          "count": 1,
-          "rate": 0.1,
+          "count": 2,
+          "rate": 0.2,
           "width": 18
         },
         {
@@ -443,8 +443,8 @@
         },
         {
           "stage": "QA확인",
-          "count": 70,
-          "rate": 8.6,
+          "count": 72,
+          "rate": 8.8,
           "width": 18
         },
         {
@@ -660,34 +660,30 @@
         },
         {
           "date": "2026-07-30",
-          "new": 0,
-          "fixed": 7,
+          "new": 1,
+          "fixed": 9,
           "closed": 0,
-          "deltaNew": -5
+          "deltaNew": -4
         }
       ],
       "versions": [
         {
           "version": "5.24.0",
-          "total": 14,
+          "total": 15,
           "criticalMajor": 7,
-          "doneRate": 71.4,
+          "doneRate": 80.0,
           "status": [
             {
               "label": "등록",
-              "count": 2
-            },
-            {
-              "label": "배정",
               "count": 1
             },
             {
               "label": "진행중",
-              "count": 1
+              "count": 2
             },
             {
               "label": "QA확인",
-              "count": 8
+              "count": 10
             },
             {
               "label": "종료",
@@ -705,13 +701,13 @@
             },
             {
               "label": "Minor",
-              "count": 7
+              "count": 8
             }
           ],
           "priority": [
             {
               "label": "Medium",
-              "count": 14
+              "count": 15
             }
           ]
         },
@@ -1681,19 +1677,15 @@
           "status": [
             {
               "label": "등록",
-              "count": 91
-            },
-            {
-              "label": "배정",
-              "count": 1
+              "count": 90
             },
             {
               "label": "진행중",
-              "count": 1
+              "count": 2
             },
             {
               "label": "QA확인",
-              "count": 70
+              "count": 72
             },
             {
               "label": "종료",
@@ -1711,7 +1703,7 @@
             },
             {
               "label": "Minor",
-              "count": 483
+              "count": 484
             },
             {
               "label": "미지정",
@@ -1733,7 +1725,7 @@
             },
             {
               "label": "Medium",
-              "count": 773
+              "count": 774
             },
             {
               "label": "Low",
@@ -1956,10 +1948,10 @@
         },
         {
           "date": "2026-07-30",
-          "new": 0,
-          "fixed": 7,
+          "new": 1,
+          "fixed": 9,
           "closed": 0,
-          "deltaNew": -5
+          "deltaNew": -4
         }
       ],
       "reportBoard": {
@@ -2003,10 +1995,31 @@
       },
       "recent": [
         {
+          "id": "ISSUE-1075",
+          "title": "[VISALOAN][다국어][공통] 벵골어 설정 시 최상단 배너, 홈 배너(1-1) 다국어 시트와 상이",
+          "status": "처리중 (In Progress)",
+          "stage": "진행중",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "5.24.0",
+          "versionRaw": "5.24.0",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-07-30T01:35:00.000Z",
+          "createdDate": "2026-07-30",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/VISALOAN-1-1-3ad73fbd195180fe811acc9dbab81016",
+          "lastEditedAt": "2026-07-30T05:58:00.000Z"
+        },
+        {
           "id": "ISSUE-1074",
           "title": "[VENTAJA][다국어][공통] 납부 정보 입력 화면 내 플레이스홀더, 벨리데이션 문구 다국어 미적용 ",
-          "status": "배정 (Assigned)",
-          "stage": "배정",
+          "status": "QA 검증 -회귀 (QA Verification)",
+          "stage": "QA확인",
           "severity": "Minor",
           "priority": "Medium",
           "assignee": "미지정",
@@ -2016,18 +2029,18 @@
           "os": "미지정",
           "createdAt": "2026-07-29T08:08:00.000Z",
           "createdDate": "2026-07-29",
-          "fixedAt": "",
-          "fixedDate": "",
+          "fixedAt": "2026-07-30T02:13:00.000Z",
+          "fixedDate": "2026-07-30",
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/VENTAJA-3ac73fbd195180c8bd3ed2ef679fa6e1",
-          "lastEditedAt": "2026-07-30T00:10:00.000Z"
+          "lastEditedAt": "2026-07-30T02:13:00.000Z"
         },
         {
           "id": "ISSUE-1073",
           "title": "[VENTAJA][iOS] 상세 내역 내 이용 날짜, 시간, 국가, 계좌 내역, 환율 미노출 현상 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
+          "status": "처리중 (In Progress)",
+          "stage": "진행중",
           "severity": "Major",
           "priority": "Medium",
           "assignee": "미지정",
@@ -2042,7 +2055,7 @@
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/VENTAJA-iOS-3ac73fbd1951802a917dca67551357a7",
-          "lastEditedAt": "2026-07-30T00:47:00.000Z"
+          "lastEditedAt": "2026-07-30T01:17:00.000Z"
         },
         {
           "id": "ISSUE-1072",
@@ -2131,8 +2144,8 @@
         {
           "id": "ISSUE-1067",
           "title": "[HC][공통] 자동 로그아웃 시 정의되지 않은 팝업 노출 현상",
-          "status": "처리중 (In Progress)",
-          "stage": "진행중",
+          "status": "QA 검증 -회귀 (QA Verification)",
+          "stage": "QA확인",
           "severity": "Major",
           "priority": "Medium",
           "assignee": "미지정",
@@ -2142,12 +2155,12 @@
           "os": "미지정",
           "createdAt": "2026-07-28T07:22:00.000Z",
           "createdDate": "2026-07-28",
-          "fixedAt": "",
-          "fixedDate": "",
+          "fixedAt": "2026-07-30T04:51:00.000Z",
+          "fixedDate": "2026-07-30",
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/HC-3ab73fbd19518043b75efe51608e2672",
-          "lastEditedAt": "2026-07-30T00:12:00.000Z"
+          "lastEditedAt": "2026-07-30T04:51:00.000Z"
         },
         {
           "id": "ISSUE-1066",
@@ -2190,45 +2203,24 @@
           "closedDate": "",
           "url": "https://app.notion.com/p/HC-3aa73fbd195180b69db3c72de6d9ac4a",
           "lastEditedAt": "2026-07-30T00:27:00.000Z"
-        },
-        {
-          "id": "ISSUE-1064",
-          "title": "[HC][공통] ‘외국인 근로자 포털', ’가입내역 조회’, ‘보험구 청구’ 선택 시 준비 중 팝업 노출 되는 현상 ",
-          "status": "결함 아님 (Not an issue)",
-          "stage": "종료",
-          "severity": "Major",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "5.24.0",
-          "versionRaw": "5.24.0",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-07-27T08:39:00.000Z",
-          "createdDate": "2026-07-27",
-          "fixedAt": "2026-07-28T05:03:00.000Z",
-          "fixedDate": "2026-07-28",
-          "closedAt": "2026-07-28T05:03:00.000Z",
-          "closedDate": "2026-07-28",
-          "url": "https://app.notion.com/p/HC-3aa73fbd195180ee9ce7ede507c590ba",
-          "lastEditedAt": "2026-07-28T05:03:00.000Z"
         }
       ]
     },
     "한패스": {
       "summary": {
-        "total": 613,
-        "new": 64,
-        "inProgress": 1,
+        "total": 614,
+        "new": 63,
+        "inProgress": 2,
         "fixed": 0,
         "closed": 478,
-        "todayNew": 0,
-        "newDelta": -5
+        "todayNew": 1,
+        "newDelta": -4
       },
       "funnel": [
         {
           "stage": "등록",
-          "count": 64,
-          "rate": 10.4,
+          "count": 63,
+          "rate": 10.3,
           "width": 18
         },
         {
@@ -2239,14 +2231,14 @@
         },
         {
           "stage": "배정",
-          "count": 1,
-          "rate": 0.2,
+          "count": 0,
+          "rate": 0.0,
           "width": 18
         },
         {
           "stage": "진행중",
-          "count": 1,
-          "rate": 0.2,
+          "count": 2,
+          "rate": 0.3,
           "width": 18
         },
         {
@@ -2257,14 +2249,14 @@
         },
         {
           "stage": "QA확인",
-          "count": 69,
-          "rate": 11.3,
+          "count": 71,
+          "rate": 11.6,
           "width": 18
         },
         {
           "stage": "종료",
           "count": 478,
-          "rate": 78.0,
+          "rate": 77.9,
           "width": 100
         }
       ],
@@ -2474,34 +2466,30 @@
         },
         {
           "date": "2026-07-30",
-          "new": 0,
-          "fixed": 7,
+          "new": 1,
+          "fixed": 9,
           "closed": 0,
-          "deltaNew": -5
+          "deltaNew": -4
         }
       ],
       "versions": [
         {
           "version": "5.24.0",
-          "total": 14,
+          "total": 15,
           "criticalMajor": 7,
-          "doneRate": 71.4,
+          "doneRate": 80.0,
           "status": [
             {
               "label": "등록",
-              "count": 2
-            },
-            {
-              "label": "배정",
               "count": 1
             },
             {
               "label": "진행중",
-              "count": 1
+              "count": 2
             },
             {
               "label": "QA확인",
-              "count": 8
+              "count": 10
             },
             {
               "label": "종료",
@@ -2519,13 +2507,13 @@
             },
             {
               "label": "Minor",
-              "count": 7
+              "count": 8
             }
           ],
           "priority": [
             {
               "label": "Medium",
-              "count": 14
+              "count": 15
             }
           ]
         },
@@ -3246,19 +3234,15 @@
           "status": [
             {
               "label": "등록",
-              "count": 64
-            },
-            {
-              "label": "배정",
-              "count": 1
+              "count": 63
             },
             {
               "label": "진행중",
-              "count": 1
+              "count": 2
             },
             {
               "label": "QA확인",
-              "count": 69
+              "count": 71
             },
             {
               "label": "종료",
@@ -3276,7 +3260,7 @@
             },
             {
               "label": "Minor",
-              "count": 346
+              "count": 347
             },
             {
               "label": "미지정",
@@ -3298,7 +3282,7 @@
             },
             {
               "label": "Medium",
-              "count": 570
+              "count": 571
             },
             {
               "label": "Low",
@@ -3521,10 +3505,10 @@
         },
         {
           "date": "2026-07-30",
-          "new": 0,
-          "fixed": 7,
+          "new": 1,
+          "fixed": 9,
           "closed": 0,
-          "deltaNew": -5
+          "deltaNew": -4
         }
       ],
       "reportBoard": {
@@ -3554,10 +3538,31 @@
       },
       "recent": [
         {
+          "id": "ISSUE-1075",
+          "title": "[VISALOAN][다국어][공통] 벵골어 설정 시 최상단 배너, 홈 배너(1-1) 다국어 시트와 상이",
+          "status": "처리중 (In Progress)",
+          "stage": "진행중",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "5.24.0",
+          "versionRaw": "5.24.0",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-07-30T01:35:00.000Z",
+          "createdDate": "2026-07-30",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/VISALOAN-1-1-3ad73fbd195180fe811acc9dbab81016",
+          "lastEditedAt": "2026-07-30T05:58:00.000Z"
+        },
+        {
           "id": "ISSUE-1074",
           "title": "[VENTAJA][다국어][공통] 납부 정보 입력 화면 내 플레이스홀더, 벨리데이션 문구 다국어 미적용 ",
-          "status": "배정 (Assigned)",
-          "stage": "배정",
+          "status": "QA 검증 -회귀 (QA Verification)",
+          "stage": "QA확인",
           "severity": "Minor",
           "priority": "Medium",
           "assignee": "미지정",
@@ -3567,18 +3572,18 @@
           "os": "미지정",
           "createdAt": "2026-07-29T08:08:00.000Z",
           "createdDate": "2026-07-29",
-          "fixedAt": "",
-          "fixedDate": "",
+          "fixedAt": "2026-07-30T02:13:00.000Z",
+          "fixedDate": "2026-07-30",
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/VENTAJA-3ac73fbd195180c8bd3ed2ef679fa6e1",
-          "lastEditedAt": "2026-07-30T00:10:00.000Z"
+          "lastEditedAt": "2026-07-30T02:13:00.000Z"
         },
         {
           "id": "ISSUE-1073",
           "title": "[VENTAJA][iOS] 상세 내역 내 이용 날짜, 시간, 국가, 계좌 내역, 환율 미노출 현상 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
+          "status": "처리중 (In Progress)",
+          "stage": "진행중",
           "severity": "Major",
           "priority": "Medium",
           "assignee": "미지정",
@@ -3593,7 +3598,7 @@
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/VENTAJA-iOS-3ac73fbd1951802a917dca67551357a7",
-          "lastEditedAt": "2026-07-30T00:47:00.000Z"
+          "lastEditedAt": "2026-07-30T01:17:00.000Z"
         },
         {
           "id": "ISSUE-1072",
@@ -3682,8 +3687,8 @@
         {
           "id": "ISSUE-1067",
           "title": "[HC][공통] 자동 로그아웃 시 정의되지 않은 팝업 노출 현상",
-          "status": "처리중 (In Progress)",
-          "stage": "진행중",
+          "status": "QA 검증 -회귀 (QA Verification)",
+          "stage": "QA확인",
           "severity": "Major",
           "priority": "Medium",
           "assignee": "미지정",
@@ -3693,12 +3698,12 @@
           "os": "미지정",
           "createdAt": "2026-07-28T07:22:00.000Z",
           "createdDate": "2026-07-28",
-          "fixedAt": "",
-          "fixedDate": "",
+          "fixedAt": "2026-07-30T04:51:00.000Z",
+          "fixedDate": "2026-07-30",
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/HC-3ab73fbd19518043b75efe51608e2672",
-          "lastEditedAt": "2026-07-30T00:12:00.000Z"
+          "lastEditedAt": "2026-07-30T04:51:00.000Z"
         },
         {
           "id": "ISSUE-1066",
@@ -3741,27 +3746,6 @@
           "closedDate": "",
           "url": "https://app.notion.com/p/HC-3aa73fbd195180b69db3c72de6d9ac4a",
           "lastEditedAt": "2026-07-30T00:27:00.000Z"
-        },
-        {
-          "id": "ISSUE-1064",
-          "title": "[HC][공통] ‘외국인 근로자 포털', ’가입내역 조회’, ‘보험구 청구’ 선택 시 준비 중 팝업 노출 되는 현상 ",
-          "status": "결함 아님 (Not an issue)",
-          "stage": "종료",
-          "severity": "Major",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "5.24.0",
-          "versionRaw": "5.24.0",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-07-27T08:39:00.000Z",
-          "createdDate": "2026-07-27",
-          "fixedAt": "2026-07-28T05:03:00.000Z",
-          "fixedDate": "2026-07-28",
-          "closedAt": "2026-07-28T05:03:00.000Z",
-          "closedDate": "2026-07-28",
-          "url": "https://app.notion.com/p/HC-3aa73fbd195180ee9ce7ede507c590ba",
-          "lastEditedAt": "2026-07-28T05:03:00.000Z"
         }
       ]
     },

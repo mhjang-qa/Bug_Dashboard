@@ -393,7 +393,7 @@
     </div>
   </div>
   <script id="dashboard-data" type="application/json">{
-  "generatedAt": "2026-07-29T11:03:25+00:00",
+  "generatedAt": "2026-07-30T00:55:19+00:00",
   "days": 30,
   "domainOrder": [
     "한패스",
@@ -403,18 +403,18 @@
     "ALL": {
       "summary": {
         "total": 817,
-        "new": 93,
-        "inProgress": 0,
+        "new": 91,
+        "inProgress": 1,
         "fixed": 0,
-        "closed": 661,
-        "todayNew": 5,
-        "newDelta": 2
+        "closed": 654,
+        "todayNew": 0,
+        "newDelta": -5
       },
       "funnel": [
         {
           "stage": "등록",
-          "count": 93,
-          "rate": 11.4,
+          "count": 91,
+          "rate": 11.1,
           "width": 18
         },
         {
@@ -425,14 +425,14 @@
         },
         {
           "stage": "배정",
-          "count": 0,
-          "rate": 0.0,
+          "count": 1,
+          "rate": 0.1,
           "width": 18
         },
         {
           "stage": "진행중",
-          "count": 0,
-          "rate": 0.0,
+          "count": 1,
+          "rate": 0.1,
           "width": 18
         },
         {
@@ -443,31 +443,24 @@
         },
         {
           "stage": "QA확인",
-          "count": 63,
-          "rate": 7.7,
+          "count": 70,
+          "rate": 8.6,
           "width": 18
         },
         {
           "stage": "종료",
-          "count": 661,
-          "rate": 80.9,
+          "count": 654,
+          "rate": 80.0,
           "width": 100
         }
       ],
       "daily": [
         {
-          "date": "2026-06-30",
-          "new": 11,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": 11
-        },
-        {
           "date": "2026-07-01",
           "new": 5,
           "fixed": 0,
           "closed": 0,
-          "deltaNew": -6
+          "deltaNew": 5
         },
         {
           "date": "2026-07-02",
@@ -654,36 +647,51 @@
         {
           "date": "2026-07-28",
           "new": 3,
-          "fixed": 6,
-          "closed": 5,
+          "fixed": 3,
+          "closed": 2,
           "deltaNew": -3
         },
         {
           "date": "2026-07-29",
           "new": 5,
-          "fixed": 5,
-          "closed": 5,
+          "fixed": 1,
+          "closed": 1,
           "deltaNew": 2
+        },
+        {
+          "date": "2026-07-30",
+          "new": 0,
+          "fixed": 7,
+          "closed": 0,
+          "deltaNew": -5
         }
       ],
       "versions": [
         {
           "version": "5.24.0",
           "total": 14,
-          "criticalMajor": 6,
+          "criticalMajor": 7,
           "doneRate": 71.4,
           "status": [
             {
               "label": "등록",
-              "count": 4
+              "count": 2
             },
             {
-              "label": "QA확인",
+              "label": "배정",
               "count": 1
             },
             {
+              "label": "진행중",
+              "count": 1
+            },
+            {
+              "label": "QA확인",
+              "count": 8
+            },
+            {
               "label": "종료",
-              "count": 9
+              "count": 2
             }
           ],
           "severity": [
@@ -693,11 +701,11 @@
             },
             {
               "label": "Major",
-              "count": 5
+              "count": 6
             },
             {
               "label": "Minor",
-              "count": 8
+              "count": 7
             }
           ],
           "priority": [
@@ -1673,15 +1681,23 @@
           "status": [
             {
               "label": "등록",
-              "count": 93
+              "count": 91
+            },
+            {
+              "label": "배정",
+              "count": 1
+            },
+            {
+              "label": "진행중",
+              "count": 1
             },
             {
               "label": "QA확인",
-              "count": 63
+              "count": 70
             },
             {
               "label": "종료",
-              "count": 661
+              "count": 654
             }
           ],
           "severity": [
@@ -1691,11 +1707,11 @@
             },
             {
               "label": "Major",
-              "count": 200
+              "count": 201
             },
             {
               "label": "Minor",
-              "count": 484
+              "count": 483
             },
             {
               "label": "미지정",
@@ -1736,18 +1752,11 @@
       },
       "heatmap": [
         {
-          "date": "2026-06-30",
-          "new": 11,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": 11
-        },
-        {
           "date": "2026-07-01",
           "new": 5,
           "fixed": 0,
           "closed": 0,
-          "deltaNew": -6
+          "deltaNew": 5
         },
         {
           "date": "2026-07-02",
@@ -1934,16 +1943,23 @@
         {
           "date": "2026-07-28",
           "new": 3,
-          "fixed": 6,
-          "closed": 5,
+          "fixed": 3,
+          "closed": 2,
           "deltaNew": -3
         },
         {
           "date": "2026-07-29",
           "new": 5,
-          "fixed": 5,
-          "closed": 5,
+          "fixed": 1,
+          "closed": 1,
           "deltaNew": 2
+        },
+        {
+          "date": "2026-07-30",
+          "new": 0,
+          "fixed": 7,
+          "closed": 0,
+          "deltaNew": -5
         }
       ],
       "reportBoard": {
@@ -1989,8 +2005,8 @@
         {
           "id": "ISSUE-1074",
           "title": "[VENTAJA][다국어][공통] 납부 정보 입력 화면 내 플레이스홀더, 벨리데이션 문구 다국어 미적용 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
+          "status": "배정 (Assigned)",
+          "stage": "배정",
           "severity": "Minor",
           "priority": "Medium",
           "assignee": "미지정",
@@ -2005,14 +2021,14 @@
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/VENTAJA-3ac73fbd195180c8bd3ed2ef679fa6e1",
-          "lastEditedAt": "2026-07-29T09:06:00.000Z"
+          "lastEditedAt": "2026-07-30T00:10:00.000Z"
         },
         {
           "id": "ISSUE-1073",
           "title": "[VENTAJA][iOS] 상세 내역 내 이용 날짜, 시간, 국가, 계좌 내역, 환율 미노출 현상 ",
           "status": "등록 (Registered)",
           "stage": "등록",
-          "severity": "Minor",
+          "severity": "Major",
           "priority": "Medium",
           "assignee": "미지정",
           "version": "5.24.0",
@@ -2026,13 +2042,13 @@
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/VENTAJA-iOS-3ac73fbd1951802a917dca67551357a7",
-          "lastEditedAt": "2026-07-29T09:02:00.000Z"
+          "lastEditedAt": "2026-07-30T00:47:00.000Z"
         },
         {
           "id": "ISSUE-1072",
           "title": "[VENTAJA][공통]해외 공과금 납부 진행 시 공과금 납부 실패 되는 현상  ",
-          "status": "개발 완료 (Dev Done)",
-          "stage": "종료",
+          "status": "QA 검증 -회귀 (QA Verification)",
+          "stage": "QA확인",
           "severity": "Critical",
           "priority": "Medium",
           "assignee": "미지정",
@@ -2042,18 +2058,18 @@
           "os": "미지정",
           "createdAt": "2026-07-29T04:41:00.000Z",
           "createdDate": "2026-07-29",
-          "fixedAt": "2026-07-29T08:35:00.000Z",
-          "fixedDate": "2026-07-29",
-          "closedAt": "2026-07-29T08:35:00.000Z",
-          "closedDate": "2026-07-29",
+          "fixedAt": "2026-07-30T00:18:00.000Z",
+          "fixedDate": "2026-07-30",
+          "closedAt": "",
+          "closedDate": "",
           "url": "https://app.notion.com/p/VENTAJA-3ac73fbd195180178ed7fa53d7ba2d66",
-          "lastEditedAt": "2026-07-29T08:35:00.000Z"
+          "lastEditedAt": "2026-07-30T00:18:00.000Z"
         },
         {
           "id": "ISSUE-1070",
           "title": "[BO] 청구 상세 팝업 내 ‘청구 정보’ 영역 기획서와 상이",
-          "status": "개발 완료 (Dev Done)",
-          "stage": "종료",
+          "status": "QA 검증 -회귀 (QA Verification)",
+          "stage": "QA확인",
           "severity": "Minor",
           "priority": "Medium",
           "assignee": "미지정",
@@ -2063,18 +2079,18 @@
           "os": "미지정",
           "createdAt": "2026-07-29T01:06:00.000Z",
           "createdDate": "2026-07-29",
-          "fixedAt": "2026-07-29T01:27:00.000Z",
-          "fixedDate": "2026-07-29",
-          "closedAt": "2026-07-29T01:27:00.000Z",
-          "closedDate": "2026-07-29",
+          "fixedAt": "2026-07-30T00:04:00.000Z",
+          "fixedDate": "2026-07-30",
+          "closedAt": "",
+          "closedDate": "",
           "url": "https://app.notion.com/p/BO-3ac73fbd19518002a290f5d163ea9c0c",
-          "lastEditedAt": "2026-07-29T01:27:00.000Z"
+          "lastEditedAt": "2026-07-30T00:04:00.000Z"
         },
         {
           "id": "ISSUE-1069",
           "title": "[BO] 청구 상세 팝업 내 ‘피보험자 정보’ 영역 기획서와 상이 ",
-          "status": "개발 완료 (Dev Done)",
-          "stage": "종료",
+          "status": "QA 검증 -회귀 (QA Verification)",
+          "stage": "QA확인",
           "severity": "Minor",
           "priority": "Medium",
           "assignee": "미지정",
@@ -2084,12 +2100,12 @@
           "os": "미지정",
           "createdAt": "2026-07-29T00:51:00.000Z",
           "createdDate": "2026-07-29",
-          "fixedAt": "2026-07-29T01:16:00.000Z",
-          "fixedDate": "2026-07-29",
-          "closedAt": "2026-07-29T01:16:00.000Z",
-          "closedDate": "2026-07-29",
+          "fixedAt": "2026-07-30T00:01:00.000Z",
+          "fixedDate": "2026-07-30",
+          "closedAt": "",
+          "closedDate": "",
           "url": "https://app.notion.com/p/BO-3ac73fbd19518014ab4fc055997dcf8d",
-          "lastEditedAt": "2026-07-29T01:16:00.000Z"
+          "lastEditedAt": "2026-07-30T00:01:00.000Z"
         },
         {
           "id": "ISSUE-1068",
@@ -2115,8 +2131,8 @@
         {
           "id": "ISSUE-1067",
           "title": "[HC][공통] 자동 로그아웃 시 정의되지 않은 팝업 노출 현상",
-          "status": "등록 (Registered)",
-          "stage": "등록",
+          "status": "처리중 (In Progress)",
+          "stage": "진행중",
           "severity": "Major",
           "priority": "Medium",
           "assignee": "미지정",
@@ -2131,13 +2147,13 @@
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/HC-3ab73fbd19518043b75efe51608e2672",
-          "lastEditedAt": "2026-07-28T07:31:00.000Z"
+          "lastEditedAt": "2026-07-30T00:12:00.000Z"
         },
         {
           "id": "ISSUE-1066",
           "title": "[HC][AOS] 특정 단말에서 화면 레이아웃 불일치 결함 ",
-          "status": "개발 완료 (Dev Done)",
-          "stage": "종료",
+          "status": "QA 검증 -회귀 (QA Verification)",
+          "stage": "QA확인",
           "severity": "Minor",
           "priority": "Medium",
           "assignee": "미지정",
@@ -2147,18 +2163,18 @@
           "os": "미지정",
           "createdAt": "2026-07-28T05:12:00.000Z",
           "createdDate": "2026-07-28",
-          "fixedAt": "2026-07-29T01:44:00.000Z",
-          "fixedDate": "2026-07-29",
-          "closedAt": "2026-07-29T01:44:00.000Z",
-          "closedDate": "2026-07-29",
+          "fixedAt": "2026-07-30T00:05:00.000Z",
+          "fixedDate": "2026-07-30",
+          "closedAt": "",
+          "closedDate": "",
           "url": "https://app.notion.com/p/HC-AOS-3ab73fbd1951802b9e7cc93fda44b83c",
-          "lastEditedAt": "2026-07-29T01:44:00.000Z"
+          "lastEditedAt": "2026-07-30T00:05:00.000Z"
         },
         {
           "id": "ISSUE-1065",
           "title": "[HC][공통] ‘한패스 케어 홈’ 화면 내 메뉴 스크롤 시 메뉴 고정되어 있는 현상 ",
-          "status": "개발 완료 (Dev Done)",
-          "stage": "종료",
+          "status": "QA 검증 -회귀 (QA Verification)",
+          "stage": "QA확인",
           "severity": "Major",
           "priority": "Medium",
           "assignee": "미지정",
@@ -2168,12 +2184,12 @@
           "os": "미지정",
           "createdAt": "2026-07-27T08:52:00.000Z",
           "createdDate": "2026-07-27",
-          "fixedAt": "2026-07-28T05:59:00.000Z",
-          "fixedDate": "2026-07-28",
-          "closedAt": "2026-07-28T05:59:00.000Z",
-          "closedDate": "2026-07-28",
+          "fixedAt": "2026-07-30T00:27:00.000Z",
+          "fixedDate": "2026-07-30",
+          "closedAt": "",
+          "closedDate": "",
           "url": "https://app.notion.com/p/HC-3aa73fbd195180b69db3c72de6d9ac4a",
-          "lastEditedAt": "2026-07-28T05:59:00.000Z"
+          "lastEditedAt": "2026-07-30T00:27:00.000Z"
         },
         {
           "id": "ISSUE-1064",
@@ -2201,18 +2217,18 @@
     "한패스": {
       "summary": {
         "total": 613,
-        "new": 66,
-        "inProgress": 0,
+        "new": 64,
+        "inProgress": 1,
         "fixed": 0,
-        "closed": 485,
-        "todayNew": 5,
-        "newDelta": 2
+        "closed": 478,
+        "todayNew": 0,
+        "newDelta": -5
       },
       "funnel": [
         {
           "stage": "등록",
-          "count": 66,
-          "rate": 10.8,
+          "count": 64,
+          "rate": 10.4,
           "width": 18
         },
         {
@@ -2223,14 +2239,14 @@
         },
         {
           "stage": "배정",
-          "count": 0,
-          "rate": 0.0,
+          "count": 1,
+          "rate": 0.2,
           "width": 18
         },
         {
           "stage": "진행중",
-          "count": 0,
-          "rate": 0.0,
+          "count": 1,
+          "rate": 0.2,
           "width": 18
         },
         {
@@ -2241,31 +2257,24 @@
         },
         {
           "stage": "QA확인",
-          "count": 62,
-          "rate": 10.1,
+          "count": 69,
+          "rate": 11.3,
           "width": 18
         },
         {
           "stage": "종료",
-          "count": 485,
-          "rate": 79.1,
+          "count": 478,
+          "rate": 78.0,
           "width": 100
         }
       ],
       "daily": [
         {
-          "date": "2026-06-30",
-          "new": 11,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": 11
-        },
-        {
           "date": "2026-07-01",
           "new": 5,
           "fixed": 0,
           "closed": 0,
-          "deltaNew": -6
+          "deltaNew": 5
         },
         {
           "date": "2026-07-02",
@@ -2452,36 +2461,51 @@
         {
           "date": "2026-07-28",
           "new": 3,
-          "fixed": 5,
-          "closed": 4,
+          "fixed": 2,
+          "closed": 1,
           "deltaNew": -2
         },
         {
           "date": "2026-07-29",
           "new": 5,
-          "fixed": 5,
-          "closed": 5,
+          "fixed": 1,
+          "closed": 1,
           "deltaNew": 2
+        },
+        {
+          "date": "2026-07-30",
+          "new": 0,
+          "fixed": 7,
+          "closed": 0,
+          "deltaNew": -5
         }
       ],
       "versions": [
         {
           "version": "5.24.0",
           "total": 14,
-          "criticalMajor": 6,
+          "criticalMajor": 7,
           "doneRate": 71.4,
           "status": [
             {
               "label": "등록",
-              "count": 4
+              "count": 2
             },
             {
-              "label": "QA확인",
+              "label": "배정",
               "count": 1
             },
             {
+              "label": "진행중",
+              "count": 1
+            },
+            {
+              "label": "QA확인",
+              "count": 8
+            },
+            {
               "label": "종료",
-              "count": 9
+              "count": 2
             }
           ],
           "severity": [
@@ -2491,11 +2515,11 @@
             },
             {
               "label": "Major",
-              "count": 5
+              "count": 6
             },
             {
               "label": "Minor",
-              "count": 8
+              "count": 7
             }
           ],
           "priority": [
@@ -3222,15 +3246,23 @@
           "status": [
             {
               "label": "등록",
-              "count": 66
+              "count": 64
+            },
+            {
+              "label": "배정",
+              "count": 1
+            },
+            {
+              "label": "진행중",
+              "count": 1
             },
             {
               "label": "QA확인",
-              "count": 62
+              "count": 69
             },
             {
               "label": "종료",
-              "count": 485
+              "count": 478
             }
           ],
           "severity": [
@@ -3240,11 +3272,11 @@
             },
             {
               "label": "Major",
-              "count": 137
+              "count": 138
             },
             {
               "label": "Minor",
-              "count": 347
+              "count": 346
             },
             {
               "label": "미지정",
@@ -3285,18 +3317,11 @@
       },
       "heatmap": [
         {
-          "date": "2026-06-30",
-          "new": 11,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": 11
-        },
-        {
           "date": "2026-07-01",
           "new": 5,
           "fixed": 0,
           "closed": 0,
-          "deltaNew": -6
+          "deltaNew": 5
         },
         {
           "date": "2026-07-02",
@@ -3483,16 +3508,23 @@
         {
           "date": "2026-07-28",
           "new": 3,
-          "fixed": 5,
-          "closed": 4,
+          "fixed": 2,
+          "closed": 1,
           "deltaNew": -2
         },
         {
           "date": "2026-07-29",
           "new": 5,
-          "fixed": 5,
-          "closed": 5,
+          "fixed": 1,
+          "closed": 1,
           "deltaNew": 2
+        },
+        {
+          "date": "2026-07-30",
+          "new": 0,
+          "fixed": 7,
+          "closed": 0,
+          "deltaNew": -5
         }
       ],
       "reportBoard": {
@@ -3524,8 +3556,8 @@
         {
           "id": "ISSUE-1074",
           "title": "[VENTAJA][다국어][공통] 납부 정보 입력 화면 내 플레이스홀더, 벨리데이션 문구 다국어 미적용 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
+          "status": "배정 (Assigned)",
+          "stage": "배정",
           "severity": "Minor",
           "priority": "Medium",
           "assignee": "미지정",
@@ -3540,14 +3572,14 @@
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/VENTAJA-3ac73fbd195180c8bd3ed2ef679fa6e1",
-          "lastEditedAt": "2026-07-29T09:06:00.000Z"
+          "lastEditedAt": "2026-07-30T00:10:00.000Z"
         },
         {
           "id": "ISSUE-1073",
           "title": "[VENTAJA][iOS] 상세 내역 내 이용 날짜, 시간, 국가, 계좌 내역, 환율 미노출 현상 ",
           "status": "등록 (Registered)",
           "stage": "등록",
-          "severity": "Minor",
+          "severity": "Major",
           "priority": "Medium",
           "assignee": "미지정",
           "version": "5.24.0",
@@ -3561,13 +3593,13 @@
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/VENTAJA-iOS-3ac73fbd1951802a917dca67551357a7",
-          "lastEditedAt": "2026-07-29T09:02:00.000Z"
+          "lastEditedAt": "2026-07-30T00:47:00.000Z"
         },
         {
           "id": "ISSUE-1072",
           "title": "[VENTAJA][공통]해외 공과금 납부 진행 시 공과금 납부 실패 되는 현상  ",
-          "status": "개발 완료 (Dev Done)",
-          "stage": "종료",
+          "status": "QA 검증 -회귀 (QA Verification)",
+          "stage": "QA확인",
           "severity": "Critical",
           "priority": "Medium",
           "assignee": "미지정",
@@ -3577,18 +3609,18 @@
           "os": "미지정",
           "createdAt": "2026-07-29T04:41:00.000Z",
           "createdDate": "2026-07-29",
-          "fixedAt": "2026-07-29T08:35:00.000Z",
-          "fixedDate": "2026-07-29",
-          "closedAt": "2026-07-29T08:35:00.000Z",
-          "closedDate": "2026-07-29",
+          "fixedAt": "2026-07-30T00:18:00.000Z",
+          "fixedDate": "2026-07-30",
+          "closedAt": "",
+          "closedDate": "",
           "url": "https://app.notion.com/p/VENTAJA-3ac73fbd195180178ed7fa53d7ba2d66",
-          "lastEditedAt": "2026-07-29T08:35:00.000Z"
+          "lastEditedAt": "2026-07-30T00:18:00.000Z"
         },
         {
           "id": "ISSUE-1070",
           "title": "[BO] 청구 상세 팝업 내 ‘청구 정보’ 영역 기획서와 상이",
-          "status": "개발 완료 (Dev Done)",
-          "stage": "종료",
+          "status": "QA 검증 -회귀 (QA Verification)",
+          "stage": "QA확인",
           "severity": "Minor",
           "priority": "Medium",
           "assignee": "미지정",
@@ -3598,18 +3630,18 @@
           "os": "미지정",
           "createdAt": "2026-07-29T01:06:00.000Z",
           "createdDate": "2026-07-29",
-          "fixedAt": "2026-07-29T01:27:00.000Z",
-          "fixedDate": "2026-07-29",
-          "closedAt": "2026-07-29T01:27:00.000Z",
-          "closedDate": "2026-07-29",
+          "fixedAt": "2026-07-30T00:04:00.000Z",
+          "fixedDate": "2026-07-30",
+          "closedAt": "",
+          "closedDate": "",
           "url": "https://app.notion.com/p/BO-3ac73fbd19518002a290f5d163ea9c0c",
-          "lastEditedAt": "2026-07-29T01:27:00.000Z"
+          "lastEditedAt": "2026-07-30T00:04:00.000Z"
         },
         {
           "id": "ISSUE-1069",
           "title": "[BO] 청구 상세 팝업 내 ‘피보험자 정보’ 영역 기획서와 상이 ",
-          "status": "개발 완료 (Dev Done)",
-          "stage": "종료",
+          "status": "QA 검증 -회귀 (QA Verification)",
+          "stage": "QA확인",
           "severity": "Minor",
           "priority": "Medium",
           "assignee": "미지정",
@@ -3619,12 +3651,12 @@
           "os": "미지정",
           "createdAt": "2026-07-29T00:51:00.000Z",
           "createdDate": "2026-07-29",
-          "fixedAt": "2026-07-29T01:16:00.000Z",
-          "fixedDate": "2026-07-29",
-          "closedAt": "2026-07-29T01:16:00.000Z",
-          "closedDate": "2026-07-29",
+          "fixedAt": "2026-07-30T00:01:00.000Z",
+          "fixedDate": "2026-07-30",
+          "closedAt": "",
+          "closedDate": "",
           "url": "https://app.notion.com/p/BO-3ac73fbd19518014ab4fc055997dcf8d",
-          "lastEditedAt": "2026-07-29T01:16:00.000Z"
+          "lastEditedAt": "2026-07-30T00:01:00.000Z"
         },
         {
           "id": "ISSUE-1068",
@@ -3650,8 +3682,8 @@
         {
           "id": "ISSUE-1067",
           "title": "[HC][공통] 자동 로그아웃 시 정의되지 않은 팝업 노출 현상",
-          "status": "등록 (Registered)",
-          "stage": "등록",
+          "status": "처리중 (In Progress)",
+          "stage": "진행중",
           "severity": "Major",
           "priority": "Medium",
           "assignee": "미지정",
@@ -3666,13 +3698,13 @@
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/HC-3ab73fbd19518043b75efe51608e2672",
-          "lastEditedAt": "2026-07-28T07:31:00.000Z"
+          "lastEditedAt": "2026-07-30T00:12:00.000Z"
         },
         {
           "id": "ISSUE-1066",
           "title": "[HC][AOS] 특정 단말에서 화면 레이아웃 불일치 결함 ",
-          "status": "개발 완료 (Dev Done)",
-          "stage": "종료",
+          "status": "QA 검증 -회귀 (QA Verification)",
+          "stage": "QA확인",
           "severity": "Minor",
           "priority": "Medium",
           "assignee": "미지정",
@@ -3682,18 +3714,18 @@
           "os": "미지정",
           "createdAt": "2026-07-28T05:12:00.000Z",
           "createdDate": "2026-07-28",
-          "fixedAt": "2026-07-29T01:44:00.000Z",
-          "fixedDate": "2026-07-29",
-          "closedAt": "2026-07-29T01:44:00.000Z",
-          "closedDate": "2026-07-29",
+          "fixedAt": "2026-07-30T00:05:00.000Z",
+          "fixedDate": "2026-07-30",
+          "closedAt": "",
+          "closedDate": "",
           "url": "https://app.notion.com/p/HC-AOS-3ab73fbd1951802b9e7cc93fda44b83c",
-          "lastEditedAt": "2026-07-29T01:44:00.000Z"
+          "lastEditedAt": "2026-07-30T00:05:00.000Z"
         },
         {
           "id": "ISSUE-1065",
           "title": "[HC][공통] ‘한패스 케어 홈’ 화면 내 메뉴 스크롤 시 메뉴 고정되어 있는 현상 ",
-          "status": "개발 완료 (Dev Done)",
-          "stage": "종료",
+          "status": "QA 검증 -회귀 (QA Verification)",
+          "stage": "QA확인",
           "severity": "Major",
           "priority": "Medium",
           "assignee": "미지정",
@@ -3703,12 +3735,12 @@
           "os": "미지정",
           "createdAt": "2026-07-27T08:52:00.000Z",
           "createdDate": "2026-07-27",
-          "fixedAt": "2026-07-28T05:59:00.000Z",
-          "fixedDate": "2026-07-28",
-          "closedAt": "2026-07-28T05:59:00.000Z",
-          "closedDate": "2026-07-28",
+          "fixedAt": "2026-07-30T00:27:00.000Z",
+          "fixedDate": "2026-07-30",
+          "closedAt": "",
+          "closedDate": "",
           "url": "https://app.notion.com/p/HC-3aa73fbd195180b69db3c72de6d9ac4a",
-          "lastEditedAt": "2026-07-28T05:59:00.000Z"
+          "lastEditedAt": "2026-07-30T00:27:00.000Z"
         },
         {
           "id": "ISSUE-1064",
@@ -3788,13 +3820,6 @@
         }
       ],
       "daily": [
-        {
-          "date": "2026-06-30",
-          "new": 0,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": 0
-        },
         {
           "date": "2026-07-01",
           "new": 0,
@@ -3993,6 +4018,13 @@
         },
         {
           "date": "2026-07-29",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-07-30",
           "new": 0,
           "fixed": 0,
           "closed": 0,
@@ -4308,13 +4340,6 @@
       },
       "heatmap": [
         {
-          "date": "2026-06-30",
-          "new": 0,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": 0
-        },
-        {
           "date": "2026-07-01",
           "new": 0,
           "fixed": 0,
@@ -4512,6 +4537,13 @@
         },
         {
           "date": "2026-07-29",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-07-30",
           "new": 0,
           "fixed": 0,
           "closed": 0,

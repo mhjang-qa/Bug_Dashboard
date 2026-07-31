@@ -393,7 +393,7 @@
     </div>
   </div>
   <script id="dashboard-data" type="application/json">{
-  "generatedAt": "2026-07-31T01:06:01+00:00",
+  "generatedAt": "2026-07-31T11:07:10+00:00",
   "days": 30,
   "domainOrder": [
     "한패스",
@@ -402,19 +402,19 @@
   "domains": {
     "ALL": {
       "summary": {
-        "total": 825,
-        "new": 94,
-        "inProgress": 0,
+        "total": 833,
+        "new": 101,
+        "inProgress": 1,
         "fixed": 0,
         "closed": 655,
-        "todayNew": 1,
-        "newDelta": -6
+        "todayNew": 9,
+        "newDelta": 2
       },
       "funnel": [
         {
           "stage": "등록",
-          "count": 94,
-          "rate": 11.4,
+          "count": 101,
+          "rate": 12.1,
           "width": 18
         },
         {
@@ -431,8 +431,8 @@
         },
         {
           "stage": "진행중",
-          "count": 0,
-          "rate": 0.0,
+          "count": 1,
+          "rate": 0.1,
           "width": 18
         },
         {
@@ -444,13 +444,13 @@
         {
           "stage": "QA확인",
           "count": 76,
-          "rate": 9.2,
+          "rate": 9.1,
           "width": 18
         },
         {
           "stage": "종료",
           "count": 655,
-          "rate": 79.4,
+          "rate": 78.6,
           "width": 100
         }
       ],
@@ -640,42 +640,74 @@
         {
           "date": "2026-07-28",
           "new": 3,
-          "fixed": 3,
-          "closed": 2,
+          "fixed": 2,
+          "closed": 1,
           "deltaNew": -3
         },
         {
           "date": "2026-07-29",
           "new": 5,
-          "fixed": 1,
-          "closed": 1,
+          "fixed": 0,
+          "closed": 0,
           "deltaNew": 2
         },
         {
           "date": "2026-07-30",
           "new": 7,
-          "fixed": 10,
-          "closed": 1,
+          "fixed": 9,
+          "closed": 0,
           "deltaNew": 2
         },
         {
           "date": "2026-07-31",
-          "new": 1,
-          "fixed": 4,
-          "closed": 0,
-          "deltaNew": -6
+          "new": 9,
+          "fixed": 7,
+          "closed": 3,
+          "deltaNew": 2
         }
       ],
       "versions": [
         {
-          "version": "5.24.0",
-          "total": 22,
-          "criticalMajor": 9,
-          "doneRate": 77.3,
+          "version": "5.25.0",
+          "total": 4,
+          "criticalMajor": 0,
+          "doneRate": 0.0,
           "status": [
             {
               "label": "등록",
-              "count": 5
+              "count": 4
+            }
+          ],
+          "severity": [
+            {
+              "label": "Minor",
+              "count": 3
+            },
+            {
+              "label": "개선 의견",
+              "count": 1
+            }
+          ],
+          "priority": [
+            {
+              "label": "Medium",
+              "count": 4
+            }
+          ]
+        },
+        {
+          "version": "5.24.0",
+          "total": 25,
+          "criticalMajor": 15,
+          "doneRate": 68.0,
+          "status": [
+            {
+              "label": "등록",
+              "count": 7
+            },
+            {
+              "label": "진행중",
+              "count": 1
             },
             {
               "label": "QA확인",
@@ -693,21 +725,17 @@
             },
             {
               "label": "Major",
-              "count": 8
+              "count": 14
             },
             {
               "label": "Minor",
-              "count": 12
-            },
-            {
-              "label": "개선 의견",
-              "count": 1
+              "count": 10
             }
           ],
           "priority": [
             {
               "label": "Medium",
-              "count": 22
+              "count": 25
             }
           ]
         },
@@ -1597,13 +1625,13 @@
         },
         {
           "version": "Hanpass - Backlog",
-          "total": 13,
+          "total": 14,
           "criticalMajor": 3,
-          "doneRate": 15.4,
+          "doneRate": 14.3,
           "status": [
             {
               "label": "등록",
-              "count": 11
+              "count": 12
             },
             {
               "label": "종료",
@@ -1617,19 +1645,20 @@
             },
             {
               "label": "Minor",
-              "count": 10
+              "count": 11
             }
           ],
           "priority": [
             {
               "label": "Medium",
-              "count": 13
+              "count": 14
             }
           ]
         }
       ],
       "versionGroups": {
         "ALL": [
+          "5.25.0",
           "5.24.0",
           "5.23.2",
           "5.23.0",
@@ -1660,11 +1689,11 @@
           "Hanpass - Backlog"
         ],
         "RECENT": [
+          "5.25.0",
           "5.24.0",
           "5.23.2",
           "5.23.0",
-          "5.22.1",
-          "5.22.0"
+          "5.22.1"
         ],
         "BACKLOG": [
           "[G.H]Backlog",
@@ -1677,7 +1706,11 @@
           "status": [
             {
               "label": "등록",
-              "count": 94
+              "count": 101
+            },
+            {
+              "label": "진행중",
+              "count": 1
             },
             {
               "label": "QA확인",
@@ -1695,11 +1728,11 @@
             },
             {
               "label": "Major",
-              "count": 203
+              "count": 209
             },
             {
               "label": "Minor",
-              "count": 488
+              "count": 490
             },
             {
               "label": "미지정",
@@ -1721,7 +1754,7 @@
             },
             {
               "label": "Medium",
-              "count": 781
+              "count": 789
             },
             {
               "label": "Low",
@@ -1924,30 +1957,30 @@
         {
           "date": "2026-07-28",
           "new": 3,
-          "fixed": 3,
-          "closed": 2,
+          "fixed": 2,
+          "closed": 1,
           "deltaNew": -3
         },
         {
           "date": "2026-07-29",
           "new": 5,
-          "fixed": 1,
-          "closed": 1,
+          "fixed": 0,
+          "closed": 0,
           "deltaNew": 2
         },
         {
           "date": "2026-07-30",
           "new": 7,
-          "fixed": 10,
-          "closed": 1,
+          "fixed": 9,
+          "closed": 0,
           "deltaNew": 2
         },
         {
           "date": "2026-07-31",
-          "new": 1,
-          "fixed": 4,
-          "closed": 0,
-          "deltaNew": -6
+          "new": 9,
+          "fixed": 7,
+          "closed": 3,
+          "deltaNew": 2
         }
       ],
       "reportBoard": {
@@ -1991,8 +2024,8 @@
       },
       "recent": [
         {
-          "id": "ISSUE-1082",
-          "title": "[VENTAJA][AOS] ‘공과금 신청 완료 화면’ 내 다크모드 ON/OFF 시 실패 화면 노출 현상 (iOS미발생)",
+          "id": "ISSUE-1090",
+          "title": "[HC][공통] ‘결제 확인’ 팝업 노출 후 뒤로가기 두 번 선택 시 이전 화면으로 이동하는 현상 ",
           "status": "등록 (Registered)",
           "stage": "등록",
           "severity": "Major",
@@ -2002,6 +2035,174 @@
           "versionRaw": "5.24.0",
           "domain": "한패스",
           "os": "미지정",
+          "createdAt": "2026-07-31T08:48:00.000Z",
+          "createdDate": "2026-07-31",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/HC-3ae73fbd1951801084f4c738df7d7506",
+          "lastEditedAt": "2026-07-31T08:57:00.000Z"
+        },
+        {
+          "id": "ISSUE-1089",
+          "title": "[HC][공통] ‘결제하기’ 연속 선택 시 400 팝업 노출 되는 현상 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "5.24.0",
+          "versionRaw": "5.24.0",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-07-31T08:31:00.000Z",
+          "createdDate": "2026-07-31",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/HC-400-3ae73fbd195180e890d8e4a36956407e",
+          "lastEditedAt": "2026-07-31T08:55:00.000Z"
+        },
+        {
+          "id": "ISSUE-1088",
+          "title": "[HC][공통] 보험 가입 ‘결제하기’ 연속 선택 시 ‘결제 확인’ 팝업 중복 노출 현상 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "5.24.0",
+          "versionRaw": "5.24.0",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-07-31T08:28:00.000Z",
+          "createdDate": "2026-07-31",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/HC-3ae73fbd195180838796f99c2ccb353a",
+          "lastEditedAt": "2026-07-31T08:45:00.000Z"
+        },
+        {
+          "id": "ISSUE-1087",
+          "title": "[HC][공통] ‘가입 내역 없음’ 팝업 노출 상태에서 OS물리백/스와이프 시 팝업 미닫힘 및 이전 화면 이동 현상 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "5.24.0",
+          "versionRaw": "5.24.0",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-07-31T07:48:00.000Z",
+          "createdDate": "2026-07-31",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/HC-OS-3ae73fbd195180f1a139c483d748fe1a",
+          "lastEditedAt": "2026-07-31T08:10:00.000Z"
+        },
+        {
+          "id": "ISSUE-1086",
+          "title": "[VENTAJA][AOS] 6자리 PIN 입력 페이지에서 다크 모드 설정 시 키패드 오류 노출되는 현상 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "5.24.0",
+          "versionRaw": "5.24.0",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-07-31T07:32:00.000Z",
+          "createdDate": "2026-07-31",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/VENTAJA-AOS-6-PIN-3ae73fbd195180d596ffe697022a7b89",
+          "lastEditedAt": "2026-07-31T08:06:00.000Z"
+        },
+        {
+          "id": "ISSUE-1085",
+          "title": "[BO] ‘가입대상자 정보 상세’ 화면 내 정보 미수정 후 ‘저장’ 시 빈 팝업 및 에러 페이지 노출 현상  ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "5.24.0",
+          "versionRaw": "5.24.0",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-07-31T07:11:00.000Z",
+          "createdDate": "2026-07-31",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/BO-3ae73fbd1951800e9204e9d11a03d793",
+          "lastEditedAt": "2026-07-31T07:22:00.000Z"
+        },
+        {
+          "id": "ISSUE-1084",
+          "title": "[BO] ‘개별 가입 내역’ 항목 체크 후 초기화 시 체크박스 초기화되지 않는 현상",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "5.25.0",
+          "versionRaw": "5.25.0",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-07-31T06:33:00.000Z",
+          "createdDate": "2026-07-31",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/BO-3ae73fbd195180ef81bee3a8e7e13086",
+          "lastEditedAt": "2026-07-31T07:04:00.000Z"
+        },
+        {
+          "id": "ISSUE-1083",
+          "title": "[HC][공통] ‘파일 개수 제한 팝업’내 확인 선택 시 무반응인 현상 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "5.24.0",
+          "versionRaw": "5.24.0",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-07-31T06:32:00.000Z",
+          "createdDate": "2026-07-31",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/HC-3ae73fbd19518033ab5af927b98072ed",
+          "lastEditedAt": "2026-07-31T07:01:00.000Z"
+        },
+        {
+          "id": "ISSUE-1082",
+          "title": "[VENTAJA][AOS] ‘공과금 신청 완료 화면’ 내 다크모드 ON/OFF 시 실패 화면 노출 현상 (iOS미발생)",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "Hanpass - Backlog",
+          "versionRaw": "Hanpass - Backlog",
+          "domain": "한패스",
+          "os": "미지정",
           "createdAt": "2026-07-31T00:06:00.000Z",
           "createdDate": "2026-07-31",
           "fixedAt": "",
@@ -2009,12 +2210,12 @@
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/VENTAJA-AOS-ON-OFF-iOS-3ae73fbd195180bd9c19e0508d758413",
-          "lastEditedAt": "2026-07-31T00:29:00.000Z"
+          "lastEditedAt": "2026-07-31T05:04:00.000Z"
         },
         {
           "id": "ISSUE-1081",
           "title": "[모바일월렛][공통] 즐겨찾기 대상자 등록 시 VALIDATION 팝업 노출 현상 ",
-          "status": "결함 아님 (Not an issue)",
+          "status": "완료 (Done)",
           "stage": "종료",
           "severity": "Major",
           "priority": "Medium",
@@ -2025,198 +2226,30 @@
           "os": "미지정",
           "createdAt": "2026-07-30T08:28:00.000Z",
           "createdDate": "2026-07-30",
-          "fixedAt": "2026-07-30T09:05:00.000Z",
-          "fixedDate": "2026-07-30",
-          "closedAt": "2026-07-30T09:05:00.000Z",
-          "closedDate": "2026-07-30",
+          "fixedAt": "2026-07-31T04:30:00.000Z",
+          "fixedDate": "2026-07-31",
+          "closedAt": "2026-07-31T04:30:00.000Z",
+          "closedDate": "2026-07-31",
           "url": "https://app.notion.com/p/VALIDATION-3ad73fbd1951803c9461e36e4015f026",
-          "lastEditedAt": "2026-07-30T09:05:00.000Z"
-        },
-        {
-          "id": "ISSUE-1080",
-          "title": "[HC][공통]약관 동의 상세 페이지 내 뒤로가기 ‘<’ 선택 시 이전 화면으로 이동 안 하는 현상 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "개선 의견",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "5.24.0",
-          "versionRaw": "5.24.0",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-07-30T08:13:00.000Z",
-          "createdDate": "2026-07-30",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/HC-3ad73fbd1951801bb011d8e619fefdc7",
-          "lastEditedAt": "2026-07-30T08:31:00.000Z"
-        },
-        {
-          "id": "ISSUE-1079",
-          "title": "[VENTAJA][AOS] ‘납부 정보 확인’ 화면 내 툴팁 아이콘 연속 선택 시 안내 바텀시트 중복 노출되는 현상",
-          "status": "QA 검증 -회귀 (QA Verification)",
-          "stage": "QA확인",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "5.24.0",
-          "versionRaw": "5.24.0",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-07-30T08:12:00.000Z",
-          "createdDate": "2026-07-30",
-          "fixedAt": "2026-07-31T01:02:00.000Z",
-          "fixedDate": "2026-07-31",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/VENTAJA-AOS-3ad73fbd1951806cb121dce2e49eddcc",
-          "lastEditedAt": "2026-07-31T01:02:00.000Z"
-        },
-        {
-          "id": "ISSUE-1078",
-          "title": "[HC][공통] 청구 내역 목록 화면 내 날짜 형식 기획서와 상이",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "5.24.0",
-          "versionRaw": "5.24.0",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-07-30T07:49:00.000Z",
-          "createdDate": "2026-07-30",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/HC-3ad73fbd195180018d3feb0f6b97bad3",
-          "lastEditedAt": "2026-07-31T00:24:00.000Z"
-        },
-        {
-          "id": "ISSUE-1077",
-          "title": "[HC][공통] 국적 선택 BS 내 placeholder 기획서와 상이 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "5.24.0",
-          "versionRaw": "5.24.0",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-07-30T07:38:00.000Z",
-          "createdDate": "2026-07-30",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/HC-BS-placeholder-3ad73fbd195180179f29ca9e77025b28",
-          "lastEditedAt": "2026-07-30T08:19:00.000Z"
-        },
-        {
-          "id": "ISSUE-1076",
-          "title": "[VENTAJA][AOS] ‘공과금 선택’ 화면 내 툴팁 아이콘 연속 선택 시 안내 바텀시트 중복 노출되는 현상 (iOS미발생)",
-          "status": "QA 검증 -회귀 (QA Verification)",
-          "stage": "QA확인",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "5.24.0",
-          "versionRaw": "5.24.0",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-07-30T07:23:00.000Z",
-          "createdDate": "2026-07-30",
-          "fixedAt": "2026-07-31T00:22:00.000Z",
-          "fixedDate": "2026-07-31",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/VENTAJA-AOS-iOS-3ad73fbd195180a7a1a9ec336e4cf94c",
-          "lastEditedAt": "2026-07-31T00:22:00.000Z"
-        },
-        {
-          "id": "ISSUE-1075",
-          "title": "[VISALOAN][다국어][공통] 벵골어 설정 시 최상단 배너, 홈 배너(1-1) 다국어 시트와 상이",
-          "status": "QA 검증 -회귀 (QA Verification)",
-          "stage": "QA확인",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "5.24.0",
-          "versionRaw": "5.24.0",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-07-30T01:35:00.000Z",
-          "createdDate": "2026-07-30",
-          "fixedAt": "2026-07-31T00:14:00.000Z",
-          "fixedDate": "2026-07-31",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/VISALOAN-1-1-3ad73fbd195180fe811acc9dbab81016",
-          "lastEditedAt": "2026-07-31T00:14:00.000Z"
-        },
-        {
-          "id": "ISSUE-1074",
-          "title": "[VENTAJA][다국어][공통] 납부 정보 입력 화면 내 플레이스홀더, 벨리데이션 문구 다국어 미적용 ",
-          "status": "QA 검증 -회귀 (QA Verification)",
-          "stage": "QA확인",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "5.24.0",
-          "versionRaw": "5.24.0",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-07-29T08:08:00.000Z",
-          "createdDate": "2026-07-29",
-          "fixedAt": "2026-07-30T02:13:00.000Z",
-          "fixedDate": "2026-07-30",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/VENTAJA-3ac73fbd195180c8bd3ed2ef679fa6e1",
-          "lastEditedAt": "2026-07-30T02:13:00.000Z"
-        },
-        {
-          "id": "ISSUE-1073",
-          "title": "[VENTAJA][iOS] 상세 내역 내 이용 날짜, 시간, 국가, 계좌 내역, 환율 미노출 현상 ",
-          "status": "QA 검증 -회귀 (QA Verification)",
-          "stage": "QA확인",
-          "severity": "Major",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "5.24.0",
-          "versionRaw": "5.24.0",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-07-29T07:52:00.000Z",
-          "createdDate": "2026-07-29",
-          "fixedAt": "2026-07-31T00:19:00.000Z",
-          "fixedDate": "2026-07-31",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/VENTAJA-iOS-3ac73fbd1951802a917dca67551357a7",
-          "lastEditedAt": "2026-07-31T00:19:00.000Z"
+          "lastEditedAt": "2026-07-31T04:30:00.000Z"
         }
       ]
     },
     "한패스": {
       "summary": {
-        "total": 621,
-        "new": 67,
-        "inProgress": 0,
+        "total": 629,
+        "new": 74,
+        "inProgress": 1,
         "fixed": 0,
         "closed": 479,
-        "todayNew": 1,
-        "newDelta": -6
+        "todayNew": 9,
+        "newDelta": 2
       },
       "funnel": [
         {
           "stage": "등록",
-          "count": 67,
-          "rate": 10.8,
+          "count": 74,
+          "rate": 11.8,
           "width": 18
         },
         {
@@ -2233,8 +2266,8 @@
         },
         {
           "stage": "진행중",
-          "count": 0,
-          "rate": 0.0,
+          "count": 1,
+          "rate": 0.2,
           "width": 18
         },
         {
@@ -2246,13 +2279,13 @@
         {
           "stage": "QA확인",
           "count": 75,
-          "rate": 12.1,
+          "rate": 11.9,
           "width": 18
         },
         {
           "stage": "종료",
           "count": 479,
-          "rate": 77.1,
+          "rate": 76.2,
           "width": 100
         }
       ],
@@ -2442,42 +2475,74 @@
         {
           "date": "2026-07-28",
           "new": 3,
-          "fixed": 2,
-          "closed": 1,
+          "fixed": 1,
+          "closed": 0,
           "deltaNew": -2
         },
         {
           "date": "2026-07-29",
           "new": 5,
-          "fixed": 1,
-          "closed": 1,
+          "fixed": 0,
+          "closed": 0,
           "deltaNew": 2
         },
         {
           "date": "2026-07-30",
           "new": 7,
-          "fixed": 10,
-          "closed": 1,
+          "fixed": 9,
+          "closed": 0,
           "deltaNew": 2
         },
         {
           "date": "2026-07-31",
-          "new": 1,
-          "fixed": 4,
-          "closed": 0,
-          "deltaNew": -6
+          "new": 9,
+          "fixed": 7,
+          "closed": 3,
+          "deltaNew": 2
         }
       ],
       "versions": [
         {
-          "version": "5.24.0",
-          "total": 22,
-          "criticalMajor": 9,
-          "doneRate": 77.3,
+          "version": "5.25.0",
+          "total": 4,
+          "criticalMajor": 0,
+          "doneRate": 0.0,
           "status": [
             {
               "label": "등록",
-              "count": 5
+              "count": 4
+            }
+          ],
+          "severity": [
+            {
+              "label": "Minor",
+              "count": 3
+            },
+            {
+              "label": "개선 의견",
+              "count": 1
+            }
+          ],
+          "priority": [
+            {
+              "label": "Medium",
+              "count": 4
+            }
+          ]
+        },
+        {
+          "version": "5.24.0",
+          "total": 25,
+          "criticalMajor": 15,
+          "doneRate": 68.0,
+          "status": [
+            {
+              "label": "등록",
+              "count": 7
+            },
+            {
+              "label": "진행중",
+              "count": 1
             },
             {
               "label": "QA확인",
@@ -2495,21 +2560,17 @@
             },
             {
               "label": "Major",
-              "count": 8
+              "count": 14
             },
             {
               "label": "Minor",
-              "count": 12
-            },
-            {
-              "label": "개선 의견",
-              "count": 1
+              "count": 10
             }
           ],
           "priority": [
             {
               "label": "Medium",
-              "count": 22
+              "count": 25
             }
           ]
         },
@@ -3159,13 +3220,13 @@
         },
         {
           "version": "Hanpass - Backlog",
-          "total": 13,
+          "total": 14,
           "criticalMajor": 3,
-          "doneRate": 15.4,
+          "doneRate": 14.3,
           "status": [
             {
               "label": "등록",
-              "count": 11
+              "count": 12
             },
             {
               "label": "종료",
@@ -3179,19 +3240,20 @@
             },
             {
               "label": "Minor",
-              "count": 10
+              "count": 11
             }
           ],
           "priority": [
             {
               "label": "Medium",
-              "count": 13
+              "count": 14
             }
           ]
         }
       ],
       "versionGroups": {
         "ALL": [
+          "5.25.0",
           "5.24.0",
           "5.23.2",
           "5.23.0",
@@ -3214,11 +3276,11 @@
           "Hanpass - Backlog"
         ],
         "RECENT": [
+          "5.25.0",
           "5.24.0",
           "5.23.2",
           "5.23.0",
-          "5.22.1",
-          "5.22.0"
+          "5.22.1"
         ],
         "BACKLOG": [
           "Hanpass - Backlog"
@@ -3230,7 +3292,11 @@
           "status": [
             {
               "label": "등록",
-              "count": 67
+              "count": 74
+            },
+            {
+              "label": "진행중",
+              "count": 1
             },
             {
               "label": "QA확인",
@@ -3248,11 +3314,11 @@
             },
             {
               "label": "Major",
-              "count": 140
+              "count": 146
             },
             {
               "label": "Minor",
-              "count": 351
+              "count": 353
             },
             {
               "label": "미지정",
@@ -3274,7 +3340,7 @@
             },
             {
               "label": "Medium",
-              "count": 578
+              "count": 586
             },
             {
               "label": "Low",
@@ -3477,30 +3543,30 @@
         {
           "date": "2026-07-28",
           "new": 3,
-          "fixed": 2,
-          "closed": 1,
+          "fixed": 1,
+          "closed": 0,
           "deltaNew": -2
         },
         {
           "date": "2026-07-29",
           "new": 5,
-          "fixed": 1,
-          "closed": 1,
+          "fixed": 0,
+          "closed": 0,
           "deltaNew": 2
         },
         {
           "date": "2026-07-30",
           "new": 7,
-          "fixed": 10,
-          "closed": 1,
+          "fixed": 9,
+          "closed": 0,
           "deltaNew": 2
         },
         {
           "date": "2026-07-31",
-          "new": 1,
-          "fixed": 4,
-          "closed": 0,
-          "deltaNew": -6
+          "new": 9,
+          "fixed": 7,
+          "closed": 3,
+          "deltaNew": 2
         }
       ],
       "reportBoard": {
@@ -3530,8 +3596,8 @@
       },
       "recent": [
         {
-          "id": "ISSUE-1082",
-          "title": "[VENTAJA][AOS] ‘공과금 신청 완료 화면’ 내 다크모드 ON/OFF 시 실패 화면 노출 현상 (iOS미발생)",
+          "id": "ISSUE-1090",
+          "title": "[HC][공통] ‘결제 확인’ 팝업 노출 후 뒤로가기 두 번 선택 시 이전 화면으로 이동하는 현상 ",
           "status": "등록 (Registered)",
           "stage": "등록",
           "severity": "Major",
@@ -3541,6 +3607,174 @@
           "versionRaw": "5.24.0",
           "domain": "한패스",
           "os": "미지정",
+          "createdAt": "2026-07-31T08:48:00.000Z",
+          "createdDate": "2026-07-31",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/HC-3ae73fbd1951801084f4c738df7d7506",
+          "lastEditedAt": "2026-07-31T08:57:00.000Z"
+        },
+        {
+          "id": "ISSUE-1089",
+          "title": "[HC][공통] ‘결제하기’ 연속 선택 시 400 팝업 노출 되는 현상 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "5.24.0",
+          "versionRaw": "5.24.0",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-07-31T08:31:00.000Z",
+          "createdDate": "2026-07-31",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/HC-400-3ae73fbd195180e890d8e4a36956407e",
+          "lastEditedAt": "2026-07-31T08:55:00.000Z"
+        },
+        {
+          "id": "ISSUE-1088",
+          "title": "[HC][공통] 보험 가입 ‘결제하기’ 연속 선택 시 ‘결제 확인’ 팝업 중복 노출 현상 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "5.24.0",
+          "versionRaw": "5.24.0",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-07-31T08:28:00.000Z",
+          "createdDate": "2026-07-31",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/HC-3ae73fbd195180838796f99c2ccb353a",
+          "lastEditedAt": "2026-07-31T08:45:00.000Z"
+        },
+        {
+          "id": "ISSUE-1087",
+          "title": "[HC][공통] ‘가입 내역 없음’ 팝업 노출 상태에서 OS물리백/스와이프 시 팝업 미닫힘 및 이전 화면 이동 현상 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "5.24.0",
+          "versionRaw": "5.24.0",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-07-31T07:48:00.000Z",
+          "createdDate": "2026-07-31",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/HC-OS-3ae73fbd195180f1a139c483d748fe1a",
+          "lastEditedAt": "2026-07-31T08:10:00.000Z"
+        },
+        {
+          "id": "ISSUE-1086",
+          "title": "[VENTAJA][AOS] 6자리 PIN 입력 페이지에서 다크 모드 설정 시 키패드 오류 노출되는 현상 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "5.24.0",
+          "versionRaw": "5.24.0",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-07-31T07:32:00.000Z",
+          "createdDate": "2026-07-31",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/VENTAJA-AOS-6-PIN-3ae73fbd195180d596ffe697022a7b89",
+          "lastEditedAt": "2026-07-31T08:06:00.000Z"
+        },
+        {
+          "id": "ISSUE-1085",
+          "title": "[BO] ‘가입대상자 정보 상세’ 화면 내 정보 미수정 후 ‘저장’ 시 빈 팝업 및 에러 페이지 노출 현상  ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "5.24.0",
+          "versionRaw": "5.24.0",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-07-31T07:11:00.000Z",
+          "createdDate": "2026-07-31",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/BO-3ae73fbd1951800e9204e9d11a03d793",
+          "lastEditedAt": "2026-07-31T07:22:00.000Z"
+        },
+        {
+          "id": "ISSUE-1084",
+          "title": "[BO] ‘개별 가입 내역’ 항목 체크 후 초기화 시 체크박스 초기화되지 않는 현상",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "5.25.0",
+          "versionRaw": "5.25.0",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-07-31T06:33:00.000Z",
+          "createdDate": "2026-07-31",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/BO-3ae73fbd195180ef81bee3a8e7e13086",
+          "lastEditedAt": "2026-07-31T07:04:00.000Z"
+        },
+        {
+          "id": "ISSUE-1083",
+          "title": "[HC][공통] ‘파일 개수 제한 팝업’내 확인 선택 시 무반응인 현상 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "5.24.0",
+          "versionRaw": "5.24.0",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-07-31T06:32:00.000Z",
+          "createdDate": "2026-07-31",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/HC-3ae73fbd19518033ab5af927b98072ed",
+          "lastEditedAt": "2026-07-31T07:01:00.000Z"
+        },
+        {
+          "id": "ISSUE-1082",
+          "title": "[VENTAJA][AOS] ‘공과금 신청 완료 화면’ 내 다크모드 ON/OFF 시 실패 화면 노출 현상 (iOS미발생)",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "Hanpass - Backlog",
+          "versionRaw": "Hanpass - Backlog",
+          "domain": "한패스",
+          "os": "미지정",
           "createdAt": "2026-07-31T00:06:00.000Z",
           "createdDate": "2026-07-31",
           "fixedAt": "",
@@ -3548,12 +3782,12 @@
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/VENTAJA-AOS-ON-OFF-iOS-3ae73fbd195180bd9c19e0508d758413",
-          "lastEditedAt": "2026-07-31T00:29:00.000Z"
+          "lastEditedAt": "2026-07-31T05:04:00.000Z"
         },
         {
           "id": "ISSUE-1081",
           "title": "[모바일월렛][공통] 즐겨찾기 대상자 등록 시 VALIDATION 팝업 노출 현상 ",
-          "status": "결함 아님 (Not an issue)",
+          "status": "완료 (Done)",
           "stage": "종료",
           "severity": "Major",
           "priority": "Medium",
@@ -3564,180 +3798,12 @@
           "os": "미지정",
           "createdAt": "2026-07-30T08:28:00.000Z",
           "createdDate": "2026-07-30",
-          "fixedAt": "2026-07-30T09:05:00.000Z",
-          "fixedDate": "2026-07-30",
-          "closedAt": "2026-07-30T09:05:00.000Z",
-          "closedDate": "2026-07-30",
+          "fixedAt": "2026-07-31T04:30:00.000Z",
+          "fixedDate": "2026-07-31",
+          "closedAt": "2026-07-31T04:30:00.000Z",
+          "closedDate": "2026-07-31",
           "url": "https://app.notion.com/p/VALIDATION-3ad73fbd1951803c9461e36e4015f026",
-          "lastEditedAt": "2026-07-30T09:05:00.000Z"
-        },
-        {
-          "id": "ISSUE-1080",
-          "title": "[HC][공통]약관 동의 상세 페이지 내 뒤로가기 ‘<’ 선택 시 이전 화면으로 이동 안 하는 현상 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "개선 의견",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "5.24.0",
-          "versionRaw": "5.24.0",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-07-30T08:13:00.000Z",
-          "createdDate": "2026-07-30",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/HC-3ad73fbd1951801bb011d8e619fefdc7",
-          "lastEditedAt": "2026-07-30T08:31:00.000Z"
-        },
-        {
-          "id": "ISSUE-1079",
-          "title": "[VENTAJA][AOS] ‘납부 정보 확인’ 화면 내 툴팁 아이콘 연속 선택 시 안내 바텀시트 중복 노출되는 현상",
-          "status": "QA 검증 -회귀 (QA Verification)",
-          "stage": "QA확인",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "5.24.0",
-          "versionRaw": "5.24.0",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-07-30T08:12:00.000Z",
-          "createdDate": "2026-07-30",
-          "fixedAt": "2026-07-31T01:02:00.000Z",
-          "fixedDate": "2026-07-31",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/VENTAJA-AOS-3ad73fbd1951806cb121dce2e49eddcc",
-          "lastEditedAt": "2026-07-31T01:02:00.000Z"
-        },
-        {
-          "id": "ISSUE-1078",
-          "title": "[HC][공통] 청구 내역 목록 화면 내 날짜 형식 기획서와 상이",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "5.24.0",
-          "versionRaw": "5.24.0",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-07-30T07:49:00.000Z",
-          "createdDate": "2026-07-30",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/HC-3ad73fbd195180018d3feb0f6b97bad3",
-          "lastEditedAt": "2026-07-31T00:24:00.000Z"
-        },
-        {
-          "id": "ISSUE-1077",
-          "title": "[HC][공통] 국적 선택 BS 내 placeholder 기획서와 상이 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "5.24.0",
-          "versionRaw": "5.24.0",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-07-30T07:38:00.000Z",
-          "createdDate": "2026-07-30",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/HC-BS-placeholder-3ad73fbd195180179f29ca9e77025b28",
-          "lastEditedAt": "2026-07-30T08:19:00.000Z"
-        },
-        {
-          "id": "ISSUE-1076",
-          "title": "[VENTAJA][AOS] ‘공과금 선택’ 화면 내 툴팁 아이콘 연속 선택 시 안내 바텀시트 중복 노출되는 현상 (iOS미발생)",
-          "status": "QA 검증 -회귀 (QA Verification)",
-          "stage": "QA확인",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "5.24.0",
-          "versionRaw": "5.24.0",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-07-30T07:23:00.000Z",
-          "createdDate": "2026-07-30",
-          "fixedAt": "2026-07-31T00:22:00.000Z",
-          "fixedDate": "2026-07-31",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/VENTAJA-AOS-iOS-3ad73fbd195180a7a1a9ec336e4cf94c",
-          "lastEditedAt": "2026-07-31T00:22:00.000Z"
-        },
-        {
-          "id": "ISSUE-1075",
-          "title": "[VISALOAN][다국어][공통] 벵골어 설정 시 최상단 배너, 홈 배너(1-1) 다국어 시트와 상이",
-          "status": "QA 검증 -회귀 (QA Verification)",
-          "stage": "QA확인",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "5.24.0",
-          "versionRaw": "5.24.0",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-07-30T01:35:00.000Z",
-          "createdDate": "2026-07-30",
-          "fixedAt": "2026-07-31T00:14:00.000Z",
-          "fixedDate": "2026-07-31",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/VISALOAN-1-1-3ad73fbd195180fe811acc9dbab81016",
-          "lastEditedAt": "2026-07-31T00:14:00.000Z"
-        },
-        {
-          "id": "ISSUE-1074",
-          "title": "[VENTAJA][다국어][공통] 납부 정보 입력 화면 내 플레이스홀더, 벨리데이션 문구 다국어 미적용 ",
-          "status": "QA 검증 -회귀 (QA Verification)",
-          "stage": "QA확인",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "5.24.0",
-          "versionRaw": "5.24.0",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-07-29T08:08:00.000Z",
-          "createdDate": "2026-07-29",
-          "fixedAt": "2026-07-30T02:13:00.000Z",
-          "fixedDate": "2026-07-30",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/VENTAJA-3ac73fbd195180c8bd3ed2ef679fa6e1",
-          "lastEditedAt": "2026-07-30T02:13:00.000Z"
-        },
-        {
-          "id": "ISSUE-1073",
-          "title": "[VENTAJA][iOS] 상세 내역 내 이용 날짜, 시간, 국가, 계좌 내역, 환율 미노출 현상 ",
-          "status": "QA 검증 -회귀 (QA Verification)",
-          "stage": "QA확인",
-          "severity": "Major",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "5.24.0",
-          "versionRaw": "5.24.0",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-07-29T07:52:00.000Z",
-          "createdDate": "2026-07-29",
-          "fixedAt": "2026-07-31T00:19:00.000Z",
-          "fixedDate": "2026-07-31",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/VENTAJA-iOS-3ac73fbd1951802a917dca67551357a7",
-          "lastEditedAt": "2026-07-31T00:19:00.000Z"
+          "lastEditedAt": "2026-07-31T04:30:00.000Z"
         }
       ]
     },

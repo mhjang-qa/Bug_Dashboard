@@ -393,7 +393,7 @@
     </div>
   </div>
   <script id="dashboard-data" type="application/json">{
-  "generatedAt": "2026-07-30T10:38:26+00:00",
+  "generatedAt": "2026-07-31T00:38:47+00:00",
   "days": 30,
   "domainOrder": [
     "한패스",
@@ -402,13 +402,13 @@
   "domains": {
     "ALL": {
       "summary": {
-        "total": 824,
+        "total": 825,
         "new": 94,
         "inProgress": 0,
         "fixed": 0,
-        "closed": 658,
-        "todayNew": 7,
-        "newDelta": 2
+        "closed": 655,
+        "todayNew": 1,
+        "newDelta": -6
       },
       "funnel": [
         {
@@ -443,31 +443,24 @@
         },
         {
           "stage": "QA확인",
-          "count": 72,
-          "rate": 8.7,
+          "count": 76,
+          "rate": 9.2,
           "width": 18
         },
         {
           "stage": "종료",
-          "count": 658,
-          "rate": 79.9,
+          "count": 655,
+          "rate": 79.4,
           "width": 100
         }
       ],
       "daily": [
         {
-          "date": "2026-07-01",
-          "new": 5,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": 5
-        },
-        {
           "date": "2026-07-02",
           "new": 2,
           "fixed": 0,
           "closed": 0,
-          "deltaNew": -3
+          "deltaNew": 2
         },
         {
           "date": "2026-07-03",
@@ -661,17 +654,24 @@
         {
           "date": "2026-07-30",
           "new": 7,
-          "fixed": 13,
-          "closed": 4,
+          "fixed": 10,
+          "closed": 1,
           "deltaNew": 2
+        },
+        {
+          "date": "2026-07-31",
+          "new": 1,
+          "fixed": 4,
+          "closed": 0,
+          "deltaNew": -6
         }
       ],
       "versions": [
         {
           "version": "5.24.0",
-          "total": 21,
-          "criticalMajor": 8,
-          "doneRate": 76.2,
+          "total": 22,
+          "criticalMajor": 9,
+          "doneRate": 77.3,
           "status": [
             {
               "label": "등록",
@@ -679,11 +679,11 @@
             },
             {
               "label": "QA확인",
-              "count": 10
+              "count": 14
             },
             {
               "label": "종료",
-              "count": 6
+              "count": 3
             }
           ],
           "severity": [
@@ -693,7 +693,7 @@
             },
             {
               "label": "Major",
-              "count": 7
+              "count": 8
             },
             {
               "label": "Minor",
@@ -707,7 +707,7 @@
           "priority": [
             {
               "label": "Medium",
-              "count": 21
+              "count": 22
             }
           ]
         },
@@ -1681,11 +1681,11 @@
             },
             {
               "label": "QA확인",
-              "count": 72
+              "count": 76
             },
             {
               "label": "종료",
-              "count": 658
+              "count": 655
             }
           ],
           "severity": [
@@ -1695,7 +1695,7 @@
             },
             {
               "label": "Major",
-              "count": 202
+              "count": 203
             },
             {
               "label": "Minor",
@@ -1721,7 +1721,7 @@
             },
             {
               "label": "Medium",
-              "count": 780
+              "count": 781
             },
             {
               "label": "Low",
@@ -1740,18 +1740,11 @@
       },
       "heatmap": [
         {
-          "date": "2026-07-01",
-          "new": 5,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": 5
-        },
-        {
           "date": "2026-07-02",
           "new": 2,
           "fixed": 0,
           "closed": 0,
-          "deltaNew": -3
+          "deltaNew": 2
         },
         {
           "date": "2026-07-03",
@@ -1945,9 +1938,16 @@
         {
           "date": "2026-07-30",
           "new": 7,
-          "fixed": 13,
-          "closed": 4,
+          "fixed": 10,
+          "closed": 1,
           "deltaNew": 2
+        },
+        {
+          "date": "2026-07-31",
+          "new": 1,
+          "fixed": 4,
+          "closed": 0,
+          "deltaNew": -6
         }
       ],
       "reportBoard": {
@@ -1990,6 +1990,27 @@
         ]
       },
       "recent": [
+        {
+          "id": "ISSUE-1082",
+          "title": "[VENTAJA][AOS] ‘공과금 신청 완료 화면’ 내 다크모드 ON/OFF 시 실패 화면 노출 현상 (iOS미발생)",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "5.24.0",
+          "versionRaw": "5.24.0",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-07-31T00:06:00.000Z",
+          "createdDate": "2026-07-31",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/VENTAJA-AOS-ON-OFF-iOS-3ae73fbd195180bd9c19e0508d758413",
+          "lastEditedAt": "2026-07-31T00:29:00.000Z"
+        },
         {
           "id": "ISSUE-1081",
           "title": "[모바일월렛][공통] 즐겨찾기 대상자 등록 시 VALIDATION 팝업 노출 현상 ",
@@ -2035,8 +2056,8 @@
         {
           "id": "ISSUE-1079",
           "title": "[VENTAJA][AOS] ‘납부 정보 확인’ 화면 내 툴팁 아이콘 연속 선택 시 안내 바텀시트 중복 노출되는 현상",
-          "status": "등록 (Registered)",
-          "stage": "등록",
+          "status": "QA 검증 -회귀 (QA Verification)",
+          "stage": "QA확인",
           "severity": "Minor",
           "priority": "Medium",
           "assignee": "미지정",
@@ -2046,12 +2067,12 @@
           "os": "미지정",
           "createdAt": "2026-07-30T08:12:00.000Z",
           "createdDate": "2026-07-30",
-          "fixedAt": "",
-          "fixedDate": "",
+          "fixedAt": "2026-07-31T00:03:00.000Z",
+          "fixedDate": "2026-07-31",
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/VENTAJA-AOS-3ad73fbd1951806cb121dce2e49eddcc",
-          "lastEditedAt": "2026-07-30T08:59:00.000Z"
+          "lastEditedAt": "2026-07-31T00:03:00.000Z"
         },
         {
           "id": "ISSUE-1078",
@@ -2072,7 +2093,7 @@
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/HC-3ad73fbd195180018d3feb0f6b97bad3",
-          "lastEditedAt": "2026-07-30T08:18:00.000Z"
+          "lastEditedAt": "2026-07-31T00:24:00.000Z"
         },
         {
           "id": "ISSUE-1077",
@@ -2097,9 +2118,9 @@
         },
         {
           "id": "ISSUE-1076",
-          "title": "[VENTAJA][AOS] ‘공과금 선택’ 화면 내 툴팁 아이콘 연속 선택 시 안내 바텀시트 중복 노출되는 현상 (iOS 정상)",
-          "status": "개발 완료 (Dev Done)",
-          "stage": "종료",
+          "title": "[VENTAJA][AOS] ‘공과금 선택’ 화면 내 툴팁 아이콘 연속 선택 시 안내 바텀시트 중복 노출되는 현상 (iOS미발생)",
+          "status": "QA 검증 -회귀 (QA Verification)",
+          "stage": "QA확인",
           "severity": "Minor",
           "priority": "Medium",
           "assignee": "미지정",
@@ -2109,18 +2130,18 @@
           "os": "미지정",
           "createdAt": "2026-07-30T07:23:00.000Z",
           "createdDate": "2026-07-30",
-          "fixedAt": "2026-07-30T08:53:00.000Z",
-          "fixedDate": "2026-07-30",
-          "closedAt": "2026-07-30T08:53:00.000Z",
-          "closedDate": "2026-07-30",
+          "fixedAt": "2026-07-31T00:22:00.000Z",
+          "fixedDate": "2026-07-31",
+          "closedAt": "",
+          "closedDate": "",
           "url": "https://app.notion.com/p/VENTAJA-AOS-iOS-3ad73fbd195180a7a1a9ec336e4cf94c",
-          "lastEditedAt": "2026-07-30T08:53:00.000Z"
+          "lastEditedAt": "2026-07-31T00:22:00.000Z"
         },
         {
           "id": "ISSUE-1075",
           "title": "[VISALOAN][다국어][공통] 벵골어 설정 시 최상단 배너, 홈 배너(1-1) 다국어 시트와 상이",
-          "status": "개발 완료 (Dev Done)",
-          "stage": "종료",
+          "status": "QA 검증 -회귀 (QA Verification)",
+          "stage": "QA확인",
           "severity": "Minor",
           "priority": "Medium",
           "assignee": "미지정",
@@ -2130,12 +2151,12 @@
           "os": "미지정",
           "createdAt": "2026-07-30T01:35:00.000Z",
           "createdDate": "2026-07-30",
-          "fixedAt": "2026-07-30T08:53:00.000Z",
-          "fixedDate": "2026-07-30",
-          "closedAt": "2026-07-30T08:53:00.000Z",
-          "closedDate": "2026-07-30",
+          "fixedAt": "2026-07-31T00:14:00.000Z",
+          "fixedDate": "2026-07-31",
+          "closedAt": "",
+          "closedDate": "",
           "url": "https://app.notion.com/p/VISALOAN-1-1-3ad73fbd195180fe811acc9dbab81016",
-          "lastEditedAt": "2026-07-30T08:53:00.000Z"
+          "lastEditedAt": "2026-07-31T00:14:00.000Z"
         },
         {
           "id": "ISSUE-1074",
@@ -2161,8 +2182,8 @@
         {
           "id": "ISSUE-1073",
           "title": "[VENTAJA][iOS] 상세 내역 내 이용 날짜, 시간, 국가, 계좌 내역, 환율 미노출 현상 ",
-          "status": "개발 완료 (Dev Done)",
-          "stage": "종료",
+          "status": "QA 검증 -회귀 (QA Verification)",
+          "stage": "QA확인",
           "severity": "Major",
           "priority": "Medium",
           "assignee": "미지정",
@@ -2172,45 +2193,24 @@
           "os": "미지정",
           "createdAt": "2026-07-29T07:52:00.000Z",
           "createdDate": "2026-07-29",
-          "fixedAt": "2026-07-30T08:53:00.000Z",
-          "fixedDate": "2026-07-30",
-          "closedAt": "2026-07-30T08:53:00.000Z",
-          "closedDate": "2026-07-30",
-          "url": "https://app.notion.com/p/VENTAJA-iOS-3ac73fbd1951802a917dca67551357a7",
-          "lastEditedAt": "2026-07-30T08:53:00.000Z"
-        },
-        {
-          "id": "ISSUE-1072",
-          "title": "[VENTAJA][공통]해외 공과금 납부 진행 시 공과금 납부 실패 되는 현상  ",
-          "status": "QA 검증 -회귀 (QA Verification)",
-          "stage": "QA확인",
-          "severity": "Critical",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "5.24.0",
-          "versionRaw": "5.24.0",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-07-29T04:41:00.000Z",
-          "createdDate": "2026-07-29",
-          "fixedAt": "2026-07-30T00:18:00.000Z",
-          "fixedDate": "2026-07-30",
+          "fixedAt": "2026-07-31T00:19:00.000Z",
+          "fixedDate": "2026-07-31",
           "closedAt": "",
           "closedDate": "",
-          "url": "https://app.notion.com/p/VENTAJA-3ac73fbd195180178ed7fa53d7ba2d66",
-          "lastEditedAt": "2026-07-30T00:18:00.000Z"
+          "url": "https://app.notion.com/p/VENTAJA-iOS-3ac73fbd1951802a917dca67551357a7",
+          "lastEditedAt": "2026-07-31T00:19:00.000Z"
         }
       ]
     },
     "한패스": {
       "summary": {
-        "total": 620,
+        "total": 621,
         "new": 67,
         "inProgress": 0,
         "fixed": 0,
-        "closed": 482,
-        "todayNew": 7,
-        "newDelta": 2
+        "closed": 479,
+        "todayNew": 1,
+        "newDelta": -6
       },
       "funnel": [
         {
@@ -2245,31 +2245,24 @@
         },
         {
           "stage": "QA확인",
-          "count": 71,
-          "rate": 11.5,
+          "count": 75,
+          "rate": 12.1,
           "width": 18
         },
         {
           "stage": "종료",
-          "count": 482,
-          "rate": 77.7,
+          "count": 479,
+          "rate": 77.1,
           "width": 100
         }
       ],
       "daily": [
         {
-          "date": "2026-07-01",
-          "new": 5,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": 5
-        },
-        {
           "date": "2026-07-02",
           "new": 2,
           "fixed": 0,
           "closed": 0,
-          "deltaNew": -3
+          "deltaNew": 2
         },
         {
           "date": "2026-07-03",
@@ -2463,17 +2456,24 @@
         {
           "date": "2026-07-30",
           "new": 7,
-          "fixed": 13,
-          "closed": 4,
+          "fixed": 10,
+          "closed": 1,
           "deltaNew": 2
+        },
+        {
+          "date": "2026-07-31",
+          "new": 1,
+          "fixed": 4,
+          "closed": 0,
+          "deltaNew": -6
         }
       ],
       "versions": [
         {
           "version": "5.24.0",
-          "total": 21,
-          "criticalMajor": 8,
-          "doneRate": 76.2,
+          "total": 22,
+          "criticalMajor": 9,
+          "doneRate": 77.3,
           "status": [
             {
               "label": "등록",
@@ -2481,11 +2481,11 @@
             },
             {
               "label": "QA확인",
-              "count": 10
+              "count": 14
             },
             {
               "label": "종료",
-              "count": 6
+              "count": 3
             }
           ],
           "severity": [
@@ -2495,7 +2495,7 @@
             },
             {
               "label": "Major",
-              "count": 7
+              "count": 8
             },
             {
               "label": "Minor",
@@ -2509,7 +2509,7 @@
           "priority": [
             {
               "label": "Medium",
-              "count": 21
+              "count": 22
             }
           ]
         },
@@ -3234,11 +3234,11 @@
             },
             {
               "label": "QA확인",
-              "count": 71
+              "count": 75
             },
             {
               "label": "종료",
-              "count": 482
+              "count": 479
             }
           ],
           "severity": [
@@ -3248,7 +3248,7 @@
             },
             {
               "label": "Major",
-              "count": 139
+              "count": 140
             },
             {
               "label": "Minor",
@@ -3274,7 +3274,7 @@
             },
             {
               "label": "Medium",
-              "count": 577
+              "count": 578
             },
             {
               "label": "Low",
@@ -3293,18 +3293,11 @@
       },
       "heatmap": [
         {
-          "date": "2026-07-01",
-          "new": 5,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": 5
-        },
-        {
           "date": "2026-07-02",
           "new": 2,
           "fixed": 0,
           "closed": 0,
-          "deltaNew": -3
+          "deltaNew": 2
         },
         {
           "date": "2026-07-03",
@@ -3498,9 +3491,16 @@
         {
           "date": "2026-07-30",
           "new": 7,
-          "fixed": 13,
-          "closed": 4,
+          "fixed": 10,
+          "closed": 1,
           "deltaNew": 2
+        },
+        {
+          "date": "2026-07-31",
+          "new": 1,
+          "fixed": 4,
+          "closed": 0,
+          "deltaNew": -6
         }
       ],
       "reportBoard": {
@@ -3529,6 +3529,27 @@
         "recent": []
       },
       "recent": [
+        {
+          "id": "ISSUE-1082",
+          "title": "[VENTAJA][AOS] ‘공과금 신청 완료 화면’ 내 다크모드 ON/OFF 시 실패 화면 노출 현상 (iOS미발생)",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "5.24.0",
+          "versionRaw": "5.24.0",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-07-31T00:06:00.000Z",
+          "createdDate": "2026-07-31",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/VENTAJA-AOS-ON-OFF-iOS-3ae73fbd195180bd9c19e0508d758413",
+          "lastEditedAt": "2026-07-31T00:29:00.000Z"
+        },
         {
           "id": "ISSUE-1081",
           "title": "[모바일월렛][공통] 즐겨찾기 대상자 등록 시 VALIDATION 팝업 노출 현상 ",
@@ -3574,8 +3595,8 @@
         {
           "id": "ISSUE-1079",
           "title": "[VENTAJA][AOS] ‘납부 정보 확인’ 화면 내 툴팁 아이콘 연속 선택 시 안내 바텀시트 중복 노출되는 현상",
-          "status": "등록 (Registered)",
-          "stage": "등록",
+          "status": "QA 검증 -회귀 (QA Verification)",
+          "stage": "QA확인",
           "severity": "Minor",
           "priority": "Medium",
           "assignee": "미지정",
@@ -3585,12 +3606,12 @@
           "os": "미지정",
           "createdAt": "2026-07-30T08:12:00.000Z",
           "createdDate": "2026-07-30",
-          "fixedAt": "",
-          "fixedDate": "",
+          "fixedAt": "2026-07-31T00:03:00.000Z",
+          "fixedDate": "2026-07-31",
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/VENTAJA-AOS-3ad73fbd1951806cb121dce2e49eddcc",
-          "lastEditedAt": "2026-07-30T08:59:00.000Z"
+          "lastEditedAt": "2026-07-31T00:03:00.000Z"
         },
         {
           "id": "ISSUE-1078",
@@ -3611,7 +3632,7 @@
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/HC-3ad73fbd195180018d3feb0f6b97bad3",
-          "lastEditedAt": "2026-07-30T08:18:00.000Z"
+          "lastEditedAt": "2026-07-31T00:24:00.000Z"
         },
         {
           "id": "ISSUE-1077",
@@ -3636,9 +3657,9 @@
         },
         {
           "id": "ISSUE-1076",
-          "title": "[VENTAJA][AOS] ‘공과금 선택’ 화면 내 툴팁 아이콘 연속 선택 시 안내 바텀시트 중복 노출되는 현상 (iOS 정상)",
-          "status": "개발 완료 (Dev Done)",
-          "stage": "종료",
+          "title": "[VENTAJA][AOS] ‘공과금 선택’ 화면 내 툴팁 아이콘 연속 선택 시 안내 바텀시트 중복 노출되는 현상 (iOS미발생)",
+          "status": "QA 검증 -회귀 (QA Verification)",
+          "stage": "QA확인",
           "severity": "Minor",
           "priority": "Medium",
           "assignee": "미지정",
@@ -3648,18 +3669,18 @@
           "os": "미지정",
           "createdAt": "2026-07-30T07:23:00.000Z",
           "createdDate": "2026-07-30",
-          "fixedAt": "2026-07-30T08:53:00.000Z",
-          "fixedDate": "2026-07-30",
-          "closedAt": "2026-07-30T08:53:00.000Z",
-          "closedDate": "2026-07-30",
+          "fixedAt": "2026-07-31T00:22:00.000Z",
+          "fixedDate": "2026-07-31",
+          "closedAt": "",
+          "closedDate": "",
           "url": "https://app.notion.com/p/VENTAJA-AOS-iOS-3ad73fbd195180a7a1a9ec336e4cf94c",
-          "lastEditedAt": "2026-07-30T08:53:00.000Z"
+          "lastEditedAt": "2026-07-31T00:22:00.000Z"
         },
         {
           "id": "ISSUE-1075",
           "title": "[VISALOAN][다국어][공통] 벵골어 설정 시 최상단 배너, 홈 배너(1-1) 다국어 시트와 상이",
-          "status": "개발 완료 (Dev Done)",
-          "stage": "종료",
+          "status": "QA 검증 -회귀 (QA Verification)",
+          "stage": "QA확인",
           "severity": "Minor",
           "priority": "Medium",
           "assignee": "미지정",
@@ -3669,12 +3690,12 @@
           "os": "미지정",
           "createdAt": "2026-07-30T01:35:00.000Z",
           "createdDate": "2026-07-30",
-          "fixedAt": "2026-07-30T08:53:00.000Z",
-          "fixedDate": "2026-07-30",
-          "closedAt": "2026-07-30T08:53:00.000Z",
-          "closedDate": "2026-07-30",
+          "fixedAt": "2026-07-31T00:14:00.000Z",
+          "fixedDate": "2026-07-31",
+          "closedAt": "",
+          "closedDate": "",
           "url": "https://app.notion.com/p/VISALOAN-1-1-3ad73fbd195180fe811acc9dbab81016",
-          "lastEditedAt": "2026-07-30T08:53:00.000Z"
+          "lastEditedAt": "2026-07-31T00:14:00.000Z"
         },
         {
           "id": "ISSUE-1074",
@@ -3700,8 +3721,8 @@
         {
           "id": "ISSUE-1073",
           "title": "[VENTAJA][iOS] 상세 내역 내 이용 날짜, 시간, 국가, 계좌 내역, 환율 미노출 현상 ",
-          "status": "개발 완료 (Dev Done)",
-          "stage": "종료",
+          "status": "QA 검증 -회귀 (QA Verification)",
+          "stage": "QA확인",
           "severity": "Major",
           "priority": "Medium",
           "assignee": "미지정",
@@ -3711,33 +3732,12 @@
           "os": "미지정",
           "createdAt": "2026-07-29T07:52:00.000Z",
           "createdDate": "2026-07-29",
-          "fixedAt": "2026-07-30T08:53:00.000Z",
-          "fixedDate": "2026-07-30",
-          "closedAt": "2026-07-30T08:53:00.000Z",
-          "closedDate": "2026-07-30",
-          "url": "https://app.notion.com/p/VENTAJA-iOS-3ac73fbd1951802a917dca67551357a7",
-          "lastEditedAt": "2026-07-30T08:53:00.000Z"
-        },
-        {
-          "id": "ISSUE-1072",
-          "title": "[VENTAJA][공통]해외 공과금 납부 진행 시 공과금 납부 실패 되는 현상  ",
-          "status": "QA 검증 -회귀 (QA Verification)",
-          "stage": "QA확인",
-          "severity": "Critical",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "5.24.0",
-          "versionRaw": "5.24.0",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-07-29T04:41:00.000Z",
-          "createdDate": "2026-07-29",
-          "fixedAt": "2026-07-30T00:18:00.000Z",
-          "fixedDate": "2026-07-30",
+          "fixedAt": "2026-07-31T00:19:00.000Z",
+          "fixedDate": "2026-07-31",
           "closedAt": "",
           "closedDate": "",
-          "url": "https://app.notion.com/p/VENTAJA-3ac73fbd195180178ed7fa53d7ba2d66",
-          "lastEditedAt": "2026-07-30T00:18:00.000Z"
+          "url": "https://app.notion.com/p/VENTAJA-iOS-3ac73fbd1951802a917dca67551357a7",
+          "lastEditedAt": "2026-07-31T00:19:00.000Z"
         }
       ]
     },
@@ -3796,13 +3796,6 @@
         }
       ],
       "daily": [
-        {
-          "date": "2026-07-01",
-          "new": 0,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": 0
-        },
         {
           "date": "2026-07-02",
           "new": 0,
@@ -4001,6 +3994,13 @@
         },
         {
           "date": "2026-07-30",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-07-31",
           "new": 0,
           "fixed": 0,
           "closed": 0,
@@ -4316,13 +4316,6 @@
       },
       "heatmap": [
         {
-          "date": "2026-07-01",
-          "new": 0,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": 0
-        },
-        {
           "date": "2026-07-02",
           "new": 0,
           "fixed": 0,
@@ -4520,6 +4513,13 @@
         },
         {
           "date": "2026-07-30",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-07-31",
           "new": 0,
           "fixed": 0,
           "closed": 0,

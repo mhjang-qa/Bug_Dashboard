@@ -393,7 +393,7 @@
     </div>
   </div>
   <script id="dashboard-data" type="application/json">{
-  "generatedAt": "2026-08-06T00:51:44+00:00",
+  "generatedAt": "2026-08-06T11:01:45+00:00",
   "days": 30,
   "domainOrder": [
     "한패스",
@@ -402,20 +402,20 @@
   "domains": {
     "ALL": {
       "summary": {
-        "total": 891,
-        "new": 155,
+        "total": 902,
+        "new": 164,
         "inProgress": 1,
         "fixed": 0,
-        "closed": 673,
-        "todayNew": 2,
-        "newDelta": -34
+        "closed": 675,
+        "todayNew": 13,
+        "newDelta": -23
       },
       "funnel": [
         {
           "stage": "등록",
-          "count": 155,
-          "rate": 17.4,
-          "width": 23
+          "count": 164,
+          "rate": 18.2,
+          "width": 24
         },
         {
           "stage": "검토",
@@ -444,13 +444,13 @@
         {
           "stage": "QA확인",
           "count": 62,
-          "rate": 7.0,
+          "rate": 6.9,
           "width": 18
         },
         {
           "stage": "종료",
-          "count": 673,
-          "rate": 75.5,
+          "count": 675,
+          "rate": 74.8,
           "width": 100
         }
       ],
@@ -660,10 +660,10 @@
         },
         {
           "date": "2026-08-06",
-          "new": 2,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": -34
+          "new": 13,
+          "fixed": 2,
+          "closed": 2,
+          "deltaNew": -23
         }
       ],
       "versions": [
@@ -1537,17 +1537,21 @@
         },
         {
           "version": "[카카오뱅크]해외송금",
-          "total": 57,
-          "criticalMajor": 21,
-          "doneRate": 0.0,
+          "total": 68,
+          "criticalMajor": 31,
+          "doneRate": 2.9,
           "status": [
             {
               "label": "등록",
-              "count": 56
+              "count": 65
             },
             {
               "label": "진행중",
               "count": 1
+            },
+            {
+              "label": "종료",
+              "count": 2
             }
           ],
           "severity": [
@@ -1557,21 +1561,17 @@
             },
             {
               "label": "Major",
-              "count": 20
+              "count": 30
             },
             {
               "label": "Minor",
-              "count": 35
-            },
-            {
-              "label": "미지정",
-              "count": 1
+              "count": 37
             }
           ],
           "priority": [
             {
               "label": "Medium",
-              "count": 57
+              "count": 68
             }
           ]
         },
@@ -1743,7 +1743,7 @@
           "status": [
             {
               "label": "등록",
-              "count": 155
+              "count": 164
             },
             {
               "label": "진행중",
@@ -1755,7 +1755,7 @@
             },
             {
               "label": "종료",
-              "count": 673
+              "count": 675
             }
           ],
           "severity": [
@@ -1765,15 +1765,15 @@
             },
             {
               "label": "Major",
-              "count": 230
+              "count": 240
             },
             {
               "label": "Minor",
-              "count": 525
+              "count": 527
             },
             {
               "label": "미지정",
-              "count": 74
+              "count": 73
             },
             {
               "label": "개선 의견",
@@ -1791,7 +1791,7 @@
             },
             {
               "label": "Medium",
-              "count": 847
+              "count": 858
             },
             {
               "label": "Low",
@@ -2014,10 +2014,10 @@
         },
         {
           "date": "2026-08-06",
-          "new": 2,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": -34
+          "new": 13,
+          "fixed": 2,
+          "closed": 2,
+          "deltaNew": -23
         }
       ],
       "reportBoard": {
@@ -2047,29 +2047,8 @@
       },
       "recent": [
         {
-          "id": "ISSUE-1151",
-          "title": "[카카오뱅크][즐겨찾기] 타이틀을 입력해주세요. ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "미지정",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[카카오뱅크]해외송금",
-          "versionRaw": "[카카오뱅크]해외송금",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-08-06T00:48:00.000Z",
-          "createdDate": "2026-08-06",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/3b473fbd195180248c6efd049d7888a7",
-          "lastEditedAt": "2026-08-06T00:50:00.000Z"
-        },
-        {
-          "id": "ISSUE-1150",
-          "title": "[카카오뱅크][즐겨찾기] ‘즐겨찾기 송금하기’ 화면 내 뒤로가기 시 ‘상품 상세 설명’ 화면 이동 현상 ",
+          "id": "ISSUE-1164",
+          "title": "[카카오뱅크][해외송금]정상 QR 스캔 + 연동 계좌 잔액 부족 시 ‘연동 계좌 잔액 부족’ 팝업 미노출 되는 현상 ",
           "status": "등록 (Registered)",
           "stage": "등록",
           "severity": "Major",
@@ -2079,144 +2058,18 @@
           "versionRaw": "[카카오뱅크]해외송금",
           "domain": "한패스",
           "os": "미지정",
-          "createdAt": "2026-08-06T00:38:00.000Z",
+          "createdAt": "2026-08-06T08:39:00.000Z",
           "createdDate": "2026-08-06",
           "fixedAt": "",
           "fixedDate": "",
           "closedAt": "",
           "closedDate": "",
-          "url": "https://app.notion.com/p/3b473fbd195180fd9f89e8df986f8385",
-          "lastEditedAt": "2026-08-06T00:50:00.000Z"
+          "url": "https://app.notion.com/p/QR-3b473fbd195180a0ad10dd9c67873d7b",
+          "lastEditedAt": "2026-08-06T09:02:00.000Z"
         },
         {
-          "id": "ISSUE-1149",
-          "title": "[카카오뱅크][계좌등록] PIN 번호 입력 화면 중복 노출 되는 현상 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[카카오뱅크]해외송금",
-          "versionRaw": "[카카오뱅크]해외송금",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-08-05T23:58:00.000Z",
-          "createdDate": "2026-08-05",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/PIN-3b373fbd19518005bda5ee2c3e0e746c",
-          "lastEditedAt": "2026-08-06T00:50:00.000Z"
-        },
-        {
-          "id": "ISSUE-1147",
-          "title": "[카카오뱅크][해외송금] 즐겨찾기 화면 헤더 타이틀 문구 미노출 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[카카오뱅크]해외송금",
-          "versionRaw": "[카카오뱅크]해외송금",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-08-05T08:48:00.000Z",
-          "createdDate": "2026-08-05",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/3b373fbd19518023aa81c177a48235b9",
-          "lastEditedAt": "2026-08-05T08:54:00.000Z"
-        },
-        {
-          "id": "ISSUE-1146",
-          "title": "[카카오뱅크][해외송금][다국어] 다국어 설정 시 계좌 영역 ‘카카오뱅크’ 한국어 노출 현상",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[카카오뱅크]해외송금",
-          "versionRaw": "[카카오뱅크]해외송금",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-08-05T08:47:00.000Z",
-          "createdDate": "2026-08-05",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/3b373fbd19518015ab40e2534cdeeb78",
-          "lastEditedAt": "2026-08-05T08:53:00.000Z"
-        },
-        {
-          "id": "ISSUE-1145",
-          "title": "[카카오뱅크][로그인] ‘언어 설정’ 화면 내 ‘변경하기’ 버튼 미노출 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[카카오뱅크]해외송금",
-          "versionRaw": "[카카오뱅크]해외송금",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-08-05T08:41:00.000Z",
-          "createdDate": "2026-08-05",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/3b373fbd195180ccad9ed06e487eba71",
-          "lastEditedAt": "2026-08-05T08:46:00.000Z"
-        },
-        {
-          "id": "ISSUE-1144",
-          "title": "[카카오뱅크][로그인] ‘언어 설정’ 화면 내 문구 기획서와 상이",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[카카오뱅크]해외송금",
-          "versionRaw": "[카카오뱅크]해외송금",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-08-05T08:34:00.000Z",
-          "createdDate": "2026-08-05",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/3b373fbd195180b38412cdf30bd2b112",
-          "lastEditedAt": "2026-08-05T08:38:00.000Z"
-        },
-        {
-          "id": "ISSUE-1143",
-          "title": "[카카오뱅크][해외송금] 계좌 삭제 시 토스트 팝업 미노출 되는 현상 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[카카오뱅크]해외송금",
-          "versionRaw": "[카카오뱅크]해외송금",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-08-05T08:34:00.000Z",
-          "createdDate": "2026-08-05",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/3b373fbd195180358b62ea09eb0b04c8",
-          "lastEditedAt": "2026-08-05T08:42:00.000Z"
-        },
-        {
-          "id": "ISSUE-1142",
-          "title": "[카카오뱅크][계좌등록] ‘PIN 재입력’ 화면 내 뒤로가기 시 ‘1원 인증’ 화면 이동 현상 ",
+          "id": "ISSUE-1163",
+          "title": "[카카오뱅크][송금내역] 네트워크 OFF 상태로 ‘내역 상세’ 화면 진입 후 재연결 시 화면 이탈 불가",
           "status": "등록 (Registered)",
           "stage": "등록",
           "severity": "Major",
@@ -2226,18 +2079,18 @@
           "versionRaw": "[카카오뱅크]해외송금",
           "domain": "한패스",
           "os": "미지정",
-          "createdAt": "2026-08-05T07:54:00.000Z",
-          "createdDate": "2026-08-05",
+          "createdAt": "2026-08-06T08:21:00.000Z",
+          "createdDate": "2026-08-06",
           "fixedAt": "",
           "fixedDate": "",
           "closedAt": "",
           "closedDate": "",
-          "url": "https://app.notion.com/p/PIN-1-3b373fbd195180db9b7cee36df63019a",
-          "lastEditedAt": "2026-08-05T07:59:00.000Z"
+          "url": "https://app.notion.com/p/OFF-3b473fbd195180dea99bffa9abb54fef",
+          "lastEditedAt": "2026-08-06T08:43:00.000Z"
         },
         {
-          "id": "ISSUE-1141",
-          "title": "[카카오뱅크][해외송금] ’출금 수단 선택’ 화면 내 ‘삭제 컨펌’ 팝업 기획서와 상이 ",
+          "id": "ISSUE-1162",
+          "title": "[카카오뱅크][송금내역] ‘내역 상세’ 화면 상단 타이틀 문구 미노출 ",
           "status": "등록 (Registered)",
           "stage": "등록",
           "severity": "Minor",
@@ -2247,33 +2100,180 @@
           "versionRaw": "[카카오뱅크]해외송금",
           "domain": "한패스",
           "os": "미지정",
-          "createdAt": "2026-08-05T07:45:00.000Z",
-          "createdDate": "2026-08-05",
+          "createdAt": "2026-08-06T07:48:00.000Z",
+          "createdDate": "2026-08-06",
           "fixedAt": "",
           "fixedDate": "",
           "closedAt": "",
           "closedDate": "",
-          "url": "https://app.notion.com/p/3b373fbd1951809ab381d3dc7903e614",
-          "lastEditedAt": "2026-08-05T07:56:00.000Z"
+          "url": "https://app.notion.com/p/3b473fbd195180f79657ce227c0ebbde",
+          "lastEditedAt": "2026-08-06T07:59:00.000Z"
+        },
+        {
+          "id": "ISSUE-1160",
+          "title": "[카카오뱅크][송금내역] ‘해외송금 내역 상세’ 화면에서  ‘<’ 뒤로가기 버튼, 물리백 선택 시 ‘송금액 입력 화면’으로 이동 안 하는 현상  ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[카카오뱅크]해외송금",
+          "versionRaw": "[카카오뱅크]해외송금",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-08-06T06:42:00.000Z",
+          "createdDate": "2026-08-06",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/3b473fbd195180629d98e69a33748064",
+          "lastEditedAt": "2026-08-06T07:07:00.000Z"
+        },
+        {
+          "id": "ISSUE-1159",
+          "title": "[카카오뱅크][송금내역] ‘해외송금 진행 상황’ 화면에서 물리백 시 ‘상품 상세’ 화면으로 이동하는 현상 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[카카오뱅크]해외송금",
+          "versionRaw": "[카카오뱅크]해외송금",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-08-06T05:18:00.000Z",
+          "createdDate": "2026-08-06",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/3b473fbd1951806297b1f71423babf73",
+          "lastEditedAt": "2026-08-06T07:06:00.000Z"
+        },
+        {
+          "id": "ISSUE-1158",
+          "title": "[카카오뱅크][송금내역] PIN번호 변경 버튼 미노출 현상 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[카카오뱅크]해외송금",
+          "versionRaw": "[카카오뱅크]해외송금",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-08-06T05:16:00.000Z",
+          "createdDate": "2026-08-06",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/PIN-3b473fbd195180968b0de77c39a76e39",
+          "lastEditedAt": "2026-08-06T05:26:00.000Z"
+        },
+        {
+          "id": "ISSUE-1157",
+          "title": "[카카오뱅크][계좌등록]계좌 삭제 시 팝업 중복 노출 되는 현상 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[카카오뱅크]해외송금",
+          "versionRaw": "[카카오뱅크]해외송금",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-08-06T04:28:00.000Z",
+          "createdDate": "2026-08-06",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/3b473fbd195180b79639d5da23101088",
+          "lastEditedAt": "2026-08-06T04:40:00.000Z"
+        },
+        {
+          "id": "ISSUE-1156",
+          "title": "[카카오뱅크][송금내역] 6자리 PIN 비밀번호 불일치/6회 초과 팝업 중복 노출되는 현상 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[카카오뱅크]해외송금",
+          "versionRaw": "[카카오뱅크]해외송금",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-08-06T04:03:00.000Z",
+          "createdDate": "2026-08-06",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/6-PIN-6-3b473fbd195180809943cdeb831fdb9e",
+          "lastEditedAt": "2026-08-06T07:13:00.000Z"
+        },
+        {
+          "id": "ISSUE-1155",
+          "title": "[카카오뱅크][해외송금] 송금 시 쿠폰 미적용 시에도 수수료 할인되는 현상",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[카카오뱅크]해외송금",
+          "versionRaw": "[카카오뱅크]해외송금",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-08-06T02:40:00.000Z",
+          "createdDate": "2026-08-06",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/3b473fbd195180aea18ce98e7d1889f7",
+          "lastEditedAt": "2026-08-06T04:32:00.000Z"
+        },
+        {
+          "id": "ISSUE-1154",
+          "title": "[카카오뱅크][즐겨찾기] (닉네임 설정, 수정, 등록) 화면 상단 타이틀 문구 미노출",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[카카오뱅크]해외송금",
+          "versionRaw": "[카카오뱅크]해외송금",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-08-06T02:04:00.000Z",
+          "createdDate": "2026-08-06",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/3b473fbd195180b09c96dd078e19ed5c",
+          "lastEditedAt": "2026-08-06T02:22:00.000Z"
         }
       ]
     },
     "한패스": {
       "summary": {
-        "total": 687,
-        "new": 128,
+        "total": 698,
+        "new": 137,
         "inProgress": 1,
         "fixed": 0,
-        "closed": 497,
-        "todayNew": 2,
-        "newDelta": -34
+        "closed": 499,
+        "todayNew": 13,
+        "newDelta": -23
       },
       "funnel": [
         {
           "stage": "등록",
-          "count": 128,
-          "rate": 18.6,
-          "width": 26
+          "count": 137,
+          "rate": 19.6,
+          "width": 27
         },
         {
           "stage": "검토",
@@ -2302,13 +2302,13 @@
         {
           "stage": "QA확인",
           "count": 61,
-          "rate": 8.9,
+          "rate": 8.7,
           "width": 18
         },
         {
           "stage": "종료",
-          "count": 497,
-          "rate": 72.3,
+          "count": 499,
+          "rate": 71.5,
           "width": 100
         }
       ],
@@ -2518,10 +2518,10 @@
         },
         {
           "date": "2026-08-06",
-          "new": 2,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": -34
+          "new": 13,
+          "fixed": 2,
+          "closed": 2,
+          "deltaNew": -23
         }
       ],
       "versions": [
@@ -3179,17 +3179,21 @@
         },
         {
           "version": "[카카오뱅크]해외송금",
-          "total": 57,
-          "criticalMajor": 21,
-          "doneRate": 0.0,
+          "total": 68,
+          "criticalMajor": 31,
+          "doneRate": 2.9,
           "status": [
             {
               "label": "등록",
-              "count": 56
+              "count": 65
             },
             {
               "label": "진행중",
               "count": 1
+            },
+            {
+              "label": "종료",
+              "count": 2
             }
           ],
           "severity": [
@@ -3199,21 +3203,17 @@
             },
             {
               "label": "Major",
-              "count": 20
+              "count": 30
             },
             {
               "label": "Minor",
-              "count": 35
-            },
-            {
-              "label": "미지정",
-              "count": 1
+              "count": 37
             }
           ],
           "priority": [
             {
               "label": "Medium",
-              "count": 57
+              "count": 68
             }
           ]
         },
@@ -3352,7 +3352,7 @@
           "status": [
             {
               "label": "등록",
-              "count": 128
+              "count": 137
             },
             {
               "label": "진행중",
@@ -3364,7 +3364,7 @@
             },
             {
               "label": "종료",
-              "count": 497
+              "count": 499
             }
           ],
           "severity": [
@@ -3374,15 +3374,15 @@
             },
             {
               "label": "Major",
-              "count": 167
+              "count": 177
             },
             {
               "label": "Minor",
-              "count": 388
+              "count": 390
             },
             {
               "label": "미지정",
-              "count": 74
+              "count": 73
             },
             {
               "label": "개선 의견",
@@ -3400,7 +3400,7 @@
             },
             {
               "label": "Medium",
-              "count": 644
+              "count": 655
             },
             {
               "label": "Low",
@@ -3623,10 +3623,10 @@
         },
         {
           "date": "2026-08-06",
-          "new": 2,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": -34
+          "new": 13,
+          "fixed": 2,
+          "closed": 2,
+          "deltaNew": -23
         }
       ],
       "reportBoard": {
@@ -3656,29 +3656,8 @@
       },
       "recent": [
         {
-          "id": "ISSUE-1151",
-          "title": "[카카오뱅크][즐겨찾기] 타이틀을 입력해주세요. ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "미지정",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[카카오뱅크]해외송금",
-          "versionRaw": "[카카오뱅크]해외송금",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-08-06T00:48:00.000Z",
-          "createdDate": "2026-08-06",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/3b473fbd195180248c6efd049d7888a7",
-          "lastEditedAt": "2026-08-06T00:50:00.000Z"
-        },
-        {
-          "id": "ISSUE-1150",
-          "title": "[카카오뱅크][즐겨찾기] ‘즐겨찾기 송금하기’ 화면 내 뒤로가기 시 ‘상품 상세 설명’ 화면 이동 현상 ",
+          "id": "ISSUE-1164",
+          "title": "[카카오뱅크][해외송금]정상 QR 스캔 + 연동 계좌 잔액 부족 시 ‘연동 계좌 잔액 부족’ 팝업 미노출 되는 현상 ",
           "status": "등록 (Registered)",
           "stage": "등록",
           "severity": "Major",
@@ -3688,144 +3667,18 @@
           "versionRaw": "[카카오뱅크]해외송금",
           "domain": "한패스",
           "os": "미지정",
-          "createdAt": "2026-08-06T00:38:00.000Z",
+          "createdAt": "2026-08-06T08:39:00.000Z",
           "createdDate": "2026-08-06",
           "fixedAt": "",
           "fixedDate": "",
           "closedAt": "",
           "closedDate": "",
-          "url": "https://app.notion.com/p/3b473fbd195180fd9f89e8df986f8385",
-          "lastEditedAt": "2026-08-06T00:50:00.000Z"
+          "url": "https://app.notion.com/p/QR-3b473fbd195180a0ad10dd9c67873d7b",
+          "lastEditedAt": "2026-08-06T09:02:00.000Z"
         },
         {
-          "id": "ISSUE-1149",
-          "title": "[카카오뱅크][계좌등록] PIN 번호 입력 화면 중복 노출 되는 현상 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[카카오뱅크]해외송금",
-          "versionRaw": "[카카오뱅크]해외송금",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-08-05T23:58:00.000Z",
-          "createdDate": "2026-08-05",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/PIN-3b373fbd19518005bda5ee2c3e0e746c",
-          "lastEditedAt": "2026-08-06T00:50:00.000Z"
-        },
-        {
-          "id": "ISSUE-1147",
-          "title": "[카카오뱅크][해외송금] 즐겨찾기 화면 헤더 타이틀 문구 미노출 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[카카오뱅크]해외송금",
-          "versionRaw": "[카카오뱅크]해외송금",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-08-05T08:48:00.000Z",
-          "createdDate": "2026-08-05",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/3b373fbd19518023aa81c177a48235b9",
-          "lastEditedAt": "2026-08-05T08:54:00.000Z"
-        },
-        {
-          "id": "ISSUE-1146",
-          "title": "[카카오뱅크][해외송금][다국어] 다국어 설정 시 계좌 영역 ‘카카오뱅크’ 한국어 노출 현상",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[카카오뱅크]해외송금",
-          "versionRaw": "[카카오뱅크]해외송금",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-08-05T08:47:00.000Z",
-          "createdDate": "2026-08-05",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/3b373fbd19518015ab40e2534cdeeb78",
-          "lastEditedAt": "2026-08-05T08:53:00.000Z"
-        },
-        {
-          "id": "ISSUE-1145",
-          "title": "[카카오뱅크][로그인] ‘언어 설정’ 화면 내 ‘변경하기’ 버튼 미노출 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[카카오뱅크]해외송금",
-          "versionRaw": "[카카오뱅크]해외송금",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-08-05T08:41:00.000Z",
-          "createdDate": "2026-08-05",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/3b373fbd195180ccad9ed06e487eba71",
-          "lastEditedAt": "2026-08-05T08:46:00.000Z"
-        },
-        {
-          "id": "ISSUE-1144",
-          "title": "[카카오뱅크][로그인] ‘언어 설정’ 화면 내 문구 기획서와 상이",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[카카오뱅크]해외송금",
-          "versionRaw": "[카카오뱅크]해외송금",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-08-05T08:34:00.000Z",
-          "createdDate": "2026-08-05",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/3b373fbd195180b38412cdf30bd2b112",
-          "lastEditedAt": "2026-08-05T08:38:00.000Z"
-        },
-        {
-          "id": "ISSUE-1143",
-          "title": "[카카오뱅크][해외송금] 계좌 삭제 시 토스트 팝업 미노출 되는 현상 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[카카오뱅크]해외송금",
-          "versionRaw": "[카카오뱅크]해외송금",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-08-05T08:34:00.000Z",
-          "createdDate": "2026-08-05",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/3b373fbd195180358b62ea09eb0b04c8",
-          "lastEditedAt": "2026-08-05T08:42:00.000Z"
-        },
-        {
-          "id": "ISSUE-1142",
-          "title": "[카카오뱅크][계좌등록] ‘PIN 재입력’ 화면 내 뒤로가기 시 ‘1원 인증’ 화면 이동 현상 ",
+          "id": "ISSUE-1163",
+          "title": "[카카오뱅크][송금내역] 네트워크 OFF 상태로 ‘내역 상세’ 화면 진입 후 재연결 시 화면 이탈 불가",
           "status": "등록 (Registered)",
           "stage": "등록",
           "severity": "Major",
@@ -3835,18 +3688,18 @@
           "versionRaw": "[카카오뱅크]해외송금",
           "domain": "한패스",
           "os": "미지정",
-          "createdAt": "2026-08-05T07:54:00.000Z",
-          "createdDate": "2026-08-05",
+          "createdAt": "2026-08-06T08:21:00.000Z",
+          "createdDate": "2026-08-06",
           "fixedAt": "",
           "fixedDate": "",
           "closedAt": "",
           "closedDate": "",
-          "url": "https://app.notion.com/p/PIN-1-3b373fbd195180db9b7cee36df63019a",
-          "lastEditedAt": "2026-08-05T07:59:00.000Z"
+          "url": "https://app.notion.com/p/OFF-3b473fbd195180dea99bffa9abb54fef",
+          "lastEditedAt": "2026-08-06T08:43:00.000Z"
         },
         {
-          "id": "ISSUE-1141",
-          "title": "[카카오뱅크][해외송금] ’출금 수단 선택’ 화면 내 ‘삭제 컨펌’ 팝업 기획서와 상이 ",
+          "id": "ISSUE-1162",
+          "title": "[카카오뱅크][송금내역] ‘내역 상세’ 화면 상단 타이틀 문구 미노출 ",
           "status": "등록 (Registered)",
           "stage": "등록",
           "severity": "Minor",
@@ -3856,14 +3709,161 @@
           "versionRaw": "[카카오뱅크]해외송금",
           "domain": "한패스",
           "os": "미지정",
-          "createdAt": "2026-08-05T07:45:00.000Z",
-          "createdDate": "2026-08-05",
+          "createdAt": "2026-08-06T07:48:00.000Z",
+          "createdDate": "2026-08-06",
           "fixedAt": "",
           "fixedDate": "",
           "closedAt": "",
           "closedDate": "",
-          "url": "https://app.notion.com/p/3b373fbd1951809ab381d3dc7903e614",
-          "lastEditedAt": "2026-08-05T07:56:00.000Z"
+          "url": "https://app.notion.com/p/3b473fbd195180f79657ce227c0ebbde",
+          "lastEditedAt": "2026-08-06T07:59:00.000Z"
+        },
+        {
+          "id": "ISSUE-1160",
+          "title": "[카카오뱅크][송금내역] ‘해외송금 내역 상세’ 화면에서  ‘<’ 뒤로가기 버튼, 물리백 선택 시 ‘송금액 입력 화면’으로 이동 안 하는 현상  ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[카카오뱅크]해외송금",
+          "versionRaw": "[카카오뱅크]해외송금",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-08-06T06:42:00.000Z",
+          "createdDate": "2026-08-06",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/3b473fbd195180629d98e69a33748064",
+          "lastEditedAt": "2026-08-06T07:07:00.000Z"
+        },
+        {
+          "id": "ISSUE-1159",
+          "title": "[카카오뱅크][송금내역] ‘해외송금 진행 상황’ 화면에서 물리백 시 ‘상품 상세’ 화면으로 이동하는 현상 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[카카오뱅크]해외송금",
+          "versionRaw": "[카카오뱅크]해외송금",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-08-06T05:18:00.000Z",
+          "createdDate": "2026-08-06",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/3b473fbd1951806297b1f71423babf73",
+          "lastEditedAt": "2026-08-06T07:06:00.000Z"
+        },
+        {
+          "id": "ISSUE-1158",
+          "title": "[카카오뱅크][송금내역] PIN번호 변경 버튼 미노출 현상 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[카카오뱅크]해외송금",
+          "versionRaw": "[카카오뱅크]해외송금",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-08-06T05:16:00.000Z",
+          "createdDate": "2026-08-06",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/PIN-3b473fbd195180968b0de77c39a76e39",
+          "lastEditedAt": "2026-08-06T05:26:00.000Z"
+        },
+        {
+          "id": "ISSUE-1157",
+          "title": "[카카오뱅크][계좌등록]계좌 삭제 시 팝업 중복 노출 되는 현상 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[카카오뱅크]해외송금",
+          "versionRaw": "[카카오뱅크]해외송금",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-08-06T04:28:00.000Z",
+          "createdDate": "2026-08-06",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/3b473fbd195180b79639d5da23101088",
+          "lastEditedAt": "2026-08-06T04:40:00.000Z"
+        },
+        {
+          "id": "ISSUE-1156",
+          "title": "[카카오뱅크][송금내역] 6자리 PIN 비밀번호 불일치/6회 초과 팝업 중복 노출되는 현상 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[카카오뱅크]해외송금",
+          "versionRaw": "[카카오뱅크]해외송금",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-08-06T04:03:00.000Z",
+          "createdDate": "2026-08-06",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/6-PIN-6-3b473fbd195180809943cdeb831fdb9e",
+          "lastEditedAt": "2026-08-06T07:13:00.000Z"
+        },
+        {
+          "id": "ISSUE-1155",
+          "title": "[카카오뱅크][해외송금] 송금 시 쿠폰 미적용 시에도 수수료 할인되는 현상",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[카카오뱅크]해외송금",
+          "versionRaw": "[카카오뱅크]해외송금",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-08-06T02:40:00.000Z",
+          "createdDate": "2026-08-06",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/3b473fbd195180aea18ce98e7d1889f7",
+          "lastEditedAt": "2026-08-06T04:32:00.000Z"
+        },
+        {
+          "id": "ISSUE-1154",
+          "title": "[카카오뱅크][즐겨찾기] (닉네임 설정, 수정, 등록) 화면 상단 타이틀 문구 미노출",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[카카오뱅크]해외송금",
+          "versionRaw": "[카카오뱅크]해외송금",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-08-06T02:04:00.000Z",
+          "createdDate": "2026-08-06",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/3b473fbd195180b09c96dd078e19ed5c",
+          "lastEditedAt": "2026-08-06T02:22:00.000Z"
         }
       ]
     },

@@ -302,6 +302,15 @@ def has_go_hanpass_keyword(value: str) -> bool:
     return any(keyword in text for keyword in GO_HANPASS_KEYWORDS)
 
 
+def is_hanpass_feature_label(value: str) -> bool:
+    text = (value or "").strip()
+    if not text or text == "미지정":
+        return False
+    if has_go_hanpass_keyword(text) or extract_semver(text):
+        return False
+    return bool(re.match(r"^\[[^\]]+\]\s*\S+", text))
+
+
 def extract_semver(value: str) -> tuple[int, int, int] | None:
     match = re.search(r"(?<!\d)(\d+)\.(\d+)(?:\.(\d+))?(?!\d)", value or "")
     if not match:
@@ -376,6 +385,8 @@ def classify_domain(version: str, title: str = "", url: str = "") -> str:
     source = " ".join(part for part in [version, title, url] if part).lower()
     if has_go_hanpass_keyword(source):
         return "GoHanpass"
+    if is_hanpass_feature_label(version):
+        return "한패스"
     if "hanpass" in source:
         return "한패스"
     if extract_semver(version or ""):

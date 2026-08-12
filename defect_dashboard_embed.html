@@ -393,7 +393,7 @@
     </div>
   </div>
   <script id="dashboard-data" type="application/json">{
-  "generatedAt": "2026-08-12T00:08:11+00:00",
+  "generatedAt": "2026-08-12T09:41:34+00:00",
   "days": 30,
   "domainOrder": [
     "한패스",
@@ -402,20 +402,20 @@
   "domains": {
     "ALL": {
       "summary": {
-        "total": 923,
-        "new": 142,
+        "total": 930,
+        "new": 141,
         "inProgress": 7,
         "fixed": 0,
-        "closed": 694,
-        "todayNew": 0,
-        "newDelta": -12
+        "closed": 682,
+        "todayNew": 7,
+        "newDelta": -5
       },
       "funnel": [
         {
           "stage": "등록",
-          "count": 142,
-          "rate": 15.4,
-          "width": 20
+          "count": 141,
+          "rate": 15.2,
+          "width": 21
         },
         {
           "stage": "검토",
@@ -443,14 +443,14 @@
         },
         {
           "stage": "QA확인",
-          "count": 80,
-          "rate": 8.7,
+          "count": 100,
+          "rate": 10.8,
           "width": 18
         },
         {
           "stage": "종료",
-          "count": 694,
-          "rate": 75.2,
+          "count": 682,
+          "rate": 73.3,
           "width": 100
         }
       ],
@@ -647,23 +647,23 @@
         {
           "date": "2026-08-10",
           "new": 1,
-          "fixed": 10,
-          "closed": 6,
+          "fixed": 8,
+          "closed": 4,
           "deltaNew": 1
         },
         {
           "date": "2026-08-11",
           "new": 12,
-          "fixed": 19,
-          "closed": 15,
+          "fixed": 8,
+          "closed": 4,
           "deltaNew": 11
         },
         {
           "date": "2026-08-12",
-          "new": 0,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": -12
+          "new": 7,
+          "fixed": 21,
+          "closed": 1,
+          "deltaNew": -5
         }
       ],
       "versions": [
@@ -1509,25 +1509,25 @@
         },
         {
           "version": "[게이미피케이션][혜택]포인트_2배_이벤트",
-          "total": 5,
+          "total": 6,
           "criticalMajor": 0,
-          "doneRate": 0.0,
+          "doneRate": 100.0,
           "status": [
             {
-              "label": "등록",
-              "count": 5
+              "label": "QA확인",
+              "count": 6
             }
           ],
           "severity": [
             {
               "label": "Minor",
-              "count": 5
+              "count": 6
             }
           ],
           "priority": [
             {
               "label": "Medium",
-              "count": 5
+              "count": 6
             }
           ]
         },
@@ -1561,13 +1561,13 @@
         },
         {
           "version": "[카카오뱅크]해외송금",
-          "total": 84,
-          "criticalMajor": 39,
-          "doneRate": 46.4,
+          "total": 90,
+          "criticalMajor": 43,
+          "doneRate": 45.6,
           "status": [
             {
               "label": "등록",
-              "count": 38
+              "count": 42
             },
             {
               "label": "진행중",
@@ -1575,11 +1575,11 @@
             },
             {
               "label": "QA확인",
-              "count": 18
+              "count": 32
             },
             {
               "label": "종료",
-              "count": 21
+              "count": 9
             }
           ],
           "severity": [
@@ -1589,17 +1589,17 @@
             },
             {
               "label": "Major",
-              "count": 38
+              "count": 42
             },
             {
               "label": "Minor",
-              "count": 45
+              "count": 47
             }
           ],
           "priority": [
             {
               "label": "Medium",
-              "count": 84
+              "count": 90
             }
           ]
         },
@@ -1772,7 +1772,7 @@
           "status": [
             {
               "label": "등록",
-              "count": 142
+              "count": 141
             },
             {
               "label": "진행중",
@@ -1780,11 +1780,11 @@
             },
             {
               "label": "QA확인",
-              "count": 80
+              "count": 100
             },
             {
               "label": "종료",
-              "count": 694
+              "count": 682
             }
           ],
           "severity": [
@@ -1794,11 +1794,11 @@
             },
             {
               "label": "Major",
-              "count": 248
+              "count": 252
             },
             {
               "label": "Minor",
-              "count": 540
+              "count": 543
             },
             {
               "label": "미지정",
@@ -1820,7 +1820,7 @@
             },
             {
               "label": "Medium",
-              "count": 879
+              "count": 886
             },
             {
               "label": "Low",
@@ -2030,23 +2030,23 @@
         {
           "date": "2026-08-10",
           "new": 1,
-          "fixed": 10,
-          "closed": 6,
+          "fixed": 8,
+          "closed": 4,
           "deltaNew": 1
         },
         {
           "date": "2026-08-11",
           "new": 12,
-          "fixed": 19,
-          "closed": 15,
+          "fixed": 8,
+          "closed": 4,
           "deltaNew": 11
         },
         {
           "date": "2026-08-12",
-          "new": 0,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": -12
+          "new": 7,
+          "fixed": 21,
+          "closed": 1,
+          "deltaNew": -5
         }
       ],
       "reportBoard": {
@@ -2076,6 +2076,153 @@
       },
       "recent": [
         {
+          "id": "ISSUE-1196",
+          "title": "[게이미피케이션] 이벤트 미적용 미션 리스트 영역 문구 내 포인트 2배로 노출되는 현상  ",
+          "status": "QA 검증 -회귀 (QA Verification)",
+          "stage": "QA확인",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[게이미피케이션][혜택]포인트_2배_이벤트",
+          "versionRaw": "[게이미피케이션][혜택]포인트_2배_이벤트",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-08-12T07:11:00.000Z",
+          "createdDate": "2026-08-12",
+          "fixedAt": "2026-08-12T07:51:00.000Z",
+          "fixedDate": "2026-08-12",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/2-3ba73fbd1951808d87ebd3ecb914e380",
+          "lastEditedAt": "2026-08-12T07:51:00.000Z"
+        },
+        {
+          "id": "ISSUE-1195",
+          "title": "[카카오뱅크][회원가입][공통] 언어 선택 리스트 노출 순서 기획서와 상이",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[카카오뱅크]해외송금",
+          "versionRaw": "[카카오뱅크]해외송금",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-08-12T06:41:00.000Z",
+          "createdDate": "2026-08-12",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/3ba73fbd195180d0a84dcd0db3de3864",
+          "lastEditedAt": "2026-08-12T07:19:00.000Z"
+        },
+        {
+          "id": "ISSUE-1194",
+          "title": "[카카오뱅크][계좌등록] ‘계좌 인증하기 팝업’ 프로세스 진입 시 상단 타이틀 문구 미노출 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[카카오뱅크]해외송금",
+          "versionRaw": "[카카오뱅크]해외송금",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-08-12T05:58:00.000Z",
+          "createdDate": "2026-08-12",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/3ba73fbd1951802a8746f82a675233ac",
+          "lastEditedAt": "2026-08-12T06:31:00.000Z"
+        },
+        {
+          "id": "ISSUE-1193",
+          "title": "[카카오뱅크][해외송금][iOS] 카카오뱅크 송금 화면 내 ‘취소’ 선택 시 송금 신청 정보 확인 화면으로 이동하는 현상 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[카카오뱅크]해외송금",
+          "versionRaw": "[카카오뱅크]해외송금",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-08-12T05:42:00.000Z",
+          "createdDate": "2026-08-12",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/iOS-3ba73fbd195180e287f2e4693cb14f1d",
+          "lastEditedAt": "2026-08-12T06:08:00.000Z"
+        },
+        {
+          "id": "ISSUE-1192",
+          "title": "[카카오뱅크][계좌등록] 네트워크 비활성화 상태로 ‘계좌 등록’ 화면 내 ‘다음’ 버튼 선택 시 빈 에러 팝업 노출",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[카카오뱅크]해외송금",
+          "versionRaw": "[카카오뱅크]해외송금",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-08-12T05:37:00.000Z",
+          "createdDate": "2026-08-12",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/3ba73fbd195180048e2bec94f733ef6c",
+          "lastEditedAt": "2026-08-12T05:51:00.000Z"
+        },
+        {
+          "id": "ISSUE-1191",
+          "title": "[카카오뱅크][iOS] 내역조회 화면 내 ‘한패스 해외송금 내역 조회’ 버튼 미노출 현상  ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[카카오뱅크]해외송금",
+          "versionRaw": "[카카오뱅크]해외송금",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-08-12T01:58:00.000Z",
+          "createdDate": "2026-08-12",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/iOS-3ba73fbd1951806f987de6cc07852fe6",
+          "lastEditedAt": "2026-08-12T05:30:00.000Z"
+        },
+        {
+          "id": "ISSUE-1190",
+          "title": "[카카오뱅크 ][해외송금][공통] KHQR 스캔 화면 내 ‘직접 입력하기’ 버튼 노출 되는 현상 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[카카오뱅크]해외송금",
+          "versionRaw": "[카카오뱅크]해외송금",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-08-12T00:53:00.000Z",
+          "createdDate": "2026-08-12",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/KHQR-3ba73fbd195180f693e6fac090bd9c57",
+          "lastEditedAt": "2026-08-12T05:24:00.000Z"
+        },
+        {
           "id": "ISSUE-1189",
           "title": "[카카오뱅크][설정][공통] ‘자주 묻는 질문’ 화면 내 상단 타이틀 문구 기획서와 상이",
           "status": "등록 (Registered)",
@@ -2099,8 +2246,8 @@
         {
           "id": "ISSUE-1188",
           "title": "[게이미케이션][럭키볼뽑기] 안내 문구 영역 포인트 2배 미적용 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
+          "status": "QA 검증 -회귀 (QA Verification)",
+          "stage": "QA확인",
           "severity": "Minor",
           "priority": "Medium",
           "assignee": "미지정",
@@ -2110,18 +2257,18 @@
           "os": "미지정",
           "createdAt": "2026-08-11T08:28:00.000Z",
           "createdDate": "2026-08-11",
-          "fixedAt": "",
-          "fixedDate": "",
+          "fixedAt": "2026-08-12T07:13:00.000Z",
+          "fixedDate": "2026-08-12",
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/2-3b973fbd19518013b5c4dc2eaadf0f1c",
-          "lastEditedAt": "2026-08-11T23:51:00.000Z"
+          "lastEditedAt": "2026-08-12T07:13:00.000Z"
         },
         {
           "id": "ISSUE-1187",
           "title": "[게이미케이션][앱흔들기] 타이틀 하단 문구 포인트 2배 미적용",
-          "status": "등록 (Registered)",
-          "stage": "등록",
+          "status": "QA 검증 -회귀 (QA Verification)",
+          "stage": "QA확인",
           "severity": "Minor",
           "priority": "Medium",
           "assignee": "미지정",
@@ -2131,178 +2278,31 @@
           "os": "미지정",
           "createdAt": "2026-08-11T08:22:00.000Z",
           "createdDate": "2026-08-11",
-          "fixedAt": "",
-          "fixedDate": "",
+          "fixedAt": "2026-08-12T07:12:00.000Z",
+          "fixedDate": "2026-08-12",
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/2-3b973fbd1951802b933afa38c665021f",
-          "lastEditedAt": "2026-08-11T08:47:00.000Z"
-        },
-        {
-          "id": "ISSUE-1186",
-          "title": "[게이미피케이션][로그인/비로그인] 미션 리스트 영역 문구 포인트 2배 미적용",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[게이미피케이션][혜택]포인트_2배_이벤트",
-          "versionRaw": "[게이미피케이션][혜택]포인트_2배_이벤트",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-08-11T08:16:00.000Z",
-          "createdDate": "2026-08-11",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/2-3b973fbd195180d39847fa59591d2e69",
-          "lastEditedAt": "2026-08-11T08:40:00.000Z"
-        },
-        {
-          "id": "ISSUE-1185",
-          "title": "[게이미피케이션][만보기] 미션 리스트 영역 문구 포인트 2배 미적용",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[게이미피케이션][혜택]포인트_2배_이벤트",
-          "versionRaw": "[게이미피케이션][혜택]포인트_2배_이벤트",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-08-11T08:11:00.000Z",
-          "createdDate": "2026-08-11",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/2-3b973fbd1951809fbeb7d21ff990a9ae",
-          "lastEditedAt": "2026-08-11T08:34:00.000Z"
-        },
-        {
-          "id": "ISSUE-1184",
-          "title": "[게이미피케이션][룰렛돌리기] 타이틀 하단 문구, 룰렛 돌리기 안내 영역 문구 포인트 2배 미적용 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[게이미피케이션][혜택]포인트_2배_이벤트",
-          "versionRaw": "[게이미피케이션][혜택]포인트_2배_이벤트",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-08-11T08:10:00.000Z",
-          "createdDate": "2026-08-11",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/2-3b973fbd195180dab22fe5c1dca595b9",
-          "lastEditedAt": "2026-08-11T23:52:00.000Z"
-        },
-        {
-          "id": "ISSUE-1182",
-          "title": "[카카오뱅크][고객센터][AOS] SNS 링크 진입 후 OS 물리백 시 무반응 현상",
-          "status": "개발 완료 (Dev Done)",
-          "stage": "종료",
-          "severity": "Major",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[카카오뱅크]해외송금",
-          "versionRaw": "[카카오뱅크]해외송금",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-08-11T05:14:00.000Z",
-          "createdDate": "2026-08-11",
-          "fixedAt": "2026-08-11T08:19:00.000Z",
-          "fixedDate": "2026-08-11",
-          "closedAt": "2026-08-11T08:19:00.000Z",
-          "closedDate": "2026-08-11",
-          "url": "https://app.notion.com/p/AOS-SNS-OS-3b973fbd195180bf9612cfcfb490d007",
-          "lastEditedAt": "2026-08-11T08:19:00.000Z"
-        },
-        {
-          "id": "ISSUE-1181",
-          "title": "[카카오뱅크][계좌등록][iOS] ‘1원 인증’ 화면 진입 시 정의 되지 않은 토스트 팝업 노출 되는 현상 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[카카오뱅크]해외송금",
-          "versionRaw": "[카카오뱅크]해외송금",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-08-11T05:09:00.000Z",
-          "createdDate": "2026-08-11",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/iOS-1-3b973fbd195180199ce7d56c50fb887c",
-          "lastEditedAt": "2026-08-11T05:21:00.000Z"
-        },
-        {
-          "id": "ISSUE-1180",
-          "title": "[카카오뱅크][고객센터][iOS] SNS 링크 진입 불가 현상 (무반응)",
-          "status": "개발 완료 (Dev Done)",
-          "stage": "종료",
-          "severity": "Major",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[카카오뱅크]해외송금",
-          "versionRaw": "[카카오뱅크]해외송금",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-08-11T05:04:00.000Z",
-          "createdDate": "2026-08-11",
-          "fixedAt": "2026-08-11T08:19:00.000Z",
-          "fixedDate": "2026-08-11",
-          "closedAt": "2026-08-11T08:19:00.000Z",
-          "closedDate": "2026-08-11",
-          "url": "https://app.notion.com/p/iOS-SNS-3b973fbd1951800996c9c584ebee0319",
-          "lastEditedAt": "2026-08-11T08:19:00.000Z"
-        },
-        {
-          "id": "ISSUE-1179",
-          "title": "[카카오뱅크][계좌등록] PIN번호 오입력 시 키패드 미노출 현상 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[카카오뱅크]해외송금",
-          "versionRaw": "[카카오뱅크]해외송금",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-08-11T04:43:00.000Z",
-          "createdDate": "2026-08-11",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/PIN-3b973fbd195180a4bb96d8b4e2002898",
-          "lastEditedAt": "2026-08-11T04:55:00.000Z"
+          "lastEditedAt": "2026-08-12T07:12:00.000Z"
         }
       ]
     },
     "한패스": {
       "summary": {
-        "total": 719,
-        "new": 115,
+        "total": 726,
+        "new": 114,
         "inProgress": 7,
         "fixed": 0,
-        "closed": 518,
-        "todayNew": 0,
-        "newDelta": -12
+        "closed": 506,
+        "todayNew": 7,
+        "newDelta": -5
       },
       "funnel": [
         {
           "stage": "등록",
-          "count": 115,
-          "rate": 16.0,
-          "width": 22
+          "count": 114,
+          "rate": 15.7,
+          "width": 23
         },
         {
           "stage": "검토",
@@ -2330,14 +2330,14 @@
         },
         {
           "stage": "QA확인",
-          "count": 79,
-          "rate": 11.0,
-          "width": 18
+          "count": 99,
+          "rate": 13.6,
+          "width": 20
         },
         {
           "stage": "종료",
-          "count": 518,
-          "rate": 72.0,
+          "count": 506,
+          "rate": 69.7,
           "width": 100
         }
       ],
@@ -2534,23 +2534,23 @@
         {
           "date": "2026-08-10",
           "new": 1,
-          "fixed": 10,
-          "closed": 6,
+          "fixed": 8,
+          "closed": 4,
           "deltaNew": 1
         },
         {
           "date": "2026-08-11",
           "new": 12,
-          "fixed": 19,
-          "closed": 15,
+          "fixed": 8,
+          "closed": 4,
           "deltaNew": 11
         },
         {
           "date": "2026-08-12",
-          "new": 0,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": -12
+          "new": 7,
+          "fixed": 21,
+          "closed": 1,
+          "deltaNew": -5
         }
       ],
       "versions": [
@@ -3180,25 +3180,25 @@
         },
         {
           "version": "[게이미피케이션][혜택]포인트_2배_이벤트",
-          "total": 5,
+          "total": 6,
           "criticalMajor": 0,
-          "doneRate": 0.0,
+          "doneRate": 100.0,
           "status": [
             {
-              "label": "등록",
-              "count": 5
+              "label": "QA확인",
+              "count": 6
             }
           ],
           "severity": [
             {
               "label": "Minor",
-              "count": 5
+              "count": 6
             }
           ],
           "priority": [
             {
               "label": "Medium",
-              "count": 5
+              "count": 6
             }
           ]
         },
@@ -3232,13 +3232,13 @@
         },
         {
           "version": "[카카오뱅크]해외송금",
-          "total": 84,
-          "criticalMajor": 39,
-          "doneRate": 46.4,
+          "total": 90,
+          "criticalMajor": 43,
+          "doneRate": 45.6,
           "status": [
             {
               "label": "등록",
-              "count": 38
+              "count": 42
             },
             {
               "label": "진행중",
@@ -3246,11 +3246,11 @@
             },
             {
               "label": "QA확인",
-              "count": 18
+              "count": 32
             },
             {
               "label": "종료",
-              "count": 21
+              "count": 9
             }
           ],
           "severity": [
@@ -3260,17 +3260,17 @@
             },
             {
               "label": "Major",
-              "count": 38
+              "count": 42
             },
             {
               "label": "Minor",
-              "count": 45
+              "count": 47
             }
           ],
           "priority": [
             {
               "label": "Medium",
-              "count": 84
+              "count": 90
             }
           ]
         },
@@ -3410,7 +3410,7 @@
           "status": [
             {
               "label": "등록",
-              "count": 115
+              "count": 114
             },
             {
               "label": "진행중",
@@ -3418,11 +3418,11 @@
             },
             {
               "label": "QA확인",
-              "count": 79
+              "count": 99
             },
             {
               "label": "종료",
-              "count": 518
+              "count": 506
             }
           ],
           "severity": [
@@ -3432,11 +3432,11 @@
             },
             {
               "label": "Major",
-              "count": 185
+              "count": 189
             },
             {
               "label": "Minor",
-              "count": 403
+              "count": 406
             },
             {
               "label": "미지정",
@@ -3458,7 +3458,7 @@
             },
             {
               "label": "Medium",
-              "count": 676
+              "count": 683
             },
             {
               "label": "Low",
@@ -3668,23 +3668,23 @@
         {
           "date": "2026-08-10",
           "new": 1,
-          "fixed": 10,
-          "closed": 6,
+          "fixed": 8,
+          "closed": 4,
           "deltaNew": 1
         },
         {
           "date": "2026-08-11",
           "new": 12,
-          "fixed": 19,
-          "closed": 15,
+          "fixed": 8,
+          "closed": 4,
           "deltaNew": 11
         },
         {
           "date": "2026-08-12",
-          "new": 0,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": -12
+          "new": 7,
+          "fixed": 21,
+          "closed": 1,
+          "deltaNew": -5
         }
       ],
       "reportBoard": {
@@ -3714,6 +3714,153 @@
       },
       "recent": [
         {
+          "id": "ISSUE-1196",
+          "title": "[게이미피케이션] 이벤트 미적용 미션 리스트 영역 문구 내 포인트 2배로 노출되는 현상  ",
+          "status": "QA 검증 -회귀 (QA Verification)",
+          "stage": "QA확인",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[게이미피케이션][혜택]포인트_2배_이벤트",
+          "versionRaw": "[게이미피케이션][혜택]포인트_2배_이벤트",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-08-12T07:11:00.000Z",
+          "createdDate": "2026-08-12",
+          "fixedAt": "2026-08-12T07:51:00.000Z",
+          "fixedDate": "2026-08-12",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/2-3ba73fbd1951808d87ebd3ecb914e380",
+          "lastEditedAt": "2026-08-12T07:51:00.000Z"
+        },
+        {
+          "id": "ISSUE-1195",
+          "title": "[카카오뱅크][회원가입][공통] 언어 선택 리스트 노출 순서 기획서와 상이",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[카카오뱅크]해외송금",
+          "versionRaw": "[카카오뱅크]해외송금",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-08-12T06:41:00.000Z",
+          "createdDate": "2026-08-12",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/3ba73fbd195180d0a84dcd0db3de3864",
+          "lastEditedAt": "2026-08-12T07:19:00.000Z"
+        },
+        {
+          "id": "ISSUE-1194",
+          "title": "[카카오뱅크][계좌등록] ‘계좌 인증하기 팝업’ 프로세스 진입 시 상단 타이틀 문구 미노출 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[카카오뱅크]해외송금",
+          "versionRaw": "[카카오뱅크]해외송금",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-08-12T05:58:00.000Z",
+          "createdDate": "2026-08-12",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/3ba73fbd1951802a8746f82a675233ac",
+          "lastEditedAt": "2026-08-12T06:31:00.000Z"
+        },
+        {
+          "id": "ISSUE-1193",
+          "title": "[카카오뱅크][해외송금][iOS] 카카오뱅크 송금 화면 내 ‘취소’ 선택 시 송금 신청 정보 확인 화면으로 이동하는 현상 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[카카오뱅크]해외송금",
+          "versionRaw": "[카카오뱅크]해외송금",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-08-12T05:42:00.000Z",
+          "createdDate": "2026-08-12",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/iOS-3ba73fbd195180e287f2e4693cb14f1d",
+          "lastEditedAt": "2026-08-12T06:08:00.000Z"
+        },
+        {
+          "id": "ISSUE-1192",
+          "title": "[카카오뱅크][계좌등록] 네트워크 비활성화 상태로 ‘계좌 등록’ 화면 내 ‘다음’ 버튼 선택 시 빈 에러 팝업 노출",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[카카오뱅크]해외송금",
+          "versionRaw": "[카카오뱅크]해외송금",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-08-12T05:37:00.000Z",
+          "createdDate": "2026-08-12",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/3ba73fbd195180048e2bec94f733ef6c",
+          "lastEditedAt": "2026-08-12T05:51:00.000Z"
+        },
+        {
+          "id": "ISSUE-1191",
+          "title": "[카카오뱅크][iOS] 내역조회 화면 내 ‘한패스 해외송금 내역 조회’ 버튼 미노출 현상  ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[카카오뱅크]해외송금",
+          "versionRaw": "[카카오뱅크]해외송금",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-08-12T01:58:00.000Z",
+          "createdDate": "2026-08-12",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/iOS-3ba73fbd1951806f987de6cc07852fe6",
+          "lastEditedAt": "2026-08-12T05:30:00.000Z"
+        },
+        {
+          "id": "ISSUE-1190",
+          "title": "[카카오뱅크 ][해외송금][공통] KHQR 스캔 화면 내 ‘직접 입력하기’ 버튼 노출 되는 현상 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[카카오뱅크]해외송금",
+          "versionRaw": "[카카오뱅크]해외송금",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-08-12T00:53:00.000Z",
+          "createdDate": "2026-08-12",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/KHQR-3ba73fbd195180f693e6fac090bd9c57",
+          "lastEditedAt": "2026-08-12T05:24:00.000Z"
+        },
+        {
           "id": "ISSUE-1189",
           "title": "[카카오뱅크][설정][공통] ‘자주 묻는 질문’ 화면 내 상단 타이틀 문구 기획서와 상이",
           "status": "등록 (Registered)",
@@ -3737,8 +3884,8 @@
         {
           "id": "ISSUE-1188",
           "title": "[게이미케이션][럭키볼뽑기] 안내 문구 영역 포인트 2배 미적용 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
+          "status": "QA 검증 -회귀 (QA Verification)",
+          "stage": "QA확인",
           "severity": "Minor",
           "priority": "Medium",
           "assignee": "미지정",
@@ -3748,18 +3895,18 @@
           "os": "미지정",
           "createdAt": "2026-08-11T08:28:00.000Z",
           "createdDate": "2026-08-11",
-          "fixedAt": "",
-          "fixedDate": "",
+          "fixedAt": "2026-08-12T07:13:00.000Z",
+          "fixedDate": "2026-08-12",
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/2-3b973fbd19518013b5c4dc2eaadf0f1c",
-          "lastEditedAt": "2026-08-11T23:51:00.000Z"
+          "lastEditedAt": "2026-08-12T07:13:00.000Z"
         },
         {
           "id": "ISSUE-1187",
           "title": "[게이미케이션][앱흔들기] 타이틀 하단 문구 포인트 2배 미적용",
-          "status": "등록 (Registered)",
-          "stage": "등록",
+          "status": "QA 검증 -회귀 (QA Verification)",
+          "stage": "QA확인",
           "severity": "Minor",
           "priority": "Medium",
           "assignee": "미지정",
@@ -3769,159 +3916,12 @@
           "os": "미지정",
           "createdAt": "2026-08-11T08:22:00.000Z",
           "createdDate": "2026-08-11",
-          "fixedAt": "",
-          "fixedDate": "",
+          "fixedAt": "2026-08-12T07:12:00.000Z",
+          "fixedDate": "2026-08-12",
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/2-3b973fbd1951802b933afa38c665021f",
-          "lastEditedAt": "2026-08-11T08:47:00.000Z"
-        },
-        {
-          "id": "ISSUE-1186",
-          "title": "[게이미피케이션][로그인/비로그인] 미션 리스트 영역 문구 포인트 2배 미적용",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[게이미피케이션][혜택]포인트_2배_이벤트",
-          "versionRaw": "[게이미피케이션][혜택]포인트_2배_이벤트",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-08-11T08:16:00.000Z",
-          "createdDate": "2026-08-11",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/2-3b973fbd195180d39847fa59591d2e69",
-          "lastEditedAt": "2026-08-11T08:40:00.000Z"
-        },
-        {
-          "id": "ISSUE-1185",
-          "title": "[게이미피케이션][만보기] 미션 리스트 영역 문구 포인트 2배 미적용",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[게이미피케이션][혜택]포인트_2배_이벤트",
-          "versionRaw": "[게이미피케이션][혜택]포인트_2배_이벤트",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-08-11T08:11:00.000Z",
-          "createdDate": "2026-08-11",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/2-3b973fbd1951809fbeb7d21ff990a9ae",
-          "lastEditedAt": "2026-08-11T08:34:00.000Z"
-        },
-        {
-          "id": "ISSUE-1184",
-          "title": "[게이미피케이션][룰렛돌리기] 타이틀 하단 문구, 룰렛 돌리기 안내 영역 문구 포인트 2배 미적용 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[게이미피케이션][혜택]포인트_2배_이벤트",
-          "versionRaw": "[게이미피케이션][혜택]포인트_2배_이벤트",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-08-11T08:10:00.000Z",
-          "createdDate": "2026-08-11",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/2-3b973fbd195180dab22fe5c1dca595b9",
-          "lastEditedAt": "2026-08-11T23:52:00.000Z"
-        },
-        {
-          "id": "ISSUE-1182",
-          "title": "[카카오뱅크][고객센터][AOS] SNS 링크 진입 후 OS 물리백 시 무반응 현상",
-          "status": "개발 완료 (Dev Done)",
-          "stage": "종료",
-          "severity": "Major",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[카카오뱅크]해외송금",
-          "versionRaw": "[카카오뱅크]해외송금",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-08-11T05:14:00.000Z",
-          "createdDate": "2026-08-11",
-          "fixedAt": "2026-08-11T08:19:00.000Z",
-          "fixedDate": "2026-08-11",
-          "closedAt": "2026-08-11T08:19:00.000Z",
-          "closedDate": "2026-08-11",
-          "url": "https://app.notion.com/p/AOS-SNS-OS-3b973fbd195180bf9612cfcfb490d007",
-          "lastEditedAt": "2026-08-11T08:19:00.000Z"
-        },
-        {
-          "id": "ISSUE-1181",
-          "title": "[카카오뱅크][계좌등록][iOS] ‘1원 인증’ 화면 진입 시 정의 되지 않은 토스트 팝업 노출 되는 현상 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[카카오뱅크]해외송금",
-          "versionRaw": "[카카오뱅크]해외송금",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-08-11T05:09:00.000Z",
-          "createdDate": "2026-08-11",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/iOS-1-3b973fbd195180199ce7d56c50fb887c",
-          "lastEditedAt": "2026-08-11T05:21:00.000Z"
-        },
-        {
-          "id": "ISSUE-1180",
-          "title": "[카카오뱅크][고객센터][iOS] SNS 링크 진입 불가 현상 (무반응)",
-          "status": "개발 완료 (Dev Done)",
-          "stage": "종료",
-          "severity": "Major",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[카카오뱅크]해외송금",
-          "versionRaw": "[카카오뱅크]해외송금",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-08-11T05:04:00.000Z",
-          "createdDate": "2026-08-11",
-          "fixedAt": "2026-08-11T08:19:00.000Z",
-          "fixedDate": "2026-08-11",
-          "closedAt": "2026-08-11T08:19:00.000Z",
-          "closedDate": "2026-08-11",
-          "url": "https://app.notion.com/p/iOS-SNS-3b973fbd1951800996c9c584ebee0319",
-          "lastEditedAt": "2026-08-11T08:19:00.000Z"
-        },
-        {
-          "id": "ISSUE-1179",
-          "title": "[카카오뱅크][계좌등록] PIN번호 오입력 시 키패드 미노출 현상 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[카카오뱅크]해외송금",
-          "versionRaw": "[카카오뱅크]해외송금",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-08-11T04:43:00.000Z",
-          "createdDate": "2026-08-11",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/PIN-3b973fbd195180a4bb96d8b4e2002898",
-          "lastEditedAt": "2026-08-11T04:55:00.000Z"
+          "lastEditedAt": "2026-08-12T07:12:00.000Z"
         }
       ]
     },

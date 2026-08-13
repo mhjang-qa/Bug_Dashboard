@@ -393,7 +393,7 @@
     </div>
   </div>
   <script id="dashboard-data" type="application/json">{
-  "generatedAt": "2026-08-12T09:41:34+00:00",
+  "generatedAt": "2026-08-13T00:07:52+00:00",
   "days": 30,
   "domainOrder": [
     "한패스",
@@ -402,20 +402,20 @@
   "domains": {
     "ALL": {
       "summary": {
-        "total": 930,
-        "new": 141,
+        "total": 936,
+        "new": 147,
         "inProgress": 7,
         "fixed": 0,
         "closed": 682,
-        "todayNew": 7,
-        "newDelta": -5
+        "todayNew": 0,
+        "newDelta": -13
       },
       "funnel": [
         {
           "stage": "등록",
-          "count": 141,
-          "rate": 15.2,
-          "width": 21
+          "count": 147,
+          "rate": 15.7,
+          "width": 22
         },
         {
           "stage": "검토",
@@ -432,7 +432,7 @@
         {
           "stage": "진행중",
           "count": 7,
-          "rate": 0.8,
+          "rate": 0.7,
           "width": 18
         },
         {
@@ -444,30 +444,23 @@
         {
           "stage": "QA확인",
           "count": 100,
-          "rate": 10.8,
+          "rate": 10.7,
           "width": 18
         },
         {
           "stage": "종료",
           "count": 682,
-          "rate": 73.3,
+          "rate": 72.9,
           "width": 100
         }
       ],
       "daily": [
         {
-          "date": "2026-07-14",
-          "new": 6,
-          "fixed": 24,
-          "closed": 24,
-          "deltaNew": 6
-        },
-        {
           "date": "2026-07-15",
           "new": 6,
           "fixed": 1,
           "closed": 1,
-          "deltaNew": 0
+          "deltaNew": 6
         },
         {
           "date": "2026-07-16",
@@ -660,10 +653,17 @@
         },
         {
           "date": "2026-08-12",
-          "new": 7,
+          "new": 13,
           "fixed": 21,
           "closed": 1,
-          "deltaNew": -5
+          "deltaNew": 1
+        },
+        {
+          "date": "2026-08-13",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": -13
         }
       ],
       "versions": [
@@ -1509,10 +1509,14 @@
         },
         {
           "version": "[게이미피케이션][혜택]포인트_2배_이벤트",
-          "total": 6,
+          "total": 12,
           "criticalMajor": 0,
-          "doneRate": 100.0,
+          "doneRate": 50.0,
           "status": [
+            {
+              "label": "등록",
+              "count": 6
+            },
             {
               "label": "QA확인",
               "count": 6
@@ -1522,12 +1526,16 @@
             {
               "label": "Minor",
               "count": 6
+            },
+            {
+              "label": "미지정",
+              "count": 6
             }
           ],
           "priority": [
             {
               "label": "Medium",
-              "count": 6
+              "count": 12
             }
           ]
         },
@@ -1772,7 +1780,7 @@
           "status": [
             {
               "label": "등록",
-              "count": 141
+              "count": 147
             },
             {
               "label": "진행중",
@@ -1802,7 +1810,7 @@
             },
             {
               "label": "미지정",
-              "count": 73
+              "count": 79
             },
             {
               "label": "개선 의견",
@@ -1820,7 +1828,7 @@
             },
             {
               "label": "Medium",
-              "count": 886
+              "count": 892
             },
             {
               "label": "Low",
@@ -1839,18 +1847,11 @@
       },
       "heatmap": [
         {
-          "date": "2026-07-14",
-          "new": 6,
-          "fixed": 24,
-          "closed": 24,
-          "deltaNew": 6
-        },
-        {
           "date": "2026-07-15",
           "new": 6,
           "fixed": 1,
           "closed": 1,
-          "deltaNew": 0
+          "deltaNew": 6
         },
         {
           "date": "2026-07-16",
@@ -2043,10 +2044,17 @@
         },
         {
           "date": "2026-08-12",
-          "new": 7,
+          "new": 13,
           "fixed": 21,
           "closed": 1,
-          "deltaNew": -5
+          "deltaNew": 1
+        },
+        {
+          "date": "2026-08-13",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": -13
         }
       ],
       "reportBoard": {
@@ -2075,6 +2083,132 @@
         "recent": []
       },
       "recent": [
+        {
+          "id": "ISSUE-1202",
+          "title": "[게이미피케이션][룰렛돌리기]",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "미지정",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[게이미피케이션][혜택]포인트_2배_이벤트",
+          "versionRaw": "[게이미피케이션][혜택]포인트_2배_이벤트",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-08-12T23:57:00.000Z",
+          "createdDate": "2026-08-12",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/3ba73fbd195180c580ecf019f203ca7c",
+          "lastEditedAt": "2026-08-13T00:05:00.000Z"
+        },
+        {
+          "id": "ISSUE-1201",
+          "title": "[게이미피케이션][하단배너]",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "미지정",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[게이미피케이션][혜택]포인트_2배_이벤트",
+          "versionRaw": "[게이미피케이션][혜택]포인트_2배_이벤트",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-08-12T23:54:00.000Z",
+          "createdDate": "2026-08-12",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/3ba73fbd195180028796e89950bdddbb",
+          "lastEditedAt": "2026-08-12T23:55:00.000Z"
+        },
+        {
+          "id": "ISSUE-1200",
+          "title": "[게이미피케이션][앱흔들기]",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "미지정",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[게이미피케이션][혜택]포인트_2배_이벤트",
+          "versionRaw": "[게이미피케이션][혜택]포인트_2배_이벤트",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-08-12T23:54:00.000Z",
+          "createdDate": "2026-08-12",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/3ba73fbd1951803daf08fdc504634435",
+          "lastEditedAt": "2026-08-12T23:55:00.000Z"
+        },
+        {
+          "id": "ISSUE-1199",
+          "title": "[게이미피케이션][앱흔들기]",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "미지정",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[게이미피케이션][혜택]포인트_2배_이벤트",
+          "versionRaw": "[게이미피케이션][혜택]포인트_2배_이벤트",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-08-12T23:54:00.000Z",
+          "createdDate": "2026-08-12",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/3ba73fbd195180c3b9a2db7767aa21a9",
+          "lastEditedAt": "2026-08-12T23:54:00.000Z"
+        },
+        {
+          "id": "ISSUE-1198",
+          "title": "[게이미피케이션][럭키볼뽑기]",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "미지정",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[게이미피케이션][혜택]포인트_2배_이벤트",
+          "versionRaw": "[게이미피케이션][혜택]포인트_2배_이벤트",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-08-12T23:54:00.000Z",
+          "createdDate": "2026-08-12",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/3ba73fbd1951804ea413c23a44dafbe8",
+          "lastEditedAt": "2026-08-13T00:02:00.000Z"
+        },
+        {
+          "id": "ISSUE-1197",
+          "title": "[게이미피케이션][룰렛돌리기] ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "미지정",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[게이미피케이션][혜택]포인트_2배_이벤트",
+          "versionRaw": "[게이미피케이션][혜택]포인트_2배_이벤트",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-08-12T23:54:00.000Z",
+          "createdDate": "2026-08-12",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/3ba73fbd195180f891c6cae3640e0c7a",
+          "lastEditedAt": "2026-08-13T00:00:00.000Z"
+        },
         {
           "id": "ISSUE-1196",
           "title": "[게이미피케이션] 이벤트 미적용 미션 리스트 영역 문구 내 포인트 2배로 노출되는 현상  ",
@@ -2158,151 +2292,25 @@
           "closedDate": "",
           "url": "https://app.notion.com/p/iOS-3ba73fbd195180e287f2e4693cb14f1d",
           "lastEditedAt": "2026-08-12T06:08:00.000Z"
-        },
-        {
-          "id": "ISSUE-1192",
-          "title": "[카카오뱅크][계좌등록] 네트워크 비활성화 상태로 ‘계좌 등록’ 화면 내 ‘다음’ 버튼 선택 시 빈 에러 팝업 노출",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Major",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[카카오뱅크]해외송금",
-          "versionRaw": "[카카오뱅크]해외송금",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-08-12T05:37:00.000Z",
-          "createdDate": "2026-08-12",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/3ba73fbd195180048e2bec94f733ef6c",
-          "lastEditedAt": "2026-08-12T05:51:00.000Z"
-        },
-        {
-          "id": "ISSUE-1191",
-          "title": "[카카오뱅크][iOS] 내역조회 화면 내 ‘한패스 해외송금 내역 조회’ 버튼 미노출 현상  ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Major",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[카카오뱅크]해외송금",
-          "versionRaw": "[카카오뱅크]해외송금",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-08-12T01:58:00.000Z",
-          "createdDate": "2026-08-12",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/iOS-3ba73fbd1951806f987de6cc07852fe6",
-          "lastEditedAt": "2026-08-12T05:30:00.000Z"
-        },
-        {
-          "id": "ISSUE-1190",
-          "title": "[카카오뱅크 ][해외송금][공통] KHQR 스캔 화면 내 ‘직접 입력하기’ 버튼 노출 되는 현상 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Major",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[카카오뱅크]해외송금",
-          "versionRaw": "[카카오뱅크]해외송금",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-08-12T00:53:00.000Z",
-          "createdDate": "2026-08-12",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/KHQR-3ba73fbd195180f693e6fac090bd9c57",
-          "lastEditedAt": "2026-08-12T05:24:00.000Z"
-        },
-        {
-          "id": "ISSUE-1189",
-          "title": "[카카오뱅크][설정][공통] ‘자주 묻는 질문’ 화면 내 상단 타이틀 문구 기획서와 상이",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[카카오뱅크]해외송금",
-          "versionRaw": "[카카오뱅크]해외송금",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-08-11T08:42:00.000Z",
-          "createdDate": "2026-08-11",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/3b973fbd1951801ea560da38be7714f2",
-          "lastEditedAt": "2026-08-11T08:48:00.000Z"
-        },
-        {
-          "id": "ISSUE-1188",
-          "title": "[게이미케이션][럭키볼뽑기] 안내 문구 영역 포인트 2배 미적용 ",
-          "status": "QA 검증 -회귀 (QA Verification)",
-          "stage": "QA확인",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[게이미피케이션][혜택]포인트_2배_이벤트",
-          "versionRaw": "[게이미피케이션][혜택]포인트_2배_이벤트",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-08-11T08:28:00.000Z",
-          "createdDate": "2026-08-11",
-          "fixedAt": "2026-08-12T07:13:00.000Z",
-          "fixedDate": "2026-08-12",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/2-3b973fbd19518013b5c4dc2eaadf0f1c",
-          "lastEditedAt": "2026-08-12T07:13:00.000Z"
-        },
-        {
-          "id": "ISSUE-1187",
-          "title": "[게이미케이션][앱흔들기] 타이틀 하단 문구 포인트 2배 미적용",
-          "status": "QA 검증 -회귀 (QA Verification)",
-          "stage": "QA확인",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[게이미피케이션][혜택]포인트_2배_이벤트",
-          "versionRaw": "[게이미피케이션][혜택]포인트_2배_이벤트",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-08-11T08:22:00.000Z",
-          "createdDate": "2026-08-11",
-          "fixedAt": "2026-08-12T07:12:00.000Z",
-          "fixedDate": "2026-08-12",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/2-3b973fbd1951802b933afa38c665021f",
-          "lastEditedAt": "2026-08-12T07:12:00.000Z"
         }
       ]
     },
     "한패스": {
       "summary": {
-        "total": 726,
-        "new": 114,
+        "total": 732,
+        "new": 120,
         "inProgress": 7,
         "fixed": 0,
         "closed": 506,
-        "todayNew": 7,
-        "newDelta": -5
+        "todayNew": 0,
+        "newDelta": -13
       },
       "funnel": [
         {
           "stage": "등록",
-          "count": 114,
-          "rate": 15.7,
-          "width": 23
+          "count": 120,
+          "rate": 16.4,
+          "width": 24
         },
         {
           "stage": "검토",
@@ -2331,24 +2339,17 @@
         {
           "stage": "QA확인",
           "count": 99,
-          "rate": 13.6,
+          "rate": 13.5,
           "width": 20
         },
         {
           "stage": "종료",
           "count": 506,
-          "rate": 69.7,
+          "rate": 69.1,
           "width": 100
         }
       ],
       "daily": [
-        {
-          "date": "2026-07-14",
-          "new": 0,
-          "fixed": 2,
-          "closed": 2,
-          "deltaNew": 0
-        },
         {
           "date": "2026-07-15",
           "new": 5,
@@ -2547,10 +2548,17 @@
         },
         {
           "date": "2026-08-12",
-          "new": 7,
+          "new": 13,
           "fixed": 21,
           "closed": 1,
-          "deltaNew": -5
+          "deltaNew": 1
+        },
+        {
+          "date": "2026-08-13",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": -13
         }
       ],
       "versions": [
@@ -3180,10 +3188,14 @@
         },
         {
           "version": "[게이미피케이션][혜택]포인트_2배_이벤트",
-          "total": 6,
+          "total": 12,
           "criticalMajor": 0,
-          "doneRate": 100.0,
+          "doneRate": 50.0,
           "status": [
+            {
+              "label": "등록",
+              "count": 6
+            },
             {
               "label": "QA확인",
               "count": 6
@@ -3193,12 +3205,16 @@
             {
               "label": "Minor",
               "count": 6
+            },
+            {
+              "label": "미지정",
+              "count": 6
             }
           ],
           "priority": [
             {
               "label": "Medium",
-              "count": 6
+              "count": 12
             }
           ]
         },
@@ -3410,7 +3426,7 @@
           "status": [
             {
               "label": "등록",
-              "count": 114
+              "count": 120
             },
             {
               "label": "진행중",
@@ -3440,7 +3456,7 @@
             },
             {
               "label": "미지정",
-              "count": 73
+              "count": 79
             },
             {
               "label": "개선 의견",
@@ -3458,7 +3474,7 @@
             },
             {
               "label": "Medium",
-              "count": 683
+              "count": 689
             },
             {
               "label": "Low",
@@ -3476,13 +3492,6 @@
         }
       },
       "heatmap": [
-        {
-          "date": "2026-07-14",
-          "new": 0,
-          "fixed": 2,
-          "closed": 2,
-          "deltaNew": 0
-        },
         {
           "date": "2026-07-15",
           "new": 5,
@@ -3681,10 +3690,17 @@
         },
         {
           "date": "2026-08-12",
-          "new": 7,
+          "new": 13,
           "fixed": 21,
           "closed": 1,
-          "deltaNew": -5
+          "deltaNew": 1
+        },
+        {
+          "date": "2026-08-13",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": -13
         }
       ],
       "reportBoard": {
@@ -3713,6 +3729,132 @@
         "recent": []
       },
       "recent": [
+        {
+          "id": "ISSUE-1202",
+          "title": "[게이미피케이션][룰렛돌리기]",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "미지정",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[게이미피케이션][혜택]포인트_2배_이벤트",
+          "versionRaw": "[게이미피케이션][혜택]포인트_2배_이벤트",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-08-12T23:57:00.000Z",
+          "createdDate": "2026-08-12",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/3ba73fbd195180c580ecf019f203ca7c",
+          "lastEditedAt": "2026-08-13T00:05:00.000Z"
+        },
+        {
+          "id": "ISSUE-1201",
+          "title": "[게이미피케이션][하단배너]",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "미지정",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[게이미피케이션][혜택]포인트_2배_이벤트",
+          "versionRaw": "[게이미피케이션][혜택]포인트_2배_이벤트",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-08-12T23:54:00.000Z",
+          "createdDate": "2026-08-12",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/3ba73fbd195180028796e89950bdddbb",
+          "lastEditedAt": "2026-08-12T23:55:00.000Z"
+        },
+        {
+          "id": "ISSUE-1200",
+          "title": "[게이미피케이션][앱흔들기]",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "미지정",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[게이미피케이션][혜택]포인트_2배_이벤트",
+          "versionRaw": "[게이미피케이션][혜택]포인트_2배_이벤트",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-08-12T23:54:00.000Z",
+          "createdDate": "2026-08-12",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/3ba73fbd1951803daf08fdc504634435",
+          "lastEditedAt": "2026-08-12T23:55:00.000Z"
+        },
+        {
+          "id": "ISSUE-1199",
+          "title": "[게이미피케이션][앱흔들기]",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "미지정",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[게이미피케이션][혜택]포인트_2배_이벤트",
+          "versionRaw": "[게이미피케이션][혜택]포인트_2배_이벤트",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-08-12T23:54:00.000Z",
+          "createdDate": "2026-08-12",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/3ba73fbd195180c3b9a2db7767aa21a9",
+          "lastEditedAt": "2026-08-12T23:54:00.000Z"
+        },
+        {
+          "id": "ISSUE-1198",
+          "title": "[게이미피케이션][럭키볼뽑기]",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "미지정",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[게이미피케이션][혜택]포인트_2배_이벤트",
+          "versionRaw": "[게이미피케이션][혜택]포인트_2배_이벤트",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-08-12T23:54:00.000Z",
+          "createdDate": "2026-08-12",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/3ba73fbd1951804ea413c23a44dafbe8",
+          "lastEditedAt": "2026-08-13T00:02:00.000Z"
+        },
+        {
+          "id": "ISSUE-1197",
+          "title": "[게이미피케이션][룰렛돌리기] ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "미지정",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[게이미피케이션][혜택]포인트_2배_이벤트",
+          "versionRaw": "[게이미피케이션][혜택]포인트_2배_이벤트",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-08-12T23:54:00.000Z",
+          "createdDate": "2026-08-12",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/3ba73fbd195180f891c6cae3640e0c7a",
+          "lastEditedAt": "2026-08-13T00:00:00.000Z"
+        },
         {
           "id": "ISSUE-1196",
           "title": "[게이미피케이션] 이벤트 미적용 미션 리스트 영역 문구 내 포인트 2배로 노출되는 현상  ",
@@ -3796,132 +3938,6 @@
           "closedDate": "",
           "url": "https://app.notion.com/p/iOS-3ba73fbd195180e287f2e4693cb14f1d",
           "lastEditedAt": "2026-08-12T06:08:00.000Z"
-        },
-        {
-          "id": "ISSUE-1192",
-          "title": "[카카오뱅크][계좌등록] 네트워크 비활성화 상태로 ‘계좌 등록’ 화면 내 ‘다음’ 버튼 선택 시 빈 에러 팝업 노출",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Major",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[카카오뱅크]해외송금",
-          "versionRaw": "[카카오뱅크]해외송금",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-08-12T05:37:00.000Z",
-          "createdDate": "2026-08-12",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/3ba73fbd195180048e2bec94f733ef6c",
-          "lastEditedAt": "2026-08-12T05:51:00.000Z"
-        },
-        {
-          "id": "ISSUE-1191",
-          "title": "[카카오뱅크][iOS] 내역조회 화면 내 ‘한패스 해외송금 내역 조회’ 버튼 미노출 현상  ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Major",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[카카오뱅크]해외송금",
-          "versionRaw": "[카카오뱅크]해외송금",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-08-12T01:58:00.000Z",
-          "createdDate": "2026-08-12",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/iOS-3ba73fbd1951806f987de6cc07852fe6",
-          "lastEditedAt": "2026-08-12T05:30:00.000Z"
-        },
-        {
-          "id": "ISSUE-1190",
-          "title": "[카카오뱅크 ][해외송금][공통] KHQR 스캔 화면 내 ‘직접 입력하기’ 버튼 노출 되는 현상 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Major",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[카카오뱅크]해외송금",
-          "versionRaw": "[카카오뱅크]해외송금",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-08-12T00:53:00.000Z",
-          "createdDate": "2026-08-12",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/KHQR-3ba73fbd195180f693e6fac090bd9c57",
-          "lastEditedAt": "2026-08-12T05:24:00.000Z"
-        },
-        {
-          "id": "ISSUE-1189",
-          "title": "[카카오뱅크][설정][공통] ‘자주 묻는 질문’ 화면 내 상단 타이틀 문구 기획서와 상이",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[카카오뱅크]해외송금",
-          "versionRaw": "[카카오뱅크]해외송금",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-08-11T08:42:00.000Z",
-          "createdDate": "2026-08-11",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/3b973fbd1951801ea560da38be7714f2",
-          "lastEditedAt": "2026-08-11T08:48:00.000Z"
-        },
-        {
-          "id": "ISSUE-1188",
-          "title": "[게이미케이션][럭키볼뽑기] 안내 문구 영역 포인트 2배 미적용 ",
-          "status": "QA 검증 -회귀 (QA Verification)",
-          "stage": "QA확인",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[게이미피케이션][혜택]포인트_2배_이벤트",
-          "versionRaw": "[게이미피케이션][혜택]포인트_2배_이벤트",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-08-11T08:28:00.000Z",
-          "createdDate": "2026-08-11",
-          "fixedAt": "2026-08-12T07:13:00.000Z",
-          "fixedDate": "2026-08-12",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/2-3b973fbd19518013b5c4dc2eaadf0f1c",
-          "lastEditedAt": "2026-08-12T07:13:00.000Z"
-        },
-        {
-          "id": "ISSUE-1187",
-          "title": "[게이미케이션][앱흔들기] 타이틀 하단 문구 포인트 2배 미적용",
-          "status": "QA 검증 -회귀 (QA Verification)",
-          "stage": "QA확인",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[게이미피케이션][혜택]포인트_2배_이벤트",
-          "versionRaw": "[게이미피케이션][혜택]포인트_2배_이벤트",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-08-11T08:22:00.000Z",
-          "createdDate": "2026-08-11",
-          "fixedAt": "2026-08-12T07:12:00.000Z",
-          "fixedDate": "2026-08-12",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/2-3b973fbd1951802b933afa38c665021f",
-          "lastEditedAt": "2026-08-12T07:12:00.000Z"
         }
       ]
     },
@@ -3981,18 +3997,11 @@
       ],
       "daily": [
         {
-          "date": "2026-07-14",
-          "new": 6,
-          "fixed": 22,
-          "closed": 22,
-          "deltaNew": 6
-        },
-        {
           "date": "2026-07-15",
           "new": 1,
           "fixed": 1,
           "closed": 1,
-          "deltaNew": -5
+          "deltaNew": 1
         },
         {
           "date": "2026-07-16",
@@ -4185,6 +4194,13 @@
         },
         {
           "date": "2026-08-12",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-08-13",
           "new": 0,
           "fixed": 0,
           "closed": 0,
@@ -4500,18 +4516,11 @@
       },
       "heatmap": [
         {
-          "date": "2026-07-14",
-          "new": 6,
-          "fixed": 22,
-          "closed": 22,
-          "deltaNew": 6
-        },
-        {
           "date": "2026-07-15",
           "new": 1,
           "fixed": 1,
           "closed": 1,
-          "deltaNew": -5
+          "deltaNew": 1
         },
         {
           "date": "2026-07-16",
@@ -4704,6 +4713,13 @@
         },
         {
           "date": "2026-08-12",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-08-13",
           "new": 0,
           "fixed": 0,
           "closed": 0,

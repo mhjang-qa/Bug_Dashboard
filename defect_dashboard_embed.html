@@ -393,7 +393,7 @@
     </div>
   </div>
   <script id="dashboard-data" type="application/json">{
-  "generatedAt": "2026-08-20T00:24:14+00:00",
+  "generatedAt": "2026-08-20T09:06:29+00:00",
   "days": 30,
   "domainOrder": [
     "한패스",
@@ -402,20 +402,20 @@
   "domains": {
     "ALL": {
       "summary": {
-        "total": 962,
-        "new": 143,
-        "inProgress": 1,
+        "total": 1021,
+        "new": 190,
+        "inProgress": 0,
         "fixed": 0,
-        "closed": 717,
-        "todayNew": 0,
-        "newDelta": 0
+        "closed": 728,
+        "todayNew": 35,
+        "newDelta": 22
       },
       "funnel": [
         {
           "stage": "등록",
-          "count": 143,
-          "rate": 14.9,
-          "width": 20
+          "count": 190,
+          "rate": 18.6,
+          "width": 26
         },
         {
           "stage": "검토",
@@ -425,14 +425,14 @@
         },
         {
           "stage": "배정",
-          "count": 0,
-          "rate": 0.0,
+          "count": 2,
+          "rate": 0.2,
           "width": 18
         },
         {
           "stage": "진행중",
-          "count": 1,
-          "rate": 0.1,
+          "count": 0,
+          "rate": 0.0,
           "width": 18
         },
         {
@@ -444,13 +444,13 @@
         {
           "stage": "QA확인",
           "count": 101,
-          "rate": 10.5,
+          "rate": 9.9,
           "width": 18
         },
         {
           "stage": "종료",
-          "count": 717,
-          "rate": 74.5,
+          "count": 728,
+          "rate": 71.3,
           "width": 100
         }
       ],
@@ -646,24 +646,24 @@
         },
         {
           "date": "2026-08-18",
-          "new": 0,
+          "new": 11,
           "fixed": 6,
           "closed": 6,
-          "deltaNew": 0
+          "deltaNew": 11
         },
         {
           "date": "2026-08-19",
-          "new": 0,
+          "new": 13,
           "fixed": 18,
           "closed": 18,
-          "deltaNew": 0
+          "deltaNew": 2
         },
         {
           "date": "2026-08-20",
-          "new": 0,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": 0
+          "new": 35,
+          "fixed": 11,
+          "closed": 11,
+          "deltaNew": 22
         }
       ],
       "versions": [
@@ -1508,6 +1508,70 @@
           ]
         },
         {
+          "version": "[Hanpass][앱개편]",
+          "total": 28,
+          "criticalMajor": 9,
+          "doneRate": 0.0,
+          "status": [
+            {
+              "label": "등록",
+              "count": 26
+            },
+            {
+              "label": "배정",
+              "count": 2
+            }
+          ],
+          "severity": [
+            {
+              "label": "Major",
+              "count": 9
+            },
+            {
+              "label": "Minor",
+              "count": 19
+            }
+          ],
+          "priority": [
+            {
+              "label": "Medium",
+              "count": 28
+            }
+          ]
+        },
+        {
+          "version": "[Hanpass][앱개편][BO]",
+          "total": 31,
+          "criticalMajor": 17,
+          "doneRate": 0.0,
+          "status": [
+            {
+              "label": "등록",
+              "count": 31
+            }
+          ],
+          "severity": [
+            {
+              "label": "Critical",
+              "count": 4
+            },
+            {
+              "label": "Major",
+              "count": 13
+            },
+            {
+              "label": "Minor",
+              "count": 14
+            }
+          ],
+          "priority": [
+            {
+              "label": "Medium",
+              "count": 31
+            }
+          ]
+        },
+        {
           "version": "[게이미피케이션][혜택]포인트_2배_이벤트",
           "total": 11,
           "criticalMajor": 2,
@@ -1567,15 +1631,11 @@
           "version": "[카카오뱅크]해외송금",
           "total": 117,
           "criticalMajor": 58,
-          "doneRate": 61.5,
+          "doneRate": 70.9,
           "status": [
             {
               "label": "등록",
-              "count": 44
-            },
-            {
-              "label": "진행중",
-              "count": 1
+              "count": 34
             },
             {
               "label": "QA확인",
@@ -1583,7 +1643,7 @@
             },
             {
               "label": "종료",
-              "count": 33
+              "count": 44
             }
           ],
           "severity": [
@@ -1750,6 +1810,8 @@
           "[G.H]v1.0.0",
           "[G.H][교통카드]SDK변경",
           "[G.H]추후 수정-백로그",
+          "[Hanpass][앱개편]",
+          "[Hanpass][앱개편][BO]",
           "[게이미피케이션][혜택]포인트_2배_이벤트",
           "[교통카드]SDK변경",
           "[카카오뱅크]해외송금",
@@ -1776,11 +1838,11 @@
           "status": [
             {
               "label": "등록",
-              "count": 143
+              "count": 190
             },
             {
-              "label": "진행중",
-              "count": 1
+              "label": "배정",
+              "count": 2
             },
             {
               "label": "QA확인",
@@ -1788,21 +1850,21 @@
             },
             {
               "label": "종료",
-              "count": 717
+              "count": 728
             }
           ],
           "severity": [
             {
               "label": "Critical",
-              "count": 39
+              "count": 43
             },
             {
               "label": "Major",
-              "count": 269
+              "count": 291
             },
             {
               "label": "Minor",
-              "count": 558
+              "count": 591
             },
             {
               "label": "미지정",
@@ -1824,7 +1886,7 @@
             },
             {
               "label": "Medium",
-              "count": 918
+              "count": 977
             },
             {
               "label": "Low",
@@ -2033,31 +2095,31 @@
         },
         {
           "date": "2026-08-18",
-          "new": 0,
+          "new": 11,
           "fixed": 6,
           "closed": 6,
-          "deltaNew": 0
+          "deltaNew": 11
         },
         {
           "date": "2026-08-19",
-          "new": 0,
+          "new": 13,
           "fixed": 18,
           "closed": 18,
-          "deltaNew": 0
+          "deltaNew": 2
         },
         {
           "date": "2026-08-20",
-          "new": 0,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": 0
+          "new": 35,
+          "fixed": 11,
+          "closed": 11,
+          "deltaNew": 22
         }
       ],
       "reportBoard": {
         "summary": [
           {
             "label": "최근 30일 제보",
-            "count": 0
+            "count": 1
           },
           {
             "label": "미완료",
@@ -2065,7 +2127,7 @@
           },
           {
             "label": "완료",
-            "count": 0
+            "count": 1
           },
           {
             "label": "결함 등록 완료",
@@ -2073,240 +2135,254 @@
           },
           {
             "label": "결함 아님",
-            "count": 0
+            "count": 1
           }
         ],
-        "recent": []
+        "recent": [
+          {
+            "domain": "GoHanpass",
+            "title": "[GoHanpass] 기명 시 제로페이 사용 불가",
+            "status": "완료",
+            "processingStatus": "결함 아님",
+            "bugType": "결함 아님",
+            "platform": "iOS",
+            "reporter": "박세희 (Christy Park)",
+            "createdAt": "2026-08-20T06:47:00.000Z",
+            "createdDate": "2026-08-20",
+            "qaLinked": 0,
+            "url": "https://app.notion.com/p/GoHanpass-3c273fbd195181da8848f9679bf0f1bc"
+          }
+        ]
       },
       "recent": [
         {
-          "id": "ISSUE-1230",
-          "title": "[카카오뱅크][즐겨찾기] ‘최근 송금내역’ 화면 내 즐겨찾기 추가 팝업 미노출 현상 ",
+          "id": "ISSUE-1330",
+          "title": "[마이페이지][AOS] 로그아웃 연속 선택 시 팝업 중복 노출되는 현상 ",
           "status": "등록 (Registered)",
           "stage": "등록",
           "severity": "Minor",
           "priority": "Medium",
           "assignee": "미지정",
-          "version": "[카카오뱅크]해외송금",
-          "versionRaw": "[카카오뱅크]해외송금",
+          "version": "[Hanpass][앱개편]",
+          "versionRaw": "[Hanpass][앱개편]",
           "domain": "한패스",
           "os": "미지정",
-          "createdAt": "2026-08-14T07:30:00.000Z",
-          "createdDate": "2026-08-14",
+          "createdAt": "2026-08-20T08:43:00.000Z",
+          "createdDate": "2026-08-20",
           "fixedAt": "",
           "fixedDate": "",
           "closedAt": "",
           "closedDate": "",
-          "url": "https://app.notion.com/p/3bc73fbd195180698bbed7d465ca330c",
-          "lastEditedAt": "2026-08-14T07:38:00.000Z"
+          "url": "https://app.notion.com/p/AOS-3c273fbd1951806faa31d25ca390e415",
+          "lastEditedAt": "2026-08-20T08:51:00.000Z"
         },
         {
-          "id": "ISSUE-1229",
-          "title": "[카카오뱅크][송금내역] ‘확인증 발급’ 화면 기획서와 상이 ",
+          "id": "ISSUE-1329",
+          "title": "[비로그인홈][공통] 환율 계산기 영역 내 ‘받는 방법’ 계좌이체 선택 시 은행 송금으로 명칭 변경 안 되는 현상 ",
           "status": "등록 (Registered)",
           "stage": "등록",
           "severity": "Minor",
           "priority": "Medium",
           "assignee": "미지정",
-          "version": "[카카오뱅크]해외송금",
-          "versionRaw": "[카카오뱅크]해외송금",
+          "version": "[Hanpass][앱개편]",
+          "versionRaw": "[Hanpass][앱개편]",
           "domain": "한패스",
           "os": "미지정",
-          "createdAt": "2026-08-14T07:30:00.000Z",
-          "createdDate": "2026-08-14",
+          "createdAt": "2026-08-20T08:37:00.000Z",
+          "createdDate": "2026-08-20",
           "fixedAt": "",
           "fixedDate": "",
           "closedAt": "",
           "closedDate": "",
-          "url": "https://app.notion.com/p/3bc73fbd195180189833eb0a0868c79e",
-          "lastEditedAt": "2026-08-18T04:25:00.000Z"
+          "url": "https://app.notion.com/p/3c273fbd19518022aae4e3daf8e0262c",
+          "lastEditedAt": "2026-08-20T08:53:00.000Z"
         },
         {
-          "id": "ISSUE-1228",
-          "title": "[카카오뱅크][송금내역] 환불 내역 상세 화면 내 문구 기획서와 상이 ",
+          "id": "ISSUE-1328",
+          "title": "[마이페이지][iOS] ‘보험가입 내역’ 진입 시 500 에러 팝업 노출 현상 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[Hanpass][앱개편]",
+          "versionRaw": "[Hanpass][앱개편]",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-08-20T08:21:00.000Z",
+          "createdDate": "2026-08-20",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/iOS-500-3c273fbd195180089c94f5eb235c810c",
+          "lastEditedAt": "2026-08-20T08:24:00.000Z"
+        },
+        {
+          "id": "ISSUE-1327",
+          "title": "[비로그인홈][공통]송금액 영역 예상 소요 시간 ‘depending on local circumstances’로 노출 되는 현상 ",
           "status": "등록 (Registered)",
           "stage": "등록",
           "severity": "Minor",
           "priority": "Medium",
           "assignee": "미지정",
-          "version": "[카카오뱅크]해외송금",
-          "versionRaw": "[카카오뱅크]해외송금",
+          "version": "[Hanpass][앱개편]",
+          "versionRaw": "[Hanpass][앱개편]",
           "domain": "한패스",
           "os": "미지정",
-          "createdAt": "2026-08-14T07:00:00.000Z",
-          "createdDate": "2026-08-14",
+          "createdAt": "2026-08-20T08:12:00.000Z",
+          "createdDate": "2026-08-20",
           "fixedAt": "",
           "fixedDate": "",
           "closedAt": "",
           "closedDate": "",
-          "url": "https://app.notion.com/p/3bc73fbd195180649ed2ded6d65a90c8",
-          "lastEditedAt": "2026-08-14T07:10:00.000Z"
+          "url": "https://app.notion.com/p/depending-on-local-circumstances-3c273fbd1951800b8f4acaa34aaf1669",
+          "lastEditedAt": "2026-08-20T08:22:00.000Z"
         },
         {
-          "id": "ISSUE-1227",
-          "title": "[카카오뱅크][비밀번호찾기][공통] 비밀번호 변경 안되는 현상 ",
+          "id": "ISSUE-1326",
+          "title": "[마이페이지][AOS] ‘계정 삭제’, ‘보험가입 내역’ 진입 안되는 현상 ",
           "status": "등록 (Registered)",
           "stage": "등록",
           "severity": "Major",
           "priority": "Medium",
           "assignee": "미지정",
-          "version": "[카카오뱅크]해외송금",
-          "versionRaw": "[카카오뱅크]해외송금",
+          "version": "[Hanpass][앱개편]",
+          "versionRaw": "[Hanpass][앱개편]",
           "domain": "한패스",
           "os": "미지정",
-          "createdAt": "2026-08-14T05:19:00.000Z",
-          "createdDate": "2026-08-14",
+          "createdAt": "2026-08-20T08:09:00.000Z",
+          "createdDate": "2026-08-20",
           "fixedAt": "",
           "fixedDate": "",
           "closedAt": "",
           "closedDate": "",
-          "url": "https://app.notion.com/p/3bc73fbd195180bbb646ede94a331730",
-          "lastEditedAt": "2026-08-14T05:34:00.000Z"
+          "url": "https://app.notion.com/p/AOS-3c273fbd195180ae97a1dacfad3e7c8a",
+          "lastEditedAt": "2026-08-20T08:21:00.000Z"
         },
         {
-          "id": "ISSUE-1226",
-          "title": "[카카오뱅크][비밀번호찾기][공통] 비밀번호 재설정 후 비밀번호 입력 시 ‘승인 거절’ 팝업 노출되는 현상 ",
+          "id": "ISSUE-1325",
+          "title": "[홈][AOS] 대출 영역 메뉴가 기획서와 상이하게 노출되는 현상",
           "status": "등록 (Registered)",
           "stage": "등록",
           "severity": "Major",
           "priority": "Medium",
           "assignee": "미지정",
-          "version": "[카카오뱅크]해외송금",
-          "versionRaw": "[카카오뱅크]해외송금",
+          "version": "[Hanpass][앱개편]",
+          "versionRaw": "[Hanpass][앱개편]",
           "domain": "한패스",
           "os": "미지정",
-          "createdAt": "2026-08-14T04:45:00.000Z",
-          "createdDate": "2026-08-14",
+          "createdAt": "2026-08-20T08:06:00.000Z",
+          "createdDate": "2026-08-20",
           "fixedAt": "",
           "fixedDate": "",
           "closedAt": "",
           "closedDate": "",
-          "url": "https://app.notion.com/p/3bc73fbd195180fa894df0c771c46417",
-          "lastEditedAt": "2026-08-14T05:27:00.000Z"
+          "url": "https://app.notion.com/p/AOS-3c273fbd195180279619d930ebd2b864",
+          "lastEditedAt": "2026-08-20T08:20:00.000Z"
         },
         {
-          "id": "ISSUE-1225",
-          "title": "[카카오뱅크][비밀번호찾기][공통] 비밀번호 재설정 완료 시 ‘비밀번호 찾기 입력’ 화면으로 이동하는 현상",
+          "id": "ISSUE-1324",
+          "title": "[메인][AOS] 대출비교 선택 시 화면 전환되지 않는 현상",
           "status": "등록 (Registered)",
           "stage": "등록",
           "severity": "Major",
           "priority": "Medium",
           "assignee": "미지정",
-          "version": "[카카오뱅크]해외송금",
-          "versionRaw": "[카카오뱅크]해외송금",
+          "version": "[Hanpass][앱개편]",
+          "versionRaw": "[Hanpass][앱개편]",
           "domain": "한패스",
           "os": "미지정",
-          "createdAt": "2026-08-14T04:45:00.000Z",
-          "createdDate": "2026-08-14",
+          "createdAt": "2026-08-20T08:02:00.000Z",
+          "createdDate": "2026-08-20",
           "fixedAt": "",
           "fixedDate": "",
           "closedAt": "",
           "closedDate": "",
-          "url": "https://app.notion.com/p/3bc73fbd195180f8a4bac13b0037c810",
-          "lastEditedAt": "2026-08-14T05:27:00.000Z"
+          "url": "https://app.notion.com/p/AOS-3c273fbd195180779f79ca9f1934367b",
+          "lastEditedAt": "2026-08-20T08:09:00.000Z"
         },
         {
-          "id": "ISSUE-1224",
-          "title": "[카카오뱅크][로그인][공통] ‘아르고스 약관동의’ BS 내 개별 약관 체크 불가한 현상 ",
+          "id": "ISSUE-1323",
+          "title": "[마이페이지][공통] KTX 예약 내역 진입 시 에러 코드 노출되는 현상 ",
           "status": "등록 (Registered)",
           "stage": "등록",
           "severity": "Major",
           "priority": "Medium",
           "assignee": "미지정",
-          "version": "[카카오뱅크]해외송금",
-          "versionRaw": "[카카오뱅크]해외송금",
+          "version": "[Hanpass][앱개편]",
+          "versionRaw": "[Hanpass][앱개편]",
           "domain": "한패스",
           "os": "미지정",
-          "createdAt": "2026-08-14T02:19:00.000Z",
-          "createdDate": "2026-08-14",
+          "createdAt": "2026-08-20T07:58:00.000Z",
+          "createdDate": "2026-08-20",
           "fixedAt": "",
           "fixedDate": "",
           "closedAt": "",
           "closedDate": "",
-          "url": "https://app.notion.com/p/BS-3bc73fbd1951807499e0d6ae3c1a3777",
-          "lastEditedAt": "2026-08-14T02:26:00.000Z"
+          "url": "https://app.notion.com/p/KTX-3c273fbd1951806bbd77f4045dbc6332",
+          "lastEditedAt": "2026-08-20T08:12:00.000Z"
         },
         {
-          "id": "ISSUE-1223",
-          "title": "[카카오뱅크][로그인] 비밀번호 미일치 팝업 기획서와 상이",
+          "id": "ISSUE-1322",
+          "title": "[메인][AOS] 신용대출 선택 시 화면 전환되지 않는 현상",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[Hanpass][앱개편]",
+          "versionRaw": "[Hanpass][앱개편]",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-08-20T07:57:00.000Z",
+          "createdDate": "2026-08-20",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/AOS-3c273fbd1951808ea79ced90813a3c07",
+          "lastEditedAt": "2026-08-20T08:09:00.000Z"
+        },
+        {
+          "id": "ISSUE-1321",
+          "title": "[비로그인홈][AOS] 화면 하단 문구 기획서와 상이 ",
           "status": "등록 (Registered)",
           "stage": "등록",
           "severity": "Minor",
           "priority": "Medium",
           "assignee": "미지정",
-          "version": "[카카오뱅크]해외송금",
-          "versionRaw": "[카카오뱅크]해외송금",
+          "version": "[Hanpass][앱개편]",
+          "versionRaw": "[Hanpass][앱개편]",
           "domain": "한패스",
           "os": "미지정",
-          "createdAt": "2026-08-14T01:26:00.000Z",
-          "createdDate": "2026-08-14",
+          "createdAt": "2026-08-20T07:44:00.000Z",
+          "createdDate": "2026-08-20",
           "fixedAt": "",
           "fixedDate": "",
           "closedAt": "",
           "closedDate": "",
-          "url": "https://app.notion.com/p/3bc73fbd19518076b819f608e0d1f9e2",
-          "lastEditedAt": "2026-08-19T08:57:00.000Z"
-        },
-        {
-          "id": "ISSUE-1222",
-          "title": "[카카오뱅크][비밀번호찾기][공통] 비밀번호 입력/재입력 화면 기획서와 상이",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[카카오뱅크]해외송금",
-          "versionRaw": "[카카오뱅크]해외송금",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-08-14T00:49:00.000Z",
-          "createdDate": "2026-08-14",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/3bc73fbd195180788b6bd3ff3c28fa00",
-          "lastEditedAt": "2026-08-14T04:04:00.000Z"
-        },
-        {
-          "id": "ISSUE-1221",
-          "title": "[카카오뱅크][로그인][공통] ‘로그인’ 화면 내 ‘이탈 방지 팝업’ 미노출 현상 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Major",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[카카오뱅크]해외송금",
-          "versionRaw": "[카카오뱅크]해외송금",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-08-13T08:16:00.000Z",
-          "createdDate": "2026-08-13",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/3bb73fbd195180eba6e5d8c98f446f40",
-          "lastEditedAt": "2026-08-13T08:21:00.000Z"
+          "url": "https://app.notion.com/p/AOS-3c273fbd1951803f8fa2ef7055658803",
+          "lastEditedAt": "2026-08-20T08:13:00.000Z"
         }
       ]
     },
     "한패스": {
       "summary": {
-        "total": 758,
-        "new": 116,
-        "inProgress": 1,
+        "total": 817,
+        "new": 163,
+        "inProgress": 0,
         "fixed": 0,
-        "closed": 541,
-        "todayNew": 0,
-        "newDelta": 0
+        "closed": 552,
+        "todayNew": 35,
+        "newDelta": 22
       },
       "funnel": [
         {
           "stage": "등록",
-          "count": 116,
-          "rate": 15.3,
-          "width": 21
+          "count": 163,
+          "rate": 20.0,
+          "width": 30
         },
         {
           "stage": "검토",
@@ -2316,14 +2392,14 @@
         },
         {
           "stage": "배정",
-          "count": 0,
-          "rate": 0.0,
+          "count": 2,
+          "rate": 0.2,
           "width": 18
         },
         {
           "stage": "진행중",
-          "count": 1,
-          "rate": 0.1,
+          "count": 0,
+          "rate": 0.0,
           "width": 18
         },
         {
@@ -2335,13 +2411,13 @@
         {
           "stage": "QA확인",
           "count": 100,
-          "rate": 13.2,
+          "rate": 12.2,
           "width": 18
         },
         {
           "stage": "종료",
-          "count": 541,
-          "rate": 71.4,
+          "count": 552,
+          "rate": 67.6,
           "width": 100
         }
       ],
@@ -2537,24 +2613,24 @@
         },
         {
           "date": "2026-08-18",
-          "new": 0,
+          "new": 11,
           "fixed": 6,
           "closed": 6,
-          "deltaNew": 0
+          "deltaNew": 11
         },
         {
           "date": "2026-08-19",
-          "new": 0,
+          "new": 13,
           "fixed": 18,
           "closed": 18,
-          "deltaNew": 0
+          "deltaNew": 2
         },
         {
           "date": "2026-08-20",
-          "new": 0,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": 0
+          "new": 35,
+          "fixed": 11,
+          "closed": 11,
+          "deltaNew": 22
         }
       ],
       "versions": [
@@ -3183,6 +3259,70 @@
           ]
         },
         {
+          "version": "[Hanpass][앱개편]",
+          "total": 28,
+          "criticalMajor": 9,
+          "doneRate": 0.0,
+          "status": [
+            {
+              "label": "등록",
+              "count": 26
+            },
+            {
+              "label": "배정",
+              "count": 2
+            }
+          ],
+          "severity": [
+            {
+              "label": "Major",
+              "count": 9
+            },
+            {
+              "label": "Minor",
+              "count": 19
+            }
+          ],
+          "priority": [
+            {
+              "label": "Medium",
+              "count": 28
+            }
+          ]
+        },
+        {
+          "version": "[Hanpass][앱개편][BO]",
+          "total": 31,
+          "criticalMajor": 17,
+          "doneRate": 0.0,
+          "status": [
+            {
+              "label": "등록",
+              "count": 31
+            }
+          ],
+          "severity": [
+            {
+              "label": "Critical",
+              "count": 4
+            },
+            {
+              "label": "Major",
+              "count": 13
+            },
+            {
+              "label": "Minor",
+              "count": 14
+            }
+          ],
+          "priority": [
+            {
+              "label": "Medium",
+              "count": 31
+            }
+          ]
+        },
+        {
           "version": "[게이미피케이션][혜택]포인트_2배_이벤트",
           "total": 11,
           "criticalMajor": 2,
@@ -3242,15 +3382,11 @@
           "version": "[카카오뱅크]해외송금",
           "total": 117,
           "criticalMajor": 58,
-          "doneRate": 61.5,
+          "doneRate": 70.9,
           "status": [
             {
               "label": "등록",
-              "count": 44
-            },
-            {
-              "label": "진행중",
-              "count": 1
+              "count": 34
             },
             {
               "label": "QA확인",
@@ -3258,7 +3394,7 @@
             },
             {
               "label": "종료",
-              "count": 33
+              "count": 44
             }
           ],
           "severity": [
@@ -3394,6 +3530,8 @@
           "5.14.0",
           "5.13.0",
           "5.12.0",
+          "[Hanpass][앱개편]",
+          "[Hanpass][앱개편][BO]",
           "[게이미피케이션][혜택]포인트_2배_이벤트",
           "[교통카드]SDK변경",
           "[카카오뱅크]해외송금",
@@ -3418,11 +3556,11 @@
           "status": [
             {
               "label": "등록",
-              "count": 116
+              "count": 163
             },
             {
-              "label": "진행중",
-              "count": 1
+              "label": "배정",
+              "count": 2
             },
             {
               "label": "QA확인",
@@ -3430,21 +3568,21 @@
             },
             {
               "label": "종료",
-              "count": 541
+              "count": 552
             }
           ],
           "severity": [
             {
               "label": "Critical",
-              "count": 35
+              "count": 39
             },
             {
               "label": "Major",
-              "count": 206
+              "count": 228
             },
             {
               "label": "Minor",
-              "count": 421
+              "count": 454
             },
             {
               "label": "미지정",
@@ -3466,7 +3604,7 @@
             },
             {
               "label": "Medium",
-              "count": 715
+              "count": 774
             },
             {
               "label": "Low",
@@ -3675,24 +3813,24 @@
         },
         {
           "date": "2026-08-18",
-          "new": 0,
+          "new": 11,
           "fixed": 6,
           "closed": 6,
-          "deltaNew": 0
+          "deltaNew": 11
         },
         {
           "date": "2026-08-19",
-          "new": 0,
+          "new": 13,
           "fixed": 18,
           "closed": 18,
-          "deltaNew": 0
+          "deltaNew": 2
         },
         {
           "date": "2026-08-20",
-          "new": 0,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": 0
+          "new": 35,
+          "fixed": 11,
+          "closed": 11,
+          "deltaNew": 22
         }
       ],
       "reportBoard": {
@@ -3722,214 +3860,214 @@
       },
       "recent": [
         {
-          "id": "ISSUE-1230",
-          "title": "[카카오뱅크][즐겨찾기] ‘최근 송금내역’ 화면 내 즐겨찾기 추가 팝업 미노출 현상 ",
+          "id": "ISSUE-1330",
+          "title": "[마이페이지][AOS] 로그아웃 연속 선택 시 팝업 중복 노출되는 현상 ",
           "status": "등록 (Registered)",
           "stage": "등록",
           "severity": "Minor",
           "priority": "Medium",
           "assignee": "미지정",
-          "version": "[카카오뱅크]해외송금",
-          "versionRaw": "[카카오뱅크]해외송금",
+          "version": "[Hanpass][앱개편]",
+          "versionRaw": "[Hanpass][앱개편]",
           "domain": "한패스",
           "os": "미지정",
-          "createdAt": "2026-08-14T07:30:00.000Z",
-          "createdDate": "2026-08-14",
+          "createdAt": "2026-08-20T08:43:00.000Z",
+          "createdDate": "2026-08-20",
           "fixedAt": "",
           "fixedDate": "",
           "closedAt": "",
           "closedDate": "",
-          "url": "https://app.notion.com/p/3bc73fbd195180698bbed7d465ca330c",
-          "lastEditedAt": "2026-08-14T07:38:00.000Z"
+          "url": "https://app.notion.com/p/AOS-3c273fbd1951806faa31d25ca390e415",
+          "lastEditedAt": "2026-08-20T08:51:00.000Z"
         },
         {
-          "id": "ISSUE-1229",
-          "title": "[카카오뱅크][송금내역] ‘확인증 발급’ 화면 기획서와 상이 ",
+          "id": "ISSUE-1329",
+          "title": "[비로그인홈][공통] 환율 계산기 영역 내 ‘받는 방법’ 계좌이체 선택 시 은행 송금으로 명칭 변경 안 되는 현상 ",
           "status": "등록 (Registered)",
           "stage": "등록",
           "severity": "Minor",
           "priority": "Medium",
           "assignee": "미지정",
-          "version": "[카카오뱅크]해외송금",
-          "versionRaw": "[카카오뱅크]해외송금",
+          "version": "[Hanpass][앱개편]",
+          "versionRaw": "[Hanpass][앱개편]",
           "domain": "한패스",
           "os": "미지정",
-          "createdAt": "2026-08-14T07:30:00.000Z",
-          "createdDate": "2026-08-14",
+          "createdAt": "2026-08-20T08:37:00.000Z",
+          "createdDate": "2026-08-20",
           "fixedAt": "",
           "fixedDate": "",
           "closedAt": "",
           "closedDate": "",
-          "url": "https://app.notion.com/p/3bc73fbd195180189833eb0a0868c79e",
-          "lastEditedAt": "2026-08-18T04:25:00.000Z"
+          "url": "https://app.notion.com/p/3c273fbd19518022aae4e3daf8e0262c",
+          "lastEditedAt": "2026-08-20T08:53:00.000Z"
         },
         {
-          "id": "ISSUE-1228",
-          "title": "[카카오뱅크][송금내역] 환불 내역 상세 화면 내 문구 기획서와 상이 ",
+          "id": "ISSUE-1328",
+          "title": "[마이페이지][iOS] ‘보험가입 내역’ 진입 시 500 에러 팝업 노출 현상 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[Hanpass][앱개편]",
+          "versionRaw": "[Hanpass][앱개편]",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-08-20T08:21:00.000Z",
+          "createdDate": "2026-08-20",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/iOS-500-3c273fbd195180089c94f5eb235c810c",
+          "lastEditedAt": "2026-08-20T08:24:00.000Z"
+        },
+        {
+          "id": "ISSUE-1327",
+          "title": "[비로그인홈][공통]송금액 영역 예상 소요 시간 ‘depending on local circumstances’로 노출 되는 현상 ",
           "status": "등록 (Registered)",
           "stage": "등록",
           "severity": "Minor",
           "priority": "Medium",
           "assignee": "미지정",
-          "version": "[카카오뱅크]해외송금",
-          "versionRaw": "[카카오뱅크]해외송금",
+          "version": "[Hanpass][앱개편]",
+          "versionRaw": "[Hanpass][앱개편]",
           "domain": "한패스",
           "os": "미지정",
-          "createdAt": "2026-08-14T07:00:00.000Z",
-          "createdDate": "2026-08-14",
+          "createdAt": "2026-08-20T08:12:00.000Z",
+          "createdDate": "2026-08-20",
           "fixedAt": "",
           "fixedDate": "",
           "closedAt": "",
           "closedDate": "",
-          "url": "https://app.notion.com/p/3bc73fbd195180649ed2ded6d65a90c8",
-          "lastEditedAt": "2026-08-14T07:10:00.000Z"
+          "url": "https://app.notion.com/p/depending-on-local-circumstances-3c273fbd1951800b8f4acaa34aaf1669",
+          "lastEditedAt": "2026-08-20T08:22:00.000Z"
         },
         {
-          "id": "ISSUE-1227",
-          "title": "[카카오뱅크][비밀번호찾기][공통] 비밀번호 변경 안되는 현상 ",
+          "id": "ISSUE-1326",
+          "title": "[마이페이지][AOS] ‘계정 삭제’, ‘보험가입 내역’ 진입 안되는 현상 ",
           "status": "등록 (Registered)",
           "stage": "등록",
           "severity": "Major",
           "priority": "Medium",
           "assignee": "미지정",
-          "version": "[카카오뱅크]해외송금",
-          "versionRaw": "[카카오뱅크]해외송금",
+          "version": "[Hanpass][앱개편]",
+          "versionRaw": "[Hanpass][앱개편]",
           "domain": "한패스",
           "os": "미지정",
-          "createdAt": "2026-08-14T05:19:00.000Z",
-          "createdDate": "2026-08-14",
+          "createdAt": "2026-08-20T08:09:00.000Z",
+          "createdDate": "2026-08-20",
           "fixedAt": "",
           "fixedDate": "",
           "closedAt": "",
           "closedDate": "",
-          "url": "https://app.notion.com/p/3bc73fbd195180bbb646ede94a331730",
-          "lastEditedAt": "2026-08-14T05:34:00.000Z"
+          "url": "https://app.notion.com/p/AOS-3c273fbd195180ae97a1dacfad3e7c8a",
+          "lastEditedAt": "2026-08-20T08:21:00.000Z"
         },
         {
-          "id": "ISSUE-1226",
-          "title": "[카카오뱅크][비밀번호찾기][공통] 비밀번호 재설정 후 비밀번호 입력 시 ‘승인 거절’ 팝업 노출되는 현상 ",
+          "id": "ISSUE-1325",
+          "title": "[홈][AOS] 대출 영역 메뉴가 기획서와 상이하게 노출되는 현상",
           "status": "등록 (Registered)",
           "stage": "등록",
           "severity": "Major",
           "priority": "Medium",
           "assignee": "미지정",
-          "version": "[카카오뱅크]해외송금",
-          "versionRaw": "[카카오뱅크]해외송금",
+          "version": "[Hanpass][앱개편]",
+          "versionRaw": "[Hanpass][앱개편]",
           "domain": "한패스",
           "os": "미지정",
-          "createdAt": "2026-08-14T04:45:00.000Z",
-          "createdDate": "2026-08-14",
+          "createdAt": "2026-08-20T08:06:00.000Z",
+          "createdDate": "2026-08-20",
           "fixedAt": "",
           "fixedDate": "",
           "closedAt": "",
           "closedDate": "",
-          "url": "https://app.notion.com/p/3bc73fbd195180fa894df0c771c46417",
-          "lastEditedAt": "2026-08-14T05:27:00.000Z"
+          "url": "https://app.notion.com/p/AOS-3c273fbd195180279619d930ebd2b864",
+          "lastEditedAt": "2026-08-20T08:20:00.000Z"
         },
         {
-          "id": "ISSUE-1225",
-          "title": "[카카오뱅크][비밀번호찾기][공통] 비밀번호 재설정 완료 시 ‘비밀번호 찾기 입력’ 화면으로 이동하는 현상",
+          "id": "ISSUE-1324",
+          "title": "[메인][AOS] 대출비교 선택 시 화면 전환되지 않는 현상",
           "status": "등록 (Registered)",
           "stage": "등록",
           "severity": "Major",
           "priority": "Medium",
           "assignee": "미지정",
-          "version": "[카카오뱅크]해외송금",
-          "versionRaw": "[카카오뱅크]해외송금",
+          "version": "[Hanpass][앱개편]",
+          "versionRaw": "[Hanpass][앱개편]",
           "domain": "한패스",
           "os": "미지정",
-          "createdAt": "2026-08-14T04:45:00.000Z",
-          "createdDate": "2026-08-14",
+          "createdAt": "2026-08-20T08:02:00.000Z",
+          "createdDate": "2026-08-20",
           "fixedAt": "",
           "fixedDate": "",
           "closedAt": "",
           "closedDate": "",
-          "url": "https://app.notion.com/p/3bc73fbd195180f8a4bac13b0037c810",
-          "lastEditedAt": "2026-08-14T05:27:00.000Z"
+          "url": "https://app.notion.com/p/AOS-3c273fbd195180779f79ca9f1934367b",
+          "lastEditedAt": "2026-08-20T08:09:00.000Z"
         },
         {
-          "id": "ISSUE-1224",
-          "title": "[카카오뱅크][로그인][공통] ‘아르고스 약관동의’ BS 내 개별 약관 체크 불가한 현상 ",
+          "id": "ISSUE-1323",
+          "title": "[마이페이지][공통] KTX 예약 내역 진입 시 에러 코드 노출되는 현상 ",
           "status": "등록 (Registered)",
           "stage": "등록",
           "severity": "Major",
           "priority": "Medium",
           "assignee": "미지정",
-          "version": "[카카오뱅크]해외송금",
-          "versionRaw": "[카카오뱅크]해외송금",
+          "version": "[Hanpass][앱개편]",
+          "versionRaw": "[Hanpass][앱개편]",
           "domain": "한패스",
           "os": "미지정",
-          "createdAt": "2026-08-14T02:19:00.000Z",
-          "createdDate": "2026-08-14",
+          "createdAt": "2026-08-20T07:58:00.000Z",
+          "createdDate": "2026-08-20",
           "fixedAt": "",
           "fixedDate": "",
           "closedAt": "",
           "closedDate": "",
-          "url": "https://app.notion.com/p/BS-3bc73fbd1951807499e0d6ae3c1a3777",
-          "lastEditedAt": "2026-08-14T02:26:00.000Z"
+          "url": "https://app.notion.com/p/KTX-3c273fbd1951806bbd77f4045dbc6332",
+          "lastEditedAt": "2026-08-20T08:12:00.000Z"
         },
         {
-          "id": "ISSUE-1223",
-          "title": "[카카오뱅크][로그인] 비밀번호 미일치 팝업 기획서와 상이",
+          "id": "ISSUE-1322",
+          "title": "[메인][AOS] 신용대출 선택 시 화면 전환되지 않는 현상",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[Hanpass][앱개편]",
+          "versionRaw": "[Hanpass][앱개편]",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-08-20T07:57:00.000Z",
+          "createdDate": "2026-08-20",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/AOS-3c273fbd1951808ea79ced90813a3c07",
+          "lastEditedAt": "2026-08-20T08:09:00.000Z"
+        },
+        {
+          "id": "ISSUE-1321",
+          "title": "[비로그인홈][AOS] 화면 하단 문구 기획서와 상이 ",
           "status": "등록 (Registered)",
           "stage": "등록",
           "severity": "Minor",
           "priority": "Medium",
           "assignee": "미지정",
-          "version": "[카카오뱅크]해외송금",
-          "versionRaw": "[카카오뱅크]해외송금",
+          "version": "[Hanpass][앱개편]",
+          "versionRaw": "[Hanpass][앱개편]",
           "domain": "한패스",
           "os": "미지정",
-          "createdAt": "2026-08-14T01:26:00.000Z",
-          "createdDate": "2026-08-14",
+          "createdAt": "2026-08-20T07:44:00.000Z",
+          "createdDate": "2026-08-20",
           "fixedAt": "",
           "fixedDate": "",
           "closedAt": "",
           "closedDate": "",
-          "url": "https://app.notion.com/p/3bc73fbd19518076b819f608e0d1f9e2",
-          "lastEditedAt": "2026-08-19T08:57:00.000Z"
-        },
-        {
-          "id": "ISSUE-1222",
-          "title": "[카카오뱅크][비밀번호찾기][공통] 비밀번호 입력/재입력 화면 기획서와 상이",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[카카오뱅크]해외송금",
-          "versionRaw": "[카카오뱅크]해외송금",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-08-14T00:49:00.000Z",
-          "createdDate": "2026-08-14",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/3bc73fbd195180788b6bd3ff3c28fa00",
-          "lastEditedAt": "2026-08-14T04:04:00.000Z"
-        },
-        {
-          "id": "ISSUE-1221",
-          "title": "[카카오뱅크][로그인][공통] ‘로그인’ 화면 내 ‘이탈 방지 팝업’ 미노출 현상 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Major",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[카카오뱅크]해외송금",
-          "versionRaw": "[카카오뱅크]해외송금",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-08-13T08:16:00.000Z",
-          "createdDate": "2026-08-13",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/3bb73fbd195180eba6e5d8c98f446f40",
-          "lastEditedAt": "2026-08-13T08:21:00.000Z"
+          "url": "https://app.notion.com/p/AOS-3c273fbd1951803f8fa2ef7055658803",
+          "lastEditedAt": "2026-08-20T08:13:00.000Z"
         }
       ]
     },
@@ -4722,7 +4860,7 @@
         "summary": [
           {
             "label": "최근 30일 제보",
-            "count": 0
+            "count": 1
           },
           {
             "label": "미완료",
@@ -4730,7 +4868,7 @@
           },
           {
             "label": "완료",
-            "count": 0
+            "count": 1
           },
           {
             "label": "결함 등록 완료",
@@ -4738,10 +4876,24 @@
           },
           {
             "label": "결함 아님",
-            "count": 0
+            "count": 1
           }
         ],
-        "recent": []
+        "recent": [
+          {
+            "domain": "GoHanpass",
+            "title": "[GoHanpass] 기명 시 제로페이 사용 불가",
+            "status": "완료",
+            "processingStatus": "결함 아님",
+            "bugType": "결함 아님",
+            "platform": "iOS",
+            "reporter": "박세희 (Christy Park)",
+            "createdAt": "2026-08-20T06:47:00.000Z",
+            "createdDate": "2026-08-20",
+            "qaLinked": 0,
+            "url": "https://app.notion.com/p/GoHanpass-3c273fbd195181da8848f9679bf0f1bc"
+          }
+        ]
       },
       "recent": [
         {

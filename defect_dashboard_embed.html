@@ -393,7 +393,7 @@
     </div>
   </div>
   <script id="dashboard-data" type="application/json">{
-  "generatedAt": "2026-08-26T05:01:24+00:00",
+  "generatedAt": "2026-08-26T09:12:40+00:00",
   "days": 30,
   "domainOrder": [
     "한패스",
@@ -402,20 +402,20 @@
   "domains": {
     "ALL": {
       "summary": {
-        "total": 1167,
-        "new": 194,
-        "inProgress": 18,
+        "total": 1180,
+        "new": 191,
+        "inProgress": 28,
         "fixed": 0,
-        "closed": 812,
-        "todayNew": 10,
-        "newDelta": -24
+        "closed": 818,
+        "todayNew": 23,
+        "newDelta": -11
       },
       "funnel": [
         {
           "stage": "등록",
-          "count": 194,
-          "rate": 16.6,
-          "width": 24
+          "count": 191,
+          "rate": 16.2,
+          "width": 23
         },
         {
           "stage": "검토",
@@ -431,8 +431,8 @@
         },
         {
           "stage": "진행중",
-          "count": 18,
-          "rate": 1.5,
+          "count": 28,
+          "rate": 2.4,
           "width": 18
         },
         {
@@ -444,13 +444,13 @@
         {
           "stage": "QA확인",
           "count": 137,
-          "rate": 11.7,
+          "rate": 11.6,
           "width": 18
         },
         {
           "stage": "종료",
-          "count": 812,
-          "rate": 69.6,
+          "count": 818,
+          "rate": 69.3,
           "width": 100
         }
       ],
@@ -660,10 +660,10 @@
         },
         {
           "date": "2026-08-26",
-          "new": 10,
-          "fixed": 4,
-          "closed": 2,
-          "deltaNew": -24
+          "new": 23,
+          "fixed": 10,
+          "closed": 8,
+          "deltaNew": -11
         }
       ],
       "versions": [
@@ -1543,11 +1543,11 @@
           "version": "[Hanpass][앱개편][BO]",
           "total": 39,
           "criticalMajor": 24,
-          "doneRate": 94.9,
+          "doneRate": 97.4,
           "status": [
             {
               "label": "등록",
-              "count": 2
+              "count": 1
             },
             {
               "label": "QA확인",
@@ -1555,7 +1555,7 @@
             },
             {
               "label": "종료",
-              "count": 3
+              "count": 4
             }
           ],
           "severity": [
@@ -1581,13 +1581,13 @@
         },
         {
           "version": "[Hanpass][앱개편][Native]",
-          "total": 138,
-          "criticalMajor": 52,
-          "doneRate": 45.7,
+          "total": 151,
+          "criticalMajor": 62,
+          "doneRate": 45.0,
           "status": [
             {
               "label": "등록",
-              "count": 53
+              "count": 51
             },
             {
               "label": "배정",
@@ -1595,31 +1595,31 @@
             },
             {
               "label": "진행중",
-              "count": 18
+              "count": 28
             },
             {
               "label": "종료",
-              "count": 63
+              "count": 68
             }
           ],
           "severity": [
             {
               "label": "Critical",
-              "count": 4
+              "count": 5
             },
             {
               "label": "Major",
-              "count": 48
+              "count": 57
             },
             {
               "label": "Minor",
-              "count": 86
+              "count": 89
             }
           ],
           "priority": [
             {
               "label": "Medium",
-              "count": 138
+              "count": 151
             }
           ]
         },
@@ -1928,7 +1928,7 @@
           "status": [
             {
               "label": "등록",
-              "count": 194
+              "count": 191
             },
             {
               "label": "배정",
@@ -1936,7 +1936,7 @@
             },
             {
               "label": "진행중",
-              "count": 18
+              "count": 28
             },
             {
               "label": "QA확인",
@@ -1944,21 +1944,21 @@
             },
             {
               "label": "종료",
-              "count": 812
+              "count": 818
             }
           ],
           "severity": [
             {
               "label": "Critical",
-              "count": 47
+              "count": 48
             },
             {
               "label": "Major",
-              "count": 339
+              "count": 348
             },
             {
               "label": "Minor",
-              "count": 684
+              "count": 687
             },
             {
               "label": "미지정",
@@ -1976,7 +1976,7 @@
             },
             {
               "label": "Medium",
-              "count": 1123
+              "count": 1136
             },
             {
               "label": "Low",
@@ -2199,10 +2199,10 @@
         },
         {
           "date": "2026-08-26",
-          "new": 10,
-          "fixed": 4,
-          "closed": 2,
-          "deltaNew": -24
+          "new": 23,
+          "fixed": 10,
+          "closed": 8,
+          "deltaNew": -11
         }
       ],
       "reportBoard": {
@@ -2246,199 +2246,157 @@
       },
       "recent": [
         {
-          "id": "ISSUE-1488",
-          "title": "[홈][iOS]QR송금 아이콘 다르게 노출되는 현상",
+          "id": "ISSUE-1504",
+          "title": "[PIN비밀번호입력][iOS] 비밀번호 오류 횟수 초과 팝업 내 ‘닫기’ 홈 화면으로 이동하는 현상 ",
           "status": "등록 (Registered)",
           "stage": "등록",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[Hanpass][앱개편][Native]",
-          "versionRaw": "[Hanpass][앱개편][Native]",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-08-26T04:25:00.000Z",
-          "createdDate": "2026-08-26",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/iOS-QR-3c873fbd195180e1b092c95b3dfe21fb",
-          "lastEditedAt": "2026-08-26T04:56:00.000Z"
-        },
-        {
-          "id": "ISSUE-1487",
-          "title": "[QR송금][AOS] 출금 수단 영역 연속 선택 시 바텀시트 중복 노출되는 현상 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[Hanpass][앱개편][기획]",
-          "versionRaw": "[Hanpass][앱개편][기획]",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-08-26T04:14:00.000Z",
-          "createdDate": "2026-08-26",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/QR-AOS-3c873fbd19518029b510d3e1cd83e90c",
-          "lastEditedAt": "2026-08-26T04:36:00.000Z"
-        },
-        {
-          "id": "ISSUE-1486",
-          "title": "[비밀번호찾기][공통] 승인대기 화면 내 문구 맞춤법 확인 필요 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "5.24.2",
-          "versionRaw": "5.24.2(비밀번호 찾기_ 점유인증)",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-08-26T02:05:00.000Z",
-          "createdDate": "2026-08-26",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/3c873fbd195180ec81a4d65232f9ff5e",
-          "lastEditedAt": "2026-08-26T02:26:00.000Z"
-        },
-        {
-          "id": "ISSUE-1485",
-          "title": "[비밀번호찾기][공통] ‘비밀번호 승인 대기중’ 팝업 문구 기획서와 상이 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "5.24.2",
-          "versionRaw": "5.24.2(비밀번호 찾기_ 점유인증)",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-08-26T02:04:00.000Z",
-          "createdDate": "2026-08-26",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/3c873fbd195180bd8c67dde2dc2570ee",
-          "lastEditedAt": "2026-08-26T04:55:00.000Z"
-        },
-        {
-          "id": "ISSUE-1484",
-          "title": "[QR송금][iOS]QR송금 보내기 Hanpass Wallet 이미지 상이한 현상",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[Hanpass][앱개편][기획]",
-          "versionRaw": "[Hanpass][앱개편][기획]",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-08-26T02:02:00.000Z",
-          "createdDate": "2026-08-26",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/QR-iOS-QR-Hanpass-Wallet-3c873fbd19518029a2f8e018dfae6ac4",
-          "lastEditedAt": "2026-08-26T02:27:00.000Z"
-        },
-        {
-          "id": "ISSUE-1483",
-          "title": "[비밀번호찾기][AOS] 불일치 팝업 노출 상태에서 입력 시간 초과 시 불일치 팝업 중복 노출되는 현상 ",
-          "status": "QA 검증 -회귀 (QA Verification)",
-          "stage": "QA확인",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "5.24.2",
-          "versionRaw": "5.24.2(비밀번호 찾기_ 점유인증)",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-08-26T01:16:00.000Z",
-          "createdDate": "2026-08-26",
-          "fixedAt": "2026-08-26T04:50:00.000Z",
-          "fixedDate": "2026-08-26",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/AOS-3c873fbd19518076a818c37f312f83cc",
-          "lastEditedAt": "2026-08-26T04:50:00.000Z"
-        },
-        {
-          "id": "ISSUE-1482",
-          "title": "[안내사항][AOS] 안내사항 영역 내 문구 미노출 현상",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[Hanpass][앱개편][Native]",
-          "versionRaw": "[Hanpass][앱개편][Native]",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-08-26T00:57:00.000Z",
-          "createdDate": "2026-08-26",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/AOS-3c873fbd19518062867bc54d6f55b50b",
-          "lastEditedAt": "2026-08-26T03:44:00.000Z"
-        },
-        {
-          "id": "ISSUE-1481",
-          "title": "[BO][마케팅배너관리] 본문 텍스트 장문 작성 시 레이아웃 결함 (영역 밀리는 현상) ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[Hanpass][앱개편][BO]",
-          "versionRaw": "[Hanpass][앱개편][BO]",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-08-26T00:14:00.000Z",
-          "createdDate": "2026-08-26",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/BO-3c873fbd195180ea991ddd91a371ce38",
-          "lastEditedAt": "2026-08-26T01:42:00.000Z"
-        },
-        {
-          "id": "ISSUE-1480",
-          "title": "[비밀번호찾기][AOS] 인증번호 4자리 입력 시 ‘다음’ 버튼 비활성화 되는 현상 ",
-          "status": "QA 검증 -회귀 (QA Verification)",
-          "stage": "QA확인",
           "severity": "Major",
           "priority": "Medium",
           "assignee": "미지정",
-          "version": "5.24.2",
-          "versionRaw": "5.24.2(비밀번호 찾기_ 점유인증)",
+          "version": "[Hanpass][앱개편][Native]",
+          "versionRaw": "[Hanpass][앱개편][Native]",
           "domain": "한패스",
           "os": "미지정",
-          "createdAt": "2026-08-26T00:06:00.000Z",
+          "createdAt": "2026-08-26T07:56:00.000Z",
           "createdDate": "2026-08-26",
-          "fixedAt": "2026-08-26T04:52:00.000Z",
-          "fixedDate": "2026-08-26",
+          "fixedAt": "",
+          "fixedDate": "",
           "closedAt": "",
           "closedDate": "",
-          "url": "https://app.notion.com/p/AOS-4-3c873fbd195180a6ab8ed5175d498fde",
-          "lastEditedAt": "2026-08-26T04:52:00.000Z"
+          "url": "https://app.notion.com/p/PIN-iOS-3c873fbd19518063922df87f13eb0c12",
+          "lastEditedAt": "2026-08-26T08:37:00.000Z"
         },
         {
-          "id": "ISSUE-1479",
-          "title": "[홈][마케팅배너][iOS] 본문 텍스트 장문 작성 시 말줄임 노출되는 현상 ",
-          "status": "처리중 (In Progress)",
-          "stage": "진행중",
+          "id": "ISSUE-1503",
+          "title": "[홈][온보딩배너][iOS] 네트워크 OFF 상태로 ‘신분증 미등록’ 배너 선택 시 ‘승인 대기’ 팝업 노출되는 현상 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[Hanpass][앱개편][Native]",
+          "versionRaw": "[Hanpass][앱개편][Native]",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-08-26T07:42:00.000Z",
+          "createdDate": "2026-08-26",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/iOS-OFF-3c873fbd195180c2baafc84195b86609",
+          "lastEditedAt": "2026-08-26T08:36:00.000Z"
+        },
+        {
+          "id": "ISSUE-1502",
+          "title": "[PIN비밀번호입력][AOS] 비밀번호 오류 횟수 초과 팝업 내 ‘닫기’ 선택 시 이전 화면으로 이동하는 현상 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[Hanpass][앱개편][Native]",
+          "versionRaw": "[Hanpass][앱개편][Native]",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-08-26T07:42:00.000Z",
+          "createdDate": "2026-08-26",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/PIN-AOS-3c873fbd195180438a7cf0cb26335a7d",
+          "lastEditedAt": "2026-08-26T08:36:00.000Z"
+        },
+        {
+          "id": "ISSUE-1501",
+          "title": "[홈][온보딩배너][AOS] ‘신분증 미등록’ 배너 진입 후 이탈 시 ‘회원가입 미완료’ 배너 노출되는 현상 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[Hanpass][앱개편][Native]",
+          "versionRaw": "[Hanpass][앱개편][Native]",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-08-26T07:25:00.000Z",
+          "createdDate": "2026-08-26",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/AOS-3c873fbd19518081b7e2e7d93c4cd2f9",
+          "lastEditedAt": "2026-08-26T08:36:00.000Z"
+        },
+        {
+          "id": "ISSUE-1500",
+          "title": "[홈][온보딩배너][AOS] ‘신분증 미등록’ 배너 진입 시 회원가입 이어하기 프로세스 진행되는 현상 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[Hanpass][앱개편][Native]",
+          "versionRaw": "[Hanpass][앱개편][Native]",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-08-26T07:15:00.000Z",
+          "createdDate": "2026-08-26",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/AOS-3c873fbd195180408bb9c0a450f11125",
+          "lastEditedAt": "2026-08-26T08:35:00.000Z"
+        },
+        {
+          "id": "ISSUE-1499",
+          "title": "[PIN비밀번호입력][iOS] 생체 인증 등록 불가한 현상 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[Hanpass][앱개편][Native]",
+          "versionRaw": "[Hanpass][앱개편][Native]",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-08-26T07:10:00.000Z",
+          "createdDate": "2026-08-26",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/PIN-iOS-3c873fbd195180f887bcdd8f279c77f2",
+          "lastEditedAt": "2026-08-26T07:20:00.000Z"
+        },
+        {
+          "id": "ISSUE-1498",
+          "title": "[PIN비밀번호입력][AOS]생체 인증 등록 후 다음 거래 시 생체 인증 제공 안 되는 현상 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[Hanpass][앱개편][Native]",
+          "versionRaw": "[Hanpass][앱개편][Native]",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-08-26T06:56:00.000Z",
+          "createdDate": "2026-08-26",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/PIN-AOS-3c873fbd195180039786d17447d9a79a",
+          "lastEditedAt": "2026-08-26T07:10:00.000Z"
+        },
+        {
+          "id": "ISSUE-1497",
+          "title": "[환율] UI 결함",
+          "status": "등록 (Registered)",
+          "stage": "등록",
           "severity": "Minor",
           "priority": "Medium",
           "assignee": "미지정",
@@ -2446,32 +2404,74 @@
           "versionRaw": "[Hanpass][앱개편][Native]",
           "domain": "한패스",
           "os": "미지정",
-          "createdAt": "2026-08-26T00:01:00.000Z",
+          "createdAt": "2026-08-26T06:46:00.000Z",
           "createdDate": "2026-08-26",
           "fixedAt": "",
           "fixedDate": "",
           "closedAt": "",
           "closedDate": "",
-          "url": "https://app.notion.com/p/iOS-3c873fbd1951805f8703dd669f9c3954",
-          "lastEditedAt": "2026-08-26T01:45:00.000Z"
+          "url": "https://app.notion.com/p/UI-3c873fbd19518013ab1ed6402ea10d43",
+          "lastEditedAt": "2026-08-26T06:53:00.000Z"
+        },
+        {
+          "id": "ISSUE-1496",
+          "title": "[PIN비밀번호입력][AOS] 해당 화면에서 다크모드 ON/OFF 시 키패드 오류 노출 되는 현상 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[Hanpass][앱개편][Native]",
+          "versionRaw": "[Hanpass][앱개편][Native]",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-08-26T06:08:00.000Z",
+          "createdDate": "2026-08-26",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/PIN-AOS-ON-OFF-3c873fbd1951800f8024efe73fc8f6d5",
+          "lastEditedAt": "2026-08-26T08:34:00.000Z"
+        },
+        {
+          "id": "ISSUE-1495",
+          "title": "[이벤트배너][iOS] 3개 초과 노출되는 현상 ",
+          "status": "처리중 (In Progress)",
+          "stage": "진행중",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[Hanpass][앱개편][Native]",
+          "versionRaw": "[Hanpass][앱개편][Native]",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-08-26T06:08:00.000Z",
+          "createdDate": "2026-08-26",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/iOS-3-3c873fbd1951809f814bfc1ad75c9c4d",
+          "lastEditedAt": "2026-08-26T08:09:00.000Z"
         }
       ]
     },
     "한패스": {
       "summary": {
-        "total": 963,
-        "new": 167,
-        "inProgress": 18,
+        "total": 976,
+        "new": 164,
+        "inProgress": 28,
         "fixed": 0,
-        "closed": 636,
-        "todayNew": 10,
-        "newDelta": -24
+        "closed": 642,
+        "todayNew": 23,
+        "newDelta": -11
       },
       "funnel": [
         {
           "stage": "등록",
-          "count": 167,
-          "rate": 17.3,
+          "count": 164,
+          "rate": 16.8,
           "width": 26
         },
         {
@@ -2488,8 +2488,8 @@
         },
         {
           "stage": "진행중",
-          "count": 18,
-          "rate": 1.9,
+          "count": 28,
+          "rate": 2.9,
           "width": 18
         },
         {
@@ -2501,13 +2501,13 @@
         {
           "stage": "QA확인",
           "count": 136,
-          "rate": 14.1,
+          "rate": 13.9,
           "width": 21
         },
         {
           "stage": "종료",
-          "count": 636,
-          "rate": 66.0,
+          "count": 642,
+          "rate": 65.8,
           "width": 100
         }
       ],
@@ -2717,10 +2717,10 @@
         },
         {
           "date": "2026-08-26",
-          "new": 10,
-          "fixed": 4,
-          "closed": 2,
-          "deltaNew": -24
+          "new": 23,
+          "fixed": 10,
+          "closed": 8,
+          "deltaNew": -11
         }
       ],
       "versions": [
@@ -3384,11 +3384,11 @@
           "version": "[Hanpass][앱개편][BO]",
           "total": 39,
           "criticalMajor": 24,
-          "doneRate": 94.9,
+          "doneRate": 97.4,
           "status": [
             {
               "label": "등록",
-              "count": 2
+              "count": 1
             },
             {
               "label": "QA확인",
@@ -3396,7 +3396,7 @@
             },
             {
               "label": "종료",
-              "count": 3
+              "count": 4
             }
           ],
           "severity": [
@@ -3422,13 +3422,13 @@
         },
         {
           "version": "[Hanpass][앱개편][Native]",
-          "total": 138,
-          "criticalMajor": 52,
-          "doneRate": 45.7,
+          "total": 151,
+          "criticalMajor": 62,
+          "doneRate": 45.0,
           "status": [
             {
               "label": "등록",
-              "count": 53
+              "count": 51
             },
             {
               "label": "배정",
@@ -3436,31 +3436,31 @@
             },
             {
               "label": "진행중",
-              "count": 18
+              "count": 28
             },
             {
               "label": "종료",
-              "count": 63
+              "count": 68
             }
           ],
           "severity": [
             {
               "label": "Critical",
-              "count": 4
+              "count": 5
             },
             {
               "label": "Major",
-              "count": 48
+              "count": 57
             },
             {
               "label": "Minor",
-              "count": 86
+              "count": 89
             }
           ],
           "priority": [
             {
               "label": "Medium",
-              "count": 138
+              "count": 151
             }
           ]
         },
@@ -3736,7 +3736,7 @@
           "status": [
             {
               "label": "등록",
-              "count": 167
+              "count": 164
             },
             {
               "label": "배정",
@@ -3744,7 +3744,7 @@
             },
             {
               "label": "진행중",
-              "count": 18
+              "count": 28
             },
             {
               "label": "QA확인",
@@ -3752,21 +3752,21 @@
             },
             {
               "label": "종료",
-              "count": 636
+              "count": 642
             }
           ],
           "severity": [
             {
               "label": "Critical",
-              "count": 43
+              "count": 44
             },
             {
               "label": "Major",
-              "count": 276
+              "count": 285
             },
             {
               "label": "Minor",
-              "count": 547
+              "count": 550
             },
             {
               "label": "미지정",
@@ -3784,7 +3784,7 @@
             },
             {
               "label": "Medium",
-              "count": 920
+              "count": 933
             },
             {
               "label": "Low",
@@ -4007,10 +4007,10 @@
         },
         {
           "date": "2026-08-26",
-          "new": 10,
-          "fixed": 4,
-          "closed": 2,
-          "deltaNew": -24
+          "new": 23,
+          "fixed": 10,
+          "closed": 8,
+          "deltaNew": -11
         }
       ],
       "reportBoard": {
@@ -4040,199 +4040,157 @@
       },
       "recent": [
         {
-          "id": "ISSUE-1488",
-          "title": "[홈][iOS]QR송금 아이콘 다르게 노출되는 현상",
+          "id": "ISSUE-1504",
+          "title": "[PIN비밀번호입력][iOS] 비밀번호 오류 횟수 초과 팝업 내 ‘닫기’ 홈 화면으로 이동하는 현상 ",
           "status": "등록 (Registered)",
           "stage": "등록",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[Hanpass][앱개편][Native]",
-          "versionRaw": "[Hanpass][앱개편][Native]",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-08-26T04:25:00.000Z",
-          "createdDate": "2026-08-26",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/iOS-QR-3c873fbd195180e1b092c95b3dfe21fb",
-          "lastEditedAt": "2026-08-26T04:56:00.000Z"
-        },
-        {
-          "id": "ISSUE-1487",
-          "title": "[QR송금][AOS] 출금 수단 영역 연속 선택 시 바텀시트 중복 노출되는 현상 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[Hanpass][앱개편][기획]",
-          "versionRaw": "[Hanpass][앱개편][기획]",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-08-26T04:14:00.000Z",
-          "createdDate": "2026-08-26",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/QR-AOS-3c873fbd19518029b510d3e1cd83e90c",
-          "lastEditedAt": "2026-08-26T04:36:00.000Z"
-        },
-        {
-          "id": "ISSUE-1486",
-          "title": "[비밀번호찾기][공통] 승인대기 화면 내 문구 맞춤법 확인 필요 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "5.24.2",
-          "versionRaw": "5.24.2(비밀번호 찾기_ 점유인증)",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-08-26T02:05:00.000Z",
-          "createdDate": "2026-08-26",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/3c873fbd195180ec81a4d65232f9ff5e",
-          "lastEditedAt": "2026-08-26T02:26:00.000Z"
-        },
-        {
-          "id": "ISSUE-1485",
-          "title": "[비밀번호찾기][공통] ‘비밀번호 승인 대기중’ 팝업 문구 기획서와 상이 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "5.24.2",
-          "versionRaw": "5.24.2(비밀번호 찾기_ 점유인증)",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-08-26T02:04:00.000Z",
-          "createdDate": "2026-08-26",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/3c873fbd195180bd8c67dde2dc2570ee",
-          "lastEditedAt": "2026-08-26T04:55:00.000Z"
-        },
-        {
-          "id": "ISSUE-1484",
-          "title": "[QR송금][iOS]QR송금 보내기 Hanpass Wallet 이미지 상이한 현상",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[Hanpass][앱개편][기획]",
-          "versionRaw": "[Hanpass][앱개편][기획]",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-08-26T02:02:00.000Z",
-          "createdDate": "2026-08-26",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/QR-iOS-QR-Hanpass-Wallet-3c873fbd19518029a2f8e018dfae6ac4",
-          "lastEditedAt": "2026-08-26T02:27:00.000Z"
-        },
-        {
-          "id": "ISSUE-1483",
-          "title": "[비밀번호찾기][AOS] 불일치 팝업 노출 상태에서 입력 시간 초과 시 불일치 팝업 중복 노출되는 현상 ",
-          "status": "QA 검증 -회귀 (QA Verification)",
-          "stage": "QA확인",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "5.24.2",
-          "versionRaw": "5.24.2(비밀번호 찾기_ 점유인증)",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-08-26T01:16:00.000Z",
-          "createdDate": "2026-08-26",
-          "fixedAt": "2026-08-26T04:50:00.000Z",
-          "fixedDate": "2026-08-26",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/AOS-3c873fbd19518076a818c37f312f83cc",
-          "lastEditedAt": "2026-08-26T04:50:00.000Z"
-        },
-        {
-          "id": "ISSUE-1482",
-          "title": "[안내사항][AOS] 안내사항 영역 내 문구 미노출 현상",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[Hanpass][앱개편][Native]",
-          "versionRaw": "[Hanpass][앱개편][Native]",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-08-26T00:57:00.000Z",
-          "createdDate": "2026-08-26",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/AOS-3c873fbd19518062867bc54d6f55b50b",
-          "lastEditedAt": "2026-08-26T03:44:00.000Z"
-        },
-        {
-          "id": "ISSUE-1481",
-          "title": "[BO][마케팅배너관리] 본문 텍스트 장문 작성 시 레이아웃 결함 (영역 밀리는 현상) ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[Hanpass][앱개편][BO]",
-          "versionRaw": "[Hanpass][앱개편][BO]",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-08-26T00:14:00.000Z",
-          "createdDate": "2026-08-26",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/BO-3c873fbd195180ea991ddd91a371ce38",
-          "lastEditedAt": "2026-08-26T01:42:00.000Z"
-        },
-        {
-          "id": "ISSUE-1480",
-          "title": "[비밀번호찾기][AOS] 인증번호 4자리 입력 시 ‘다음’ 버튼 비활성화 되는 현상 ",
-          "status": "QA 검증 -회귀 (QA Verification)",
-          "stage": "QA확인",
           "severity": "Major",
           "priority": "Medium",
           "assignee": "미지정",
-          "version": "5.24.2",
-          "versionRaw": "5.24.2(비밀번호 찾기_ 점유인증)",
+          "version": "[Hanpass][앱개편][Native]",
+          "versionRaw": "[Hanpass][앱개편][Native]",
           "domain": "한패스",
           "os": "미지정",
-          "createdAt": "2026-08-26T00:06:00.000Z",
+          "createdAt": "2026-08-26T07:56:00.000Z",
           "createdDate": "2026-08-26",
-          "fixedAt": "2026-08-26T04:52:00.000Z",
-          "fixedDate": "2026-08-26",
+          "fixedAt": "",
+          "fixedDate": "",
           "closedAt": "",
           "closedDate": "",
-          "url": "https://app.notion.com/p/AOS-4-3c873fbd195180a6ab8ed5175d498fde",
-          "lastEditedAt": "2026-08-26T04:52:00.000Z"
+          "url": "https://app.notion.com/p/PIN-iOS-3c873fbd19518063922df87f13eb0c12",
+          "lastEditedAt": "2026-08-26T08:37:00.000Z"
         },
         {
-          "id": "ISSUE-1479",
-          "title": "[홈][마케팅배너][iOS] 본문 텍스트 장문 작성 시 말줄임 노출되는 현상 ",
-          "status": "처리중 (In Progress)",
-          "stage": "진행중",
+          "id": "ISSUE-1503",
+          "title": "[홈][온보딩배너][iOS] 네트워크 OFF 상태로 ‘신분증 미등록’ 배너 선택 시 ‘승인 대기’ 팝업 노출되는 현상 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[Hanpass][앱개편][Native]",
+          "versionRaw": "[Hanpass][앱개편][Native]",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-08-26T07:42:00.000Z",
+          "createdDate": "2026-08-26",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/iOS-OFF-3c873fbd195180c2baafc84195b86609",
+          "lastEditedAt": "2026-08-26T08:36:00.000Z"
+        },
+        {
+          "id": "ISSUE-1502",
+          "title": "[PIN비밀번호입력][AOS] 비밀번호 오류 횟수 초과 팝업 내 ‘닫기’ 선택 시 이전 화면으로 이동하는 현상 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[Hanpass][앱개편][Native]",
+          "versionRaw": "[Hanpass][앱개편][Native]",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-08-26T07:42:00.000Z",
+          "createdDate": "2026-08-26",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/PIN-AOS-3c873fbd195180438a7cf0cb26335a7d",
+          "lastEditedAt": "2026-08-26T08:36:00.000Z"
+        },
+        {
+          "id": "ISSUE-1501",
+          "title": "[홈][온보딩배너][AOS] ‘신분증 미등록’ 배너 진입 후 이탈 시 ‘회원가입 미완료’ 배너 노출되는 현상 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[Hanpass][앱개편][Native]",
+          "versionRaw": "[Hanpass][앱개편][Native]",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-08-26T07:25:00.000Z",
+          "createdDate": "2026-08-26",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/AOS-3c873fbd19518081b7e2e7d93c4cd2f9",
+          "lastEditedAt": "2026-08-26T08:36:00.000Z"
+        },
+        {
+          "id": "ISSUE-1500",
+          "title": "[홈][온보딩배너][AOS] ‘신분증 미등록’ 배너 진입 시 회원가입 이어하기 프로세스 진행되는 현상 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[Hanpass][앱개편][Native]",
+          "versionRaw": "[Hanpass][앱개편][Native]",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-08-26T07:15:00.000Z",
+          "createdDate": "2026-08-26",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/AOS-3c873fbd195180408bb9c0a450f11125",
+          "lastEditedAt": "2026-08-26T08:35:00.000Z"
+        },
+        {
+          "id": "ISSUE-1499",
+          "title": "[PIN비밀번호입력][iOS] 생체 인증 등록 불가한 현상 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[Hanpass][앱개편][Native]",
+          "versionRaw": "[Hanpass][앱개편][Native]",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-08-26T07:10:00.000Z",
+          "createdDate": "2026-08-26",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/PIN-iOS-3c873fbd195180f887bcdd8f279c77f2",
+          "lastEditedAt": "2026-08-26T07:20:00.000Z"
+        },
+        {
+          "id": "ISSUE-1498",
+          "title": "[PIN비밀번호입력][AOS]생체 인증 등록 후 다음 거래 시 생체 인증 제공 안 되는 현상 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[Hanpass][앱개편][Native]",
+          "versionRaw": "[Hanpass][앱개편][Native]",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-08-26T06:56:00.000Z",
+          "createdDate": "2026-08-26",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/PIN-AOS-3c873fbd195180039786d17447d9a79a",
+          "lastEditedAt": "2026-08-26T07:10:00.000Z"
+        },
+        {
+          "id": "ISSUE-1497",
+          "title": "[환율] UI 결함",
+          "status": "등록 (Registered)",
+          "stage": "등록",
           "severity": "Minor",
           "priority": "Medium",
           "assignee": "미지정",
@@ -4240,14 +4198,56 @@
           "versionRaw": "[Hanpass][앱개편][Native]",
           "domain": "한패스",
           "os": "미지정",
-          "createdAt": "2026-08-26T00:01:00.000Z",
+          "createdAt": "2026-08-26T06:46:00.000Z",
           "createdDate": "2026-08-26",
           "fixedAt": "",
           "fixedDate": "",
           "closedAt": "",
           "closedDate": "",
-          "url": "https://app.notion.com/p/iOS-3c873fbd1951805f8703dd669f9c3954",
-          "lastEditedAt": "2026-08-26T01:45:00.000Z"
+          "url": "https://app.notion.com/p/UI-3c873fbd19518013ab1ed6402ea10d43",
+          "lastEditedAt": "2026-08-26T06:53:00.000Z"
+        },
+        {
+          "id": "ISSUE-1496",
+          "title": "[PIN비밀번호입력][AOS] 해당 화면에서 다크모드 ON/OFF 시 키패드 오류 노출 되는 현상 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[Hanpass][앱개편][Native]",
+          "versionRaw": "[Hanpass][앱개편][Native]",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-08-26T06:08:00.000Z",
+          "createdDate": "2026-08-26",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/PIN-AOS-ON-OFF-3c873fbd1951800f8024efe73fc8f6d5",
+          "lastEditedAt": "2026-08-26T08:34:00.000Z"
+        },
+        {
+          "id": "ISSUE-1495",
+          "title": "[이벤트배너][iOS] 3개 초과 노출되는 현상 ",
+          "status": "처리중 (In Progress)",
+          "stage": "진행중",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[Hanpass][앱개편][Native]",
+          "versionRaw": "[Hanpass][앱개편][Native]",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-08-26T06:08:00.000Z",
+          "createdDate": "2026-08-26",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/iOS-3-3c873fbd1951809f814bfc1ad75c9c4d",
+          "lastEditedAt": "2026-08-26T08:09:00.000Z"
         }
       ]
     },

@@ -393,7 +393,7 @@
     </div>
   </div>
   <script id="dashboard-data" type="application/json">{
-  "generatedAt": "2026-08-27T19:13:09+00:00",
+  "generatedAt": "2026-08-28T07:01:32+00:00",
   "days": 30,
   "domainOrder": [
     "한패스",
@@ -402,19 +402,19 @@
   "domains": {
     "ALL": {
       "summary": {
-        "total": 1230,
+        "total": 1250,
         "new": 219,
-        "inProgress": 25,
+        "inProgress": 34,
         "fixed": 0,
-        "closed": 845,
-        "todayNew": 40,
-        "newDelta": 7
+        "closed": 857,
+        "todayNew": 20,
+        "newDelta": -20
       },
       "funnel": [
         {
           "stage": "등록",
           "count": 219,
-          "rate": 17.8,
+          "rate": 17.5,
           "width": 26
         },
         {
@@ -425,14 +425,14 @@
         },
         {
           "stage": "배정",
-          "count": 4,
-          "rate": 0.3,
+          "count": 3,
+          "rate": 0.2,
           "width": 18
         },
         {
           "stage": "진행중",
-          "count": 25,
-          "rate": 2.0,
+          "count": 34,
+          "rate": 2.7,
           "width": 18
         },
         {
@@ -444,30 +444,23 @@
         {
           "stage": "QA확인",
           "count": 137,
-          "rate": 11.1,
+          "rate": 11.0,
           "width": 18
         },
         {
           "stage": "종료",
-          "count": 845,
-          "rate": 68.7,
+          "count": 857,
+          "rate": 68.6,
           "width": 100
         }
       ],
       "daily": [
         {
-          "date": "2026-07-29",
-          "new": 5,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": 5
-        },
-        {
           "date": "2026-07-30",
           "new": 7,
           "fixed": 0,
           "closed": 0,
-          "deltaNew": 2
+          "deltaNew": 7
         },
         {
           "date": "2026-07-31",
@@ -664,6 +657,13 @@
           "fixed": 27,
           "closed": 27,
           "deltaNew": 7
+        },
+        {
+          "date": "2026-08-28",
+          "new": 20,
+          "fixed": 12,
+          "closed": 12,
+          "deltaNew": -20
         }
       ],
       "versions": [
@@ -1581,9 +1581,9 @@
         },
         {
           "version": "[Hanpass][앱개편][Native]",
-          "total": 199,
-          "criticalMajor": 78,
-          "doneRate": 46.2,
+          "total": 219,
+          "criticalMajor": 84,
+          "doneRate": 47.5,
           "status": [
             {
               "label": "등록",
@@ -1591,35 +1591,39 @@
             },
             {
               "label": "배정",
-              "count": 2
+              "count": 1
             },
             {
               "label": "진행중",
-              "count": 25
+              "count": 34
             },
             {
               "label": "종료",
-              "count": 92
+              "count": 104
             }
           ],
           "severity": [
             {
               "label": "Critical",
-              "count": 7
+              "count": 8
             },
             {
               "label": "Major",
-              "count": 71
+              "count": 76
             },
             {
               "label": "Minor",
-              "count": 121
+              "count": 134
+            },
+            {
+              "label": "미지정",
+              "count": 1
             }
           ],
           "priority": [
             {
               "label": "Medium",
-              "count": 199
+              "count": 219
             }
           ]
         },
@@ -1932,11 +1936,11 @@
             },
             {
               "label": "배정",
-              "count": 4
+              "count": 3
             },
             {
               "label": "진행중",
-              "count": 25
+              "count": 34
             },
             {
               "label": "QA확인",
@@ -1944,25 +1948,25 @@
             },
             {
               "label": "종료",
-              "count": 845
+              "count": 857
             }
           ],
           "severity": [
             {
               "label": "Critical",
-              "count": 50
+              "count": 51
             },
             {
               "label": "Major",
-              "count": 362
+              "count": 367
             },
             {
               "label": "Minor",
-              "count": 721
+              "count": 734
             },
             {
               "label": "미지정",
-              "count": 76
+              "count": 77
             },
             {
               "label": "개선 의견",
@@ -1976,7 +1980,7 @@
             },
             {
               "label": "Medium",
-              "count": 1186
+              "count": 1206
             },
             {
               "label": "Low",
@@ -1995,18 +1999,11 @@
       },
       "heatmap": [
         {
-          "date": "2026-07-29",
-          "new": 5,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": 5
-        },
-        {
           "date": "2026-07-30",
           "new": 7,
           "fixed": 0,
           "closed": 0,
-          "deltaNew": 2
+          "deltaNew": 7
         },
         {
           "date": "2026-07-31",
@@ -2203,6 +2200,13 @@
           "fixed": 27,
           "closed": 27,
           "deltaNew": 7
+        },
+        {
+          "date": "2026-08-28",
+          "new": 20,
+          "fixed": 12,
+          "closed": 12,
+          "deltaNew": -20
         }
       ],
       "reportBoard": {
@@ -2246,50 +2250,29 @@
       },
       "recent": [
         {
-          "id": "ISSUE-1558",
-          "title": "[국내송금][AOS] 최대 포인트 적용 후 추가 포인트 입력 및 적용이 가능한 현상",
+          "id": "ISSUE-1579",
+          "title": "[해외송금][공통] ‘자금 출처 BS’ 내 타이틀 문구 기획서와 상이 ",
           "status": "등록 (Registered)",
           "stage": "등록",
-          "severity": "Major",
+          "severity": "미지정",
           "priority": "Medium",
           "assignee": "미지정",
           "version": "[Hanpass][앱개편][Native]",
           "versionRaw": "[Hanpass][앱개편][Native]",
           "domain": "한패스",
           "os": "미지정",
-          "createdAt": "2026-08-27T09:41:00.000Z",
-          "createdDate": "2026-08-27",
+          "createdAt": "2026-08-28T06:58:00.000Z",
+          "createdDate": "2026-08-28",
           "fixedAt": "",
           "fixedDate": "",
           "closedAt": "",
           "closedDate": "",
-          "url": "https://app.notion.com/p/AOS-3c973fbd195180bf8629e7a41f36d7cf",
-          "lastEditedAt": "2026-08-27T09:43:00.000Z"
+          "url": "https://app.notion.com/p/BS-3ca73fbd195180d085a2dd4c317630c5",
+          "lastEditedAt": "2026-08-28T07:01:00.000Z"
         },
         {
-          "id": "ISSUE-1557",
-          "title": "[국내송금][AOS] 최대 사용 가능 포인트 초과 입력 시 ‘적용’ 버튼이 활성화되는 현상",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Major",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[Hanpass][앱개편][Native]",
-          "versionRaw": "[Hanpass][앱개편][Native]",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-08-27T09:34:00.000Z",
-          "createdDate": "2026-08-27",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/AOS-3c973fbd1951809b9156ef66ca5c0c53",
-          "lastEditedAt": "2026-08-27T09:36:00.000Z"
-        },
-        {
-          "id": "ISSUE-1556",
-          "title": "[국내송금][공통] 최소 송금 금액 미만 입력 시 에러 문구 기획 정의 오류 문의",
+          "id": "ISSUE-1578",
+          "title": "[해외송금][공통] 포인트 최소 사용 조건 에러 문구 개선 필요",
           "status": "등록 (Registered)",
           "stage": "등록",
           "severity": "Minor",
@@ -2299,18 +2282,18 @@
           "versionRaw": "[Hanpass][앱개편][Native]",
           "domain": "한패스",
           "os": "미지정",
-          "createdAt": "2026-08-27T09:21:00.000Z",
-          "createdDate": "2026-08-27",
+          "createdAt": "2026-08-28T06:24:00.000Z",
+          "createdDate": "2026-08-28",
           "fixedAt": "",
           "fixedDate": "",
           "closedAt": "",
           "closedDate": "",
-          "url": "https://app.notion.com/p/3c973fbd19518091897efbfc30207ab3",
-          "lastEditedAt": "2026-08-27T09:27:00.000Z"
+          "url": "https://app.notion.com/p/3ca73fbd1951805e8c3ddba011f72855",
+          "lastEditedAt": "2026-08-28T06:29:00.000Z"
         },
         {
-          "id": "ISSUE-1555",
-          "title": "[해외송금][공통] 금액 입력 필드 에러 메시지 문구 기획서와 상이 ",
+          "id": "ISSUE-1577",
+          "title": "[해외송금][공통] ‘가상계좌 입금 안내’ 화면 내 복사 버튼 연속 선택 가능한 현상 ",
           "status": "등록 (Registered)",
           "stage": "등록",
           "severity": "Minor",
@@ -2320,39 +2303,18 @@
           "versionRaw": "[Hanpass][앱개편][Native]",
           "domain": "한패스",
           "os": "미지정",
-          "createdAt": "2026-08-27T08:54:00.000Z",
-          "createdDate": "2026-08-27",
+          "createdAt": "2026-08-28T06:18:00.000Z",
+          "createdDate": "2026-08-28",
           "fixedAt": "",
           "fixedDate": "",
           "closedAt": "",
           "closedDate": "",
-          "url": "https://app.notion.com/p/3c973fbd195180c48687de9a99fad3a6",
-          "lastEditedAt": "2026-08-27T09:01:00.000Z"
+          "url": "https://app.notion.com/p/3ca73fbd1951807bbb3cd4a58b8408eb",
+          "lastEditedAt": "2026-08-28T06:31:00.000Z"
         },
         {
-          "id": "ISSUE-1554",
-          "title": "[국내송금][iOS] 송금정보 확인 화면 내 버튼 문구 기획서와 상이",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[Hanpass][앱개편][Native]",
-          "versionRaw": "[Hanpass][앱개편][Native]",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-08-27T08:53:00.000Z",
-          "createdDate": "2026-08-27",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/iOS-3c973fbd1951807f8152dfc46ef779eb",
-          "lastEditedAt": "2026-08-27T08:59:00.000Z"
-        },
-        {
-          "id": "ISSUE-1553",
-          "title": "[마이페이지][공통]앱설정-사용국가변경 등록하기 버튼 유무 상이한 현상 ",
+          "id": "ISSUE-1576",
+          "title": "[해외송금][iOS] 수수료 3000P 미만 경우에도 사용 가능 포인트 노출되는 현상 ",
           "status": "등록 (Registered)",
           "stage": "등록",
           "severity": "Major",
@@ -2362,18 +2324,18 @@
           "versionRaw": "[Hanpass][앱개편][Native]",
           "domain": "한패스",
           "os": "미지정",
-          "createdAt": "2026-08-27T08:44:00.000Z",
-          "createdDate": "2026-08-27",
+          "createdAt": "2026-08-28T06:01:00.000Z",
+          "createdDate": "2026-08-28",
           "fixedAt": "",
           "fixedDate": "",
           "closedAt": "",
           "closedDate": "",
-          "url": "https://app.notion.com/p/3c973fbd195180f4ac96f05bab4124ee",
-          "lastEditedAt": "2026-08-27T09:14:00.000Z"
+          "url": "https://app.notion.com/p/iOS-3000P-3ca73fbd195180279392e3456a6bb752",
+          "lastEditedAt": "2026-08-28T06:57:00.000Z"
         },
         {
-          "id": "ISSUE-1552",
-          "title": "[국내송금][AOS] PIN 입력 화면 안내 문구 내 ‘(PIN)’ 텍스트 미노출 현상",
+          "id": "ISSUE-1575",
+          "title": "[해외송금][iOS] ‘가상계좌 입금 안내’ 화면 내 문구 노출 기획서와 상이 ",
           "status": "등록 (Registered)",
           "stage": "등록",
           "severity": "Minor",
@@ -2383,18 +2345,18 @@
           "versionRaw": "[Hanpass][앱개편][Native]",
           "domain": "한패스",
           "os": "미지정",
-          "createdAt": "2026-08-27T08:42:00.000Z",
-          "createdDate": "2026-08-27",
+          "createdAt": "2026-08-28T05:39:00.000Z",
+          "createdDate": "2026-08-28",
           "fixedAt": "",
           "fixedDate": "",
           "closedAt": "",
           "closedDate": "",
-          "url": "https://app.notion.com/p/AOS-PIN-PIN-3c973fbd1951804892eadad8f0ef5916",
-          "lastEditedAt": "2026-08-27T08:47:00.000Z"
+          "url": "https://app.notion.com/p/iOS-3ca73fbd195180b3a0b3cb8d55068086",
+          "lastEditedAt": "2026-08-28T05:54:00.000Z"
         },
         {
-          "id": "ISSUE-1551",
-          "title": "[국내송금][공통] 송금정보 확인 화면 내 통화 ‘원’으로 노출 되는 현상 ",
+          "id": "ISSUE-1574",
+          "title": "[국내송금][AOS] 포인트 안내 BS 기획서와 상이  ",
           "status": "등록 (Registered)",
           "stage": "등록",
           "severity": "Minor",
@@ -2404,39 +2366,18 @@
           "versionRaw": "[Hanpass][앱개편][Native]",
           "domain": "한패스",
           "os": "미지정",
-          "createdAt": "2026-08-27T08:35:00.000Z",
-          "createdDate": "2026-08-27",
+          "createdAt": "2026-08-28T05:22:00.000Z",
+          "createdDate": "2026-08-28",
           "fixedAt": "",
           "fixedDate": "",
           "closedAt": "",
           "closedDate": "",
-          "url": "https://app.notion.com/p/3c973fbd19518048bdbee661cea5740c",
-          "lastEditedAt": "2026-08-27T08:46:00.000Z"
+          "url": "https://app.notion.com/p/AOS-BS-3ca73fbd19518027a5bef3266e8cad7e",
+          "lastEditedAt": "2026-08-28T05:49:00.000Z"
         },
         {
-          "id": "ISSUE-1549",
-          "title": "[국내송금][AOS] 송금수수료 안내 문구 미노출 되는 현상 ",
-          "status": "처리중 (In Progress)",
-          "stage": "진행중",
-          "severity": "Major",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[Hanpass][앱개편][Native]",
-          "versionRaw": "[Hanpass][앱개편][Native]",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-08-27T07:05:00.000Z",
-          "createdDate": "2026-08-27",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/AOS-3c973fbd195180de8123eb9d91e2e305",
-          "lastEditedAt": "2026-08-27T08:59:00.000Z"
-        },
-        {
-          "id": "ISSUE-1548",
-          "title": "[국내송금][AOS] 송금 완료 화면 내 내역관리 이동 시 ‘해외송금’ 탭으로 이동하는 현상 ",
+          "id": "ISSUE-1573",
+          "title": "[해외송금][iOS] 계좌 미등록 상태로 PIN번호 변경 시 정의되지 않은 팝업 노출되는 현상 ",
           "status": "등록 (Registered)",
           "stage": "등록",
           "severity": "Major",
@@ -2446,33 +2387,96 @@
           "versionRaw": "[Hanpass][앱개편][Native]",
           "domain": "한패스",
           "os": "미지정",
-          "createdAt": "2026-08-27T07:00:00.000Z",
-          "createdDate": "2026-08-27",
+          "createdAt": "2026-08-28T04:38:00.000Z",
+          "createdDate": "2026-08-28",
           "fixedAt": "",
           "fixedDate": "",
           "closedAt": "",
           "closedDate": "",
-          "url": "https://app.notion.com/p/AOS-3c973fbd195180ab9401e4b48cc545e4",
-          "lastEditedAt": "2026-08-27T08:59:00.000Z"
+          "url": "https://app.notion.com/p/iOS-PIN-3ca73fbd19518042b00bfb46e81cf49e",
+          "lastEditedAt": "2026-08-28T04:44:00.000Z"
+        },
+        {
+          "id": "ISSUE-1572",
+          "title": "[해외송금][iOS] 공지 안내 BS 내 안내 문구 중복 노출되는 현상 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[Hanpass][앱개편][Native]",
+          "versionRaw": "[Hanpass][앱개편][Native]",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-08-28T04:20:00.000Z",
+          "createdDate": "2026-08-28",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/iOS-BS-3ca73fbd195180eeaa24c1e1bf837147",
+          "lastEditedAt": "2026-08-28T04:24:00.000Z"
+        },
+        {
+          "id": "ISSUE-1571",
+          "title": "[홈][월렛][AOS] 계좌 없는 경우 ‘간편하게 계좌만들기’ 미노출 되는 현상 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[Hanpass][앱개편][Native]",
+          "versionRaw": "[Hanpass][앱개편][Native]",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-08-28T04:11:00.000Z",
+          "createdDate": "2026-08-28",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/AOS-3ca73fbd195180c99b31f41f0ccb8ca9",
+          "lastEditedAt": "2026-08-28T04:18:00.000Z"
+        },
+        {
+          "id": "ISSUE-1570",
+          "title": "[해외송금][AOS] 국가/통화 검색 시 특수문자 입력 가능한 현상 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[Hanpass][앱개편][Native]",
+          "versionRaw": "[Hanpass][앱개편][Native]",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-08-28T04:06:00.000Z",
+          "createdDate": "2026-08-28",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/AOS-3ca73fbd19518090a507e059018a678b",
+          "lastEditedAt": "2026-08-28T04:14:00.000Z"
         }
       ]
     },
     "한패스": {
       "summary": {
-        "total": 1026,
+        "total": 1046,
         "new": 192,
-        "inProgress": 25,
+        "inProgress": 34,
         "fixed": 0,
-        "closed": 669,
-        "todayNew": 40,
-        "newDelta": 7
+        "closed": 681,
+        "todayNew": 20,
+        "newDelta": -20
       },
       "funnel": [
         {
           "stage": "등록",
           "count": 192,
-          "rate": 18.7,
-          "width": 29
+          "rate": 18.4,
+          "width": 28
         },
         {
           "stage": "검토",
@@ -2482,14 +2486,14 @@
         },
         {
           "stage": "배정",
-          "count": 4,
-          "rate": 0.4,
+          "count": 3,
+          "rate": 0.3,
           "width": 18
         },
         {
           "stage": "진행중",
-          "count": 25,
-          "rate": 2.4,
+          "count": 34,
+          "rate": 3.3,
           "width": 18
         },
         {
@@ -2501,30 +2505,23 @@
         {
           "stage": "QA확인",
           "count": 136,
-          "rate": 13.3,
+          "rate": 13.0,
           "width": 20
         },
         {
           "stage": "종료",
-          "count": 669,
-          "rate": 65.2,
+          "count": 681,
+          "rate": 65.1,
           "width": 100
         }
       ],
       "daily": [
         {
-          "date": "2026-07-29",
-          "new": 5,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": 5
-        },
-        {
           "date": "2026-07-30",
           "new": 7,
           "fixed": 0,
           "closed": 0,
-          "deltaNew": 2
+          "deltaNew": 7
         },
         {
           "date": "2026-07-31",
@@ -2721,6 +2718,13 @@
           "fixed": 27,
           "closed": 27,
           "deltaNew": 7
+        },
+        {
+          "date": "2026-08-28",
+          "new": 20,
+          "fixed": 12,
+          "closed": 12,
+          "deltaNew": -20
         }
       ],
       "versions": [
@@ -3422,9 +3426,9 @@
         },
         {
           "version": "[Hanpass][앱개편][Native]",
-          "total": 199,
-          "criticalMajor": 78,
-          "doneRate": 46.2,
+          "total": 219,
+          "criticalMajor": 84,
+          "doneRate": 47.5,
           "status": [
             {
               "label": "등록",
@@ -3432,35 +3436,39 @@
             },
             {
               "label": "배정",
-              "count": 2
+              "count": 1
             },
             {
               "label": "진행중",
-              "count": 25
+              "count": 34
             },
             {
               "label": "종료",
-              "count": 92
+              "count": 104
             }
           ],
           "severity": [
             {
               "label": "Critical",
-              "count": 7
+              "count": 8
             },
             {
               "label": "Major",
-              "count": 71
+              "count": 76
             },
             {
               "label": "Minor",
-              "count": 121
+              "count": 134
+            },
+            {
+              "label": "미지정",
+              "count": 1
             }
           ],
           "priority": [
             {
               "label": "Medium",
-              "count": 199
+              "count": 219
             }
           ]
         },
@@ -3740,11 +3748,11 @@
             },
             {
               "label": "배정",
-              "count": 4
+              "count": 3
             },
             {
               "label": "진행중",
-              "count": 25
+              "count": 34
             },
             {
               "label": "QA확인",
@@ -3752,25 +3760,25 @@
             },
             {
               "label": "종료",
-              "count": 669
+              "count": 681
             }
           ],
           "severity": [
             {
               "label": "Critical",
-              "count": 46
+              "count": 47
             },
             {
               "label": "Major",
-              "count": 299
+              "count": 304
             },
             {
               "label": "Minor",
-              "count": 584
+              "count": 597
             },
             {
               "label": "미지정",
-              "count": 76
+              "count": 77
             },
             {
               "label": "개선 의견",
@@ -3784,7 +3792,7 @@
             },
             {
               "label": "Medium",
-              "count": 983
+              "count": 1003
             },
             {
               "label": "Low",
@@ -3803,18 +3811,11 @@
       },
       "heatmap": [
         {
-          "date": "2026-07-29",
-          "new": 5,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": 5
-        },
-        {
           "date": "2026-07-30",
           "new": 7,
           "fixed": 0,
           "closed": 0,
-          "deltaNew": 2
+          "deltaNew": 7
         },
         {
           "date": "2026-07-31",
@@ -4011,6 +4012,13 @@
           "fixed": 27,
           "closed": 27,
           "deltaNew": 7
+        },
+        {
+          "date": "2026-08-28",
+          "new": 20,
+          "fixed": 12,
+          "closed": 12,
+          "deltaNew": -20
         }
       ],
       "reportBoard": {
@@ -4040,50 +4048,29 @@
       },
       "recent": [
         {
-          "id": "ISSUE-1558",
-          "title": "[국내송금][AOS] 최대 포인트 적용 후 추가 포인트 입력 및 적용이 가능한 현상",
+          "id": "ISSUE-1579",
+          "title": "[해외송금][공통] ‘자금 출처 BS’ 내 타이틀 문구 기획서와 상이 ",
           "status": "등록 (Registered)",
           "stage": "등록",
-          "severity": "Major",
+          "severity": "미지정",
           "priority": "Medium",
           "assignee": "미지정",
           "version": "[Hanpass][앱개편][Native]",
           "versionRaw": "[Hanpass][앱개편][Native]",
           "domain": "한패스",
           "os": "미지정",
-          "createdAt": "2026-08-27T09:41:00.000Z",
-          "createdDate": "2026-08-27",
+          "createdAt": "2026-08-28T06:58:00.000Z",
+          "createdDate": "2026-08-28",
           "fixedAt": "",
           "fixedDate": "",
           "closedAt": "",
           "closedDate": "",
-          "url": "https://app.notion.com/p/AOS-3c973fbd195180bf8629e7a41f36d7cf",
-          "lastEditedAt": "2026-08-27T09:43:00.000Z"
+          "url": "https://app.notion.com/p/BS-3ca73fbd195180d085a2dd4c317630c5",
+          "lastEditedAt": "2026-08-28T07:01:00.000Z"
         },
         {
-          "id": "ISSUE-1557",
-          "title": "[국내송금][AOS] 최대 사용 가능 포인트 초과 입력 시 ‘적용’ 버튼이 활성화되는 현상",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Major",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[Hanpass][앱개편][Native]",
-          "versionRaw": "[Hanpass][앱개편][Native]",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-08-27T09:34:00.000Z",
-          "createdDate": "2026-08-27",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/AOS-3c973fbd1951809b9156ef66ca5c0c53",
-          "lastEditedAt": "2026-08-27T09:36:00.000Z"
-        },
-        {
-          "id": "ISSUE-1556",
-          "title": "[국내송금][공통] 최소 송금 금액 미만 입력 시 에러 문구 기획 정의 오류 문의",
+          "id": "ISSUE-1578",
+          "title": "[해외송금][공통] 포인트 최소 사용 조건 에러 문구 개선 필요",
           "status": "등록 (Registered)",
           "stage": "등록",
           "severity": "Minor",
@@ -4093,18 +4080,18 @@
           "versionRaw": "[Hanpass][앱개편][Native]",
           "domain": "한패스",
           "os": "미지정",
-          "createdAt": "2026-08-27T09:21:00.000Z",
-          "createdDate": "2026-08-27",
+          "createdAt": "2026-08-28T06:24:00.000Z",
+          "createdDate": "2026-08-28",
           "fixedAt": "",
           "fixedDate": "",
           "closedAt": "",
           "closedDate": "",
-          "url": "https://app.notion.com/p/3c973fbd19518091897efbfc30207ab3",
-          "lastEditedAt": "2026-08-27T09:27:00.000Z"
+          "url": "https://app.notion.com/p/3ca73fbd1951805e8c3ddba011f72855",
+          "lastEditedAt": "2026-08-28T06:29:00.000Z"
         },
         {
-          "id": "ISSUE-1555",
-          "title": "[해외송금][공통] 금액 입력 필드 에러 메시지 문구 기획서와 상이 ",
+          "id": "ISSUE-1577",
+          "title": "[해외송금][공통] ‘가상계좌 입금 안내’ 화면 내 복사 버튼 연속 선택 가능한 현상 ",
           "status": "등록 (Registered)",
           "stage": "등록",
           "severity": "Minor",
@@ -4114,39 +4101,18 @@
           "versionRaw": "[Hanpass][앱개편][Native]",
           "domain": "한패스",
           "os": "미지정",
-          "createdAt": "2026-08-27T08:54:00.000Z",
-          "createdDate": "2026-08-27",
+          "createdAt": "2026-08-28T06:18:00.000Z",
+          "createdDate": "2026-08-28",
           "fixedAt": "",
           "fixedDate": "",
           "closedAt": "",
           "closedDate": "",
-          "url": "https://app.notion.com/p/3c973fbd195180c48687de9a99fad3a6",
-          "lastEditedAt": "2026-08-27T09:01:00.000Z"
+          "url": "https://app.notion.com/p/3ca73fbd1951807bbb3cd4a58b8408eb",
+          "lastEditedAt": "2026-08-28T06:31:00.000Z"
         },
         {
-          "id": "ISSUE-1554",
-          "title": "[국내송금][iOS] 송금정보 확인 화면 내 버튼 문구 기획서와 상이",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[Hanpass][앱개편][Native]",
-          "versionRaw": "[Hanpass][앱개편][Native]",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-08-27T08:53:00.000Z",
-          "createdDate": "2026-08-27",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/iOS-3c973fbd1951807f8152dfc46ef779eb",
-          "lastEditedAt": "2026-08-27T08:59:00.000Z"
-        },
-        {
-          "id": "ISSUE-1553",
-          "title": "[마이페이지][공통]앱설정-사용국가변경 등록하기 버튼 유무 상이한 현상 ",
+          "id": "ISSUE-1576",
+          "title": "[해외송금][iOS] 수수료 3000P 미만 경우에도 사용 가능 포인트 노출되는 현상 ",
           "status": "등록 (Registered)",
           "stage": "등록",
           "severity": "Major",
@@ -4156,18 +4122,18 @@
           "versionRaw": "[Hanpass][앱개편][Native]",
           "domain": "한패스",
           "os": "미지정",
-          "createdAt": "2026-08-27T08:44:00.000Z",
-          "createdDate": "2026-08-27",
+          "createdAt": "2026-08-28T06:01:00.000Z",
+          "createdDate": "2026-08-28",
           "fixedAt": "",
           "fixedDate": "",
           "closedAt": "",
           "closedDate": "",
-          "url": "https://app.notion.com/p/3c973fbd195180f4ac96f05bab4124ee",
-          "lastEditedAt": "2026-08-27T09:14:00.000Z"
+          "url": "https://app.notion.com/p/iOS-3000P-3ca73fbd195180279392e3456a6bb752",
+          "lastEditedAt": "2026-08-28T06:57:00.000Z"
         },
         {
-          "id": "ISSUE-1552",
-          "title": "[국내송금][AOS] PIN 입력 화면 안내 문구 내 ‘(PIN)’ 텍스트 미노출 현상",
+          "id": "ISSUE-1575",
+          "title": "[해외송금][iOS] ‘가상계좌 입금 안내’ 화면 내 문구 노출 기획서와 상이 ",
           "status": "등록 (Registered)",
           "stage": "등록",
           "severity": "Minor",
@@ -4177,18 +4143,18 @@
           "versionRaw": "[Hanpass][앱개편][Native]",
           "domain": "한패스",
           "os": "미지정",
-          "createdAt": "2026-08-27T08:42:00.000Z",
-          "createdDate": "2026-08-27",
+          "createdAt": "2026-08-28T05:39:00.000Z",
+          "createdDate": "2026-08-28",
           "fixedAt": "",
           "fixedDate": "",
           "closedAt": "",
           "closedDate": "",
-          "url": "https://app.notion.com/p/AOS-PIN-PIN-3c973fbd1951804892eadad8f0ef5916",
-          "lastEditedAt": "2026-08-27T08:47:00.000Z"
+          "url": "https://app.notion.com/p/iOS-3ca73fbd195180b3a0b3cb8d55068086",
+          "lastEditedAt": "2026-08-28T05:54:00.000Z"
         },
         {
-          "id": "ISSUE-1551",
-          "title": "[국내송금][공통] 송금정보 확인 화면 내 통화 ‘원’으로 노출 되는 현상 ",
+          "id": "ISSUE-1574",
+          "title": "[국내송금][AOS] 포인트 안내 BS 기획서와 상이  ",
           "status": "등록 (Registered)",
           "stage": "등록",
           "severity": "Minor",
@@ -4198,39 +4164,18 @@
           "versionRaw": "[Hanpass][앱개편][Native]",
           "domain": "한패스",
           "os": "미지정",
-          "createdAt": "2026-08-27T08:35:00.000Z",
-          "createdDate": "2026-08-27",
+          "createdAt": "2026-08-28T05:22:00.000Z",
+          "createdDate": "2026-08-28",
           "fixedAt": "",
           "fixedDate": "",
           "closedAt": "",
           "closedDate": "",
-          "url": "https://app.notion.com/p/3c973fbd19518048bdbee661cea5740c",
-          "lastEditedAt": "2026-08-27T08:46:00.000Z"
+          "url": "https://app.notion.com/p/AOS-BS-3ca73fbd19518027a5bef3266e8cad7e",
+          "lastEditedAt": "2026-08-28T05:49:00.000Z"
         },
         {
-          "id": "ISSUE-1549",
-          "title": "[국내송금][AOS] 송금수수료 안내 문구 미노출 되는 현상 ",
-          "status": "처리중 (In Progress)",
-          "stage": "진행중",
-          "severity": "Major",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[Hanpass][앱개편][Native]",
-          "versionRaw": "[Hanpass][앱개편][Native]",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-08-27T07:05:00.000Z",
-          "createdDate": "2026-08-27",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/AOS-3c973fbd195180de8123eb9d91e2e305",
-          "lastEditedAt": "2026-08-27T08:59:00.000Z"
-        },
-        {
-          "id": "ISSUE-1548",
-          "title": "[국내송금][AOS] 송금 완료 화면 내 내역관리 이동 시 ‘해외송금’ 탭으로 이동하는 현상 ",
+          "id": "ISSUE-1573",
+          "title": "[해외송금][iOS] 계좌 미등록 상태로 PIN번호 변경 시 정의되지 않은 팝업 노출되는 현상 ",
           "status": "등록 (Registered)",
           "stage": "등록",
           "severity": "Major",
@@ -4240,14 +4185,77 @@
           "versionRaw": "[Hanpass][앱개편][Native]",
           "domain": "한패스",
           "os": "미지정",
-          "createdAt": "2026-08-27T07:00:00.000Z",
-          "createdDate": "2026-08-27",
+          "createdAt": "2026-08-28T04:38:00.000Z",
+          "createdDate": "2026-08-28",
           "fixedAt": "",
           "fixedDate": "",
           "closedAt": "",
           "closedDate": "",
-          "url": "https://app.notion.com/p/AOS-3c973fbd195180ab9401e4b48cc545e4",
-          "lastEditedAt": "2026-08-27T08:59:00.000Z"
+          "url": "https://app.notion.com/p/iOS-PIN-3ca73fbd19518042b00bfb46e81cf49e",
+          "lastEditedAt": "2026-08-28T04:44:00.000Z"
+        },
+        {
+          "id": "ISSUE-1572",
+          "title": "[해외송금][iOS] 공지 안내 BS 내 안내 문구 중복 노출되는 현상 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[Hanpass][앱개편][Native]",
+          "versionRaw": "[Hanpass][앱개편][Native]",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-08-28T04:20:00.000Z",
+          "createdDate": "2026-08-28",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/iOS-BS-3ca73fbd195180eeaa24c1e1bf837147",
+          "lastEditedAt": "2026-08-28T04:24:00.000Z"
+        },
+        {
+          "id": "ISSUE-1571",
+          "title": "[홈][월렛][AOS] 계좌 없는 경우 ‘간편하게 계좌만들기’ 미노출 되는 현상 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[Hanpass][앱개편][Native]",
+          "versionRaw": "[Hanpass][앱개편][Native]",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-08-28T04:11:00.000Z",
+          "createdDate": "2026-08-28",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/AOS-3ca73fbd195180c99b31f41f0ccb8ca9",
+          "lastEditedAt": "2026-08-28T04:18:00.000Z"
+        },
+        {
+          "id": "ISSUE-1570",
+          "title": "[해외송금][AOS] 국가/통화 검색 시 특수문자 입력 가능한 현상 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[Hanpass][앱개편][Native]",
+          "versionRaw": "[Hanpass][앱개편][Native]",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-08-28T04:06:00.000Z",
+          "createdDate": "2026-08-28",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/AOS-3ca73fbd19518090a507e059018a678b",
+          "lastEditedAt": "2026-08-28T04:14:00.000Z"
         }
       ]
     },
@@ -4306,13 +4314,6 @@
         }
       ],
       "daily": [
-        {
-          "date": "2026-07-29",
-          "new": 0,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": 0
-        },
         {
           "date": "2026-07-30",
           "new": 0,
@@ -4511,6 +4512,13 @@
         },
         {
           "date": "2026-08-27",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-08-28",
           "new": 0,
           "fixed": 0,
           "closed": 0,
@@ -4826,13 +4834,6 @@
       },
       "heatmap": [
         {
-          "date": "2026-07-29",
-          "new": 0,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": 0
-        },
-        {
           "date": "2026-07-30",
           "new": 0,
           "fixed": 0,
@@ -5030,6 +5031,13 @@
         },
         {
           "date": "2026-08-27",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-08-28",
           "new": 0,
           "fixed": 0,
           "closed": 0,

@@ -393,7 +393,7 @@
     </div>
   </div>
   <script id="dashboard-data" type="application/json">{
-  "generatedAt": "2026-08-31T16:18:38+00:00",
+  "generatedAt": "2026-09-01T01:58:28+00:00",
   "days": 30,
   "domainOrder": [
     "한패스",
@@ -402,20 +402,20 @@
   "domains": {
     "ALL": {
       "summary": {
-        "total": 1305,
-        "new": 246,
-        "inProgress": 36,
+        "total": 1313,
+        "new": 253,
+        "inProgress": 38,
         "fixed": 0,
         "closed": 883,
-        "todayNew": 38,
-        "newDelta": 37
+        "todayNew": 9,
+        "newDelta": -28
       },
       "funnel": [
         {
           "stage": "등록",
-          "count": 246,
-          "rate": 18.9,
-          "width": 28
+          "count": 253,
+          "rate": 19.3,
+          "width": 29
         },
         {
           "stage": "검토",
@@ -425,14 +425,14 @@
         },
         {
           "stage": "배정",
-          "count": 3,
+          "count": 2,
           "rate": 0.2,
           "width": 18
         },
         {
           "stage": "진행중",
-          "count": 36,
-          "rate": 2.8,
+          "count": 38,
+          "rate": 2.9,
           "width": 18
         },
         {
@@ -444,24 +444,17 @@
         {
           "stage": "QA확인",
           "count": 137,
-          "rate": 10.5,
+          "rate": 10.4,
           "width": 18
         },
         {
           "stage": "종료",
           "count": 883,
-          "rate": 67.7,
+          "rate": 67.3,
           "width": 100
         }
       ],
       "daily": [
-        {
-          "date": "2026-08-02",
-          "new": 0,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": 0
-        },
         {
           "date": "2026-08-03",
           "new": 0,
@@ -660,10 +653,17 @@
         },
         {
           "date": "2026-08-31",
-          "new": 38,
-          "fixed": 130,
-          "closed": 130,
-          "deltaNew": 37
+          "new": 37,
+          "fixed": 115,
+          "closed": 115,
+          "deltaNew": 36
+        },
+        {
+          "date": "2026-09-01",
+          "new": 9,
+          "fixed": 15,
+          "closed": 15,
+          "deltaNew": -28
         }
       ],
       "versions": [
@@ -1605,13 +1605,13 @@
         },
         {
           "version": "[Hanpass][앱개편][Native]-Dev",
-          "total": 238,
+          "total": 237,
           "criticalMajor": 89,
-          "doneRate": 54.6,
+          "doneRate": 54.9,
           "status": [
             {
               "label": "등록",
-              "count": 75
+              "count": 74
             },
             {
               "label": "배정",
@@ -1638,34 +1638,34 @@
             {
               "label": "Minor",
               "count": 148
-            },
-            {
-              "label": "미지정",
-              "count": 1
             }
           ],
           "priority": [
             {
               "label": "Medium",
-              "count": 238
+              "count": 237
             }
           ]
         },
         {
           "version": "[Hanpass][앱개편][Native]-LiveTest",
-          "total": 4,
-          "criticalMajor": 3,
+          "total": 5,
+          "criticalMajor": 4,
           "doneRate": 0.0,
           "status": [
             {
               "label": "등록",
-              "count": 4
+              "count": 3
+            },
+            {
+              "label": "진행중",
+              "count": 2
             }
           ],
           "severity": [
             {
               "label": "Major",
-              "count": 3
+              "count": 4
             },
             {
               "label": "Minor",
@@ -1675,7 +1675,7 @@
           "priority": [
             {
               "label": "Medium",
-              "count": 4
+              "count": 5
             }
           ]
         },
@@ -1771,11 +1771,11 @@
           "status": [
             {
               "label": "등록",
-              "count": 11
+              "count": 12
             },
             {
               "label": "배정",
-              "count": 2
+              "count": 1
             },
             {
               "label": "QA확인",
@@ -1804,6 +1804,30 @@
             {
               "label": "Medium",
               "count": 117
+            }
+          ]
+        },
+        {
+          "version": "[포인트] 해외송금 미션 중단",
+          "total": 1,
+          "criticalMajor": 1,
+          "doneRate": 0.0,
+          "status": [
+            {
+              "label": "등록",
+              "count": 1
+            }
+          ],
+          "severity": [
+            {
+              "label": "Major",
+              "count": 1
+            }
+          ],
+          "priority": [
+            {
+              "label": "Medium",
+              "count": 1
             }
           ]
         },
@@ -1841,13 +1865,13 @@
         },
         {
           "version": "콕뱅크",
-          "total": 30,
-          "criticalMajor": 11,
+          "total": 37,
+          "criticalMajor": 17,
           "doneRate": 0.0,
           "status": [
             {
               "label": "등록",
-              "count": 27
+              "count": 34
             },
             {
               "label": "진행중",
@@ -1857,11 +1881,11 @@
           "severity": [
             {
               "label": "Major",
-              "count": 11
+              "count": 17
             },
             {
               "label": "Minor",
-              "count": 18
+              "count": 19
             },
             {
               "label": "미지정",
@@ -1871,7 +1895,7 @@
           "priority": [
             {
               "label": "Medium",
-              "count": 29
+              "count": 36
             },
             {
               "label": "Low",
@@ -2003,6 +2027,7 @@
           "[게이미피케이션][혜택]포인트_2배_이벤트",
           "[교통카드]SDK변경",
           "[카카오뱅크]해외송금",
+          "[포인트] 해외송금 미션 중단",
           "결함 아님 - Done",
           "콕뱅크",
           "미지정",
@@ -2027,15 +2052,15 @@
           "status": [
             {
               "label": "등록",
-              "count": 246
+              "count": 253
             },
             {
               "label": "배정",
-              "count": 3
+              "count": 2
             },
             {
               "label": "진행중",
-              "count": 36
+              "count": 38
             },
             {
               "label": "QA확인",
@@ -2053,15 +2078,15 @@
             },
             {
               "label": "Major",
-              "count": 386
+              "count": 394
             },
             {
               "label": "Minor",
-              "count": 769
+              "count": 770
             },
             {
               "label": "미지정",
-              "count": 78
+              "count": 77
             },
             {
               "label": "개선 의견",
@@ -2075,7 +2100,7 @@
             },
             {
               "label": "Medium",
-              "count": 1260
+              "count": 1268
             },
             {
               "label": "Low",
@@ -2093,531 +2118,6 @@
         }
       },
       "heatmap": [
-        {
-          "date": "2026-08-02",
-          "new": 0,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": 0
-        },
-        {
-          "date": "2026-08-03",
-          "new": 0,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": 0
-        },
-        {
-          "date": "2026-08-04",
-          "new": 20,
-          "fixed": 21,
-          "closed": 21,
-          "deltaNew": 20
-        },
-        {
-          "date": "2026-08-05",
-          "new": 36,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": 16
-        },
-        {
-          "date": "2026-08-06",
-          "new": 13,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": -23
-        },
-        {
-          "date": "2026-08-07",
-          "new": 8,
-          "fixed": 10,
-          "closed": 0,
-          "deltaNew": -5
-        },
-        {
-          "date": "2026-08-08",
-          "new": 0,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": -8
-        },
-        {
-          "date": "2026-08-09",
-          "new": 0,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": 0
-        },
-        {
-          "date": "2026-08-10",
-          "new": 1,
-          "fixed": 7,
-          "closed": 3,
-          "deltaNew": 1
-        },
-        {
-          "date": "2026-08-11",
-          "new": 12,
-          "fixed": 4,
-          "closed": 0,
-          "deltaNew": 11
-        },
-        {
-          "date": "2026-08-12",
-          "new": 12,
-          "fixed": 12,
-          "closed": 1,
-          "deltaNew": 0
-        },
-        {
-          "date": "2026-08-13",
-          "new": 18,
-          "fixed": 20,
-          "closed": 12,
-          "deltaNew": 6
-        },
-        {
-          "date": "2026-08-14",
-          "new": 9,
-          "fixed": 6,
-          "closed": 4,
-          "deltaNew": -9
-        },
-        {
-          "date": "2026-08-15",
-          "new": 0,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": -9
-        },
-        {
-          "date": "2026-08-16",
-          "new": 0,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": 0
-        },
-        {
-          "date": "2026-08-17",
-          "new": 0,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": 0
-        },
-        {
-          "date": "2026-08-18",
-          "new": 11,
-          "fixed": 6,
-          "closed": 6,
-          "deltaNew": 11
-        },
-        {
-          "date": "2026-08-19",
-          "new": 13,
-          "fixed": 18,
-          "closed": 18,
-          "deltaNew": 2
-        },
-        {
-          "date": "2026-08-20",
-          "new": 35,
-          "fixed": 11,
-          "closed": 11,
-          "deltaNew": 22
-        },
-        {
-          "date": "2026-08-21",
-          "new": 28,
-          "fixed": 4,
-          "closed": 4,
-          "deltaNew": -7
-        },
-        {
-          "date": "2026-08-22",
-          "new": 3,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": -25
-        },
-        {
-          "date": "2026-08-23",
-          "new": 36,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": 33
-        },
-        {
-          "date": "2026-08-24",
-          "new": 35,
-          "fixed": 11,
-          "closed": 11,
-          "deltaNew": -1
-        },
-        {
-          "date": "2026-08-25",
-          "new": 34,
-          "fixed": 40,
-          "closed": 6,
-          "deltaNew": -1
-        },
-        {
-          "date": "2026-08-26",
-          "new": 33,
-          "fixed": 3,
-          "closed": 1,
-          "deltaNew": -1
-        },
-        {
-          "date": "2026-08-27",
-          "new": 40,
-          "fixed": 3,
-          "closed": 3,
-          "deltaNew": 7
-        },
-        {
-          "date": "2026-08-28",
-          "new": 36,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": -4
-        },
-        {
-          "date": "2026-08-29",
-          "new": 0,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": -36
-        },
-        {
-          "date": "2026-08-30",
-          "new": 1,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": 1
-        },
-        {
-          "date": "2026-08-31",
-          "new": 38,
-          "fixed": 130,
-          "closed": 130,
-          "deltaNew": 37
-        }
-      ],
-      "reportBoard": {
-        "summary": [
-          {
-            "label": "최근 30일 제보",
-            "count": 1
-          },
-          {
-            "label": "미완료",
-            "count": 0
-          },
-          {
-            "label": "완료",
-            "count": 1
-          },
-          {
-            "label": "결함 등록 완료",
-            "count": 0
-          },
-          {
-            "label": "결함 아님",
-            "count": 1
-          }
-        ],
-        "recent": [
-          {
-            "domain": "GoHanpass",
-            "title": "[GoHanpass] 기명 시 제로페이 사용 불가",
-            "status": "완료",
-            "processingStatus": "결함 아님",
-            "bugType": "결함 아님",
-            "platform": "iOS",
-            "reporter": "박세희 (Christy Park)",
-            "createdAt": "2026-08-20T06:47:00.000Z",
-            "createdDate": "2026-08-20",
-            "qaLinked": 0,
-            "url": "https://app.notion.com/p/GoHanpass-3c273fbd195181da8848f9679bf0f1bc"
-          }
-        ]
-      },
-      "recent": [
-        {
-          "id": "ISSUE-1637",
-          "title": "[헬프데스크][공통] imo 선택 시 OS별 이동 동작이 상이하며 정상 연결되지 않는 현상",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Major",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[Hanpass][앱개편][Native]-LiveTest",
-          "versionRaw": "[Hanpass][앱개편][Native]-LiveTest",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-08-31T09:13:00.000Z",
-          "createdDate": "2026-08-31",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/imo-OS-3cd73fbd19518067bc58f5671fd46d92",
-          "lastEditedAt": "2026-08-31T09:19:00.000Z"
-        },
-        {
-          "id": "ISSUE-1636",
-          "title": "[해외송금][송금주소록][iOS] 툴팁 아이콘 기획서와 상이",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[Hanpass][앱개편][Native]-LiveTest",
-          "versionRaw": "[Hanpass][앱개편][Native]-LiveTest",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-08-31T08:55:00.000Z",
-          "createdDate": "2026-08-31",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/iOS-3cd73fbd195180aeaedbe6ee00b99777",
-          "lastEditedAt": "2026-08-31T09:13:00.000Z"
-        },
-        {
-          "id": "ISSUE-1635",
-          "title": "[콕뱅크][전체메뉴]전체메뉴 순서 및 문구 상이한 현상",
-          "status": "처리중 (In Progress)",
-          "stage": "진행중",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "콕뱅크",
-          "versionRaw": "콕뱅크",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-08-31T08:44:00.000Z",
-          "createdDate": "2026-08-31",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/3cd73fbd19518076adfbca7c8d442018",
-          "lastEditedAt": "2026-08-31T10:03:00.000Z"
-        },
-        {
-          "id": "ISSUE-1634",
-          "title": "[콕뱅크][회원가입] ‘주소 등록’ 화면 내 뒤로가기 시 홈으로 이동하는 현상",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "콕뱅크",
-          "versionRaw": "콕뱅크",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-08-31T08:38:00.000Z",
-          "createdDate": "2026-08-31",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/3cd73fbd195180e592c4e7d2db264eae",
-          "lastEditedAt": "2026-08-31T08:45:00.000Z"
-        },
-        {
-          "id": "ISSUE-1633",
-          "title": "[콕뱅크][바코드 페이]바코드 결제로 노출되는 현상",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "priority": "Low",
-          "assignee": "미지정",
-          "version": "콕뱅크",
-          "versionRaw": "콕뱅크",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-08-31T08:30:00.000Z",
-          "createdDate": "2026-08-31",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/3cd73fbd195180fb9319f935089e1078",
-          "lastEditedAt": "2026-08-31T08:44:00.000Z"
-        },
-        {
-          "id": "ISSUE-1632",
-          "title": "제목 없음",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "미지정",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[Hanpass][앱개편][Native]-Dev",
-          "versionRaw": "[Hanpass][앱개편][Native]-Dev",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-08-31T08:27:00.000Z",
-          "createdDate": "2026-08-31",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/3cd73fbd1951805daecdd0605a368bc7",
-          "lastEditedAt": "2026-08-31T08:27:00.000Z"
-        },
-        {
-          "id": "ISSUE-1631",
-          "title": "[알림함/공지사항][AOS] 공지사항 진입 시 ‘중계서버 오류’ 팝업 노출 되는 현상 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Major",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[Hanpass][앱개편][Native]-LiveTest",
-          "versionRaw": "[Hanpass][앱개편][Native]-LiveTest",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-08-31T08:13:00.000Z",
-          "createdDate": "2026-08-31",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/AOS-3cd73fbd195180938febf36bd2a6076e",
-          "lastEditedAt": "2026-08-31T08:46:00.000Z"
-        },
-        {
-          "id": "ISSUE-1630",
-          "title": "[콕뱅크][회원가입] ‘개인정보 입력’ 화면 내 영문 이름 선택 시 한글 키패드 노출 현상 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "콕뱅크",
-          "versionRaw": "콕뱅크",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-08-31T08:07:00.000Z",
-          "createdDate": "2026-08-31",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/3cd73fbd19518036b431f420846d0ed7",
-          "lastEditedAt": "2026-08-31T08:12:00.000Z"
-        },
-        {
-          "id": "ISSUE-1629",
-          "title": "[콕뱅크][회원가입] ‘개인정보 확인’ 화면 내 성별 버튼 기획서와 상이  ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "콕뱅크",
-          "versionRaw": "콕뱅크",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-08-31T07:58:00.000Z",
-          "createdDate": "2026-08-31",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/3cd73fbd1951807797b6d76cb3df0968",
-          "lastEditedAt": "2026-08-31T08:06:00.000Z"
-        },
-        {
-          "id": "ISSUE-1628",
-          "title": "[콕뱅크][Home]플로팅 버튼 미작동 / 디자인 상이한 현상",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Major",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "콕뱅크",
-          "versionRaw": "콕뱅크",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-08-31T07:57:00.000Z",
-          "createdDate": "2026-08-31",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/Home-3cd73fbd19518030bbc3d406cd8dc410",
-          "lastEditedAt": "2026-08-31T08:05:00.000Z"
-        }
-      ]
-    },
-    "한패스": {
-      "summary": {
-        "total": 1100,
-        "new": 219,
-        "inProgress": 35,
-        "fixed": 0,
-        "closed": 707,
-        "todayNew": 37,
-        "newDelta": 36
-      },
-      "funnel": [
-        {
-          "stage": "등록",
-          "count": 219,
-          "rate": 19.9,
-          "width": 31
-        },
-        {
-          "stage": "검토",
-          "count": 0,
-          "rate": 0.0,
-          "width": 18
-        },
-        {
-          "stage": "배정",
-          "count": 3,
-          "rate": 0.3,
-          "width": 18
-        },
-        {
-          "stage": "진행중",
-          "count": 35,
-          "rate": 3.2,
-          "width": 18
-        },
-        {
-          "stage": "수정완료",
-          "count": 0,
-          "rate": 0.0,
-          "width": 18
-        },
-        {
-          "stage": "QA확인",
-          "count": 136,
-          "rate": 12.4,
-          "width": 19
-        },
-        {
-          "stage": "종료",
-          "count": 707,
-          "rate": 64.3,
-          "width": 100
-        }
-      ],
-      "daily": [
-        {
-          "date": "2026-08-02",
-          "new": 0,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": 0
-        },
         {
           "date": "2026-08-03",
           "new": 0,
@@ -2817,9 +2317,534 @@
         {
           "date": "2026-08-31",
           "new": 37,
-          "fixed": 130,
-          "closed": 130,
+          "fixed": 115,
+          "closed": 115,
           "deltaNew": 36
+        },
+        {
+          "date": "2026-09-01",
+          "new": 9,
+          "fixed": 15,
+          "closed": 15,
+          "deltaNew": -28
+        }
+      ],
+      "reportBoard": {
+        "summary": [
+          {
+            "label": "최근 30일 제보",
+            "count": 1
+          },
+          {
+            "label": "미완료",
+            "count": 0
+          },
+          {
+            "label": "완료",
+            "count": 1
+          },
+          {
+            "label": "결함 등록 완료",
+            "count": 0
+          },
+          {
+            "label": "결함 아님",
+            "count": 1
+          }
+        ],
+        "recent": [
+          {
+            "domain": "GoHanpass",
+            "title": "[GoHanpass] 기명 시 제로페이 사용 불가",
+            "status": "완료",
+            "processingStatus": "결함 아님",
+            "bugType": "결함 아님",
+            "platform": "iOS",
+            "reporter": "박세희 (Christy Park)",
+            "createdAt": "2026-08-20T06:47:00.000Z",
+            "createdDate": "2026-08-20",
+            "qaLinked": 0,
+            "url": "https://app.notion.com/p/GoHanpass-3c273fbd195181da8848f9679bf0f1bc"
+          }
+        ]
+      },
+      "recent": [
+        {
+          "id": "ISSUE-1647",
+          "title": "[콕뱅크][Home]카드 신청 계속 팝업 미노출 현상",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "콕뱅크",
+          "versionRaw": "콕뱅크",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-09-01T01:31:00.000Z",
+          "createdDate": "2026-09-01",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/Home-3ce73fbd195180909b0dd56f89002c6e",
+          "lastEditedAt": "2026-09-01T01:42:00.000Z"
+        },
+        {
+          "id": "ISSUE-1646",
+          "title": "[콕뱅크][회원가입] 개인정보 확인 화면 ‘여권번호’ 필드 내 특수문자, 한글 입력 가능한 현상 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "콕뱅크",
+          "versionRaw": "콕뱅크",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-09-01T01:20:00.000Z",
+          "createdDate": "2026-09-01",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/3ce73fbd1951809fbcc8c9b2104ba833",
+          "lastEditedAt": "2026-09-01T01:25:00.000Z"
+        },
+        {
+          "id": "ISSUE-1645",
+          "title": "[콕뱅크][회원가입] ‘주소 사진 확인’ 화면 내 ‘다시 등록하기’ 선택 시 검정 화면 노출 현상 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "콕뱅크",
+          "versionRaw": "콕뱅크",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-09-01T01:06:00.000Z",
+          "createdDate": "2026-09-01",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/3ce73fbd19518096b0e7cd06ef7f20a4",
+          "lastEditedAt": "2026-09-01T01:11:00.000Z"
+        },
+        {
+          "id": "ISSUE-1644",
+          "title": "[콕뱅크][회원가입] 주소 - 카메라 권한 거부 상태로 직접 촬영 시 검정 화면 노출 현상 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "콕뱅크",
+          "versionRaw": "콕뱅크",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-09-01T00:53:00.000Z",
+          "createdDate": "2026-09-01",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/3ce73fbd1951809cb466d761e4cf5cfb",
+          "lastEditedAt": "2026-09-01T01:01:00.000Z"
+        },
+        {
+          "id": "ISSUE-1643",
+          "title": "[헬프데스크][AOS] ‘채팅 상담’ 미노출 되는 현상 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[Hanpass][앱개편][Native]-LiveTest",
+          "versionRaw": "[Hanpass][앱개편][Native]-LiveTest",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-09-01T00:45:00.000Z",
+          "createdDate": "2026-09-01",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/AOS-3ce73fbd19518000902acde1f8d1d0b8",
+          "lastEditedAt": "2026-09-01T01:26:00.000Z"
+        },
+        {
+          "id": "ISSUE-1642",
+          "title": "[콕뱅크][회원가입] 주소 - 갤러리 사진 업로드 안되는 현상 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "콕뱅크",
+          "versionRaw": "콕뱅크",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-09-01T00:35:00.000Z",
+          "createdDate": "2026-09-01",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/3ce73fbd19518041b04fc397ed3c9aaa",
+          "lastEditedAt": "2026-09-01T00:40:00.000Z"
+        },
+        {
+          "id": "ISSUE-1641",
+          "title": "[콕뱅크][회원가입] 주소 - 갤러리 가져오기 재진입 불가 현상  ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "콕뱅크",
+          "versionRaw": "콕뱅크",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-09-01T00:29:00.000Z",
+          "createdDate": "2026-09-01",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/3ce73fbd195180b79c6ecf1d6594940e",
+          "lastEditedAt": "2026-09-01T00:34:00.000Z"
+        },
+        {
+          "id": "ISSUE-1640",
+          "title": "[콕뱅크][Home]충전 유도 배너 + 충전 버튼 추가 미노출 현상",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "콕뱅크",
+          "versionRaw": "콕뱅크",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-09-01T00:26:00.000Z",
+          "createdDate": "2026-09-01",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/Home-3ce73fbd19518034bb0defcb1282560f",
+          "lastEditedAt": "2026-09-01T00:53:00.000Z"
+        },
+        {
+          "id": "ISSUE-1639",
+          "title": "[2배이벤트][iOS] 특정 기기에서 혜택 진입 시 기간 만료된 미션이 일시적으로 노출되는 현상",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[포인트] 해외송금 미션 중단",
+          "versionRaw": "[포인트] 해외송금 미션 중단",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-09-01T00:06:00.000Z",
+          "createdDate": "2026-09-01",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/2-iOS-3ce73fbd19518064ab28de434283f96c",
+          "lastEditedAt": "2026-09-01T01:25:00.000Z"
+        },
+        {
+          "id": "ISSUE-1637",
+          "title": "[헬프데스크][공통] imo 선택 시 OS별 이동 동작이 상이하며 정상 연결되지 않는 현상",
+          "status": "처리중 (In Progress)",
+          "stage": "진행중",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[Hanpass][앱개편][Native]-LiveTest",
+          "versionRaw": "[Hanpass][앱개편][Native]-LiveTest",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-08-31T09:13:00.000Z",
+          "createdDate": "2026-08-31",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/imo-OS-3cd73fbd19518067bc58f5671fd46d92",
+          "lastEditedAt": "2026-09-01T01:10:00.000Z"
+        }
+      ]
+    },
+    "한패스": {
+      "summary": {
+        "total": 1108,
+        "new": 226,
+        "inProgress": 37,
+        "fixed": 0,
+        "closed": 707,
+        "todayNew": 9,
+        "newDelta": -27
+      },
+      "funnel": [
+        {
+          "stage": "등록",
+          "count": 226,
+          "rate": 20.4,
+          "width": 32
+        },
+        {
+          "stage": "검토",
+          "count": 0,
+          "rate": 0.0,
+          "width": 18
+        },
+        {
+          "stage": "배정",
+          "count": 2,
+          "rate": 0.2,
+          "width": 18
+        },
+        {
+          "stage": "진행중",
+          "count": 37,
+          "rate": 3.3,
+          "width": 18
+        },
+        {
+          "stage": "수정완료",
+          "count": 0,
+          "rate": 0.0,
+          "width": 18
+        },
+        {
+          "stage": "QA확인",
+          "count": 136,
+          "rate": 12.3,
+          "width": 19
+        },
+        {
+          "stage": "종료",
+          "count": 707,
+          "rate": 63.8,
+          "width": 100
+        }
+      ],
+      "daily": [
+        {
+          "date": "2026-08-03",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-08-04",
+          "new": 20,
+          "fixed": 21,
+          "closed": 21,
+          "deltaNew": 20
+        },
+        {
+          "date": "2026-08-05",
+          "new": 36,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 16
+        },
+        {
+          "date": "2026-08-06",
+          "new": 13,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": -23
+        },
+        {
+          "date": "2026-08-07",
+          "new": 8,
+          "fixed": 10,
+          "closed": 0,
+          "deltaNew": -5
+        },
+        {
+          "date": "2026-08-08",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": -8
+        },
+        {
+          "date": "2026-08-09",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-08-10",
+          "new": 1,
+          "fixed": 7,
+          "closed": 3,
+          "deltaNew": 1
+        },
+        {
+          "date": "2026-08-11",
+          "new": 12,
+          "fixed": 4,
+          "closed": 0,
+          "deltaNew": 11
+        },
+        {
+          "date": "2026-08-12",
+          "new": 12,
+          "fixed": 12,
+          "closed": 1,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-08-13",
+          "new": 18,
+          "fixed": 20,
+          "closed": 12,
+          "deltaNew": 6
+        },
+        {
+          "date": "2026-08-14",
+          "new": 9,
+          "fixed": 6,
+          "closed": 4,
+          "deltaNew": -9
+        },
+        {
+          "date": "2026-08-15",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": -9
+        },
+        {
+          "date": "2026-08-16",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-08-17",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-08-18",
+          "new": 11,
+          "fixed": 6,
+          "closed": 6,
+          "deltaNew": 11
+        },
+        {
+          "date": "2026-08-19",
+          "new": 13,
+          "fixed": 18,
+          "closed": 18,
+          "deltaNew": 2
+        },
+        {
+          "date": "2026-08-20",
+          "new": 35,
+          "fixed": 11,
+          "closed": 11,
+          "deltaNew": 22
+        },
+        {
+          "date": "2026-08-21",
+          "new": 28,
+          "fixed": 4,
+          "closed": 4,
+          "deltaNew": -7
+        },
+        {
+          "date": "2026-08-22",
+          "new": 3,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": -25
+        },
+        {
+          "date": "2026-08-23",
+          "new": 36,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 33
+        },
+        {
+          "date": "2026-08-24",
+          "new": 35,
+          "fixed": 11,
+          "closed": 11,
+          "deltaNew": -1
+        },
+        {
+          "date": "2026-08-25",
+          "new": 34,
+          "fixed": 40,
+          "closed": 6,
+          "deltaNew": -1
+        },
+        {
+          "date": "2026-08-26",
+          "new": 33,
+          "fixed": 3,
+          "closed": 1,
+          "deltaNew": -1
+        },
+        {
+          "date": "2026-08-27",
+          "new": 40,
+          "fixed": 3,
+          "closed": 3,
+          "deltaNew": 7
+        },
+        {
+          "date": "2026-08-28",
+          "new": 36,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": -4
+        },
+        {
+          "date": "2026-08-29",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": -36
+        },
+        {
+          "date": "2026-08-30",
+          "new": 1,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 1
+        },
+        {
+          "date": "2026-08-31",
+          "new": 36,
+          "fixed": 115,
+          "closed": 115,
+          "deltaNew": 35
+        },
+        {
+          "date": "2026-09-01",
+          "new": 9,
+          "fixed": 15,
+          "closed": 15,
+          "deltaNew": -27
         }
       ],
       "versions": [
@@ -3521,13 +3546,13 @@
         },
         {
           "version": "[Hanpass][앱개편][Native]-Dev",
-          "total": 238,
+          "total": 237,
           "criticalMajor": 89,
-          "doneRate": 54.6,
+          "doneRate": 54.9,
           "status": [
             {
               "label": "등록",
-              "count": 75
+              "count": 74
             },
             {
               "label": "배정",
@@ -3554,34 +3579,34 @@
             {
               "label": "Minor",
               "count": 148
-            },
-            {
-              "label": "미지정",
-              "count": 1
             }
           ],
           "priority": [
             {
               "label": "Medium",
-              "count": 238
+              "count": 237
             }
           ]
         },
         {
           "version": "[Hanpass][앱개편][Native]-LiveTest",
-          "total": 4,
-          "criticalMajor": 3,
+          "total": 5,
+          "criticalMajor": 4,
           "doneRate": 0.0,
           "status": [
             {
               "label": "등록",
-              "count": 4
+              "count": 3
+            },
+            {
+              "label": "진행중",
+              "count": 2
             }
           ],
           "severity": [
             {
               "label": "Major",
-              "count": 3
+              "count": 4
             },
             {
               "label": "Minor",
@@ -3591,7 +3616,7 @@
           "priority": [
             {
               "label": "Medium",
-              "count": 4
+              "count": 5
             }
           ]
         },
@@ -3687,11 +3712,11 @@
           "status": [
             {
               "label": "등록",
-              "count": 11
+              "count": 12
             },
             {
               "label": "배정",
-              "count": 2
+              "count": 1
             },
             {
               "label": "QA확인",
@@ -3720,6 +3745,30 @@
             {
               "label": "Medium",
               "count": 117
+            }
+          ]
+        },
+        {
+          "version": "[포인트] 해외송금 미션 중단",
+          "total": 1,
+          "criticalMajor": 1,
+          "doneRate": 0.0,
+          "status": [
+            {
+              "label": "등록",
+              "count": 1
+            }
+          ],
+          "severity": [
+            {
+              "label": "Major",
+              "count": 1
+            }
+          ],
+          "priority": [
+            {
+              "label": "Medium",
+              "count": 1
             }
           ]
         },
@@ -3757,13 +3806,13 @@
         },
         {
           "version": "콕뱅크",
-          "total": 30,
-          "criticalMajor": 11,
+          "total": 37,
+          "criticalMajor": 17,
           "doneRate": 0.0,
           "status": [
             {
               "label": "등록",
-              "count": 27
+              "count": 34
             },
             {
               "label": "진행중",
@@ -3773,11 +3822,11 @@
           "severity": [
             {
               "label": "Major",
-              "count": 11
+              "count": 17
             },
             {
               "label": "Minor",
-              "count": 18
+              "count": 19
             },
             {
               "label": "미지정",
@@ -3787,7 +3836,7 @@
           "priority": [
             {
               "label": "Medium",
-              "count": 29
+              "count": 36
             },
             {
               "label": "Low",
@@ -3887,6 +3936,7 @@
           "[게이미피케이션][혜택]포인트_2배_이벤트",
           "[교통카드]SDK변경",
           "[카카오뱅크]해외송금",
+          "[포인트] 해외송금 미션 중단",
           "결함 아님 - Done",
           "콕뱅크",
           "미지정",
@@ -3909,15 +3959,15 @@
           "status": [
             {
               "label": "등록",
-              "count": 219
+              "count": 226
             },
             {
               "label": "배정",
-              "count": 3
+              "count": 2
             },
             {
               "label": "진행중",
-              "count": 35
+              "count": 37
             },
             {
               "label": "QA확인",
@@ -3935,15 +3985,15 @@
             },
             {
               "label": "Major",
-              "count": 323
+              "count": 331
             },
             {
               "label": "Minor",
-              "count": 631
+              "count": 632
             },
             {
               "label": "미지정",
-              "count": 78
+              "count": 77
             },
             {
               "label": "개선 의견",
@@ -3957,7 +4007,7 @@
             },
             {
               "label": "Medium",
-              "count": 1056
+              "count": 1064
             },
             {
               "label": "Low",
@@ -3975,13 +4025,6 @@
         }
       },
       "heatmap": [
-        {
-          "date": "2026-08-02",
-          "new": 0,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": 0
-        },
         {
           "date": "2026-08-03",
           "new": 0,
@@ -4180,10 +4223,17 @@
         },
         {
           "date": "2026-08-31",
-          "new": 37,
-          "fixed": 130,
-          "closed": 130,
-          "deltaNew": 36
+          "new": 36,
+          "fixed": 115,
+          "closed": 115,
+          "deltaNew": 35
+        },
+        {
+          "date": "2026-09-01",
+          "new": 9,
+          "fixed": 15,
+          "closed": 15,
+          "deltaNew": -27
         }
       ],
       "reportBoard": {
@@ -4213,10 +4263,199 @@
       },
       "recent": [
         {
-          "id": "ISSUE-1637",
-          "title": "[헬프데스크][공통] imo 선택 시 OS별 이동 동작이 상이하며 정상 연결되지 않는 현상",
+          "id": "ISSUE-1647",
+          "title": "[콕뱅크][Home]카드 신청 계속 팝업 미노출 현상",
           "status": "등록 (Registered)",
           "stage": "등록",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "콕뱅크",
+          "versionRaw": "콕뱅크",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-09-01T01:31:00.000Z",
+          "createdDate": "2026-09-01",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/Home-3ce73fbd195180909b0dd56f89002c6e",
+          "lastEditedAt": "2026-09-01T01:42:00.000Z"
+        },
+        {
+          "id": "ISSUE-1646",
+          "title": "[콕뱅크][회원가입] 개인정보 확인 화면 ‘여권번호’ 필드 내 특수문자, 한글 입력 가능한 현상 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "콕뱅크",
+          "versionRaw": "콕뱅크",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-09-01T01:20:00.000Z",
+          "createdDate": "2026-09-01",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/3ce73fbd1951809fbcc8c9b2104ba833",
+          "lastEditedAt": "2026-09-01T01:25:00.000Z"
+        },
+        {
+          "id": "ISSUE-1645",
+          "title": "[콕뱅크][회원가입] ‘주소 사진 확인’ 화면 내 ‘다시 등록하기’ 선택 시 검정 화면 노출 현상 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "콕뱅크",
+          "versionRaw": "콕뱅크",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-09-01T01:06:00.000Z",
+          "createdDate": "2026-09-01",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/3ce73fbd19518096b0e7cd06ef7f20a4",
+          "lastEditedAt": "2026-09-01T01:11:00.000Z"
+        },
+        {
+          "id": "ISSUE-1644",
+          "title": "[콕뱅크][회원가입] 주소 - 카메라 권한 거부 상태로 직접 촬영 시 검정 화면 노출 현상 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "콕뱅크",
+          "versionRaw": "콕뱅크",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-09-01T00:53:00.000Z",
+          "createdDate": "2026-09-01",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/3ce73fbd1951809cb466d761e4cf5cfb",
+          "lastEditedAt": "2026-09-01T01:01:00.000Z"
+        },
+        {
+          "id": "ISSUE-1643",
+          "title": "[헬프데스크][AOS] ‘채팅 상담’ 미노출 되는 현상 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[Hanpass][앱개편][Native]-LiveTest",
+          "versionRaw": "[Hanpass][앱개편][Native]-LiveTest",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-09-01T00:45:00.000Z",
+          "createdDate": "2026-09-01",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/AOS-3ce73fbd19518000902acde1f8d1d0b8",
+          "lastEditedAt": "2026-09-01T01:26:00.000Z"
+        },
+        {
+          "id": "ISSUE-1642",
+          "title": "[콕뱅크][회원가입] 주소 - 갤러리 사진 업로드 안되는 현상 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "콕뱅크",
+          "versionRaw": "콕뱅크",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-09-01T00:35:00.000Z",
+          "createdDate": "2026-09-01",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/3ce73fbd19518041b04fc397ed3c9aaa",
+          "lastEditedAt": "2026-09-01T00:40:00.000Z"
+        },
+        {
+          "id": "ISSUE-1641",
+          "title": "[콕뱅크][회원가입] 주소 - 갤러리 가져오기 재진입 불가 현상  ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "콕뱅크",
+          "versionRaw": "콕뱅크",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-09-01T00:29:00.000Z",
+          "createdDate": "2026-09-01",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/3ce73fbd195180b79c6ecf1d6594940e",
+          "lastEditedAt": "2026-09-01T00:34:00.000Z"
+        },
+        {
+          "id": "ISSUE-1640",
+          "title": "[콕뱅크][Home]충전 유도 배너 + 충전 버튼 추가 미노출 현상",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "콕뱅크",
+          "versionRaw": "콕뱅크",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-09-01T00:26:00.000Z",
+          "createdDate": "2026-09-01",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/Home-3ce73fbd19518034bb0defcb1282560f",
+          "lastEditedAt": "2026-09-01T00:53:00.000Z"
+        },
+        {
+          "id": "ISSUE-1639",
+          "title": "[2배이벤트][iOS] 특정 기기에서 혜택 진입 시 기간 만료된 미션이 일시적으로 노출되는 현상",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[포인트] 해외송금 미션 중단",
+          "versionRaw": "[포인트] 해외송금 미션 중단",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-09-01T00:06:00.000Z",
+          "createdDate": "2026-09-01",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/2-iOS-3ce73fbd19518064ab28de434283f96c",
+          "lastEditedAt": "2026-09-01T01:25:00.000Z"
+        },
+        {
+          "id": "ISSUE-1637",
+          "title": "[헬프데스크][공통] imo 선택 시 OS별 이동 동작이 상이하며 정상 연결되지 않는 현상",
+          "status": "처리중 (In Progress)",
+          "stage": "진행중",
           "severity": "Major",
           "priority": "Medium",
           "assignee": "미지정",
@@ -4231,196 +4470,7 @@
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/imo-OS-3cd73fbd19518067bc58f5671fd46d92",
-          "lastEditedAt": "2026-08-31T09:19:00.000Z"
-        },
-        {
-          "id": "ISSUE-1636",
-          "title": "[해외송금][송금주소록][iOS] 툴팁 아이콘 기획서와 상이",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[Hanpass][앱개편][Native]-LiveTest",
-          "versionRaw": "[Hanpass][앱개편][Native]-LiveTest",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-08-31T08:55:00.000Z",
-          "createdDate": "2026-08-31",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/iOS-3cd73fbd195180aeaedbe6ee00b99777",
-          "lastEditedAt": "2026-08-31T09:13:00.000Z"
-        },
-        {
-          "id": "ISSUE-1635",
-          "title": "[콕뱅크][전체메뉴]전체메뉴 순서 및 문구 상이한 현상",
-          "status": "처리중 (In Progress)",
-          "stage": "진행중",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "콕뱅크",
-          "versionRaw": "콕뱅크",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-08-31T08:44:00.000Z",
-          "createdDate": "2026-08-31",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/3cd73fbd19518076adfbca7c8d442018",
-          "lastEditedAt": "2026-08-31T10:03:00.000Z"
-        },
-        {
-          "id": "ISSUE-1634",
-          "title": "[콕뱅크][회원가입] ‘주소 등록’ 화면 내 뒤로가기 시 홈으로 이동하는 현상",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "콕뱅크",
-          "versionRaw": "콕뱅크",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-08-31T08:38:00.000Z",
-          "createdDate": "2026-08-31",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/3cd73fbd195180e592c4e7d2db264eae",
-          "lastEditedAt": "2026-08-31T08:45:00.000Z"
-        },
-        {
-          "id": "ISSUE-1633",
-          "title": "[콕뱅크][바코드 페이]바코드 결제로 노출되는 현상",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "priority": "Low",
-          "assignee": "미지정",
-          "version": "콕뱅크",
-          "versionRaw": "콕뱅크",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-08-31T08:30:00.000Z",
-          "createdDate": "2026-08-31",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/3cd73fbd195180fb9319f935089e1078",
-          "lastEditedAt": "2026-08-31T08:44:00.000Z"
-        },
-        {
-          "id": "ISSUE-1632",
-          "title": "제목 없음",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "미지정",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[Hanpass][앱개편][Native]-Dev",
-          "versionRaw": "[Hanpass][앱개편][Native]-Dev",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-08-31T08:27:00.000Z",
-          "createdDate": "2026-08-31",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/3cd73fbd1951805daecdd0605a368bc7",
-          "lastEditedAt": "2026-08-31T08:27:00.000Z"
-        },
-        {
-          "id": "ISSUE-1631",
-          "title": "[알림함/공지사항][AOS] 공지사항 진입 시 ‘중계서버 오류’ 팝업 노출 되는 현상 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Major",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[Hanpass][앱개편][Native]-LiveTest",
-          "versionRaw": "[Hanpass][앱개편][Native]-LiveTest",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-08-31T08:13:00.000Z",
-          "createdDate": "2026-08-31",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/AOS-3cd73fbd195180938febf36bd2a6076e",
-          "lastEditedAt": "2026-08-31T08:46:00.000Z"
-        },
-        {
-          "id": "ISSUE-1630",
-          "title": "[콕뱅크][회원가입] ‘개인정보 입력’ 화면 내 영문 이름 선택 시 한글 키패드 노출 현상 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "콕뱅크",
-          "versionRaw": "콕뱅크",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-08-31T08:07:00.000Z",
-          "createdDate": "2026-08-31",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/3cd73fbd19518036b431f420846d0ed7",
-          "lastEditedAt": "2026-08-31T08:12:00.000Z"
-        },
-        {
-          "id": "ISSUE-1629",
-          "title": "[콕뱅크][회원가입] ‘개인정보 확인’ 화면 내 성별 버튼 기획서와 상이  ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "콕뱅크",
-          "versionRaw": "콕뱅크",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-08-31T07:58:00.000Z",
-          "createdDate": "2026-08-31",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/3cd73fbd1951807797b6d76cb3df0968",
-          "lastEditedAt": "2026-08-31T08:06:00.000Z"
-        },
-        {
-          "id": "ISSUE-1628",
-          "title": "[콕뱅크][Home]플로팅 버튼 미작동 / 디자인 상이한 현상",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Major",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "콕뱅크",
-          "versionRaw": "콕뱅크",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-08-31T07:57:00.000Z",
-          "createdDate": "2026-08-31",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/Home-3cd73fbd19518030bbc3d406cd8dc410",
-          "lastEditedAt": "2026-08-31T08:05:00.000Z"
+          "lastEditedAt": "2026-09-01T01:10:00.000Z"
         }
       ]
     },
@@ -4431,8 +4481,8 @@
         "inProgress": 1,
         "fixed": 0,
         "closed": 176,
-        "todayNew": 1,
-        "newDelta": 1
+        "todayNew": 0,
+        "newDelta": -1
       },
       "funnel": [
         {
@@ -4479,13 +4529,6 @@
         }
       ],
       "daily": [
-        {
-          "date": "2026-08-02",
-          "new": 0,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": 0
-        },
         {
           "date": "2026-08-03",
           "new": 0,
@@ -4688,6 +4731,13 @@
           "fixed": 0,
           "closed": 0,
           "deltaNew": 1
+        },
+        {
+          "date": "2026-09-01",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": -1
         }
       ],
       "versions": [
@@ -5028,13 +5078,6 @@
       },
       "heatmap": [
         {
-          "date": "2026-08-02",
-          "new": 0,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": 0
-        },
-        {
           "date": "2026-08-03",
           "new": 0,
           "fixed": 0,
@@ -5236,6 +5279,13 @@
           "fixed": 0,
           "closed": 0,
           "deltaNew": 1
+        },
+        {
+          "date": "2026-09-01",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": -1
         }
       ],
       "reportBoard": {

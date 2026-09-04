@@ -607,14 +607,21 @@ def build_project_daily(rows: list[dict[str, Any]], days: int) -> list[dict[str,
         ]
     else:
         date_range = daily_range(days)
-    return [
-        {
-            "date": day.isoformat(),
-            "registered": int(created[day.isoformat()]),
-            "fixed": int(fixed[day.isoformat()]),
-        }
-        for day in date_range
-    ]
+    result: list[dict[str, Any]] = []
+    registered_total = 0
+    fixed_total = 0
+    for day in date_range:
+        key = day.isoformat()
+        registered_total += int(created[key])
+        fixed_total += int(fixed[key])
+        result.append(
+            {
+                "date": key,
+                "registered": registered_total,
+                "fixed": fixed_total,
+            }
+        )
+    return result
 
 
 def project_status_counts(rows: list[dict[str, Any]], cutoff: str | None = None) -> dict[str, int | float]:
@@ -1242,7 +1249,7 @@ def build_html(payload: dict[str, Any]) -> str:
             <div class="table-wrap" id="projectProgressTable"></div>
           </article>
           <article class="panel">
-            <div class="panel-head"><h2>일자별 그래프</h2><div class="subtle">결함 등록 기준 / 결함 처리 기준</div></div>
+            <div class="panel-head"><h2>일자별 누적 그래프</h2><div class="subtle">결함 등록 누적 / 결함 처리 누적</div></div>
             <div class="project-chart-grid" id="projectCharts"></div>
             <div class="legend"><span><i class="dot" style="background:var(--red)"></i>결함등록</span><span><i class="dot" style="background:var(--blue)"></i>결함 처리</span></div>
           </article>
@@ -1725,10 +1732,10 @@ def build_html(payload: dict[str, Any]) -> str:
       const registeredTrend = trendPoints(registeredValues, plotLeft, plotTop, plotWidth, plotHeight, max);
       const fixedTrend = trendPoints(fixedValues, plotLeft, plotTop, plotWidth, plotHeight, max);
       const labels = rows.filter((_, index) => index === 0 || index === rows.length - 1 || index % 7 === 0);
-      const tooltip = rows.map((d) => `${{d.date}}: 결함등록 ${{d.registered || 0}}건 / 결함 처리 ${{d.fixed || 0}}건`).join("\\n");
-      return `<div><div class="project-chart-title">결함등록 / 결함 처리 · 추세선 포함</div>
-        <svg class="line-chart" viewBox="0 0 520 270" role="img" aria-label="결함등록과 결함 처리 비교 선형 추세 그래프">
-          <title>결함등록 / 결함 처리\\n${{esc(tooltip)}}</title>
+      const tooltip = rows.map((d) => `${{d.date}}: 결함등록 누적 ${{d.registered || 0}}건 / 결함 처리 누적 ${{d.fixed || 0}}건`).join("\\n");
+      return `<div><div class="project-chart-title">결함등록 누적 / 결함 처리 누적 · 추세선 포함</div>
+        <svg class="line-chart" viewBox="0 0 520 270" role="img" aria-label="결함등록 누적과 결함 처리 누적 비교 선형 추세 그래프">
+          <title>결함등록 누적 / 결함 처리 누적\\n${{esc(tooltip)}}</title>
           <line class="axis" x1="${{plotLeft}}" y1="${{plotTop}}" x2="${{plotLeft}}" y2="${{plotTop + plotHeight}}"></line>
           <line class="axis" x1="${{plotLeft}}" y1="${{plotTop + plotHeight}}" x2="${{plotLeft + plotWidth}}" y2="${{plotTop + plotHeight}}"></line>
           ${{[0, .25, .5, .75, 1].map((ratio) => {{
@@ -1740,8 +1747,8 @@ def build_html(payload: dict[str, Any]) -> str:
           <path class="trend-line" d="${{linePath(fixedTrend)}}" stroke="var(--blue)"></path>
           <path class="series-line" d="${{linePath(registeredPoints)}}" stroke="var(--red)"></path>
           <path class="series-line" d="${{linePath(fixedPoints)}}" stroke="var(--blue)"></path>
-          ${{registeredPoints.map(([x, y], index) => `<circle class="point" cx="${{x.toFixed(1)}}" cy="${{y.toFixed(1)}}" r="3.5" fill="var(--red)"><title>${{esc(rows[index].date)}} 결함등록 ${{rows[index].registered || 0}}건</title></circle>`).join("")}}
-          ${{fixedPoints.map(([x, y], index) => `<circle class="point" cx="${{x.toFixed(1)}}" cy="${{y.toFixed(1)}}" r="3.5" fill="var(--blue)"><title>${{esc(rows[index].date)}} 결함 처리 ${{rows[index].fixed || 0}}건</title></circle>`).join("")}}
+          ${{registeredPoints.map(([x, y], index) => `<circle class="point" cx="${{x.toFixed(1)}}" cy="${{y.toFixed(1)}}" r="3.5" fill="var(--red)"><title>${{esc(rows[index].date)}} 결함등록 누적 ${{rows[index].registered || 0}}건</title></circle>`).join("")}}
+          ${{fixedPoints.map(([x, y], index) => `<circle class="point" cx="${{x.toFixed(1)}}" cy="${{y.toFixed(1)}}" r="3.5" fill="var(--blue)"><title>${{esc(rows[index].date)}} 결함 처리 누적 ${{rows[index].fixed || 0}}건</title></circle>`).join("")}}
           ${{labels.map((d) => `<text x="${{xFor(rows.indexOf(d)).toFixed(1)}}" y="248" text-anchor="middle">${{d.date.slice(5)}}</text>`).join("")}}
         </svg>
       </div>`;

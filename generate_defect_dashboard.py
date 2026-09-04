@@ -598,13 +598,22 @@ def completion_date(row: dict[str, Any]) -> str:
 def build_project_daily(rows: list[dict[str, Any]], days: int) -> list[dict[str, Any]]:
     created = Counter(row.get("createdDate") for row in rows if row.get("createdDate"))
     fixed = Counter(completion_date(row) for row in rows if completion_date(row))
+    created_dates = [datetime.fromisoformat(row["createdDate"]).date() for row in rows if row.get("createdDate")]
+    today = datetime.now().date()
+    if created_dates:
+        date_range = [
+            min(created_dates) + timedelta(days=offset)
+            for offset in range((today - min(created_dates)).days + 1)
+        ]
+    else:
+        date_range = daily_range(days)
     return [
         {
             "date": day.isoformat(),
             "registered": int(created[day.isoformat()]),
             "fixed": int(fixed[day.isoformat()]),
         }
-        for day in daily_range(days)
+        for day in date_range
     ]
 
 
@@ -1233,9 +1242,9 @@ def build_html(payload: dict[str, Any]) -> str:
             <div class="table-wrap" id="projectProgressTable"></div>
           </article>
           <article class="panel">
-            <div class="panel-head"><h2>일자별 그래프</h2><div class="subtle">결함 등록 기준 / 수정 일자 기준</div></div>
+            <div class="panel-head"><h2>일자별 그래프</h2><div class="subtle">결함 등록 기준 / 결함 처리 기준</div></div>
             <div class="project-chart-grid" id="projectCharts"></div>
-            <div class="legend"><span><i class="dot" style="background:var(--blue)"></i>결함 등록 기준</span><span><i class="dot" style="background:var(--green)"></i>수정 일자 기준</span></div>
+            <div class="legend"><span><i class="dot" style="background:var(--red)"></i>결함등록</span><span><i class="dot" style="background:var(--blue)"></i>결함 처리</span></div>
           </article>
         </div>
       </section>
@@ -1716,10 +1725,10 @@ def build_html(payload: dict[str, Any]) -> str:
       const registeredTrend = trendPoints(registeredValues, plotLeft, plotTop, plotWidth, plotHeight, max);
       const fixedTrend = trendPoints(fixedValues, plotLeft, plotTop, plotWidth, plotHeight, max);
       const labels = rows.filter((_, index) => index === 0 || index === rows.length - 1 || index % 7 === 0);
-      const tooltip = rows.map((d) => `${{d.date}}: 등록 ${{d.registered || 0}}건 / 수정 ${{d.fixed || 0}}건`).join("\\n");
-      return `<div><div class="project-chart-title">결함 등록 기준 / 수정 일자 기준 · 추세선 포함</div>
-        <svg class="line-chart" viewBox="0 0 520 270" role="img" aria-label="결함 등록 기준과 수정 일자 기준 비교 선형 추세 그래프">
-          <title>결함 등록 기준 / 수정 일자 기준\\n${{esc(tooltip)}}</title>
+      const tooltip = rows.map((d) => `${{d.date}}: 결함등록 ${{d.registered || 0}}건 / 결함 처리 ${{d.fixed || 0}}건`).join("\\n");
+      return `<div><div class="project-chart-title">결함등록 / 결함 처리 · 추세선 포함</div>
+        <svg class="line-chart" viewBox="0 0 520 270" role="img" aria-label="결함등록과 결함 처리 비교 선형 추세 그래프">
+          <title>결함등록 / 결함 처리\\n${{esc(tooltip)}}</title>
           <line class="axis" x1="${{plotLeft}}" y1="${{plotTop}}" x2="${{plotLeft}}" y2="${{plotTop + plotHeight}}"></line>
           <line class="axis" x1="${{plotLeft}}" y1="${{plotTop + plotHeight}}" x2="${{plotLeft + plotWidth}}" y2="${{plotTop + plotHeight}}"></line>
           ${{[0, .25, .5, .75, 1].map((ratio) => {{
@@ -1727,12 +1736,12 @@ def build_html(payload: dict[str, Any]) -> str:
             const label = Math.round(max * ratio);
             return `<line class="grid-line" x1="${{plotLeft}}" y1="${{y.toFixed(1)}}" x2="${{plotLeft + plotWidth}}" y2="${{y.toFixed(1)}}"></line><text x="4" y="${{(y + 3).toFixed(1)}}">${{label}}</text>`;
           }}).join("")}}
-          <path class="trend-line" d="${{linePath(registeredTrend)}}" stroke="var(--blue)"></path>
-          <path class="trend-line" d="${{linePath(fixedTrend)}}" stroke="var(--green)"></path>
-          <path class="series-line" d="${{linePath(registeredPoints)}}" stroke="var(--blue)"></path>
-          <path class="series-line" d="${{linePath(fixedPoints)}}" stroke="var(--green)"></path>
-          ${{registeredPoints.map(([x, y], index) => `<circle class="point" cx="${{x.toFixed(1)}}" cy="${{y.toFixed(1)}}" r="3.5" fill="var(--blue)"><title>${{esc(rows[index].date)}} 등록 ${{rows[index].registered || 0}}건</title></circle>`).join("")}}
-          ${{fixedPoints.map(([x, y], index) => `<circle class="point" cx="${{x.toFixed(1)}}" cy="${{y.toFixed(1)}}" r="3.5" fill="var(--green)"><title>${{esc(rows[index].date)}} 수정 ${{rows[index].fixed || 0}}건</title></circle>`).join("")}}
+          <path class="trend-line" d="${{linePath(registeredTrend)}}" stroke="var(--red)"></path>
+          <path class="trend-line" d="${{linePath(fixedTrend)}}" stroke="var(--blue)"></path>
+          <path class="series-line" d="${{linePath(registeredPoints)}}" stroke="var(--red)"></path>
+          <path class="series-line" d="${{linePath(fixedPoints)}}" stroke="var(--blue)"></path>
+          ${{registeredPoints.map(([x, y], index) => `<circle class="point" cx="${{x.toFixed(1)}}" cy="${{y.toFixed(1)}}" r="3.5" fill="var(--red)"><title>${{esc(rows[index].date)}} 결함등록 ${{rows[index].registered || 0}}건</title></circle>`).join("")}}
+          ${{fixedPoints.map(([x, y], index) => `<circle class="point" cx="${{x.toFixed(1)}}" cy="${{y.toFixed(1)}}" r="3.5" fill="var(--blue)"><title>${{esc(rows[index].date)}} 결함 처리 ${{rows[index].fixed || 0}}건</title></circle>`).join("")}}
           ${{labels.map((d) => `<text x="${{xFor(rows.indexOf(d)).toFixed(1)}}" y="248" text-anchor="middle">${{d.date.slice(5)}}</text>`).join("")}}
         </svg>
       </div>`;

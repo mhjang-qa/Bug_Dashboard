@@ -1017,7 +1017,7 @@ def build_html(payload: dict[str, Any]) -> str:
     .project-table th:nth-child(n+2), .project-table td:nth-child(n+2) {{ text-align: right; }}
     .project-table tbody tr:last-child td {{ font-weight: 800; }}
     .project-rate {{ color: var(--green); font-weight: 800; white-space: nowrap; }}
-    .project-chart-grid {{ display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }}
+    .project-chart-grid {{ display: block; }}
     .project-chart-title {{ margin: 0 0 8px; color: var(--muted); font-size: 12px; font-weight: 700; }}
     .line-chart {{
       width: 100%;
@@ -1124,7 +1124,7 @@ def build_html(payload: dict[str, Any]) -> str:
       .summary {{ grid-template-columns: repeat(2, minmax(0, 1fr)); }}
       .version-list {{ max-height: none; }}
       .report-summary {{ grid-template-columns: repeat(2, minmax(0, 1fr)); }}
-      .project-control, .project-grid, .project-chart-grid {{ grid-template-columns: 1fr; }}
+      .project-control, .project-grid {{ grid-template-columns: 1fr; }}
       header {{ grid-template-columns: 1fr; }}
       .stamp {{ text-align: left; }}
     }}
@@ -1696,24 +1696,30 @@ def build_html(payload: dict[str, Any]) -> str:
       }});
     }}
 
-    function renderProjectLineChart(rows, key, color, title) {{
-      const values = rows.map((d) => Number(d[key] || 0));
-      const max = Math.max(...values, 1);
+    function linePath(points) {{
+      return points.map(([x, y], index) => `${{index ? "L" : "M"}} ${{x.toFixed(1)}} ${{y.toFixed(1)}}`).join(" ");
+    }}
+
+    function renderProjectLineChart(rows) {{
+      const registeredValues = rows.map((d) => Number(d.registered || 0));
+      const fixedValues = rows.map((d) => Number(d.fixed || 0));
+      const max = Math.max(...registeredValues, ...fixedValues, 1);
       const plotLeft = 34;
       const plotTop = 16;
       const plotWidth = 466;
       const plotHeight = 202;
-      const xFor = (index) => values.length <= 1 ? plotLeft + plotWidth / 2 : plotLeft + index / (values.length - 1) * plotWidth;
+      const count = rows.length;
+      const xFor = (index) => count <= 1 ? plotLeft + plotWidth / 2 : plotLeft + index / (count - 1) * plotWidth;
       const yFor = (value) => plotTop + plotHeight - value / max * plotHeight;
-      const points = values.map((value, index) => [xFor(index), yFor(value)]);
-      const path = points.map(([x, y], index) => `${{index ? "L" : "M"}} ${{x.toFixed(1)}} ${{y.toFixed(1)}}`).join(" ");
-      const trend = trendPoints(values, plotLeft, plotTop, plotWidth, plotHeight, max);
-      const trendPath = trend.map(([x, y], index) => `${{index ? "L" : "M"}} ${{x.toFixed(1)}} ${{y.toFixed(1)}}`).join(" ");
+      const registeredPoints = registeredValues.map((value, index) => [xFor(index), yFor(value)]);
+      const fixedPoints = fixedValues.map((value, index) => [xFor(index), yFor(value)]);
+      const registeredTrend = trendPoints(registeredValues, plotLeft, plotTop, plotWidth, plotHeight, max);
+      const fixedTrend = trendPoints(fixedValues, plotLeft, plotTop, plotWidth, plotHeight, max);
       const labels = rows.filter((_, index) => index === 0 || index === rows.length - 1 || index % 7 === 0);
-      const tooltip = rows.map((d) => `${{d.date}}: ${{d[key] || 0}}건`).join("\\n");
-      return `<div><div class="project-chart-title">${{esc(title)}} · 추세선 포함</div>
-        <svg class="line-chart" viewBox="0 0 520 270" role="img" aria-label="${{esc(title)}} 선형 추세 그래프">
-          <title>${{esc(title)}}\\n${{esc(tooltip)}}</title>
+      const tooltip = rows.map((d) => `${{d.date}}: 등록 ${{d.registered || 0}}건 / 수정 ${{d.fixed || 0}}건`).join("\\n");
+      return `<div><div class="project-chart-title">결함 등록 기준 / 수정 일자 기준 · 추세선 포함</div>
+        <svg class="line-chart" viewBox="0 0 520 270" role="img" aria-label="결함 등록 기준과 수정 일자 기준 비교 선형 추세 그래프">
+          <title>결함 등록 기준 / 수정 일자 기준\\n${{esc(tooltip)}}</title>
           <line class="axis" x1="${{plotLeft}}" y1="${{plotTop}}" x2="${{plotLeft}}" y2="${{plotTop + plotHeight}}"></line>
           <line class="axis" x1="${{plotLeft}}" y1="${{plotTop + plotHeight}}" x2="${{plotLeft + plotWidth}}" y2="${{plotTop + plotHeight}}"></line>
           ${{[0, .25, .5, .75, 1].map((ratio) => {{
@@ -1721,9 +1727,12 @@ def build_html(payload: dict[str, Any]) -> str:
             const label = Math.round(max * ratio);
             return `<line class="grid-line" x1="${{plotLeft}}" y1="${{y.toFixed(1)}}" x2="${{plotLeft + plotWidth}}" y2="${{y.toFixed(1)}}"></line><text x="4" y="${{(y + 3).toFixed(1)}}">${{label}}</text>`;
           }}).join("")}}
-          <path class="trend-line" d="${{trendPath}}" stroke="${{color}}"></path>
-          <path class="series-line" d="${{path}}" stroke="${{color}}"></path>
-          ${{points.map(([x, y], index) => `<circle class="point" cx="${{x.toFixed(1)}}" cy="${{y.toFixed(1)}}" r="3.5" fill="${{color}}"><title>${{esc(rows[index].date)}} ${{rows[index][key] || 0}}건</title></circle>`).join("")}}
+          <path class="trend-line" d="${{linePath(registeredTrend)}}" stroke="var(--blue)"></path>
+          <path class="trend-line" d="${{linePath(fixedTrend)}}" stroke="var(--green)"></path>
+          <path class="series-line" d="${{linePath(registeredPoints)}}" stroke="var(--blue)"></path>
+          <path class="series-line" d="${{linePath(fixedPoints)}}" stroke="var(--green)"></path>
+          ${{registeredPoints.map(([x, y], index) => `<circle class="point" cx="${{x.toFixed(1)}}" cy="${{y.toFixed(1)}}" r="3.5" fill="var(--blue)"><title>${{esc(rows[index].date)}} 등록 ${{rows[index].registered || 0}}건</title></circle>`).join("")}}
+          ${{fixedPoints.map(([x, y], index) => `<circle class="point" cx="${{x.toFixed(1)}}" cy="${{y.toFixed(1)}}" r="3.5" fill="var(--green)"><title>${{esc(rows[index].date)}} 수정 ${{rows[index].fixed || 0}}건</title></circle>`).join("")}}
           ${{labels.map((d) => `<text x="${{xFor(rows.indexOf(d)).toFixed(1)}}" y="248" text-anchor="middle">${{d.date.slice(5)}}</text>`).join("")}}
         </svg>
       </div>`;
@@ -1768,10 +1777,7 @@ def build_html(payload: dict[str, Any]) -> str:
         </tr>
       `).join("")}}</tbody></table>`;
       const rows = current.daily || [];
-      $("projectCharts").innerHTML = [
-        renderProjectLineChart(rows, "registered", "var(--blue)", "결함 등록 기준"),
-        renderProjectLineChart(rows, "fixed", "var(--green)", "수정 일자 기준"),
-      ].join("");
+      $("projectCharts").innerHTML = renderProjectLineChart(rows);
     }}
 
     document.querySelectorAll(".tab").forEach((button) => {{

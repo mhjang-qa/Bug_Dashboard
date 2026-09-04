@@ -1371,7 +1371,8 @@ def build_html(payload: dict[str, Any]) -> str:
 
         if (response.status === 204) {{
           closeSyncModal();
-          setSyncStatus(`동기화 요청을 보냈습니다. <a class="sync-link" href="${{SYNC_CONFIG.actionsUrl}}" target="_blank" rel="noreferrer">GitHub Actions</a>에서 실행 상태를 확인하세요.`, "success");
+          setSyncStatus(`동기화 요청을 보냈습니다. 완료 후 화면을 자동으로 새로고침합니다. <a class="sync-link" href="${{SYNC_CONFIG.actionsUrl}}" target="_blank" rel="noreferrer">GitHub Actions</a>`, "success");
+          waitForDashboardRefresh(30);
           return;
         }}
 
@@ -1400,6 +1401,61 @@ def build_html(payload: dict[str, Any]) -> str:
 
     function currentScope() {{
       return DATA.domains[selectedDomain] || DATA.domains.ALL;
+    }}
+
+    async function fetchPublishedGeneratedAt() {{
+      const url = new URL(window.location.href);
+      url.searchParams.set("check", String(Date.now()));
+      const response = await fetch(url.toString(), {{ cache: "no-store" }});
+      if (!response.ok) return "";
+      const html = await response.text();
+      const doc = new DOMParser().parseFromString(html, "text/html");
+      const raw = doc.getElementById("dashboard-data")?.textContent || "";
+      if (!raw.trim()) return "";
+      try {{
+        return JSON.parse(raw).generatedAt || "";
+      }} catch (_) {{
+        return "";
+      }}
+    }}
+
+    function reloadWithCacheBuster() {{
+      const url = new URL(window.location.href);
+      url.searchParams.set("check", String(Date.now()));
+      window.location.replace(url.toString());
+    }}
+
+    function waitForDashboardRefresh(maxAttempts = 30) {{
+      let attempts = 0;
+      const timer = window.setInterval(async () => {{
+        attempts += 1;
+        try {{
+          const generatedAt = await fetchPublishedGeneratedAt();
+          if (generatedAt && generatedAt !== DATA.generatedAt) {{
+            window.clearInterval(timer);
+            setSyncStatus("새 대시보드가 생성되어 화면을 새로고침합니다.", "success");
+            reloadWithCacheBuster();
+          }} else if (attempts >= maxAttempts) {{
+            window.clearInterval(timer);
+            setSyncStatus(`동기화 요청은 완료 대기 중입니다. <a class="sync-link" href="${{SYNC_CONFIG.actionsUrl}}" target="_blank" rel="noreferrer">GitHub Actions</a> 완료 후 새로고침하면 최신 데이터가 표시됩니다.`, "loading");
+          }}
+        }} catch (_) {{
+          if (attempts >= maxAttempts) {{
+            window.clearInterval(timer);
+          }}
+        }}
+      }}, 20000);
+    }}
+
+    function startScheduledRefreshWatcher() {{
+      window.setInterval(async () => {{
+        try {{
+          const generatedAt = await fetchPublishedGeneratedAt();
+          if (generatedAt && generatedAt !== DATA.generatedAt) {{
+            reloadWithCacheBuster();
+          }}
+        }} catch (_) {{}}
+      }}, 300000);
     }}
 
     function renderDomainSwitch() {{
@@ -1698,6 +1754,7 @@ def build_html(payload: dict[str, Any]) -> str:
     renderDistributions();
     renderRecent();
     renderProjectProgress();
+    startScheduledRefreshWatcher();
   </script>
 </body>
 </html>

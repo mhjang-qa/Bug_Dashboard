@@ -1649,7 +1649,7 @@ def build_html(payload: dict[str, Any]) -> str:
           <td>${{row.open}}</td>
           <td>${{row.done}}</td>
           <td>${{row.total}}</td>
-          <td><span class="project-rate">${{pct(row.rate)}}</span> <span class="meta">(이전 ${{pct(row.previousRate)}})</span></td>
+          <td><span class="project-rate">${{pct(row.rate)}}</span> <span class="meta">(전일 ${{pct(row.previousRate)}})</span></td>
         </tr>
       `).join("")}}</tbody></table>`;
       const rows = current.daily || [];

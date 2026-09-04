@@ -557,6 +557,152 @@ def build_versions(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
     )
 
 
+DEV_OPEN_STAGES = {"등록", "배정", "진행중"}
+DEV_DONE_STAGES = {"수정완료", "QA확인", "종료"}
+
+
+def compact_status(value: Any) -> str:
+    return re.sub(r"\s+", "", str(value or "")).lower()
+
+
+def is_dev_done_row(row: dict[str, Any]) -> bool:
+    compact = compact_status(row.get("status"))
+    done_tokens = [
+        "개발완료",
+        "수정완료",
+        "qa확인",
+        "qa완료",
+        "resolved",
+        "fixed",
+        "devdone",
+        "done",
+        "closed",
+    ]
+    return any(token in compact for token in done_tokens) or row.get("stage") in DEV_DONE_STAGES
+
+
+def is_dev_open_row(row: dict[str, Any]) -> bool:
+    compact = compact_status(row.get("status"))
+    open_tokens = ["등록", "배정", "처리중", "진행중", "registered", "assigned", "inprogress"]
+    return not is_dev_done_row(row) and (
+        any(token in compact for token in open_tokens) or row.get("stage") in DEV_OPEN_STAGES
+    )
+
+
+def completion_date(row: dict[str, Any]) -> str:
+    if not is_dev_done_row(row):
+        return ""
+    return row.get("fixedDate") or row.get("closedDate") or date_key(row.get("lastEditedAt"))
+
+
+def build_project_daily(rows: list[dict[str, Any]], days: int) -> list[dict[str, Any]]:
+    created = Counter(row.get("createdDate") for row in rows if row.get("createdDate"))
+    fixed = Counter(completion_date(row) for row in rows if completion_date(row))
+    return [
+        {
+            "date": day.isoformat(),
+            "registered": int(created[day.isoformat()]),
+            "fixed": int(fixed[day.isoformat()]),
+        }
+        for day in daily_range(days)
+    ]
+
+
+def project_status_counts(rows: list[dict[str, Any]], cutoff: str | None = None) -> dict[str, int | float]:
+    scoped = [
+        row
+        for row in rows
+        if not cutoff or not row.get("createdDate") or row.get("createdDate", "") <= cutoff
+    ]
+    done = 0
+    open_count = 0
+    for row in scoped:
+        done_date = completion_date(row)
+        if is_dev_done_row(row) and (cutoff is None or not done_date or done_date <= cutoff):
+            done += 1
+            continue
+        if is_dev_open_row(row) or (cutoff is not None and is_dev_done_row(row) and done_date and done_date > cutoff):
+            open_count += 1
+    total = open_count + done
+    return {
+        "open": open_count,
+        "done": done,
+        "total": total,
+        "rate": round(done / total * 100, 1) if total else 0,
+    }
+
+
+def build_project_severity_rows(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    yesterday = (datetime.now().date() - timedelta(days=1)).isoformat()
+    result: list[dict[str, Any]] = []
+    for severity in ["Critical", "Major", "Minor"]:
+        items = [row for row in rows if row.get("severity") == severity]
+        current = project_status_counts(items)
+        previous = project_status_counts(items, yesterday)
+        result.append(
+            {
+                "severity": severity,
+                "open": current["open"],
+                "done": current["done"],
+                "total": current["total"],
+                "rate": current["rate"],
+                "previousRate": previous["rate"],
+            }
+        )
+    current_total = project_status_counts(rows)
+    previous_total = project_status_counts(rows, yesterday)
+    result.append(
+        {
+            "severity": "합계",
+            "open": current_total["open"],
+            "done": current_total["done"],
+            "total": current_total["total"],
+            "rate": current_total["rate"],
+            "previousRate": previous_total["rate"],
+        }
+    )
+    return result
+
+
+def build_project_progress(rows: list[dict[str, Any]], days: int) -> list[dict[str, Any]]:
+    grouped: dict[str, list[dict[str, Any]]] = defaultdict(list)
+    for row in rows:
+        grouped[row["version"]].append(row)
+    progress: list[dict[str, Any]] = []
+    for version, items in grouped.items():
+        counts = project_status_counts(items)
+        latest_snapshot = max(
+            [
+                value
+                for item in items
+                for value in [item.get("createdDate"), completion_date(item), date_key(item.get("lastEditedAt"))]
+                if value
+            ],
+            default="",
+        )
+        progress.append(
+            {
+                "version": version,
+                "total": len(items),
+                "open": counts["open"],
+                "done": counts["done"],
+                "scopeTotal": counts["total"],
+                "doneRate": counts["rate"],
+                "latestSnapshot": latest_snapshot,
+                "severityRows": build_project_severity_rows(items),
+                "daily": build_project_daily(items, max(days, 30)),
+            }
+        )
+    return sorted(
+        progress,
+        key=lambda item: (
+            1 if is_backlog_version(item["version"]) else 0,
+            version_sort_key_desc(item["version"]),
+            -item["total"],
+        ),
+    )
+
+
 def build_version_groups(versions: list[dict[str, Any]]) -> dict[str, list[str]]:
     recent = [
         item["version"]
@@ -610,6 +756,7 @@ def build_scope_payload(rows: list[dict[str, Any]], days: int, report_board: dic
         "daily": daily,
         "versions": versions,
         "versionGroups": build_version_groups(versions),
+        "projectProgress": build_project_progress(rows, max(days, 30)),
         "selectedVersion": "ALL",
         "distributions": {
             "ALL": {
@@ -806,6 +953,8 @@ def build_html(payload: dict[str, Any]) -> str:
     .bar.new {{ background: var(--blue); }}
     .bar.fixed {{ background: var(--yellow); }}
     .bar.closed {{ background: var(--green); }}
+    .bar.registered {{ background: var(--blue); }}
+    .bar.project-fixed {{ background: var(--green); }}
     .label {{ color: var(--muted); font-size: 10px; text-align: center; }}
     .legend {{ display: flex; flex-wrap: wrap; gap: 12px; margin-top: 10px; color: var(--muted); font-size: 12px; }}
     .dot {{ width: 9px; height: 9px; display: inline-block; border-radius: 50%; margin-right: 5px; }}
@@ -847,6 +996,25 @@ def build_html(payload: dict[str, Any]) -> str:
     .report-item {{ display: grid; grid-template-columns: 1fr auto; gap: 10px; align-items: center; padding: 8px 10px; border: 1px solid var(--line); border-radius: 8px; background: var(--panel-soft); color: var(--text); text-decoration: none; }}
     .report-item small {{ display: block; color: var(--muted); font-size: 11px; margin-top: 3px; }}
     .report-badge {{ color: var(--muted); font-size: 11px; white-space: nowrap; }}
+    .project-control {{ display: grid; grid-template-columns: 1fr minmax(260px, 420px); gap: 16px; align-items: end; }}
+    .project-control label {{ display: grid; gap: 7px; color: var(--muted); font-size: 12px; font-weight: 650; }}
+    .project-select {{
+      width: 100%;
+      border: 1px solid var(--line);
+      background: var(--panel-soft);
+      color: var(--text);
+      border-radius: 8px;
+      padding: 10px 12px;
+      font-size: 13px;
+      font-weight: 650;
+    }}
+    .project-summary {{ margin-top: 12px; margin-bottom: 14px; }}
+    .project-grid {{ grid-template-columns: minmax(420px, 1fr) minmax(520px, 1.2fr); }}
+    .project-table th:nth-child(n+2), .project-table td:nth-child(n+2) {{ text-align: right; }}
+    .project-table tbody tr:last-child td {{ font-weight: 800; }}
+    .project-rate {{ color: var(--green); font-weight: 800; white-space: nowrap; }}
+    .project-chart-grid {{ display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }}
+    .project-chart-title {{ margin: 0 0 8px; color: var(--muted); font-size: 12px; font-weight: 700; }}
     table {{ width: 100%; border-collapse: collapse; font-size: 13px; }}
     th, td {{ padding: 11px 9px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }}
     th {{ color: var(--muted); font-size: 12px; font-weight: 650; }}
@@ -940,6 +1108,7 @@ def build_html(payload: dict[str, Any]) -> str:
       .summary {{ grid-template-columns: repeat(2, minmax(0, 1fr)); }}
       .version-list {{ max-height: none; }}
       .report-summary {{ grid-template-columns: repeat(2, minmax(0, 1fr)); }}
+      .project-control, .project-grid, .project-chart-grid {{ grid-template-columns: 1fr; }}
       header {{ grid-template-columns: 1fr; }}
       .stamp {{ text-align: left; }}
     }}
@@ -961,6 +1130,7 @@ def build_html(payload: dict[str, Any]) -> str:
       }}
       .tile {{ background: #172036; border-color: rgba(148,163,184,.10); }}
       .tab, .range-btn, .version-mode-btn, .version-item, .domain-btn {{ background: #0b1220; }}
+      .project-select {{ background: #0b1220; }}
       .version-item.active {{ border-color: rgba(97, 183, 255, .45); box-shadow: 0 0 0 2px rgba(97, 183, 255, .08) inset; }}
       .version-mode-btn.active {{ border-color: rgba(97, 183, 255, .45); background: rgba(97, 183, 255, .10); }}
       .domain-btn.active {{ border-color: rgba(97, 183, 255, .45); background: rgba(97, 183, 255, .10); }}
@@ -987,6 +1157,7 @@ def build_html(payload: dict[str, Any]) -> str:
       <button class="tab" data-view="trend">일별 추이</button>
       <button class="tab" data-view="version">버전/분포</button>
       <button class="tab" data-view="recent">최근 결함</button>
+      <button class="tab" data-view="project">프로젝트별 결함 현황</button>
     </nav>
     <section class="summary" id="summary"></section>
     <main>
@@ -1026,6 +1197,31 @@ def build_html(payload: dict[str, Any]) -> str:
       </section>
       <section class="view" id="recent">
         <article class="panel"><h2>최근 등록 결함 10건</h2><div class="table-wrap" id="recentList"></div></article>
+      </section>
+      <section class="view" id="project">
+        <article class="panel">
+          <div class="project-control">
+            <div class="panel-title">
+              <h2>프로젝트별 결함 현황</h2>
+              <div class="subtle" id="projectProgressNote">선택한 타겟버전의 심각도별 미처리, 개발 완료, 일자별 등록/수정 추이를 표시합니다.</div>
+            </div>
+            <label for="projectVersionSelect">타겟버전
+              <select class="project-select" id="projectVersionSelect"></select>
+            </label>
+          </div>
+        </article>
+        <section class="summary project-summary" id="projectSummary"></section>
+        <div class="grid project-grid">
+          <article class="panel">
+            <div class="panel-head"><h2>개발 현황</h2><div class="subtle" id="projectSnapshotLabel"></div></div>
+            <div class="table-wrap" id="projectProgressTable"></div>
+          </article>
+          <article class="panel">
+            <div class="panel-head"><h2>일자별 그래프</h2><div class="subtle">결함 등록 기준 / 수정 일자 기준</div></div>
+            <div class="project-chart-grid" id="projectCharts"></div>
+            <div class="legend"><span><i class="dot" style="background:var(--blue)"></i>결함 등록 기준</span><span><i class="dot" style="background:var(--green)"></i>수정 일자 기준</span></div>
+          </article>
+        </div>
       </section>
     </main>
   </div>
@@ -1121,6 +1317,7 @@ def build_html(payload: dict[str, Any]) -> str:
     let selectedDomain = "ALL";
     let selectedVersion = DATA.selectedVersion || "ALL";
     let selectedVersionMode = "RECENT";
+    let selectedProjectVersion = "";
     $("stamp").textContent = `생성: ${{formatKstDateTimeWithRelative(DATA.generatedAt)}} · 기준 ${{DATA.days}}일`;
 
     function setSyncStatus(message, tone = "") {{
@@ -1220,6 +1417,7 @@ def build_html(payload: dict[str, Any]) -> str:
         button.addEventListener("click", () => {{
           selectedDomain = button.dataset.domain || "ALL";
           selectedVersion = "ALL";
+          selectedProjectVersion = "";
           renderDomainSwitch();
           renderSummary();
           renderFunnel();
@@ -1229,6 +1427,7 @@ def build_html(payload: dict[str, Any]) -> str:
           renderVersions();
           renderDistributions();
           renderRecent();
+          renderProjectProgress();
         }});
       }});
     }}
@@ -1403,10 +1602,70 @@ def build_html(payload: dict[str, Any]) -> str:
       }});
     }}
 
+    function renderProjectBarChart(rows, key, className, title) {{
+      const max = Math.max(...rows.map((d) => Number(d[key] || 0)), 1);
+      return `<div><div class="project-chart-title">${{esc(title)}}</div><div class="chart">${{rows.map((d) => `
+        <div class="day" title="${{d.date}} ${{title}} ${{d[key] || 0}}건">
+          <div class="bars">
+            <div class="bar ${{className}}" style="height:${{Math.max(2, Number(d[key] || 0) / max * 100)}}%"></div>
+          </div>
+          <div class="label">${{d.date.slice(5)}}</div>
+        </div>
+      `).join("")}}</div></div>`;
+    }}
+
+    function renderProjectProgress() {{
+      const items = currentScope().projectProgress || [];
+      if (!items.length) {{
+        $("projectVersionSelect").innerHTML = "";
+        $("projectSummary").innerHTML = "";
+        $("projectSnapshotLabel").textContent = "";
+        $("projectProgressTable").innerHTML = `<div class="empty">표시할 타겟버전 데이터가 없습니다.</div>`;
+        $("projectCharts").innerHTML = "";
+        return;
+      }}
+      if (!selectedProjectVersion || !items.some((item) => item.version === selectedProjectVersion)) {{
+        selectedProjectVersion = items[0].version;
+      }}
+      $("projectVersionSelect").innerHTML = items.map((item) => `
+        <option value="${{esc(item.version)}}">${{esc(item.version)}} (${{item.total}}건)</option>
+      `).join("");
+      $("projectVersionSelect").value = selectedProjectVersion;
+      const current = items.find((item) => item.version === selectedProjectVersion) || items[0];
+      $("projectProgressNote").textContent = `${{selectedDomain === "ALL" ? "전체" : selectedDomain}} · ${{current.version}}`;
+      $("projectSnapshotLabel").textContent = current.latestSnapshot ? `최신 Snapshot ${{formatDisplayDateTime(current.latestSnapshot)}}` : "Snapshot 정보 없음";
+      const cards = [
+        ["모수", current.scopeTotal, "미처리+개발 완료"],
+        ["미처리", current.open, "등록+배정+처리중"],
+        ["개발 완료", current.done, "수정 완료 이후"],
+        ["개발 완료 비율", pct(current.doneRate), `선택 타겟 기준`],
+      ];
+      $("projectSummary").innerHTML = cards.map(([label, value, note]) => `
+        <article class="card"><span>${{esc(label)}}</span><strong>${{esc(value)}}</strong><em>${{esc(note)}}</em></article>
+      `).join("");
+      $("projectProgressTable").innerHTML = `<table class="project-table"><thead><tr><th>심각도</th><th>미처리(등록+배정+처리중)</th><th>개발 완료</th><th>모수</th><th>개발 완료 비율</th></tr></thead><tbody>${{current.severityRows.map((row) => `
+        <tr>
+          <td>${{esc(row.severity)}}</td>
+          <td>${{row.open}}</td>
+          <td>${{row.done}}</td>
+          <td>${{row.total}}</td>
+          <td><span class="project-rate">${{pct(row.rate)}}</span> <span class="meta">(이전 ${{pct(row.previousRate)}})</span></td>
+        </tr>
+      `).join("")}}</tbody></table>`;
+      const rows = current.daily || [];
+      $("projectCharts").innerHTML = [
+        renderProjectBarChart(rows, "registered", "registered", "결함 등록 기준"),
+        renderProjectBarChart(rows, "fixed", "project-fixed", "수정 일자 기준"),
+      ].join("");
+    }}
+
     document.querySelectorAll(".tab").forEach((button) => {{
       button.addEventListener("click", () => {{
         document.querySelectorAll(".tab").forEach((item) => item.classList.toggle("active", item === button));
         document.querySelectorAll(".view").forEach((view) => view.classList.toggle("active", view.id === button.dataset.view));
+        if (button.dataset.view === "project") {{
+          renderProjectProgress();
+        }}
       }});
     }});
 
@@ -1421,6 +1680,10 @@ def build_html(payload: dict[str, Any]) -> str:
     $("syncButton").addEventListener("click", openSyncModal);
     $("syncCancelButton").addEventListener("click", closeSyncModal);
     $("syncSubmitButton").addEventListener("click", dispatchSync);
+    $("projectVersionSelect").addEventListener("change", (event) => {{
+      selectedProjectVersion = event.target.value;
+      renderProjectProgress();
+    }});
     $("syncModal").addEventListener("click", (event) => {{
       if (event.target === $("syncModal")) closeSyncModal();
     }});
@@ -1434,6 +1697,7 @@ def build_html(payload: dict[str, Any]) -> str:
     renderVersions();
     renderDistributions();
     renderRecent();
+    renderProjectProgress();
   </script>
 </body>
 </html>

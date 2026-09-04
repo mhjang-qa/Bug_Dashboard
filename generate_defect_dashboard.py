@@ -703,6 +703,11 @@ def build_project_progress(rows: list[dict[str, Any]], days: int) -> list[dict[s
     )
 
 
+def latest_registered_version(rows: list[dict[str, Any]]) -> str:
+    latest = max(rows, key=lambda row: row.get("createdAt") or "", default=None)
+    return latest.get("version", "") if latest else ""
+
+
 def build_version_groups(versions: list[dict[str, Any]]) -> dict[str, list[str]]:
     recent = [
         item["version"]
@@ -757,6 +762,7 @@ def build_scope_payload(rows: list[dict[str, Any]], days: int, report_board: dic
         "versions": versions,
         "versionGroups": build_version_groups(versions),
         "projectProgress": build_project_progress(rows, max(days, 30)),
+        "defaultProjectVersion": latest_registered_version(rows),
         "selectedVersion": "ALL",
         "distributions": {
             "ALL": {
@@ -1327,7 +1333,7 @@ def build_html(payload: dict[str, Any]) -> str:
     let selectedDomain = "ALL";
     let selectedVersion = DATA.selectedVersion || "ALL";
     let selectedVersionMode = "RECENT";
-    let selectedProjectVersion = "";
+    let selectedProjectVersion = currentScope().defaultProjectVersion || "";
     $("stamp").textContent = `생성: ${{formatKstDateTimeWithRelative(DATA.generatedAt)}} · 기준 ${{DATA.days}}일`;
 
     function setSyncStatus(message, tone = "") {{
@@ -1483,7 +1489,7 @@ def build_html(payload: dict[str, Any]) -> str:
         button.addEventListener("click", () => {{
           selectedDomain = button.dataset.domain || "ALL";
           selectedVersion = "ALL";
-          selectedProjectVersion = "";
+          selectedProjectVersion = currentScope().defaultProjectVersion || "";
           renderDomainSwitch();
           renderSummary();
           renderFunnel();
@@ -1734,7 +1740,7 @@ def build_html(payload: dict[str, Any]) -> str:
         return;
       }}
       if (!selectedProjectVersion || !items.some((item) => item.version === selectedProjectVersion)) {{
-        selectedProjectVersion = items[0].version;
+        selectedProjectVersion = currentScope().defaultProjectVersion || items[0].version;
       }}
       $("projectVersionSelect").innerHTML = items.map((item) => `
         <option value="${{esc(item.version)}}">${{esc(item.version)}} (${{item.total}}건)</option>

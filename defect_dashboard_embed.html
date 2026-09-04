@@ -452,7 +452,7 @@
     </div>
   </div>
   <script id="dashboard-data" type="application/json">{
-  "generatedAt": "2026-09-04T02:54:20+00:00",
+  "generatedAt": "2026-09-04T03:58:11+00:00",
   "days": 30,
   "domainOrder": [
     "한패스",
@@ -9736,6 +9736,7 @@
           ]
         }
       ],
+      "defaultProjectVersion": "콕뱅크",
       "selectedVersion": "ALL",
       "distributions": {
         "ALL": {
@@ -17519,6 +17520,7 @@
           ]
         }
       ],
+      "defaultProjectVersion": "콕뱅크",
       "selectedVersion": "ALL",
       "distributions": {
         "ALL": {
@@ -20352,6 +20354,7 @@
           ]
         }
       ],
+      "defaultProjectVersion": "[G.H]콕뱅크",
       "selectedVersion": "ALL",
       "distributions": {
         "ALL": {
@@ -20934,7 +20937,7 @@
     let selectedDomain = "ALL";
     let selectedVersion = DATA.selectedVersion || "ALL";
     let selectedVersionMode = "RECENT";
-    let selectedProjectVersion = "";
+    let selectedProjectVersion = currentScope().defaultProjectVersion || "";
     $("stamp").textContent = `생성: ${formatKstDateTimeWithRelative(DATA.generatedAt)} · 기준 ${DATA.days}일`;
 
     function setSyncStatus(message, tone = "") {
@@ -21090,7 +21093,7 @@
         button.addEventListener("click", () => {
           selectedDomain = button.dataset.domain || "ALL";
           selectedVersion = "ALL";
-          selectedProjectVersion = "";
+          selectedProjectVersion = currentScope().defaultProjectVersion || "";
           renderDomainSwitch();
           renderSummary();
           renderFunnel();
@@ -21341,7 +21344,7 @@
         return;
       }
       if (!selectedProjectVersion || !items.some((item) => item.version === selectedProjectVersion)) {
-        selectedProjectVersion = items[0].version;
+        selectedProjectVersion = currentScope().defaultProjectVersion || items[0].version;
       }
       $("projectVersionSelect").innerHTML = items.map((item) => `
         <option value="${esc(item.version)}">${esc(item.version)} (${item.total}건)</option>

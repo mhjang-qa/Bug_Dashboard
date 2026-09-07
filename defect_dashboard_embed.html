@@ -452,7 +452,7 @@
     </div>
   </div>
   <script id="dashboard-data" type="application/json">{
-  "generatedAt": "2026-09-06T23:49:26+00:00",
+  "generatedAt": "2026-09-07T01:13:09+00:00",
   "days": 30,
   "domainOrder": [
     "한패스",
@@ -461,19 +461,19 @@
   "domains": {
     "ALL": {
       "summary": {
-        "total": 1415,
-        "new": 208,
-        "inProgress": 30,
+        "total": 1416,
+        "new": 205,
+        "inProgress": 36,
         "fixed": 0,
-        "closed": 1072,
-        "todayNew": 0,
-        "newDelta": 0
+        "closed": 1059,
+        "todayNew": 1,
+        "newDelta": 1
       },
       "funnel": [
         {
           "stage": "등록",
-          "count": 208,
-          "rate": 14.7,
+          "count": 205,
+          "rate": 14.5,
           "width": 19
         },
         {
@@ -490,8 +490,8 @@
         },
         {
           "stage": "진행중",
-          "count": 30,
-          "rate": 2.1,
+          "count": 36,
+          "rate": 2.5,
           "width": 18
         },
         {
@@ -502,25 +502,18 @@
         },
         {
           "stage": "QA확인",
-          "count": 103,
-          "rate": 7.3,
+          "count": 114,
+          "rate": 8.1,
           "width": 18
         },
         {
           "stage": "종료",
-          "count": 1072,
-          "rate": 75.8,
+          "count": 1059,
+          "rate": 74.8,
           "width": 100
         }
       ],
       "daily": [
-        {
-          "date": "2026-08-08",
-          "new": 0,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": 0
-        },
         {
           "date": "2026-08-09",
           "new": 0,
@@ -685,29 +678,29 @@
         {
           "date": "2026-09-01",
           "new": 36,
-          "fixed": 25,
-          "closed": 25,
+          "fixed": 19,
+          "closed": 19,
           "deltaNew": -1
         },
         {
           "date": "2026-09-02",
           "new": 26,
-          "fixed": 158,
-          "closed": 158,
+          "fixed": 145,
+          "closed": 145,
           "deltaNew": -10
         },
         {
           "date": "2026-09-03",
           "new": 24,
-          "fixed": 79,
-          "closed": 79,
+          "fixed": 40,
+          "closed": 40,
           "deltaNew": -2
         },
         {
           "date": "2026-09-04",
           "new": 25,
-          "fixed": 147,
-          "closed": 108,
+          "fixed": 120,
+          "closed": 81,
           "deltaNew": 1
         },
         {
@@ -720,9 +713,16 @@
         {
           "date": "2026-09-06",
           "new": 0,
-          "fixed": 0,
-          "closed": 0,
+          "fixed": 71,
+          "closed": 71,
           "deltaNew": 0
+        },
+        {
+          "date": "2026-09-07",
+          "new": 1,
+          "fixed": 12,
+          "closed": 1,
+          "deltaNew": 1
         }
       ],
       "versions": [
@@ -1571,6 +1571,30 @@
           ]
         },
         {
+          "version": "[G.H][콕뱅크]",
+          "total": 1,
+          "criticalMajor": 0,
+          "doneRate": 100.0,
+          "status": [
+            {
+              "label": "종료",
+              "count": 1
+            }
+          ],
+          "severity": [
+            {
+              "label": "Minor",
+              "count": 1
+            }
+          ],
+          "priority": [
+            {
+              "label": "Medium",
+              "count": 1
+            }
+          ]
+        },
+        {
           "version": "[G.H]추후 수정-백로그",
           "total": 5,
           "criticalMajor": 3,
@@ -1599,42 +1623,14 @@
           ]
         },
         {
-          "version": "[G.H]콕뱅크",
-          "total": 1,
-          "criticalMajor": 0,
-          "doneRate": 100.0,
-          "status": [
-            {
-              "label": "종료",
-              "count": 1
-            }
-          ],
-          "severity": [
-            {
-              "label": "Minor",
-              "count": 1
-            }
-          ],
-          "priority": [
-            {
-              "label": "Medium",
-              "count": 1
-            }
-          ]
-        },
-        {
           "version": "[Hanpass][앱개편][BO]",
           "total": 48,
           "criticalMajor": 32,
           "doneRate": 83.3,
           "status": [
             {
-              "label": "등록",
-              "count": 6
-            },
-            {
               "label": "진행중",
-              "count": 2
+              "count": 8
             },
             {
               "label": "종료",
@@ -1887,6 +1883,58 @@
           ]
         },
         {
+          "version": "[콕뱅크]",
+          "total": 105,
+          "criticalMajor": 35,
+          "doneRate": 78.1,
+          "status": [
+            {
+              "label": "등록",
+              "count": 14
+            },
+            {
+              "label": "배정",
+              "count": 1
+            },
+            {
+              "label": "진행중",
+              "count": 8
+            },
+            {
+              "label": "QA확인",
+              "count": 11
+            },
+            {
+              "label": "종료",
+              "count": 71
+            }
+          ],
+          "severity": [
+            {
+              "label": "Critical",
+              "count": 2
+            },
+            {
+              "label": "Major",
+              "count": 33
+            },
+            {
+              "label": "Minor",
+              "count": 70
+            }
+          ],
+          "priority": [
+            {
+              "label": "Medium",
+              "count": 104
+            },
+            {
+              "label": "Low",
+              "count": 1
+            }
+          ]
+        },
+        {
           "version": "[포인트] 해외송금 미션 중단",
           "total": 1,
           "criticalMajor": 1,
@@ -1939,54 +1987,6 @@
             {
               "label": "Low",
               "count": 2
-            }
-          ]
-        },
-        {
-          "version": "콕뱅크",
-          "total": 104,
-          "criticalMajor": 34,
-          "doneRate": 80.8,
-          "status": [
-            {
-              "label": "등록",
-              "count": 11
-            },
-            {
-              "label": "배정",
-              "count": 1
-            },
-            {
-              "label": "진행중",
-              "count": 8
-            },
-            {
-              "label": "종료",
-              "count": 84
-            }
-          ],
-          "severity": [
-            {
-              "label": "Critical",
-              "count": 1
-            },
-            {
-              "label": "Major",
-              "count": 33
-            },
-            {
-              "label": "Minor",
-              "count": 70
-            }
-          ],
-          "priority": [
-            {
-              "label": "Medium",
-              "count": 103
-            },
-            {
-              "label": "Low",
-              "count": 1
             }
           ]
         },
@@ -2105,8 +2105,8 @@
           "[G.H]v1.0.2",
           "[G.H]v1.0.0",
           "[G.H][교통카드]SDK변경",
+          "[G.H][콕뱅크]",
           "[G.H]추후 수정-백로그",
-          "[G.H]콕뱅크",
           "[Hanpass][앱개편][BO]",
           "[Hanpass][앱개편][Native]-Dev",
           "[Hanpass][앱개편][Native]-LiveTest",
@@ -2114,9 +2114,9 @@
           "[게이미피케이션][혜택]포인트_2배_이벤트",
           "[교통카드]SDK변경",
           "[카카오뱅크]해외송금-1차",
+          "[콕뱅크]",
           "[포인트] 해외송금 미션 중단",
           "결함 아님 - Done",
-          "콕뱅크",
           "미지정",
           "[G.H]Backlog",
           "Hanpass - Backlog"
@@ -2371,6 +2371,11 @@
               "date": "2026-09-06",
               "registered": 11,
               "fixed": 1
+            },
+            {
+              "date": "2026-09-07",
+              "registered": 11,
+              "fixed": 1
             }
           ]
         },
@@ -2479,6 +2484,11 @@
             },
             {
               "date": "2026-09-06",
+              "registered": 7,
+              "fixed": 2
+            },
+            {
+              "date": "2026-09-07",
               "registered": 7,
               "fixed": 2
             }
@@ -2761,6 +2771,11 @@
               "date": "2026-09-06",
               "registered": 20,
               "fixed": 20
+            },
+            {
+              "date": "2026-09-07",
+              "registered": 20,
+              "fixed": 20
             }
           ]
         },
@@ -3039,6 +3054,11 @@
             },
             {
               "date": "2026-09-06",
+              "registered": 3,
+              "fixed": 3
+            },
+            {
+              "date": "2026-09-07",
               "registered": 3,
               "fixed": 3
             }
@@ -3499,6 +3519,11 @@
             },
             {
               "date": "2026-09-06",
+              "registered": 26,
+              "fixed": 26
+            },
+            {
+              "date": "2026-09-07",
               "registered": 26,
               "fixed": 26
             }
@@ -4049,6 +4074,11 @@
             },
             {
               "date": "2026-09-06",
+              "registered": 34,
+              "fixed": 33
+            },
+            {
+              "date": "2026-09-07",
               "registered": 34,
               "fixed": 33
             }
@@ -4704,6 +4734,11 @@
             },
             {
               "date": "2026-09-06",
+              "registered": 9,
+              "fixed": 9
+            },
+            {
+              "date": "2026-09-07",
               "registered": 9,
               "fixed": 9
             }
@@ -5404,6 +5439,11 @@
             },
             {
               "date": "2026-09-06",
+              "registered": 117,
+              "fixed": 113
+            },
+            {
+              "date": "2026-09-07",
               "registered": 117,
               "fixed": 113
             }
@@ -6254,6 +6294,11 @@
             },
             {
               "date": "2026-09-06",
+              "registered": 82,
+              "fixed": 80
+            },
+            {
+              "date": "2026-09-07",
               "registered": 82,
               "fixed": 80
             }
@@ -7419,6 +7464,11 @@
             },
             {
               "date": "2026-09-06",
+              "registered": 24,
+              "fixed": 19
+            },
+            {
+              "date": "2026-09-07",
               "registered": 24,
               "fixed": 19
             }
@@ -8674,6 +8724,11 @@
             },
             {
               "date": "2026-09-06",
+              "registered": 103,
+              "fixed": 87
+            },
+            {
+              "date": "2026-09-07",
               "registered": 103,
               "fixed": 87
             }
@@ -10044,6 +10099,11 @@
             },
             {
               "date": "2026-09-06",
+              "registered": 68,
+              "fixed": 59
+            },
+            {
+              "date": "2026-09-07",
               "registered": 68,
               "fixed": 59
             }
@@ -11484,6 +11544,11 @@
             },
             {
               "date": "2026-09-06",
+              "registered": 4,
+              "fixed": 3
+            },
+            {
+              "date": "2026-09-07",
               "registered": 4,
               "fixed": 3
             }
@@ -13059,6 +13124,11 @@
             },
             {
               "date": "2026-09-06",
+              "registered": 35,
+              "fixed": 31
+            },
+            {
+              "date": "2026-09-07",
               "registered": 35,
               "fixed": 31
             }
@@ -14664,6 +14734,11 @@
             },
             {
               "date": "2026-09-06",
+              "registered": 4,
+              "fixed": 4
+            },
+            {
+              "date": "2026-09-07",
               "registered": 4,
               "fixed": 4
             }
@@ -16559,6 +16634,11 @@
             },
             {
               "date": "2026-09-06",
+              "registered": 3,
+              "fixed": 3
+            },
+            {
+              "date": "2026-09-07",
               "registered": 3,
               "fixed": 3
             }
@@ -18594,6 +18674,11 @@
             },
             {
               "date": "2026-09-06",
+              "registered": 27,
+              "fixed": 22
+            },
+            {
+              "date": "2026-09-07",
               "registered": 27,
               "fixed": 22
             }
@@ -20804,6 +20889,11 @@
             },
             {
               "date": "2026-09-06",
+              "registered": 33,
+              "fixed": 30
+            },
+            {
+              "date": "2026-09-07",
               "registered": 33,
               "fixed": 30
             }
@@ -21441,6 +21531,11 @@
               "date": "2026-09-06",
               "registered": 20,
               "fixed": 1
+            },
+            {
+              "date": "2026-09-07",
+              "registered": 20,
+              "fixed": 1
             }
           ]
         },
@@ -21864,6 +21959,11 @@
             },
             {
               "date": "2026-09-06",
+              "registered": 15,
+              "fixed": 15
+            },
+            {
+              "date": "2026-09-07",
               "registered": 15,
               "fixed": 15
             }
@@ -22496,6 +22596,11 @@
               "date": "2026-09-06",
               "registered": 55,
               "fixed": 54
+            },
+            {
+              "date": "2026-09-07",
+              "registered": 55,
+              "fixed": 54
             }
           ]
         },
@@ -22819,6 +22924,11 @@
             },
             {
               "date": "2026-09-06",
+              "registered": 5,
+              "fixed": 5
+            },
+            {
+              "date": "2026-09-07",
               "registered": 5,
               "fixed": 5
             }
@@ -23456,6 +23566,11 @@
               "date": "2026-09-06",
               "registered": 101,
               "fixed": 101
+            },
+            {
+              "date": "2026-09-07",
+              "registered": 101,
+              "fixed": 101
             }
           ]
         },
@@ -23810,6 +23925,96 @@
             {
               "date": "2026-09-06",
               "registered": 2,
+              "fixed": 1
+            },
+            {
+              "date": "2026-09-07",
+              "registered": 2,
+              "fixed": 1
+            }
+          ]
+        },
+        {
+          "version": "[G.H][콕뱅크]",
+          "total": 1,
+          "open": 0,
+          "done": 1,
+          "scopeTotal": 1,
+          "doneRate": 100.0,
+          "latestSnapshot": "2026-09-06",
+          "severityRows": [
+            {
+              "severity": "Critical",
+              "open": 0,
+              "done": 0,
+              "total": 0,
+              "rate": 0,
+              "previousRate": 0
+            },
+            {
+              "severity": "Major",
+              "open": 0,
+              "done": 0,
+              "total": 0,
+              "rate": 0,
+              "previousRate": 0
+            },
+            {
+              "severity": "Minor",
+              "open": 0,
+              "done": 1,
+              "total": 1,
+              "rate": 100.0,
+              "previousRate": 100.0
+            },
+            {
+              "severity": "합계",
+              "open": 0,
+              "done": 1,
+              "total": 1,
+              "rate": 100.0,
+              "previousRate": 100.0
+            }
+          ],
+          "daily": [
+            {
+              "date": "2026-08-31",
+              "registered": 1,
+              "fixed": 0
+            },
+            {
+              "date": "2026-09-01",
+              "registered": 1,
+              "fixed": 0
+            },
+            {
+              "date": "2026-09-02",
+              "registered": 1,
+              "fixed": 0
+            },
+            {
+              "date": "2026-09-03",
+              "registered": 1,
+              "fixed": 0
+            },
+            {
+              "date": "2026-09-04",
+              "registered": 1,
+              "fixed": 0
+            },
+            {
+              "date": "2026-09-05",
+              "registered": 1,
+              "fixed": 0
+            },
+            {
+              "date": "2026-09-06",
+              "registered": 1,
+              "fixed": 1
+            },
+            {
+              "date": "2026-09-07",
+              "registered": 1,
               "fixed": 1
             }
           ]
@@ -24446,86 +24651,11 @@
               "date": "2026-09-06",
               "registered": 5,
               "fixed": 0
-            }
-          ]
-        },
-        {
-          "version": "[G.H]콕뱅크",
-          "total": 1,
-          "open": 0,
-          "done": 1,
-          "scopeTotal": 1,
-          "doneRate": 100.0,
-          "latestSnapshot": "2026-09-01",
-          "severityRows": [
-            {
-              "severity": "Critical",
-              "open": 0,
-              "done": 0,
-              "total": 0,
-              "rate": 0,
-              "previousRate": 0
             },
             {
-              "severity": "Major",
-              "open": 0,
-              "done": 0,
-              "total": 0,
-              "rate": 0,
-              "previousRate": 0
-            },
-            {
-              "severity": "Minor",
-              "open": 0,
-              "done": 1,
-              "total": 1,
-              "rate": 100.0,
-              "previousRate": 100.0
-            },
-            {
-              "severity": "합계",
-              "open": 0,
-              "done": 1,
-              "total": 1,
-              "rate": 100.0,
-              "previousRate": 100.0
-            }
-          ],
-          "daily": [
-            {
-              "date": "2026-08-31",
-              "registered": 1,
+              "date": "2026-09-07",
+              "registered": 5,
               "fixed": 0
-            },
-            {
-              "date": "2026-09-01",
-              "registered": 1,
-              "fixed": 1
-            },
-            {
-              "date": "2026-09-02",
-              "registered": 1,
-              "fixed": 1
-            },
-            {
-              "date": "2026-09-03",
-              "registered": 1,
-              "fixed": 1
-            },
-            {
-              "date": "2026-09-04",
-              "registered": 1,
-              "fixed": 1
-            },
-            {
-              "date": "2026-09-05",
-              "registered": 1,
-              "fixed": 1
-            },
-            {
-              "date": "2026-09-06",
-              "registered": 1,
-              "fixed": 1
             }
           ]
         },
@@ -24536,7 +24666,7 @@
           "done": 40,
           "scopeTotal": 48,
           "doneRate": 83.3,
-          "latestSnapshot": "2026-09-04",
+          "latestSnapshot": "2026-09-06",
           "severityRows": [
             {
               "severity": "Critical",
@@ -24669,6 +24799,11 @@
             },
             {
               "date": "2026-09-06",
+              "registered": 48,
+              "fixed": 40
+            },
+            {
+              "date": "2026-09-07",
               "registered": 48,
               "fixed": 40
             }
@@ -24806,6 +24941,11 @@
               "date": "2026-09-06",
               "registered": 221,
               "fixed": 172
+            },
+            {
+              "date": "2026-09-07",
+              "registered": 221,
+              "fixed": 172
             }
           ]
         },
@@ -24936,6 +25076,11 @@
               "date": "2026-09-06",
               "registered": 42,
               "fixed": 17
+            },
+            {
+              "date": "2026-09-07",
+              "registered": 42,
+              "fixed": 17
             }
           ]
         },
@@ -25064,6 +25209,11 @@
             },
             {
               "date": "2026-09-06",
+              "registered": 27,
+              "fixed": 1
+            },
+            {
+              "date": "2026-09-07",
               "registered": 27,
               "fixed": 1
             }
@@ -25244,6 +25394,11 @@
             },
             {
               "date": "2026-09-06",
+              "registered": 11,
+              "fixed": 11
+            },
+            {
+              "date": "2026-09-07",
               "registered": 11,
               "fixed": 11
             }
@@ -25606,6 +25761,11 @@
               "date": "2026-09-06",
               "registered": 3,
               "fixed": 3
+            },
+            {
+              "date": "2026-09-07",
+              "registered": 3,
+              "fixed": 3
             }
           ]
         },
@@ -25821,6 +25981,101 @@
               "date": "2026-09-06",
               "registered": 117,
               "fixed": 111
+            },
+            {
+              "date": "2026-09-07",
+              "registered": 117,
+              "fixed": 111
+            }
+          ]
+        },
+        {
+          "version": "[콕뱅크]",
+          "total": 105,
+          "open": 23,
+          "done": 82,
+          "scopeTotal": 105,
+          "doneRate": 78.1,
+          "latestSnapshot": "2026-09-07",
+          "severityRows": [
+            {
+              "severity": "Critical",
+              "open": 1,
+              "done": 1,
+              "total": 2,
+              "rate": 50.0,
+              "previousRate": 100.0
+            },
+            {
+              "severity": "Major",
+              "open": 6,
+              "done": 27,
+              "total": 33,
+              "rate": 81.8,
+              "previousRate": 78.8
+            },
+            {
+              "severity": "Minor",
+              "open": 16,
+              "done": 54,
+              "total": 70,
+              "rate": 77.1,
+              "previousRate": 61.4
+            },
+            {
+              "severity": "합계",
+              "open": 23,
+              "done": 82,
+              "total": 105,
+              "rate": 78.1,
+              "previousRate": 67.3
+            }
+          ],
+          "daily": [
+            {
+              "date": "2026-08-30",
+              "registered": 1,
+              "fixed": 0
+            },
+            {
+              "date": "2026-08-31",
+              "registered": 30,
+              "fixed": 0
+            },
+            {
+              "date": "2026-09-01",
+              "registered": 53,
+              "fixed": 0
+            },
+            {
+              "date": "2026-09-02",
+              "registered": 70,
+              "fixed": 0
+            },
+            {
+              "date": "2026-09-03",
+              "registered": 88,
+              "fixed": 0
+            },
+            {
+              "date": "2026-09-04",
+              "registered": 104,
+              "fixed": 0
+            },
+            {
+              "date": "2026-09-05",
+              "registered": 104,
+              "fixed": 0
+            },
+            {
+              "date": "2026-09-06",
+              "registered": 104,
+              "fixed": 70
+            },
+            {
+              "date": "2026-09-07",
+              "registered": 105,
+              "fixed": 82
             }
           ]
         },
@@ -25894,6 +26149,11 @@
             },
             {
               "date": "2026-09-06",
+              "registered": 1,
+              "fixed": 1
+            },
+            {
+              "date": "2026-09-07",
               "registered": 1,
               "fixed": 1
             }
@@ -27471,91 +27731,11 @@
               "date": "2026-09-06",
               "registered": 3,
               "fixed": 3
-            }
-          ]
-        },
-        {
-          "version": "콕뱅크",
-          "total": 104,
-          "open": 20,
-          "done": 84,
-          "scopeTotal": 104,
-          "doneRate": 80.8,
-          "latestSnapshot": "2026-09-04",
-          "severityRows": [
-            {
-              "severity": "Critical",
-              "open": 0,
-              "done": 1,
-              "total": 1,
-              "rate": 100.0,
-              "previousRate": 100.0
             },
             {
-              "severity": "Major",
-              "open": 6,
-              "done": 27,
-              "total": 33,
-              "rate": 81.8,
-              "previousRate": 81.8
-            },
-            {
-              "severity": "Minor",
-              "open": 14,
-              "done": 56,
-              "total": 70,
-              "rate": 80.0,
-              "previousRate": 80.0
-            },
-            {
-              "severity": "합계",
-              "open": 20,
-              "done": 84,
-              "total": 104,
-              "rate": 80.8,
-              "previousRate": 80.8
-            }
-          ],
-          "daily": [
-            {
-              "date": "2026-08-30",
-              "registered": 1,
-              "fixed": 0
-            },
-            {
-              "date": "2026-08-31",
-              "registered": 30,
-              "fixed": 0
-            },
-            {
-              "date": "2026-09-01",
-              "registered": 53,
-              "fixed": 5
-            },
-            {
-              "date": "2026-09-02",
-              "registered": 70,
-              "fixed": 18
-            },
-            {
-              "date": "2026-09-03",
-              "registered": 88,
-              "fixed": 57
-            },
-            {
-              "date": "2026-09-04",
-              "registered": 104,
-              "fixed": 84
-            },
-            {
-              "date": "2026-09-05",
-              "registered": 104,
-              "fixed": 84
-            },
-            {
-              "date": "2026-09-06",
-              "registered": 104,
-              "fixed": 84
+              "date": "2026-09-07",
+              "registered": 3,
+              "fixed": 3
             }
           ]
         },
@@ -29766,6 +29946,11 @@
               "date": "2026-09-06",
               "registered": 9,
               "fixed": 7
+            },
+            {
+              "date": "2026-09-07",
+              "registered": 9,
+              "fixed": 7
             }
           ]
         },
@@ -30401,6 +30586,11 @@
               "date": "2026-09-06",
               "registered": 1,
               "fixed": 0
+            },
+            {
+              "date": "2026-09-07",
+              "registered": 1,
+              "fixed": 0
             }
           ]
         },
@@ -30986,18 +31176,23 @@
               "date": "2026-09-06",
               "registered": 14,
               "fixed": 2
+            },
+            {
+              "date": "2026-09-07",
+              "registered": 14,
+              "fixed": 2
             }
           ]
         }
       ],
-      "defaultProjectVersion": "콕뱅크",
+      "defaultProjectVersion": "[콕뱅크]",
       "selectedVersion": "ALL",
       "distributions": {
         "ALL": {
           "status": [
             {
               "label": "등록",
-              "count": 208
+              "count": 205
             },
             {
               "label": "배정",
@@ -31005,21 +31200,21 @@
             },
             {
               "label": "진행중",
-              "count": 30
+              "count": 36
             },
             {
               "label": "QA확인",
-              "count": 103
+              "count": 114
             },
             {
               "label": "종료",
-              "count": 1072
+              "count": 1059
             }
           ],
           "severity": [
             {
               "label": "Critical",
-              "count": 54
+              "count": 55
             },
             {
               "label": "Major",
@@ -31045,7 +31240,7 @@
             },
             {
               "label": "Medium",
-              "count": 1369
+              "count": 1370
             },
             {
               "label": "Low",
@@ -31063,13 +31258,6 @@
         }
       },
       "heatmap": [
-        {
-          "date": "2026-08-08",
-          "new": 0,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": 0
-        },
         {
           "date": "2026-08-09",
           "new": 0,
@@ -31234,29 +31422,29 @@
         {
           "date": "2026-09-01",
           "new": 36,
-          "fixed": 25,
-          "closed": 25,
+          "fixed": 19,
+          "closed": 19,
           "deltaNew": -1
         },
         {
           "date": "2026-09-02",
           "new": 26,
-          "fixed": 158,
-          "closed": 158,
+          "fixed": 145,
+          "closed": 145,
           "deltaNew": -10
         },
         {
           "date": "2026-09-03",
           "new": 24,
-          "fixed": 79,
-          "closed": 79,
+          "fixed": 40,
+          "closed": 40,
           "deltaNew": -2
         },
         {
           "date": "2026-09-04",
           "new": 25,
-          "fixed": 147,
-          "closed": 108,
+          "fixed": 120,
+          "closed": 81,
           "deltaNew": 1
         },
         {
@@ -31269,9 +31457,16 @@
         {
           "date": "2026-09-06",
           "new": 0,
-          "fixed": 0,
-          "closed": 0,
+          "fixed": 71,
+          "closed": 71,
           "deltaNew": 0
+        },
+        {
+          "date": "2026-09-07",
+          "new": 1,
+          "fixed": 12,
+          "closed": 1,
+          "deltaNew": 1
         }
       ],
       "reportBoard": {
@@ -31315,6 +31510,27 @@
       },
       "recent": [
         {
+          "id": "ISSUE-1759",
+          "title": "[콕뱅크][카드신청] 카드 심사중 상태에서 화면 이탈 불가 시나리오 개선 필요",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Critical",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[콕뱅크]",
+          "versionRaw": "[콕뱅크]",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-09-07T00:23:00.000Z",
+          "createdDate": "2026-09-07",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/3d473fbd1951806ca0d8fe2b3ef61b7a",
+          "lastEditedAt": "2026-09-07T01:02:00.000Z"
+        },
+        {
           "id": "ISSUE-1758",
           "title": "[콕뱅크][제로페이] QR 촬영 시 404 에러 노출 현상 ",
           "status": "등록 (Registered)",
@@ -31322,8 +31538,8 @@
           "severity": "Major",
           "priority": "Medium",
           "assignee": "미지정",
-          "version": "콕뱅크",
-          "versionRaw": "콕뱅크",
+          "version": "[콕뱅크]",
+          "versionRaw": "[콕뱅크]",
           "domain": "한패스",
           "os": "미지정",
           "createdAt": "2026-09-04T08:20:00.000Z",
@@ -31333,7 +31549,7 @@
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/QR-404-3d173fbd195180e8a119f756fc7038e1",
-          "lastEditedAt": "2026-09-04T08:27:00.000Z"
+          "lastEditedAt": "2026-09-06T23:50:00.000Z"
         },
         {
           "id": "ISSUE-1757",
@@ -31343,45 +31559,45 @@
           "severity": "Minor",
           "priority": "Medium",
           "assignee": "미지정",
-          "version": "콕뱅크",
-          "versionRaw": "콕뱅크",
+          "version": "[콕뱅크]",
+          "versionRaw": "[콕뱅크]",
           "domain": "한패스",
           "os": "미지정",
           "createdAt": "2026-09-04T07:33:00.000Z",
           "createdDate": "2026-09-04",
-          "fixedAt": "2026-09-04T09:17:00.000Z",
-          "fixedDate": "2026-09-04",
-          "closedAt": "2026-09-04T09:17:00.000Z",
-          "closedDate": "2026-09-04",
+          "fixedAt": "2026-09-06T23:50:00.000Z",
+          "fixedDate": "2026-09-06",
+          "closedAt": "2026-09-06T23:50:00.000Z",
+          "closedDate": "2026-09-06",
           "url": "https://app.notion.com/p/3d173fbd19518065886bdeece593320d",
-          "lastEditedAt": "2026-09-04T09:17:00.000Z"
+          "lastEditedAt": "2026-09-06T23:50:00.000Z"
         },
         {
           "id": "ISSUE-1756",
           "title": "[콕뱅크][로그인][비밀번호찾기] 승인대기 화면 내 자동출금계좌 문구 노출되는 현상 ",
-          "status": "개발 완료 (Dev Done)",
-          "stage": "종료",
+          "status": "QA 검증 -회귀 (QA Verification)",
+          "stage": "QA확인",
           "severity": "Minor",
           "priority": "Medium",
           "assignee": "미지정",
-          "version": "콕뱅크",
-          "versionRaw": "콕뱅크",
+          "version": "[콕뱅크]",
+          "versionRaw": "[콕뱅크]",
           "domain": "한패스",
           "os": "미지정",
           "createdAt": "2026-09-04T06:54:00.000Z",
           "createdDate": "2026-09-04",
-          "fixedAt": "2026-09-04T11:56:00.000Z",
-          "fixedDate": "2026-09-04",
-          "closedAt": "2026-09-04T11:56:00.000Z",
-          "closedDate": "2026-09-04",
+          "fixedAt": "2026-09-07T00:57:00.000Z",
+          "fixedDate": "2026-09-07",
+          "closedAt": "",
+          "closedDate": "",
           "url": "https://app.notion.com/p/3d173fbd1951807c855ff59f7c86d2d3",
-          "lastEditedAt": "2026-09-04T11:56:00.000Z"
+          "lastEditedAt": "2026-09-07T00:57:00.000Z"
         },
         {
           "id": "ISSUE-1755",
           "title": "[메뉴관리][BO] 미니론 메뉴 아이콘 이미지 변경 시 수정 실패하는 현상",
-          "status": "등록 (Registered)",
-          "stage": "등록",
+          "status": "처리중 (In Progress)",
+          "stage": "진행중",
           "severity": "Major",
           "priority": "Medium",
           "assignee": "미지정",
@@ -31396,13 +31612,13 @@
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/BO-3d173fbd195180999aeed471a4f5dc20",
-          "lastEditedAt": "2026-09-04T06:54:00.000Z"
+          "lastEditedAt": "2026-09-06T23:59:00.000Z"
         },
         {
           "id": "ISSUE-1754",
           "title": "[이벤트 배너 관리][BO] 등록한 이벤트 배너 이미지 파일 삭제 기능이 제공되지 않는 현상",
-          "status": "등록 (Registered)",
-          "stage": "등록",
+          "status": "처리중 (In Progress)",
+          "stage": "진행중",
           "severity": "Major",
           "priority": "Medium",
           "assignee": "미지정",
@@ -31417,13 +31633,13 @@
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/BO-3d173fbd1951801780c4e1119eea7a56",
-          "lastEditedAt": "2026-09-04T06:53:00.000Z"
+          "lastEditedAt": "2026-09-06T23:59:00.000Z"
         },
         {
           "id": "ISSUE-1753",
           "title": "[배너 관리][BO] 이동경로 ‘딥링크’ 선택 시 노출국가 설정 항목이 미노출되는 현상",
-          "status": "등록 (Registered)",
-          "stage": "등록",
+          "status": "처리중 (In Progress)",
+          "stage": "진행중",
           "severity": "Major",
           "priority": "Medium",
           "assignee": "미지정",
@@ -31438,13 +31654,13 @@
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/BO-3d173fbd1951809cb2bcf2d1c843b424",
-          "lastEditedAt": "2026-09-04T06:50:00.000Z"
+          "lastEditedAt": "2026-09-06T23:59:00.000Z"
         },
         {
           "id": "ISSUE-1752",
           "title": "[이벤트 배너 관리][BO][개선] 앱 실행 팝업 이미지 단독 등록 기능 제공 필요",
-          "status": "등록 (Registered)",
-          "stage": "등록",
+          "status": "처리중 (In Progress)",
+          "stage": "진행중",
           "severity": "개선 의견",
           "priority": "Medium",
           "assignee": "미지정",
@@ -31459,13 +31675,13 @@
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/BO-3d173fbd1951802c82a6d878dcded7b7",
-          "lastEditedAt": "2026-09-04T06:47:00.000Z"
+          "lastEditedAt": "2026-09-06T23:59:00.000Z"
         },
         {
           "id": "ISSUE-1751",
           "title": "[메뉴관리][BO] 메뉴 다국어 등록 후 특정 언어가 빈 값으로 저장되는 현상",
-          "status": "등록 (Registered)",
-          "stage": "등록",
+          "status": "처리중 (In Progress)",
+          "stage": "진행중",
           "severity": "Major",
           "priority": "Medium",
           "assignee": "미지정",
@@ -31480,13 +31696,13 @@
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/BO-3d173fbd1951806cad01dd679dbe221c",
-          "lastEditedAt": "2026-09-04T06:40:00.000Z"
+          "lastEditedAt": "2026-09-06T23:59:00.000Z"
         },
         {
           "id": "ISSUE-1750",
           "title": "[이벤트 배너][공통] 연결 메뉴의 노출 국가 정책이 배너에 적용되지 않는 현상",
-          "status": "등록 (Registered)",
-          "stage": "등록",
+          "status": "처리중 (In Progress)",
+          "stage": "진행중",
           "severity": "Major",
           "priority": "Medium",
           "assignee": "미지정",
@@ -31501,46 +31717,25 @@
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/3d173fbd19518097aad9eafdaf8d77fb",
-          "lastEditedAt": "2026-09-04T06:35:00.000Z"
-        },
-        {
-          "id": "ISSUE-1749",
-          "title": "[콕뱅크][계좌등록] 주계좌 설정 바텀시트 내 계좌 삭제 버튼 노출 현상 ",
-          "status": "개발 완료 (Dev Done)",
-          "stage": "종료",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "콕뱅크",
-          "versionRaw": "콕뱅크",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-09-04T06:23:00.000Z",
-          "createdDate": "2026-09-04",
-          "fixedAt": "2026-09-04T09:08:00.000Z",
-          "fixedDate": "2026-09-04",
-          "closedAt": "2026-09-04T09:08:00.000Z",
-          "closedDate": "2026-09-04",
-          "url": "https://app.notion.com/p/3d173fbd1951802fbaf1d282cc5df21d",
-          "lastEditedAt": "2026-09-04T09:08:00.000Z"
+          "lastEditedAt": "2026-09-06T23:59:00.000Z"
         }
       ]
     },
     "한패스": {
       "summary": {
-        "total": 1210,
-        "new": 181,
-        "inProgress": 30,
+        "total": 1211,
+        "new": 178,
+        "inProgress": 36,
         "fixed": 0,
-        "closed": 895,
-        "todayNew": 0,
-        "newDelta": 0
+        "closed": 882,
+        "todayNew": 1,
+        "newDelta": 1
       },
       "funnel": [
         {
           "stage": "등록",
-          "count": 181,
-          "rate": 15.0,
+          "count": 178,
+          "rate": 14.7,
           "width": 20
         },
         {
@@ -31557,8 +31752,8 @@
         },
         {
           "stage": "진행중",
-          "count": 30,
-          "rate": 2.5,
+          "count": 36,
+          "rate": 3.0,
           "width": 18
         },
         {
@@ -31569,25 +31764,18 @@
         },
         {
           "stage": "QA확인",
-          "count": 102,
-          "rate": 8.4,
+          "count": 113,
+          "rate": 9.3,
           "width": 18
         },
         {
           "stage": "종료",
-          "count": 895,
-          "rate": 74.0,
+          "count": 882,
+          "rate": 72.8,
           "width": 100
         }
       ],
       "daily": [
-        {
-          "date": "2026-08-08",
-          "new": 0,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": 0
-        },
         {
           "date": "2026-08-09",
           "new": 0,
@@ -31752,29 +31940,29 @@
         {
           "date": "2026-09-01",
           "new": 36,
-          "fixed": 24,
-          "closed": 24,
+          "fixed": 19,
+          "closed": 19,
           "deltaNew": 0
         },
         {
           "date": "2026-09-02",
           "new": 26,
-          "fixed": 158,
-          "closed": 158,
+          "fixed": 145,
+          "closed": 145,
           "deltaNew": -10
         },
         {
           "date": "2026-09-03",
           "new": 24,
-          "fixed": 79,
-          "closed": 79,
+          "fixed": 40,
+          "closed": 40,
           "deltaNew": -2
         },
         {
           "date": "2026-09-04",
           "new": 25,
-          "fixed": 147,
-          "closed": 108,
+          "fixed": 120,
+          "closed": 81,
           "deltaNew": 1
         },
         {
@@ -31787,9 +31975,16 @@
         {
           "date": "2026-09-06",
           "new": 0,
-          "fixed": 0,
-          "closed": 0,
+          "fixed": 70,
+          "closed": 70,
           "deltaNew": 0
+        },
+        {
+          "date": "2026-09-07",
+          "new": 1,
+          "fixed": 12,
+          "closed": 1,
+          "deltaNew": 1
         }
       ],
       "versions": [
@@ -32456,12 +32651,8 @@
           "doneRate": 83.3,
           "status": [
             {
-              "label": "등록",
-              "count": 6
-            },
-            {
               "label": "진행중",
-              "count": 2
+              "count": 8
             },
             {
               "label": "종료",
@@ -32714,6 +32905,58 @@
           ]
         },
         {
+          "version": "[콕뱅크]",
+          "total": 105,
+          "criticalMajor": 35,
+          "doneRate": 78.1,
+          "status": [
+            {
+              "label": "등록",
+              "count": 14
+            },
+            {
+              "label": "배정",
+              "count": 1
+            },
+            {
+              "label": "진행중",
+              "count": 8
+            },
+            {
+              "label": "QA확인",
+              "count": 11
+            },
+            {
+              "label": "종료",
+              "count": 71
+            }
+          ],
+          "severity": [
+            {
+              "label": "Critical",
+              "count": 2
+            },
+            {
+              "label": "Major",
+              "count": 33
+            },
+            {
+              "label": "Minor",
+              "count": 70
+            }
+          ],
+          "priority": [
+            {
+              "label": "Medium",
+              "count": 104
+            },
+            {
+              "label": "Low",
+              "count": 1
+            }
+          ]
+        },
+        {
           "version": "[포인트] 해외송금 미션 중단",
           "total": 1,
           "criticalMajor": 1,
@@ -32766,54 +33009,6 @@
             {
               "label": "Low",
               "count": 2
-            }
-          ]
-        },
-        {
-          "version": "콕뱅크",
-          "total": 104,
-          "criticalMajor": 34,
-          "doneRate": 80.8,
-          "status": [
-            {
-              "label": "등록",
-              "count": 11
-            },
-            {
-              "label": "배정",
-              "count": 1
-            },
-            {
-              "label": "진행중",
-              "count": 8
-            },
-            {
-              "label": "종료",
-              "count": 84
-            }
-          ],
-          "severity": [
-            {
-              "label": "Critical",
-              "count": 1
-            },
-            {
-              "label": "Major",
-              "count": 33
-            },
-            {
-              "label": "Minor",
-              "count": 70
-            }
-          ],
-          "priority": [
-            {
-              "label": "Medium",
-              "count": 103
-            },
-            {
-              "label": "Low",
-              "count": 1
             }
           ]
         },
@@ -32909,9 +33104,9 @@
           "[게이미피케이션][혜택]포인트_2배_이벤트",
           "[교통카드]SDK변경",
           "[카카오뱅크]해외송금-1차",
+          "[콕뱅크]",
           "[포인트] 해외송금 미션 중단",
           "결함 아님 - Done",
-          "콕뱅크",
           "미지정",
           "Hanpass - Backlog"
         ],
@@ -33164,6 +33359,11 @@
               "date": "2026-09-06",
               "registered": 11,
               "fixed": 1
+            },
+            {
+              "date": "2026-09-07",
+              "registered": 11,
+              "fixed": 1
             }
           ]
         },
@@ -33272,6 +33472,11 @@
             },
             {
               "date": "2026-09-06",
+              "registered": 7,
+              "fixed": 2
+            },
+            {
+              "date": "2026-09-07",
               "registered": 7,
               "fixed": 2
             }
@@ -33554,6 +33759,11 @@
               "date": "2026-09-06",
               "registered": 20,
               "fixed": 20
+            },
+            {
+              "date": "2026-09-07",
+              "registered": 20,
+              "fixed": 20
             }
           ]
         },
@@ -33832,6 +34042,11 @@
             },
             {
               "date": "2026-09-06",
+              "registered": 3,
+              "fixed": 3
+            },
+            {
+              "date": "2026-09-07",
               "registered": 3,
               "fixed": 3
             }
@@ -34292,6 +34507,11 @@
             },
             {
               "date": "2026-09-06",
+              "registered": 26,
+              "fixed": 26
+            },
+            {
+              "date": "2026-09-07",
               "registered": 26,
               "fixed": 26
             }
@@ -34842,6 +35062,11 @@
             },
             {
               "date": "2026-09-06",
+              "registered": 34,
+              "fixed": 33
+            },
+            {
+              "date": "2026-09-07",
               "registered": 34,
               "fixed": 33
             }
@@ -35497,6 +35722,11 @@
             },
             {
               "date": "2026-09-06",
+              "registered": 9,
+              "fixed": 9
+            },
+            {
+              "date": "2026-09-07",
               "registered": 9,
               "fixed": 9
             }
@@ -36197,6 +36427,11 @@
             },
             {
               "date": "2026-09-06",
+              "registered": 117,
+              "fixed": 113
+            },
+            {
+              "date": "2026-09-07",
               "registered": 117,
               "fixed": 113
             }
@@ -37047,6 +37282,11 @@
             },
             {
               "date": "2026-09-06",
+              "registered": 82,
+              "fixed": 80
+            },
+            {
+              "date": "2026-09-07",
               "registered": 82,
               "fixed": 80
             }
@@ -38212,6 +38452,11 @@
             },
             {
               "date": "2026-09-06",
+              "registered": 24,
+              "fixed": 19
+            },
+            {
+              "date": "2026-09-07",
               "registered": 24,
               "fixed": 19
             }
@@ -39467,6 +39712,11 @@
             },
             {
               "date": "2026-09-06",
+              "registered": 103,
+              "fixed": 87
+            },
+            {
+              "date": "2026-09-07",
               "registered": 103,
               "fixed": 87
             }
@@ -40837,6 +41087,11 @@
             },
             {
               "date": "2026-09-06",
+              "registered": 68,
+              "fixed": 59
+            },
+            {
+              "date": "2026-09-07",
               "registered": 68,
               "fixed": 59
             }
@@ -42277,6 +42532,11 @@
             },
             {
               "date": "2026-09-06",
+              "registered": 4,
+              "fixed": 3
+            },
+            {
+              "date": "2026-09-07",
               "registered": 4,
               "fixed": 3
             }
@@ -43852,6 +44112,11 @@
             },
             {
               "date": "2026-09-06",
+              "registered": 35,
+              "fixed": 31
+            },
+            {
+              "date": "2026-09-07",
               "registered": 35,
               "fixed": 31
             }
@@ -45457,6 +45722,11 @@
             },
             {
               "date": "2026-09-06",
+              "registered": 4,
+              "fixed": 4
+            },
+            {
+              "date": "2026-09-07",
               "registered": 4,
               "fixed": 4
             }
@@ -47352,6 +47622,11 @@
             },
             {
               "date": "2026-09-06",
+              "registered": 3,
+              "fixed": 3
+            },
+            {
+              "date": "2026-09-07",
               "registered": 3,
               "fixed": 3
             }
@@ -49387,6 +49662,11 @@
             },
             {
               "date": "2026-09-06",
+              "registered": 27,
+              "fixed": 22
+            },
+            {
+              "date": "2026-09-07",
               "registered": 27,
               "fixed": 22
             }
@@ -51599,6 +51879,11 @@
               "date": "2026-09-06",
               "registered": 33,
               "fixed": 30
+            },
+            {
+              "date": "2026-09-07",
+              "registered": 33,
+              "fixed": 30
             }
           ]
         },
@@ -51609,7 +51894,7 @@
           "done": 40,
           "scopeTotal": 48,
           "doneRate": 83.3,
-          "latestSnapshot": "2026-09-04",
+          "latestSnapshot": "2026-09-06",
           "severityRows": [
             {
               "severity": "Critical",
@@ -51742,6 +52027,11 @@
             },
             {
               "date": "2026-09-06",
+              "registered": 48,
+              "fixed": 40
+            },
+            {
+              "date": "2026-09-07",
               "registered": 48,
               "fixed": 40
             }
@@ -51879,6 +52169,11 @@
               "date": "2026-09-06",
               "registered": 221,
               "fixed": 172
+            },
+            {
+              "date": "2026-09-07",
+              "registered": 221,
+              "fixed": 172
             }
           ]
         },
@@ -52009,6 +52304,11 @@
               "date": "2026-09-06",
               "registered": 42,
               "fixed": 17
+            },
+            {
+              "date": "2026-09-07",
+              "registered": 42,
+              "fixed": 17
             }
           ]
         },
@@ -52137,6 +52437,11 @@
             },
             {
               "date": "2026-09-06",
+              "registered": 27,
+              "fixed": 1
+            },
+            {
+              "date": "2026-09-07",
               "registered": 27,
               "fixed": 1
             }
@@ -52317,6 +52622,11 @@
             },
             {
               "date": "2026-09-06",
+              "registered": 11,
+              "fixed": 11
+            },
+            {
+              "date": "2026-09-07",
               "registered": 11,
               "fixed": 11
             }
@@ -52679,6 +52989,11 @@
               "date": "2026-09-06",
               "registered": 3,
               "fixed": 3
+            },
+            {
+              "date": "2026-09-07",
+              "registered": 3,
+              "fixed": 3
             }
           ]
         },
@@ -52894,6 +53209,101 @@
               "date": "2026-09-06",
               "registered": 117,
               "fixed": 111
+            },
+            {
+              "date": "2026-09-07",
+              "registered": 117,
+              "fixed": 111
+            }
+          ]
+        },
+        {
+          "version": "[콕뱅크]",
+          "total": 105,
+          "open": 23,
+          "done": 82,
+          "scopeTotal": 105,
+          "doneRate": 78.1,
+          "latestSnapshot": "2026-09-07",
+          "severityRows": [
+            {
+              "severity": "Critical",
+              "open": 1,
+              "done": 1,
+              "total": 2,
+              "rate": 50.0,
+              "previousRate": 100.0
+            },
+            {
+              "severity": "Major",
+              "open": 6,
+              "done": 27,
+              "total": 33,
+              "rate": 81.8,
+              "previousRate": 78.8
+            },
+            {
+              "severity": "Minor",
+              "open": 16,
+              "done": 54,
+              "total": 70,
+              "rate": 77.1,
+              "previousRate": 61.4
+            },
+            {
+              "severity": "합계",
+              "open": 23,
+              "done": 82,
+              "total": 105,
+              "rate": 78.1,
+              "previousRate": 67.3
+            }
+          ],
+          "daily": [
+            {
+              "date": "2026-08-30",
+              "registered": 1,
+              "fixed": 0
+            },
+            {
+              "date": "2026-08-31",
+              "registered": 30,
+              "fixed": 0
+            },
+            {
+              "date": "2026-09-01",
+              "registered": 53,
+              "fixed": 0
+            },
+            {
+              "date": "2026-09-02",
+              "registered": 70,
+              "fixed": 0
+            },
+            {
+              "date": "2026-09-03",
+              "registered": 88,
+              "fixed": 0
+            },
+            {
+              "date": "2026-09-04",
+              "registered": 104,
+              "fixed": 0
+            },
+            {
+              "date": "2026-09-05",
+              "registered": 104,
+              "fixed": 0
+            },
+            {
+              "date": "2026-09-06",
+              "registered": 104,
+              "fixed": 70
+            },
+            {
+              "date": "2026-09-07",
+              "registered": 105,
+              "fixed": 82
             }
           ]
         },
@@ -52967,6 +53377,11 @@
             },
             {
               "date": "2026-09-06",
+              "registered": 1,
+              "fixed": 1
+            },
+            {
+              "date": "2026-09-07",
               "registered": 1,
               "fixed": 1
             }
@@ -54544,91 +54959,11 @@
               "date": "2026-09-06",
               "registered": 3,
               "fixed": 3
-            }
-          ]
-        },
-        {
-          "version": "콕뱅크",
-          "total": 104,
-          "open": 20,
-          "done": 84,
-          "scopeTotal": 104,
-          "doneRate": 80.8,
-          "latestSnapshot": "2026-09-04",
-          "severityRows": [
-            {
-              "severity": "Critical",
-              "open": 0,
-              "done": 1,
-              "total": 1,
-              "rate": 100.0,
-              "previousRate": 100.0
             },
             {
-              "severity": "Major",
-              "open": 6,
-              "done": 27,
-              "total": 33,
-              "rate": 81.8,
-              "previousRate": 81.8
-            },
-            {
-              "severity": "Minor",
-              "open": 14,
-              "done": 56,
-              "total": 70,
-              "rate": 80.0,
-              "previousRate": 80.0
-            },
-            {
-              "severity": "합계",
-              "open": 20,
-              "done": 84,
-              "total": 104,
-              "rate": 80.8,
-              "previousRate": 80.8
-            }
-          ],
-          "daily": [
-            {
-              "date": "2026-08-30",
-              "registered": 1,
-              "fixed": 0
-            },
-            {
-              "date": "2026-08-31",
-              "registered": 30,
-              "fixed": 0
-            },
-            {
-              "date": "2026-09-01",
-              "registered": 53,
-              "fixed": 5
-            },
-            {
-              "date": "2026-09-02",
-              "registered": 70,
-              "fixed": 18
-            },
-            {
-              "date": "2026-09-03",
-              "registered": 88,
-              "fixed": 57
-            },
-            {
-              "date": "2026-09-04",
-              "registered": 104,
-              "fixed": 84
-            },
-            {
-              "date": "2026-09-05",
-              "registered": 104,
-              "fixed": 84
-            },
-            {
-              "date": "2026-09-06",
-              "registered": 104,
-              "fixed": 84
+              "date": "2026-09-07",
+              "registered": 3,
+              "fixed": 3
             }
           ]
         },
@@ -56839,6 +57174,11 @@
               "date": "2026-09-06",
               "registered": 9,
               "fixed": 7
+            },
+            {
+              "date": "2026-09-07",
+              "registered": 9,
+              "fixed": 7
             }
           ]
         },
@@ -57424,18 +57764,23 @@
               "date": "2026-09-06",
               "registered": 14,
               "fixed": 2
+            },
+            {
+              "date": "2026-09-07",
+              "registered": 14,
+              "fixed": 2
             }
           ]
         }
       ],
-      "defaultProjectVersion": "콕뱅크",
+      "defaultProjectVersion": "[콕뱅크]",
       "selectedVersion": "ALL",
       "distributions": {
         "ALL": {
           "status": [
             {
               "label": "등록",
-              "count": 181
+              "count": 178
             },
             {
               "label": "배정",
@@ -57443,21 +57788,21 @@
             },
             {
               "label": "진행중",
-              "count": 30
+              "count": 36
             },
             {
               "label": "QA확인",
-              "count": 102
+              "count": 113
             },
             {
               "label": "종료",
-              "count": 895
+              "count": 882
             }
           ],
           "severity": [
             {
               "label": "Critical",
-              "count": 50
+              "count": 51
             },
             {
               "label": "Major",
@@ -57483,7 +57828,7 @@
             },
             {
               "label": "Medium",
-              "count": 1165
+              "count": 1166
             },
             {
               "label": "Low",
@@ -57501,13 +57846,6 @@
         }
       },
       "heatmap": [
-        {
-          "date": "2026-08-08",
-          "new": 0,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": 0
-        },
         {
           "date": "2026-08-09",
           "new": 0,
@@ -57672,29 +58010,29 @@
         {
           "date": "2026-09-01",
           "new": 36,
-          "fixed": 24,
-          "closed": 24,
+          "fixed": 19,
+          "closed": 19,
           "deltaNew": 0
         },
         {
           "date": "2026-09-02",
           "new": 26,
-          "fixed": 158,
-          "closed": 158,
+          "fixed": 145,
+          "closed": 145,
           "deltaNew": -10
         },
         {
           "date": "2026-09-03",
           "new": 24,
-          "fixed": 79,
-          "closed": 79,
+          "fixed": 40,
+          "closed": 40,
           "deltaNew": -2
         },
         {
           "date": "2026-09-04",
           "new": 25,
-          "fixed": 147,
-          "closed": 108,
+          "fixed": 120,
+          "closed": 81,
           "deltaNew": 1
         },
         {
@@ -57707,9 +58045,16 @@
         {
           "date": "2026-09-06",
           "new": 0,
-          "fixed": 0,
-          "closed": 0,
+          "fixed": 70,
+          "closed": 70,
           "deltaNew": 0
+        },
+        {
+          "date": "2026-09-07",
+          "new": 1,
+          "fixed": 12,
+          "closed": 1,
+          "deltaNew": 1
         }
       ],
       "reportBoard": {
@@ -57739,6 +58084,27 @@
       },
       "recent": [
         {
+          "id": "ISSUE-1759",
+          "title": "[콕뱅크][카드신청] 카드 심사중 상태에서 화면 이탈 불가 시나리오 개선 필요",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Critical",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[콕뱅크]",
+          "versionRaw": "[콕뱅크]",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-09-07T00:23:00.000Z",
+          "createdDate": "2026-09-07",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/3d473fbd1951806ca0d8fe2b3ef61b7a",
+          "lastEditedAt": "2026-09-07T01:02:00.000Z"
+        },
+        {
           "id": "ISSUE-1758",
           "title": "[콕뱅크][제로페이] QR 촬영 시 404 에러 노출 현상 ",
           "status": "등록 (Registered)",
@@ -57746,8 +58112,8 @@
           "severity": "Major",
           "priority": "Medium",
           "assignee": "미지정",
-          "version": "콕뱅크",
-          "versionRaw": "콕뱅크",
+          "version": "[콕뱅크]",
+          "versionRaw": "[콕뱅크]",
           "domain": "한패스",
           "os": "미지정",
           "createdAt": "2026-09-04T08:20:00.000Z",
@@ -57757,7 +58123,7 @@
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/QR-404-3d173fbd195180e8a119f756fc7038e1",
-          "lastEditedAt": "2026-09-04T08:27:00.000Z"
+          "lastEditedAt": "2026-09-06T23:50:00.000Z"
         },
         {
           "id": "ISSUE-1757",
@@ -57767,45 +58133,45 @@
           "severity": "Minor",
           "priority": "Medium",
           "assignee": "미지정",
-          "version": "콕뱅크",
-          "versionRaw": "콕뱅크",
+          "version": "[콕뱅크]",
+          "versionRaw": "[콕뱅크]",
           "domain": "한패스",
           "os": "미지정",
           "createdAt": "2026-09-04T07:33:00.000Z",
           "createdDate": "2026-09-04",
-          "fixedAt": "2026-09-04T09:17:00.000Z",
-          "fixedDate": "2026-09-04",
-          "closedAt": "2026-09-04T09:17:00.000Z",
-          "closedDate": "2026-09-04",
+          "fixedAt": "2026-09-06T23:50:00.000Z",
+          "fixedDate": "2026-09-06",
+          "closedAt": "2026-09-06T23:50:00.000Z",
+          "closedDate": "2026-09-06",
           "url": "https://app.notion.com/p/3d173fbd19518065886bdeece593320d",
-          "lastEditedAt": "2026-09-04T09:17:00.000Z"
+          "lastEditedAt": "2026-09-06T23:50:00.000Z"
         },
         {
           "id": "ISSUE-1756",
           "title": "[콕뱅크][로그인][비밀번호찾기] 승인대기 화면 내 자동출금계좌 문구 노출되는 현상 ",
-          "status": "개발 완료 (Dev Done)",
-          "stage": "종료",
+          "status": "QA 검증 -회귀 (QA Verification)",
+          "stage": "QA확인",
           "severity": "Minor",
           "priority": "Medium",
           "assignee": "미지정",
-          "version": "콕뱅크",
-          "versionRaw": "콕뱅크",
+          "version": "[콕뱅크]",
+          "versionRaw": "[콕뱅크]",
           "domain": "한패스",
           "os": "미지정",
           "createdAt": "2026-09-04T06:54:00.000Z",
           "createdDate": "2026-09-04",
-          "fixedAt": "2026-09-04T11:56:00.000Z",
-          "fixedDate": "2026-09-04",
-          "closedAt": "2026-09-04T11:56:00.000Z",
-          "closedDate": "2026-09-04",
+          "fixedAt": "2026-09-07T00:57:00.000Z",
+          "fixedDate": "2026-09-07",
+          "closedAt": "",
+          "closedDate": "",
           "url": "https://app.notion.com/p/3d173fbd1951807c855ff59f7c86d2d3",
-          "lastEditedAt": "2026-09-04T11:56:00.000Z"
+          "lastEditedAt": "2026-09-07T00:57:00.000Z"
         },
         {
           "id": "ISSUE-1755",
           "title": "[메뉴관리][BO] 미니론 메뉴 아이콘 이미지 변경 시 수정 실패하는 현상",
-          "status": "등록 (Registered)",
-          "stage": "등록",
+          "status": "처리중 (In Progress)",
+          "stage": "진행중",
           "severity": "Major",
           "priority": "Medium",
           "assignee": "미지정",
@@ -57820,13 +58186,13 @@
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/BO-3d173fbd195180999aeed471a4f5dc20",
-          "lastEditedAt": "2026-09-04T06:54:00.000Z"
+          "lastEditedAt": "2026-09-06T23:59:00.000Z"
         },
         {
           "id": "ISSUE-1754",
           "title": "[이벤트 배너 관리][BO] 등록한 이벤트 배너 이미지 파일 삭제 기능이 제공되지 않는 현상",
-          "status": "등록 (Registered)",
-          "stage": "등록",
+          "status": "처리중 (In Progress)",
+          "stage": "진행중",
           "severity": "Major",
           "priority": "Medium",
           "assignee": "미지정",
@@ -57841,13 +58207,13 @@
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/BO-3d173fbd1951801780c4e1119eea7a56",
-          "lastEditedAt": "2026-09-04T06:53:00.000Z"
+          "lastEditedAt": "2026-09-06T23:59:00.000Z"
         },
         {
           "id": "ISSUE-1753",
           "title": "[배너 관리][BO] 이동경로 ‘딥링크’ 선택 시 노출국가 설정 항목이 미노출되는 현상",
-          "status": "등록 (Registered)",
-          "stage": "등록",
+          "status": "처리중 (In Progress)",
+          "stage": "진행중",
           "severity": "Major",
           "priority": "Medium",
           "assignee": "미지정",
@@ -57862,13 +58228,13 @@
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/BO-3d173fbd1951809cb2bcf2d1c843b424",
-          "lastEditedAt": "2026-09-04T06:50:00.000Z"
+          "lastEditedAt": "2026-09-06T23:59:00.000Z"
         },
         {
           "id": "ISSUE-1752",
           "title": "[이벤트 배너 관리][BO][개선] 앱 실행 팝업 이미지 단독 등록 기능 제공 필요",
-          "status": "등록 (Registered)",
-          "stage": "등록",
+          "status": "처리중 (In Progress)",
+          "stage": "진행중",
           "severity": "개선 의견",
           "priority": "Medium",
           "assignee": "미지정",
@@ -57883,13 +58249,13 @@
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/BO-3d173fbd1951802c82a6d878dcded7b7",
-          "lastEditedAt": "2026-09-04T06:47:00.000Z"
+          "lastEditedAt": "2026-09-06T23:59:00.000Z"
         },
         {
           "id": "ISSUE-1751",
           "title": "[메뉴관리][BO] 메뉴 다국어 등록 후 특정 언어가 빈 값으로 저장되는 현상",
-          "status": "등록 (Registered)",
-          "stage": "등록",
+          "status": "처리중 (In Progress)",
+          "stage": "진행중",
           "severity": "Major",
           "priority": "Medium",
           "assignee": "미지정",
@@ -57904,13 +58270,13 @@
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/BO-3d173fbd1951806cad01dd679dbe221c",
-          "lastEditedAt": "2026-09-04T06:40:00.000Z"
+          "lastEditedAt": "2026-09-06T23:59:00.000Z"
         },
         {
           "id": "ISSUE-1750",
           "title": "[이벤트 배너][공통] 연결 메뉴의 노출 국가 정책이 배너에 적용되지 않는 현상",
-          "status": "등록 (Registered)",
-          "stage": "등록",
+          "status": "처리중 (In Progress)",
+          "stage": "진행중",
           "severity": "Major",
           "priority": "Medium",
           "assignee": "미지정",
@@ -57925,28 +58291,7 @@
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/3d173fbd19518097aad9eafdaf8d77fb",
-          "lastEditedAt": "2026-09-04T06:35:00.000Z"
-        },
-        {
-          "id": "ISSUE-1749",
-          "title": "[콕뱅크][계좌등록] 주계좌 설정 바텀시트 내 계좌 삭제 버튼 노출 현상 ",
-          "status": "개발 완료 (Dev Done)",
-          "stage": "종료",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "콕뱅크",
-          "versionRaw": "콕뱅크",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-09-04T06:23:00.000Z",
-          "createdDate": "2026-09-04",
-          "fixedAt": "2026-09-04T09:08:00.000Z",
-          "fixedDate": "2026-09-04",
-          "closedAt": "2026-09-04T09:08:00.000Z",
-          "closedDate": "2026-09-04",
-          "url": "https://app.notion.com/p/3d173fbd1951802fbaf1d282cc5df21d",
-          "lastEditedAt": "2026-09-04T09:08:00.000Z"
+          "lastEditedAt": "2026-09-06T23:59:00.000Z"
         }
       ]
     },
@@ -58005,13 +58350,6 @@
         }
       ],
       "daily": [
-        {
-          "date": "2026-08-08",
-          "new": 0,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": 0
-        },
         {
           "date": "2026-08-09",
           "new": 0,
@@ -58176,8 +58514,8 @@
         {
           "date": "2026-09-01",
           "new": 0,
-          "fixed": 1,
-          "closed": 1,
+          "fixed": 0,
+          "closed": 0,
           "deltaNew": -1
         },
         {
@@ -58210,6 +58548,13 @@
         },
         {
           "date": "2026-09-06",
+          "new": 0,
+          "fixed": 1,
+          "closed": 1,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-09-07",
           "new": 0,
           "fixed": 0,
           "closed": 0,
@@ -58406,6 +58751,30 @@
           ]
         },
         {
+          "version": "[G.H][콕뱅크]",
+          "total": 1,
+          "criticalMajor": 0,
+          "doneRate": 100.0,
+          "status": [
+            {
+              "label": "종료",
+              "count": 1
+            }
+          ],
+          "severity": [
+            {
+              "label": "Minor",
+              "count": 1
+            }
+          ],
+          "priority": [
+            {
+              "label": "Medium",
+              "count": 1
+            }
+          ]
+        },
+        {
           "version": "[G.H]추후 수정-백로그",
           "total": 5,
           "criticalMajor": 3,
@@ -58430,30 +58799,6 @@
             {
               "label": "Medium",
               "count": 5
-            }
-          ]
-        },
-        {
-          "version": "[G.H]콕뱅크",
-          "total": 1,
-          "criticalMajor": 0,
-          "doneRate": 100.0,
-          "status": [
-            {
-              "label": "종료",
-              "count": 1
-            }
-          ],
-          "severity": [
-            {
-              "label": "Minor",
-              "count": 1
-            }
-          ],
-          "priority": [
-            {
-              "label": "Medium",
-              "count": 1
             }
           ]
         },
@@ -58490,8 +58835,8 @@
           "[G.H]v1.0.2",
           "[G.H]v1.0.0",
           "[G.H][교통카드]SDK변경",
+          "[G.H][콕뱅크]",
           "[G.H]추후 수정-백로그",
-          "[G.H]콕뱅크",
           "[G.H]Backlog"
         ],
         "RECENT": [
@@ -59138,6 +59483,11 @@
               "date": "2026-09-06",
               "registered": 20,
               "fixed": 1
+            },
+            {
+              "date": "2026-09-07",
+              "registered": 20,
+              "fixed": 1
             }
           ]
         },
@@ -59561,6 +59911,11 @@
             },
             {
               "date": "2026-09-06",
+              "registered": 15,
+              "fixed": 15
+            },
+            {
+              "date": "2026-09-07",
               "registered": 15,
               "fixed": 15
             }
@@ -60193,6 +60548,11 @@
               "date": "2026-09-06",
               "registered": 55,
               "fixed": 54
+            },
+            {
+              "date": "2026-09-07",
+              "registered": 55,
+              "fixed": 54
             }
           ]
         },
@@ -60516,6 +60876,11 @@
             },
             {
               "date": "2026-09-06",
+              "registered": 5,
+              "fixed": 5
+            },
+            {
+              "date": "2026-09-07",
               "registered": 5,
               "fixed": 5
             }
@@ -61153,6 +61518,11 @@
               "date": "2026-09-06",
               "registered": 101,
               "fixed": 101
+            },
+            {
+              "date": "2026-09-07",
+              "registered": 101,
+              "fixed": 101
             }
           ]
         },
@@ -61507,6 +61877,96 @@
             {
               "date": "2026-09-06",
               "registered": 2,
+              "fixed": 1
+            },
+            {
+              "date": "2026-09-07",
+              "registered": 2,
+              "fixed": 1
+            }
+          ]
+        },
+        {
+          "version": "[G.H][콕뱅크]",
+          "total": 1,
+          "open": 0,
+          "done": 1,
+          "scopeTotal": 1,
+          "doneRate": 100.0,
+          "latestSnapshot": "2026-09-06",
+          "severityRows": [
+            {
+              "severity": "Critical",
+              "open": 0,
+              "done": 0,
+              "total": 0,
+              "rate": 0,
+              "previousRate": 0
+            },
+            {
+              "severity": "Major",
+              "open": 0,
+              "done": 0,
+              "total": 0,
+              "rate": 0,
+              "previousRate": 0
+            },
+            {
+              "severity": "Minor",
+              "open": 0,
+              "done": 1,
+              "total": 1,
+              "rate": 100.0,
+              "previousRate": 100.0
+            },
+            {
+              "severity": "합계",
+              "open": 0,
+              "done": 1,
+              "total": 1,
+              "rate": 100.0,
+              "previousRate": 100.0
+            }
+          ],
+          "daily": [
+            {
+              "date": "2026-08-31",
+              "registered": 1,
+              "fixed": 0
+            },
+            {
+              "date": "2026-09-01",
+              "registered": 1,
+              "fixed": 0
+            },
+            {
+              "date": "2026-09-02",
+              "registered": 1,
+              "fixed": 0
+            },
+            {
+              "date": "2026-09-03",
+              "registered": 1,
+              "fixed": 0
+            },
+            {
+              "date": "2026-09-04",
+              "registered": 1,
+              "fixed": 0
+            },
+            {
+              "date": "2026-09-05",
+              "registered": 1,
+              "fixed": 0
+            },
+            {
+              "date": "2026-09-06",
+              "registered": 1,
+              "fixed": 1
+            },
+            {
+              "date": "2026-09-07",
+              "registered": 1,
               "fixed": 1
             }
           ]
@@ -62143,86 +62603,11 @@
               "date": "2026-09-06",
               "registered": 5,
               "fixed": 0
-            }
-          ]
-        },
-        {
-          "version": "[G.H]콕뱅크",
-          "total": 1,
-          "open": 0,
-          "done": 1,
-          "scopeTotal": 1,
-          "doneRate": 100.0,
-          "latestSnapshot": "2026-09-01",
-          "severityRows": [
-            {
-              "severity": "Critical",
-              "open": 0,
-              "done": 0,
-              "total": 0,
-              "rate": 0,
-              "previousRate": 0
             },
             {
-              "severity": "Major",
-              "open": 0,
-              "done": 0,
-              "total": 0,
-              "rate": 0,
-              "previousRate": 0
-            },
-            {
-              "severity": "Minor",
-              "open": 0,
-              "done": 1,
-              "total": 1,
-              "rate": 100.0,
-              "previousRate": 100.0
-            },
-            {
-              "severity": "합계",
-              "open": 0,
-              "done": 1,
-              "total": 1,
-              "rate": 100.0,
-              "previousRate": 100.0
-            }
-          ],
-          "daily": [
-            {
-              "date": "2026-08-31",
-              "registered": 1,
+              "date": "2026-09-07",
+              "registered": 5,
               "fixed": 0
-            },
-            {
-              "date": "2026-09-01",
-              "registered": 1,
-              "fixed": 1
-            },
-            {
-              "date": "2026-09-02",
-              "registered": 1,
-              "fixed": 1
-            },
-            {
-              "date": "2026-09-03",
-              "registered": 1,
-              "fixed": 1
-            },
-            {
-              "date": "2026-09-04",
-              "registered": 1,
-              "fixed": 1
-            },
-            {
-              "date": "2026-09-05",
-              "registered": 1,
-              "fixed": 1
-            },
-            {
-              "date": "2026-09-06",
-              "registered": 1,
-              "fixed": 1
             }
           ]
         },
@@ -62858,11 +63243,16 @@
               "date": "2026-09-06",
               "registered": 1,
               "fixed": 0
+            },
+            {
+              "date": "2026-09-07",
+              "registered": 1,
+              "fixed": 0
             }
           ]
         }
       ],
-      "defaultProjectVersion": "[G.H]콕뱅크",
+      "defaultProjectVersion": "[G.H][콕뱅크]",
       "selectedVersion": "ALL",
       "distributions": {
         "ALL": {
@@ -62907,13 +63297,6 @@
         }
       },
       "heatmap": [
-        {
-          "date": "2026-08-08",
-          "new": 0,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": 0
-        },
         {
           "date": "2026-08-09",
           "new": 0,
@@ -63078,8 +63461,8 @@
         {
           "date": "2026-09-01",
           "new": 0,
-          "fixed": 1,
-          "closed": 1,
+          "fixed": 0,
+          "closed": 0,
           "deltaNew": -1
         },
         {
@@ -63112,6 +63495,13 @@
         },
         {
           "date": "2026-09-06",
+          "new": 0,
+          "fixed": 1,
+          "closed": 1,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-09-07",
           "new": 0,
           "fixed": 0,
           "closed": 0,
@@ -63166,18 +63556,18 @@
           "severity": "Minor",
           "priority": "Medium",
           "assignee": "미지정",
-          "version": "[G.H]콕뱅크",
-          "versionRaw": "콕뱅크",
+          "version": "[G.H][콕뱅크]",
+          "versionRaw": "[콕뱅크]",
           "domain": "GoHanpass",
           "os": "미지정",
           "createdAt": "2026-08-31T05:45:00.000Z",
           "createdDate": "2026-08-31",
-          "fixedAt": "2026-09-01T03:56:00.000Z",
-          "fixedDate": "2026-09-01",
-          "closedAt": "2026-09-01T03:56:00.000Z",
-          "closedDate": "2026-09-01",
+          "fixedAt": "2026-09-06T23:50:00.000Z",
+          "fixedDate": "2026-09-06",
+          "closedAt": "2026-09-06T23:50:00.000Z",
+          "closedDate": "2026-09-06",
           "url": "https://app.notion.com/p/HOME-GoHanpass-Logo-3cd73fbd195180b8a6e9d80d7718a298",
-          "lastEditedAt": "2026-09-01T03:56:00.000Z"
+          "lastEditedAt": "2026-09-06T23:50:00.000Z"
         },
         {
           "id": "ISSUE-1059",

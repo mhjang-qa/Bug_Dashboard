@@ -565,20 +565,31 @@ def compact_status(value: Any) -> str:
     return re.sub(r"\s+", "", str(value or "")).lower()
 
 
+def is_qa_regression_row(row: dict[str, Any]) -> bool:
+    compact = compact_status(row.get("status"))
+    return any(token in compact for token in ["qa검증", "qaverification", "회귀"])
+
+
+def is_done_row(row: dict[str, Any]) -> bool:
+    compact = compact_status(row.get("status"))
+    if any(token in compact for token in ["개발완료", "수정완료", "resolved", "fixed", "devdone"]):
+        return False
+    done_tokens = ["완료(done)", "done", "closed", "종료", "결함아님", "notanissue"]
+    return not is_qa_regression_row(row) and any(token in compact for token in done_tokens)
+
+
 def is_dev_done_row(row: dict[str, Any]) -> bool:
     compact = compact_status(row.get("status"))
     done_tokens = [
         "개발완료",
         "수정완료",
-        "qa확인",
-        "qa완료",
         "resolved",
         "fixed",
         "devdone",
-        "done",
-        "closed",
     ]
-    return any(token in compact for token in done_tokens) or row.get("stage") in DEV_DONE_STAGES
+    return not is_qa_regression_row(row) and not is_done_row(row) and (
+        any(token in compact for token in done_tokens) or row.get("stage") == "수정완료"
+    )
 
 
 def is_dev_open_row(row: dict[str, Any]) -> bool:
@@ -590,7 +601,7 @@ def is_dev_open_row(row: dict[str, Any]) -> bool:
 
 
 def completion_date(row: dict[str, Any]) -> str:
-    if not is_dev_done_row(row):
+    if not (is_dev_done_row(row) or is_qa_regression_row(row) or is_done_row(row)):
         return ""
     return row.get("fixedDate") or row.get("closedDate") or date_key(row.get("lastEditedAt"))
 
@@ -630,21 +641,38 @@ def project_status_counts(rows: list[dict[str, Any]], cutoff: str | None = None)
         for row in rows
         if not cutoff or not row.get("createdDate") or row.get("createdDate", "") <= cutoff
     ]
+    dev_done = 0
+    qa_regression = 0
     done = 0
     open_count = 0
     for row in scoped:
         done_date = completion_date(row)
-        if is_dev_done_row(row) and (cutoff is None or not done_date or done_date <= cutoff):
+        is_completed_by_cutoff = cutoff is None or not done_date or done_date <= cutoff
+        if is_dev_done_row(row) and is_completed_by_cutoff:
+            dev_done += 1
+            continue
+        if is_qa_regression_row(row) and is_completed_by_cutoff:
+            qa_regression += 1
+            continue
+        if is_done_row(row) and is_completed_by_cutoff:
             done += 1
             continue
-        if is_dev_open_row(row) or (cutoff is not None and is_dev_done_row(row) and done_date and done_date > cutoff):
+        if is_dev_open_row(row) or (
+            cutoff is not None
+            and (is_dev_done_row(row) or is_qa_regression_row(row) or is_done_row(row))
+            and done_date
+            and done_date > cutoff
+        ):
             open_count += 1
-    total = open_count + done
+    completed = dev_done + qa_regression + done
+    total = open_count + completed
     return {
         "open": open_count,
+        "devDone": dev_done,
+        "qaRegression": qa_regression,
         "done": done,
         "total": total,
-        "rate": round(done / total * 100, 1) if total else 0,
+        "rate": round(completed / total * 100, 1) if total else 0,
     }
 
 
@@ -659,6 +687,8 @@ def build_project_severity_rows(rows: list[dict[str, Any]]) -> list[dict[str, An
             {
                 "severity": severity,
                 "open": current["open"],
+                "devDone": current["devDone"],
+                "qaRegression": current["qaRegression"],
                 "done": current["done"],
                 "total": current["total"],
                 "rate": current["rate"],
@@ -671,6 +701,8 @@ def build_project_severity_rows(rows: list[dict[str, Any]]) -> list[dict[str, An
         {
             "severity": "합계",
             "open": current_total["open"],
+            "devDone": current_total["devDone"],
+            "qaRegression": current_total["qaRegression"],
             "done": current_total["done"],
             "total": current_total["total"],
             "rate": current_total["rate"],
@@ -701,6 +733,8 @@ def build_project_progress(rows: list[dict[str, Any]], days: int) -> list[dict[s
                 "version": version,
                 "total": len(items),
                 "open": counts["open"],
+                "devDone": counts["devDone"],
+                "qaRegression": counts["qaRegression"],
                 "done": counts["done"],
                 "scopeTotal": counts["total"],
                 "doneRate": counts["rate"],
@@ -1775,18 +1809,22 @@ def build_html(payload: dict[str, Any]) -> str:
       $("projectProgressNote").textContent = `${{selectedDomain === "ALL" ? "전체" : selectedDomain}} · ${{current.version}}`;
       $("projectSnapshotLabel").textContent = current.latestSnapshot ? `최신 Snapshot ${{formatDisplayDateTime(current.latestSnapshot)}}` : "Snapshot 정보 없음";
       const cards = [
-        ["모수", current.scopeTotal, "미처리+개발 완료"],
-        ["미처리", current.open, "등록+배정+처리중"],
-        ["개발 완료", current.done, "수정 완료 이후"],
-        ["개발 완료 비율", pct(current.doneRate), `선택 타겟 기준`],
+        ["모수", current.scopeTotal, "미처리+개발 완료+QA회귀+완료"],
+        ["미처리", current.open, "등록/배정/처리중"],
+        ["개발 완료", current.devDone, "개발 완료/수정완료"],
+        ["QA회귀", current.qaRegression, "QA 검증-회귀"],
+        ["완료(Done)", current.done, "완료/종료"],
+        ["처리 완료 비율", pct(current.doneRate), `선택 타겟 기준`],
       ];
       $("projectSummary").innerHTML = cards.map(([label, value, note]) => `
         <article class="card"><span>${{esc(label)}}</span><strong>${{esc(value)}}</strong><em>${{esc(note)}}</em></article>
       `).join("");
-      $("projectProgressTable").innerHTML = `<table class="project-table"><thead><tr><th>심각도</th><th>미처리(등록+배정+처리중)</th><th>개발 완료</th><th>모수</th><th>개발 완료 비율</th></tr></thead><tbody>${{current.severityRows.map((row) => `
+      $("projectProgressTable").innerHTML = `<table class="project-table"><thead><tr><th>심각도</th><th>미처리</th><th>개발 완료</th><th>QA회귀</th><th>완료(Done)</th><th>모수</th><th>처리 완료 비율</th></tr></thead><tbody>${{current.severityRows.map((row) => `
         <tr>
           <td>${{esc(row.severity)}}</td>
           <td>${{row.open}}</td>
+          <td>${{row.devDone}}</td>
+          <td>${{row.qaRegression}}</td>
           <td>${{row.done}}</td>
           <td>${{row.total}}</td>
           <td><span class="project-rate">${{pct(row.rate)}}</span> <span class="meta">(전일 ${{pct(row.previousRate)}})</span></td>

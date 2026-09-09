@@ -452,7 +452,7 @@
     </div>
   </div>
   <script id="dashboard-data" type="application/json">{
-  "generatedAt": "2026-09-08T13:00:33+00:00",
+  "generatedAt": "2026-09-09T01:24:02+00:00",
   "days": 30,
   "domainOrder": [
     "한패스",
@@ -462,19 +462,19 @@
     "ALL": {
       "summary": {
         "total": 1426,
-        "new": 203,
-        "inProgress": 16,
+        "new": 201,
+        "inProgress": 17,
         "fixed": 0,
-        "closed": 965,
-        "todayNew": 3,
-        "newDelta": -5
+        "closed": 984,
+        "todayNew": 1,
+        "newDelta": -1
       },
       "funnel": [
         {
           "stage": "등록",
-          "count": 203,
-          "rate": 14.2,
-          "width": 21
+          "count": 201,
+          "rate": 14.1,
+          "width": 20
         },
         {
           "stage": "검토",
@@ -484,14 +484,14 @@
         },
         {
           "stage": "배정",
-          "count": 4,
-          "rate": 0.3,
+          "count": 3,
+          "rate": 0.2,
           "width": 18
         },
         {
           "stage": "진행중",
-          "count": 16,
-          "rate": 1.1,
+          "count": 17,
+          "rate": 1.2,
           "width": 18
         },
         {
@@ -502,31 +502,24 @@
         },
         {
           "stage": "QA확인",
-          "count": 238,
-          "rate": 16.7,
-          "width": 25
+          "count": 221,
+          "rate": 15.5,
+          "width": 22
         },
         {
           "stage": "종료",
-          "count": 965,
-          "rate": 67.7,
+          "count": 984,
+          "rate": 69.0,
           "width": 100
         }
       ],
       "daily": [
         {
-          "date": "2026-08-10",
-          "new": 1,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": 1
-        },
-        {
           "date": "2026-08-11",
           "new": 12,
           "fixed": 0,
           "closed": 0,
-          "deltaNew": 11
+          "deltaNew": 12
         },
         {
           "date": "2026-08-12",
@@ -692,8 +685,8 @@
         {
           "date": "2026-09-04",
           "new": 25,
-          "fixed": 62,
-          "closed": 23,
+          "fixed": 20,
+          "closed": 20,
           "deltaNew": 1
         },
         {
@@ -713,16 +706,23 @@
         {
           "date": "2026-09-07",
           "new": 8,
-          "fixed": 117,
-          "closed": 13,
+          "fixed": 69,
+          "closed": 11,
           "deltaNew": 8
         },
         {
           "date": "2026-09-08",
-          "new": 3,
-          "fixed": 68,
-          "closed": 37,
-          "deltaNew": -5
+          "new": 2,
+          "fixed": 32,
+          "closed": 32,
+          "deltaNew": -6
+        },
+        {
+          "date": "2026-09-09",
+          "new": 1,
+          "fixed": 128,
+          "closed": 29,
+          "deltaNew": -1
         }
       ],
       "versions": [
@@ -1708,17 +1708,17 @@
         },
         {
           "version": "[Hanpass][앱개편][Native]-LiveTest",
-          "total": 45,
+          "total": 44,
           "criticalMajor": 23,
-          "doneRate": 46.7,
+          "doneRate": 47.7,
           "status": [
             {
               "label": "등록",
-              "count": 21
+              "count": 19
             },
             {
               "label": "진행중",
-              "count": 3
+              "count": 4
             },
             {
               "label": "종료",
@@ -1737,16 +1737,12 @@
             {
               "label": "Minor",
               "count": 21
-            },
-            {
-              "label": "미지정",
-              "count": 1
             }
           ],
           "priority": [
             {
               "label": "Medium",
-              "count": 45
+              "count": 44
             }
           ]
         },
@@ -1843,14 +1839,14 @@
           ]
         },
         {
-          "version": "[카카오뱅크]해외송금-1차",
-          "total": 119,
-          "criticalMajor": 58,
-          "doneRate": 89.1,
+          "version": "[카카오뱅크]해외송금",
+          "total": 120,
+          "criticalMajor": 59,
+          "doneRate": 88.3,
           "status": [
             {
               "label": "등록",
-              "count": 12
+              "count": 13
             },
             {
               "label": "진행중",
@@ -1872,7 +1868,7 @@
             },
             {
               "label": "Major",
-              "count": 57
+              "count": 58
             },
             {
               "label": "Minor",
@@ -1882,7 +1878,7 @@
           "priority": [
             {
               "label": "Medium",
-              "count": 119
+              "count": 120
             }
           ]
         },
@@ -1890,23 +1886,23 @@
           "version": "[콕뱅크]",
           "total": 110,
           "criticalMajor": 39,
-          "doneRate": 88.2,
+          "doneRate": 90.0,
           "status": [
             {
               "label": "등록",
-              "count": 9
+              "count": 8
             },
             {
               "label": "배정",
-              "count": 4
+              "count": 3
             },
             {
               "label": "QA확인",
-              "count": 74
+              "count": 57
             },
             {
               "label": "종료",
-              "count": 23
+              "count": 42
             }
           ],
           "severity": [
@@ -2113,7 +2109,7 @@
           "[Hanpass][앱개편][기획]",
           "[게이미피케이션][혜택]포인트_2배_이벤트",
           "[교통카드]SDK변경",
-          "[카카오뱅크]해외송금-1차",
+          "[카카오뱅크]해외송금",
           "[콕뱅크]",
           "[포인트] 해외송금 미션 중단",
           "결함 아님 - Done",
@@ -2391,6 +2387,11 @@
               "date": "2026-09-08",
               "registered": 11,
               "fixed": 1
+            },
+            {
+              "date": "2026-09-09",
+              "registered": 11,
+              "fixed": 1
             }
           ]
         },
@@ -2519,6 +2520,11 @@
             },
             {
               "date": "2026-09-08",
+              "registered": 7,
+              "fixed": 2
+            },
+            {
+              "date": "2026-09-09",
               "registered": 7,
               "fixed": 2
             }
@@ -2821,6 +2827,11 @@
               "date": "2026-09-08",
               "registered": 20,
               "fixed": 20
+            },
+            {
+              "date": "2026-09-09",
+              "registered": 20,
+              "fixed": 20
             }
           ]
         },
@@ -3119,6 +3130,11 @@
             },
             {
               "date": "2026-09-08",
+              "registered": 3,
+              "fixed": 3
+            },
+            {
+              "date": "2026-09-09",
               "registered": 3,
               "fixed": 3
             }
@@ -3599,6 +3615,11 @@
             },
             {
               "date": "2026-09-08",
+              "registered": 26,
+              "fixed": 26
+            },
+            {
+              "date": "2026-09-09",
               "registered": 26,
               "fixed": 26
             }
@@ -4169,6 +4190,11 @@
             },
             {
               "date": "2026-09-08",
+              "registered": 34,
+              "fixed": 33
+            },
+            {
+              "date": "2026-09-09",
               "registered": 34,
               "fixed": 33
             }
@@ -4844,6 +4870,11 @@
             },
             {
               "date": "2026-09-08",
+              "registered": 9,
+              "fixed": 9
+            },
+            {
+              "date": "2026-09-09",
               "registered": 9,
               "fixed": 9
             }
@@ -5564,6 +5595,11 @@
             },
             {
               "date": "2026-09-08",
+              "registered": 117,
+              "fixed": 113
+            },
+            {
+              "date": "2026-09-09",
               "registered": 117,
               "fixed": 113
             }
@@ -6434,6 +6470,11 @@
             },
             {
               "date": "2026-09-08",
+              "registered": 82,
+              "fixed": 80
+            },
+            {
+              "date": "2026-09-09",
               "registered": 82,
               "fixed": 80
             }
@@ -7619,6 +7660,11 @@
             },
             {
               "date": "2026-09-08",
+              "registered": 24,
+              "fixed": 19
+            },
+            {
+              "date": "2026-09-09",
               "registered": 24,
               "fixed": 19
             }
@@ -8894,6 +8940,11 @@
             },
             {
               "date": "2026-09-08",
+              "registered": 103,
+              "fixed": 87
+            },
+            {
+              "date": "2026-09-09",
               "registered": 103,
               "fixed": 87
             }
@@ -10284,6 +10335,11 @@
             },
             {
               "date": "2026-09-08",
+              "registered": 68,
+              "fixed": 59
+            },
+            {
+              "date": "2026-09-09",
               "registered": 68,
               "fixed": 59
             }
@@ -11744,6 +11800,11 @@
             },
             {
               "date": "2026-09-08",
+              "registered": 4,
+              "fixed": 3
+            },
+            {
+              "date": "2026-09-09",
               "registered": 4,
               "fixed": 3
             }
@@ -13339,6 +13400,11 @@
             },
             {
               "date": "2026-09-08",
+              "registered": 35,
+              "fixed": 31
+            },
+            {
+              "date": "2026-09-09",
               "registered": 35,
               "fixed": 31
             }
@@ -14964,6 +15030,11 @@
             },
             {
               "date": "2026-09-08",
+              "registered": 4,
+              "fixed": 4
+            },
+            {
+              "date": "2026-09-09",
               "registered": 4,
               "fixed": 4
             }
@@ -16879,6 +16950,11 @@
             },
             {
               "date": "2026-09-08",
+              "registered": 3,
+              "fixed": 3
+            },
+            {
+              "date": "2026-09-09",
               "registered": 3,
               "fixed": 3
             }
@@ -18934,6 +19010,11 @@
             },
             {
               "date": "2026-09-08",
+              "registered": 27,
+              "fixed": 22
+            },
+            {
+              "date": "2026-09-09",
               "registered": 27,
               "fixed": 22
             }
@@ -21166,6 +21247,11 @@
               "date": "2026-09-08",
               "registered": 33,
               "fixed": 30
+            },
+            {
+              "date": "2026-09-09",
+              "registered": 33,
+              "fixed": 30
             }
           ]
         },
@@ -21821,6 +21907,11 @@
               "date": "2026-09-08",
               "registered": 20,
               "fixed": 1
+            },
+            {
+              "date": "2026-09-09",
+              "registered": 20,
+              "fixed": 1
             }
           ]
         },
@@ -22264,6 +22355,11 @@
             },
             {
               "date": "2026-09-08",
+              "registered": 15,
+              "fixed": 15
+            },
+            {
+              "date": "2026-09-09",
               "registered": 15,
               "fixed": 15
             }
@@ -22916,6 +23012,11 @@
               "date": "2026-09-08",
               "registered": 55,
               "fixed": 54
+            },
+            {
+              "date": "2026-09-09",
+              "registered": 55,
+              "fixed": 54
             }
           ]
         },
@@ -23259,6 +23360,11 @@
             },
             {
               "date": "2026-09-08",
+              "registered": 5,
+              "fixed": 5
+            },
+            {
+              "date": "2026-09-09",
               "registered": 5,
               "fixed": 5
             }
@@ -23916,6 +24022,11 @@
               "date": "2026-09-08",
               "registered": 101,
               "fixed": 101
+            },
+            {
+              "date": "2026-09-09",
+              "registered": 101,
+              "fixed": 101
             }
           ]
         },
@@ -24291,6 +24402,11 @@
               "date": "2026-09-08",
               "registered": 2,
               "fixed": 1
+            },
+            {
+              "date": "2026-09-09",
+              "registered": 2,
+              "fixed": 1
             }
           ]
         },
@@ -24389,6 +24505,11 @@
             },
             {
               "date": "2026-09-08",
+              "registered": 1,
+              "fixed": 1
+            },
+            {
+              "date": "2026-09-09",
               "registered": 1,
               "fixed": 1
             }
@@ -25046,6 +25167,11 @@
               "date": "2026-09-08",
               "registered": 5,
               "fixed": 0
+            },
+            {
+              "date": "2026-09-09",
+              "registered": 5,
+              "fixed": 0
             }
           ]
         },
@@ -25078,7 +25204,7 @@
               "done": 26,
               "total": 27,
               "rate": 96.3,
-              "previousRate": 77.8
+              "previousRate": 96.3
             },
             {
               "severity": "Minor",
@@ -25088,7 +25214,7 @@
               "done": 15,
               "total": 15,
               "rate": 100.0,
-              "previousRate": 93.3
+              "previousRate": 100.0
             },
             {
               "severity": "합계",
@@ -25098,7 +25224,7 @@
               "done": 46,
               "total": 48,
               "rate": 95.8,
-              "previousRate": 83.3
+              "previousRate": 95.8
             }
           ],
           "daily": [
@@ -25211,6 +25337,11 @@
               "date": "2026-09-08",
               "registered": 48,
               "fixed": 46
+            },
+            {
+              "date": "2026-09-09",
+              "registered": 48,
+              "fixed": 46
             }
           ]
         },
@@ -25243,7 +25374,7 @@
               "done": 62,
               "total": 76,
               "rate": 81.6,
-              "previousRate": 75.0
+              "previousRate": 81.6
             },
             {
               "severity": "Minor",
@@ -25253,7 +25384,7 @@
               "done": 113,
               "total": 137,
               "rate": 82.5,
-              "previousRate": 77.4
+              "previousRate": 82.5
             },
             {
               "severity": "합계",
@@ -25263,7 +25394,7 @@
               "done": 182,
               "total": 221,
               "rate": 82.4,
-              "previousRate": 76.9
+              "previousRate": 82.4
             }
           ],
           "daily": [
@@ -25366,19 +25497,24 @@
               "date": "2026-09-08",
               "registered": 221,
               "fixed": 182
+            },
+            {
+              "date": "2026-09-09",
+              "registered": 221,
+              "fixed": 182
             }
           ]
         },
         {
           "version": "[Hanpass][앱개편][Native]-LiveTest",
-          "total": 45,
-          "open": 24,
+          "total": 44,
+          "open": 23,
           "devDone": 0,
           "qaRegression": 0,
           "done": 21,
-          "scopeTotal": 45,
-          "doneRate": 46.7,
-          "latestSnapshot": "2026-09-08",
+          "scopeTotal": 44,
+          "doneRate": 47.7,
+          "latestSnapshot": "2026-09-09",
           "severityRows": [
             {
               "severity": "Critical",
@@ -25398,7 +25534,7 @@
               "done": 8,
               "total": 22,
               "rate": 36.4,
-              "previousRate": 31.8
+              "previousRate": 36.4
             },
             {
               "severity": "Minor",
@@ -25408,17 +25544,17 @@
               "done": 13,
               "total": 21,
               "rate": 61.9,
-              "previousRate": 35.0
+              "previousRate": 61.9
             },
             {
               "severity": "합계",
-              "open": 24,
+              "open": 23,
               "devDone": 0,
               "qaRegression": 0,
               "done": 21,
-              "total": 45,
-              "rate": 46.7,
-              "previousRate": 32.6
+              "total": 44,
+              "rate": 47.7,
+              "previousRate": 47.7
             }
           ],
           "daily": [
@@ -25514,7 +25650,12 @@
             },
             {
               "date": "2026-09-08",
-              "registered": 45,
+              "registered": 44,
+              "fixed": 21
+            },
+            {
+              "date": "2026-09-09",
+              "registered": 44,
               "fixed": 21
             }
           ]
@@ -25664,6 +25805,11 @@
             },
             {
               "date": "2026-09-08",
+              "registered": 27,
+              "fixed": 1
+            },
+            {
+              "date": "2026-09-09",
               "registered": 27,
               "fixed": 1
             }
@@ -25864,6 +26010,11 @@
             },
             {
               "date": "2026-09-08",
+              "registered": 11,
+              "fixed": 11
+            },
+            {
+              "date": "2026-09-09",
               "registered": 11,
               "fixed": 11
             }
@@ -26246,19 +26397,24 @@
               "date": "2026-09-08",
               "registered": 3,
               "fixed": 3
+            },
+            {
+              "date": "2026-09-09",
+              "registered": 3,
+              "fixed": 3
             }
           ]
         },
         {
-          "version": "[카카오뱅크]해외송금-1차",
-          "total": 119,
-          "open": 13,
+          "version": "[카카오뱅크]해외송금",
+          "total": 120,
+          "open": 14,
           "devDone": 0,
           "qaRegression": 99,
           "done": 7,
-          "scopeTotal": 119,
-          "doneRate": 89.1,
-          "latestSnapshot": "2026-09-08",
+          "scopeTotal": 120,
+          "doneRate": 88.3,
+          "latestSnapshot": "2026-09-09",
           "severityRows": [
             {
               "severity": "Critical",
@@ -26268,17 +26424,17 @@
               "done": 0,
               "total": 1,
               "rate": 100.0,
-              "previousRate": 100.0
+              "previousRate": 0.0
             },
             {
               "severity": "Major",
-              "open": 4,
+              "open": 5,
               "devDone": 0,
               "qaRegression": 50,
               "done": 3,
-              "total": 57,
-              "rate": 93.0,
-              "previousRate": 57.9
+              "total": 58,
+              "rate": 91.4,
+              "previousRate": 0.0
             },
             {
               "severity": "Minor",
@@ -26288,17 +26444,17 @@
               "done": 4,
               "total": 61,
               "rate": 85.2,
-              "previousRate": 66.7
+              "previousRate": 0.0
             },
             {
               "severity": "합계",
-              "open": 13,
+              "open": 14,
               "devDone": 0,
               "qaRegression": 99,
               "done": 7,
-              "total": 119,
-              "rate": 89.1,
-              "previousRate": 62.7
+              "total": 120,
+              "rate": 88.3,
+              "previousRate": 0.0
             }
           ],
           "daily": [
@@ -26460,26 +26616,31 @@
             {
               "date": "2026-09-04",
               "registered": 117,
-              "fixed": 42
+              "fixed": 0
             },
             {
               "date": "2026-09-05",
               "registered": 117,
-              "fixed": 42
+              "fixed": 0
             },
             {
               "date": "2026-09-06",
               "registered": 117,
-              "fixed": 42
+              "fixed": 0
             },
             {
               "date": "2026-09-07",
               "registered": 118,
-              "fixed": 74
+              "fixed": 0
             },
             {
               "date": "2026-09-08",
               "registered": 119,
+              "fixed": 0
+            },
+            {
+              "date": "2026-09-09",
+              "registered": 120,
               "fixed": 106
             }
           ]
@@ -26487,13 +26648,13 @@
         {
           "version": "[콕뱅크]",
           "total": 110,
-          "open": 13,
-          "devDone": 13,
-          "qaRegression": 74,
-          "done": 10,
+          "open": 11,
+          "devDone": 11,
+          "qaRegression": 57,
+          "done": 31,
           "scopeTotal": 110,
-          "doneRate": 88.2,
-          "latestSnapshot": "2026-09-08",
+          "doneRate": 90.0,
+          "latestSnapshot": "2026-09-09",
           "severityRows": [
             {
               "severity": "Critical",
@@ -26503,37 +26664,37 @@
               "done": 1,
               "total": 4,
               "rate": 75.0,
-              "previousRate": 50.0
+              "previousRate": 75.0
             },
             {
               "severity": "Major",
               "open": 3,
-              "devDone": 6,
-              "qaRegression": 23,
-              "done": 3,
+              "devDone": 4,
+              "qaRegression": 19,
+              "done": 9,
               "total": 35,
               "rate": 91.4,
-              "previousRate": 77.1
+              "previousRate": 74.3
             },
             {
               "severity": "Minor",
-              "open": 9,
+              "open": 7,
               "devDone": 5,
-              "qaRegression": 51,
-              "done": 6,
+              "qaRegression": 38,
+              "done": 21,
               "total": 71,
-              "rate": 87.3,
-              "previousRate": 80.3
+              "rate": 90.1,
+              "previousRate": 67.6
             },
             {
               "severity": "합계",
-              "open": 13,
-              "devDone": 13,
-              "qaRegression": 74,
-              "done": 10,
+              "open": 11,
+              "devDone": 11,
+              "qaRegression": 57,
+              "done": 31,
               "total": 110,
-              "rate": 88.2,
-              "previousRate": 78.2
+              "rate": 90.0,
+              "previousRate": 70.0
             }
           ],
           "daily": [
@@ -26580,12 +26741,17 @@
             {
               "date": "2026-09-07",
               "registered": 110,
-              "fixed": 86
+              "fixed": 70
             },
             {
               "date": "2026-09-08",
               "registered": 110,
-              "fixed": 97
+              "fixed": 77
+            },
+            {
+              "date": "2026-09-09",
+              "registered": 110,
+              "fixed": 99
             }
           ]
         },
@@ -26679,6 +26845,11 @@
             },
             {
               "date": "2026-09-08",
+              "registered": 1,
+              "fixed": 1
+            },
+            {
+              "date": "2026-09-09",
               "registered": 1,
               "fixed": 1
             }
@@ -28274,6 +28445,11 @@
             },
             {
               "date": "2026-09-08",
+              "registered": 3,
+              "fixed": 3
+            },
+            {
+              "date": "2026-09-09",
               "registered": 3,
               "fixed": 3
             }
@@ -30506,6 +30682,11 @@
               "date": "2026-09-08",
               "registered": 9,
               "fixed": 7
+            },
+            {
+              "date": "2026-09-09",
+              "registered": 9,
+              "fixed": 7
             }
           ]
         },
@@ -31161,6 +31342,11 @@
               "date": "2026-09-08",
               "registered": 1,
               "fixed": 0
+            },
+            {
+              "date": "2026-09-09",
+              "registered": 1,
+              "fixed": 0
             }
           ]
         },
@@ -31766,34 +31952,39 @@
               "date": "2026-09-08",
               "registered": 14,
               "fixed": 2
+            },
+            {
+              "date": "2026-09-09",
+              "registered": 14,
+              "fixed": 2
             }
           ]
         }
       ],
-      "defaultProjectVersion": "[Hanpass][앱개편][Native]-LiveTest",
+      "defaultProjectVersion": "[카카오뱅크]해외송금",
       "selectedVersion": "ALL",
       "distributions": {
         "ALL": {
           "status": [
             {
               "label": "등록",
-              "count": 203
+              "count": 201
             },
             {
               "label": "배정",
-              "count": 4
+              "count": 3
             },
             {
               "label": "진행중",
-              "count": 16
+              "count": 17
             },
             {
               "label": "QA확인",
-              "count": 238
+              "count": 221
             },
             {
               "label": "종료",
-              "count": 965
+              "count": 984
             }
           ],
           "severity": [
@@ -31803,7 +31994,7 @@
             },
             {
               "label": "Major",
-              "count": 434
+              "count": 435
             },
             {
               "label": "Minor",
@@ -31811,7 +32002,7 @@
             },
             {
               "label": "미지정",
-              "count": 78
+              "count": 77
             },
             {
               "label": "개선 의견",
@@ -31844,18 +32035,11 @@
       },
       "heatmap": [
         {
-          "date": "2026-08-10",
-          "new": 1,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": 1
-        },
-        {
           "date": "2026-08-11",
           "new": 12,
           "fixed": 0,
           "closed": 0,
-          "deltaNew": 11
+          "deltaNew": 12
         },
         {
           "date": "2026-08-12",
@@ -32021,8 +32205,8 @@
         {
           "date": "2026-09-04",
           "new": 25,
-          "fixed": 62,
-          "closed": 23,
+          "fixed": 20,
+          "closed": 20,
           "deltaNew": 1
         },
         {
@@ -32042,16 +32226,23 @@
         {
           "date": "2026-09-07",
           "new": 8,
-          "fixed": 117,
-          "closed": 13,
+          "fixed": 69,
+          "closed": 11,
           "deltaNew": 8
         },
         {
           "date": "2026-09-08",
-          "new": 3,
-          "fixed": 68,
-          "closed": 37,
-          "deltaNew": -5
+          "new": 2,
+          "fixed": 32,
+          "closed": 32,
+          "deltaNew": -6
+        },
+        {
+          "date": "2026-09-09",
+          "new": 1,
+          "fixed": 128,
+          "closed": 29,
+          "deltaNew": -1
         }
       ],
       "reportBoard": {
@@ -32095,31 +32286,31 @@
       },
       "recent": [
         {
-          "id": "ISSUE-1769",
-          "title": "제목 없음",
+          "id": "ISSUE-1771",
+          "title": "[카카오뱅크][계좌등록][공통] 1원 인증 번호 미일치 팝업 내 ‘확인’ 선택 시 이전 화면으로 이동하는 현상 ",
           "status": "등록 (Registered)",
           "stage": "등록",
-          "severity": "미지정",
+          "severity": "Major",
           "priority": "Medium",
           "assignee": "미지정",
-          "version": "[Hanpass][앱개편][Native]-LiveTest",
-          "versionRaw": "[Hanpass][앱개편][Native]-LiveTest",
+          "version": "[카카오뱅크]해외송금",
+          "versionRaw": "[카카오뱅크]해외송금",
           "domain": "한패스",
           "os": "미지정",
-          "createdAt": "2026-09-08T08:23:00.000Z",
-          "createdDate": "2026-09-08",
+          "createdAt": "2026-09-09T00:40:00.000Z",
+          "createdDate": "2026-09-09",
           "fixedAt": "",
           "fixedDate": "",
           "closedAt": "",
           "closedDate": "",
-          "url": "https://app.notion.com/p/3d573fbd195180789e08c9f98e8df837",
-          "lastEditedAt": "2026-09-08T08:23:00.000Z"
+          "url": "https://app.notion.com/p/1-3d673fbd195180cca88ed2df5c31a6fb",
+          "lastEditedAt": "2026-09-09T01:00:00.000Z"
         },
         {
           "id": "ISSUE-1768",
           "title": "[환율보기][iOS] 환율 국가 리스트 순서 기획서와 상이하게 노출되는 현상 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
+          "status": "처리중 (In Progress)",
+          "stage": "진행중",
           "severity": "Minor",
           "priority": "Medium",
           "assignee": "미지정",
@@ -32134,7 +32325,7 @@
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/iOS-3d573fbd19518022bf91c241221bcc0c",
-          "lastEditedAt": "2026-09-08T05:51:00.000Z"
+          "lastEditedAt": "2026-09-09T00:49:00.000Z"
         },
         {
           "id": "ISSUE-1767",
@@ -32144,8 +32335,8 @@
           "severity": "Minor",
           "priority": "Medium",
           "assignee": "미지정",
-          "version": "[카카오뱅크]해외송금-1차",
-          "versionRaw": "[카카오뱅크]해외송금-1차",
+          "version": "[카카오뱅크]해외송금",
+          "versionRaw": "[카카오뱅크]해외송금",
           "domain": "한패스",
           "os": "미지정",
           "createdAt": "2026-09-08T01:50:00.000Z",
@@ -32155,7 +32346,7 @@
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/PIN-3d573fbd195180e4a549dd1879abd782",
-          "lastEditedAt": "2026-09-08T02:27:00.000Z"
+          "lastEditedAt": "2026-09-09T01:00:00.000Z"
         },
         {
           "id": "ISSUE-1766",
@@ -32270,8 +32461,8 @@
           "severity": "Minor",
           "priority": "Medium",
           "assignee": "미지정",
-          "version": "[카카오뱅크]해외송금-1차",
-          "versionRaw": "[카카오뱅크]해외송금-1차",
+          "version": "[카카오뱅크]해외송금",
+          "versionRaw": "[카카오뱅크]해외송금",
           "domain": "한패스",
           "os": "미지정",
           "createdAt": "2026-09-07T04:14:00.000Z",
@@ -32281,7 +32472,7 @@
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/3d473fbd1951804e98a3e2a9deda8581",
-          "lastEditedAt": "2026-09-07T04:22:00.000Z"
+          "lastEditedAt": "2026-09-09T01:00:00.000Z"
         },
         {
           "id": "ISSUE-1760",
@@ -32309,18 +32500,18 @@
     "한패스": {
       "summary": {
         "total": 1221,
-        "new": 176,
-        "inProgress": 16,
+        "new": 174,
+        "inProgress": 17,
         "fixed": 0,
-        "closed": 789,
-        "todayNew": 3,
-        "newDelta": -5
+        "closed": 808,
+        "todayNew": 1,
+        "newDelta": -1
       },
       "funnel": [
         {
           "stage": "등록",
-          "count": 176,
-          "rate": 14.4,
+          "count": 174,
+          "rate": 14.3,
           "width": 22
         },
         {
@@ -32331,14 +32522,14 @@
         },
         {
           "stage": "배정",
-          "count": 4,
-          "rate": 0.3,
+          "count": 3,
+          "rate": 0.2,
           "width": 18
         },
         {
           "stage": "진행중",
-          "count": 16,
-          "rate": 1.3,
+          "count": 17,
+          "rate": 1.4,
           "width": 18
         },
         {
@@ -32349,31 +32540,24 @@
         },
         {
           "stage": "QA확인",
-          "count": 236,
-          "rate": 19.3,
-          "width": 30
+          "count": 219,
+          "rate": 17.9,
+          "width": 27
         },
         {
           "stage": "종료",
-          "count": 789,
-          "rate": 64.6,
+          "count": 808,
+          "rate": 66.2,
           "width": 100
         }
       ],
       "daily": [
         {
-          "date": "2026-08-10",
-          "new": 1,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": 1
-        },
-        {
           "date": "2026-08-11",
           "new": 12,
           "fixed": 0,
           "closed": 0,
-          "deltaNew": 11
+          "deltaNew": 12
         },
         {
           "date": "2026-08-12",
@@ -32539,8 +32723,8 @@
         {
           "date": "2026-09-04",
           "new": 25,
-          "fixed": 62,
-          "closed": 23,
+          "fixed": 20,
+          "closed": 20,
           "deltaNew": 1
         },
         {
@@ -32560,16 +32744,23 @@
         {
           "date": "2026-09-07",
           "new": 8,
-          "fixed": 116,
-          "closed": 13,
+          "fixed": 68,
+          "closed": 11,
           "deltaNew": 8
         },
         {
           "date": "2026-09-08",
-          "new": 3,
-          "fixed": 68,
-          "closed": 37,
-          "deltaNew": -5
+          "new": 2,
+          "fixed": 32,
+          "closed": 32,
+          "deltaNew": -6
+        },
+        {
+          "date": "2026-09-09",
+          "new": 1,
+          "fixed": 128,
+          "closed": 29,
+          "deltaNew": -1
         }
       ],
       "versions": [
@@ -33315,17 +33506,17 @@
         },
         {
           "version": "[Hanpass][앱개편][Native]-LiveTest",
-          "total": 45,
+          "total": 44,
           "criticalMajor": 23,
-          "doneRate": 46.7,
+          "doneRate": 47.7,
           "status": [
             {
               "label": "등록",
-              "count": 21
+              "count": 19
             },
             {
               "label": "진행중",
-              "count": 3
+              "count": 4
             },
             {
               "label": "종료",
@@ -33344,16 +33535,12 @@
             {
               "label": "Minor",
               "count": 21
-            },
-            {
-              "label": "미지정",
-              "count": 1
             }
           ],
           "priority": [
             {
               "label": "Medium",
-              "count": 45
+              "count": 44
             }
           ]
         },
@@ -33450,14 +33637,14 @@
           ]
         },
         {
-          "version": "[카카오뱅크]해외송금-1차",
-          "total": 119,
-          "criticalMajor": 58,
-          "doneRate": 89.1,
+          "version": "[카카오뱅크]해외송금",
+          "total": 120,
+          "criticalMajor": 59,
+          "doneRate": 88.3,
           "status": [
             {
               "label": "등록",
-              "count": 12
+              "count": 13
             },
             {
               "label": "진행중",
@@ -33479,7 +33666,7 @@
             },
             {
               "label": "Major",
-              "count": 57
+              "count": 58
             },
             {
               "label": "Minor",
@@ -33489,7 +33676,7 @@
           "priority": [
             {
               "label": "Medium",
-              "count": 119
+              "count": 120
             }
           ]
         },
@@ -33497,23 +33684,23 @@
           "version": "[콕뱅크]",
           "total": 110,
           "criticalMajor": 39,
-          "doneRate": 88.2,
+          "doneRate": 90.0,
           "status": [
             {
               "label": "등록",
-              "count": 9
+              "count": 8
             },
             {
               "label": "배정",
-              "count": 4
+              "count": 3
             },
             {
               "label": "QA확인",
-              "count": 74
+              "count": 57
             },
             {
               "label": "종료",
-              "count": 23
+              "count": 42
             }
           ],
           "severity": [
@@ -33688,7 +33875,7 @@
           "[Hanpass][앱개편][기획]",
           "[게이미피케이션][혜택]포인트_2배_이벤트",
           "[교통카드]SDK변경",
-          "[카카오뱅크]해외송금-1차",
+          "[카카오뱅크]해외송금",
           "[콕뱅크]",
           "[포인트] 해외송금 미션 중단",
           "결함 아님 - Done",
@@ -33964,6 +34151,11 @@
               "date": "2026-09-08",
               "registered": 11,
               "fixed": 1
+            },
+            {
+              "date": "2026-09-09",
+              "registered": 11,
+              "fixed": 1
             }
           ]
         },
@@ -34092,6 +34284,11 @@
             },
             {
               "date": "2026-09-08",
+              "registered": 7,
+              "fixed": 2
+            },
+            {
+              "date": "2026-09-09",
               "registered": 7,
               "fixed": 2
             }
@@ -34394,6 +34591,11 @@
               "date": "2026-09-08",
               "registered": 20,
               "fixed": 20
+            },
+            {
+              "date": "2026-09-09",
+              "registered": 20,
+              "fixed": 20
             }
           ]
         },
@@ -34692,6 +34894,11 @@
             },
             {
               "date": "2026-09-08",
+              "registered": 3,
+              "fixed": 3
+            },
+            {
+              "date": "2026-09-09",
               "registered": 3,
               "fixed": 3
             }
@@ -35172,6 +35379,11 @@
             },
             {
               "date": "2026-09-08",
+              "registered": 26,
+              "fixed": 26
+            },
+            {
+              "date": "2026-09-09",
               "registered": 26,
               "fixed": 26
             }
@@ -35742,6 +35954,11 @@
             },
             {
               "date": "2026-09-08",
+              "registered": 34,
+              "fixed": 33
+            },
+            {
+              "date": "2026-09-09",
               "registered": 34,
               "fixed": 33
             }
@@ -36417,6 +36634,11 @@
             },
             {
               "date": "2026-09-08",
+              "registered": 9,
+              "fixed": 9
+            },
+            {
+              "date": "2026-09-09",
               "registered": 9,
               "fixed": 9
             }
@@ -37137,6 +37359,11 @@
             },
             {
               "date": "2026-09-08",
+              "registered": 117,
+              "fixed": 113
+            },
+            {
+              "date": "2026-09-09",
               "registered": 117,
               "fixed": 113
             }
@@ -38007,6 +38234,11 @@
             },
             {
               "date": "2026-09-08",
+              "registered": 82,
+              "fixed": 80
+            },
+            {
+              "date": "2026-09-09",
               "registered": 82,
               "fixed": 80
             }
@@ -39192,6 +39424,11 @@
             },
             {
               "date": "2026-09-08",
+              "registered": 24,
+              "fixed": 19
+            },
+            {
+              "date": "2026-09-09",
               "registered": 24,
               "fixed": 19
             }
@@ -40467,6 +40704,11 @@
             },
             {
               "date": "2026-09-08",
+              "registered": 103,
+              "fixed": 87
+            },
+            {
+              "date": "2026-09-09",
               "registered": 103,
               "fixed": 87
             }
@@ -41857,6 +42099,11 @@
             },
             {
               "date": "2026-09-08",
+              "registered": 68,
+              "fixed": 59
+            },
+            {
+              "date": "2026-09-09",
               "registered": 68,
               "fixed": 59
             }
@@ -43317,6 +43564,11 @@
             },
             {
               "date": "2026-09-08",
+              "registered": 4,
+              "fixed": 3
+            },
+            {
+              "date": "2026-09-09",
               "registered": 4,
               "fixed": 3
             }
@@ -44912,6 +45164,11 @@
             },
             {
               "date": "2026-09-08",
+              "registered": 35,
+              "fixed": 31
+            },
+            {
+              "date": "2026-09-09",
               "registered": 35,
               "fixed": 31
             }
@@ -46537,6 +46794,11 @@
             },
             {
               "date": "2026-09-08",
+              "registered": 4,
+              "fixed": 4
+            },
+            {
+              "date": "2026-09-09",
               "registered": 4,
               "fixed": 4
             }
@@ -48452,6 +48714,11 @@
             },
             {
               "date": "2026-09-08",
+              "registered": 3,
+              "fixed": 3
+            },
+            {
+              "date": "2026-09-09",
               "registered": 3,
               "fixed": 3
             }
@@ -50507,6 +50774,11 @@
             },
             {
               "date": "2026-09-08",
+              "registered": 27,
+              "fixed": 22
+            },
+            {
+              "date": "2026-09-09",
               "registered": 27,
               "fixed": 22
             }
@@ -52739,6 +53011,11 @@
               "date": "2026-09-08",
               "registered": 33,
               "fixed": 30
+            },
+            {
+              "date": "2026-09-09",
+              "registered": 33,
+              "fixed": 30
             }
           ]
         },
@@ -52771,7 +53048,7 @@
               "done": 26,
               "total": 27,
               "rate": 96.3,
-              "previousRate": 77.8
+              "previousRate": 96.3
             },
             {
               "severity": "Minor",
@@ -52781,7 +53058,7 @@
               "done": 15,
               "total": 15,
               "rate": 100.0,
-              "previousRate": 93.3
+              "previousRate": 100.0
             },
             {
               "severity": "합계",
@@ -52791,7 +53068,7 @@
               "done": 46,
               "total": 48,
               "rate": 95.8,
-              "previousRate": 83.3
+              "previousRate": 95.8
             }
           ],
           "daily": [
@@ -52904,6 +53181,11 @@
               "date": "2026-09-08",
               "registered": 48,
               "fixed": 46
+            },
+            {
+              "date": "2026-09-09",
+              "registered": 48,
+              "fixed": 46
             }
           ]
         },
@@ -52936,7 +53218,7 @@
               "done": 62,
               "total": 76,
               "rate": 81.6,
-              "previousRate": 75.0
+              "previousRate": 81.6
             },
             {
               "severity": "Minor",
@@ -52946,7 +53228,7 @@
               "done": 113,
               "total": 137,
               "rate": 82.5,
-              "previousRate": 77.4
+              "previousRate": 82.5
             },
             {
               "severity": "합계",
@@ -52956,7 +53238,7 @@
               "done": 182,
               "total": 221,
               "rate": 82.4,
-              "previousRate": 76.9
+              "previousRate": 82.4
             }
           ],
           "daily": [
@@ -53059,19 +53341,24 @@
               "date": "2026-09-08",
               "registered": 221,
               "fixed": 182
+            },
+            {
+              "date": "2026-09-09",
+              "registered": 221,
+              "fixed": 182
             }
           ]
         },
         {
           "version": "[Hanpass][앱개편][Native]-LiveTest",
-          "total": 45,
-          "open": 24,
+          "total": 44,
+          "open": 23,
           "devDone": 0,
           "qaRegression": 0,
           "done": 21,
-          "scopeTotal": 45,
-          "doneRate": 46.7,
-          "latestSnapshot": "2026-09-08",
+          "scopeTotal": 44,
+          "doneRate": 47.7,
+          "latestSnapshot": "2026-09-09",
           "severityRows": [
             {
               "severity": "Critical",
@@ -53091,7 +53378,7 @@
               "done": 8,
               "total": 22,
               "rate": 36.4,
-              "previousRate": 31.8
+              "previousRate": 36.4
             },
             {
               "severity": "Minor",
@@ -53101,17 +53388,17 @@
               "done": 13,
               "total": 21,
               "rate": 61.9,
-              "previousRate": 35.0
+              "previousRate": 61.9
             },
             {
               "severity": "합계",
-              "open": 24,
+              "open": 23,
               "devDone": 0,
               "qaRegression": 0,
               "done": 21,
-              "total": 45,
-              "rate": 46.7,
-              "previousRate": 32.6
+              "total": 44,
+              "rate": 47.7,
+              "previousRate": 47.7
             }
           ],
           "daily": [
@@ -53207,7 +53494,12 @@
             },
             {
               "date": "2026-09-08",
-              "registered": 45,
+              "registered": 44,
+              "fixed": 21
+            },
+            {
+              "date": "2026-09-09",
+              "registered": 44,
               "fixed": 21
             }
           ]
@@ -53357,6 +53649,11 @@
             },
             {
               "date": "2026-09-08",
+              "registered": 27,
+              "fixed": 1
+            },
+            {
+              "date": "2026-09-09",
               "registered": 27,
               "fixed": 1
             }
@@ -53557,6 +53854,11 @@
             },
             {
               "date": "2026-09-08",
+              "registered": 11,
+              "fixed": 11
+            },
+            {
+              "date": "2026-09-09",
               "registered": 11,
               "fixed": 11
             }
@@ -53939,19 +54241,24 @@
               "date": "2026-09-08",
               "registered": 3,
               "fixed": 3
+            },
+            {
+              "date": "2026-09-09",
+              "registered": 3,
+              "fixed": 3
             }
           ]
         },
         {
-          "version": "[카카오뱅크]해외송금-1차",
-          "total": 119,
-          "open": 13,
+          "version": "[카카오뱅크]해외송금",
+          "total": 120,
+          "open": 14,
           "devDone": 0,
           "qaRegression": 99,
           "done": 7,
-          "scopeTotal": 119,
-          "doneRate": 89.1,
-          "latestSnapshot": "2026-09-08",
+          "scopeTotal": 120,
+          "doneRate": 88.3,
+          "latestSnapshot": "2026-09-09",
           "severityRows": [
             {
               "severity": "Critical",
@@ -53961,17 +54268,17 @@
               "done": 0,
               "total": 1,
               "rate": 100.0,
-              "previousRate": 100.0
+              "previousRate": 0.0
             },
             {
               "severity": "Major",
-              "open": 4,
+              "open": 5,
               "devDone": 0,
               "qaRegression": 50,
               "done": 3,
-              "total": 57,
-              "rate": 93.0,
-              "previousRate": 57.9
+              "total": 58,
+              "rate": 91.4,
+              "previousRate": 0.0
             },
             {
               "severity": "Minor",
@@ -53981,17 +54288,17 @@
               "done": 4,
               "total": 61,
               "rate": 85.2,
-              "previousRate": 66.7
+              "previousRate": 0.0
             },
             {
               "severity": "합계",
-              "open": 13,
+              "open": 14,
               "devDone": 0,
               "qaRegression": 99,
               "done": 7,
-              "total": 119,
-              "rate": 89.1,
-              "previousRate": 62.7
+              "total": 120,
+              "rate": 88.3,
+              "previousRate": 0.0
             }
           ],
           "daily": [
@@ -54153,26 +54460,31 @@
             {
               "date": "2026-09-04",
               "registered": 117,
-              "fixed": 42
+              "fixed": 0
             },
             {
               "date": "2026-09-05",
               "registered": 117,
-              "fixed": 42
+              "fixed": 0
             },
             {
               "date": "2026-09-06",
               "registered": 117,
-              "fixed": 42
+              "fixed": 0
             },
             {
               "date": "2026-09-07",
               "registered": 118,
-              "fixed": 74
+              "fixed": 0
             },
             {
               "date": "2026-09-08",
               "registered": 119,
+              "fixed": 0
+            },
+            {
+              "date": "2026-09-09",
+              "registered": 120,
               "fixed": 106
             }
           ]
@@ -54180,13 +54492,13 @@
         {
           "version": "[콕뱅크]",
           "total": 110,
-          "open": 13,
-          "devDone": 13,
-          "qaRegression": 74,
-          "done": 10,
+          "open": 11,
+          "devDone": 11,
+          "qaRegression": 57,
+          "done": 31,
           "scopeTotal": 110,
-          "doneRate": 88.2,
-          "latestSnapshot": "2026-09-08",
+          "doneRate": 90.0,
+          "latestSnapshot": "2026-09-09",
           "severityRows": [
             {
               "severity": "Critical",
@@ -54196,37 +54508,37 @@
               "done": 1,
               "total": 4,
               "rate": 75.0,
-              "previousRate": 50.0
+              "previousRate": 75.0
             },
             {
               "severity": "Major",
               "open": 3,
-              "devDone": 6,
-              "qaRegression": 23,
-              "done": 3,
+              "devDone": 4,
+              "qaRegression": 19,
+              "done": 9,
               "total": 35,
               "rate": 91.4,
-              "previousRate": 77.1
+              "previousRate": 74.3
             },
             {
               "severity": "Minor",
-              "open": 9,
+              "open": 7,
               "devDone": 5,
-              "qaRegression": 51,
-              "done": 6,
+              "qaRegression": 38,
+              "done": 21,
               "total": 71,
-              "rate": 87.3,
-              "previousRate": 80.3
+              "rate": 90.1,
+              "previousRate": 67.6
             },
             {
               "severity": "합계",
-              "open": 13,
-              "devDone": 13,
-              "qaRegression": 74,
-              "done": 10,
+              "open": 11,
+              "devDone": 11,
+              "qaRegression": 57,
+              "done": 31,
               "total": 110,
-              "rate": 88.2,
-              "previousRate": 78.2
+              "rate": 90.0,
+              "previousRate": 70.0
             }
           ],
           "daily": [
@@ -54273,12 +54585,17 @@
             {
               "date": "2026-09-07",
               "registered": 110,
-              "fixed": 86
+              "fixed": 70
             },
             {
               "date": "2026-09-08",
               "registered": 110,
-              "fixed": 97
+              "fixed": 77
+            },
+            {
+              "date": "2026-09-09",
+              "registered": 110,
+              "fixed": 99
             }
           ]
         },
@@ -54372,6 +54689,11 @@
             },
             {
               "date": "2026-09-08",
+              "registered": 1,
+              "fixed": 1
+            },
+            {
+              "date": "2026-09-09",
               "registered": 1,
               "fixed": 1
             }
@@ -55967,6 +56289,11 @@
             },
             {
               "date": "2026-09-08",
+              "registered": 3,
+              "fixed": 3
+            },
+            {
+              "date": "2026-09-09",
               "registered": 3,
               "fixed": 3
             }
@@ -58199,6 +58526,11 @@
               "date": "2026-09-08",
               "registered": 9,
               "fixed": 7
+            },
+            {
+              "date": "2026-09-09",
+              "registered": 9,
+              "fixed": 7
             }
           ]
         },
@@ -58804,34 +59136,39 @@
               "date": "2026-09-08",
               "registered": 14,
               "fixed": 2
+            },
+            {
+              "date": "2026-09-09",
+              "registered": 14,
+              "fixed": 2
             }
           ]
         }
       ],
-      "defaultProjectVersion": "[Hanpass][앱개편][Native]-LiveTest",
+      "defaultProjectVersion": "[카카오뱅크]해외송금",
       "selectedVersion": "ALL",
       "distributions": {
         "ALL": {
           "status": [
             {
               "label": "등록",
-              "count": 176
+              "count": 174
             },
             {
               "label": "배정",
-              "count": 4
+              "count": 3
             },
             {
               "label": "진행중",
-              "count": 16
+              "count": 17
             },
             {
               "label": "QA확인",
-              "count": 236
+              "count": 219
             },
             {
               "label": "종료",
-              "count": 789
+              "count": 808
             }
           ],
           "severity": [
@@ -58841,7 +59178,7 @@
             },
             {
               "label": "Major",
-              "count": 371
+              "count": 372
             },
             {
               "label": "Minor",
@@ -58849,7 +59186,7 @@
             },
             {
               "label": "미지정",
-              "count": 78
+              "count": 77
             },
             {
               "label": "개선 의견",
@@ -58882,18 +59219,11 @@
       },
       "heatmap": [
         {
-          "date": "2026-08-10",
-          "new": 1,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": 1
-        },
-        {
           "date": "2026-08-11",
           "new": 12,
           "fixed": 0,
           "closed": 0,
-          "deltaNew": 11
+          "deltaNew": 12
         },
         {
           "date": "2026-08-12",
@@ -59059,8 +59389,8 @@
         {
           "date": "2026-09-04",
           "new": 25,
-          "fixed": 62,
-          "closed": 23,
+          "fixed": 20,
+          "closed": 20,
           "deltaNew": 1
         },
         {
@@ -59080,16 +59410,23 @@
         {
           "date": "2026-09-07",
           "new": 8,
-          "fixed": 116,
-          "closed": 13,
+          "fixed": 68,
+          "closed": 11,
           "deltaNew": 8
         },
         {
           "date": "2026-09-08",
-          "new": 3,
-          "fixed": 68,
-          "closed": 37,
-          "deltaNew": -5
+          "new": 2,
+          "fixed": 32,
+          "closed": 32,
+          "deltaNew": -6
+        },
+        {
+          "date": "2026-09-09",
+          "new": 1,
+          "fixed": 128,
+          "closed": 29,
+          "deltaNew": -1
         }
       ],
       "reportBoard": {
@@ -59119,31 +59456,31 @@
       },
       "recent": [
         {
-          "id": "ISSUE-1769",
-          "title": "제목 없음",
+          "id": "ISSUE-1771",
+          "title": "[카카오뱅크][계좌등록][공통] 1원 인증 번호 미일치 팝업 내 ‘확인’ 선택 시 이전 화면으로 이동하는 현상 ",
           "status": "등록 (Registered)",
           "stage": "등록",
-          "severity": "미지정",
+          "severity": "Major",
           "priority": "Medium",
           "assignee": "미지정",
-          "version": "[Hanpass][앱개편][Native]-LiveTest",
-          "versionRaw": "[Hanpass][앱개편][Native]-LiveTest",
+          "version": "[카카오뱅크]해외송금",
+          "versionRaw": "[카카오뱅크]해외송금",
           "domain": "한패스",
           "os": "미지정",
-          "createdAt": "2026-09-08T08:23:00.000Z",
-          "createdDate": "2026-09-08",
+          "createdAt": "2026-09-09T00:40:00.000Z",
+          "createdDate": "2026-09-09",
           "fixedAt": "",
           "fixedDate": "",
           "closedAt": "",
           "closedDate": "",
-          "url": "https://app.notion.com/p/3d573fbd195180789e08c9f98e8df837",
-          "lastEditedAt": "2026-09-08T08:23:00.000Z"
+          "url": "https://app.notion.com/p/1-3d673fbd195180cca88ed2df5c31a6fb",
+          "lastEditedAt": "2026-09-09T01:00:00.000Z"
         },
         {
           "id": "ISSUE-1768",
           "title": "[환율보기][iOS] 환율 국가 리스트 순서 기획서와 상이하게 노출되는 현상 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
+          "status": "처리중 (In Progress)",
+          "stage": "진행중",
           "severity": "Minor",
           "priority": "Medium",
           "assignee": "미지정",
@@ -59158,7 +59495,7 @@
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/iOS-3d573fbd19518022bf91c241221bcc0c",
-          "lastEditedAt": "2026-09-08T05:51:00.000Z"
+          "lastEditedAt": "2026-09-09T00:49:00.000Z"
         },
         {
           "id": "ISSUE-1767",
@@ -59168,8 +59505,8 @@
           "severity": "Minor",
           "priority": "Medium",
           "assignee": "미지정",
-          "version": "[카카오뱅크]해외송금-1차",
-          "versionRaw": "[카카오뱅크]해외송금-1차",
+          "version": "[카카오뱅크]해외송금",
+          "versionRaw": "[카카오뱅크]해외송금",
           "domain": "한패스",
           "os": "미지정",
           "createdAt": "2026-09-08T01:50:00.000Z",
@@ -59179,7 +59516,7 @@
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/PIN-3d573fbd195180e4a549dd1879abd782",
-          "lastEditedAt": "2026-09-08T02:27:00.000Z"
+          "lastEditedAt": "2026-09-09T01:00:00.000Z"
         },
         {
           "id": "ISSUE-1766",
@@ -59294,8 +59631,8 @@
           "severity": "Minor",
           "priority": "Medium",
           "assignee": "미지정",
-          "version": "[카카오뱅크]해외송금-1차",
-          "versionRaw": "[카카오뱅크]해외송금-1차",
+          "version": "[카카오뱅크]해외송금",
+          "versionRaw": "[카카오뱅크]해외송금",
           "domain": "한패스",
           "os": "미지정",
           "createdAt": "2026-09-07T04:14:00.000Z",
@@ -59305,7 +59642,7 @@
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/3d473fbd1951804e98a3e2a9deda8581",
-          "lastEditedAt": "2026-09-07T04:22:00.000Z"
+          "lastEditedAt": "2026-09-09T01:00:00.000Z"
         },
         {
           "id": "ISSUE-1760",
@@ -59385,13 +59722,6 @@
         }
       ],
       "daily": [
-        {
-          "date": "2026-08-10",
-          "new": 0,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": 0
-        },
         {
           "date": "2026-08-11",
           "new": 0,
@@ -59590,6 +59920,13 @@
         },
         {
           "date": "2026-09-08",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-09-09",
           "new": 0,
           "fixed": 0,
           "closed": 0,
@@ -60538,6 +60875,11 @@
               "date": "2026-09-08",
               "registered": 20,
               "fixed": 1
+            },
+            {
+              "date": "2026-09-09",
+              "registered": 20,
+              "fixed": 1
             }
           ]
         },
@@ -60981,6 +61323,11 @@
             },
             {
               "date": "2026-09-08",
+              "registered": 15,
+              "fixed": 15
+            },
+            {
+              "date": "2026-09-09",
               "registered": 15,
               "fixed": 15
             }
@@ -61633,6 +61980,11 @@
               "date": "2026-09-08",
               "registered": 55,
               "fixed": 54
+            },
+            {
+              "date": "2026-09-09",
+              "registered": 55,
+              "fixed": 54
             }
           ]
         },
@@ -61976,6 +62328,11 @@
             },
             {
               "date": "2026-09-08",
+              "registered": 5,
+              "fixed": 5
+            },
+            {
+              "date": "2026-09-09",
               "registered": 5,
               "fixed": 5
             }
@@ -62633,6 +62990,11 @@
               "date": "2026-09-08",
               "registered": 101,
               "fixed": 101
+            },
+            {
+              "date": "2026-09-09",
+              "registered": 101,
+              "fixed": 101
             }
           ]
         },
@@ -63008,6 +63370,11 @@
               "date": "2026-09-08",
               "registered": 2,
               "fixed": 1
+            },
+            {
+              "date": "2026-09-09",
+              "registered": 2,
+              "fixed": 1
             }
           ]
         },
@@ -63106,6 +63473,11 @@
             },
             {
               "date": "2026-09-08",
+              "registered": 1,
+              "fixed": 1
+            },
+            {
+              "date": "2026-09-09",
               "registered": 1,
               "fixed": 1
             }
@@ -63763,6 +64135,11 @@
               "date": "2026-09-08",
               "registered": 5,
               "fixed": 0
+            },
+            {
+              "date": "2026-09-09",
+              "registered": 5,
+              "fixed": 0
             }
           ]
         },
@@ -64418,6 +64795,11 @@
               "date": "2026-09-08",
               "registered": 1,
               "fixed": 0
+            },
+            {
+              "date": "2026-09-09",
+              "registered": 1,
+              "fixed": 0
             }
           ]
         }
@@ -64467,13 +64849,6 @@
         }
       },
       "heatmap": [
-        {
-          "date": "2026-08-10",
-          "new": 0,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": 0
-        },
         {
           "date": "2026-08-11",
           "new": 0,
@@ -64672,6 +65047,13 @@
         },
         {
           "date": "2026-09-08",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-09-09",
           "new": 0,
           "fixed": 0,
           "closed": 0,

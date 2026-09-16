@@ -452,7 +452,7 @@
     </div>
   </div>
   <script id="dashboard-data" type="application/json">{
-  "generatedAt": "2026-09-16T01:33:33+00:00",
+  "generatedAt": "2026-09-16T05:44:23+00:00",
   "days": 30,
   "domainOrder": [
     "한패스",
@@ -461,19 +461,19 @@
   "domains": {
     "ALL": {
       "summary": {
-        "total": 1473,
+        "total": 1479,
         "new": 166,
-        "inProgress": 13,
+        "inProgress": 12,
         "fixed": 0,
-        "closed": 1122,
-        "todayNew": 1,
-        "newDelta": -1
+        "closed": 1131,
+        "todayNew": 7,
+        "newDelta": 5
       },
       "funnel": [
         {
           "stage": "등록",
           "count": 166,
-          "rate": 11.3,
+          "rate": 11.2,
           "width": 18
         },
         {
@@ -490,8 +490,8 @@
         },
         {
           "stage": "진행중",
-          "count": 13,
-          "rate": 0.9,
+          "count": 12,
+          "rate": 0.8,
           "width": 18
         },
         {
@@ -502,14 +502,14 @@
         },
         {
           "stage": "QA확인",
-          "count": 172,
-          "rate": 11.7,
+          "count": 170,
+          "rate": 11.5,
           "width": 18
         },
         {
           "stage": "종료",
-          "count": 1122,
-          "rate": 76.2,
+          "count": 1131,
+          "rate": 76.5,
           "width": 100
         }
       ],
@@ -713,16 +713,16 @@
         {
           "date": "2026-09-15",
           "new": 2,
-          "fixed": 12,
-          "closed": 11,
+          "fixed": 11,
+          "closed": 10,
           "deltaNew": -13
         },
         {
           "date": "2026-09-16",
-          "new": 1,
-          "fixed": 2,
-          "closed": 2,
-          "deltaNew": -1
+          "new": 7,
+          "fixed": 12,
+          "closed": 12,
+          "deltaNew": 5
         }
       ],
       "versions": [
@@ -1568,13 +1568,13 @@
         },
         {
           "version": "[G.H][교통카드]SDK변경",
-          "total": 2,
-          "criticalMajor": 2,
-          "doneRate": 50.0,
+          "total": 4,
+          "criticalMajor": 4,
+          "doneRate": 25.0,
           "status": [
             {
               "label": "등록",
-              "count": 1
+              "count": 3
             },
             {
               "label": "종료",
@@ -1584,13 +1584,17 @@
           "severity": [
             {
               "label": "Critical",
-              "count": 2
+              "count": 3
+            },
+            {
+              "label": "Major",
+              "count": 1
             }
           ],
           "priority": [
             {
               "label": "Medium",
-              "count": 2
+              "count": 4
             }
           ]
         },
@@ -1690,19 +1694,19 @@
           "version": "[Hanpass][앱개편][Native]-Dev",
           "total": 221,
           "criticalMajor": 84,
-          "doneRate": 91.4,
+          "doneRate": 92.3,
           "status": [
             {
               "label": "등록",
-              "count": 12
+              "count": 11
             },
             {
               "label": "진행중",
-              "count": 7
+              "count": 6
             },
             {
               "label": "종료",
-              "count": 202
+              "count": 204
             }
           ],
           "severity": [
@@ -1728,9 +1732,9 @@
         },
         {
           "version": "[Hanpass][앱개편][Native]-LiveTest",
-          "total": 67,
+          "total": 69,
           "criticalMajor": 28,
-          "doneRate": 70.1,
+          "doneRate": 72.5,
           "status": [
             {
               "label": "등록",
@@ -1738,7 +1742,7 @@
             },
             {
               "label": "진행중",
-              "count": 5
+              "count": 4
             },
             {
               "label": "QA확인",
@@ -1746,7 +1750,7 @@
             },
             {
               "label": "종료",
-              "count": 46
+              "count": 49
             }
           ],
           "severity": [
@@ -1760,7 +1764,11 @@
             },
             {
               "label": "Minor",
-              "count": 38
+              "count": 39
+            },
+            {
+              "label": "미지정",
+              "count": 1
             },
             {
               "label": "개선 의견",
@@ -1770,7 +1778,7 @@
           "priority": [
             {
               "label": "Medium",
-              "count": 67
+              "count": 69
             }
           ]
         },
@@ -1840,37 +1848,25 @@
         },
         {
           "version": "[교통카드]SDK변경",
-          "total": 4,
+          "total": 3,
           "criticalMajor": 3,
-          "doneRate": 75.0,
+          "doneRate": 100.0,
           "status": [
             {
-              "label": "등록",
-              "count": 1
-            },
-            {
-              "label": "QA확인",
-              "count": 2
-            },
-            {
               "label": "종료",
-              "count": 1
+              "count": 3
             }
           ],
           "severity": [
             {
               "label": "Critical",
               "count": 3
-            },
-            {
-              "label": "미지정",
-              "count": 1
             }
           ],
           "priority": [
             {
               "label": "Medium",
-              "count": 3
+              "count": 2
             },
             {
               "label": "긴급",
@@ -1920,13 +1916,17 @@
         },
         {
           "version": "[콕뱅크]",
-          "total": 127,
-          "criticalMajor": 53,
-          "doneRate": 97.6,
+          "total": 130,
+          "criticalMajor": 56,
+          "doneRate": 96.9,
           "status": [
             {
               "label": "등록",
               "count": 3
+            },
+            {
+              "label": "진행중",
+              "count": 1
             },
             {
               "label": "QA확인",
@@ -1934,7 +1934,7 @@
             },
             {
               "label": "종료",
-              "count": 123
+              "count": 125
             }
           ],
           "severity": [
@@ -1944,7 +1944,7 @@
             },
             {
               "label": "Major",
-              "count": 47
+              "count": 50
             },
             {
               "label": "Minor",
@@ -1954,7 +1954,7 @@
           "priority": [
             {
               "label": "Medium",
-              "count": 126
+              "count": 129
             },
             {
               "label": "Low",
@@ -24940,33 +24940,33 @@
         },
         {
           "version": "[G.H][교통카드]SDK변경",
-          "total": 2,
-          "open": 1,
+          "total": 4,
+          "open": 3,
           "devDone": 0,
           "qaRegression": 0,
           "done": 1,
-          "scopeTotal": 2,
-          "doneRate": 50.0,
+          "scopeTotal": 4,
+          "doneRate": 25.0,
           "latestSnapshot": "2026-09-16",
           "severityRows": [
             {
               "severity": "Critical",
-              "open": 1,
+              "open": 2,
               "devDone": 0,
               "qaRegression": 0,
               "done": 1,
-              "total": 2,
-              "rate": 50.0,
+              "total": 3,
+              "rate": 33.3,
               "previousRate": 0.0
             },
             {
               "severity": "Major",
-              "open": 0,
+              "open": 1,
               "devDone": 0,
               "qaRegression": 0,
               "done": 0,
-              "total": 0,
-              "rate": 0,
+              "total": 1,
+              "rate": 0.0,
               "previousRate": 0
             },
             {
@@ -24981,12 +24981,12 @@
             },
             {
               "severity": "합계",
-              "open": 1,
+              "open": 3,
               "devDone": 0,
               "qaRegression": 0,
               "done": 1,
-              "total": 2,
-              "rate": 50.0,
+              "total": 4,
+              "rate": 25.0,
               "previousRate": 0.0
             }
           ],
@@ -25348,7 +25348,7 @@
             },
             {
               "date": "2026-09-16",
-              "registered": 2,
+              "registered": 4,
               "fixed": 1
             }
           ]
@@ -26396,13 +26396,13 @@
         {
           "version": "[Hanpass][앱개편][Native]-Dev",
           "total": 221,
-          "open": 19,
+          "open": 17,
           "devDone": 0,
           "qaRegression": 0,
-          "done": 202,
+          "done": 204,
           "scopeTotal": 221,
-          "doneRate": 91.4,
-          "latestSnapshot": "2026-09-15",
+          "doneRate": 92.3,
+          "latestSnapshot": "2026-09-16",
           "severityRows": [
             {
               "severity": "Critical",
@@ -26416,32 +26416,32 @@
             },
             {
               "severity": "Major",
-              "open": 5,
+              "open": 4,
               "devDone": 0,
               "qaRegression": 0,
-              "done": 71,
+              "done": 72,
               "total": 76,
-              "rate": 93.4,
+              "rate": 94.7,
               "previousRate": 93.4
             },
             {
               "severity": "Minor",
-              "open": 14,
+              "open": 13,
               "devDone": 0,
               "qaRegression": 0,
-              "done": 123,
+              "done": 124,
               "total": 137,
-              "rate": 89.8,
+              "rate": 90.5,
               "previousRate": 89.8
             },
             {
               "severity": "합계",
-              "open": 19,
+              "open": 17,
               "devDone": 0,
               "qaRegression": 0,
-              "done": 202,
+              "done": 204,
               "total": 221,
-              "rate": 91.4,
+              "rate": 92.3,
               "previousRate": 91.4
             }
           ],
@@ -26584,20 +26584,20 @@
             {
               "date": "2026-09-16",
               "registered": 221,
-              "fixed": 202
+              "fixed": 204
             }
           ]
         },
         {
           "version": "[Hanpass][앱개편][Native]-LiveTest",
-          "total": 67,
-          "open": 20,
-          "devDone": 2,
+          "total": 69,
+          "open": 19,
+          "devDone": 1,
           "qaRegression": 1,
-          "done": 44,
-          "scopeTotal": 67,
-          "doneRate": 70.1,
-          "latestSnapshot": "2026-09-15",
+          "done": 48,
+          "scopeTotal": 69,
+          "doneRate": 72.5,
+          "latestSnapshot": "2026-09-16",
           "severityRows": [
             {
               "severity": "Critical",
@@ -26611,33 +26611,33 @@
             },
             {
               "severity": "Major",
-              "open": 7,
+              "open": 5,
               "devDone": 1,
               "qaRegression": 1,
-              "done": 18,
+              "done": 20,
               "total": 27,
-              "rate": 74.1,
+              "rate": 81.5,
               "previousRate": 74.1
             },
             {
               "severity": "Minor",
               "open": 11,
-              "devDone": 1,
+              "devDone": 0,
               "qaRegression": 0,
-              "done": 26,
-              "total": 38,
-              "rate": 71.1,
-              "previousRate": 71.1
+              "done": 28,
+              "total": 39,
+              "rate": 71.8,
+              "previousRate": 68.4
             },
             {
               "severity": "합계",
-              "open": 20,
-              "devDone": 2,
+              "open": 19,
+              "devDone": 1,
               "qaRegression": 1,
-              "done": 44,
-              "total": 67,
-              "rate": 70.1,
-              "previousRate": 70.1
+              "done": 48,
+              "total": 69,
+              "rate": 72.5,
+              "previousRate": 68.7
             }
           ],
           "daily": [
@@ -26769,12 +26769,12 @@
             {
               "date": "2026-09-15",
               "registered": 67,
-              "fixed": 47
+              "fixed": 46
             },
             {
               "date": "2026-09-16",
-              "registered": 67,
-              "fixed": 47
+              "registered": 69,
+              "fixed": 50
             }
           ]
         },
@@ -27210,24 +27210,24 @@
         },
         {
           "version": "[교통카드]SDK변경",
-          "total": 4,
-          "open": 1,
+          "total": 3,
+          "open": 0,
           "devDone": 0,
-          "qaRegression": 2,
-          "done": 1,
-          "scopeTotal": 4,
-          "doneRate": 75.0,
+          "qaRegression": 0,
+          "done": 3,
+          "scopeTotal": 3,
+          "doneRate": 100.0,
           "latestSnapshot": "2026-09-16",
           "severityRows": [
             {
               "severity": "Critical",
               "open": 0,
               "devDone": 0,
-              "qaRegression": 2,
-              "done": 1,
+              "qaRegression": 0,
+              "done": 3,
               "total": 3,
               "rate": 100.0,
-              "previousRate": 66.7
+              "previousRate": 0.0
             },
             {
               "severity": "Major",
@@ -27251,13 +27251,13 @@
             },
             {
               "severity": "합계",
-              "open": 1,
+              "open": 0,
               "devDone": 0,
-              "qaRegression": 2,
-              "done": 1,
-              "total": 4,
-              "rate": 75.0,
-              "previousRate": 66.7
+              "qaRegression": 0,
+              "done": 3,
+              "total": 3,
+              "rate": 100.0,
+              "previousRate": 0.0
             }
           ],
           "daily": [
@@ -27279,351 +27279,351 @@
             {
               "date": "2026-07-09",
               "registered": 3,
-              "fixed": 1
+              "fixed": 0
             },
             {
               "date": "2026-07-10",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-07-11",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-07-12",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-07-13",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-07-14",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-07-15",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-07-16",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-07-17",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-07-18",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-07-19",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-07-20",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-07-21",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-07-22",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-07-23",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-07-24",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-07-25",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-07-26",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-07-27",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-07-28",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-07-29",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-07-30",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-07-31",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-08-01",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-08-02",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-08-03",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-08-04",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-08-05",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-08-06",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-08-07",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-08-08",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-08-09",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-08-10",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-08-11",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-08-12",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-08-13",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-08-14",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-08-15",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-08-16",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-08-17",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-08-18",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-08-19",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-08-20",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-08-21",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-08-22",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-08-23",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-08-24",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-08-25",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-08-26",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-08-27",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-08-28",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-08-29",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-08-30",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-08-31",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-09-01",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-09-02",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-09-03",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-09-04",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-09-05",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-09-06",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-09-07",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-09-08",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-09-09",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-09-10",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-09-11",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-09-12",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-09-13",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-09-14",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-09-15",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-09-16",
-              "registered": 4,
+              "registered": 3,
               "fixed": 3
             }
           ]
@@ -27905,14 +27905,14 @@
         },
         {
           "version": "[콕뱅크]",
-          "total": 127,
-          "open": 3,
+          "total": 130,
+          "open": 4,
           "devDone": 0,
           "qaRegression": 1,
-          "done": 123,
-          "scopeTotal": 127,
-          "doneRate": 97.6,
-          "latestSnapshot": "2026-09-15",
+          "done": 125,
+          "scopeTotal": 130,
+          "doneRate": 96.9,
+          "latestSnapshot": "2026-09-16",
           "severityRows": [
             {
               "severity": "Critical",
@@ -27926,12 +27926,12 @@
             },
             {
               "severity": "Major",
-              "open": 2,
+              "open": 3,
               "devDone": 0,
               "qaRegression": 1,
-              "done": 44,
-              "total": 47,
-              "rate": 95.7,
+              "done": 46,
+              "total": 50,
+              "rate": 94.0,
               "previousRate": 95.7
             },
             {
@@ -27946,12 +27946,12 @@
             },
             {
               "severity": "합계",
-              "open": 3,
+              "open": 4,
               "devDone": 0,
               "qaRegression": 1,
-              "done": 123,
-              "total": 127,
-              "rate": 97.6,
+              "done": 125,
+              "total": 130,
+              "rate": 96.9,
               "previousRate": 97.6
             }
           ],
@@ -28043,8 +28043,8 @@
             },
             {
               "date": "2026-09-16",
-              "registered": 127,
-              "fixed": 124
+              "registered": 130,
+              "fixed": 126
             }
           ]
         },
@@ -33429,7 +33429,7 @@
           ]
         }
       ],
-      "defaultProjectVersion": "[교통카드]SDK변경",
+      "defaultProjectVersion": "[Hanpass][앱개편][Native]-LiveTest",
       "selectedVersion": "ALL",
       "distributions": {
         "ALL": {
@@ -33440,29 +33440,29 @@
             },
             {
               "label": "진행중",
-              "count": 13
+              "count": 12
             },
             {
               "label": "QA확인",
-              "count": 172
+              "count": 170
             },
             {
               "label": "종료",
-              "count": 1122
+              "count": 1131
             }
           ],
           "severity": [
             {
               "label": "Critical",
-              "count": 59
+              "count": 60
             },
             {
               "label": "Major",
-              "count": 457
+              "count": 461
             },
             {
               "label": "Minor",
-              "count": 855
+              "count": 856
             },
             {
               "label": "미지정",
@@ -33480,7 +33480,7 @@
             },
             {
               "label": "Medium",
-              "count": 1427
+              "count": 1433
             },
             {
               "label": "Low",
@@ -33697,16 +33697,16 @@
         {
           "date": "2026-09-15",
           "new": 2,
-          "fixed": 12,
-          "closed": 11,
+          "fixed": 11,
+          "closed": 10,
           "deltaNew": -13
         },
         {
           "date": "2026-09-16",
-          "new": 1,
-          "fixed": 2,
-          "closed": 2,
-          "deltaNew": -1
+          "new": 7,
+          "fixed": 12,
+          "closed": 12,
+          "deltaNew": 5
         }
       ],
       "reportBoard": {
@@ -33750,16 +33750,142 @@
       },
       "recent": [
         {
-          "id": "ISSUE-1822",
-          "title": "[결함] 타이틀을 입력해주세요. ",
+          "id": "ISSUE-1828",
+          "title": "[헬프데스크][iOS] ‘언어 선택’ 바텀시트 내 스크롤 불가 현상 ",
           "status": "등록 (Registered)",
           "stage": "등록",
           "severity": "미지정",
           "priority": "Medium",
           "assignee": "미지정",
-          "version": "[교통카드]SDK변경",
-          "versionRaw": "[교통카드]SDK변경",
+          "version": "[Hanpass][앱개편][Native]-LiveTest",
+          "versionRaw": "[Hanpass][앱개편][Native]-LiveTest",
           "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-09-16T05:35:00.000Z",
+          "createdDate": "2026-09-16",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/iOS-3dd73fbd19518050b957f6b1e7f8111a",
+          "lastEditedAt": "2026-09-16T05:44:00.000Z"
+        },
+        {
+          "id": "ISSUE-1827",
+          "title": "[국내송금][공통]앱 언어 네팔어 설정 시 캄보디아어 노출 되는 현상 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[Hanpass][앱개편][Native]-LiveTest",
+          "versionRaw": "[Hanpass][앱개편][Native]-LiveTest",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-09-16T05:32:00.000Z",
+          "createdDate": "2026-09-16",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/3dd73fbd1951804e93d2d4c1952d68f2",
+          "lastEditedAt": "2026-09-16T05:42:00.000Z"
+        },
+        {
+          "id": "ISSUE-1826",
+          "title": "[콕뱅크][회원가입] 약관 상세 진입 후 뒤로가기 시 화면 이탈 불가 현상 ",
+          "status": "완료 (Done)",
+          "stage": "종료",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[콕뱅크]",
+          "versionRaw": "[콕뱅크]",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-09-16T02:07:00.000Z",
+          "createdDate": "2026-09-16",
+          "fixedAt": "2026-09-16T05:25:00.000Z",
+          "fixedDate": "2026-09-16",
+          "closedAt": "2026-09-16T05:25:00.000Z",
+          "closedDate": "2026-09-16",
+          "url": "https://app.notion.com/p/3dd73fbd195180a18abcc7347745c1d3",
+          "lastEditedAt": "2026-09-16T05:25:00.000Z"
+        },
+        {
+          "id": "ISSUE-1825",
+          "title": "[SDK변경][Go.Hanpass][iOS] PIN입력 화면 전환될 때 상단바 노출 시 앱 크래시 발생 현상 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Critical",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[G.H][교통카드]SDK변경",
+          "versionRaw": "[교통카드]SDK변경",
+          "domain": "GoHanpass",
+          "os": "미지정",
+          "createdAt": "2026-09-16T01:46:00.000Z",
+          "createdDate": "2026-09-16",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/SDK-Go-Hanpass-iOS-PIN-3dd73fbd19518088849ec2990bf004c5",
+          "lastEditedAt": "2026-09-16T02:22:00.000Z"
+        },
+        {
+          "id": "ISSUE-1824",
+          "title": "[콕뱅크][회원가입] ‘오픈뱅킹’ 약관 상세 내용 미노출 현상 ",
+          "status": "완료 (Done)",
+          "stage": "종료",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[콕뱅크]",
+          "versionRaw": "[콕뱅크]",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-09-16T01:40:00.000Z",
+          "createdDate": "2026-09-16",
+          "fixedAt": "2026-09-16T05:33:00.000Z",
+          "fixedDate": "2026-09-16",
+          "closedAt": "2026-09-16T05:33:00.000Z",
+          "closedDate": "2026-09-16",
+          "url": "https://app.notion.com/p/3dd73fbd195180ae97c2da0a12056e34",
+          "lastEditedAt": "2026-09-16T05:33:00.000Z"
+        },
+        {
+          "id": "ISSUE-1823",
+          "title": "[콕뱅크][회원가입] ‘카드 서비스’ 약관 상세 내용 미노출 현상 ",
+          "status": "처리중 (In Progress)",
+          "stage": "진행중",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[콕뱅크]",
+          "versionRaw": "[콕뱅크]",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-09-16T01:34:00.000Z",
+          "createdDate": "2026-09-16",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/3dd73fbd1951803a8e55d6305577af17",
+          "lastEditedAt": "2026-09-16T01:58:00.000Z"
+        },
+        {
+          "id": "ISSUE-1822",
+          "title": "[SDK변경][Go.Hanpass][iOS] PIN 입력 화면 내 뒤로가기 시 금액 필드 수정 불가 현상 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[G.H][교통카드]SDK변경",
+          "versionRaw": "[교통카드]SDK변경",
+          "domain": "GoHanpass",
           "os": "미지정",
           "createdAt": "2026-09-16T01:22:00.000Z",
           "createdDate": "2026-09-16",
@@ -33767,8 +33893,8 @@
           "fixedDate": "",
           "closedAt": "",
           "closedDate": "",
-          "url": "https://app.notion.com/p/3dd73fbd1951809a9405cd6e608b6229",
-          "lastEditedAt": "2026-09-16T01:31:00.000Z"
+          "url": "https://app.notion.com/p/SDK-Go-Hanpass-iOS-PIN-3dd73fbd1951809a9405cd6e608b6229",
+          "lastEditedAt": "2026-09-16T01:40:00.000Z"
         },
         {
           "id": "ISSUE-1821",
@@ -33832,150 +33958,24 @@
           "closedDate": "",
           "url": "https://app.notion.com/p/OS-3db73fbd195180479eadec00e43fccfb",
           "lastEditedAt": "2026-09-14T07:04:00.000Z"
-        },
-        {
-          "id": "ISSUE-1818",
-          "title": "[홈][특정단말-AOS] 앱 언어 미얀마어로 변경 시 금융/생활 토글 크기 조절 필요 ",
-          "status": "처리중 (In Progress)",
-          "stage": "진행중",
-          "severity": "개선 의견",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[Hanpass][앱개편][Native]-LiveTest",
-          "versionRaw": "[Hanpass][앱개편][Native]-LiveTest",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-09-14T06:51:00.000Z",
-          "createdDate": "2026-09-14",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/AOS-3db73fbd1951809b84a2f24c7c958d5b",
-          "lastEditedAt": "2026-09-15T14:02:00.000Z"
-        },
-        {
-          "id": "ISSUE-1817",
-          "title": "[비로그인홈][AOS] 기본 금액 미노출 되는 현상 ",
-          "status": "처리중 (In Progress)",
-          "stage": "진행중",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[Hanpass][앱개편][Native]-LiveTest",
-          "versionRaw": "[Hanpass][앱개편][Native]-LiveTest",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-09-14T06:35:00.000Z",
-          "createdDate": "2026-09-14",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/AOS-3db73fbd195180cd994ed7be51e0418f",
-          "lastEditedAt": "2026-09-15T08:10:00.000Z"
-        },
-        {
-          "id": "ISSUE-1816",
-          "title": "[환율][iOS] 지정된 국가별 Default 금액 미노출 되는 현상 ",
-          "status": "완료 (Done)",
-          "stage": "종료",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[Hanpass][앱개편][Native]-LiveTest",
-          "versionRaw": "[Hanpass][앱개편][Native]-LiveTest",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-09-14T06:21:00.000Z",
-          "createdDate": "2026-09-14",
-          "fixedAt": "2026-09-15T08:18:00.000Z",
-          "fixedDate": "2026-09-15",
-          "closedAt": "2026-09-15T08:18:00.000Z",
-          "closedDate": "2026-09-15",
-          "url": "https://app.notion.com/p/iOS-Default-3db73fbd19518083ac09df9f48dfd8af",
-          "lastEditedAt": "2026-09-15T08:18:00.000Z"
-        },
-        {
-          "id": "ISSUE-1815",
-          "title": "[환율][공통] 국가/통화/받는방법 선택 영역 기획서와 상이",
-          "status": "개발 완료 (Dev Done)",
-          "stage": "종료",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[Hanpass][앱개편][Native]-LiveTest",
-          "versionRaw": "[Hanpass][앱개편][Native]-LiveTest",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-09-14T05:52:00.000Z",
-          "createdDate": "2026-09-14",
-          "fixedAt": "2026-09-15T06:49:00.000Z",
-          "fixedDate": "2026-09-15",
-          "closedAt": "2026-09-15T06:49:00.000Z",
-          "closedDate": "2026-09-15",
-          "url": "https://app.notion.com/p/3db73fbd1951801eaa53eb7b0fface14",
-          "lastEditedAt": "2026-09-15T06:49:00.000Z"
-        },
-        {
-          "id": "ISSUE-1814",
-          "title": "[홈][생활탭][AOS] 이벤트 전체보기 선택 시 ‘지난 이벤트’ 화면으로 이동하는 현상 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[Hanpass][앱개편][Native]-LiveTest",
-          "versionRaw": "[Hanpass][앱개편][Native]-LiveTest",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-09-14T05:16:00.000Z",
-          "createdDate": "2026-09-14",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/AOS-3db73fbd19518018a42ad578dac11d4a",
-          "lastEditedAt": "2026-09-15T01:21:00.000Z"
-        },
-        {
-          "id": "ISSUE-1813",
-          "title": "[환율][iOS] 총 출금액 영역 내 ‘수수료 포함’ 문구 미노출 되는 현상 ",
-          "status": "완료 (Done)",
-          "stage": "종료",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[Hanpass][앱개편][Native]-LiveTest",
-          "versionRaw": "[Hanpass][앱개편][Native]-LiveTest",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-09-14T04:47:00.000Z",
-          "createdDate": "2026-09-14",
-          "fixedAt": "2026-09-15T07:59:00.000Z",
-          "fixedDate": "2026-09-15",
-          "closedAt": "2026-09-15T07:59:00.000Z",
-          "closedDate": "2026-09-15",
-          "url": "https://app.notion.com/p/iOS-3db73fbd1951806280d4f038afb1c644",
-          "lastEditedAt": "2026-09-15T07:59:00.000Z"
         }
       ]
     },
     "한패스": {
       "summary": {
-        "total": 1266,
-        "new": 139,
-        "inProgress": 13,
+        "total": 1270,
+        "new": 137,
+        "inProgress": 12,
         "fixed": 0,
-        "closed": 942,
-        "todayNew": 1,
-        "newDelta": -1
+        "closed": 951,
+        "todayNew": 5,
+        "newDelta": 3
       },
       "funnel": [
         {
           "stage": "등록",
-          "count": 139,
-          "rate": 11.0,
+          "count": 137,
+          "rate": 10.8,
           "width": 18
         },
         {
@@ -33992,8 +33992,8 @@
         },
         {
           "stage": "진행중",
-          "count": 13,
-          "rate": 1.0,
+          "count": 12,
+          "rate": 0.9,
           "width": 18
         },
         {
@@ -34004,14 +34004,14 @@
         },
         {
           "stage": "QA확인",
-          "count": 172,
-          "rate": 13.6,
+          "count": 170,
+          "rate": 13.4,
           "width": 18
         },
         {
           "stage": "종료",
-          "count": 942,
-          "rate": 74.4,
+          "count": 951,
+          "rate": 74.9,
           "width": 100
         }
       ],
@@ -34215,16 +34215,16 @@
         {
           "date": "2026-09-15",
           "new": 2,
-          "fixed": 12,
-          "closed": 11,
+          "fixed": 11,
+          "closed": 10,
           "deltaNew": -11
         },
         {
           "date": "2026-09-16",
-          "new": 1,
-          "fixed": 1,
-          "closed": 1,
-          "deltaNew": -1
+          "new": 5,
+          "fixed": 11,
+          "closed": 11,
+          "deltaNew": 3
         }
       ],
       "versions": [
@@ -34928,19 +34928,19 @@
           "version": "[Hanpass][앱개편][Native]-Dev",
           "total": 221,
           "criticalMajor": 84,
-          "doneRate": 91.4,
+          "doneRate": 92.3,
           "status": [
             {
               "label": "등록",
-              "count": 12
+              "count": 11
             },
             {
               "label": "진행중",
-              "count": 7
+              "count": 6
             },
             {
               "label": "종료",
-              "count": 202
+              "count": 204
             }
           ],
           "severity": [
@@ -34966,9 +34966,9 @@
         },
         {
           "version": "[Hanpass][앱개편][Native]-LiveTest",
-          "total": 67,
+          "total": 69,
           "criticalMajor": 28,
-          "doneRate": 70.1,
+          "doneRate": 72.5,
           "status": [
             {
               "label": "등록",
@@ -34976,7 +34976,7 @@
             },
             {
               "label": "진행중",
-              "count": 5
+              "count": 4
             },
             {
               "label": "QA확인",
@@ -34984,7 +34984,7 @@
             },
             {
               "label": "종료",
-              "count": 46
+              "count": 49
             }
           ],
           "severity": [
@@ -34998,7 +34998,11 @@
             },
             {
               "label": "Minor",
-              "count": 38
+              "count": 39
+            },
+            {
+              "label": "미지정",
+              "count": 1
             },
             {
               "label": "개선 의견",
@@ -35008,7 +35012,7 @@
           "priority": [
             {
               "label": "Medium",
-              "count": 67
+              "count": 69
             }
           ]
         },
@@ -35078,37 +35082,25 @@
         },
         {
           "version": "[교통카드]SDK변경",
-          "total": 4,
+          "total": 3,
           "criticalMajor": 3,
-          "doneRate": 75.0,
+          "doneRate": 100.0,
           "status": [
             {
-              "label": "등록",
-              "count": 1
-            },
-            {
-              "label": "QA확인",
-              "count": 2
-            },
-            {
               "label": "종료",
-              "count": 1
+              "count": 3
             }
           ],
           "severity": [
             {
               "label": "Critical",
               "count": 3
-            },
-            {
-              "label": "미지정",
-              "count": 1
             }
           ],
           "priority": [
             {
               "label": "Medium",
-              "count": 3
+              "count": 2
             },
             {
               "label": "긴급",
@@ -35158,13 +35150,17 @@
         },
         {
           "version": "[콕뱅크]",
-          "total": 127,
-          "criticalMajor": 53,
-          "doneRate": 97.6,
+          "total": 130,
+          "criticalMajor": 56,
+          "doneRate": 96.9,
           "status": [
             {
               "label": "등록",
               "count": 3
+            },
+            {
+              "label": "진행중",
+              "count": 1
             },
             {
               "label": "QA확인",
@@ -35172,7 +35168,7 @@
             },
             {
               "label": "종료",
-              "count": 123
+              "count": 125
             }
           ],
           "severity": [
@@ -35182,7 +35178,7 @@
             },
             {
               "label": "Major",
-              "count": 47
+              "count": 50
             },
             {
               "label": "Minor",
@@ -35192,7 +35188,7 @@
           "priority": [
             {
               "label": "Medium",
-              "count": 126
+              "count": 129
             },
             {
               "label": "Low",
@@ -55329,13 +55325,13 @@
         {
           "version": "[Hanpass][앱개편][Native]-Dev",
           "total": 221,
-          "open": 19,
+          "open": 17,
           "devDone": 0,
           "qaRegression": 0,
-          "done": 202,
+          "done": 204,
           "scopeTotal": 221,
-          "doneRate": 91.4,
-          "latestSnapshot": "2026-09-15",
+          "doneRate": 92.3,
+          "latestSnapshot": "2026-09-16",
           "severityRows": [
             {
               "severity": "Critical",
@@ -55349,32 +55345,32 @@
             },
             {
               "severity": "Major",
-              "open": 5,
+              "open": 4,
               "devDone": 0,
               "qaRegression": 0,
-              "done": 71,
+              "done": 72,
               "total": 76,
-              "rate": 93.4,
+              "rate": 94.7,
               "previousRate": 93.4
             },
             {
               "severity": "Minor",
-              "open": 14,
+              "open": 13,
               "devDone": 0,
               "qaRegression": 0,
-              "done": 123,
+              "done": 124,
               "total": 137,
-              "rate": 89.8,
+              "rate": 90.5,
               "previousRate": 89.8
             },
             {
               "severity": "합계",
-              "open": 19,
+              "open": 17,
               "devDone": 0,
               "qaRegression": 0,
-              "done": 202,
+              "done": 204,
               "total": 221,
-              "rate": 91.4,
+              "rate": 92.3,
               "previousRate": 91.4
             }
           ],
@@ -55517,20 +55513,20 @@
             {
               "date": "2026-09-16",
               "registered": 221,
-              "fixed": 202
+              "fixed": 204
             }
           ]
         },
         {
           "version": "[Hanpass][앱개편][Native]-LiveTest",
-          "total": 67,
-          "open": 20,
-          "devDone": 2,
+          "total": 69,
+          "open": 19,
+          "devDone": 1,
           "qaRegression": 1,
-          "done": 44,
-          "scopeTotal": 67,
-          "doneRate": 70.1,
-          "latestSnapshot": "2026-09-15",
+          "done": 48,
+          "scopeTotal": 69,
+          "doneRate": 72.5,
+          "latestSnapshot": "2026-09-16",
           "severityRows": [
             {
               "severity": "Critical",
@@ -55544,33 +55540,33 @@
             },
             {
               "severity": "Major",
-              "open": 7,
+              "open": 5,
               "devDone": 1,
               "qaRegression": 1,
-              "done": 18,
+              "done": 20,
               "total": 27,
-              "rate": 74.1,
+              "rate": 81.5,
               "previousRate": 74.1
             },
             {
               "severity": "Minor",
               "open": 11,
-              "devDone": 1,
+              "devDone": 0,
               "qaRegression": 0,
-              "done": 26,
-              "total": 38,
-              "rate": 71.1,
-              "previousRate": 71.1
+              "done": 28,
+              "total": 39,
+              "rate": 71.8,
+              "previousRate": 68.4
             },
             {
               "severity": "합계",
-              "open": 20,
-              "devDone": 2,
+              "open": 19,
+              "devDone": 1,
               "qaRegression": 1,
-              "done": 44,
-              "total": 67,
-              "rate": 70.1,
-              "previousRate": 70.1
+              "done": 48,
+              "total": 69,
+              "rate": 72.5,
+              "previousRate": 68.7
             }
           ],
           "daily": [
@@ -55702,12 +55698,12 @@
             {
               "date": "2026-09-15",
               "registered": 67,
-              "fixed": 47
+              "fixed": 46
             },
             {
               "date": "2026-09-16",
-              "registered": 67,
-              "fixed": 47
+              "registered": 69,
+              "fixed": 50
             }
           ]
         },
@@ -56143,24 +56139,24 @@
         },
         {
           "version": "[교통카드]SDK변경",
-          "total": 4,
-          "open": 1,
+          "total": 3,
+          "open": 0,
           "devDone": 0,
-          "qaRegression": 2,
-          "done": 1,
-          "scopeTotal": 4,
-          "doneRate": 75.0,
+          "qaRegression": 0,
+          "done": 3,
+          "scopeTotal": 3,
+          "doneRate": 100.0,
           "latestSnapshot": "2026-09-16",
           "severityRows": [
             {
               "severity": "Critical",
               "open": 0,
               "devDone": 0,
-              "qaRegression": 2,
-              "done": 1,
+              "qaRegression": 0,
+              "done": 3,
               "total": 3,
               "rate": 100.0,
-              "previousRate": 66.7
+              "previousRate": 0.0
             },
             {
               "severity": "Major",
@@ -56184,13 +56180,13 @@
             },
             {
               "severity": "합계",
-              "open": 1,
+              "open": 0,
               "devDone": 0,
-              "qaRegression": 2,
-              "done": 1,
-              "total": 4,
-              "rate": 75.0,
-              "previousRate": 66.7
+              "qaRegression": 0,
+              "done": 3,
+              "total": 3,
+              "rate": 100.0,
+              "previousRate": 0.0
             }
           ],
           "daily": [
@@ -56212,351 +56208,351 @@
             {
               "date": "2026-07-09",
               "registered": 3,
-              "fixed": 1
+              "fixed": 0
             },
             {
               "date": "2026-07-10",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-07-11",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-07-12",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-07-13",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-07-14",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-07-15",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-07-16",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-07-17",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-07-18",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-07-19",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-07-20",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-07-21",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-07-22",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-07-23",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-07-24",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-07-25",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-07-26",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-07-27",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-07-28",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-07-29",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-07-30",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-07-31",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-08-01",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-08-02",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-08-03",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-08-04",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-08-05",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-08-06",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-08-07",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-08-08",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-08-09",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-08-10",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-08-11",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-08-12",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-08-13",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-08-14",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-08-15",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-08-16",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-08-17",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-08-18",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-08-19",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-08-20",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-08-21",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-08-22",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-08-23",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-08-24",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-08-25",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-08-26",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-08-27",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-08-28",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-08-29",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-08-30",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-08-31",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-09-01",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-09-02",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-09-03",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-09-04",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-09-05",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-09-06",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-09-07",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-09-08",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-09-09",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-09-10",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-09-11",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-09-12",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-09-13",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-09-14",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-09-15",
               "registered": 3,
-              "fixed": 2
+              "fixed": 0
             },
             {
               "date": "2026-09-16",
-              "registered": 4,
+              "registered": 3,
               "fixed": 3
             }
           ]
@@ -56838,14 +56834,14 @@
         },
         {
           "version": "[콕뱅크]",
-          "total": 127,
-          "open": 3,
+          "total": 130,
+          "open": 4,
           "devDone": 0,
           "qaRegression": 1,
-          "done": 123,
-          "scopeTotal": 127,
-          "doneRate": 97.6,
-          "latestSnapshot": "2026-09-15",
+          "done": 125,
+          "scopeTotal": 130,
+          "doneRate": 96.9,
+          "latestSnapshot": "2026-09-16",
           "severityRows": [
             {
               "severity": "Critical",
@@ -56859,12 +56855,12 @@
             },
             {
               "severity": "Major",
-              "open": 2,
+              "open": 3,
               "devDone": 0,
               "qaRegression": 1,
-              "done": 44,
-              "total": 47,
-              "rate": 95.7,
+              "done": 46,
+              "total": 50,
+              "rate": 94.0,
               "previousRate": 95.7
             },
             {
@@ -56879,12 +56875,12 @@
             },
             {
               "severity": "합계",
-              "open": 3,
+              "open": 4,
               "devDone": 0,
               "qaRegression": 1,
-              "done": 123,
-              "total": 127,
-              "rate": 97.6,
+              "done": 125,
+              "total": 130,
+              "rate": 96.9,
               "previousRate": 97.6
             }
           ],
@@ -56976,8 +56972,8 @@
             },
             {
               "date": "2026-09-16",
-              "registered": 127,
-              "fixed": 124
+              "registered": 130,
+              "fixed": 126
             }
           ]
         },
@@ -61667,26 +61663,26 @@
           ]
         }
       ],
-      "defaultProjectVersion": "[교통카드]SDK변경",
+      "defaultProjectVersion": "[Hanpass][앱개편][Native]-LiveTest",
       "selectedVersion": "ALL",
       "distributions": {
         "ALL": {
           "status": [
             {
               "label": "등록",
-              "count": 139
+              "count": 137
             },
             {
               "label": "진행중",
-              "count": 13
+              "count": 12
             },
             {
               "label": "QA확인",
-              "count": 172
+              "count": 170
             },
             {
               "label": "종료",
-              "count": 942
+              "count": 951
             }
           ],
           "severity": [
@@ -61696,11 +61692,11 @@
             },
             {
               "label": "Major",
-              "count": 392
+              "count": 395
             },
             {
               "label": "Minor",
-              "count": 717
+              "count": 718
             },
             {
               "label": "미지정",
@@ -61718,7 +61714,7 @@
             },
             {
               "label": "Medium",
-              "count": 1221
+              "count": 1225
             },
             {
               "label": "Low",
@@ -61935,16 +61931,16 @@
         {
           "date": "2026-09-15",
           "new": 2,
-          "fixed": 12,
-          "closed": 11,
+          "fixed": 11,
+          "closed": 10,
           "deltaNew": -11
         },
         {
           "date": "2026-09-16",
-          "new": 1,
-          "fixed": 1,
-          "closed": 1,
-          "deltaNew": -1
+          "new": 5,
+          "fixed": 11,
+          "closed": 11,
+          "deltaNew": 3
         }
       ],
       "reportBoard": {
@@ -61974,25 +61970,109 @@
       },
       "recent": [
         {
-          "id": "ISSUE-1822",
-          "title": "[결함] 타이틀을 입력해주세요. ",
+          "id": "ISSUE-1828",
+          "title": "[헬프데스크][iOS] ‘언어 선택’ 바텀시트 내 스크롤 불가 현상 ",
           "status": "등록 (Registered)",
           "stage": "등록",
           "severity": "미지정",
           "priority": "Medium",
           "assignee": "미지정",
-          "version": "[교통카드]SDK변경",
-          "versionRaw": "[교통카드]SDK변경",
+          "version": "[Hanpass][앱개편][Native]-LiveTest",
+          "versionRaw": "[Hanpass][앱개편][Native]-LiveTest",
           "domain": "한패스",
           "os": "미지정",
-          "createdAt": "2026-09-16T01:22:00.000Z",
+          "createdAt": "2026-09-16T05:35:00.000Z",
           "createdDate": "2026-09-16",
           "fixedAt": "",
           "fixedDate": "",
           "closedAt": "",
           "closedDate": "",
-          "url": "https://app.notion.com/p/3dd73fbd1951809a9405cd6e608b6229",
-          "lastEditedAt": "2026-09-16T01:31:00.000Z"
+          "url": "https://app.notion.com/p/iOS-3dd73fbd19518050b957f6b1e7f8111a",
+          "lastEditedAt": "2026-09-16T05:44:00.000Z"
+        },
+        {
+          "id": "ISSUE-1827",
+          "title": "[국내송금][공통]앱 언어 네팔어 설정 시 캄보디아어 노출 되는 현상 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Minor",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[Hanpass][앱개편][Native]-LiveTest",
+          "versionRaw": "[Hanpass][앱개편][Native]-LiveTest",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-09-16T05:32:00.000Z",
+          "createdDate": "2026-09-16",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/3dd73fbd1951804e93d2d4c1952d68f2",
+          "lastEditedAt": "2026-09-16T05:42:00.000Z"
+        },
+        {
+          "id": "ISSUE-1826",
+          "title": "[콕뱅크][회원가입] 약관 상세 진입 후 뒤로가기 시 화면 이탈 불가 현상 ",
+          "status": "완료 (Done)",
+          "stage": "종료",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[콕뱅크]",
+          "versionRaw": "[콕뱅크]",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-09-16T02:07:00.000Z",
+          "createdDate": "2026-09-16",
+          "fixedAt": "2026-09-16T05:25:00.000Z",
+          "fixedDate": "2026-09-16",
+          "closedAt": "2026-09-16T05:25:00.000Z",
+          "closedDate": "2026-09-16",
+          "url": "https://app.notion.com/p/3dd73fbd195180a18abcc7347745c1d3",
+          "lastEditedAt": "2026-09-16T05:25:00.000Z"
+        },
+        {
+          "id": "ISSUE-1824",
+          "title": "[콕뱅크][회원가입] ‘오픈뱅킹’ 약관 상세 내용 미노출 현상 ",
+          "status": "완료 (Done)",
+          "stage": "종료",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[콕뱅크]",
+          "versionRaw": "[콕뱅크]",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-09-16T01:40:00.000Z",
+          "createdDate": "2026-09-16",
+          "fixedAt": "2026-09-16T05:33:00.000Z",
+          "fixedDate": "2026-09-16",
+          "closedAt": "2026-09-16T05:33:00.000Z",
+          "closedDate": "2026-09-16",
+          "url": "https://app.notion.com/p/3dd73fbd195180ae97c2da0a12056e34",
+          "lastEditedAt": "2026-09-16T05:33:00.000Z"
+        },
+        {
+          "id": "ISSUE-1823",
+          "title": "[콕뱅크][회원가입] ‘카드 서비스’ 약관 상세 내용 미노출 현상 ",
+          "status": "처리중 (In Progress)",
+          "stage": "진행중",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[콕뱅크]",
+          "versionRaw": "[콕뱅크]",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-09-16T01:34:00.000Z",
+          "createdDate": "2026-09-16",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/3dd73fbd1951803a8e55d6305577af17",
+          "lastEditedAt": "2026-09-16T01:58:00.000Z"
         },
         {
           "id": "ISSUE-1821",
@@ -62081,8 +62161,8 @@
         {
           "id": "ISSUE-1817",
           "title": "[비로그인홈][AOS] 기본 금액 미노출 되는 현상 ",
-          "status": "처리중 (In Progress)",
-          "stage": "진행중",
+          "status": "완료 (Done)",
+          "stage": "종료",
           "severity": "Minor",
           "priority": "Medium",
           "assignee": "미지정",
@@ -62092,114 +62172,30 @@
           "os": "미지정",
           "createdAt": "2026-09-14T06:35:00.000Z",
           "createdDate": "2026-09-14",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
+          "fixedAt": "2026-09-16T04:39:00.000Z",
+          "fixedDate": "2026-09-16",
+          "closedAt": "2026-09-16T04:39:00.000Z",
+          "closedDate": "2026-09-16",
           "url": "https://app.notion.com/p/AOS-3db73fbd195180cd994ed7be51e0418f",
-          "lastEditedAt": "2026-09-15T08:10:00.000Z"
-        },
-        {
-          "id": "ISSUE-1816",
-          "title": "[환율][iOS] 지정된 국가별 Default 금액 미노출 되는 현상 ",
-          "status": "완료 (Done)",
-          "stage": "종료",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[Hanpass][앱개편][Native]-LiveTest",
-          "versionRaw": "[Hanpass][앱개편][Native]-LiveTest",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-09-14T06:21:00.000Z",
-          "createdDate": "2026-09-14",
-          "fixedAt": "2026-09-15T08:18:00.000Z",
-          "fixedDate": "2026-09-15",
-          "closedAt": "2026-09-15T08:18:00.000Z",
-          "closedDate": "2026-09-15",
-          "url": "https://app.notion.com/p/iOS-Default-3db73fbd19518083ac09df9f48dfd8af",
-          "lastEditedAt": "2026-09-15T08:18:00.000Z"
-        },
-        {
-          "id": "ISSUE-1815",
-          "title": "[환율][공통] 국가/통화/받는방법 선택 영역 기획서와 상이",
-          "status": "개발 완료 (Dev Done)",
-          "stage": "종료",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[Hanpass][앱개편][Native]-LiveTest",
-          "versionRaw": "[Hanpass][앱개편][Native]-LiveTest",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-09-14T05:52:00.000Z",
-          "createdDate": "2026-09-14",
-          "fixedAt": "2026-09-15T06:49:00.000Z",
-          "fixedDate": "2026-09-15",
-          "closedAt": "2026-09-15T06:49:00.000Z",
-          "closedDate": "2026-09-15",
-          "url": "https://app.notion.com/p/3db73fbd1951801eaa53eb7b0fface14",
-          "lastEditedAt": "2026-09-15T06:49:00.000Z"
-        },
-        {
-          "id": "ISSUE-1814",
-          "title": "[홈][생활탭][AOS] 이벤트 전체보기 선택 시 ‘지난 이벤트’ 화면으로 이동하는 현상 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[Hanpass][앱개편][Native]-LiveTest",
-          "versionRaw": "[Hanpass][앱개편][Native]-LiveTest",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-09-14T05:16:00.000Z",
-          "createdDate": "2026-09-14",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/AOS-3db73fbd19518018a42ad578dac11d4a",
-          "lastEditedAt": "2026-09-15T01:21:00.000Z"
-        },
-        {
-          "id": "ISSUE-1813",
-          "title": "[환율][iOS] 총 출금액 영역 내 ‘수수료 포함’ 문구 미노출 되는 현상 ",
-          "status": "완료 (Done)",
-          "stage": "종료",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[Hanpass][앱개편][Native]-LiveTest",
-          "versionRaw": "[Hanpass][앱개편][Native]-LiveTest",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-09-14T04:47:00.000Z",
-          "createdDate": "2026-09-14",
-          "fixedAt": "2026-09-15T07:59:00.000Z",
-          "fixedDate": "2026-09-15",
-          "closedAt": "2026-09-15T07:59:00.000Z",
-          "closedDate": "2026-09-15",
-          "url": "https://app.notion.com/p/iOS-3db73fbd1951806280d4f038afb1c644",
-          "lastEditedAt": "2026-09-15T07:59:00.000Z"
+          "lastEditedAt": "2026-09-16T04:39:00.000Z"
         }
       ]
     },
     "GoHanpass": {
       "summary": {
-        "total": 207,
-        "new": 27,
+        "total": 209,
+        "new": 29,
         "inProgress": 0,
         "fixed": 0,
         "closed": 180,
-        "todayNew": 0,
-        "newDelta": 0
+        "todayNew": 2,
+        "newDelta": 2
       },
       "funnel": [
         {
           "stage": "등록",
-          "count": 27,
-          "rate": 13.0,
+          "count": 29,
+          "rate": 13.9,
           "width": 18
         },
         {
@@ -62235,7 +62231,7 @@
         {
           "stage": "종료",
           "count": 180,
-          "rate": 87.0,
+          "rate": 86.1,
           "width": 100
         }
       ],
@@ -62445,10 +62441,10 @@
         },
         {
           "date": "2026-09-16",
-          "new": 0,
+          "new": 2,
           "fixed": 1,
           "closed": 1,
-          "deltaNew": 0
+          "deltaNew": 2
         }
       ],
       "versions": [
@@ -62638,13 +62634,13 @@
         },
         {
           "version": "[G.H][교통카드]SDK변경",
-          "total": 2,
-          "criticalMajor": 2,
-          "doneRate": 50.0,
+          "total": 4,
+          "criticalMajor": 4,
+          "doneRate": 25.0,
           "status": [
             {
               "label": "등록",
-              "count": 1
+              "count": 3
             },
             {
               "label": "종료",
@@ -62654,13 +62650,17 @@
           "severity": [
             {
               "label": "Critical",
-              "count": 2
+              "count": 3
+            },
+            {
+              "label": "Major",
+              "count": 1
             }
           ],
           "priority": [
             {
               "label": "Medium",
-              "count": 2
+              "count": 4
             }
           ]
         },
@@ -65788,33 +65788,33 @@
         },
         {
           "version": "[G.H][교통카드]SDK변경",
-          "total": 2,
-          "open": 1,
+          "total": 4,
+          "open": 3,
           "devDone": 0,
           "qaRegression": 0,
           "done": 1,
-          "scopeTotal": 2,
-          "doneRate": 50.0,
+          "scopeTotal": 4,
+          "doneRate": 25.0,
           "latestSnapshot": "2026-09-16",
           "severityRows": [
             {
               "severity": "Critical",
-              "open": 1,
+              "open": 2,
               "devDone": 0,
               "qaRegression": 0,
               "done": 1,
-              "total": 2,
-              "rate": 50.0,
+              "total": 3,
+              "rate": 33.3,
               "previousRate": 0.0
             },
             {
               "severity": "Major",
-              "open": 0,
+              "open": 1,
               "devDone": 0,
               "qaRegression": 0,
               "done": 0,
-              "total": 0,
-              "rate": 0,
+              "total": 1,
+              "rate": 0.0,
               "previousRate": 0
             },
             {
@@ -65829,12 +65829,12 @@
             },
             {
               "severity": "합계",
-              "open": 1,
+              "open": 3,
               "devDone": 0,
               "qaRegression": 0,
               "done": 1,
-              "total": 2,
-              "rate": 50.0,
+              "total": 4,
+              "rate": 25.0,
               "previousRate": 0.0
             }
           ],
@@ -66196,7 +66196,7 @@
             },
             {
               "date": "2026-09-16",
-              "registered": 2,
+              "registered": 4,
               "fixed": 1
             }
           ]
@@ -67732,14 +67732,14 @@
           ]
         }
       ],
-      "defaultProjectVersion": "[G.H][Hanpass][앱개편][Native]-LiveTest",
+      "defaultProjectVersion": "[G.H][교통카드]SDK변경",
       "selectedVersion": "ALL",
       "distributions": {
         "ALL": {
           "status": [
             {
               "label": "등록",
-              "count": 27
+              "count": 29
             },
             {
               "label": "종료",
@@ -67749,11 +67749,11 @@
           "severity": [
             {
               "label": "Critical",
-              "count": 4
+              "count": 5
             },
             {
               "label": "Major",
-              "count": 65
+              "count": 66
             },
             {
               "label": "Minor",
@@ -67763,7 +67763,7 @@
           "priority": [
             {
               "label": "Medium",
-              "count": 206
+              "count": 208
             },
             {
               "label": "긴급",
@@ -67978,10 +67978,10 @@
         },
         {
           "date": "2026-09-16",
-          "new": 0,
+          "new": 2,
           "fixed": 1,
           "closed": 1,
-          "deltaNew": 0
+          "deltaNew": 2
         }
       ],
       "reportBoard": {
@@ -68024,6 +68024,48 @@
         ]
       },
       "recent": [
+        {
+          "id": "ISSUE-1825",
+          "title": "[SDK변경][Go.Hanpass][iOS] PIN입력 화면 전환될 때 상단바 노출 시 앱 크래시 발생 현상 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Critical",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[G.H][교통카드]SDK변경",
+          "versionRaw": "[교통카드]SDK변경",
+          "domain": "GoHanpass",
+          "os": "미지정",
+          "createdAt": "2026-09-16T01:46:00.000Z",
+          "createdDate": "2026-09-16",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/SDK-Go-Hanpass-iOS-PIN-3dd73fbd19518088849ec2990bf004c5",
+          "lastEditedAt": "2026-09-16T02:22:00.000Z"
+        },
+        {
+          "id": "ISSUE-1822",
+          "title": "[SDK변경][Go.Hanpass][iOS] PIN 입력 화면 내 뒤로가기 시 금액 필드 수정 불가 현상 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[G.H][교통카드]SDK변경",
+          "versionRaw": "[교통카드]SDK변경",
+          "domain": "GoHanpass",
+          "os": "미지정",
+          "createdAt": "2026-09-16T01:22:00.000Z",
+          "createdDate": "2026-09-16",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/SDK-Go-Hanpass-iOS-PIN-3dd73fbd1951809a9405cd6e608b6229",
+          "lastEditedAt": "2026-09-16T01:40:00.000Z"
+        },
         {
           "id": "ISSUE-1809",
           "title": "[카드][홈] 고한패스 방패연 카드 보유 시 OS 별 화면 노출 상이한 현상  ",
@@ -68191,48 +68233,6 @@
           "closedDate": "2026-07-27",
           "url": "https://app.notion.com/p/3a473fbd19518015956edb7c8ce4357d",
           "lastEditedAt": "2026-07-27T05:38:00.000Z"
-        },
-        {
-          "id": "ISSUE-1041",
-          "title": "[추가인증][특정단말] 주소 직접 입력 화면 내 ‘다시 검색하기’ 버튼 가려지는 현상 ",
-          "status": "완료 (Done)",
-          "stage": "종료",
-          "severity": "Major",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[G.H]v1.0.2-26.07",
-          "versionRaw": "[G.H]v1.0.2-26.07",
-          "domain": "GoHanpass",
-          "os": "미지정",
-          "createdAt": "2026-07-21T01:40:00.000Z",
-          "createdDate": "2026-07-21",
-          "fixedAt": "2026-07-27T04:48:00.000Z",
-          "fixedDate": "2026-07-27",
-          "closedAt": "2026-07-27T04:48:00.000Z",
-          "closedDate": "2026-07-27",
-          "url": "https://app.notion.com/p/3a473fbd1951803f9e2bed0301b3593d",
-          "lastEditedAt": "2026-07-27T04:48:00.000Z"
-        },
-        {
-          "id": "ISSUE-1040",
-          "title": "[팝업노출][다국어] 쿠폰 팝업 타이틀 문구 기획서와 상이 ",
-          "status": "완료 (Done)",
-          "stage": "종료",
-          "severity": "Minor",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[G.H]v1.0.2-26.07",
-          "versionRaw": "[G.H]v1.0.2-26.07",
-          "domain": "GoHanpass",
-          "os": "미지정",
-          "createdAt": "2026-07-20T06:23:00.000Z",
-          "createdDate": "2026-07-20",
-          "fixedAt": "2026-07-27T04:54:00.000Z",
-          "fixedDate": "2026-07-27",
-          "closedAt": "2026-07-27T04:54:00.000Z",
-          "closedDate": "2026-07-27",
-          "url": "https://app.notion.com/p/3a373fbd195180609a3ec590515461c2",
-          "lastEditedAt": "2026-07-27T04:54:00.000Z"
         }
       ]
     }

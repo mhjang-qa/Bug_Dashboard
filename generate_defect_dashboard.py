@@ -1107,6 +1107,20 @@ def build_html(payload: dict[str, Any]) -> str:
     .project-control {{ display: grid; grid-template-columns: 1fr minmax(260px, 420px); gap: 16px; align-items: end; }}
     .project-version-tools {{ display: grid; gap: 8px; }}
     .project-version-field {{ display: grid; gap: 7px; color: var(--muted); font-size: 12px; font-weight: 650; }}
+    .project-version-row {{ display: grid; grid-template-columns: 40px 1fr; gap: 8px; align-items: end; }}
+    .project-refresh-btn {{
+      width: 40px;
+      height: 40px;
+      border: 1px solid var(--line);
+      background: var(--panel-soft);
+      color: var(--blue);
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 18px;
+      font-weight: 800;
+      line-height: 1;
+    }}
+    .project-refresh-btn:disabled {{ opacity: .55; cursor: wait; }}
     .project-filter-check {{ display: inline-flex; align-items: center; gap: 7px; color: var(--muted); font-size: 12px; font-weight: 650; user-select: none; }}
     .project-filter-check input {{ width: 14px; height: 14px; margin: 0; accent-color: var(--blue); }}
     .project-select {{
@@ -1259,6 +1273,7 @@ def build_html(payload: dict[str, Any]) -> str:
       .tile {{ background: #172036; border-color: rgba(148,163,184,.10); }}
       .tab, .range-btn, .version-mode-btn, .version-item, .domain-btn {{ background: #0b1220; }}
       .project-select {{ background: #0b1220; }}
+      .project-refresh-btn {{ background: #0b1220; }}
       .version-item.active {{ border-color: rgba(97, 183, 255, .45); box-shadow: 0 0 0 2px rgba(97, 183, 255, .08) inset; }}
       .version-mode-btn.active {{ border-color: rgba(97, 183, 255, .45); background: rgba(97, 183, 255, .10); }}
       .domain-btn.active {{ border-color: rgba(97, 183, 255, .45); background: rgba(97, 183, 255, .10); }}
@@ -1334,9 +1349,12 @@ def build_html(payload: dict[str, Any]) -> str:
               <div class="subtle" id="projectProgressNote">선택한 타겟버전의 개발 수정 진행 현황, 결함 유형별 심각도, 일자별 등록/수정 추이를 표시합니다.</div>
             </div>
             <div class="project-version-tools">
-              <label class="project-version-field" for="projectVersionSelect">타겟버전
-                <select class="project-select" id="projectVersionSelect"></select>
-              </label>
+              <div class="project-version-row">
+                <button class="project-refresh-btn" id="projectVersionRefreshButton" type="button" title="타겟버전 다시 확인" aria-label="타겟버전 다시 확인">↻</button>
+                <label class="project-version-field" for="projectVersionSelect">타겟버전
+                  <select class="project-select" id="projectVersionSelect"></select>
+                </label>
+              </div>
               <label class="project-filter-check" for="excludeCompletedProjectVersions">
                 <input id="excludeCompletedProjectVersions" type="checkbox">
                 완료버전 제외
@@ -1963,6 +1981,15 @@ def build_html(payload: dict[str, Any]) -> str:
       $("projectCharts").innerHTML = renderProjectLineChart(rows);
     }}
 
+    function refreshProjectVersions() {{
+      const button = $("projectVersionRefreshButton");
+      button.disabled = true;
+      button.textContent = "...";
+      const url = new URL(window.location.href);
+      url.searchParams.set("targetVersionRefresh", Date.now().toString());
+      window.location.replace(url.toString());
+    }}
+
     document.querySelectorAll(".tab").forEach((button) => {{
       button.addEventListener("click", () => {{
         document.querySelectorAll(".tab").forEach((item) => item.classList.toggle("active", item === button));
@@ -1988,6 +2015,7 @@ def build_html(payload: dict[str, Any]) -> str:
       selectedProjectVersion = event.target.value;
       renderProjectProgress();
     }});
+    $("projectVersionRefreshButton").addEventListener("click", refreshProjectVersions);
     $("excludeCompletedProjectVersions").addEventListener("change", (event) => {{
       excludeCompletedProjectVersions = event.target.checked;
       renderProjectProgress();

@@ -326,10 +326,30 @@ def extract_year_month_suffix(value: str) -> tuple[int, int] | None:
     return int(match.group(1)), int(match.group(2))
 
 
+COMPLETED_VERSION_PATTERN = re.compile(r"(?:\s*[-–—]\s*)?\(?완료\)?\s*$")
+
+
+def has_completed_version_marker(value: str) -> bool:
+    return bool(COMPLETED_VERSION_PATTERN.search((value or "").strip()))
+
+
+def strip_completed_version_marker(value: str) -> str:
+    return COMPLETED_VERSION_PATTERN.sub("", (value or "").strip()).strip()
+
+
+def completed_version_label(label: str, completed: bool) -> str:
+    text = (label or "").strip()
+    if completed and text and not has_completed_version_marker(text):
+        return f"{text} (완료)"
+    return text
+
+
 def normalize_version_label(value: str, domain: str = "") -> str:
-    text = (value or "").strip()
+    raw_text = (value or "").strip()
+    completed = has_completed_version_marker(raw_text)
+    text = strip_completed_version_marker(raw_text) if completed else raw_text
     if not text:
-        return "미지정"
+        return completed_version_label("미지정", completed)
     if domain == "GoHanpass" or has_go_hanpass_keyword(text):
         version = extract_semver(text)
         suffix = extract_year_month_suffix(text)
@@ -337,7 +357,7 @@ def normalize_version_label(value: str, domain: str = "") -> str:
             label = f"[G.H]v{version[0]}.{version[1]}.{version[2]}"
             if suffix:
                 label += f"-{suffix[0]:02d}.{suffix[1]:02d}"
-            return label
+            return completed_version_label(label, completed)
         body = re.sub(
             r"^(?:\[?\s*g\.?\s*h\.?\s*\]?|go\.?\s*hanpass|gohanpass|방한홈|고한패스)\s*",
             "",
@@ -345,11 +365,11 @@ def normalize_version_label(value: str, domain: str = "") -> str:
             flags=re.I,
         ).strip()
         body = body.lstrip(" :-_")
-        return f"[G.H]{body}" if body else "[G.H]"
+        return completed_version_label(f"[G.H]{body}" if body else "[G.H]", completed)
     version = extract_semver(text)
     if version:
-        return f"{version[0]}.{version[1]}.{version[2]}"
-    return text
+        return completed_version_label(f"{version[0]}.{version[1]}.{version[2]}", completed)
+    return completed_version_label(text, completed)
 
 
 def version_sort_key(version: str) -> tuple[Any, ...]:
@@ -1846,7 +1866,7 @@ def build_html(payload: dict[str, Any]) -> str:
         return;
       }}
       $("excludeCompletedProjectVersions").checked = excludeCompletedProjectVersions;
-      const isCompletedProjectVersion = (version) => /\\(완료\\)\\s*$/.test(String(version || "").trim());
+      const isCompletedProjectVersion = (version) => /(?:\\s*[-–—]\\s*)?\\(?완료\\)?\\s*$/.test(String(version || "").trim());
       const visibleItems = excludeCompletedProjectVersions
         ? items.filter((item) => !isCompletedProjectVersion(item.version))
         : items;

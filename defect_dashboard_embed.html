@@ -207,8 +207,12 @@
     .project-summary { margin-top: 12px; margin-bottom: 14px; }
     .project-grid { grid-template-columns: minmax(420px, 1fr) minmax(520px, 1.2fr); }
     .project-table th:nth-child(n+2), .project-table td:nth-child(n+2) { text-align: right; }
-    .project-table tbody tr:last-child td { font-weight: 800; }
+    .project-table.is-summary tbody tr:last-child td { font-weight: 800; }
     .project-rate { color: var(--green); font-weight: 800; white-space: nowrap; }
+    .project-detail-section { display: grid; gap: 10px; }
+    .project-detail-section + .project-detail-section { margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--line); }
+    .project-section-title { display: flex; justify-content: space-between; gap: 10px; align-items: center; color: var(--text); font-size: 13px; font-weight: 800; }
+    .project-section-title span { color: var(--muted); font-size: 12px; font-weight: 650; }
     .project-chart-grid { display: block; }
     .project-chart-title { margin: 0 0 8px; color: var(--muted); font-size: 12px; font-weight: 700; }
     .line-chart {
@@ -411,7 +415,7 @@
           <div class="project-control">
             <div class="panel-title">
               <h2>프로젝트별 결함 현황</h2>
-              <div class="subtle" id="projectProgressNote">선택한 타겟버전의 심각도별 미처리, 개발 완료, 일자별 등록/수정 추이를 표시합니다.</div>
+              <div class="subtle" id="projectProgressNote">선택한 타겟버전의 개발 수정 진행 현황, 결함 유형별 심각도, 일자별 등록/수정 추이를 표시합니다.</div>
             </div>
             <label for="projectVersionSelect">타겟버전
               <select class="project-select" id="projectVersionSelect"></select>
@@ -421,7 +425,7 @@
         <section class="summary project-summary" id="projectSummary"></section>
         <div class="grid project-grid">
           <article class="panel">
-            <div class="panel-head"><h2>개발 현황</h2><div class="subtle" id="projectSnapshotLabel"></div></div>
+            <div class="panel-head"><h2>개발 수정 진행 현황</h2><div class="subtle" id="projectSnapshotLabel"></div></div>
             <div class="table-wrap" id="projectProgressTable"></div>
           </article>
           <article class="panel">
@@ -452,7 +456,7 @@
     </div>
   </div>
   <script id="dashboard-data" type="application/json">{
-  "generatedAt": "2026-09-21T07:52:33+00:00",
+  "generatedAt": "2026-09-21T07:53:52+00:00",
   "days": 30,
   "domainOrder": [
     "한패스",
@@ -565,45 +569,45 @@
         },
         {
           "date": "2026-08-30",
-          "new": 1,
+          "new": 0,
           "fixed": 0,
           "closed": 0,
-          "deltaNew": 1
+          "deltaNew": 0
         },
         {
           "date": "2026-08-31",
-          "new": 37,
+          "new": 38,
           "fixed": 1,
           "closed": 1,
-          "deltaNew": 36
+          "deltaNew": 38
         },
         {
           "date": "2026-09-01",
-          "new": 36,
+          "new": 35,
           "fixed": 19,
           "closed": 19,
-          "deltaNew": -1
+          "deltaNew": -3
         },
         {
           "date": "2026-09-02",
           "new": 26,
           "fixed": 145,
           "closed": 145,
-          "deltaNew": -10
+          "deltaNew": -9
         },
         {
           "date": "2026-09-03",
-          "new": 24,
+          "new": 25,
           "fixed": 37,
           "closed": 37,
-          "deltaNew": -2
+          "deltaNew": -1
         },
         {
           "date": "2026-09-04",
           "new": 25,
           "fixed": 20,
           "closed": 20,
-          "deltaNew": 1
+          "deltaNew": 0
         },
         {
           "date": "2026-09-05",
@@ -636,15 +640,15 @@
         {
           "date": "2026-09-09",
           "new": 10,
-          "fixed": 167,
-          "closed": 62,
+          "fixed": 164,
+          "closed": 60,
           "deltaNew": 8
         },
         {
           "date": "2026-09-10",
           "new": 17,
-          "fixed": 67,
-          "closed": 64,
+          "fixed": 70,
+          "closed": 66,
           "deltaNew": 7
         },
         {
@@ -664,15 +668,15 @@
         {
           "date": "2026-09-13",
           "new": 0,
-          "fixed": 1,
-          "closed": 1,
+          "fixed": 0,
+          "closed": 0,
           "deltaNew": 0
         },
         {
           "date": "2026-09-14",
           "new": 15,
-          "fixed": 25,
-          "closed": 25,
+          "fixed": 26,
+          "closed": 26,
           "deltaNew": 15
         },
         {
@@ -2228,6 +2232,60 @@
               "previousRate": 9.1
             }
           ],
+          "typeRows": [
+            {
+              "type": "기능",
+              "total": 6,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 4
+                },
+                {
+                  "label": "Minor",
+                  "count": 1
+                },
+                {
+                  "label": "개선 의견",
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "type": "정책 불일치",
+              "total": 2,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 1
+                },
+                {
+                  "label": "Minor",
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "type": "텍스트",
+              "total": 2,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 2
+                }
+              ]
+            },
+            {
+              "type": "UX/UI",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 1
+                }
+              ]
+            }
+          ],
           "daily": [
             {
               "date": "2026-07-30",
@@ -2553,6 +2611,38 @@
               "previousRate": 28.6
             }
           ],
+          "typeRows": [
+            {
+              "type": "텍스트",
+              "total": 4,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 4
+                }
+              ]
+            },
+            {
+              "type": "UX/UI",
+              "total": 2,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 2
+                }
+              ]
+            },
+            {
+              "type": "기능",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 1
+                }
+              ]
+            }
+          ],
           "daily": [
             {
               "date": "2026-08-25",
@@ -2746,6 +2836,80 @@
               "total": 20,
               "rate": 100.0,
               "previousRate": 100.0
+            }
+          ],
+          "typeRows": [
+            {
+              "type": "UX/UI",
+              "total": 5,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 2
+                },
+                {
+                  "label": "Minor",
+                  "count": 3
+                }
+              ]
+            },
+            {
+              "type": "기능",
+              "total": 5,
+              "severity": [
+                {
+                  "label": "Critical",
+                  "count": 1
+                },
+                {
+                  "label": "Major",
+                  "count": 4
+                }
+              ]
+            },
+            {
+              "type": "다국어",
+              "total": 3,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 3
+                }
+              ]
+            },
+            {
+              "type": "정책 불일치",
+              "total": 3,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 2
+                },
+                {
+                  "label": "Minor",
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "type": "텍스트",
+              "total": 3,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 3
+                }
+              ]
+            },
+            {
+              "type": "접근성",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 1
+                }
+              ]
             }
           ],
           "daily": [
@@ -3113,6 +3277,28 @@
               "previousRate": 100.0
             }
           ],
+          "typeRows": [
+            {
+              "type": "텍스트",
+              "total": 2,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 2
+                }
+              ]
+            },
+            {
+              "type": "기획서 수정",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 1
+                }
+              ]
+            }
+          ],
           "daily": [
             {
               "date": "2026-07-22",
@@ -3476,6 +3662,48 @@
               "total": 26,
               "rate": 100.0,
               "previousRate": 100.0
+            }
+          ],
+          "typeRows": [
+            {
+              "type": "다국어",
+              "total": 13,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 13
+                }
+              ]
+            },
+            {
+              "type": "기능",
+              "total": 7,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 7
+                }
+              ]
+            },
+            {
+              "type": "UX/UI",
+              "total": 3,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 3
+                }
+              ]
+            },
+            {
+              "type": "텍스트",
+              "total": 3,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 3
+                }
+              ]
             }
           ],
           "daily": [
@@ -4021,6 +4249,64 @@
               "total": 34,
               "rate": 97.1,
               "previousRate": 97.1
+            }
+          ],
+          "typeRows": [
+            {
+              "type": "기능",
+              "total": 11,
+              "severity": [
+                {
+                  "label": "Critical",
+                  "count": 1
+                },
+                {
+                  "label": "Major",
+                  "count": 7
+                },
+                {
+                  "label": "Minor",
+                  "count": 3
+                }
+              ]
+            },
+            {
+              "type": "텍스트",
+              "total": 10,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 10
+                }
+              ]
+            },
+            {
+              "type": "UX/UI",
+              "total": 9,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 1
+                },
+                {
+                  "label": "Minor",
+                  "count": 8
+                }
+              ]
+            },
+            {
+              "type": "접근성",
+              "total": 4,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 2
+                },
+                {
+                  "label": "Minor",
+                  "count": 2
+                }
+              ]
             }
           ],
           "daily": [
@@ -4658,6 +4944,62 @@
               "previousRate": 100.0
             }
           ],
+          "typeRows": [
+            {
+              "type": "UX/UI",
+              "total": 3,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 3
+                }
+              ]
+            },
+            {
+              "type": "다국어",
+              "total": 2,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 2
+                }
+              ]
+            },
+            {
+              "type": "접근성",
+              "total": 2,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 1
+                },
+                {
+                  "label": "Minor",
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "type": "기능",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "type": "성능",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 1
+                }
+              ]
+            }
+          ],
           "daily": [
             {
               "date": "2026-05-08",
@@ -4782,7 +5124,7 @@
             {
               "date": "2026-06-01",
               "registered": 9,
-              "fixed": 4
+              "fixed": 0
             },
             {
               "date": "2026-06-02",
@@ -5398,6 +5740,130 @@
               "previousRate": 96.6
             }
           ],
+          "typeRows": [
+            {
+              "type": "UX/UI",
+              "total": 44,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 3
+                },
+                {
+                  "label": "Minor",
+                  "count": 39
+                },
+                {
+                  "label": "개선 의견",
+                  "count": 2
+                }
+              ]
+            },
+            {
+              "type": "기능",
+              "total": 35,
+              "severity": [
+                {
+                  "label": "Critical",
+                  "count": 9
+                },
+                {
+                  "label": "Major",
+                  "count": 19
+                },
+                {
+                  "label": "Minor",
+                  "count": 7
+                }
+              ]
+            },
+            {
+              "type": "기획서 수정",
+              "total": 12,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 6
+                },
+                {
+                  "label": "Minor",
+                  "count": 6
+                }
+              ]
+            },
+            {
+              "type": "다국어",
+              "total": 12,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 1
+                },
+                {
+                  "label": "Minor",
+                  "count": 11
+                }
+              ]
+            },
+            {
+              "type": "텍스트",
+              "total": 5,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 5
+                }
+              ]
+            },
+            {
+              "type": "성능",
+              "total": 3,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 2
+                },
+                {
+                  "label": "Minor",
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "type": "접근성",
+              "total": 3,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 2
+                },
+                {
+                  "label": "Minor",
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "type": "정책 불일치",
+              "total": 2,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 2
+                }
+              ]
+            },
+            {
+              "type": "결함 아님",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 1
+                }
+              ]
+            }
+          ],
           "daily": [
             {
               "date": "2026-04-29",
@@ -5457,7 +5923,7 @@
             {
               "date": "2026-05-10",
               "registered": 102,
-              "fixed": 10
+              "fixed": 9
             },
             {
               "date": "2026-05-11",
@@ -6181,6 +6647,50 @@
               "total": 82,
               "rate": 97.6,
               "previousRate": 97.6
+            }
+          ],
+          "typeRows": [
+            {
+              "type": "UX/UI",
+              "total": 39,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 6
+                },
+                {
+                  "label": "Minor",
+                  "count": 33
+                }
+              ]
+            },
+            {
+              "type": "기능",
+              "total": 24,
+              "severity": [
+                {
+                  "label": "Critical",
+                  "count": 7
+                },
+                {
+                  "label": "Major",
+                  "count": 6
+                },
+                {
+                  "label": "Minor",
+                  "count": 11
+                }
+              ]
+            },
+            {
+              "type": "텍스트",
+              "total": 19,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 19
+                }
+              ]
             }
           ],
           "daily": [
@@ -7116,6 +7626,32 @@
               "total": 24,
               "rate": 79.2,
               "previousRate": 79.2
+            }
+          ],
+          "typeRows": [
+            {
+              "type": "UX/UI",
+              "total": 19,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 19
+                }
+              ]
+            },
+            {
+              "type": "기능",
+              "total": 5,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 3
+                },
+                {
+                  "label": "Minor",
+                  "count": 2
+                }
+              ]
             }
           ],
           "daily": [
@@ -8368,6 +8904,120 @@
               "previousRate": 84.5
             }
           ],
+          "typeRows": [
+            {
+              "type": "UX/UI",
+              "total": 58,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 5
+                },
+                {
+                  "label": "Minor",
+                  "count": 50
+                },
+                {
+                  "label": "개선 의견",
+                  "count": 3
+                }
+              ]
+            },
+            {
+              "type": "기능",
+              "total": 31,
+              "severity": [
+                {
+                  "label": "Critical",
+                  "count": 3
+                },
+                {
+                  "label": "Major",
+                  "count": 14
+                },
+                {
+                  "label": "Minor",
+                  "count": 13
+                },
+                {
+                  "label": "개선 의견",
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "type": "접근성",
+              "total": 6,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 1
+                },
+                {
+                  "label": "Minor",
+                  "count": 4
+                },
+                {
+                  "label": "개선 의견",
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "type": "성능",
+              "total": 3,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 3
+                }
+              ]
+            },
+            {
+              "type": "텍스트",
+              "total": 2,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 1
+                },
+                {
+                  "label": "개선 의견",
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "type": "결함 아님",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "개선 의견",
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "type": "데이터 정합성",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "type": "미지정",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 1
+                }
+              ]
+            }
+          ],
           "daily": [
             {
               "date": "2026-01-08",
@@ -8471,7 +9121,7 @@
             },
             {
               "date": "2026-01-28",
-              "registered": 43,
+              "registered": 42,
               "fixed": 0
             },
             {
@@ -8497,7 +9147,7 @@
             {
               "date": "2026-02-02",
               "registered": 60,
-              "fixed": 7
+              "fixed": 3
             },
             {
               "date": "2026-02-03",
@@ -9706,6 +10356,96 @@
               "total": 68,
               "rate": 86.8,
               "previousRate": 86.8
+            }
+          ],
+          "typeRows": [
+            {
+              "type": "UX/UI",
+              "total": 32,
+              "severity": [
+                {
+                  "label": "Critical",
+                  "count": 1
+                },
+                {
+                  "label": "Major",
+                  "count": 2
+                },
+                {
+                  "label": "Minor",
+                  "count": 25
+                },
+                {
+                  "label": "미지정",
+                  "count": 2
+                },
+                {
+                  "label": "개선 의견",
+                  "count": 2
+                }
+              ]
+            },
+            {
+              "type": "기능",
+              "total": 28,
+              "severity": [
+                {
+                  "label": "Critical",
+                  "count": 6
+                },
+                {
+                  "label": "Major",
+                  "count": 19
+                },
+                {
+                  "label": "Minor",
+                  "count": 3
+                }
+              ]
+            },
+            {
+              "type": "데이터 정합성",
+              "total": 5,
+              "severity": [
+                {
+                  "label": "Critical",
+                  "count": 1
+                },
+                {
+                  "label": "Major",
+                  "count": 4
+                }
+              ]
+            },
+            {
+              "type": "결함 아님",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "개선 의견",
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "type": "보안",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "type": "텍스트",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Critical",
+                  "count": 1
+                }
+              ]
             }
           ],
           "daily": [
@@ -11161,6 +11901,42 @@
               "total": 4,
               "rate": 75.0,
               "previousRate": 75.0
+            }
+          ],
+          "typeRows": [
+            {
+              "type": "UX/UI",
+              "total": 2,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 1
+                },
+                {
+                  "label": "개선 의견",
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "type": "성능",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "type": "접근성",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 1
+                }
+              ]
             }
           ],
           "daily": [
@@ -12686,6 +13462,96 @@
               "total": 35,
               "rate": 88.6,
               "previousRate": 88.6
+            }
+          ],
+          "typeRows": [
+            {
+              "type": "UX/UI",
+              "total": 18,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 1
+                },
+                {
+                  "label": "Minor",
+                  "count": 12
+                },
+                {
+                  "label": "개선 의견",
+                  "count": 5
+                }
+              ]
+            },
+            {
+              "type": "기능",
+              "total": 8,
+              "severity": [
+                {
+                  "label": "Critical",
+                  "count": 1
+                },
+                {
+                  "label": "Major",
+                  "count": 5
+                },
+                {
+                  "label": "Minor",
+                  "count": 1
+                },
+                {
+                  "label": "개선 의견",
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "type": "접근성",
+              "total": 4,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 2
+                },
+                {
+                  "label": "Minor",
+                  "count": 2
+                }
+              ]
+            },
+            {
+              "type": "미지정",
+              "total": 2,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 1
+                },
+                {
+                  "label": "개선 의견",
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "type": "성능",
+              "total": 2,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 2
+                }
+              ]
+            },
+            {
+              "type": "예외 케이스 미처리",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 1
+                }
+              ]
             }
           ],
           "daily": [
@@ -14346,6 +15212,32 @@
               "total": 4,
               "rate": 100.0,
               "previousRate": 100.0
+            }
+          ],
+          "typeRows": [
+            {
+              "type": "미지정",
+              "total": 3,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 2
+                },
+                {
+                  "label": "미지정",
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "type": "예외 케이스 미처리",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 1
+                }
+              ]
             }
           ],
           "daily": [
@@ -16036,6 +16928,18 @@
               "total": 3,
               "rate": 100.0,
               "previousRate": 100.0
+            }
+          ],
+          "typeRows": [
+            {
+              "type": "미지정",
+              "total": 3,
+              "severity": [
+                {
+                  "label": "미지정",
+                  "count": 3
+                }
+              ]
             }
           ],
           "daily": [
@@ -18018,6 +18922,18 @@
               "previousRate": 81.5
             }
           ],
+          "typeRows": [
+            {
+              "type": "미지정",
+              "total": 27,
+              "severity": [
+                {
+                  "label": "미지정",
+                  "count": 27
+                }
+              ]
+            }
+          ],
           "daily": [
             {
               "date": "2025-08-05",
@@ -18151,7 +19067,7 @@
             },
             {
               "date": "2025-08-31",
-              "registered": 27,
+              "registered": 26,
               "fixed": 0
             },
             {
@@ -20136,6 +21052,18 @@
               "total": 33,
               "rate": 90.9,
               "previousRate": 90.9
+            }
+          ],
+          "typeRows": [
+            {
+              "type": "미지정",
+              "total": 33,
+              "severity": [
+                {
+                  "label": "미지정",
+                  "count": 33
+                }
+              ]
             }
           ],
           "daily": [
@@ -22433,6 +23361,82 @@
               "previousRate": 5.0
             }
           ],
+          "typeRows": [
+            {
+              "type": "기능",
+              "total": 7,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 6
+                },
+                {
+                  "label": "Minor",
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "type": "텍스트",
+              "total": 4,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 4
+                }
+              ]
+            },
+            {
+              "type": "UX/UI",
+              "total": 3,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 3
+                }
+              ]
+            },
+            {
+              "type": "다국어",
+              "total": 3,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 3
+                }
+              ]
+            },
+            {
+              "type": "성능",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "type": "접근성",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "type": "정책 불일치",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 1
+                }
+              ]
+            }
+          ],
           "daily": [
             {
               "date": "2026-05-12",
@@ -22746,7 +23750,7 @@
             },
             {
               "date": "2026-07-13",
-              "registered": 16,
+              "registered": 15,
               "fixed": 0
             },
             {
@@ -23151,6 +24155,52 @@
               "total": 15,
               "rate": 100.0,
               "previousRate": 100.0
+            }
+          ],
+          "typeRows": [
+            {
+              "type": "다국어",
+              "total": 10,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 1
+                },
+                {
+                  "label": "Minor",
+                  "count": 9
+                }
+              ]
+            },
+            {
+              "type": "기능",
+              "total": 2,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 2
+                }
+              ]
+            },
+            {
+              "type": "텍스트",
+              "total": 2,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 2
+                }
+              ]
+            },
+            {
+              "type": "UX/UI",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 1
+                }
+              ]
             }
           ],
           "daily": [
@@ -23661,6 +24711,108 @@
               "total": 55,
               "rate": 98.2,
               "previousRate": 98.2
+            }
+          ],
+          "typeRows": [
+            {
+              "type": "기능",
+              "total": 26,
+              "severity": [
+                {
+                  "label": "Critical",
+                  "count": 1
+                },
+                {
+                  "label": "Major",
+                  "count": 23
+                },
+                {
+                  "label": "Minor",
+                  "count": 2
+                }
+              ]
+            },
+            {
+              "type": "텍스트",
+              "total": 12,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 12
+                }
+              ]
+            },
+            {
+              "type": "정책 불일치",
+              "total": 7,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 1
+                },
+                {
+                  "label": "Minor",
+                  "count": 6
+                }
+              ]
+            },
+            {
+              "type": "다국어",
+              "total": 4,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 2
+                },
+                {
+                  "label": "Minor",
+                  "count": 2
+                }
+              ]
+            },
+            {
+              "type": "UX/UI",
+              "total": 2,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 2
+                }
+              ]
+            },
+            {
+              "type": "접근성",
+              "total": 2,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 1
+                },
+                {
+                  "label": "Minor",
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "type": "기획서 수정",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "type": "성능",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 1
+                }
+              ]
             }
           ],
           "daily": [
@@ -24378,6 +25530,38 @@
               "previousRate": 100.0
             }
           ],
+          "typeRows": [
+            {
+              "type": "기능",
+              "total": 3,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 3
+                }
+              ]
+            },
+            {
+              "type": "정책 불일치",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "type": "텍스트",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 1
+                }
+              ]
+            }
+          ],
           "daily": [
             {
               "date": "2026-07-13",
@@ -24788,6 +25972,112 @@
               "previousRate": 100.0
             }
           ],
+          "typeRows": [
+            {
+              "type": "UX/UI",
+              "total": 42,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 2
+                },
+                {
+                  "label": "Minor",
+                  "count": 40
+                }
+              ]
+            },
+            {
+              "type": "기능",
+              "total": 28,
+              "severity": [
+                {
+                  "label": "Critical",
+                  "count": 1
+                },
+                {
+                  "label": "Major",
+                  "count": 9
+                },
+                {
+                  "label": "Minor",
+                  "count": 18
+                }
+              ]
+            },
+            {
+              "type": "정책 불일치",
+              "total": 12,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 2
+                },
+                {
+                  "label": "Minor",
+                  "count": 10
+                }
+              ]
+            },
+            {
+              "type": "텍스트",
+              "total": 8,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 8
+                }
+              ]
+            },
+            {
+              "type": "성능",
+              "total": 6,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 2
+                },
+                {
+                  "label": "Minor",
+                  "count": 4
+                }
+              ]
+            },
+            {
+              "type": "접근성",
+              "total": 3,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 1
+                },
+                {
+                  "label": "Minor",
+                  "count": 2
+                }
+              ]
+            },
+            {
+              "type": "결함 아님",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "type": "미지정",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 1
+                }
+              ]
+            }
+          ],
           "daily": [
             {
               "date": "2026-05-12",
@@ -24832,7 +26122,7 @@
             {
               "date": "2026-05-20",
               "registered": 90,
-              "fixed": 25
+              "fixed": 24
             },
             {
               "date": "2026-05-21",
@@ -24887,12 +26177,12 @@
             {
               "date": "2026-05-31",
               "registered": 95,
-              "fixed": 76
+              "fixed": 75
             },
             {
               "date": "2026-06-01",
               "registered": 101,
-              "fixed": 91
+              "fixed": 89
             },
             {
               "date": "2026-06-02",
@@ -25508,6 +26798,18 @@
               "previousRate": 0
             }
           ],
+          "typeRows": [
+            {
+              "type": "미지정",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "미지정",
+                  "count": 1
+                }
+              ]
+            }
+          ],
           "daily": [
             {
               "date": "2026-09-21",
@@ -25566,6 +26868,18 @@
               "total": 2,
               "rate": 100.0,
               "previousRate": 100.0
+            }
+          ],
+          "typeRows": [
+            {
+              "type": "UX/UI",
+              "total": 2,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 2
+                }
+              ]
             }
           ],
           "daily": [
@@ -25661,6 +26975,32 @@
               "total": 4,
               "rate": 25.0,
               "previousRate": 25.0
+            }
+          ],
+          "typeRows": [
+            {
+              "type": "기능",
+              "total": 3,
+              "severity": [
+                {
+                  "label": "Critical",
+                  "count": 2
+                },
+                {
+                  "label": "Major",
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "type": "데이터 정합성",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Critical",
+                  "count": 1
+                }
+              ]
             }
           ],
           "daily": [
@@ -26103,6 +27443,18 @@
               "previousRate": 100.0
             }
           ],
+          "typeRows": [
+            {
+              "type": "UX/UI",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 1
+                }
+              ]
+            }
+          ],
           "daily": [
             {
               "date": "2026-08-31",
@@ -26266,6 +27618,42 @@
               "total": 5,
               "rate": 0.0,
               "previousRate": 0.0
+            }
+          ],
+          "typeRows": [
+            {
+              "type": "기능",
+              "total": 3,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 2
+                },
+                {
+                  "label": "Minor",
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "type": "UX/UI",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "type": "접근성",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 1
+                }
+              ]
             }
           ],
           "daily": [
@@ -26988,6 +28376,90 @@
               "previousRate": 100.0
             }
           ],
+          "typeRows": [
+            {
+              "type": "기능",
+              "total": 31,
+              "severity": [
+                {
+                  "label": "Critical",
+                  "count": 5
+                },
+                {
+                  "label": "Major",
+                  "count": 23
+                },
+                {
+                  "label": "Minor",
+                  "count": 3
+                }
+              ]
+            },
+            {
+              "type": "텍스트",
+              "total": 9,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 9
+                }
+              ]
+            },
+            {
+              "type": "정책 불일치",
+              "total": 3,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 2
+                },
+                {
+                  "label": "Minor",
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "type": "미지정",
+              "total": 2,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 2
+                }
+              ]
+            },
+            {
+              "type": "UX/UI",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "type": "개선의견",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "개선 의견",
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "type": "데이터 정합성",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 1
+                }
+              ]
+            }
+          ],
           "daily": [
             {
               "date": "2026-08-18",
@@ -27218,6 +28690,140 @@
               "previousRate": 92.3
             }
           ],
+          "typeRows": [
+            {
+              "type": "UX/UI",
+              "total": 71,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 5
+                },
+                {
+                  "label": "Minor",
+                  "count": 66
+                }
+              ]
+            },
+            {
+              "type": "기능",
+              "total": 58,
+              "severity": [
+                {
+                  "label": "Critical",
+                  "count": 6
+                },
+                {
+                  "label": "Major",
+                  "count": 46
+                },
+                {
+                  "label": "Minor",
+                  "count": 6
+                }
+              ]
+            },
+            {
+              "type": "정책 불일치",
+              "total": 49,
+              "severity": [
+                {
+                  "label": "Critical",
+                  "count": 2
+                },
+                {
+                  "label": "Major",
+                  "count": 19
+                },
+                {
+                  "label": "Minor",
+                  "count": 28
+                }
+              ]
+            },
+            {
+              "type": "텍스트",
+              "total": 29,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 1
+                },
+                {
+                  "label": "Minor",
+                  "count": 28
+                }
+              ]
+            },
+            {
+              "type": "기획서 수정",
+              "total": 4,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 1
+                },
+                {
+                  "label": "Minor",
+                  "count": 3
+                }
+              ]
+            },
+            {
+              "type": "데이터 정합성",
+              "total": 4,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 3
+                },
+                {
+                  "label": "Minor",
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "type": "다국어",
+              "total": 3,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 3
+                }
+              ]
+            },
+            {
+              "type": "결함 아님",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "type": "미지정",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "type": "성능",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 1
+                }
+              ]
+            }
+          ],
           "daily": [
             {
               "date": "2026-08-20",
@@ -27438,6 +29044,92 @@
               "previousRate": 80.6
             }
           ],
+          "typeRows": [
+            {
+              "type": "정책 불일치",
+              "total": 23,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 6
+                },
+                {
+                  "label": "Minor",
+                  "count": 17
+                }
+              ]
+            },
+            {
+              "type": "UX/UI",
+              "total": 18,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 5
+                },
+                {
+                  "label": "Minor",
+                  "count": 12
+                },
+                {
+                  "label": "개선 의견",
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "type": "기능",
+              "total": 17,
+              "severity": [
+                {
+                  "label": "Critical",
+                  "count": 1
+                },
+                {
+                  "label": "Major",
+                  "count": 15
+                },
+                {
+                  "label": "Minor",
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "type": "텍스트",
+              "total": 9,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 9
+                }
+              ]
+            },
+            {
+              "type": "다국어",
+              "total": 4,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 1
+                },
+                {
+                  "label": "Minor",
+                  "count": 3
+                }
+              ]
+            },
+            {
+              "type": "데이터 정합성",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 1
+                }
+              ]
+            }
+          ],
           "daily": [
             {
               "date": "2026-08-21",
@@ -27496,12 +29188,12 @@
             },
             {
               "date": "2026-09-01",
-              "registered": 27,
+              "registered": 26,
               "fixed": 0
             },
             {
               "date": "2026-09-02",
-              "registered": 34,
+              "registered": 33,
               "fixed": 1
             },
             {
@@ -27651,6 +29343,70 @@
               "total": 29,
               "rate": 3.4,
               "previousRate": 3.4
+            }
+          ],
+          "typeRows": [
+            {
+              "type": "UX/UI",
+              "total": 13,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 3
+                },
+                {
+                  "label": "Minor",
+                  "count": 10
+                }
+              ]
+            },
+            {
+              "type": "텍스트",
+              "total": 6,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 6
+                }
+              ]
+            },
+            {
+              "type": "기능",
+              "total": 5,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 1
+                },
+                {
+                  "label": "Minor",
+                  "count": 4
+                }
+              ]
+            },
+            {
+              "type": "정책 불일치",
+              "total": 4,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 1
+                },
+                {
+                  "label": "Minor",
+                  "count": 3
+                }
+              ]
+            },
+            {
+              "type": "미지정",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 1
+                }
+              ]
             }
           ],
           "daily": [
@@ -27868,6 +29624,32 @@
               "previousRate": 100.0
             }
           ],
+          "typeRows": [
+            {
+              "type": "텍스트",
+              "total": 10,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 1
+                },
+                {
+                  "label": "Minor",
+                  "count": 9
+                }
+              ]
+            },
+            {
+              "type": "기능",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 1
+                }
+              ]
+            }
+          ],
           "daily": [
             {
               "date": "2026-08-11",
@@ -27876,7 +29658,7 @@
             },
             {
               "date": "2026-08-12",
-              "registered": 11,
+              "registered": 6,
               "fixed": 0
             },
             {
@@ -28131,6 +29913,18 @@
               "total": 3,
               "rate": 100.0,
               "previousRate": 100.0
+            }
+          ],
+          "typeRows": [
+            {
+              "type": "기능",
+              "total": 3,
+              "severity": [
+                {
+                  "label": "Critical",
+                  "count": 3
+                }
+              ]
             }
           ],
           "daily": [
@@ -28578,6 +30372,98 @@
               "previousRate": 99.2
             }
           ],
+          "typeRows": [
+            {
+              "type": "기능",
+              "total": 43,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 37
+                },
+                {
+                  "label": "Minor",
+                  "count": 6
+                }
+              ]
+            },
+            {
+              "type": "텍스트",
+              "total": 30,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 30
+                }
+              ]
+            },
+            {
+              "type": "정책 불일치",
+              "total": 26,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 16
+                },
+                {
+                  "label": "Minor",
+                  "count": 10
+                }
+              ]
+            },
+            {
+              "type": "UX/UI",
+              "total": 12,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 1
+                },
+                {
+                  "label": "Minor",
+                  "count": 11
+                }
+              ]
+            },
+            {
+              "type": "기획서 수정",
+              "total": 6,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 3
+                },
+                {
+                  "label": "Minor",
+                  "count": 3
+                }
+              ]
+            },
+            {
+              "type": "예외 케이스 미처리",
+              "total": 3,
+              "severity": [
+                {
+                  "label": "Critical",
+                  "count": 1
+                },
+                {
+                  "label": "Major",
+                  "count": 2
+                }
+              ]
+            },
+            {
+              "type": "다국어",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 1
+                }
+              ]
+            }
+          ],
           "daily": [
             {
               "date": "2026-08-04",
@@ -28586,7 +30472,7 @@
             },
             {
               "date": "2026-08-05",
-              "registered": 55,
+              "registered": 54,
               "fixed": 0
             },
             {
@@ -28762,7 +30648,7 @@
             {
               "date": "2026-09-09",
               "registered": 121,
-              "fixed": 113
+              "fixed": 112
             },
             {
               "date": "2026-09-10",
@@ -28878,12 +30764,99 @@
               "previousRate": 97.7
             }
           ],
-          "daily": [
+          "typeRows": [
             {
-              "date": "2026-08-30",
-              "registered": 1,
-              "fixed": 0
+              "type": "정책 불일치",
+              "total": 38,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 14
+                },
+                {
+                  "label": "Minor",
+                  "count": 24
+                }
+              ]
             },
+            {
+              "type": "기능",
+              "total": 37,
+              "severity": [
+                {
+                  "label": "Critical",
+                  "count": 6
+                },
+                {
+                  "label": "Major",
+                  "count": 29
+                },
+                {
+                  "label": "Minor",
+                  "count": 2
+                }
+              ]
+            },
+            {
+              "type": "UX/UI",
+              "total": 28,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 5
+                },
+                {
+                  "label": "Minor",
+                  "count": 23
+                }
+              ]
+            },
+            {
+              "type": "텍스트",
+              "total": 14,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 14
+                }
+              ]
+            },
+            {
+              "type": "다국어",
+              "total": 7,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 7
+                }
+              ]
+            },
+            {
+              "type": "기획서 수정",
+              "total": 5,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 1
+                },
+                {
+                  "label": "Minor",
+                  "count": 4
+                }
+              ]
+            },
+            {
+              "type": "개선의견",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 1
+                }
+              ]
+            }
+          ],
+          "daily": [
             {
               "date": "2026-08-31",
               "registered": 30,
@@ -28932,7 +30905,7 @@
             {
               "date": "2026-09-09",
               "registered": 117,
-              "fixed": 56
+              "fixed": 54
             },
             {
               "date": "2026-09-10",
@@ -28952,7 +30925,7 @@
             {
               "date": "2026-09-13",
               "registered": 127,
-              "fixed": 116
+              "fixed": 115
             },
             {
               "date": "2026-09-14",
@@ -29046,6 +31019,18 @@
               "total": 1,
               "rate": 100.0,
               "previousRate": 100.0
+            }
+          ],
+          "typeRows": [
+            {
+              "type": "UX/UI",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 1
+                }
+              ]
             }
           ],
           "daily": [
@@ -29206,6 +31191,38 @@
               "total": 3,
               "rate": 100.0,
               "previousRate": 100.0
+            }
+          ],
+          "typeRows": [
+            {
+              "type": "UX/UI",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "type": "결함 아님",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "type": "미지정",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "미지정",
+                  "count": 1
+                }
+              ]
             }
           ],
           "daily": [
@@ -30866,6 +32883,18 @@
               "total": 10,
               "rate": 70.0,
               "previousRate": 70.0
+            }
+          ],
+          "typeRows": [
+            {
+              "type": "미지정",
+              "total": 10,
+              "severity": [
+                {
+                  "label": "미지정",
+                  "count": 10
+                }
+              ]
             }
           ],
           "daily": [
@@ -33163,6 +35192,18 @@
               "previousRate": 0.0
             }
           ],
+          "typeRows": [
+            {
+              "type": "미지정",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 1
+                }
+              ]
+            }
+          ],
           "daily": [
             {
               "date": "2026-05-12",
@@ -33881,6 +35922,58 @@
               "total": 14,
               "rate": 14.3,
               "previousRate": 14.3
+            }
+          ],
+          "typeRows": [
+            {
+              "type": "다국어",
+              "total": 6,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 6
+                }
+              ]
+            },
+            {
+              "type": "UX/UI",
+              "total": 3,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 3
+                }
+              ]
+            },
+            {
+              "type": "기능",
+              "total": 3,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 3
+                }
+              ]
+            },
+            {
+              "type": "미지정",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "미지정",
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "type": "텍스트",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 1
+                }
+              ]
             }
           ],
           "daily": [
@@ -34622,45 +36715,45 @@
         },
         {
           "date": "2026-08-30",
-          "new": 1,
+          "new": 0,
           "fixed": 0,
           "closed": 0,
-          "deltaNew": 1
+          "deltaNew": 0
         },
         {
           "date": "2026-08-31",
-          "new": 37,
+          "new": 38,
           "fixed": 1,
           "closed": 1,
-          "deltaNew": 36
+          "deltaNew": 38
         },
         {
           "date": "2026-09-01",
-          "new": 36,
+          "new": 35,
           "fixed": 19,
           "closed": 19,
-          "deltaNew": -1
+          "deltaNew": -3
         },
         {
           "date": "2026-09-02",
           "new": 26,
           "fixed": 145,
           "closed": 145,
-          "deltaNew": -10
+          "deltaNew": -9
         },
         {
           "date": "2026-09-03",
-          "new": 24,
+          "new": 25,
           "fixed": 37,
           "closed": 37,
-          "deltaNew": -2
+          "deltaNew": -1
         },
         {
           "date": "2026-09-04",
           "new": 25,
           "fixed": 20,
           "closed": 20,
-          "deltaNew": 1
+          "deltaNew": 0
         },
         {
           "date": "2026-09-05",
@@ -34693,15 +36786,15 @@
         {
           "date": "2026-09-09",
           "new": 10,
-          "fixed": 167,
-          "closed": 62,
+          "fixed": 164,
+          "closed": 60,
           "deltaNew": 8
         },
         {
           "date": "2026-09-10",
           "new": 17,
-          "fixed": 67,
-          "closed": 64,
+          "fixed": 70,
+          "closed": 66,
           "deltaNew": 7
         },
         {
@@ -34721,15 +36814,15 @@
         {
           "date": "2026-09-13",
           "new": 0,
-          "fixed": 1,
-          "closed": 1,
+          "fixed": 0,
+          "closed": 0,
           "deltaNew": 0
         },
         {
           "date": "2026-09-14",
           "new": 15,
-          "fixed": 25,
-          "closed": 25,
+          "fixed": 26,
+          "closed": 26,
           "deltaNew": 15
         },
         {
@@ -34814,6 +36907,7 @@
           "status": "등록 (Registered)",
           "stage": "등록",
           "severity": "미지정",
+          "defectType": "미지정",
           "priority": "Medium",
           "assignee": "미지정",
           "version": "[G.H][Go.Hanpass][앱개편]",
@@ -34835,6 +36929,7 @@
           "status": "개발 완료 (Dev Done)",
           "stage": "종료",
           "severity": "Minor",
+          "defectType": "다국어",
           "priority": "Medium",
           "assignee": "미지정",
           "version": "[Hanpass][앱개편][Native]-LiveTest",
@@ -34856,6 +36951,7 @@
           "status": "등록 (Registered)",
           "stage": "등록",
           "severity": "Minor",
+          "defectType": "UX/UI",
           "priority": "Medium",
           "assignee": "미지정",
           "version": "[Hanpass][앱개편][Native]-LiveTest",
@@ -34877,6 +36973,7 @@
           "status": "등록 (Registered)",
           "stage": "등록",
           "severity": "Minor",
+          "defectType": "기능",
           "priority": "Medium",
           "assignee": "미지정",
           "version": "[Hanpass][앱개편][Native]-LiveTest",
@@ -34898,6 +36995,7 @@
           "status": "개발 완료 (Dev Done)",
           "stage": "종료",
           "severity": "Major",
+          "defectType": "UX/UI",
           "priority": "Medium",
           "assignee": "미지정",
           "version": "[Hanpass][앱개편][Native]-LiveTest",
@@ -34919,6 +37017,7 @@
           "status": "개발 완료 (Dev Done)",
           "stage": "종료",
           "severity": "Minor",
+          "defectType": "다국어",
           "priority": "Medium",
           "assignee": "미지정",
           "version": "[Hanpass][앱개편][Native]-LiveTest",
@@ -34940,6 +37039,7 @@
           "status": "완료 (Done)",
           "stage": "종료",
           "severity": "Major",
+          "defectType": "기능",
           "priority": "Medium",
           "assignee": "미지정",
           "version": "[콕뱅크]",
@@ -34961,6 +37061,7 @@
           "status": "등록 (Registered)",
           "stage": "등록",
           "severity": "Critical",
+          "defectType": "기능",
           "priority": "Medium",
           "assignee": "미지정",
           "version": "[G.H][교통카드]SDK변경",
@@ -34982,6 +37083,7 @@
           "status": "완료 (Done)",
           "stage": "종료",
           "severity": "Major",
+          "defectType": "UX/UI",
           "priority": "Medium",
           "assignee": "미지정",
           "version": "[콕뱅크]",
@@ -35003,6 +37105,7 @@
           "status": "완료 (Done)",
           "stage": "종료",
           "severity": "Major",
+          "defectType": "UX/UI",
           "priority": "Medium",
           "assignee": "미지정",
           "version": "[콕뱅크]",
@@ -35126,45 +37229,45 @@
         },
         {
           "date": "2026-08-30",
-          "new": 1,
+          "new": 0,
           "fixed": 0,
           "closed": 0,
-          "deltaNew": 1
+          "deltaNew": 0
         },
         {
           "date": "2026-08-31",
-          "new": 36,
+          "new": 37,
           "fixed": 1,
           "closed": 1,
-          "deltaNew": 35
+          "deltaNew": 37
         },
         {
           "date": "2026-09-01",
-          "new": 36,
+          "new": 35,
           "fixed": 19,
           "closed": 19,
-          "deltaNew": 0
+          "deltaNew": -2
         },
         {
           "date": "2026-09-02",
           "new": 26,
           "fixed": 145,
           "closed": 145,
-          "deltaNew": -10
+          "deltaNew": -9
         },
         {
           "date": "2026-09-03",
-          "new": 24,
+          "new": 25,
           "fixed": 37,
           "closed": 37,
-          "deltaNew": -2
+          "deltaNew": -1
         },
         {
           "date": "2026-09-04",
           "new": 25,
           "fixed": 20,
           "closed": 20,
-          "deltaNew": 1
+          "deltaNew": 0
         },
         {
           "date": "2026-09-05",
@@ -35197,15 +37300,15 @@
         {
           "date": "2026-09-09",
           "new": 10,
-          "fixed": 166,
-          "closed": 61,
+          "fixed": 163,
+          "closed": 59,
           "deltaNew": 8
         },
         {
           "date": "2026-09-10",
           "new": 17,
-          "fixed": 67,
-          "closed": 64,
+          "fixed": 70,
+          "closed": 66,
           "deltaNew": 7
         },
         {
@@ -35225,15 +37328,15 @@
         {
           "date": "2026-09-13",
           "new": 0,
-          "fixed": 1,
-          "closed": 1,
+          "fixed": 0,
+          "closed": 0,
           "deltaNew": 0
         },
         {
           "date": "2026-09-14",
           "new": 13,
-          "fixed": 23,
-          "closed": 23,
+          "fixed": 24,
+          "closed": 24,
           "deltaNew": 13
         },
         {
@@ -36461,6 +38564,60 @@
               "previousRate": 9.1
             }
           ],
+          "typeRows": [
+            {
+              "type": "기능",
+              "total": 6,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 4
+                },
+                {
+                  "label": "Minor",
+                  "count": 1
+                },
+                {
+                  "label": "개선 의견",
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "type": "정책 불일치",
+              "total": 2,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 1
+                },
+                {
+                  "label": "Minor",
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "type": "텍스트",
+              "total": 2,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 2
+                }
+              ]
+            },
+            {
+              "type": "UX/UI",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 1
+                }
+              ]
+            }
+          ],
           "daily": [
             {
               "date": "2026-07-30",
@@ -36786,6 +38943,38 @@
               "previousRate": 28.6
             }
           ],
+          "typeRows": [
+            {
+              "type": "텍스트",
+              "total": 4,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 4
+                }
+              ]
+            },
+            {
+              "type": "UX/UI",
+              "total": 2,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 2
+                }
+              ]
+            },
+            {
+              "type": "기능",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 1
+                }
+              ]
+            }
+          ],
           "daily": [
             {
               "date": "2026-08-25",
@@ -36979,6 +39168,80 @@
               "total": 20,
               "rate": 100.0,
               "previousRate": 100.0
+            }
+          ],
+          "typeRows": [
+            {
+              "type": "UX/UI",
+              "total": 5,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 2
+                },
+                {
+                  "label": "Minor",
+                  "count": 3
+                }
+              ]
+            },
+            {
+              "type": "기능",
+              "total": 5,
+              "severity": [
+                {
+                  "label": "Critical",
+                  "count": 1
+                },
+                {
+                  "label": "Major",
+                  "count": 4
+                }
+              ]
+            },
+            {
+              "type": "다국어",
+              "total": 3,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 3
+                }
+              ]
+            },
+            {
+              "type": "정책 불일치",
+              "total": 3,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 2
+                },
+                {
+                  "label": "Minor",
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "type": "텍스트",
+              "total": 3,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 3
+                }
+              ]
+            },
+            {
+              "type": "접근성",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 1
+                }
+              ]
             }
           ],
           "daily": [
@@ -37346,6 +39609,28 @@
               "previousRate": 100.0
             }
           ],
+          "typeRows": [
+            {
+              "type": "텍스트",
+              "total": 2,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 2
+                }
+              ]
+            },
+            {
+              "type": "기획서 수정",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 1
+                }
+              ]
+            }
+          ],
           "daily": [
             {
               "date": "2026-07-22",
@@ -37709,6 +39994,48 @@
               "total": 26,
               "rate": 100.0,
               "previousRate": 100.0
+            }
+          ],
+          "typeRows": [
+            {
+              "type": "다국어",
+              "total": 13,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 13
+                }
+              ]
+            },
+            {
+              "type": "기능",
+              "total": 7,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 7
+                }
+              ]
+            },
+            {
+              "type": "UX/UI",
+              "total": 3,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 3
+                }
+              ]
+            },
+            {
+              "type": "텍스트",
+              "total": 3,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 3
+                }
+              ]
             }
           ],
           "daily": [
@@ -38254,6 +40581,64 @@
               "total": 34,
               "rate": 97.1,
               "previousRate": 97.1
+            }
+          ],
+          "typeRows": [
+            {
+              "type": "기능",
+              "total": 11,
+              "severity": [
+                {
+                  "label": "Critical",
+                  "count": 1
+                },
+                {
+                  "label": "Major",
+                  "count": 7
+                },
+                {
+                  "label": "Minor",
+                  "count": 3
+                }
+              ]
+            },
+            {
+              "type": "텍스트",
+              "total": 10,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 10
+                }
+              ]
+            },
+            {
+              "type": "UX/UI",
+              "total": 9,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 1
+                },
+                {
+                  "label": "Minor",
+                  "count": 8
+                }
+              ]
+            },
+            {
+              "type": "접근성",
+              "total": 4,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 2
+                },
+                {
+                  "label": "Minor",
+                  "count": 2
+                }
+              ]
             }
           ],
           "daily": [
@@ -38891,6 +41276,62 @@
               "previousRate": 100.0
             }
           ],
+          "typeRows": [
+            {
+              "type": "UX/UI",
+              "total": 3,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 3
+                }
+              ]
+            },
+            {
+              "type": "다국어",
+              "total": 2,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 2
+                }
+              ]
+            },
+            {
+              "type": "접근성",
+              "total": 2,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 1
+                },
+                {
+                  "label": "Minor",
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "type": "기능",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "type": "성능",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 1
+                }
+              ]
+            }
+          ],
           "daily": [
             {
               "date": "2026-05-08",
@@ -39015,7 +41456,7 @@
             {
               "date": "2026-06-01",
               "registered": 9,
-              "fixed": 4
+              "fixed": 0
             },
             {
               "date": "2026-06-02",
@@ -39631,6 +42072,130 @@
               "previousRate": 96.6
             }
           ],
+          "typeRows": [
+            {
+              "type": "UX/UI",
+              "total": 44,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 3
+                },
+                {
+                  "label": "Minor",
+                  "count": 39
+                },
+                {
+                  "label": "개선 의견",
+                  "count": 2
+                }
+              ]
+            },
+            {
+              "type": "기능",
+              "total": 35,
+              "severity": [
+                {
+                  "label": "Critical",
+                  "count": 9
+                },
+                {
+                  "label": "Major",
+                  "count": 19
+                },
+                {
+                  "label": "Minor",
+                  "count": 7
+                }
+              ]
+            },
+            {
+              "type": "기획서 수정",
+              "total": 12,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 6
+                },
+                {
+                  "label": "Minor",
+                  "count": 6
+                }
+              ]
+            },
+            {
+              "type": "다국어",
+              "total": 12,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 1
+                },
+                {
+                  "label": "Minor",
+                  "count": 11
+                }
+              ]
+            },
+            {
+              "type": "텍스트",
+              "total": 5,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 5
+                }
+              ]
+            },
+            {
+              "type": "성능",
+              "total": 3,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 2
+                },
+                {
+                  "label": "Minor",
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "type": "접근성",
+              "total": 3,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 2
+                },
+                {
+                  "label": "Minor",
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "type": "정책 불일치",
+              "total": 2,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 2
+                }
+              ]
+            },
+            {
+              "type": "결함 아님",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 1
+                }
+              ]
+            }
+          ],
           "daily": [
             {
               "date": "2026-04-29",
@@ -39690,7 +42255,7 @@
             {
               "date": "2026-05-10",
               "registered": 102,
-              "fixed": 10
+              "fixed": 9
             },
             {
               "date": "2026-05-11",
@@ -40414,6 +42979,50 @@
               "total": 82,
               "rate": 97.6,
               "previousRate": 97.6
+            }
+          ],
+          "typeRows": [
+            {
+              "type": "UX/UI",
+              "total": 39,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 6
+                },
+                {
+                  "label": "Minor",
+                  "count": 33
+                }
+              ]
+            },
+            {
+              "type": "기능",
+              "total": 24,
+              "severity": [
+                {
+                  "label": "Critical",
+                  "count": 7
+                },
+                {
+                  "label": "Major",
+                  "count": 6
+                },
+                {
+                  "label": "Minor",
+                  "count": 11
+                }
+              ]
+            },
+            {
+              "type": "텍스트",
+              "total": 19,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 19
+                }
+              ]
             }
           ],
           "daily": [
@@ -41349,6 +43958,32 @@
               "total": 24,
               "rate": 79.2,
               "previousRate": 79.2
+            }
+          ],
+          "typeRows": [
+            {
+              "type": "UX/UI",
+              "total": 19,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 19
+                }
+              ]
+            },
+            {
+              "type": "기능",
+              "total": 5,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 3
+                },
+                {
+                  "label": "Minor",
+                  "count": 2
+                }
+              ]
             }
           ],
           "daily": [
@@ -42601,6 +45236,120 @@
               "previousRate": 84.5
             }
           ],
+          "typeRows": [
+            {
+              "type": "UX/UI",
+              "total": 58,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 5
+                },
+                {
+                  "label": "Minor",
+                  "count": 50
+                },
+                {
+                  "label": "개선 의견",
+                  "count": 3
+                }
+              ]
+            },
+            {
+              "type": "기능",
+              "total": 31,
+              "severity": [
+                {
+                  "label": "Critical",
+                  "count": 3
+                },
+                {
+                  "label": "Major",
+                  "count": 14
+                },
+                {
+                  "label": "Minor",
+                  "count": 13
+                },
+                {
+                  "label": "개선 의견",
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "type": "접근성",
+              "total": 6,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 1
+                },
+                {
+                  "label": "Minor",
+                  "count": 4
+                },
+                {
+                  "label": "개선 의견",
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "type": "성능",
+              "total": 3,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 3
+                }
+              ]
+            },
+            {
+              "type": "텍스트",
+              "total": 2,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 1
+                },
+                {
+                  "label": "개선 의견",
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "type": "결함 아님",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "개선 의견",
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "type": "데이터 정합성",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "type": "미지정",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 1
+                }
+              ]
+            }
+          ],
           "daily": [
             {
               "date": "2026-01-08",
@@ -42704,7 +45453,7 @@
             },
             {
               "date": "2026-01-28",
-              "registered": 43,
+              "registered": 42,
               "fixed": 0
             },
             {
@@ -42730,7 +45479,7 @@
             {
               "date": "2026-02-02",
               "registered": 60,
-              "fixed": 7
+              "fixed": 3
             },
             {
               "date": "2026-02-03",
@@ -43939,6 +46688,96 @@
               "total": 68,
               "rate": 86.8,
               "previousRate": 86.8
+            }
+          ],
+          "typeRows": [
+            {
+              "type": "UX/UI",
+              "total": 32,
+              "severity": [
+                {
+                  "label": "Critical",
+                  "count": 1
+                },
+                {
+                  "label": "Major",
+                  "count": 2
+                },
+                {
+                  "label": "Minor",
+                  "count": 25
+                },
+                {
+                  "label": "미지정",
+                  "count": 2
+                },
+                {
+                  "label": "개선 의견",
+                  "count": 2
+                }
+              ]
+            },
+            {
+              "type": "기능",
+              "total": 28,
+              "severity": [
+                {
+                  "label": "Critical",
+                  "count": 6
+                },
+                {
+                  "label": "Major",
+                  "count": 19
+                },
+                {
+                  "label": "Minor",
+                  "count": 3
+                }
+              ]
+            },
+            {
+              "type": "데이터 정합성",
+              "total": 5,
+              "severity": [
+                {
+                  "label": "Critical",
+                  "count": 1
+                },
+                {
+                  "label": "Major",
+                  "count": 4
+                }
+              ]
+            },
+            {
+              "type": "결함 아님",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "개선 의견",
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "type": "보안",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "type": "텍스트",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Critical",
+                  "count": 1
+                }
+              ]
             }
           ],
           "daily": [
@@ -45394,6 +48233,42 @@
               "total": 4,
               "rate": 75.0,
               "previousRate": 75.0
+            }
+          ],
+          "typeRows": [
+            {
+              "type": "UX/UI",
+              "total": 2,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 1
+                },
+                {
+                  "label": "개선 의견",
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "type": "성능",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "type": "접근성",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 1
+                }
+              ]
             }
           ],
           "daily": [
@@ -46919,6 +49794,96 @@
               "total": 35,
               "rate": 88.6,
               "previousRate": 88.6
+            }
+          ],
+          "typeRows": [
+            {
+              "type": "UX/UI",
+              "total": 18,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 1
+                },
+                {
+                  "label": "Minor",
+                  "count": 12
+                },
+                {
+                  "label": "개선 의견",
+                  "count": 5
+                }
+              ]
+            },
+            {
+              "type": "기능",
+              "total": 8,
+              "severity": [
+                {
+                  "label": "Critical",
+                  "count": 1
+                },
+                {
+                  "label": "Major",
+                  "count": 5
+                },
+                {
+                  "label": "Minor",
+                  "count": 1
+                },
+                {
+                  "label": "개선 의견",
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "type": "접근성",
+              "total": 4,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 2
+                },
+                {
+                  "label": "Minor",
+                  "count": 2
+                }
+              ]
+            },
+            {
+              "type": "미지정",
+              "total": 2,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 1
+                },
+                {
+                  "label": "개선 의견",
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "type": "성능",
+              "total": 2,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 2
+                }
+              ]
+            },
+            {
+              "type": "예외 케이스 미처리",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 1
+                }
+              ]
             }
           ],
           "daily": [
@@ -48579,6 +51544,32 @@
               "total": 4,
               "rate": 100.0,
               "previousRate": 100.0
+            }
+          ],
+          "typeRows": [
+            {
+              "type": "미지정",
+              "total": 3,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 2
+                },
+                {
+                  "label": "미지정",
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "type": "예외 케이스 미처리",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 1
+                }
+              ]
             }
           ],
           "daily": [
@@ -50269,6 +53260,18 @@
               "total": 3,
               "rate": 100.0,
               "previousRate": 100.0
+            }
+          ],
+          "typeRows": [
+            {
+              "type": "미지정",
+              "total": 3,
+              "severity": [
+                {
+                  "label": "미지정",
+                  "count": 3
+                }
+              ]
             }
           ],
           "daily": [
@@ -52251,6 +55254,18 @@
               "previousRate": 81.5
             }
           ],
+          "typeRows": [
+            {
+              "type": "미지정",
+              "total": 27,
+              "severity": [
+                {
+                  "label": "미지정",
+                  "count": 27
+                }
+              ]
+            }
+          ],
           "daily": [
             {
               "date": "2025-08-05",
@@ -52384,7 +55399,7 @@
             },
             {
               "date": "2025-08-31",
-              "registered": 27,
+              "registered": 26,
               "fixed": 0
             },
             {
@@ -54369,6 +57384,18 @@
               "total": 33,
               "rate": 90.9,
               "previousRate": 90.9
+            }
+          ],
+          "typeRows": [
+            {
+              "type": "미지정",
+              "total": 33,
+              "severity": [
+                {
+                  "label": "미지정",
+                  "count": 33
+                }
+              ]
             }
           ],
           "daily": [
@@ -56666,6 +59693,90 @@
               "previousRate": 100.0
             }
           ],
+          "typeRows": [
+            {
+              "type": "기능",
+              "total": 31,
+              "severity": [
+                {
+                  "label": "Critical",
+                  "count": 5
+                },
+                {
+                  "label": "Major",
+                  "count": 23
+                },
+                {
+                  "label": "Minor",
+                  "count": 3
+                }
+              ]
+            },
+            {
+              "type": "텍스트",
+              "total": 9,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 9
+                }
+              ]
+            },
+            {
+              "type": "정책 불일치",
+              "total": 3,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 2
+                },
+                {
+                  "label": "Minor",
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "type": "미지정",
+              "total": 2,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 2
+                }
+              ]
+            },
+            {
+              "type": "UX/UI",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "type": "개선의견",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "개선 의견",
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "type": "데이터 정합성",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 1
+                }
+              ]
+            }
+          ],
           "daily": [
             {
               "date": "2026-08-18",
@@ -56896,6 +60007,140 @@
               "previousRate": 92.3
             }
           ],
+          "typeRows": [
+            {
+              "type": "UX/UI",
+              "total": 71,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 5
+                },
+                {
+                  "label": "Minor",
+                  "count": 66
+                }
+              ]
+            },
+            {
+              "type": "기능",
+              "total": 58,
+              "severity": [
+                {
+                  "label": "Critical",
+                  "count": 6
+                },
+                {
+                  "label": "Major",
+                  "count": 46
+                },
+                {
+                  "label": "Minor",
+                  "count": 6
+                }
+              ]
+            },
+            {
+              "type": "정책 불일치",
+              "total": 49,
+              "severity": [
+                {
+                  "label": "Critical",
+                  "count": 2
+                },
+                {
+                  "label": "Major",
+                  "count": 19
+                },
+                {
+                  "label": "Minor",
+                  "count": 28
+                }
+              ]
+            },
+            {
+              "type": "텍스트",
+              "total": 29,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 1
+                },
+                {
+                  "label": "Minor",
+                  "count": 28
+                }
+              ]
+            },
+            {
+              "type": "기획서 수정",
+              "total": 4,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 1
+                },
+                {
+                  "label": "Minor",
+                  "count": 3
+                }
+              ]
+            },
+            {
+              "type": "데이터 정합성",
+              "total": 4,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 3
+                },
+                {
+                  "label": "Minor",
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "type": "다국어",
+              "total": 3,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 3
+                }
+              ]
+            },
+            {
+              "type": "결함 아님",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "type": "미지정",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "type": "성능",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 1
+                }
+              ]
+            }
+          ],
           "daily": [
             {
               "date": "2026-08-20",
@@ -57116,6 +60361,92 @@
               "previousRate": 80.6
             }
           ],
+          "typeRows": [
+            {
+              "type": "정책 불일치",
+              "total": 23,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 6
+                },
+                {
+                  "label": "Minor",
+                  "count": 17
+                }
+              ]
+            },
+            {
+              "type": "UX/UI",
+              "total": 18,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 5
+                },
+                {
+                  "label": "Minor",
+                  "count": 12
+                },
+                {
+                  "label": "개선 의견",
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "type": "기능",
+              "total": 17,
+              "severity": [
+                {
+                  "label": "Critical",
+                  "count": 1
+                },
+                {
+                  "label": "Major",
+                  "count": 15
+                },
+                {
+                  "label": "Minor",
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "type": "텍스트",
+              "total": 9,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 9
+                }
+              ]
+            },
+            {
+              "type": "다국어",
+              "total": 4,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 1
+                },
+                {
+                  "label": "Minor",
+                  "count": 3
+                }
+              ]
+            },
+            {
+              "type": "데이터 정합성",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 1
+                }
+              ]
+            }
+          ],
           "daily": [
             {
               "date": "2026-08-21",
@@ -57174,12 +60505,12 @@
             },
             {
               "date": "2026-09-01",
-              "registered": 27,
+              "registered": 26,
               "fixed": 0
             },
             {
               "date": "2026-09-02",
-              "registered": 34,
+              "registered": 33,
               "fixed": 1
             },
             {
@@ -57329,6 +60660,70 @@
               "total": 29,
               "rate": 3.4,
               "previousRate": 3.4
+            }
+          ],
+          "typeRows": [
+            {
+              "type": "UX/UI",
+              "total": 13,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 3
+                },
+                {
+                  "label": "Minor",
+                  "count": 10
+                }
+              ]
+            },
+            {
+              "type": "텍스트",
+              "total": 6,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 6
+                }
+              ]
+            },
+            {
+              "type": "기능",
+              "total": 5,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 1
+                },
+                {
+                  "label": "Minor",
+                  "count": 4
+                }
+              ]
+            },
+            {
+              "type": "정책 불일치",
+              "total": 4,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 1
+                },
+                {
+                  "label": "Minor",
+                  "count": 3
+                }
+              ]
+            },
+            {
+              "type": "미지정",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 1
+                }
+              ]
             }
           ],
           "daily": [
@@ -57546,6 +60941,32 @@
               "previousRate": 100.0
             }
           ],
+          "typeRows": [
+            {
+              "type": "텍스트",
+              "total": 10,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 1
+                },
+                {
+                  "label": "Minor",
+                  "count": 9
+                }
+              ]
+            },
+            {
+              "type": "기능",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 1
+                }
+              ]
+            }
+          ],
           "daily": [
             {
               "date": "2026-08-11",
@@ -57554,7 +60975,7 @@
             },
             {
               "date": "2026-08-12",
-              "registered": 11,
+              "registered": 6,
               "fixed": 0
             },
             {
@@ -57809,6 +61230,18 @@
               "total": 3,
               "rate": 100.0,
               "previousRate": 100.0
+            }
+          ],
+          "typeRows": [
+            {
+              "type": "기능",
+              "total": 3,
+              "severity": [
+                {
+                  "label": "Critical",
+                  "count": 3
+                }
+              ]
             }
           ],
           "daily": [
@@ -58256,6 +61689,98 @@
               "previousRate": 99.2
             }
           ],
+          "typeRows": [
+            {
+              "type": "기능",
+              "total": 43,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 37
+                },
+                {
+                  "label": "Minor",
+                  "count": 6
+                }
+              ]
+            },
+            {
+              "type": "텍스트",
+              "total": 30,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 30
+                }
+              ]
+            },
+            {
+              "type": "정책 불일치",
+              "total": 26,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 16
+                },
+                {
+                  "label": "Minor",
+                  "count": 10
+                }
+              ]
+            },
+            {
+              "type": "UX/UI",
+              "total": 12,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 1
+                },
+                {
+                  "label": "Minor",
+                  "count": 11
+                }
+              ]
+            },
+            {
+              "type": "기획서 수정",
+              "total": 6,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 3
+                },
+                {
+                  "label": "Minor",
+                  "count": 3
+                }
+              ]
+            },
+            {
+              "type": "예외 케이스 미처리",
+              "total": 3,
+              "severity": [
+                {
+                  "label": "Critical",
+                  "count": 1
+                },
+                {
+                  "label": "Major",
+                  "count": 2
+                }
+              ]
+            },
+            {
+              "type": "다국어",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 1
+                }
+              ]
+            }
+          ],
           "daily": [
             {
               "date": "2026-08-04",
@@ -58264,7 +61789,7 @@
             },
             {
               "date": "2026-08-05",
-              "registered": 55,
+              "registered": 54,
               "fixed": 0
             },
             {
@@ -58440,7 +61965,7 @@
             {
               "date": "2026-09-09",
               "registered": 121,
-              "fixed": 113
+              "fixed": 112
             },
             {
               "date": "2026-09-10",
@@ -58556,12 +62081,99 @@
               "previousRate": 97.7
             }
           ],
-          "daily": [
+          "typeRows": [
             {
-              "date": "2026-08-30",
-              "registered": 1,
-              "fixed": 0
+              "type": "정책 불일치",
+              "total": 38,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 14
+                },
+                {
+                  "label": "Minor",
+                  "count": 24
+                }
+              ]
             },
+            {
+              "type": "기능",
+              "total": 37,
+              "severity": [
+                {
+                  "label": "Critical",
+                  "count": 6
+                },
+                {
+                  "label": "Major",
+                  "count": 29
+                },
+                {
+                  "label": "Minor",
+                  "count": 2
+                }
+              ]
+            },
+            {
+              "type": "UX/UI",
+              "total": 28,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 5
+                },
+                {
+                  "label": "Minor",
+                  "count": 23
+                }
+              ]
+            },
+            {
+              "type": "텍스트",
+              "total": 14,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 14
+                }
+              ]
+            },
+            {
+              "type": "다국어",
+              "total": 7,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 7
+                }
+              ]
+            },
+            {
+              "type": "기획서 수정",
+              "total": 5,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 1
+                },
+                {
+                  "label": "Minor",
+                  "count": 4
+                }
+              ]
+            },
+            {
+              "type": "개선의견",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 1
+                }
+              ]
+            }
+          ],
+          "daily": [
             {
               "date": "2026-08-31",
               "registered": 30,
@@ -58610,7 +62222,7 @@
             {
               "date": "2026-09-09",
               "registered": 117,
-              "fixed": 56
+              "fixed": 54
             },
             {
               "date": "2026-09-10",
@@ -58630,7 +62242,7 @@
             {
               "date": "2026-09-13",
               "registered": 127,
-              "fixed": 116
+              "fixed": 115
             },
             {
               "date": "2026-09-14",
@@ -58724,6 +62336,18 @@
               "total": 1,
               "rate": 100.0,
               "previousRate": 100.0
+            }
+          ],
+          "typeRows": [
+            {
+              "type": "UX/UI",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 1
+                }
+              ]
             }
           ],
           "daily": [
@@ -58884,6 +62508,38 @@
               "total": 3,
               "rate": 100.0,
               "previousRate": 100.0
+            }
+          ],
+          "typeRows": [
+            {
+              "type": "UX/UI",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "type": "결함 아님",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "type": "미지정",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "미지정",
+                  "count": 1
+                }
+              ]
             }
           ],
           "daily": [
@@ -60544,6 +64200,18 @@
               "total": 10,
               "rate": 70.0,
               "previousRate": 70.0
+            }
+          ],
+          "typeRows": [
+            {
+              "type": "미지정",
+              "total": 10,
+              "severity": [
+                {
+                  "label": "미지정",
+                  "count": 10
+                }
+              ]
             }
           ],
           "daily": [
@@ -62841,6 +66509,58 @@
               "previousRate": 14.3
             }
           ],
+          "typeRows": [
+            {
+              "type": "다국어",
+              "total": 6,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 6
+                }
+              ]
+            },
+            {
+              "type": "UX/UI",
+              "total": 3,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 3
+                }
+              ]
+            },
+            {
+              "type": "기능",
+              "total": 3,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 3
+                }
+              ]
+            },
+            {
+              "type": "미지정",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "미지정",
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "type": "텍스트",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 1
+                }
+              ]
+            }
+          ],
           "daily": [
             {
               "date": "2026-05-22",
@@ -63580,45 +67300,45 @@
         },
         {
           "date": "2026-08-30",
-          "new": 1,
+          "new": 0,
           "fixed": 0,
           "closed": 0,
-          "deltaNew": 1
+          "deltaNew": 0
         },
         {
           "date": "2026-08-31",
-          "new": 36,
+          "new": 37,
           "fixed": 1,
           "closed": 1,
-          "deltaNew": 35
+          "deltaNew": 37
         },
         {
           "date": "2026-09-01",
-          "new": 36,
+          "new": 35,
           "fixed": 19,
           "closed": 19,
-          "deltaNew": 0
+          "deltaNew": -2
         },
         {
           "date": "2026-09-02",
           "new": 26,
           "fixed": 145,
           "closed": 145,
-          "deltaNew": -10
+          "deltaNew": -9
         },
         {
           "date": "2026-09-03",
-          "new": 24,
+          "new": 25,
           "fixed": 37,
           "closed": 37,
-          "deltaNew": -2
+          "deltaNew": -1
         },
         {
           "date": "2026-09-04",
           "new": 25,
           "fixed": 20,
           "closed": 20,
-          "deltaNew": 1
+          "deltaNew": 0
         },
         {
           "date": "2026-09-05",
@@ -63651,15 +67371,15 @@
         {
           "date": "2026-09-09",
           "new": 10,
-          "fixed": 166,
-          "closed": 61,
+          "fixed": 163,
+          "closed": 59,
           "deltaNew": 8
         },
         {
           "date": "2026-09-10",
           "new": 17,
-          "fixed": 67,
-          "closed": 64,
+          "fixed": 70,
+          "closed": 66,
           "deltaNew": 7
         },
         {
@@ -63679,15 +67399,15 @@
         {
           "date": "2026-09-13",
           "new": 0,
-          "fixed": 1,
-          "closed": 1,
+          "fixed": 0,
+          "closed": 0,
           "deltaNew": 0
         },
         {
           "date": "2026-09-14",
           "new": 13,
-          "fixed": 23,
-          "closed": 23,
+          "fixed": 24,
+          "closed": 24,
           "deltaNew": 13
         },
         {
@@ -63772,6 +67492,7 @@
           "status": "개발 완료 (Dev Done)",
           "stage": "종료",
           "severity": "Minor",
+          "defectType": "다국어",
           "priority": "Medium",
           "assignee": "미지정",
           "version": "[Hanpass][앱개편][Native]-LiveTest",
@@ -63793,6 +67514,7 @@
           "status": "등록 (Registered)",
           "stage": "등록",
           "severity": "Minor",
+          "defectType": "UX/UI",
           "priority": "Medium",
           "assignee": "미지정",
           "version": "[Hanpass][앱개편][Native]-LiveTest",
@@ -63814,6 +67536,7 @@
           "status": "등록 (Registered)",
           "stage": "등록",
           "severity": "Minor",
+          "defectType": "기능",
           "priority": "Medium",
           "assignee": "미지정",
           "version": "[Hanpass][앱개편][Native]-LiveTest",
@@ -63835,6 +67558,7 @@
           "status": "개발 완료 (Dev Done)",
           "stage": "종료",
           "severity": "Major",
+          "defectType": "UX/UI",
           "priority": "Medium",
           "assignee": "미지정",
           "version": "[Hanpass][앱개편][Native]-LiveTest",
@@ -63856,6 +67580,7 @@
           "status": "개발 완료 (Dev Done)",
           "stage": "종료",
           "severity": "Minor",
+          "defectType": "다국어",
           "priority": "Medium",
           "assignee": "미지정",
           "version": "[Hanpass][앱개편][Native]-LiveTest",
@@ -63877,6 +67602,7 @@
           "status": "완료 (Done)",
           "stage": "종료",
           "severity": "Major",
+          "defectType": "기능",
           "priority": "Medium",
           "assignee": "미지정",
           "version": "[콕뱅크]",
@@ -63898,6 +67624,7 @@
           "status": "완료 (Done)",
           "stage": "종료",
           "severity": "Major",
+          "defectType": "UX/UI",
           "priority": "Medium",
           "assignee": "미지정",
           "version": "[콕뱅크]",
@@ -63919,6 +67646,7 @@
           "status": "완료 (Done)",
           "stage": "종료",
           "severity": "Major",
+          "defectType": "UX/UI",
           "priority": "Medium",
           "assignee": "미지정",
           "version": "[콕뱅크]",
@@ -63940,6 +67668,7 @@
           "status": "등록 (Registered)",
           "stage": "등록",
           "severity": "Minor",
+          "defectType": "텍스트",
           "priority": "Medium",
           "assignee": "미지정",
           "version": "[Hanpass][앱개편][Native]-LiveTest",
@@ -63961,6 +67690,7 @@
           "status": "등록 (Registered)",
           "stage": "등록",
           "severity": "Minor",
+          "defectType": "정책 불일치",
           "priority": "Medium",
           "assignee": "미지정",
           "version": "[Hanpass][앱개편][Native]-LiveTest",
@@ -64640,6 +68370,82 @@
               "previousRate": 5.0
             }
           ],
+          "typeRows": [
+            {
+              "type": "기능",
+              "total": 7,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 6
+                },
+                {
+                  "label": "Minor",
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "type": "텍스트",
+              "total": 4,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 4
+                }
+              ]
+            },
+            {
+              "type": "UX/UI",
+              "total": 3,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 3
+                }
+              ]
+            },
+            {
+              "type": "다국어",
+              "total": 3,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 3
+                }
+              ]
+            },
+            {
+              "type": "성능",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "type": "접근성",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "type": "정책 불일치",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 1
+                }
+              ]
+            }
+          ],
           "daily": [
             {
               "date": "2026-05-12",
@@ -64953,7 +68759,7 @@
             },
             {
               "date": "2026-07-13",
-              "registered": 16,
+              "registered": 15,
               "fixed": 0
             },
             {
@@ -65358,6 +69164,52 @@
               "total": 15,
               "rate": 100.0,
               "previousRate": 100.0
+            }
+          ],
+          "typeRows": [
+            {
+              "type": "다국어",
+              "total": 10,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 1
+                },
+                {
+                  "label": "Minor",
+                  "count": 9
+                }
+              ]
+            },
+            {
+              "type": "기능",
+              "total": 2,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 2
+                }
+              ]
+            },
+            {
+              "type": "텍스트",
+              "total": 2,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 2
+                }
+              ]
+            },
+            {
+              "type": "UX/UI",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 1
+                }
+              ]
             }
           ],
           "daily": [
@@ -65868,6 +69720,108 @@
               "total": 55,
               "rate": 98.2,
               "previousRate": 98.2
+            }
+          ],
+          "typeRows": [
+            {
+              "type": "기능",
+              "total": 26,
+              "severity": [
+                {
+                  "label": "Critical",
+                  "count": 1
+                },
+                {
+                  "label": "Major",
+                  "count": 23
+                },
+                {
+                  "label": "Minor",
+                  "count": 2
+                }
+              ]
+            },
+            {
+              "type": "텍스트",
+              "total": 12,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 12
+                }
+              ]
+            },
+            {
+              "type": "정책 불일치",
+              "total": 7,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 1
+                },
+                {
+                  "label": "Minor",
+                  "count": 6
+                }
+              ]
+            },
+            {
+              "type": "다국어",
+              "total": 4,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 2
+                },
+                {
+                  "label": "Minor",
+                  "count": 2
+                }
+              ]
+            },
+            {
+              "type": "UX/UI",
+              "total": 2,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 2
+                }
+              ]
+            },
+            {
+              "type": "접근성",
+              "total": 2,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 1
+                },
+                {
+                  "label": "Minor",
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "type": "기획서 수정",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "type": "성능",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 1
+                }
+              ]
             }
           ],
           "daily": [
@@ -66585,6 +70539,38 @@
               "previousRate": 100.0
             }
           ],
+          "typeRows": [
+            {
+              "type": "기능",
+              "total": 3,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 3
+                }
+              ]
+            },
+            {
+              "type": "정책 불일치",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "type": "텍스트",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 1
+                }
+              ]
+            }
+          ],
           "daily": [
             {
               "date": "2026-07-13",
@@ -66995,6 +70981,112 @@
               "previousRate": 100.0
             }
           ],
+          "typeRows": [
+            {
+              "type": "UX/UI",
+              "total": 42,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 2
+                },
+                {
+                  "label": "Minor",
+                  "count": 40
+                }
+              ]
+            },
+            {
+              "type": "기능",
+              "total": 28,
+              "severity": [
+                {
+                  "label": "Critical",
+                  "count": 1
+                },
+                {
+                  "label": "Major",
+                  "count": 9
+                },
+                {
+                  "label": "Minor",
+                  "count": 18
+                }
+              ]
+            },
+            {
+              "type": "정책 불일치",
+              "total": 12,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 2
+                },
+                {
+                  "label": "Minor",
+                  "count": 10
+                }
+              ]
+            },
+            {
+              "type": "텍스트",
+              "total": 8,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 8
+                }
+              ]
+            },
+            {
+              "type": "성능",
+              "total": 6,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 2
+                },
+                {
+                  "label": "Minor",
+                  "count": 4
+                }
+              ]
+            },
+            {
+              "type": "접근성",
+              "total": 3,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 1
+                },
+                {
+                  "label": "Minor",
+                  "count": 2
+                }
+              ]
+            },
+            {
+              "type": "결함 아님",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "type": "미지정",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 1
+                }
+              ]
+            }
+          ],
           "daily": [
             {
               "date": "2026-05-12",
@@ -67039,7 +71131,7 @@
             {
               "date": "2026-05-20",
               "registered": 90,
-              "fixed": 25
+              "fixed": 24
             },
             {
               "date": "2026-05-21",
@@ -67094,12 +71186,12 @@
             {
               "date": "2026-05-31",
               "registered": 95,
-              "fixed": 76
+              "fixed": 75
             },
             {
               "date": "2026-06-01",
               "registered": 101,
-              "fixed": 91
+              "fixed": 89
             },
             {
               "date": "2026-06-02",
@@ -67715,6 +71807,18 @@
               "previousRate": 0
             }
           ],
+          "typeRows": [
+            {
+              "type": "미지정",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "미지정",
+                  "count": 1
+                }
+              ]
+            }
+          ],
           "daily": [
             {
               "date": "2026-09-21",
@@ -67773,6 +71877,18 @@
               "total": 2,
               "rate": 100.0,
               "previousRate": 100.0
+            }
+          ],
+          "typeRows": [
+            {
+              "type": "UX/UI",
+              "total": 2,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 2
+                }
+              ]
             }
           ],
           "daily": [
@@ -67868,6 +71984,32 @@
               "total": 4,
               "rate": 25.0,
               "previousRate": 25.0
+            }
+          ],
+          "typeRows": [
+            {
+              "type": "기능",
+              "total": 3,
+              "severity": [
+                {
+                  "label": "Critical",
+                  "count": 2
+                },
+                {
+                  "label": "Major",
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "type": "데이터 정합성",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Critical",
+                  "count": 1
+                }
+              ]
             }
           ],
           "daily": [
@@ -68310,6 +72452,18 @@
               "previousRate": 100.0
             }
           ],
+          "typeRows": [
+            {
+              "type": "UX/UI",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 1
+                }
+              ]
+            }
+          ],
           "daily": [
             {
               "date": "2026-08-31",
@@ -68473,6 +72627,42 @@
               "total": 5,
               "rate": 0.0,
               "previousRate": 0.0
+            }
+          ],
+          "typeRows": [
+            {
+              "type": "기능",
+              "total": 3,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 2
+                },
+                {
+                  "label": "Minor",
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "type": "UX/UI",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "type": "접근성",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 1
+                }
+              ]
             }
           ],
           "daily": [
@@ -69193,6 +73383,18 @@
               "total": 1,
               "rate": 100.0,
               "previousRate": 0.0
+            }
+          ],
+          "typeRows": [
+            {
+              "type": "미지정",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 1
+                }
+              ]
             }
           ],
           "daily": [
@@ -70152,6 +74354,7 @@
           "status": "등록 (Registered)",
           "stage": "등록",
           "severity": "미지정",
+          "defectType": "미지정",
           "priority": "Medium",
           "assignee": "미지정",
           "version": "[G.H][Go.Hanpass][앱개편]",
@@ -70173,6 +74376,7 @@
           "status": "등록 (Registered)",
           "stage": "등록",
           "severity": "Critical",
+          "defectType": "기능",
           "priority": "Medium",
           "assignee": "미지정",
           "version": "[G.H][교통카드]SDK변경",
@@ -70194,6 +74398,7 @@
           "status": "등록 (Registered)",
           "stage": "등록",
           "severity": "Major",
+          "defectType": "기능",
           "priority": "Medium",
           "assignee": "미지정",
           "version": "[G.H][교통카드]SDK변경",
@@ -70215,6 +74420,7 @@
           "status": "완료 (Done)",
           "stage": "종료",
           "severity": "Major",
+          "defectType": "UX/UI",
           "priority": "Medium",
           "assignee": "미지정",
           "version": "[G.H][Hanpass][앱개편][Native]-LiveTest",
@@ -70236,6 +74442,7 @@
           "status": "완료 (Done)",
           "stage": "종료",
           "severity": "Major",
+          "defectType": "UX/UI",
           "priority": "Medium",
           "assignee": "미지정",
           "version": "[G.H][Hanpass][앱개편][Native]-LiveTest",
@@ -70257,6 +74464,7 @@
           "status": "완료 (Done)",
           "stage": "종료",
           "severity": "Minor",
+          "defectType": "UX/UI",
           "priority": "Medium",
           "assignee": "미지정",
           "version": "[G.H][콕뱅크]",
@@ -70278,6 +74486,7 @@
           "status": "등록 (Registered)",
           "stage": "등록",
           "severity": "Major",
+          "defectType": "기능",
           "priority": "Medium",
           "assignee": "미지정",
           "version": "[G.H]v1.0.2-26.08",
@@ -70299,6 +74508,7 @@
           "status": "등록 (Registered)",
           "stage": "등록",
           "severity": "Major",
+          "defectType": "기능",
           "priority": "Medium",
           "assignee": "미지정",
           "version": "[G.H]v1.0.2-26.08",
@@ -70320,6 +74530,7 @@
           "status": "등록 (Registered)",
           "stage": "등록",
           "severity": "Minor",
+          "defectType": "다국어",
           "priority": "Medium",
           "assignee": "미지정",
           "version": "[G.H]v1.0.2-26.08",
@@ -70341,6 +74552,7 @@
           "status": "완료 (Done)",
           "stage": "종료",
           "severity": "Major",
+          "defectType": "다국어",
           "priority": "Medium",
           "assignee": "미지정",
           "version": "[G.H]v1.0.2-26.07",
@@ -70869,7 +75081,32 @@
       $("projectSummary").innerHTML = cards.map(([label, value, note]) => `
         <article class="card"><span>${esc(label)}</span><strong>${esc(value)}</strong><em>${esc(note)}</em></article>
       `).join("");
-      $("projectProgressTable").innerHTML = `<table class="project-table"><thead><tr><th>심각도</th><th>미처리</th><th>개발 완료</th><th>QA회귀</th><th>완료(Done)</th><th>모수</th><th>처리 완료 비율</th></tr></thead><tbody>${current.severityRows.map((row) => `
+      const typeRows = current.typeRows || [];
+      const severityColumns = ["Blocker", "Critical", "Major", "Minor", "Trivial", "미지정"].filter((severity) =>
+        typeRows.some((row) => (row.severity || []).some((item) => item.label === severity && item.count > 0))
+      );
+      const defectTypeTable = typeRows.length ? `
+        <div class="project-detail-section">
+          <div class="project-section-title">결함 유형별 심각도 <span>유형별 총 결함 수 기준</span></div>
+          <table class="project-table"><thead><tr><th>결함 유형</th>${severityColumns.map((severity) => `<th>${esc(severity)}</th>`).join("")}<th>합계</th></tr></thead><tbody>${typeRows.map((row) => {
+            const severityMap = Object.fromEntries((row.severity || []).map((item) => [item.label, item.count]));
+            return `<tr>
+              <td>${esc(row.type)}</td>
+              ${severityColumns.map((severity) => `<td>${severityMap[severity] || 0}</td>`).join("")}
+              <td><strong>${row.total}</strong></td>
+            </tr>`;
+          }).join("")}</tbody></table>
+        </div>
+      ` : `
+        <div class="project-detail-section">
+          <div class="project-section-title">결함 유형별 심각도 <span>결함 유형 데이터 없음</span></div>
+          <div class="empty">표시할 결함 유형 데이터가 없습니다.</div>
+        </div>
+      `;
+      $("projectProgressTable").innerHTML = `
+        <div class="project-detail-section">
+          <div class="project-section-title">심각도별 처리 현황 <span>전일 완료율 포함</span></div>
+          <table class="project-table is-summary"><thead><tr><th>심각도</th><th>미처리</th><th>개발 완료</th><th>QA회귀</th><th>완료(Done)</th><th>모수</th><th>처리 완료 비율</th></tr></thead><tbody>${current.severityRows.map((row) => `
         <tr>
           <td>${esc(row.severity)}</td>
           <td>${row.open}</td>
@@ -70879,7 +75116,10 @@
           <td>${row.total}</td>
           <td><span class="project-rate">${pct(row.rate)}</span> <span class="meta">(전일 ${pct(row.previousRate)})</span></td>
         </tr>
-      `).join("")}</tbody></table>`;
+      `).join("")}</tbody></table>
+        </div>
+        ${defectTypeTable}
+      `;
       const rows = current.daily || [];
       $("projectCharts").innerHTML = renderProjectLineChart(rows);
     }

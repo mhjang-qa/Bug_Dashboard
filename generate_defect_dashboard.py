@@ -32,6 +32,7 @@ FIELD_MAP: dict[str, list[str]] = {
     "title": ["결함 제목", "결함 요약", "제목", "Name", "Title", "Summary", "Bug"],
     "status": ["상태", "Status", "처리상태"],
     "severity": ["심각도", "Severity", "등급"],
+    "defect_type": ["결함 유형", "유형", "Type", "Category", "분류"],
     "priority": ["우선순위", "Priority"],
     "assignee": ["담당자", "Assignee", "Owner", "작업자"],
     "version": ["목표버전", "버전", "Version", "앱버전", "App Version", "Web Version"],
@@ -415,6 +416,7 @@ def normalize_page(page: dict[str, Any]) -> dict[str, Any]:
         "status": status_raw or "미지정",
         "stage": status_stage if status_stage in FUNNEL_STAGES else "등록",
         "severity": normalize_severity(first_value(properties, "severity")),
+        "defectType": first_value(properties, "defect_type") or "미지정",
         "priority": normalize_priority(first_value(properties, "priority")),
         "assignee": first_value(properties, "assignee") or "미지정",
         "version": normalize_version_label(version_raw, domain),
@@ -712,6 +714,24 @@ def build_project_severity_rows(rows: list[dict[str, Any]]) -> list[dict[str, An
     return result
 
 
+def build_project_type_rows(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    grouped: dict[str, list[dict[str, Any]]] = defaultdict(list)
+    for row in rows:
+        grouped[row.get("defectType") or "미지정"].append(row)
+
+    type_rows: list[dict[str, Any]] = []
+    for defect_type, items in grouped.items():
+        severity_counts = Counter(item.get("severity") or "미지정" for item in items)
+        type_rows.append(
+            {
+                "type": defect_type,
+                "total": len(items),
+                "severity": ordered_counts(severity_counts, SEVERITY_ORDER),
+            }
+        )
+    return sorted(type_rows, key=lambda item: (-item["total"], item["type"]))
+
+
 def build_project_progress(rows: list[dict[str, Any]], days: int) -> list[dict[str, Any]]:
     grouped: dict[str, list[dict[str, Any]]] = defaultdict(list)
     for row in rows:
@@ -740,6 +760,7 @@ def build_project_progress(rows: list[dict[str, Any]], days: int) -> list[dict[s
                 "doneRate": counts["rate"],
                 "latestSnapshot": latest_snapshot,
                 "severityRows": build_project_severity_rows(items),
+                "typeRows": build_project_type_rows(items),
                 "daily": build_project_daily(items, max(days, 30)),
             }
         )
@@ -1065,8 +1086,12 @@ def build_html(payload: dict[str, Any]) -> str:
     .project-summary {{ margin-top: 12px; margin-bottom: 14px; }}
     .project-grid {{ grid-template-columns: minmax(420px, 1fr) minmax(520px, 1.2fr); }}
     .project-table th:nth-child(n+2), .project-table td:nth-child(n+2) {{ text-align: right; }}
-    .project-table tbody tr:last-child td {{ font-weight: 800; }}
+    .project-table.is-summary tbody tr:last-child td {{ font-weight: 800; }}
     .project-rate {{ color: var(--green); font-weight: 800; white-space: nowrap; }}
+    .project-detail-section {{ display: grid; gap: 10px; }}
+    .project-detail-section + .project-detail-section {{ margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--line); }}
+    .project-section-title {{ display: flex; justify-content: space-between; gap: 10px; align-items: center; color: var(--text); font-size: 13px; font-weight: 800; }}
+    .project-section-title span {{ color: var(--muted); font-size: 12px; font-weight: 650; }}
     .project-chart-grid {{ display: block; }}
     .project-chart-title {{ margin: 0 0 8px; color: var(--muted); font-size: 12px; font-weight: 700; }}
     .line-chart {{
@@ -1269,7 +1294,7 @@ def build_html(payload: dict[str, Any]) -> str:
           <div class="project-control">
             <div class="panel-title">
               <h2>프로젝트별 결함 현황</h2>
-              <div class="subtle" id="projectProgressNote">선택한 타겟버전의 심각도별 미처리, 개발 완료, 일자별 등록/수정 추이를 표시합니다.</div>
+              <div class="subtle" id="projectProgressNote">선택한 타겟버전의 개발 수정 진행 현황, 결함 유형별 심각도, 일자별 등록/수정 추이를 표시합니다.</div>
             </div>
             <label for="projectVersionSelect">타겟버전
               <select class="project-select" id="projectVersionSelect"></select>
@@ -1279,7 +1304,7 @@ def build_html(payload: dict[str, Any]) -> str:
         <section class="summary project-summary" id="projectSummary"></section>
         <div class="grid project-grid">
           <article class="panel">
-            <div class="panel-head"><h2>개발 현황</h2><div class="subtle" id="projectSnapshotLabel"></div></div>
+            <div class="panel-head"><h2>개발 수정 진행 현황</h2><div class="subtle" id="projectSnapshotLabel"></div></div>
             <div class="table-wrap" id="projectProgressTable"></div>
           </article>
           <article class="panel">
@@ -1819,7 +1844,32 @@ def build_html(payload: dict[str, Any]) -> str:
       $("projectSummary").innerHTML = cards.map(([label, value, note]) => `
         <article class="card"><span>${{esc(label)}}</span><strong>${{esc(value)}}</strong><em>${{esc(note)}}</em></article>
       `).join("");
-      $("projectProgressTable").innerHTML = `<table class="project-table"><thead><tr><th>심각도</th><th>미처리</th><th>개발 완료</th><th>QA회귀</th><th>완료(Done)</th><th>모수</th><th>처리 완료 비율</th></tr></thead><tbody>${{current.severityRows.map((row) => `
+      const typeRows = current.typeRows || [];
+      const severityColumns = ["Blocker", "Critical", "Major", "Minor", "Trivial", "미지정"].filter((severity) =>
+        typeRows.some((row) => (row.severity || []).some((item) => item.label === severity && item.count > 0))
+      );
+      const defectTypeTable = typeRows.length ? `
+        <div class="project-detail-section">
+          <div class="project-section-title">결함 유형별 심각도 <span>유형별 총 결함 수 기준</span></div>
+          <table class="project-table"><thead><tr><th>결함 유형</th>${{severityColumns.map((severity) => `<th>${{esc(severity)}}</th>`).join("")}}<th>합계</th></tr></thead><tbody>${{typeRows.map((row) => {{
+            const severityMap = Object.fromEntries((row.severity || []).map((item) => [item.label, item.count]));
+            return `<tr>
+              <td>${{esc(row.type)}}</td>
+              ${{severityColumns.map((severity) => `<td>${{severityMap[severity] || 0}}</td>`).join("")}}
+              <td><strong>${{row.total}}</strong></td>
+            </tr>`;
+          }}).join("")}}</tbody></table>
+        </div>
+      ` : `
+        <div class="project-detail-section">
+          <div class="project-section-title">결함 유형별 심각도 <span>결함 유형 데이터 없음</span></div>
+          <div class="empty">표시할 결함 유형 데이터가 없습니다.</div>
+        </div>
+      `;
+      $("projectProgressTable").innerHTML = `
+        <div class="project-detail-section">
+          <div class="project-section-title">심각도별 처리 현황 <span>전일 완료율 포함</span></div>
+          <table class="project-table is-summary"><thead><tr><th>심각도</th><th>미처리</th><th>개발 완료</th><th>QA회귀</th><th>완료(Done)</th><th>모수</th><th>처리 완료 비율</th></tr></thead><tbody>${{current.severityRows.map((row) => `
         <tr>
           <td>${{esc(row.severity)}}</td>
           <td>${{row.open}}</td>
@@ -1829,7 +1879,10 @@ def build_html(payload: dict[str, Any]) -> str:
           <td>${{row.total}}</td>
           <td><span class="project-rate">${{pct(row.rate)}}</span> <span class="meta">(전일 ${{pct(row.previousRate)}})</span></td>
         </tr>
-      `).join("")}}</tbody></table>`;
+      `).join("")}}</tbody></table>
+        </div>
+        ${{defectTypeTable}}
+      `;
       const rows = current.daily || [];
       $("projectCharts").innerHTML = renderProjectLineChart(rows);
     }}

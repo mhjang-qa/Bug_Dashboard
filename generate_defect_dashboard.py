@@ -1097,6 +1097,7 @@ def build_html(payload: dict[str, Any]) -> str:
     .project-grid {{ grid-template-columns: minmax(420px, 1fr) minmax(520px, 1.2fr); }}
     .project-table th:nth-child(n+2), .project-table td:nth-child(n+2) {{ text-align: right; }}
     .project-table.is-summary tbody tr:last-child td {{ font-weight: 800; }}
+    .project-table .project-total-row td {{ font-weight: 800; background: rgba(29, 134, 242, .04); }}
     .project-rate {{ color: var(--green); font-weight: 800; white-space: nowrap; }}
     .project-detail-section {{ display: grid; gap: 10px; }}
     .project-detail-section + .project-detail-section {{ margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--line); }}
@@ -1858,6 +1859,14 @@ def build_html(payload: dict[str, Any]) -> str:
       const severityColumns = ["Blocker", "Critical", "Major", "Minor", "Trivial", "미지정"].filter((severity) =>
         typeRows.some((row) => (row.severity || []).some((item) => item.label === severity && item.count > 0))
       );
+      const severityTotals = Object.fromEntries(severityColumns.map((severity) => [
+        severity,
+        typeRows.reduce((sum, row) => {{
+          const severityItem = (row.severity || []).find((item) => item.label === severity);
+          return sum + (severityItem ? Number(severityItem.count || 0) : 0);
+        }}, 0)
+      ]));
+      const typeGrandTotal = typeRows.reduce((sum, row) => sum + Number(row.total || 0), 0);
       const defectTypeTable = typeRows.length ? `
         <div class="project-detail-section">
           <div class="project-section-title">결함 유형별 심각도 <span>유형별 총 결함 수 기준</span></div>
@@ -1868,7 +1877,11 @@ def build_html(payload: dict[str, Any]) -> str:
               ${{severityColumns.map((severity) => `<td>${{severityMap[severity] || 0}}</td>`).join("")}}
               <td><strong>${{row.total}}</strong></td>
             </tr>`;
-          }}).join("")}}</tbody></table>
+          }}).join("")}}<tr class="project-total-row">
+              <td>합계</td>
+              ${{severityColumns.map((severity) => `<td>${{severityTotals[severity] || 0}}</td>`).join("")}}
+              <td><strong>${{typeGrandTotal}}</strong></td>
+            </tr></tbody></table>
         </div>
       ` : `
         <div class="project-detail-section">

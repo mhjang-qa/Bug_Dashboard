@@ -403,13 +403,16 @@ def is_backlog_version(version: str) -> bool:
 
 
 def classify_domain(version: str, title: str = "", url: str = "") -> str:
-    source = " ".join(part for part in [version, title, url] if part).lower()
-    if has_go_hanpass_keyword(source):
+    version_text = (version or "").strip()
+    if has_go_hanpass_keyword(version_text):
         return "GoHanpass"
     if is_hanpass_feature_label(version):
         return "한패스"
-    if "hanpass" in source:
+    if "hanpass" in version_text.lower():
         return "한패스"
+    source = " ".join(part for part in [title, url] if part).lower()
+    if has_go_hanpass_keyword(source):
+        return "GoHanpass"
     if extract_semver(version or ""):
         return "한패스"
     return "한패스"

@@ -1082,7 +1082,10 @@ def build_html(payload: dict[str, Any]) -> str:
     .report-item small {{ display: block; color: var(--muted); font-size: 11px; margin-top: 3px; }}
     .report-badge {{ color: var(--muted); font-size: 11px; white-space: nowrap; }}
     .project-control {{ display: grid; grid-template-columns: 1fr minmax(260px, 420px); gap: 16px; align-items: end; }}
-    .project-control label {{ display: grid; gap: 7px; color: var(--muted); font-size: 12px; font-weight: 650; }}
+    .project-version-tools {{ display: grid; gap: 8px; }}
+    .project-version-field {{ display: grid; gap: 7px; color: var(--muted); font-size: 12px; font-weight: 650; }}
+    .project-filter-check {{ display: inline-flex; align-items: center; gap: 7px; color: var(--muted); font-size: 12px; font-weight: 650; user-select: none; }}
+    .project-filter-check input {{ width: 14px; height: 14px; margin: 0; accent-color: var(--blue); }}
     .project-select {{
       width: 100%;
       border: 1px solid var(--line);
@@ -1307,9 +1310,15 @@ def build_html(payload: dict[str, Any]) -> str:
               <h2>프로젝트별 결함 현황</h2>
               <div class="subtle" id="projectProgressNote">선택한 타겟버전의 개발 수정 진행 현황, 결함 유형별 심각도, 일자별 등록/수정 추이를 표시합니다.</div>
             </div>
-            <label for="projectVersionSelect">타겟버전
-              <select class="project-select" id="projectVersionSelect"></select>
-            </label>
+            <div class="project-version-tools">
+              <label class="project-version-field" for="projectVersionSelect">타겟버전
+                <select class="project-select" id="projectVersionSelect"></select>
+              </label>
+              <label class="project-filter-check" for="excludeCompletedProjectVersions">
+                <input id="excludeCompletedProjectVersions" type="checkbox">
+                완료버전 제외
+              </label>
+            </div>
           </div>
         </article>
         <section class="summary project-summary" id="projectSummary"></section>
@@ -1420,6 +1429,7 @@ def build_html(payload: dict[str, Any]) -> str:
     let selectedVersion = DATA.selectedVersion || "ALL";
     let selectedVersionMode = "RECENT";
     let selectedProjectVersion = currentScope().defaultProjectVersion || "";
+    let excludeCompletedProjectVersions = false;
     $("stamp").textContent = `생성: ${{formatKstDateTimeWithRelative(DATA.generatedAt)}} · 기준 ${{DATA.days}}일`;
 
     function setSyncStatus(message, tone = "") {{
@@ -1828,20 +1838,40 @@ def build_html(payload: dict[str, Any]) -> str:
       const items = currentScope().projectProgress || [];
       if (!items.length) {{
         $("projectVersionSelect").innerHTML = "";
+        $("projectVersionSelect").disabled = true;
         $("projectSummary").innerHTML = "";
         $("projectSnapshotLabel").textContent = "";
         $("projectProgressTable").innerHTML = `<div class="empty">표시할 타겟버전 데이터가 없습니다.</div>`;
         $("projectCharts").innerHTML = "";
         return;
       }}
-      if (!selectedProjectVersion || !items.some((item) => item.version === selectedProjectVersion)) {{
-        selectedProjectVersion = currentScope().defaultProjectVersion || items[0].version;
+      $("excludeCompletedProjectVersions").checked = excludeCompletedProjectVersions;
+      const isCompletedProjectVersion = (version) => /\\(완료\\)\\s*$/.test(String(version || "").trim());
+      const visibleItems = excludeCompletedProjectVersions
+        ? items.filter((item) => !isCompletedProjectVersion(item.version))
+        : items;
+      if (!visibleItems.length) {{
+        $("projectVersionSelect").innerHTML = "";
+        $("projectVersionSelect").disabled = true;
+        $("projectSummary").innerHTML = "";
+        $("projectProgressNote").textContent = `${{selectedDomain === "ALL" ? "전체" : selectedDomain}} · 완료버전 제외`;
+        $("projectSnapshotLabel").textContent = "표시할 타겟버전 없음";
+        $("projectProgressTable").innerHTML = `<div class="empty">완료버전 제외 적용으로 표시할 타겟버전이 없습니다.</div>`;
+        $("projectCharts").innerHTML = "";
+        return;
       }}
-      $("projectVersionSelect").innerHTML = items.map((item) => `
+      $("projectVersionSelect").disabled = false;
+      if (!selectedProjectVersion || !visibleItems.some((item) => item.version === selectedProjectVersion)) {{
+        const defaultVersion = currentScope().defaultProjectVersion || "";
+        selectedProjectVersion = visibleItems.some((item) => item.version === defaultVersion)
+          ? defaultVersion
+          : visibleItems[0].version;
+      }}
+      $("projectVersionSelect").innerHTML = visibleItems.map((item) => `
         <option value="${{esc(item.version)}}">${{esc(item.version)}} (${{item.total}}건)</option>
       `).join("");
       $("projectVersionSelect").value = selectedProjectVersion;
-      const current = items.find((item) => item.version === selectedProjectVersion) || items[0];
+      const current = visibleItems.find((item) => item.version === selectedProjectVersion) || visibleItems[0];
       $("projectProgressNote").textContent = `${{selectedDomain === "ALL" ? "전체" : selectedDomain}} · ${{current.version}}`;
       $("projectSnapshotLabel").textContent = current.latestSnapshot ? `최신 Snapshot ${{formatDisplayDateTime(current.latestSnapshot)}}` : "Snapshot 정보 없음";
       const cards = [
@@ -1933,6 +1963,10 @@ def build_html(payload: dict[str, Any]) -> str:
     $("syncSubmitButton").addEventListener("click", dispatchSync);
     $("projectVersionSelect").addEventListener("change", (event) => {{
       selectedProjectVersion = event.target.value;
+      renderProjectProgress();
+    }});
+    $("excludeCompletedProjectVersions").addEventListener("change", (event) => {{
+      excludeCompletedProjectVersions = event.target.checked;
       renderProjectProgress();
     }});
     $("syncModal").addEventListener("click", (event) => {{

@@ -804,7 +804,7 @@ def build_scope_payload(rows: list[dict[str, Any]], days: int, report_board: dic
     funnel = []
     for index, stage in enumerate(FUNNEL_STAGES):
         count = int(stage_counts[stage])
-        width = max(18, round((count / max_stage_count) * 100)) if total else 18
+        width = max(6, round((count / max_stage_count) * 100)) if count and total else 0
         funnel.append(
             {
                 "stage": stage,
@@ -1022,6 +1022,16 @@ def build_html(payload: dict[str, Any]) -> str:
       color: #ffffff;
       font-weight: 800;
       min-width: 18px;
+      padding: 0 8px;
+      white-space: nowrap;
+      overflow: hidden;
+    }}
+    .funnel-bar.is-zero {{
+      width: 0 !important;
+      min-width: 34px;
+      padding: 0 6px;
+      background: rgba(148,163,184,.26);
+      color: var(--muted);
     }}
     .chart {{ height: 270px; display: flex; align-items: end; gap: 8px; padding-top: 8px; border-bottom: 1px solid var(--line); overflow-x: auto; overflow-y: hidden; }}
     .day {{ flex: 1; min-width: 8px; display: grid; grid-template-rows: 1fr auto; gap: 6px; height: 100%; }}
@@ -1601,7 +1611,7 @@ def build_html(payload: dict[str, Any]) -> str:
       $("funnel").innerHTML = funnel.map((d) => `
         <div class="funnel-row">
           <div>${{esc(d.stage)}}</div>
-          <div class="funnel-bar" style="width:${{Math.max(18, d.width)}}%; opacity:${{0.45 + d.count / max * 0.55}}">${{d.count}}건</div>
+          <div class="funnel-bar ${{d.count ? "" : "is-zero"}}" style="width:${{d.width}}%; opacity:${{d.count ? 0.45 + d.count / max * 0.55 : 1}}">${{d.count}}건</div>
           <div class="meta">${{pct(d.rate)}}</div>
         </div>
       `).join("");

@@ -143,6 +143,16 @@
       color: #ffffff;
       font-weight: 800;
       min-width: 18px;
+      padding: 0 8px;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+    .funnel-bar.is-zero {
+      width: 0 !important;
+      min-width: 34px;
+      padding: 0 6px;
+      background: rgba(148,163,184,.26);
+      color: var(--muted);
     }
     .chart { height: 270px; display: flex; align-items: end; gap: 8px; padding-top: 8px; border-bottom: 1px solid var(--line); overflow-x: auto; overflow-y: hidden; }
     .day { flex: 1; min-width: 8px; display: grid; grid-template-rows: 1fr auto; gap: 6px; height: 100%; }
@@ -456,7 +466,7 @@
     </div>
   </div>
   <script id="dashboard-data" type="application/json">{
-  "generatedAt": "2026-09-21T07:53:52+00:00",
+  "generatedAt": "2026-09-21T07:55:41+00:00",
   "days": 30,
   "domainOrder": [
     "한패스",
@@ -478,37 +488,37 @@
           "stage": "등록",
           "count": 161,
           "rate": 10.9,
-          "width": 18
+          "width": 14
         },
         {
           "stage": "검토",
           "count": 0,
           "rate": 0.0,
-          "width": 18
+          "width": 0
         },
         {
           "stage": "배정",
           "count": 0,
           "rate": 0.0,
-          "width": 18
+          "width": 0
         },
         {
           "stage": "진행중",
           "count": 5,
           "rate": 0.3,
-          "width": 18
+          "width": 6
         },
         {
           "stage": "수정완료",
           "count": 0,
           "rate": 0.0,
-          "width": 18
+          "width": 0
         },
         {
           "stage": "QA확인",
           "count": 170,
           "rate": 11.5,
-          "width": 18
+          "width": 15
         },
         {
           "stage": "종료",
@@ -37138,31 +37148,31 @@
           "stage": "등록",
           "count": 132,
           "rate": 10.4,
-          "width": 18
+          "width": 14
         },
         {
           "stage": "검토",
           "count": 0,
           "rate": 0.0,
-          "width": 18
+          "width": 0
         },
         {
           "stage": "배정",
           "count": 0,
           "rate": 0.0,
-          "width": 18
+          "width": 0
         },
         {
           "stage": "진행중",
           "count": 5,
           "rate": 0.4,
-          "width": 18
+          "width": 6
         },
         {
           "stage": "수정완료",
           "count": 0,
           "rate": 0.0,
-          "width": 18
+          "width": 0
         },
         {
           "stage": "QA확인",
@@ -67723,37 +67733,37 @@
           "stage": "등록",
           "count": 29,
           "rate": 13.8,
-          "width": 18
+          "width": 16
         },
         {
           "stage": "검토",
           "count": 0,
           "rate": 0.0,
-          "width": 18
+          "width": 0
         },
         {
           "stage": "배정",
           "count": 0,
           "rate": 0.0,
-          "width": 18
+          "width": 0
         },
         {
           "stage": "진행중",
           "count": 0,
           "rate": 0.0,
-          "width": 18
+          "width": 0
         },
         {
           "stage": "수정완료",
           "count": 0,
           "rate": 0.0,
-          "width": 18
+          "width": 0
         },
         {
           "stage": "QA확인",
           "count": 0,
           "rate": 0.0,
-          "width": 18
+          "width": 0
         },
         {
           "stage": "종료",
@@ -74838,7 +74848,7 @@
       $("funnel").innerHTML = funnel.map((d) => `
         <div class="funnel-row">
           <div>${esc(d.stage)}</div>
-          <div class="funnel-bar" style="width:${Math.max(18, d.width)}%; opacity:${0.45 + d.count / max * 0.55}">${d.count}건</div>
+          <div class="funnel-bar ${d.count ? "" : "is-zero"}" style="width:${d.width}%; opacity:${d.count ? 0.45 + d.count / max * 0.55 : 1}">${d.count}건</div>
           <div class="meta">${pct(d.rate)}</div>
         </div>
       `).join("");

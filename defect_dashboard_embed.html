@@ -494,7 +494,7 @@
     </div>
   </div>
   <script id="dashboard-data" type="application/json">{
-  "generatedAt": "2026-09-23T01:41:14+00:00",
+  "generatedAt": "2026-09-23T04:34:55+00:00",
   "days": 30,
   "domainOrder": [
     "한패스",
@@ -503,20 +503,20 @@
   "domains": {
     "ALL": {
       "summary": {
-        "total": 1537,
-        "new": 208,
+        "total": 1550,
+        "new": 216,
         "inProgress": 5,
         "fixed": 0,
-        "closed": 1155,
-        "todayNew": 11,
-        "newDelta": -9
+        "closed": 1160,
+        "todayNew": 24,
+        "newDelta": 4
       },
       "funnel": [
         {
           "stage": "등록",
-          "count": 208,
-          "rate": 13.5,
-          "width": 18
+          "count": 216,
+          "rate": 13.9,
+          "width": 19
         },
         {
           "stage": "검토",
@@ -545,13 +545,13 @@
         {
           "stage": "QA확인",
           "count": 169,
-          "rate": 11.0,
+          "rate": 10.9,
           "width": 15
         },
         {
           "stage": "종료",
-          "count": 1155,
-          "rate": 75.1,
+          "count": 1160,
+          "rate": 74.8,
           "width": 100
         }
       ],
@@ -761,10 +761,10 @@
         },
         {
           "date": "2026-09-23",
-          "new": 11,
-          "fixed": 4,
-          "closed": 4,
-          "deltaNew": -9
+          "new": 24,
+          "fixed": 9,
+          "closed": 9,
+          "deltaNew": 4
         }
       ],
       "versions": [
@@ -1582,17 +1582,17 @@
         },
         {
           "version": "[G.H][Go.Hanpass][앱개편][APP]",
-          "total": 29,
-          "criticalMajor": 26,
-          "doneRate": 13.8,
+          "total": 42,
+          "criticalMajor": 37,
+          "doneRate": 21.4,
           "status": [
             {
               "label": "등록",
-              "count": 25
+              "count": 33
             },
             {
               "label": "종료",
-              "count": 4
+              "count": 9
             }
           ],
           "severity": [
@@ -1602,17 +1602,21 @@
             },
             {
               "label": "Major",
-              "count": 25
+              "count": 36
             },
             {
               "label": "Minor",
-              "count": 3
+              "count": 4
+            },
+            {
+              "label": "미지정",
+              "count": 1
             }
           ],
           "priority": [
             {
               "label": "Medium",
-              "count": 29
+              "count": 42
             }
           ]
         },
@@ -26948,13 +26952,13 @@
         },
         {
           "version": "[G.H][Go.Hanpass][앱개편][APP]",
-          "total": 29,
-          "open": 25,
+          "total": 42,
+          "open": 33,
           "devDone": 0,
           "qaRegression": 0,
-          "done": 4,
-          "scopeTotal": 29,
-          "doneRate": 13.8,
+          "done": 9,
+          "scopeTotal": 42,
+          "doneRate": 21.4,
           "latestSnapshot": "2026-09-23",
           "severityRows": [
             {
@@ -26969,53 +26973,63 @@
             },
             {
               "severity": "Major",
-              "open": 22,
+              "open": 30,
               "devDone": 0,
               "qaRegression": 0,
-              "done": 3,
-              "total": 25,
-              "rate": 12.0,
+              "done": 6,
+              "total": 36,
+              "rate": 16.7,
               "previousRate": 0.0
             },
             {
               "severity": "Minor",
-              "open": 2,
+              "open": 1,
               "devDone": 0,
               "qaRegression": 0,
-              "done": 1,
-              "total": 3,
-              "rate": 33.3,
+              "done": 3,
+              "total": 4,
+              "rate": 75.0,
               "previousRate": 0.0
             },
             {
               "severity": "합계",
-              "open": 25,
+              "open": 33,
               "devDone": 0,
               "qaRegression": 0,
-              "done": 4,
-              "total": 29,
-              "rate": 13.8,
+              "done": 9,
+              "total": 42,
+              "rate": 21.4,
               "previousRate": 0.0
             }
           ],
           "typeRows": [
             {
               "type": "정책 불일치",
-              "total": 20,
+              "total": 22,
               "severity": [
                 {
                   "label": "Major",
-                  "count": 18
+                  "count": 22
+                }
+              ]
+            },
+            {
+              "type": "기획서 수정",
+              "total": 11,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 7
                 },
                 {
                   "label": "Minor",
-                  "count": 2
+                  "count": 4
                 }
               ]
             },
             {
               "type": "기능",
-              "total": 4,
+              "total": 7,
               "severity": [
                 {
                   "label": "Critical",
@@ -27023,21 +27037,7 @@
                 },
                 {
                   "label": "Major",
-                  "count": 3
-                }
-              ]
-            },
-            {
-              "type": "기획서 수정",
-              "total": 4,
-              "severity": [
-                {
-                  "label": "Major",
-                  "count": 3
-                },
-                {
-                  "label": "Minor",
-                  "count": 1
+                  "count": 6
                 }
               ]
             },
@@ -27047,6 +27047,16 @@
               "severity": [
                 {
                   "label": "Major",
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "type": "미지정",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "미지정",
                   "count": 1
                 }
               ]
@@ -27060,8 +27070,8 @@
             },
             {
               "date": "2026-09-23",
-              "registered": 29,
-              "fixed": 4
+              "registered": 42,
+              "fixed": 9
             }
           ]
         },
@@ -35628,7 +35638,7 @@
           "status": [
             {
               "label": "등록",
-              "count": 208
+              "count": 216
             },
             {
               "label": "진행중",
@@ -35640,7 +35650,7 @@
             },
             {
               "label": "종료",
-              "count": 1155
+              "count": 1160
             }
           ],
           "severity": [
@@ -35650,15 +35660,15 @@
             },
             {
               "label": "Major",
-              "count": 512
+              "count": 523
             },
             {
               "label": "Minor",
-              "count": 864
+              "count": 865
             },
             {
               "label": "미지정",
-              "count": 77
+              "count": 78
             },
             {
               "label": "개선 의견",
@@ -35672,7 +35682,7 @@
             },
             {
               "label": "Medium",
-              "count": 1491
+              "count": 1504
             },
             {
               "label": "Low",
@@ -35895,10 +35905,10 @@
         },
         {
           "date": "2026-09-23",
-          "new": 11,
-          "fixed": 4,
-          "closed": 4,
-          "deltaNew": -9
+          "new": 24,
+          "fixed": 9,
+          "closed": 9,
+          "deltaNew": 4
         }
       ],
       "reportBoard": {
@@ -35928,74 +35938,30 @@
       },
       "recent": [
         {
-          "id": "ISSUE-1891",
-          "title": "[공지사항][알림보관함][공통] 빈 목록 안내 문구가 기획서와 상이하게 노출되는 현상",
+          "id": "ISSUE-1905",
+          "title": "제목 없음",
           "status": "등록 (Registered)",
           "stage": "등록",
-          "severity": "Minor",
-          "defectType": "정책 불일치",
+          "severity": "미지정",
+          "defectType": "미지정",
           "priority": "Medium",
           "assignee": "미지정",
           "version": "[G.H][Go.Hanpass][앱개편][APP]",
           "versionRaw": "[Go.Hanpass][앱개편][APP]",
           "domain": "GoHanpass",
           "os": "미지정",
-          "createdAt": "2026-09-23T01:34:00.000Z",
+          "createdAt": "2026-09-23T04:31:00.000Z",
           "createdDate": "2026-09-23",
           "fixedAt": "",
           "fixedDate": "",
           "closedAt": "",
           "closedDate": "",
-          "url": "https://app.notion.com/p/3e473fbd195180069c5bd28042356fd1",
-          "lastEditedAt": "2026-09-23T01:37:00.000Z"
+          "url": "https://app.notion.com/p/3e473fbd19518065a846f0c206276e76",
+          "lastEditedAt": "2026-09-23T04:31:00.000Z"
         },
         {
-          "id": "ISSUE-1889",
-          "title": "[마이페이지][공통] 전체메뉴 내 ‘알림’ 아이콘이 미노출되는 현상",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Major",
-          "defectType": "정책 불일치",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[G.H][Go.Hanpass][앱개편][APP]",
-          "versionRaw": "[Go.Hanpass][앱개편][APP]",
-          "domain": "GoHanpass",
-          "os": "미지정",
-          "createdAt": "2026-09-23T01:26:00.000Z",
-          "createdDate": "2026-09-23",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/3e473fbd1951803b9c5ad539a13b3ad1",
-          "lastEditedAt": "2026-09-23T01:32:00.000Z"
-        },
-        {
-          "id": "ISSUE-1888",
-          "title": "[홈][PAY][공통] ‘충전대기 금액’ 영역 디자인이 기획서와 상이하게 노출되는 현상",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "defectType": "정책 불일치",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[G.H][Go.Hanpass][앱개편][APP]",
-          "versionRaw": "[Go.Hanpass][앱개편][APP]",
-          "domain": "GoHanpass",
-          "os": "미지정",
-          "createdAt": "2026-09-23T01:21:00.000Z",
-          "createdDate": "2026-09-23",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/PAY-3e473fbd1951803d8db7d73b3a25d8df",
-          "lastEditedAt": "2026-09-23T01:25:00.000Z"
-        },
-        {
-          "id": "ISSUE-1887",
-          "title": "[온보딩][풀팝업][공통] ‘오늘 하루 보지 않기’ 버튼이 미노출되는 현상",
+          "id": "ISSUE-1904",
+          "title": "[통합길찾기][경로목록][공통] 출발 시간 설정이 불가한 현상",
           "status": "등록 (Registered)",
           "stage": "등록",
           "severity": "Major",
@@ -36006,40 +35972,18 @@
           "versionRaw": "[Go.Hanpass][앱개편][APP]",
           "domain": "GoHanpass",
           "os": "미지정",
-          "createdAt": "2026-09-23T01:13:00.000Z",
+          "createdAt": "2026-09-23T04:30:00.000Z",
           "createdDate": "2026-09-23",
           "fixedAt": "",
           "fixedDate": "",
           "closedAt": "",
           "closedDate": "",
-          "url": "https://app.notion.com/p/3e473fbd19518094ac73f33553516f63",
-          "lastEditedAt": "2026-09-23T01:19:00.000Z"
+          "url": "https://app.notion.com/p/3e473fbd195180e1b4cdc93d2b5bc30e",
+          "lastEditedAt": "2026-09-23T04:32:00.000Z"
         },
         {
-          "id": "ISSUE-1886",
-          "title": "[마이페이지][공통] 무기명 계정에서 추가 인증 후 ‘여권 등록’ 화면으로 이동되지 않아 기명 전환이 불가한 현상",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Critical",
-          "defectType": "기능",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[G.H][Go.Hanpass][앱개편][APP]",
-          "versionRaw": "[Go.Hanpass][앱개편][APP]",
-          "domain": "GoHanpass",
-          "os": "미지정",
-          "createdAt": "2026-09-23T01:07:00.000Z",
-          "createdDate": "2026-09-23",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/3e473fbd1951805ba366d1dcbbc7e5e6",
-          "lastEditedAt": "2026-09-23T01:13:00.000Z"
-        },
-        {
-          "id": "ISSUE-1885",
-          "title": "[마이페이지][공통] ‘내 정보 관리’ 화면에서 뒤로가기가 동작하지 않는 현상",
+          "id": "ISSUE-1903",
+          "title": "[통합길찾기][경로상세][공통] CTA 화면에서 뒤로가기 후 경로 상세 화면의 종료 버튼이 동작하지 않는 현상",
           "status": "등록 (Registered)",
           "stage": "등록",
           "severity": "Major",
@@ -36050,18 +35994,18 @@
           "versionRaw": "[Go.Hanpass][앱개편][APP]",
           "domain": "GoHanpass",
           "os": "미지정",
-          "createdAt": "2026-09-23T01:04:00.000Z",
+          "createdAt": "2026-09-23T04:20:00.000Z",
           "createdDate": "2026-09-23",
           "fixedAt": "",
           "fixedDate": "",
           "closedAt": "",
           "closedDate": "",
-          "url": "https://app.notion.com/p/3e473fbd1951806989bac46c704efb57",
-          "lastEditedAt": "2026-09-23T01:07:00.000Z"
+          "url": "https://app.notion.com/p/CTA-3e473fbd1951803f91e6d673d6703572",
+          "lastEditedAt": "2026-09-23T04:26:00.000Z"
         },
         {
-          "id": "ISSUE-1884",
-          "title": "[마이페이지][공통] 무기명 계정의 여권 등록 안내 툴팁을 닫은 후 재진입 시 다시 노출되는 현상",
+          "id": "ISSUE-1902",
+          "title": "[통합길찾기][경로목록][공통] 경로 카드 내 출발지·도착지 아이콘이 미노출되는 현상",
           "status": "등록 (Registered)",
           "stage": "등록",
           "severity": "Major",
@@ -36072,18 +36016,40 @@
           "versionRaw": "[Go.Hanpass][앱개편][APP]",
           "domain": "GoHanpass",
           "os": "미지정",
-          "createdAt": "2026-09-23T00:53:00.000Z",
+          "createdAt": "2026-09-23T04:17:00.000Z",
           "createdDate": "2026-09-23",
           "fixedAt": "",
           "fixedDate": "",
           "closedAt": "",
           "closedDate": "",
-          "url": "https://app.notion.com/p/3e473fbd195180baa636e98aa6159cf8",
-          "lastEditedAt": "2026-09-23T01:04:00.000Z"
+          "url": "https://app.notion.com/p/3e473fbd195180f8aa32e4d9d5e64075",
+          "lastEditedAt": "2026-09-23T04:19:00.000Z"
         },
         {
-          "id": "ISSUE-1883",
-          "title": "[마이페이지][공통] 무기명 계정의 여권 등록 안내 툴팁 문구가 기획서와 상이하게 노출되는 현상",
+          "id": "ISSUE-1901",
+          "title": "[홈][EXPLORE][공통] 프로모션 배너를 통해 상품 상세 진입 시 뒤로가기가 동작하지 않는 현상",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "defectType": "기능",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[G.H][Go.Hanpass][앱개편][APP]",
+          "versionRaw": "[Go.Hanpass][앱개편][APP]",
+          "domain": "GoHanpass",
+          "os": "미지정",
+          "createdAt": "2026-09-23T04:13:00.000Z",
+          "createdDate": "2026-09-23",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/EXPLORE-3e473fbd19518048a75dfbf562335261",
+          "lastEditedAt": "2026-09-23T04:15:00.000Z"
+        },
+        {
+          "id": "ISSUE-1900",
+          "title": "[홈][MOVE][공통] 추천 여행지 검색 결과가 0건인 경우 안내 토스트가 미노출되는 현상",
           "status": "등록 (Registered)",
           "stage": "등록",
           "severity": "Major",
@@ -36094,18 +36060,62 @@
           "versionRaw": "[Go.Hanpass][앱개편][APP]",
           "domain": "GoHanpass",
           "os": "미지정",
-          "createdAt": "2026-09-23T00:50:00.000Z",
+          "createdAt": "2026-09-23T04:09:00.000Z",
           "createdDate": "2026-09-23",
           "fixedAt": "",
           "fixedDate": "",
           "closedAt": "",
           "closedDate": "",
-          "url": "https://app.notion.com/p/3e473fbd195180f4a168fcd5eb2e1517",
-          "lastEditedAt": "2026-09-23T00:53:00.000Z"
+          "url": "https://app.notion.com/p/MOVE-0-3e473fbd195180b5803cfdce1d49bb44",
+          "lastEditedAt": "2026-09-23T04:12:00.000Z"
         },
         {
-          "id": "ISSUE-1882",
-          "title": "[마이페이지][공통] 무기명 계정 진입 시 여권 등록 영역의 타이틀 및 상태 배지가 기획서와 상이하게 노출되는 현상",
+          "id": "ISSUE-1899",
+          "title": "[홈][MOVE][공통] 미니맵 지도 영역 선택 시 ‘통합 길찾기 메인’ 화면으로 이동하지 않는 현상",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "defectType": "기획서 수정",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[G.H][Go.Hanpass][앱개편][APP]",
+          "versionRaw": "[Go.Hanpass][앱개편][APP]",
+          "domain": "GoHanpass",
+          "os": "미지정",
+          "createdAt": "2026-09-23T04:07:00.000Z",
+          "createdDate": "2026-09-23",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/MOVE-3e473fbd195180a18ce7d2c883017cc7",
+          "lastEditedAt": "2026-09-23T04:27:00.000Z"
+        },
+        {
+          "id": "ISSUE-1898",
+          "title": "[해외송금][공통] ‘송금신청정보 입력’ 화면에서 입력 필드가 중복 노출되는 현상",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "defectType": "기능",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[G.H][Go.Hanpass][앱개편][APP]",
+          "versionRaw": "[Go.Hanpass][앱개편][APP]",
+          "domain": "GoHanpass",
+          "os": "미지정",
+          "createdAt": "2026-09-23T04:01:00.000Z",
+          "createdDate": "2026-09-23",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/3e473fbd195180b4bbf9c2611f2c1aff",
+          "lastEditedAt": "2026-09-23T04:05:00.000Z"
+        },
+        {
+          "id": "ISSUE-1897",
+          "title": "[홈][MOVE][공통] 스티키 고정 상태에서 탭 변경 시 상단 영역이 미노출되는 현상",
           "status": "등록 (Registered)",
           "stage": "등록",
           "severity": "Major",
@@ -36116,18 +36126,18 @@
           "versionRaw": "[Go.Hanpass][앱개편][APP]",
           "domain": "GoHanpass",
           "os": "미지정",
-          "createdAt": "2026-09-23T00:47:00.000Z",
+          "createdAt": "2026-09-23T03:58:00.000Z",
           "createdDate": "2026-09-23",
           "fixedAt": "",
           "fixedDate": "",
           "closedAt": "",
           "closedDate": "",
-          "url": "https://app.notion.com/p/3e473fbd19518062a0ccf32a216216a2",
-          "lastEditedAt": "2026-09-23T00:50:00.000Z"
+          "url": "https://app.notion.com/p/MOVE-3e473fbd195180f5bddce0fb3d04e256",
+          "lastEditedAt": "2026-09-23T04:00:00.000Z"
         },
         {
-          "id": "ISSUE-1881",
-          "title": "[홈][MOVE][공통] ‘추천 여행지’ 노출 건수가 0건인 경우에도 해당 영역이 노출되는 현상",
+          "id": "ISSUE-1896",
+          "title": "[홈][MOVE][공통] 메인 이벤트 배너가 1건인 경우에도 인디케이터가 노출되는 현상",
           "status": "등록 (Registered)",
           "stage": "등록",
           "severity": "Major",
@@ -36138,14 +36148,14 @@
           "versionRaw": "[Go.Hanpass][앱개편][APP]",
           "domain": "GoHanpass",
           "os": "미지정",
-          "createdAt": "2026-09-23T00:43:00.000Z",
+          "createdAt": "2026-09-23T02:39:00.000Z",
           "createdDate": "2026-09-23",
           "fixedAt": "",
           "fixedDate": "",
           "closedAt": "",
           "closedDate": "",
-          "url": "https://app.notion.com/p/MOVE-0-3e473fbd1951800fa49aef85b841c739",
-          "lastEditedAt": "2026-09-23T00:47:00.000Z"
+          "url": "https://app.notion.com/p/MOVE-1-3e473fbd19518005bcc7dd26ee5b497c",
+          "lastEditedAt": "2026-09-23T02:43:00.000Z"
         }
       ]
     },
@@ -67051,20 +67061,20 @@
     },
     "GoHanpass": {
       "summary": {
-        "total": 257,
-        "new": 76,
+        "total": 270,
+        "new": 84,
         "inProgress": 0,
         "fixed": 0,
-        "closed": 181,
-        "todayNew": 11,
-        "newDelta": -9
+        "closed": 186,
+        "todayNew": 24,
+        "newDelta": 4
       },
       "funnel": [
         {
           "stage": "등록",
-          "count": 76,
-          "rate": 29.6,
-          "width": 42
+          "count": 84,
+          "rate": 31.1,
+          "width": 45
         },
         {
           "stage": "검토",
@@ -67098,8 +67108,8 @@
         },
         {
           "stage": "종료",
-          "count": 181,
-          "rate": 70.4,
+          "count": 186,
+          "rate": 68.9,
           "width": 100
         }
       ],
@@ -67309,10 +67319,10 @@
         },
         {
           "date": "2026-09-23",
-          "new": 11,
-          "fixed": 4,
-          "closed": 4,
-          "deltaNew": -9
+          "new": 24,
+          "fixed": 9,
+          "closed": 9,
+          "deltaNew": 4
         }
       ],
       "versions": [
@@ -67478,17 +67488,17 @@
         },
         {
           "version": "[G.H][Go.Hanpass][앱개편][APP]",
-          "total": 29,
-          "criticalMajor": 26,
-          "doneRate": 13.8,
+          "total": 42,
+          "criticalMajor": 37,
+          "doneRate": 21.4,
           "status": [
             {
               "label": "등록",
-              "count": 25
+              "count": 33
             },
             {
               "label": "종료",
-              "count": 4
+              "count": 9
             }
           ],
           "severity": [
@@ -67498,17 +67508,21 @@
             },
             {
               "label": "Major",
-              "count": 25
+              "count": 36
             },
             {
               "label": "Minor",
-              "count": 3
+              "count": 4
+            },
+            {
+              "label": "미지정",
+              "count": 1
             }
           ],
           "priority": [
             {
               "label": "Medium",
-              "count": 29
+              "count": 42
             }
           ]
         },
@@ -71083,13 +71097,13 @@
         },
         {
           "version": "[G.H][Go.Hanpass][앱개편][APP]",
-          "total": 29,
-          "open": 25,
+          "total": 42,
+          "open": 33,
           "devDone": 0,
           "qaRegression": 0,
-          "done": 4,
-          "scopeTotal": 29,
-          "doneRate": 13.8,
+          "done": 9,
+          "scopeTotal": 42,
+          "doneRate": 21.4,
           "latestSnapshot": "2026-09-23",
           "severityRows": [
             {
@@ -71104,53 +71118,63 @@
             },
             {
               "severity": "Major",
-              "open": 22,
+              "open": 30,
               "devDone": 0,
               "qaRegression": 0,
-              "done": 3,
-              "total": 25,
-              "rate": 12.0,
+              "done": 6,
+              "total": 36,
+              "rate": 16.7,
               "previousRate": 0.0
             },
             {
               "severity": "Minor",
-              "open": 2,
+              "open": 1,
               "devDone": 0,
               "qaRegression": 0,
-              "done": 1,
-              "total": 3,
-              "rate": 33.3,
+              "done": 3,
+              "total": 4,
+              "rate": 75.0,
               "previousRate": 0.0
             },
             {
               "severity": "합계",
-              "open": 25,
+              "open": 33,
               "devDone": 0,
               "qaRegression": 0,
-              "done": 4,
-              "total": 29,
-              "rate": 13.8,
+              "done": 9,
+              "total": 42,
+              "rate": 21.4,
               "previousRate": 0.0
             }
           ],
           "typeRows": [
             {
               "type": "정책 불일치",
-              "total": 20,
+              "total": 22,
               "severity": [
                 {
                   "label": "Major",
-                  "count": 18
+                  "count": 22
+                }
+              ]
+            },
+            {
+              "type": "기획서 수정",
+              "total": 11,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 7
                 },
                 {
                   "label": "Minor",
-                  "count": 2
+                  "count": 4
                 }
               ]
             },
             {
               "type": "기능",
-              "total": 4,
+              "total": 7,
               "severity": [
                 {
                   "label": "Critical",
@@ -71158,21 +71182,7 @@
                 },
                 {
                   "label": "Major",
-                  "count": 3
-                }
-              ]
-            },
-            {
-              "type": "기획서 수정",
-              "total": 4,
-              "severity": [
-                {
-                  "label": "Major",
-                  "count": 3
-                },
-                {
-                  "label": "Minor",
-                  "count": 1
+                  "count": 6
                 }
               ]
             },
@@ -71182,6 +71192,16 @@
               "severity": [
                 {
                   "label": "Major",
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "type": "미지정",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "미지정",
                   "count": 1
                 }
               ]
@@ -71195,8 +71215,8 @@
             },
             {
               "date": "2026-09-23",
-              "registered": 29,
-              "fixed": 4
+              "registered": 42,
+              "fixed": 9
             }
           ]
         },
@@ -72086,11 +72106,11 @@
           "status": [
             {
               "label": "등록",
-              "count": 76
+              "count": 84
             },
             {
               "label": "종료",
-              "count": 181
+              "count": 186
             }
           ],
           "severity": [
@@ -72100,17 +72120,21 @@
             },
             {
               "label": "Major",
-              "count": 113
+              "count": 124
             },
             {
               "label": "Minor",
-              "count": 141
+              "count": 142
+            },
+            {
+              "label": "미지정",
+              "count": 1
             }
           ],
           "priority": [
             {
               "label": "Medium",
-              "count": 256
+              "count": 269
             },
             {
               "label": "긴급",
@@ -72325,10 +72349,10 @@
         },
         {
           "date": "2026-09-23",
-          "new": 11,
-          "fixed": 4,
-          "closed": 4,
-          "deltaNew": -9
+          "new": 24,
+          "fixed": 9,
+          "closed": 9,
+          "deltaNew": 4
         }
       ],
       "reportBoard": {
@@ -72358,74 +72382,30 @@
       },
       "recent": [
         {
-          "id": "ISSUE-1891",
-          "title": "[공지사항][알림보관함][공통] 빈 목록 안내 문구가 기획서와 상이하게 노출되는 현상",
+          "id": "ISSUE-1905",
+          "title": "제목 없음",
           "status": "등록 (Registered)",
           "stage": "등록",
-          "severity": "Minor",
-          "defectType": "정책 불일치",
+          "severity": "미지정",
+          "defectType": "미지정",
           "priority": "Medium",
           "assignee": "미지정",
           "version": "[G.H][Go.Hanpass][앱개편][APP]",
           "versionRaw": "[Go.Hanpass][앱개편][APP]",
           "domain": "GoHanpass",
           "os": "미지정",
-          "createdAt": "2026-09-23T01:34:00.000Z",
+          "createdAt": "2026-09-23T04:31:00.000Z",
           "createdDate": "2026-09-23",
           "fixedAt": "",
           "fixedDate": "",
           "closedAt": "",
           "closedDate": "",
-          "url": "https://app.notion.com/p/3e473fbd195180069c5bd28042356fd1",
-          "lastEditedAt": "2026-09-23T01:37:00.000Z"
+          "url": "https://app.notion.com/p/3e473fbd19518065a846f0c206276e76",
+          "lastEditedAt": "2026-09-23T04:31:00.000Z"
         },
         {
-          "id": "ISSUE-1889",
-          "title": "[마이페이지][공통] 전체메뉴 내 ‘알림’ 아이콘이 미노출되는 현상",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Major",
-          "defectType": "정책 불일치",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[G.H][Go.Hanpass][앱개편][APP]",
-          "versionRaw": "[Go.Hanpass][앱개편][APP]",
-          "domain": "GoHanpass",
-          "os": "미지정",
-          "createdAt": "2026-09-23T01:26:00.000Z",
-          "createdDate": "2026-09-23",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/3e473fbd1951803b9c5ad539a13b3ad1",
-          "lastEditedAt": "2026-09-23T01:32:00.000Z"
-        },
-        {
-          "id": "ISSUE-1888",
-          "title": "[홈][PAY][공통] ‘충전대기 금액’ 영역 디자인이 기획서와 상이하게 노출되는 현상",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "defectType": "정책 불일치",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[G.H][Go.Hanpass][앱개편][APP]",
-          "versionRaw": "[Go.Hanpass][앱개편][APP]",
-          "domain": "GoHanpass",
-          "os": "미지정",
-          "createdAt": "2026-09-23T01:21:00.000Z",
-          "createdDate": "2026-09-23",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/PAY-3e473fbd1951803d8db7d73b3a25d8df",
-          "lastEditedAt": "2026-09-23T01:25:00.000Z"
-        },
-        {
-          "id": "ISSUE-1887",
-          "title": "[온보딩][풀팝업][공통] ‘오늘 하루 보지 않기’ 버튼이 미노출되는 현상",
+          "id": "ISSUE-1904",
+          "title": "[통합길찾기][경로목록][공통] 출발 시간 설정이 불가한 현상",
           "status": "등록 (Registered)",
           "stage": "등록",
           "severity": "Major",
@@ -72436,40 +72416,18 @@
           "versionRaw": "[Go.Hanpass][앱개편][APP]",
           "domain": "GoHanpass",
           "os": "미지정",
-          "createdAt": "2026-09-23T01:13:00.000Z",
+          "createdAt": "2026-09-23T04:30:00.000Z",
           "createdDate": "2026-09-23",
           "fixedAt": "",
           "fixedDate": "",
           "closedAt": "",
           "closedDate": "",
-          "url": "https://app.notion.com/p/3e473fbd19518094ac73f33553516f63",
-          "lastEditedAt": "2026-09-23T01:19:00.000Z"
+          "url": "https://app.notion.com/p/3e473fbd195180e1b4cdc93d2b5bc30e",
+          "lastEditedAt": "2026-09-23T04:32:00.000Z"
         },
         {
-          "id": "ISSUE-1886",
-          "title": "[마이페이지][공통] 무기명 계정에서 추가 인증 후 ‘여권 등록’ 화면으로 이동되지 않아 기명 전환이 불가한 현상",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Critical",
-          "defectType": "기능",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[G.H][Go.Hanpass][앱개편][APP]",
-          "versionRaw": "[Go.Hanpass][앱개편][APP]",
-          "domain": "GoHanpass",
-          "os": "미지정",
-          "createdAt": "2026-09-23T01:07:00.000Z",
-          "createdDate": "2026-09-23",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/3e473fbd1951805ba366d1dcbbc7e5e6",
-          "lastEditedAt": "2026-09-23T01:13:00.000Z"
-        },
-        {
-          "id": "ISSUE-1885",
-          "title": "[마이페이지][공통] ‘내 정보 관리’ 화면에서 뒤로가기가 동작하지 않는 현상",
+          "id": "ISSUE-1903",
+          "title": "[통합길찾기][경로상세][공통] CTA 화면에서 뒤로가기 후 경로 상세 화면의 종료 버튼이 동작하지 않는 현상",
           "status": "등록 (Registered)",
           "stage": "등록",
           "severity": "Major",
@@ -72480,18 +72438,18 @@
           "versionRaw": "[Go.Hanpass][앱개편][APP]",
           "domain": "GoHanpass",
           "os": "미지정",
-          "createdAt": "2026-09-23T01:04:00.000Z",
+          "createdAt": "2026-09-23T04:20:00.000Z",
           "createdDate": "2026-09-23",
           "fixedAt": "",
           "fixedDate": "",
           "closedAt": "",
           "closedDate": "",
-          "url": "https://app.notion.com/p/3e473fbd1951806989bac46c704efb57",
-          "lastEditedAt": "2026-09-23T01:07:00.000Z"
+          "url": "https://app.notion.com/p/CTA-3e473fbd1951803f91e6d673d6703572",
+          "lastEditedAt": "2026-09-23T04:26:00.000Z"
         },
         {
-          "id": "ISSUE-1884",
-          "title": "[마이페이지][공통] 무기명 계정의 여권 등록 안내 툴팁을 닫은 후 재진입 시 다시 노출되는 현상",
+          "id": "ISSUE-1902",
+          "title": "[통합길찾기][경로목록][공통] 경로 카드 내 출발지·도착지 아이콘이 미노출되는 현상",
           "status": "등록 (Registered)",
           "stage": "등록",
           "severity": "Major",
@@ -72502,18 +72460,40 @@
           "versionRaw": "[Go.Hanpass][앱개편][APP]",
           "domain": "GoHanpass",
           "os": "미지정",
-          "createdAt": "2026-09-23T00:53:00.000Z",
+          "createdAt": "2026-09-23T04:17:00.000Z",
           "createdDate": "2026-09-23",
           "fixedAt": "",
           "fixedDate": "",
           "closedAt": "",
           "closedDate": "",
-          "url": "https://app.notion.com/p/3e473fbd195180baa636e98aa6159cf8",
-          "lastEditedAt": "2026-09-23T01:04:00.000Z"
+          "url": "https://app.notion.com/p/3e473fbd195180f8aa32e4d9d5e64075",
+          "lastEditedAt": "2026-09-23T04:19:00.000Z"
         },
         {
-          "id": "ISSUE-1883",
-          "title": "[마이페이지][공통] 무기명 계정의 여권 등록 안내 툴팁 문구가 기획서와 상이하게 노출되는 현상",
+          "id": "ISSUE-1901",
+          "title": "[홈][EXPLORE][공통] 프로모션 배너를 통해 상품 상세 진입 시 뒤로가기가 동작하지 않는 현상",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "defectType": "기능",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[G.H][Go.Hanpass][앱개편][APP]",
+          "versionRaw": "[Go.Hanpass][앱개편][APP]",
+          "domain": "GoHanpass",
+          "os": "미지정",
+          "createdAt": "2026-09-23T04:13:00.000Z",
+          "createdDate": "2026-09-23",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/EXPLORE-3e473fbd19518048a75dfbf562335261",
+          "lastEditedAt": "2026-09-23T04:15:00.000Z"
+        },
+        {
+          "id": "ISSUE-1900",
+          "title": "[홈][MOVE][공통] 추천 여행지 검색 결과가 0건인 경우 안내 토스트가 미노출되는 현상",
           "status": "등록 (Registered)",
           "stage": "등록",
           "severity": "Major",
@@ -72524,18 +72504,62 @@
           "versionRaw": "[Go.Hanpass][앱개편][APP]",
           "domain": "GoHanpass",
           "os": "미지정",
-          "createdAt": "2026-09-23T00:50:00.000Z",
+          "createdAt": "2026-09-23T04:09:00.000Z",
           "createdDate": "2026-09-23",
           "fixedAt": "",
           "fixedDate": "",
           "closedAt": "",
           "closedDate": "",
-          "url": "https://app.notion.com/p/3e473fbd195180f4a168fcd5eb2e1517",
-          "lastEditedAt": "2026-09-23T00:53:00.000Z"
+          "url": "https://app.notion.com/p/MOVE-0-3e473fbd195180b5803cfdce1d49bb44",
+          "lastEditedAt": "2026-09-23T04:12:00.000Z"
         },
         {
-          "id": "ISSUE-1882",
-          "title": "[마이페이지][공통] 무기명 계정 진입 시 여권 등록 영역의 타이틀 및 상태 배지가 기획서와 상이하게 노출되는 현상",
+          "id": "ISSUE-1899",
+          "title": "[홈][MOVE][공통] 미니맵 지도 영역 선택 시 ‘통합 길찾기 메인’ 화면으로 이동하지 않는 현상",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "defectType": "기획서 수정",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[G.H][Go.Hanpass][앱개편][APP]",
+          "versionRaw": "[Go.Hanpass][앱개편][APP]",
+          "domain": "GoHanpass",
+          "os": "미지정",
+          "createdAt": "2026-09-23T04:07:00.000Z",
+          "createdDate": "2026-09-23",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/MOVE-3e473fbd195180a18ce7d2c883017cc7",
+          "lastEditedAt": "2026-09-23T04:27:00.000Z"
+        },
+        {
+          "id": "ISSUE-1898",
+          "title": "[해외송금][공통] ‘송금신청정보 입력’ 화면에서 입력 필드가 중복 노출되는 현상",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "defectType": "기능",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[G.H][Go.Hanpass][앱개편][APP]",
+          "versionRaw": "[Go.Hanpass][앱개편][APP]",
+          "domain": "GoHanpass",
+          "os": "미지정",
+          "createdAt": "2026-09-23T04:01:00.000Z",
+          "createdDate": "2026-09-23",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/3e473fbd195180b4bbf9c2611f2c1aff",
+          "lastEditedAt": "2026-09-23T04:05:00.000Z"
+        },
+        {
+          "id": "ISSUE-1897",
+          "title": "[홈][MOVE][공통] 스티키 고정 상태에서 탭 변경 시 상단 영역이 미노출되는 현상",
           "status": "등록 (Registered)",
           "stage": "등록",
           "severity": "Major",
@@ -72546,18 +72570,18 @@
           "versionRaw": "[Go.Hanpass][앱개편][APP]",
           "domain": "GoHanpass",
           "os": "미지정",
-          "createdAt": "2026-09-23T00:47:00.000Z",
+          "createdAt": "2026-09-23T03:58:00.000Z",
           "createdDate": "2026-09-23",
           "fixedAt": "",
           "fixedDate": "",
           "closedAt": "",
           "closedDate": "",
-          "url": "https://app.notion.com/p/3e473fbd19518062a0ccf32a216216a2",
-          "lastEditedAt": "2026-09-23T00:50:00.000Z"
+          "url": "https://app.notion.com/p/MOVE-3e473fbd195180f5bddce0fb3d04e256",
+          "lastEditedAt": "2026-09-23T04:00:00.000Z"
         },
         {
-          "id": "ISSUE-1881",
-          "title": "[홈][MOVE][공통] ‘추천 여행지’ 노출 건수가 0건인 경우에도 해당 영역이 노출되는 현상",
+          "id": "ISSUE-1896",
+          "title": "[홈][MOVE][공통] 메인 이벤트 배너가 1건인 경우에도 인디케이터가 노출되는 현상",
           "status": "등록 (Registered)",
           "stage": "등록",
           "severity": "Major",
@@ -72568,14 +72592,14 @@
           "versionRaw": "[Go.Hanpass][앱개편][APP]",
           "domain": "GoHanpass",
           "os": "미지정",
-          "createdAt": "2026-09-23T00:43:00.000Z",
+          "createdAt": "2026-09-23T02:39:00.000Z",
           "createdDate": "2026-09-23",
           "fixedAt": "",
           "fixedDate": "",
           "closedAt": "",
           "closedDate": "",
-          "url": "https://app.notion.com/p/MOVE-0-3e473fbd1951800fa49aef85b841c739",
-          "lastEditedAt": "2026-09-23T00:47:00.000Z"
+          "url": "https://app.notion.com/p/MOVE-1-3e473fbd19518005bcc7dd26ee5b497c",
+          "lastEditedAt": "2026-09-23T02:43:00.000Z"
         }
       ]
     }

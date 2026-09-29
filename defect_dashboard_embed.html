@@ -494,7 +494,7 @@
     </div>
   </div>
   <script id="dashboard-data" type="application/json">{
-  "generatedAt": "2026-09-28T23:41:20+00:00",
+  "generatedAt": "2026-09-29T02:40:18+00:00",
   "days": 30,
   "domainOrder": [
     "한패스",
@@ -503,20 +503,20 @@
   "domains": {
     "ALL": {
       "summary": {
-        "total": 1597,
-        "new": 186,
-        "inProgress": 51,
+        "total": 1605,
+        "new": 188,
+        "inProgress": 26,
         "fixed": 0,
-        "closed": 1189,
-        "todayNew": 38,
-        "newDelta": 38
+        "closed": 1213,
+        "todayNew": 8,
+        "newDelta": -30
       },
       "funnel": [
         {
           "stage": "등록",
-          "count": 186,
-          "rate": 11.6,
-          "width": 16
+          "count": 188,
+          "rate": 11.7,
+          "width": 15
         },
         {
           "stage": "검토",
@@ -532,8 +532,8 @@
         },
         {
           "stage": "진행중",
-          "count": 51,
-          "rate": 3.2,
+          "count": 26,
+          "rate": 1.6,
           "width": 6
         },
         {
@@ -544,31 +544,24 @@
         },
         {
           "stage": "QA확인",
-          "count": 171,
-          "rate": 10.7,
-          "width": 14
+          "count": 178,
+          "rate": 11.1,
+          "width": 15
         },
         {
           "stage": "종료",
-          "count": 1189,
-          "rate": 74.5,
+          "count": 1213,
+          "rate": 75.6,
           "width": 100
         }
       ],
       "daily": [
         {
-          "date": "2026-08-30",
-          "new": 1,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": 1
-        },
-        {
           "date": "2026-08-31",
           "new": 37,
           "fixed": 1,
           "closed": 1,
-          "deltaNew": 36
+          "deltaNew": 37
         },
         {
           "date": "2026-09-01",
@@ -762,9 +755,16 @@
         {
           "date": "2026-09-28",
           "new": 38,
-          "fixed": 32,
-          "closed": 30,
+          "fixed": 31,
+          "closed": 29,
           "deltaNew": 38
+        },
+        {
+          "date": "2026-09-29",
+          "new": 8,
+          "fixed": 32,
+          "closed": 25,
+          "deltaNew": -30
         }
       ],
       "versions": [
@@ -1582,25 +1582,25 @@
         },
         {
           "version": "[G.H][Go.Hanpass][앱개편][APP]",
-          "total": 68,
-          "criticalMajor": 52,
-          "doneRate": 35.3,
+          "total": 71,
+          "criticalMajor": 54,
+          "doneRate": 70.4,
           "status": [
             {
               "label": "등록",
-              "count": 15
+              "count": 17
             },
             {
               "label": "진행중",
-              "count": 29
+              "count": 4
             },
             {
               "label": "QA확인",
-              "count": 1
+              "count": 6
             },
             {
               "label": "종료",
-              "count": 23
+              "count": 44
             }
           ],
           "severity": [
@@ -1610,17 +1610,17 @@
             },
             {
               "label": "Major",
-              "count": 50
+              "count": 52
             },
             {
               "label": "Minor",
-              "count": 16
+              "count": 17
             }
           ],
           "priority": [
             {
               "label": "Medium",
-              "count": 68
+              "count": 71
             }
           ]
         },
@@ -1628,11 +1628,11 @@
           "version": "[G.H][Go.Hanpass][앱개편][BO]",
           "total": 33,
           "criticalMajor": 25,
-          "doneRate": 48.5,
+          "doneRate": 51.5,
           "status": [
             {
               "label": "등록",
-              "count": 3
+              "count": 2
             },
             {
               "label": "진행중",
@@ -1644,7 +1644,7 @@
             },
             {
               "label": "종료",
-              "count": 15
+              "count": 16
             }
           ],
           "severity": [
@@ -1738,21 +1738,25 @@
         },
         {
           "version": "[Hanpass][앱개편][Native]-Dev",
-          "total": 234,
-          "criticalMajor": 89,
-          "doneRate": 88.5,
+          "total": 239,
+          "criticalMajor": 91,
+          "doneRate": 87.9,
           "status": [
             {
               "label": "등록",
-              "count": 20
+              "count": 22
             },
             {
               "label": "진행중",
               "count": 7
             },
             {
+              "label": "QA확인",
+              "count": 2
+            },
+            {
               "label": "종료",
-              "count": 207
+              "count": 208
             }
           ],
           "severity": [
@@ -1762,17 +1766,21 @@
             },
             {
               "label": "Major",
-              "count": 81
+              "count": 83
             },
             {
               "label": "Minor",
-              "count": 145
+              "count": 147
+            },
+            {
+              "label": "미지정",
+              "count": 1
             }
           ],
           "priority": [
             {
               "label": "Medium",
-              "count": 234
+              "count": 239
             }
           ]
         },
@@ -1780,11 +1788,11 @@
           "version": "[Hanpass][앱개편][Native]-LiveTest",
           "total": 74,
           "criticalMajor": 31,
-          "doneRate": 86.5,
+          "doneRate": 87.8,
           "status": [
             {
               "label": "등록",
-              "count": 10
+              "count": 9
             },
             {
               "label": "QA확인",
@@ -1792,7 +1800,7 @@
             },
             {
               "label": "종료",
-              "count": 63
+              "count": 64
             }
           ],
           "severity": [
@@ -2585,6 +2593,11 @@
               "date": "2026-09-28",
               "registered": 11,
               "fixed": 1
+            },
+            {
+              "date": "2026-09-29",
+              "registered": 11,
+              "fixed": 1
             }
           ]
         },
@@ -2845,6 +2858,11 @@
             },
             {
               "date": "2026-09-28",
+              "registered": 7,
+              "fixed": 2
+            },
+            {
+              "date": "2026-09-29",
               "registered": 7,
               "fixed": 2
             }
@@ -3321,6 +3339,11 @@
               "date": "2026-09-28",
               "registered": 20,
               "fixed": 20
+            },
+            {
+              "date": "2026-09-29",
+              "registered": 20,
+              "fixed": 20
             }
           ]
         },
@@ -3741,6 +3764,11 @@
             },
             {
               "date": "2026-09-28",
+              "registered": 3,
+              "fixed": 3
+            },
+            {
+              "date": "2026-09-29",
               "registered": 3,
               "fixed": 3
             }
@@ -4363,6 +4391,11 @@
             },
             {
               "date": "2026-09-28",
+              "registered": 26,
+              "fixed": 26
+            },
+            {
+              "date": "2026-09-29",
               "registered": 26,
               "fixed": 26
             }
@@ -5091,6 +5124,11 @@
             },
             {
               "date": "2026-09-28",
+              "registered": 34,
+              "fixed": 33
+            },
+            {
+              "date": "2026-09-29",
               "registered": 34,
               "fixed": 33
             }
@@ -5922,6 +5960,11 @@
             },
             {
               "date": "2026-09-28",
+              "registered": 9,
+              "fixed": 9
+            },
+            {
+              "date": "2026-09-29",
               "registered": 9,
               "fixed": 9
             }
@@ -6866,6 +6909,11 @@
             },
             {
               "date": "2026-09-28",
+              "registered": 117,
+              "fixed": 113
+            },
+            {
+              "date": "2026-09-29",
               "registered": 117,
               "fixed": 113
             }
@@ -7880,6 +7928,11 @@
             },
             {
               "date": "2026-09-28",
+              "registered": 82,
+              "fixed": 80
+            },
+            {
+              "date": "2026-09-29",
               "registered": 82,
               "fixed": 80
             }
@@ -9191,6 +9244,11 @@
             },
             {
               "date": "2026-09-28",
+              "registered": 24,
+              "fixed": 19
+            },
+            {
+              "date": "2026-09-29",
               "registered": 24,
               "fixed": 19
             }
@@ -10680,6 +10738,11 @@
             },
             {
               "date": "2026-09-28",
+              "registered": 103,
+              "fixed": 87
+            },
+            {
+              "date": "2026-09-29",
               "registered": 103,
               "fixed": 87
             }
@@ -12260,6 +12323,11 @@
             },
             {
               "date": "2026-09-28",
+              "registered": 68,
+              "fixed": 59
+            },
+            {
+              "date": "2026-09-29",
               "registered": 68,
               "fixed": 59
             }
@@ -13856,6 +13924,11 @@
             },
             {
               "date": "2026-09-28",
+              "registered": 4,
+              "fixed": 3
+            },
+            {
+              "date": "2026-09-29",
               "registered": 4,
               "fixed": 3
             }
@@ -15643,6 +15716,11 @@
               "date": "2026-09-28",
               "registered": 35,
               "fixed": 31
+            },
+            {
+              "date": "2026-09-29",
+              "registered": 35,
+              "fixed": 31
             }
           ]
         },
@@ -17388,6 +17466,11 @@
             },
             {
               "date": "2026-09-28",
+              "registered": 4,
+              "fixed": 4
+            },
+            {
+              "date": "2026-09-29",
               "registered": 4,
               "fixed": 4
             }
@@ -19415,6 +19498,11 @@
             },
             {
               "date": "2026-09-28",
+              "registered": 3,
+              "fixed": 3
+            },
+            {
+              "date": "2026-09-29",
               "registered": 3,
               "fixed": 3
             }
@@ -21582,6 +21670,11 @@
             },
             {
               "date": "2026-09-28",
+              "registered": 27,
+              "fixed": 22
+            },
+            {
+              "date": "2026-09-29",
               "registered": 27,
               "fixed": 22
             }
@@ -23926,6 +24019,11 @@
               "date": "2026-09-28",
               "registered": 33,
               "fixed": 30
+            },
+            {
+              "date": "2026-09-29",
+              "registered": 33,
+              "fixed": 30
             }
           ]
         },
@@ -24757,6 +24855,11 @@
               "date": "2026-09-28",
               "registered": 20,
               "fixed": 1
+            },
+            {
+              "date": "2026-09-29",
+              "registered": 20,
+              "fixed": 1
             }
           ]
         },
@@ -25346,6 +25449,11 @@
             },
             {
               "date": "2026-09-28",
+              "registered": 15,
+              "fixed": 15
+            },
+            {
+              "date": "2026-09-29",
               "registered": 15,
               "fixed": 15
             }
@@ -26200,6 +26308,11 @@
               "date": "2026-09-28",
               "registered": 55,
               "fixed": 54
+            },
+            {
+              "date": "2026-09-29",
+              "registered": 55,
+              "fixed": 54
             }
           ]
         },
@@ -26675,6 +26788,11 @@
             },
             {
               "date": "2026-09-28",
+              "registered": 5,
+              "fixed": 5
+            },
+            {
+              "date": "2026-09-29",
               "registered": 5,
               "fixed": 5
             }
@@ -27538,65 +27656,70 @@
               "date": "2026-09-28",
               "registered": 101,
               "fixed": 101
+            },
+            {
+              "date": "2026-09-29",
+              "registered": 101,
+              "fixed": 101
             }
           ]
         },
         {
           "version": "[G.H][Go.Hanpass][앱개편][APP]",
-          "total": 68,
-          "open": 44,
-          "devDone": 0,
-          "qaRegression": 1,
+          "total": 71,
+          "open": 21,
+          "devDone": 21,
+          "qaRegression": 6,
           "done": 23,
-          "scopeTotal": 68,
-          "doneRate": 35.3,
-          "latestSnapshot": "2026-09-28",
+          "scopeTotal": 71,
+          "doneRate": 70.4,
+          "latestSnapshot": "2026-09-29",
           "severityRows": [
             {
               "severity": "Critical",
-              "open": 2,
-              "devDone": 0,
+              "open": 0,
+              "devDone": 2,
               "qaRegression": 0,
               "done": 0,
               "total": 2,
-              "rate": 0.0,
+              "rate": 100.0,
               "previousRate": 0.0
             },
             {
               "severity": "Major",
-              "open": 32,
-              "devDone": 0,
-              "qaRegression": 0,
+              "open": 16,
+              "devDone": 14,
+              "qaRegression": 4,
               "done": 18,
-              "total": 50,
-              "rate": 36.0,
-              "previousRate": 16.2
+              "total": 52,
+              "rate": 69.2,
+              "previousRate": 34.0
             },
             {
               "severity": "Minor",
-              "open": 10,
-              "devDone": 0,
-              "qaRegression": 1,
+              "open": 5,
+              "devDone": 5,
+              "qaRegression": 2,
               "done": 5,
-              "total": 16,
-              "rate": 37.5,
-              "previousRate": 27.3
+              "total": 17,
+              "rate": 70.6,
+              "previousRate": 37.5
             },
             {
               "severity": "합계",
-              "open": 44,
-              "devDone": 0,
-              "qaRegression": 1,
+              "open": 21,
+              "devDone": 21,
+              "qaRegression": 6,
               "done": 23,
-              "total": 68,
-              "rate": 35.3,
-              "previousRate": 18.0
+              "total": 71,
+              "rate": 70.4,
+              "previousRate": 33.8
             }
           ],
           "typeRows": [
             {
               "type": "기능",
-              "total": 24,
+              "total": 27,
               "severity": [
                 {
                   "label": "Critical",
@@ -27604,7 +27727,7 @@
                 },
                 {
                   "label": "Major",
-                  "count": 21
+                  "count": 24
                 },
                 {
                   "label": "Minor",
@@ -27628,7 +27751,7 @@
             },
             {
               "type": "UX/UI",
-              "total": 11,
+              "total": 12,
               "severity": [
                 {
                   "label": "Major",
@@ -27636,17 +27759,17 @@
                 },
                 {
                   "label": "Minor",
-                  "count": 10
+                  "count": 11
                 }
               ]
             },
             {
               "type": "기획-구현 불일치",
-              "total": 8,
+              "total": 7,
               "severity": [
                 {
                   "label": "Major",
-                  "count": 8
+                  "count": 7
                 }
               ]
             },
@@ -27705,20 +27828,25 @@
             {
               "date": "2026-09-28",
               "registered": 68,
-              "fixed": 24
+              "fixed": 23
+            },
+            {
+              "date": "2026-09-29",
+              "registered": 71,
+              "fixed": 50
             }
           ]
         },
         {
           "version": "[G.H][Go.Hanpass][앱개편][BO]",
           "total": 33,
-          "open": 17,
-          "devDone": 8,
+          "open": 16,
+          "devDone": 9,
           "qaRegression": 1,
           "done": 7,
           "scopeTotal": 33,
-          "doneRate": 48.5,
-          "latestSnapshot": "2026-09-28",
+          "doneRate": 51.5,
+          "latestSnapshot": "2026-09-29",
           "severityRows": [
             {
               "severity": "Critical",
@@ -27732,13 +27860,13 @@
             },
             {
               "severity": "Major",
-              "open": 10,
-              "devDone": 8,
+              "open": 9,
+              "devDone": 9,
               "qaRegression": 1,
               "done": 6,
               "total": 25,
-              "rate": 60.0,
-              "previousRate": 0.0
+              "rate": 64.0,
+              "previousRate": 60.0
             },
             {
               "severity": "Minor",
@@ -27748,17 +27876,17 @@
               "done": 1,
               "total": 8,
               "rate": 12.5,
-              "previousRate": 0.0
+              "previousRate": 12.5
             },
             {
               "severity": "합계",
-              "open": 17,
-              "devDone": 8,
+              "open": 16,
+              "devDone": 9,
               "qaRegression": 1,
               "done": 7,
               "total": 33,
-              "rate": 48.5,
-              "previousRate": 0.0
+              "rate": 51.5,
+              "previousRate": 48.5
             }
           ],
           "typeRows": [
@@ -27851,6 +27979,11 @@
               "date": "2026-09-28",
               "registered": 33,
               "fixed": 16
+            },
+            {
+              "date": "2026-09-29",
+              "registered": 33,
+              "fixed": 17
             }
           ]
         },
@@ -28652,6 +28785,11 @@
               "date": "2026-09-28",
               "registered": 7,
               "fixed": 1
+            },
+            {
+              "date": "2026-09-29",
+              "registered": 7,
+              "fixed": 1
             }
           ]
         },
@@ -29001,19 +29139,24 @@
               "date": "2026-09-28",
               "registered": 48,
               "fixed": 48
+            },
+            {
+              "date": "2026-09-29",
+              "registered": 48,
+              "fixed": 48
             }
           ]
         },
         {
           "version": "[Hanpass][앱개편][Native]-Dev",
-          "total": 234,
-          "open": 27,
-          "devDone": 0,
-          "qaRegression": 0,
+          "total": 239,
+          "open": 29,
+          "devDone": 1,
+          "qaRegression": 2,
           "done": 207,
-          "scopeTotal": 234,
-          "doneRate": 88.5,
-          "latestSnapshot": "2026-09-28",
+          "scopeTotal": 239,
+          "doneRate": 87.9,
+          "latestSnapshot": "2026-09-29",
           "severityRows": [
             {
               "severity": "Critical",
@@ -29027,33 +29170,33 @@
             },
             {
               "severity": "Major",
-              "open": 8,
-              "devDone": 0,
-              "qaRegression": 0,
+              "open": 7,
+              "devDone": 1,
+              "qaRegression": 2,
               "done": 73,
-              "total": 81,
-              "rate": 90.1,
-              "previousRate": 96.1
+              "total": 83,
+              "rate": 91.6,
+              "previousRate": 90.1
             },
             {
               "severity": "Minor",
-              "open": 19,
+              "open": 21,
               "devDone": 0,
               "qaRegression": 0,
               "done": 126,
-              "total": 145,
-              "rate": 86.9,
-              "previousRate": 92.0
+              "total": 147,
+              "rate": 85.7,
+              "previousRate": 86.9
             },
             {
               "severity": "합계",
-              "open": 27,
-              "devDone": 0,
-              "qaRegression": 0,
+              "open": 29,
+              "devDone": 1,
+              "qaRegression": 2,
               "done": 207,
-              "total": 234,
-              "rate": 88.5,
-              "previousRate": 93.7
+              "total": 239,
+              "rate": 87.9,
+              "previousRate": 88.5
             }
           ],
           "typeRows": [
@@ -29072,6 +29215,24 @@
               ]
             },
             {
+              "type": "기획-구현 불일치",
+              "total": 61,
+              "severity": [
+                {
+                  "label": "Critical",
+                  "count": 2
+                },
+                {
+                  "label": "Major",
+                  "count": 24
+                },
+                {
+                  "label": "Minor",
+                  "count": 35
+                }
+              ]
+            },
+            {
               "type": "기능",
               "total": 60,
               "severity": [
@@ -29086,24 +29247,6 @@
                 {
                   "label": "Minor",
                   "count": 6
-                }
-              ]
-            },
-            {
-              "type": "기획-구현 불일치",
-              "total": 57,
-              "severity": [
-                {
-                  "label": "Critical",
-                  "count": 2
-                },
-                {
-                  "label": "Major",
-                  "count": 22
-                },
-                {
-                  "label": "Minor",
-                  "count": 33
                 }
               ]
             },
@@ -29160,17 +29303,21 @@
               ]
             },
             {
-              "type": "결함 아님",
-              "total": 1,
+              "type": "미지정",
+              "total": 2,
               "severity": [
                 {
                   "label": "Minor",
+                  "count": 1
+                },
+                {
+                  "label": "미지정",
                   "count": 1
                 }
               ]
             },
             {
-              "type": "미지정",
+              "type": "결함 아님",
               "total": 1,
               "severity": [
                 {
@@ -29390,19 +29537,24 @@
               "date": "2026-09-28",
               "registered": 234,
               "fixed": 207
+            },
+            {
+              "date": "2026-09-29",
+              "registered": 239,
+              "fixed": 210
             }
           ]
         },
         {
           "version": "[Hanpass][앱개편][Native]-LiveTest",
           "total": 74,
-          "open": 10,
-          "devDone": 0,
+          "open": 9,
+          "devDone": 1,
           "qaRegression": 1,
           "done": 63,
           "scopeTotal": 74,
-          "doneRate": 86.5,
-          "latestSnapshot": "2026-09-28",
+          "doneRate": 87.8,
+          "latestSnapshot": "2026-09-29",
           "severityRows": [
             {
               "severity": "Critical",
@@ -29426,23 +29578,23 @@
             },
             {
               "severity": "Minor",
-              "open": 8,
-              "devDone": 0,
+              "open": 7,
+              "devDone": 1,
               "qaRegression": 0,
               "done": 34,
               "total": 42,
-              "rate": 81.0,
-              "previousRate": 78.6
+              "rate": 83.3,
+              "previousRate": 81.0
             },
             {
               "severity": "합계",
-              "open": 10,
-              "devDone": 0,
+              "open": 9,
+              "devDone": 1,
               "qaRegression": 1,
               "done": 63,
               "total": 74,
-              "rate": 86.5,
-              "previousRate": 85.1
+              "rate": 87.8,
+              "previousRate": 86.5
             }
           ],
           "typeRows": [
@@ -29726,6 +29878,11 @@
               "date": "2026-09-28",
               "registered": 74,
               "fixed": 64
+            },
+            {
+              "date": "2026-09-29",
+              "registered": 74,
+              "fixed": 65
             }
           ]
         },
@@ -30038,6 +30195,11 @@
             },
             {
               "date": "2026-09-28",
+              "registered": 29,
+              "fixed": 1
+            },
+            {
+              "date": "2026-09-29",
               "registered": 29,
               "fixed": 1
             }
@@ -30364,6 +30526,11 @@
             },
             {
               "date": "2026-09-28",
+              "registered": 11,
+              "fixed": 11
+            },
+            {
+              "date": "2026-09-29",
               "registered": 11,
               "fixed": 11
             }
@@ -30872,6 +31039,11 @@
               "date": "2026-09-28",
               "registered": 7,
               "fixed": 4
+            },
+            {
+              "date": "2026-09-29",
+              "registered": 7,
+              "fixed": 4
             }
           ]
         },
@@ -31299,6 +31471,11 @@
               "date": "2026-09-28",
               "registered": 121,
               "fixed": 120
+            },
+            {
+              "date": "2026-09-29",
+              "registered": 121,
+              "fixed": 120
             }
           ]
         },
@@ -31596,6 +31773,11 @@
               "date": "2026-09-28",
               "registered": 131,
               "fixed": 130
+            },
+            {
+              "date": "2026-09-29",
+              "registered": 131,
+              "fixed": 130
             }
           ]
         },
@@ -31801,6 +31983,11 @@
             },
             {
               "date": "2026-09-28",
+              "registered": 1,
+              "fixed": 1
+            },
+            {
+              "date": "2026-09-29",
               "registered": 1,
               "fixed": 1
             }
@@ -33528,6 +33715,11 @@
             },
             {
               "date": "2026-09-28",
+              "registered": 3,
+              "fixed": 3
+            },
+            {
+              "date": "2026-09-29",
               "registered": 3,
               "fixed": 3
             }
@@ -35872,6 +36064,11 @@
               "date": "2026-09-28",
               "registered": 10,
               "fixed": 7
+            },
+            {
+              "date": "2026-09-29",
+              "registered": 10,
+              "fixed": 7
             }
           ]
         },
@@ -36629,6 +36826,11 @@
               "date": "2026-09-28",
               "registered": 14,
               "fixed": 2
+            },
+            {
+              "date": "2026-09-29",
+              "registered": 14,
+              "fixed": 2
             }
           ]
         }
@@ -36640,19 +36842,19 @@
           "status": [
             {
               "label": "등록",
-              "count": 186
+              "count": 188
             },
             {
               "label": "진행중",
-              "count": 51
+              "count": 26
             },
             {
               "label": "QA확인",
-              "count": 171
+              "count": 178
             },
             {
               "label": "종료",
-              "count": 1189
+              "count": 1213
             }
           ],
           "severity": [
@@ -36662,15 +36864,15 @@
             },
             {
               "label": "Major",
-              "count": 543
+              "count": 547
             },
             {
               "label": "Minor",
-              "count": 892
+              "count": 895
             },
             {
               "label": "미지정",
-              "count": 77
+              "count": 78
             },
             {
               "label": "개선 의견",
@@ -36684,7 +36886,7 @@
             },
             {
               "label": "Medium",
-              "count": 1551
+              "count": 1559
             },
             {
               "label": "Low",
@@ -36703,18 +36905,11 @@
       },
       "heatmap": [
         {
-          "date": "2026-08-30",
-          "new": 1,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": 1
-        },
-        {
           "date": "2026-08-31",
           "new": 37,
           "fixed": 1,
           "closed": 1,
-          "deltaNew": 36
+          "deltaNew": 37
         },
         {
           "date": "2026-09-01",
@@ -36908,9 +37103,16 @@
         {
           "date": "2026-09-28",
           "new": 38,
-          "fixed": 32,
-          "closed": 30,
+          "fixed": 31,
+          "closed": 29,
           "deltaNew": 38
+        },
+        {
+          "date": "2026-09-29",
+          "new": 8,
+          "fixed": 32,
+          "closed": 25,
+          "deltaNew": -30
         }
       ],
       "reportBoard": {
@@ -36940,10 +37142,186 @@
       },
       "recent": [
         {
+          "id": "ISSUE-1965",
+          "title": "[내역관리][공통] ‘한패스월렛 조회설정’ BS 내 기간 입력 영역 활성화되어 있는 현상 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "미지정",
+          "defectType": "미지정",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[Hanpass][앱개편][Native]-Dev",
+          "versionRaw": "[Hanpass][앱개편][Native]-Dev",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-09-29T02:35:00.000Z",
+          "createdDate": "2026-09-29",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/BS-3ea73fbd195180d8a4effa14fab901ec",
+          "lastEditedAt": "2026-09-29T02:39:00.000Z"
+        },
+        {
+          "id": "ISSUE-1964",
+          "title": "[내역관리][한패스월렛][공통] 리워드 상세 내역 내 상태 문구 기획서와 상이",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Minor",
+          "defectType": "기획-구현 불일치",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[Hanpass][앱개편][Native]-Dev",
+          "versionRaw": "[Hanpass][앱개편][Native]-Dev",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-09-29T02:30:00.000Z",
+          "createdDate": "2026-09-29",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/3ea73fbd1951802eb0deffbe1de06eab",
+          "lastEditedAt": "2026-09-29T02:37:00.000Z"
+        },
+        {
+          "id": "ISSUE-1963",
+          "title": "[헬프데스크][공통] 국가별 전화번호가 유효하지 않은 번호로 노출되는 현상",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Minor",
+          "defectType": "UX/UI",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[G.H][Go.Hanpass][앱개편][APP]",
+          "versionRaw": "[Go.Hanpass][앱개편][APP]",
+          "domain": "GoHanpass",
+          "os": "미지정",
+          "createdAt": "2026-09-29T02:26:00.000Z",
+          "createdDate": "2026-09-29",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/3ea73fbd195180a58324c9a3bfd5a87d",
+          "lastEditedAt": "2026-09-29T02:39:00.000Z"
+        },
+        {
+          "id": "ISSUE-1962",
+          "title": "[내역관리][한패스월렛][공통] 해외송금 세부정보 송금액/월렛 차감액 금액 반대로 노출되는 현상 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "defectType": "기획-구현 불일치",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[Hanpass][앱개편][Native]-Dev",
+          "versionRaw": "[Hanpass][앱개편][Native]-Dev",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-09-29T02:21:00.000Z",
+          "createdDate": "2026-09-29",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/3ea73fbd1951804f8cebc44498bfeca2",
+          "lastEditedAt": "2026-09-29T02:28:00.000Z"
+        },
+        {
+          "id": "ISSUE-1961",
+          "title": "[내역관리][한패스월렛][공통] 환급대기 내역 문구 기획서와 상이 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Minor",
+          "defectType": "기획-구현 불일치",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[Hanpass][앱개편][Native]-Dev",
+          "versionRaw": "[Hanpass][앱개편][Native]-Dev",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-09-29T02:12:00.000Z",
+          "createdDate": "2026-09-29",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/3ea73fbd195180888e8ccf05b47c6658",
+          "lastEditedAt": "2026-09-29T02:18:00.000Z"
+        },
+        {
+          "id": "ISSUE-1960",
+          "title": "[내역관리][공통] ‘이용 확인증 발급 배너’ 미노출 현상 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "defectType": "기획-구현 불일치",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[Hanpass][앱개편][Native]-Dev",
+          "versionRaw": "[Hanpass][앱개편][Native]-Dev",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-09-29T02:06:00.000Z",
+          "createdDate": "2026-09-29",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/3ea73fbd1951800db6f5dd8eecadfeb6",
+          "lastEditedAt": "2026-09-29T02:10:00.000Z"
+        },
+        {
+          "id": "ISSUE-1959",
+          "title": "[홈] 이용 중 데이터 파싱 오류로 ‘서버 연결에 실패했습니다.’ 안내가 노출되는 현상",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "defectType": "기능",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[G.H][Go.Hanpass][앱개편][APP]",
+          "versionRaw": "[Go.Hanpass][앱개편][APP]",
+          "domain": "GoHanpass",
+          "os": "미지정",
+          "createdAt": "2026-09-29T01:55:00.000Z",
+          "createdDate": "2026-09-29",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/3ea73fbd1951809fa84ae40efa8be8bf",
+          "lastEditedAt": "2026-09-29T02:26:00.000Z"
+        },
+        {
+          "id": "ISSUE-1958",
+          "title": "[홈][날씨] 지역명 다국어 데이터 처리 중 JSON 파싱 오류가 발생하는 현상",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "defectType": "기능",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[G.H][Go.Hanpass][앱개편][APP]",
+          "versionRaw": "[Go.Hanpass][앱개편][APP]",
+          "domain": "GoHanpass",
+          "os": "미지정",
+          "createdAt": "2026-09-29T01:25:00.000Z",
+          "createdDate": "2026-09-29",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/JSON-3ea73fbd19518029a549e08991770606",
+          "lastEditedAt": "2026-09-29T02:29:00.000Z"
+        },
+        {
           "id": "ISSUE-1957",
           "title": "[월렛충전][AOS] As-Is 화면 노출되는 현상 ",
-          "status": "처리중 (In Progress)",
-          "stage": "진행중",
+          "status": "QA 검증 -회귀 (QA Verification)",
+          "stage": "QA확인",
           "severity": "Major",
           "defectType": "기획-구현 불일치",
           "priority": "Medium",
@@ -36954,18 +37332,18 @@
           "os": "미지정",
           "createdAt": "2026-09-28T07:49:00.000Z",
           "createdDate": "2026-09-28",
-          "fixedAt": "",
-          "fixedDate": "",
+          "fixedAt": "2026-09-29T02:05:00.000Z",
+          "fixedDate": "2026-09-29",
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/AOS-As-Is-3e973fbd195180298abadb0f3c323500",
-          "lastEditedAt": "2026-09-28T09:07:00.000Z"
+          "lastEditedAt": "2026-09-29T02:05:00.000Z"
         },
         {
           "id": "ISSUE-1956",
           "title": "[내역관리][AOS] As-Is 화면 노출되는 현상 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
+          "status": "QA 검증 -회귀 (QA Verification)",
+          "stage": "QA확인",
           "severity": "Major",
           "defectType": "기획-구현 불일치",
           "priority": "Medium",
@@ -36976,205 +37354,29 @@
           "os": "미지정",
           "createdAt": "2026-09-28T07:42:00.000Z",
           "createdDate": "2026-09-28",
-          "fixedAt": "",
-          "fixedDate": "",
+          "fixedAt": "2026-09-29T02:05:00.000Z",
+          "fixedDate": "2026-09-29",
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/AOS-As-Is-3e973fbd19518091a543daabfb19b53b",
-          "lastEditedAt": "2026-09-28T08:13:00.000Z"
-        },
-        {
-          "id": "ISSUE-1954",
-          "title": "[환율][iOS] 방글라데시 - 받는 방법 계좌이체 외 선택 시에도 Top Rate/Speed 노출되는 현상 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Major",
-          "defectType": "기능",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[Hanpass][앱개편][Native]-Dev",
-          "versionRaw": "[Hanpass][앱개편][Native]-Dev",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-09-28T07:22:00.000Z",
-          "createdDate": "2026-09-28",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/iOS-Top-Rate-Speed-3e973fbd195180f4bb1fedc8553f644a",
-          "lastEditedAt": "2026-09-28T08:16:00.000Z"
-        },
-        {
-          "id": "ISSUE-1952",
-          "title": "[해외송금][공통] ‘세부 받는 방법 선택’ 화면 내 플레이스홀더 문구 기획서와 상이 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "defectType": "텍스트",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[Hanpass][앱개편][Native]-Dev",
-          "versionRaw": "[Hanpass][앱개편][Native]-Dev",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-09-28T06:33:00.000Z",
-          "createdDate": "2026-09-28",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/3e973fbd19518094925ee7ea26c41889",
-          "lastEditedAt": "2026-09-28T08:17:00.000Z"
-        },
-        {
-          "id": "ISSUE-1951",
-          "title": "[해외송금][공통] 방글라데시 선택 시 Top Rate/Speed 위치 기획서와 상이 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "defectType": "기획-구현 불일치",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[Hanpass][앱개편][Native]-Dev",
-          "versionRaw": "[Hanpass][앱개편][Native]-Dev",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-09-28T06:27:00.000Z",
-          "createdDate": "2026-09-28",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/Top-Rate-Speed-3e973fbd19518080acd7c5eaa677b7a8",
-          "lastEditedAt": "2026-09-28T08:17:00.000Z"
-        },
-        {
-          "id": "ISSUE-1950",
-          "title": "[해외송금][환율][iOS] 한국 국적인 경우 환율 국가 미국으로 노출되는 현상 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "defectType": "기획-구현 불일치",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[Hanpass][앱개편][Native]-Dev",
-          "versionRaw": "[Hanpass][앱개편][Native]-Dev",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-09-28T06:07:00.000Z",
-          "createdDate": "2026-09-28",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/iOS-3e973fbd19518090abdec0d014af5aaa",
-          "lastEditedAt": "2026-09-28T08:18:00.000Z"
-        },
-        {
-          "id": "ISSUE-1949",
-          "title": "[해외송금][공통] ‘국가/통화’ 화면 내 환율 툴팁 문구 기획서와 상이",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "defectType": "기획-구현 불일치",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[Hanpass][앱개편][Native]-Dev",
-          "versionRaw": "[Hanpass][앱개편][Native]-Dev",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-09-28T05:42:00.000Z",
-          "createdDate": "2026-09-28",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/3e973fbd195180248e9bc68053474ea0",
-          "lastEditedAt": "2026-09-28T08:18:00.000Z"
-        },
-        {
-          "id": "ISSUE-1948",
-          "title": "[홈][AOS] 한패스 카드 진입 시 백화 현상 ",
-          "status": "처리중 (In Progress)",
-          "stage": "진행중",
-          "severity": "Major",
-          "defectType": "기능",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[Hanpass][앱개편][Native]-Dev",
-          "versionRaw": "[Hanpass][앱개편][Native]-Dev",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-09-28T04:42:00.000Z",
-          "createdDate": "2026-09-28",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/AOS-3e973fbd195180c19a48fd227efba1ae",
-          "lastEditedAt": "2026-09-28T07:05:00.000Z"
-        },
-        {
-          "id": "ISSUE-1947",
-          "title": "[홈][AOS] ‘내 포인트’ 선택 시 ‘혜택’ 화면으로 이동하는 현상",
-          "status": "처리중 (In Progress)",
-          "stage": "진행중",
-          "severity": "Minor",
-          "defectType": "기획-구현 불일치",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[Hanpass][앱개편][Native]-Dev",
-          "versionRaw": "[Hanpass][앱개편][Native]-Dev",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-09-28T04:34:00.000Z",
-          "createdDate": "2026-09-28",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/AOS-3e973fbd19518012b686ce3c22aa9db3",
-          "lastEditedAt": "2026-09-28T08:51:00.000Z"
-        },
-        {
-          "id": "ISSUE-1946",
-          "title": "[홈][공통] 카드 미보유 시 ‘카드 만들기’ 문구 기획서와 상이하게 노출되는 현상 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "defectType": "텍스트",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[Hanpass][앱개편][Native]-Dev",
-          "versionRaw": "[Hanpass][앱개편][Native]-Dev",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-09-28T04:28:00.000Z",
-          "createdDate": "2026-09-28",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/3e973fbd195180e4b04ed3405ac2c602",
-          "lastEditedAt": "2026-09-28T05:28:00.000Z"
+          "lastEditedAt": "2026-09-29T02:05:00.000Z"
         }
       ]
     },
     "한패스": {
       "summary": {
-        "total": 1293,
-        "new": 142,
+        "total": 1298,
+        "new": 143,
         "inProgress": 8,
         "fixed": 0,
-        "closed": 974,
-        "todayNew": 13,
-        "newDelta": 13
+        "closed": 976,
+        "todayNew": 5,
+        "newDelta": -8
       },
       "funnel": [
         {
           "stage": "등록",
-          "count": 142,
+          "count": 143,
           "rate": 11.0,
           "width": 15
         },
@@ -37204,31 +37406,24 @@
         },
         {
           "stage": "QA확인",
-          "count": 169,
-          "rate": 13.1,
-          "width": 17
+          "count": 171,
+          "rate": 13.2,
+          "width": 18
         },
         {
           "stage": "종료",
-          "count": 974,
-          "rate": 75.3,
+          "count": 976,
+          "rate": 75.2,
           "width": 100
         }
       ],
       "daily": [
         {
-          "date": "2026-08-30",
-          "new": 1,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": 1
-        },
-        {
           "date": "2026-08-31",
           "new": 37,
           "fixed": 1,
           "closed": 1,
-          "deltaNew": 36
+          "deltaNew": 37
         },
         {
           "date": "2026-09-01",
@@ -37425,6 +37620,13 @@
           "fixed": 1,
           "closed": 1,
           "deltaNew": 13
+        },
+        {
+          "date": "2026-09-29",
+          "new": 5,
+          "fixed": 4,
+          "closed": 2,
+          "deltaNew": -8
         }
       ],
       "versions": [
@@ -38122,21 +38324,25 @@
         },
         {
           "version": "[Hanpass][앱개편][Native]-Dev",
-          "total": 234,
-          "criticalMajor": 89,
-          "doneRate": 88.5,
+          "total": 239,
+          "criticalMajor": 91,
+          "doneRate": 87.9,
           "status": [
             {
               "label": "등록",
-              "count": 20
+              "count": 22
             },
             {
               "label": "진행중",
               "count": 7
             },
             {
+              "label": "QA확인",
+              "count": 2
+            },
+            {
               "label": "종료",
-              "count": 207
+              "count": 208
             }
           ],
           "severity": [
@@ -38146,17 +38352,21 @@
             },
             {
               "label": "Major",
-              "count": 81
+              "count": 83
             },
             {
               "label": "Minor",
-              "count": 145
+              "count": 147
+            },
+            {
+              "label": "미지정",
+              "count": 1
             }
           ],
           "priority": [
             {
               "label": "Medium",
-              "count": 234
+              "count": 239
             }
           ]
         },
@@ -38164,11 +38374,11 @@
           "version": "[Hanpass][앱개편][Native]-LiveTest",
           "total": 74,
           "criticalMajor": 31,
-          "doneRate": 86.5,
+          "doneRate": 87.8,
           "status": [
             {
               "label": "등록",
-              "count": 10
+              "count": 9
             },
             {
               "label": "QA확인",
@@ -38176,7 +38386,7 @@
             },
             {
               "label": "종료",
-              "count": 63
+              "count": 64
             }
           ],
           "severity": [
@@ -38961,6 +39171,11 @@
               "date": "2026-09-28",
               "registered": 11,
               "fixed": 1
+            },
+            {
+              "date": "2026-09-29",
+              "registered": 11,
+              "fixed": 1
             }
           ]
         },
@@ -39221,6 +39436,11 @@
             },
             {
               "date": "2026-09-28",
+              "registered": 7,
+              "fixed": 2
+            },
+            {
+              "date": "2026-09-29",
               "registered": 7,
               "fixed": 2
             }
@@ -39697,6 +39917,11 @@
               "date": "2026-09-28",
               "registered": 20,
               "fixed": 20
+            },
+            {
+              "date": "2026-09-29",
+              "registered": 20,
+              "fixed": 20
             }
           ]
         },
@@ -40117,6 +40342,11 @@
             },
             {
               "date": "2026-09-28",
+              "registered": 3,
+              "fixed": 3
+            },
+            {
+              "date": "2026-09-29",
               "registered": 3,
               "fixed": 3
             }
@@ -40739,6 +40969,11 @@
             },
             {
               "date": "2026-09-28",
+              "registered": 26,
+              "fixed": 26
+            },
+            {
+              "date": "2026-09-29",
               "registered": 26,
               "fixed": 26
             }
@@ -41467,6 +41702,11 @@
             },
             {
               "date": "2026-09-28",
+              "registered": 34,
+              "fixed": 33
+            },
+            {
+              "date": "2026-09-29",
               "registered": 34,
               "fixed": 33
             }
@@ -42298,6 +42538,11 @@
             },
             {
               "date": "2026-09-28",
+              "registered": 9,
+              "fixed": 9
+            },
+            {
+              "date": "2026-09-29",
               "registered": 9,
               "fixed": 9
             }
@@ -43242,6 +43487,11 @@
             },
             {
               "date": "2026-09-28",
+              "registered": 117,
+              "fixed": 113
+            },
+            {
+              "date": "2026-09-29",
               "registered": 117,
               "fixed": 113
             }
@@ -44256,6 +44506,11 @@
             },
             {
               "date": "2026-09-28",
+              "registered": 82,
+              "fixed": 80
+            },
+            {
+              "date": "2026-09-29",
               "registered": 82,
               "fixed": 80
             }
@@ -45567,6 +45822,11 @@
             },
             {
               "date": "2026-09-28",
+              "registered": 24,
+              "fixed": 19
+            },
+            {
+              "date": "2026-09-29",
               "registered": 24,
               "fixed": 19
             }
@@ -47056,6 +47316,11 @@
             },
             {
               "date": "2026-09-28",
+              "registered": 103,
+              "fixed": 87
+            },
+            {
+              "date": "2026-09-29",
               "registered": 103,
               "fixed": 87
             }
@@ -48636,6 +48901,11 @@
             },
             {
               "date": "2026-09-28",
+              "registered": 68,
+              "fixed": 59
+            },
+            {
+              "date": "2026-09-29",
               "registered": 68,
               "fixed": 59
             }
@@ -50232,6 +50502,11 @@
             },
             {
               "date": "2026-09-28",
+              "registered": 4,
+              "fixed": 3
+            },
+            {
+              "date": "2026-09-29",
               "registered": 4,
               "fixed": 3
             }
@@ -52019,6 +52294,11 @@
               "date": "2026-09-28",
               "registered": 35,
               "fixed": 31
+            },
+            {
+              "date": "2026-09-29",
+              "registered": 35,
+              "fixed": 31
             }
           ]
         },
@@ -53764,6 +54044,11 @@
             },
             {
               "date": "2026-09-28",
+              "registered": 4,
+              "fixed": 4
+            },
+            {
+              "date": "2026-09-29",
               "registered": 4,
               "fixed": 4
             }
@@ -55791,6 +56076,11 @@
             },
             {
               "date": "2026-09-28",
+              "registered": 3,
+              "fixed": 3
+            },
+            {
+              "date": "2026-09-29",
               "registered": 3,
               "fixed": 3
             }
@@ -57958,6 +58248,11 @@
             },
             {
               "date": "2026-09-28",
+              "registered": 27,
+              "fixed": 22
+            },
+            {
+              "date": "2026-09-29",
               "registered": 27,
               "fixed": 22
             }
@@ -60302,6 +60597,11 @@
               "date": "2026-09-28",
               "registered": 33,
               "fixed": 30
+            },
+            {
+              "date": "2026-09-29",
+              "registered": 33,
+              "fixed": 30
             }
           ]
         },
@@ -60651,19 +60951,24 @@
               "date": "2026-09-28",
               "registered": 48,
               "fixed": 48
+            },
+            {
+              "date": "2026-09-29",
+              "registered": 48,
+              "fixed": 48
             }
           ]
         },
         {
           "version": "[Hanpass][앱개편][Native]-Dev",
-          "total": 234,
-          "open": 27,
-          "devDone": 0,
-          "qaRegression": 0,
+          "total": 239,
+          "open": 29,
+          "devDone": 1,
+          "qaRegression": 2,
           "done": 207,
-          "scopeTotal": 234,
-          "doneRate": 88.5,
-          "latestSnapshot": "2026-09-28",
+          "scopeTotal": 239,
+          "doneRate": 87.9,
+          "latestSnapshot": "2026-09-29",
           "severityRows": [
             {
               "severity": "Critical",
@@ -60677,33 +60982,33 @@
             },
             {
               "severity": "Major",
-              "open": 8,
-              "devDone": 0,
-              "qaRegression": 0,
+              "open": 7,
+              "devDone": 1,
+              "qaRegression": 2,
               "done": 73,
-              "total": 81,
-              "rate": 90.1,
-              "previousRate": 96.1
+              "total": 83,
+              "rate": 91.6,
+              "previousRate": 90.1
             },
             {
               "severity": "Minor",
-              "open": 19,
+              "open": 21,
               "devDone": 0,
               "qaRegression": 0,
               "done": 126,
-              "total": 145,
-              "rate": 86.9,
-              "previousRate": 92.0
+              "total": 147,
+              "rate": 85.7,
+              "previousRate": 86.9
             },
             {
               "severity": "합계",
-              "open": 27,
-              "devDone": 0,
-              "qaRegression": 0,
+              "open": 29,
+              "devDone": 1,
+              "qaRegression": 2,
               "done": 207,
-              "total": 234,
-              "rate": 88.5,
-              "previousRate": 93.7
+              "total": 239,
+              "rate": 87.9,
+              "previousRate": 88.5
             }
           ],
           "typeRows": [
@@ -60722,6 +61027,24 @@
               ]
             },
             {
+              "type": "기획-구현 불일치",
+              "total": 61,
+              "severity": [
+                {
+                  "label": "Critical",
+                  "count": 2
+                },
+                {
+                  "label": "Major",
+                  "count": 24
+                },
+                {
+                  "label": "Minor",
+                  "count": 35
+                }
+              ]
+            },
+            {
               "type": "기능",
               "total": 60,
               "severity": [
@@ -60736,24 +61059,6 @@
                 {
                   "label": "Minor",
                   "count": 6
-                }
-              ]
-            },
-            {
-              "type": "기획-구현 불일치",
-              "total": 57,
-              "severity": [
-                {
-                  "label": "Critical",
-                  "count": 2
-                },
-                {
-                  "label": "Major",
-                  "count": 22
-                },
-                {
-                  "label": "Minor",
-                  "count": 33
                 }
               ]
             },
@@ -60810,17 +61115,21 @@
               ]
             },
             {
-              "type": "결함 아님",
-              "total": 1,
+              "type": "미지정",
+              "total": 2,
               "severity": [
                 {
                   "label": "Minor",
+                  "count": 1
+                },
+                {
+                  "label": "미지정",
                   "count": 1
                 }
               ]
             },
             {
-              "type": "미지정",
+              "type": "결함 아님",
               "total": 1,
               "severity": [
                 {
@@ -61040,19 +61349,24 @@
               "date": "2026-09-28",
               "registered": 234,
               "fixed": 207
+            },
+            {
+              "date": "2026-09-29",
+              "registered": 239,
+              "fixed": 210
             }
           ]
         },
         {
           "version": "[Hanpass][앱개편][Native]-LiveTest",
           "total": 74,
-          "open": 10,
-          "devDone": 0,
+          "open": 9,
+          "devDone": 1,
           "qaRegression": 1,
           "done": 63,
           "scopeTotal": 74,
-          "doneRate": 86.5,
-          "latestSnapshot": "2026-09-28",
+          "doneRate": 87.8,
+          "latestSnapshot": "2026-09-29",
           "severityRows": [
             {
               "severity": "Critical",
@@ -61076,23 +61390,23 @@
             },
             {
               "severity": "Minor",
-              "open": 8,
-              "devDone": 0,
+              "open": 7,
+              "devDone": 1,
               "qaRegression": 0,
               "done": 34,
               "total": 42,
-              "rate": 81.0,
-              "previousRate": 78.6
+              "rate": 83.3,
+              "previousRate": 81.0
             },
             {
               "severity": "합계",
-              "open": 10,
-              "devDone": 0,
+              "open": 9,
+              "devDone": 1,
               "qaRegression": 1,
               "done": 63,
               "total": 74,
-              "rate": 86.5,
-              "previousRate": 85.1
+              "rate": 87.8,
+              "previousRate": 86.5
             }
           ],
           "typeRows": [
@@ -61376,6 +61690,11 @@
               "date": "2026-09-28",
               "registered": 74,
               "fixed": 64
+            },
+            {
+              "date": "2026-09-29",
+              "registered": 74,
+              "fixed": 65
             }
           ]
         },
@@ -61688,6 +62007,11 @@
             },
             {
               "date": "2026-09-28",
+              "registered": 29,
+              "fixed": 1
+            },
+            {
+              "date": "2026-09-29",
               "registered": 29,
               "fixed": 1
             }
@@ -62014,6 +62338,11 @@
             },
             {
               "date": "2026-09-28",
+              "registered": 11,
+              "fixed": 11
+            },
+            {
+              "date": "2026-09-29",
               "registered": 11,
               "fixed": 11
             }
@@ -62522,6 +62851,11 @@
               "date": "2026-09-28",
               "registered": 7,
               "fixed": 4
+            },
+            {
+              "date": "2026-09-29",
+              "registered": 7,
+              "fixed": 4
             }
           ]
         },
@@ -62949,6 +63283,11 @@
               "date": "2026-09-28",
               "registered": 121,
               "fixed": 120
+            },
+            {
+              "date": "2026-09-29",
+              "registered": 121,
+              "fixed": 120
             }
           ]
         },
@@ -63246,6 +63585,11 @@
               "date": "2026-09-28",
               "registered": 131,
               "fixed": 130
+            },
+            {
+              "date": "2026-09-29",
+              "registered": 131,
+              "fixed": 130
             }
           ]
         },
@@ -63451,6 +63795,11 @@
             },
             {
               "date": "2026-09-28",
+              "registered": 1,
+              "fixed": 1
+            },
+            {
+              "date": "2026-09-29",
               "registered": 1,
               "fixed": 1
             }
@@ -65178,6 +65527,11 @@
             },
             {
               "date": "2026-09-28",
+              "registered": 3,
+              "fixed": 3
+            },
+            {
+              "date": "2026-09-29",
               "registered": 3,
               "fixed": 3
             }
@@ -67522,6 +67876,11 @@
               "date": "2026-09-28",
               "registered": 10,
               "fixed": 7
+            },
+            {
+              "date": "2026-09-29",
+              "registered": 10,
+              "fixed": 7
             }
           ]
         },
@@ -68279,6 +68638,11 @@
               "date": "2026-09-28",
               "registered": 14,
               "fixed": 2
+            },
+            {
+              "date": "2026-09-29",
+              "registered": 14,
+              "fixed": 2
             }
           ]
         }
@@ -68290,7 +68654,7 @@
           "status": [
             {
               "label": "등록",
-              "count": 142
+              "count": 143
             },
             {
               "label": "진행중",
@@ -68298,11 +68662,11 @@
             },
             {
               "label": "QA확인",
-              "count": 169
+              "count": 171
             },
             {
               "label": "종료",
-              "count": 974
+              "count": 976
             }
           ],
           "severity": [
@@ -68312,15 +68676,15 @@
             },
             {
               "label": "Major",
-              "count": 404
+              "count": 406
             },
             {
               "label": "Minor",
-              "count": 731
+              "count": 733
             },
             {
               "label": "미지정",
-              "count": 77
+              "count": 78
             },
             {
               "label": "개선 의견",
@@ -68334,7 +68698,7 @@
             },
             {
               "label": "Medium",
-              "count": 1248
+              "count": 1253
             },
             {
               "label": "Low",
@@ -68353,18 +68717,11 @@
       },
       "heatmap": [
         {
-          "date": "2026-08-30",
-          "new": 1,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": 1
-        },
-        {
           "date": "2026-08-31",
           "new": 37,
           "fixed": 1,
           "closed": 1,
-          "deltaNew": 36
+          "deltaNew": 37
         },
         {
           "date": "2026-09-01",
@@ -68561,6 +68918,13 @@
           "fixed": 1,
           "closed": 1,
           "deltaNew": 13
+        },
+        {
+          "date": "2026-09-29",
+          "new": 5,
+          "fixed": 4,
+          "closed": 2,
+          "deltaNew": -8
         }
       ],
       "reportBoard": {
@@ -68590,11 +68954,33 @@
       },
       "recent": [
         {
-          "id": "ISSUE-1957",
-          "title": "[월렛충전][AOS] As-Is 화면 노출되는 현상 ",
-          "status": "처리중 (In Progress)",
-          "stage": "진행중",
-          "severity": "Major",
+          "id": "ISSUE-1965",
+          "title": "[내역관리][공통] ‘한패스월렛 조회설정’ BS 내 기간 입력 영역 활성화되어 있는 현상 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "미지정",
+          "defectType": "미지정",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[Hanpass][앱개편][Native]-Dev",
+          "versionRaw": "[Hanpass][앱개편][Native]-Dev",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-09-29T02:35:00.000Z",
+          "createdDate": "2026-09-29",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/BS-3ea73fbd195180d8a4effa14fab901ec",
+          "lastEditedAt": "2026-09-29T02:39:00.000Z"
+        },
+        {
+          "id": "ISSUE-1964",
+          "title": "[내역관리][한패스월렛][공통] 리워드 상세 내역 내 상태 문구 기획서와 상이",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Minor",
           "defectType": "기획-구현 불일치",
           "priority": "Medium",
           "assignee": "미지정",
@@ -68602,18 +68988,18 @@
           "versionRaw": "[Hanpass][앱개편][Native]-Dev",
           "domain": "한패스",
           "os": "미지정",
-          "createdAt": "2026-09-28T07:49:00.000Z",
-          "createdDate": "2026-09-28",
+          "createdAt": "2026-09-29T02:30:00.000Z",
+          "createdDate": "2026-09-29",
           "fixedAt": "",
           "fixedDate": "",
           "closedAt": "",
           "closedDate": "",
-          "url": "https://app.notion.com/p/AOS-As-Is-3e973fbd195180298abadb0f3c323500",
-          "lastEditedAt": "2026-09-28T09:07:00.000Z"
+          "url": "https://app.notion.com/p/3ea73fbd1951802eb0deffbe1de06eab",
+          "lastEditedAt": "2026-09-29T02:37:00.000Z"
         },
         {
-          "id": "ISSUE-1956",
-          "title": "[내역관리][AOS] As-Is 화면 노출되는 현상 ",
+          "id": "ISSUE-1962",
+          "title": "[내역관리][한패스월렛][공통] 해외송금 세부정보 송금액/월렛 차감액 금액 반대로 노출되는 현상 ",
           "status": "등록 (Registered)",
           "stage": "등록",
           "severity": "Major",
@@ -68624,14 +69010,102 @@
           "versionRaw": "[Hanpass][앱개편][Native]-Dev",
           "domain": "한패스",
           "os": "미지정",
-          "createdAt": "2026-09-28T07:42:00.000Z",
-          "createdDate": "2026-09-28",
+          "createdAt": "2026-09-29T02:21:00.000Z",
+          "createdDate": "2026-09-29",
           "fixedAt": "",
           "fixedDate": "",
           "closedAt": "",
           "closedDate": "",
+          "url": "https://app.notion.com/p/3ea73fbd1951804f8cebc44498bfeca2",
+          "lastEditedAt": "2026-09-29T02:28:00.000Z"
+        },
+        {
+          "id": "ISSUE-1961",
+          "title": "[내역관리][한패스월렛][공통] 환급대기 내역 문구 기획서와 상이 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Minor",
+          "defectType": "기획-구현 불일치",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[Hanpass][앱개편][Native]-Dev",
+          "versionRaw": "[Hanpass][앱개편][Native]-Dev",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-09-29T02:12:00.000Z",
+          "createdDate": "2026-09-29",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/3ea73fbd195180888e8ccf05b47c6658",
+          "lastEditedAt": "2026-09-29T02:18:00.000Z"
+        },
+        {
+          "id": "ISSUE-1960",
+          "title": "[내역관리][공통] ‘이용 확인증 발급 배너’ 미노출 현상 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "defectType": "기획-구현 불일치",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[Hanpass][앱개편][Native]-Dev",
+          "versionRaw": "[Hanpass][앱개편][Native]-Dev",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-09-29T02:06:00.000Z",
+          "createdDate": "2026-09-29",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/3ea73fbd1951800db6f5dd8eecadfeb6",
+          "lastEditedAt": "2026-09-29T02:10:00.000Z"
+        },
+        {
+          "id": "ISSUE-1957",
+          "title": "[월렛충전][AOS] As-Is 화면 노출되는 현상 ",
+          "status": "QA 검증 -회귀 (QA Verification)",
+          "stage": "QA확인",
+          "severity": "Major",
+          "defectType": "기획-구현 불일치",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[Hanpass][앱개편][Native]-Dev",
+          "versionRaw": "[Hanpass][앱개편][Native]-Dev",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-09-28T07:49:00.000Z",
+          "createdDate": "2026-09-28",
+          "fixedAt": "2026-09-29T02:05:00.000Z",
+          "fixedDate": "2026-09-29",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/AOS-As-Is-3e973fbd195180298abadb0f3c323500",
+          "lastEditedAt": "2026-09-29T02:05:00.000Z"
+        },
+        {
+          "id": "ISSUE-1956",
+          "title": "[내역관리][AOS] As-Is 화면 노출되는 현상 ",
+          "status": "QA 검증 -회귀 (QA Verification)",
+          "stage": "QA확인",
+          "severity": "Major",
+          "defectType": "기획-구현 불일치",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[Hanpass][앱개편][Native]-Dev",
+          "versionRaw": "[Hanpass][앱개편][Native]-Dev",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-09-28T07:42:00.000Z",
+          "createdDate": "2026-09-28",
+          "fixedAt": "2026-09-29T02:05:00.000Z",
+          "fixedDate": "2026-09-29",
+          "closedAt": "",
+          "closedDate": "",
           "url": "https://app.notion.com/p/AOS-As-Is-3e973fbd19518091a543daabfb19b53b",
-          "lastEditedAt": "2026-09-28T08:13:00.000Z"
+          "lastEditedAt": "2026-09-29T02:05:00.000Z"
         },
         {
           "id": "ISSUE-1954",
@@ -68698,135 +69172,25 @@
           "closedDate": "",
           "url": "https://app.notion.com/p/Top-Rate-Speed-3e973fbd19518080acd7c5eaa677b7a8",
           "lastEditedAt": "2026-09-28T08:17:00.000Z"
-        },
-        {
-          "id": "ISSUE-1950",
-          "title": "[해외송금][환율][iOS] 한국 국적인 경우 환율 국가 미국으로 노출되는 현상 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "defectType": "기획-구현 불일치",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[Hanpass][앱개편][Native]-Dev",
-          "versionRaw": "[Hanpass][앱개편][Native]-Dev",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-09-28T06:07:00.000Z",
-          "createdDate": "2026-09-28",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/iOS-3e973fbd19518090abdec0d014af5aaa",
-          "lastEditedAt": "2026-09-28T08:18:00.000Z"
-        },
-        {
-          "id": "ISSUE-1949",
-          "title": "[해외송금][공통] ‘국가/통화’ 화면 내 환율 툴팁 문구 기획서와 상이",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "defectType": "기획-구현 불일치",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[Hanpass][앱개편][Native]-Dev",
-          "versionRaw": "[Hanpass][앱개편][Native]-Dev",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-09-28T05:42:00.000Z",
-          "createdDate": "2026-09-28",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/3e973fbd195180248e9bc68053474ea0",
-          "lastEditedAt": "2026-09-28T08:18:00.000Z"
-        },
-        {
-          "id": "ISSUE-1948",
-          "title": "[홈][AOS] 한패스 카드 진입 시 백화 현상 ",
-          "status": "처리중 (In Progress)",
-          "stage": "진행중",
-          "severity": "Major",
-          "defectType": "기능",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[Hanpass][앱개편][Native]-Dev",
-          "versionRaw": "[Hanpass][앱개편][Native]-Dev",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-09-28T04:42:00.000Z",
-          "createdDate": "2026-09-28",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/AOS-3e973fbd195180c19a48fd227efba1ae",
-          "lastEditedAt": "2026-09-28T07:05:00.000Z"
-        },
-        {
-          "id": "ISSUE-1947",
-          "title": "[홈][AOS] ‘내 포인트’ 선택 시 ‘혜택’ 화면으로 이동하는 현상",
-          "status": "처리중 (In Progress)",
-          "stage": "진행중",
-          "severity": "Minor",
-          "defectType": "기획-구현 불일치",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[Hanpass][앱개편][Native]-Dev",
-          "versionRaw": "[Hanpass][앱개편][Native]-Dev",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-09-28T04:34:00.000Z",
-          "createdDate": "2026-09-28",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/AOS-3e973fbd19518012b686ce3c22aa9db3",
-          "lastEditedAt": "2026-09-28T08:51:00.000Z"
-        },
-        {
-          "id": "ISSUE-1946",
-          "title": "[홈][공통] 카드 미보유 시 ‘카드 만들기’ 문구 기획서와 상이하게 노출되는 현상 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "defectType": "텍스트",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[Hanpass][앱개편][Native]-Dev",
-          "versionRaw": "[Hanpass][앱개편][Native]-Dev",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-09-28T04:28:00.000Z",
-          "createdDate": "2026-09-28",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/3e973fbd195180e4b04ed3405ac2c602",
-          "lastEditedAt": "2026-09-28T05:28:00.000Z"
         }
       ]
     },
     "GoHanpass": {
       "summary": {
-        "total": 304,
-        "new": 44,
-        "inProgress": 43,
+        "total": 307,
+        "new": 45,
+        "inProgress": 18,
         "fixed": 0,
-        "closed": 215,
-        "todayNew": 25,
-        "newDelta": 25
+        "closed": 237,
+        "todayNew": 3,
+        "newDelta": -22
       },
       "funnel": [
         {
           "stage": "등록",
-          "count": 44,
-          "rate": 14.5,
-          "width": 20
+          "count": 45,
+          "rate": 14.7,
+          "width": 19
         },
         {
           "stage": "검토",
@@ -68842,9 +69206,9 @@
         },
         {
           "stage": "진행중",
-          "count": 43,
-          "rate": 14.1,
-          "width": 20
+          "count": 18,
+          "rate": 5.9,
+          "width": 8
         },
         {
           "stage": "수정완료",
@@ -68854,25 +69218,18 @@
         },
         {
           "stage": "QA확인",
-          "count": 2,
-          "rate": 0.7,
+          "count": 7,
+          "rate": 2.3,
           "width": 6
         },
         {
           "stage": "종료",
-          "count": 215,
-          "rate": 70.7,
+          "count": 237,
+          "rate": 77.2,
           "width": 100
         }
       ],
       "daily": [
-        {
-          "date": "2026-08-30",
-          "new": 0,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": 0
-        },
         {
           "date": "2026-08-31",
           "new": 0,
@@ -69072,9 +69429,16 @@
         {
           "date": "2026-09-28",
           "new": 25,
-          "fixed": 31,
-          "closed": 29,
+          "fixed": 30,
+          "closed": 28,
           "deltaNew": 25
+        },
+        {
+          "date": "2026-09-29",
+          "new": 3,
+          "fixed": 28,
+          "closed": 23,
+          "deltaNew": -22
         }
       ],
       "versions": [
@@ -69240,25 +69604,25 @@
         },
         {
           "version": "[G.H][Go.Hanpass][앱개편][APP]",
-          "total": 68,
-          "criticalMajor": 52,
-          "doneRate": 35.3,
+          "total": 71,
+          "criticalMajor": 54,
+          "doneRate": 70.4,
           "status": [
             {
               "label": "등록",
-              "count": 15
+              "count": 17
             },
             {
               "label": "진행중",
-              "count": 29
+              "count": 4
             },
             {
               "label": "QA확인",
-              "count": 1
+              "count": 6
             },
             {
               "label": "종료",
-              "count": 23
+              "count": 44
             }
           ],
           "severity": [
@@ -69268,17 +69632,17 @@
             },
             {
               "label": "Major",
-              "count": 50
+              "count": 52
             },
             {
               "label": "Minor",
-              "count": 16
+              "count": 17
             }
           ],
           "priority": [
             {
               "label": "Medium",
-              "count": 68
+              "count": 71
             }
           ]
         },
@@ -69286,11 +69650,11 @@
           "version": "[G.H][Go.Hanpass][앱개편][BO]",
           "total": 33,
           "criticalMajor": 25,
-          "doneRate": 48.5,
+          "doneRate": 51.5,
           "status": [
             {
               "label": "등록",
-              "count": 3
+              "count": 2
             },
             {
               "label": "진행중",
@@ -69302,7 +69666,7 @@
             },
             {
               "label": "종료",
-              "count": 15
+              "count": 16
             }
           ],
           "severity": [
@@ -70204,6 +70568,11 @@
               "date": "2026-09-28",
               "registered": 20,
               "fixed": 1
+            },
+            {
+              "date": "2026-09-29",
+              "registered": 20,
+              "fixed": 1
             }
           ]
         },
@@ -70793,6 +71162,11 @@
             },
             {
               "date": "2026-09-28",
+              "registered": 15,
+              "fixed": 15
+            },
+            {
+              "date": "2026-09-29",
               "registered": 15,
               "fixed": 15
             }
@@ -71647,6 +72021,11 @@
               "date": "2026-09-28",
               "registered": 55,
               "fixed": 54
+            },
+            {
+              "date": "2026-09-29",
+              "registered": 55,
+              "fixed": 54
             }
           ]
         },
@@ -72122,6 +72501,11 @@
             },
             {
               "date": "2026-09-28",
+              "registered": 5,
+              "fixed": 5
+            },
+            {
+              "date": "2026-09-29",
               "registered": 5,
               "fixed": 5
             }
@@ -72985,65 +73369,70 @@
               "date": "2026-09-28",
               "registered": 101,
               "fixed": 101
+            },
+            {
+              "date": "2026-09-29",
+              "registered": 101,
+              "fixed": 101
             }
           ]
         },
         {
           "version": "[G.H][Go.Hanpass][앱개편][APP]",
-          "total": 68,
-          "open": 44,
-          "devDone": 0,
-          "qaRegression": 1,
+          "total": 71,
+          "open": 21,
+          "devDone": 21,
+          "qaRegression": 6,
           "done": 23,
-          "scopeTotal": 68,
-          "doneRate": 35.3,
-          "latestSnapshot": "2026-09-28",
+          "scopeTotal": 71,
+          "doneRate": 70.4,
+          "latestSnapshot": "2026-09-29",
           "severityRows": [
             {
               "severity": "Critical",
-              "open": 2,
-              "devDone": 0,
+              "open": 0,
+              "devDone": 2,
               "qaRegression": 0,
               "done": 0,
               "total": 2,
-              "rate": 0.0,
+              "rate": 100.0,
               "previousRate": 0.0
             },
             {
               "severity": "Major",
-              "open": 32,
-              "devDone": 0,
-              "qaRegression": 0,
+              "open": 16,
+              "devDone": 14,
+              "qaRegression": 4,
               "done": 18,
-              "total": 50,
-              "rate": 36.0,
-              "previousRate": 16.2
+              "total": 52,
+              "rate": 69.2,
+              "previousRate": 34.0
             },
             {
               "severity": "Minor",
-              "open": 10,
-              "devDone": 0,
-              "qaRegression": 1,
+              "open": 5,
+              "devDone": 5,
+              "qaRegression": 2,
               "done": 5,
-              "total": 16,
-              "rate": 37.5,
-              "previousRate": 27.3
+              "total": 17,
+              "rate": 70.6,
+              "previousRate": 37.5
             },
             {
               "severity": "합계",
-              "open": 44,
-              "devDone": 0,
-              "qaRegression": 1,
+              "open": 21,
+              "devDone": 21,
+              "qaRegression": 6,
               "done": 23,
-              "total": 68,
-              "rate": 35.3,
-              "previousRate": 18.0
+              "total": 71,
+              "rate": 70.4,
+              "previousRate": 33.8
             }
           ],
           "typeRows": [
             {
               "type": "기능",
-              "total": 24,
+              "total": 27,
               "severity": [
                 {
                   "label": "Critical",
@@ -73051,7 +73440,7 @@
                 },
                 {
                   "label": "Major",
-                  "count": 21
+                  "count": 24
                 },
                 {
                   "label": "Minor",
@@ -73075,7 +73464,7 @@
             },
             {
               "type": "UX/UI",
-              "total": 11,
+              "total": 12,
               "severity": [
                 {
                   "label": "Major",
@@ -73083,17 +73472,17 @@
                 },
                 {
                   "label": "Minor",
-                  "count": 10
+                  "count": 11
                 }
               ]
             },
             {
               "type": "기획-구현 불일치",
-              "total": 8,
+              "total": 7,
               "severity": [
                 {
                   "label": "Major",
-                  "count": 8
+                  "count": 7
                 }
               ]
             },
@@ -73152,20 +73541,25 @@
             {
               "date": "2026-09-28",
               "registered": 68,
-              "fixed": 24
+              "fixed": 23
+            },
+            {
+              "date": "2026-09-29",
+              "registered": 71,
+              "fixed": 50
             }
           ]
         },
         {
           "version": "[G.H][Go.Hanpass][앱개편][BO]",
           "total": 33,
-          "open": 17,
-          "devDone": 8,
+          "open": 16,
+          "devDone": 9,
           "qaRegression": 1,
           "done": 7,
           "scopeTotal": 33,
-          "doneRate": 48.5,
-          "latestSnapshot": "2026-09-28",
+          "doneRate": 51.5,
+          "latestSnapshot": "2026-09-29",
           "severityRows": [
             {
               "severity": "Critical",
@@ -73179,13 +73573,13 @@
             },
             {
               "severity": "Major",
-              "open": 10,
-              "devDone": 8,
+              "open": 9,
+              "devDone": 9,
               "qaRegression": 1,
               "done": 6,
               "total": 25,
-              "rate": 60.0,
-              "previousRate": 0.0
+              "rate": 64.0,
+              "previousRate": 60.0
             },
             {
               "severity": "Minor",
@@ -73195,17 +73589,17 @@
               "done": 1,
               "total": 8,
               "rate": 12.5,
-              "previousRate": 0.0
+              "previousRate": 12.5
             },
             {
               "severity": "합계",
-              "open": 17,
-              "devDone": 8,
+              "open": 16,
+              "devDone": 9,
               "qaRegression": 1,
               "done": 7,
               "total": 33,
-              "rate": 48.5,
-              "previousRate": 0.0
+              "rate": 51.5,
+              "previousRate": 48.5
             }
           ],
           "typeRows": [
@@ -73298,6 +73692,11 @@
               "date": "2026-09-28",
               "registered": 33,
               "fixed": 16
+            },
+            {
+              "date": "2026-09-29",
+              "registered": 33,
+              "fixed": 17
             }
           ]
         },
@@ -74099,6 +74498,11 @@
               "date": "2026-09-28",
               "registered": 7,
               "fixed": 1
+            },
+            {
+              "date": "2026-09-29",
+              "registered": 7,
+              "fixed": 1
             }
           ]
         }
@@ -74110,19 +74514,19 @@
           "status": [
             {
               "label": "등록",
-              "count": 44
+              "count": 45
             },
             {
               "label": "진행중",
-              "count": 43
+              "count": 18
             },
             {
               "label": "QA확인",
-              "count": 2
+              "count": 7
             },
             {
               "label": "종료",
-              "count": 215
+              "count": 237
             }
           ],
           "severity": [
@@ -74132,17 +74536,17 @@
             },
             {
               "label": "Major",
-              "count": 139
+              "count": 141
             },
             {
               "label": "Minor",
-              "count": 161
+              "count": 162
             }
           ],
           "priority": [
             {
               "label": "Medium",
-              "count": 303
+              "count": 306
             },
             {
               "label": "긴급",
@@ -74152,13 +74556,6 @@
         }
       },
       "heatmap": [
-        {
-          "date": "2026-08-30",
-          "new": 0,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": 0
-        },
         {
           "date": "2026-08-31",
           "new": 0,
@@ -74358,9 +74755,16 @@
         {
           "date": "2026-09-28",
           "new": 25,
-          "fixed": 31,
-          "closed": 29,
+          "fixed": 30,
+          "closed": 28,
           "deltaNew": 25
+        },
+        {
+          "date": "2026-09-29",
+          "new": 3,
+          "fixed": 28,
+          "closed": 23,
+          "deltaNew": -22
         }
       ],
       "reportBoard": {
@@ -74389,6 +74793,72 @@
         "recent": []
       },
       "recent": [
+        {
+          "id": "ISSUE-1963",
+          "title": "[헬프데스크][공통] 국가별 전화번호가 유효하지 않은 번호로 노출되는 현상",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Minor",
+          "defectType": "UX/UI",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[G.H][Go.Hanpass][앱개편][APP]",
+          "versionRaw": "[Go.Hanpass][앱개편][APP]",
+          "domain": "GoHanpass",
+          "os": "미지정",
+          "createdAt": "2026-09-29T02:26:00.000Z",
+          "createdDate": "2026-09-29",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/3ea73fbd195180a58324c9a3bfd5a87d",
+          "lastEditedAt": "2026-09-29T02:39:00.000Z"
+        },
+        {
+          "id": "ISSUE-1959",
+          "title": "[홈] 이용 중 데이터 파싱 오류로 ‘서버 연결에 실패했습니다.’ 안내가 노출되는 현상",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "defectType": "기능",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[G.H][Go.Hanpass][앱개편][APP]",
+          "versionRaw": "[Go.Hanpass][앱개편][APP]",
+          "domain": "GoHanpass",
+          "os": "미지정",
+          "createdAt": "2026-09-29T01:55:00.000Z",
+          "createdDate": "2026-09-29",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/3ea73fbd1951809fa84ae40efa8be8bf",
+          "lastEditedAt": "2026-09-29T02:26:00.000Z"
+        },
+        {
+          "id": "ISSUE-1958",
+          "title": "[홈][날씨] 지역명 다국어 데이터 처리 중 JSON 파싱 오류가 발생하는 현상",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "defectType": "기능",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[G.H][Go.Hanpass][앱개편][APP]",
+          "versionRaw": "[Go.Hanpass][앱개편][APP]",
+          "domain": "GoHanpass",
+          "os": "미지정",
+          "createdAt": "2026-09-29T01:25:00.000Z",
+          "createdDate": "2026-09-29",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/JSON-3ea73fbd19518029a549e08991770606",
+          "lastEditedAt": "2026-09-29T02:29:00.000Z"
+        },
         {
           "id": "ISSUE-1945",
           "title": "[공항철도][예약자정보][공통] 등록된 영문 중간 이름(Middle Name)이 미노출되는 현상",
@@ -74502,8 +74972,8 @@
         {
           "id": "ISSUE-1938",
           "title": "[마이페이지][공통] 알림 없을 시에도 알림 아이콘 뱃지 노출 되는 현상 ",
-          "status": "처리중 (In Progress)",
-          "stage": "진행중",
+          "status": "개발 완료 (Dev Done)",
+          "stage": "종료",
           "severity": "Major",
           "defectType": "기능",
           "priority": "Medium",
@@ -74514,12 +74984,12 @@
           "os": "미지정",
           "createdAt": "2026-09-28T02:40:00.000Z",
           "createdDate": "2026-09-28",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
+          "fixedAt": "2026-09-29T00:19:00.000Z",
+          "fixedDate": "2026-09-29",
+          "closedAt": "2026-09-29T00:19:00.000Z",
+          "closedDate": "2026-09-29",
           "url": "https://app.notion.com/p/3e973fbd195180adb456cc926fc2e3d3",
-          "lastEditedAt": "2026-09-28T06:56:00.000Z"
+          "lastEditedAt": "2026-09-29T00:19:00.000Z"
         },
         {
           "id": "ISSUE-1937",
@@ -74542,72 +75012,6 @@
           "closedDate": "",
           "url": "https://app.notion.com/p/FAQ-3e973fbd195180a8a80df042b8342b36",
           "lastEditedAt": "2026-09-28T08:22:00.000Z"
-        },
-        {
-          "id": "ISSUE-1936",
-          "title": "[공항철도][티켓관리] 업로드 내역 모달의 테이블 헤더가 기획서와 상이하게 노출되는 현상",
-          "status": "처리중 (In Progress)",
-          "stage": "진행중",
-          "severity": "Minor",
-          "defectType": "기획-구현 불일치",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[G.H][Go.Hanpass][앱개편][BO]",
-          "versionRaw": "[Go.Hanpass][앱개편][BO]",
-          "domain": "GoHanpass",
-          "os": "미지정",
-          "createdAt": "2026-09-28T02:32:00.000Z",
-          "createdDate": "2026-09-28",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/3e973fbd195180f5a83bc5dd01bda8b3",
-          "lastEditedAt": "2026-09-28T05:23:00.000Z"
-        },
-        {
-          "id": "ISSUE-1935",
-          "title": "[공항철도] 상단 탭 명칭이 ‘공항철도’로 노출되는 현상",
-          "status": "처리중 (In Progress)",
-          "stage": "진행중",
-          "severity": "Minor",
-          "defectType": "기획-구현 불일치",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[G.H][Go.Hanpass][앱개편][BO]",
-          "versionRaw": "[Go.Hanpass][앱개편][BO]",
-          "domain": "GoHanpass",
-          "os": "미지정",
-          "createdAt": "2026-09-28T02:30:00.000Z",
-          "createdDate": "2026-09-28",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/3e973fbd195180eabfd7de672233a1b5",
-          "lastEditedAt": "2026-09-28T05:23:00.000Z"
-        },
-        {
-          "id": "ISSUE-1934",
-          "title": "[공항철도][공통] 상품 이미지 첫/마지막 페이지에서 이전·다음 화살표가 동작하는 현상",
-          "status": "완료 (Done)",
-          "stage": "종료",
-          "severity": "Major",
-          "defectType": "기획서 수정",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[G.H][Go.Hanpass][앱개편][APP]",
-          "versionRaw": "[Go.Hanpass][앱개편][APP]",
-          "domain": "GoHanpass",
-          "os": "미지정",
-          "createdAt": "2026-09-28T02:26:00.000Z",
-          "createdDate": "2026-09-28",
-          "fixedAt": "2026-09-28T05:41:00.000Z",
-          "fixedDate": "2026-09-28",
-          "closedAt": "2026-09-28T05:41:00.000Z",
-          "closedDate": "2026-09-28",
-          "url": "https://app.notion.com/p/3e973fbd19518025a84edce6b20bebc7",
-          "lastEditedAt": "2026-09-28T05:41:00.000Z"
         }
       ]
     }

@@ -1157,6 +1157,21 @@ def build_html(payload: dict[str, Any]) -> str:
     .project-section-title span {{ color: var(--muted); font-size: 12px; font-weight: 650; }}
     .project-chart-grid {{ display: block; }}
     .project-chart-title {{ margin: 0 0 8px; color: var(--muted); font-size: 12px; font-weight: 700; }}
+    .project-type-chart {{ margin-top: 22px; padding-top: 18px; border-top: 1px solid var(--line); }}
+    .project-type-chart h3 {{ margin: 0 0 16px; font-size: 14px; }}
+    .project-pie-layout {{ display: grid; grid-template-columns: minmax(160px, 220px) minmax(0, 1fr); gap: 20px; align-items: center; }}
+    .project-pie {{ display: block; width: 100%; aspect-ratio: 1; }}
+    .project-pie-slice {{ stroke: var(--panel); stroke-width: 2; }}
+    .project-pie-slice:hover {{ opacity: .8; }}
+    .project-pie-legend {{ margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; }}
+    .project-pie-legend li {{ display: grid; grid-template-columns: 9px minmax(0, 1fr) auto; gap: 8px; align-items: start; font-size: 12px; }}
+    .project-pie-legend .dot {{ width: 9px; height: 9px; margin: 3px 0 0; }}
+    .project-pie-label {{ overflow-wrap: anywhere; }}
+    .project-pie-count {{ color: var(--muted); white-space: nowrap; font-variant-numeric: tabular-nums; }}
+    @media (max-width: 600px) {{
+      .project-pie-layout {{ grid-template-columns: minmax(0, 1fr); }}
+      .project-pie {{ max-width: 220px; justify-self: center; }}
+    }}
     .line-chart {{
       width: 100%;
       height: 270px;
@@ -1384,6 +1399,7 @@ def build_html(payload: dict[str, Any]) -> str:
             <div class="panel-head"><h2>일자별 누적 그래프</h2><div class="subtle">결함 등록 누적 / 결함 처리 누적</div></div>
             <div class="project-chart-grid" id="projectCharts"></div>
             <div class="legend"><span><i class="dot" style="background:var(--red)"></i>결함등록</span><span><i class="dot" style="background:var(--blue)"></i>결함 처리</span></div>
+            <div id="projectTypeChart"></div>
           </article>
         </div>
       </section>
@@ -1887,7 +1903,40 @@ def build_html(payload: dict[str, Any]) -> str:
       </div>`;
     }}
 
+    function renderProjectTypePie(typeRows) {{
+      const items = typeRows.filter((row) => Number(row.total) > 0);
+      const total = items.reduce((sum, row) => sum + Number(row.total), 0);
+      if (!total) return `<section class="project-type-chart"><h3>결함 유형별 분포</h3><div class="empty">표시할 결함 유형 데이터가 없습니다.</div></section>`;
+      const colors = ["#2684ff", "#df4664", "#24a784", "#e7ac28", "#8c63ca", "#16a1b5", "#d47739", "#77808e"];
+      let angle = -Math.PI / 2;
+      const slices = items.map((row, index) => {{
+        const count = Number(row.total);
+        const start = angle;
+        angle += count / total * Math.PI * 2;
+        const color = colors[index % colors.length];
+        const title = esc(`${{row.type}}: ${{count}}건 (${{pct(count / total * 100)}})`);
+        if (items.length === 1) return `<circle class="project-pie-slice" cx="110" cy="110" r="104" fill="${{color}}"><title>${{title}}</title></circle>`;
+        const x1 = 110 + Math.cos(start) * 104;
+        const y1 = 110 + Math.sin(start) * 104;
+        const x2 = 110 + Math.cos(angle) * 104;
+        const y2 = 110 + Math.sin(angle) * 104;
+        return `<path class="project-pie-slice" d="M 110 110 L ${{x1}} ${{y1}} A 104 104 0 ${{count / total > .5 ? 1 : 0}} 1 ${{x2}} ${{y2}} Z" fill="${{color}}"><title>${{title}}</title></path>`;
+      }}).join("");
+      return `<section class="project-type-chart">
+        <h3>결함 유형별 분포 <span class="meta">전체 ${{total}}건</span></h3>
+        <div class="project-pie-layout">
+          <svg class="project-pie" viewBox="0 0 220 220" role="img" aria-label="결함 유형별 분포, 전체 ${{total}}건">${{slices}}</svg>
+          <ul class="project-pie-legend">${{items.map((row, index) => `<li>
+            <i class="dot" style="background:${{colors[index % colors.length]}}" aria-hidden="true"></i>
+            <span class="project-pie-label">${{esc(row.type)}}</span>
+            <span class="project-pie-count">${{row.total}}건 · ${{pct(Number(row.total) / total * 100)}}</span>
+          </li>`).join("")}}</ul>
+        </div>
+      </section>`;
+    }}
+
     function renderProjectProgress() {{
+      $("projectTypeChart").innerHTML = "";
       const items = currentScope().projectProgress || [];
       if (!items.length) {{
         $("projectVersionSelect").innerHTML = "";
@@ -1994,6 +2043,7 @@ def build_html(payload: dict[str, Any]) -> str:
       `;
       const rows = current.daily || [];
       $("projectCharts").innerHTML = renderProjectLineChart(rows);
+      $("projectTypeChart").innerHTML = renderProjectTypePie(typeRows);
     }}
 
     function refreshProjectVersions() {{

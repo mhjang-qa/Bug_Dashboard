@@ -1520,6 +1520,33 @@ def build_html(payload: dict[str, Any]) -> str:
       $("syncModal").hidden = true;
     }}
 
+    async function requestWorkflowSync(token) {{
+      const workflowUrl = `https://api.github.com/repos/${{SYNC_CONFIG.owner}}/${{SYNC_CONFIG.repo}}/actions/workflows/${{SYNC_CONFIG.workflow}}`;
+      const headers = {{
+        "Accept": "application/vnd.github+json",
+        "Authorization": `Bearer ${{token}}`,
+        "X-GitHub-Api-Version": "2022-11-28",
+        "Content-Type": "application/json",
+      }};
+      const workflowResponse = await fetch(workflowUrl, {{ headers, cache: "no-store" }});
+      if (!workflowResponse.ok) return workflowResponse;
+      const workflow = await workflowResponse.json();
+      if (workflow.state === "disabled_inactivity") {{
+        setSyncStatus("저장소 비활동으로 중지된 동기화를 다시 활성화하는 중입니다.", "loading");
+        const enabled = await fetch(`${{workflowUrl}}/enable`, {{ method: "PUT", headers }});
+        if (!enabled.ok) {{
+          throw new Error(`자동 중지된 워크플로를 활성화하지 못했습니다 (${{enabled.status}}). GitHub Actions에서 활성화하거나 토큰의 Actions 쓰기 권한을 확인해 주세요.`);
+        }}
+      }} else if (workflow.state !== "active") {{
+        throw new Error("동기화 워크플로가 비활성화되어 있습니다. GitHub Actions에서 중지 사유를 확인한 뒤 활성화해 주세요.");
+      }}
+      return fetch(`${{workflowUrl}}/dispatches`, {{
+        method: "POST",
+        headers,
+        body: JSON.stringify({{ ref: SYNC_CONFIG.ref }}),
+      }});
+    }}
+
     async function dispatchSync() {{
       const token = $("syncTokenInput").value.trim();
       if (!token) {{
@@ -1536,19 +1563,7 @@ def build_html(payload: dict[str, Any]) -> str:
       setSyncStatus("동기화 요청을 전송하는 중입니다.", "loading");
 
       try {{
-        const response = await fetch(
-          `https://api.github.com/repos/${{SYNC_CONFIG.owner}}/${{SYNC_CONFIG.repo}}/actions/workflows/${{SYNC_CONFIG.workflow}}/dispatches`,
-          {{
-            method: "POST",
-            headers: {{
-              "Accept": "application/vnd.github+json",
-              "Authorization": `Bearer ${{token}}`,
-              "X-GitHub-Api-Version": "2022-11-28",
-              "Content-Type": "application/json",
-            }},
-            body: JSON.stringify({{ ref: SYNC_CONFIG.ref }}),
-          }}
-        );
+        const response = await requestWorkflowSync(token);
 
         if (response.status === 204) {{
           closeSyncModal();
@@ -1561,12 +1576,15 @@ def build_html(payload: dict[str, Any]) -> str:
         try {{
           const data = await response.json();
           if (data.message) {{
-            message = data.message;
+            message = esc(data.message);
           }}
         }} catch (_) {{}}
 
         if (response.status === 404) {{
           message = `워크플로를 찾지 못했습니다. <a class="sync-link" href="${{SYNC_CONFIG.repoUrl}}" target="_blank" rel="noreferrer">run_all_notion 저장소</a>에 <code>.github/workflows/${{SYNC_CONFIG.workflow}}</code>가 있어야 합니다.`;
+        }}
+        if (response.status === 401 || response.status === 403) {{
+          message = "GitHub 토큰의 유효기간과 대상 저장소의 Actions 읽기/쓰기 권한을 확인해 주세요.";
         }}
 
         setSyncStatus(message, "error");

@@ -510,7 +510,7 @@
     </div>
   </div>
   <script id="dashboard-data" type="application/json">{
-  "generatedAt": "2026-10-16T01:35:48+00:00",
+  "generatedAt": "2026-10-16T13:27:50+00:00",
   "days": 30,
   "domainOrder": [
     "한패스",
@@ -519,20 +519,20 @@
   "domains": {
     "ALL": {
       "summary": {
-        "total": 1958,
-        "new": 223,
-        "inProgress": 13,
+        "total": 1976,
+        "new": 225,
+        "inProgress": 14,
         "fixed": 0,
-        "closed": 1441,
-        "todayNew": 3,
-        "newDelta": -6
+        "closed": 1447,
+        "todayNew": 21,
+        "newDelta": 12
       },
       "funnel": [
         {
           "stage": "등록",
-          "count": 223,
+          "count": 225,
           "rate": 11.4,
-          "width": 15
+          "width": 16
         },
         {
           "stage": "검토",
@@ -548,7 +548,7 @@
         },
         {
           "stage": "진행중",
-          "count": 13,
+          "count": 14,
           "rate": 0.7,
           "width": 6
         },
@@ -560,14 +560,14 @@
         },
         {
           "stage": "QA확인",
-          "count": 280,
-          "rate": 14.3,
-          "width": 19
+          "count": 289,
+          "rate": 14.6,
+          "width": 20
         },
         {
           "stage": "종료",
-          "count": 1441,
-          "rate": 73.6,
+          "count": 1447,
+          "rate": 73.2,
           "width": 100
         }
       ],
@@ -757,30 +757,30 @@
         {
           "date": "2026-10-13",
           "new": 29,
-          "fixed": 31,
-          "closed": 30,
+          "fixed": 30,
+          "closed": 29,
           "deltaNew": -1
         },
         {
           "date": "2026-10-14",
           "new": 15,
-          "fixed": 198,
-          "closed": 97,
+          "fixed": 194,
+          "closed": 93,
           "deltaNew": -14
         },
         {
           "date": "2026-10-15",
           "new": 9,
-          "fixed": 80,
-          "closed": 77,
+          "fixed": 75,
+          "closed": 72,
           "deltaNew": -6
         },
         {
           "date": "2026-10-16",
-          "new": 3,
-          "fixed": 11,
-          "closed": 6,
-          "deltaNew": -6
+          "new": 21,
+          "fixed": 36,
+          "closed": 22,
+          "deltaNew": 12
         }
       ],
       "versions": [
@@ -1664,15 +1664,15 @@
           "version": "[G.H][Go.Hanpass][앱개편][APP]-1차 (완료)",
           "total": 172,
           "criticalMajor": 138,
-          "doneRate": 95.3,
+          "doneRate": 96.5,
           "status": [
             {
               "label": "등록",
-              "count": 8
+              "count": 6
             },
             {
               "label": "QA확인",
-              "count": 96
+              "count": 98
             },
             {
               "label": "종료",
@@ -1766,21 +1766,21 @@
         },
         {
           "version": "[Hanpass][EMVQR]",
-          "total": 19,
+          "total": 20,
           "criticalMajor": 13,
-          "doneRate": 47.4,
+          "doneRate": 85.0,
           "status": [
             {
               "label": "등록",
-              "count": 10
-            },
-            {
-              "label": "QA확인",
               "count": 3
             },
             {
+              "label": "QA확인",
+              "count": 8
+            },
+            {
               "label": "종료",
-              "count": 6
+              "count": 9
             }
           ],
           "severity": [
@@ -1794,13 +1794,13 @@
             },
             {
               "label": "Minor",
-              "count": 6
+              "count": 7
             }
           ],
           "priority": [
             {
               "label": "Medium",
-              "count": 19
+              "count": 20
             }
           ]
         },
@@ -1808,15 +1808,19 @@
           "version": "[Hanpass][앱개편]-백로그",
           "total": 18,
           "criticalMajor": 3,
-          "doneRate": 0.0,
+          "doneRate": 5.6,
           "status": [
             {
               "label": "등록",
-              "count": 14
+              "count": 13
             },
             {
               "label": "진행중",
               "count": 4
+            },
+            {
+              "label": "종료",
+              "count": 1
             }
           ],
           "severity": [
@@ -1914,13 +1918,13 @@
         },
         {
           "version": "[Hanpass][앱개편][Native]-LiveTest",
-          "total": 180,
-          "criticalMajor": 93,
-          "doneRate": 83.9,
+          "total": 179,
+          "criticalMajor": 95,
+          "doneRate": 86.6,
           "status": [
             {
               "label": "등록",
-              "count": 20
+              "count": 14
             },
             {
               "label": "배정",
@@ -1928,11 +1932,15 @@
             },
             {
               "label": "진행중",
-              "count": 8
+              "count": 9
+            },
+            {
+              "label": "QA확인",
+              "count": 2
             },
             {
               "label": "종료",
-              "count": 151
+              "count": 153
             }
           ],
           "severity": [
@@ -1942,7 +1950,7 @@
             },
             {
               "label": "Major",
-              "count": 76
+              "count": 78
             },
             {
               "label": "Minor",
@@ -1950,13 +1958,37 @@
             },
             {
               "label": "개선 의견",
-              "count": 4
+              "count": 1
             }
           ],
           "priority": [
             {
               "label": "Medium",
-              "count": 180
+              "count": 179
+            }
+          ]
+        },
+        {
+          "version": "[Hanpass][앱개편][개선의견]",
+          "total": 18,
+          "criticalMajor": 0,
+          "doneRate": 0.0,
+          "status": [
+            {
+              "label": "등록",
+              "count": 18
+            }
+          ],
+          "severity": [
+            {
+              "label": "개선 의견",
+              "count": 18
+            }
+          ],
+          "priority": [
+            {
+              "label": "Medium",
+              "count": 18
             }
           ]
         },
@@ -2256,6 +2288,7 @@
           "[Hanpass][앱개편][BO] (완료)",
           "[Hanpass][앱개편][Native]-Dev",
           "[Hanpass][앱개편][Native]-LiveTest",
+          "[Hanpass][앱개편][개선의견]",
           "[게이미피케이션][혜택]포인트_2배_이벤트 (완료)",
           "[교통카드]SDK변경 (완료)",
           "[카카오뱅크]해외송금",
@@ -30438,13 +30471,13 @@
         {
           "version": "[G.H][Go.Hanpass][앱개편][APP]-1차 (완료)",
           "total": 172,
-          "open": 8,
+          "open": 6,
           "devDone": 2,
-          "qaRegression": 96,
+          "qaRegression": 98,
           "backlogTransfer": 0,
           "done": 66,
           "scopeTotal": 172,
-          "doneRate": 95.3,
+          "doneRate": 96.5,
           "latestSnapshot": "2026-10-16",
           "severityRows": [
             {
@@ -30460,14 +30493,14 @@
             },
             {
               "severity": "Major",
-              "open": 6,
+              "open": 4,
               "devDone": 2,
-              "qaRegression": 64,
+              "qaRegression": 66,
               "backlogTransfer": 0,
               "done": 55,
               "total": 127,
-              "rate": 95.3,
-              "previousRate": 93.7
+              "rate": 96.9,
+              "previousRate": 92.9
             },
             {
               "severity": "Minor",
@@ -30482,14 +30515,14 @@
             },
             {
               "severity": "합계",
-              "open": 8,
+              "open": 6,
               "devDone": 2,
-              "qaRegression": 96,
+              "qaRegression": 98,
               "backlogTransfer": 0,
               "done": 66,
               "total": 172,
-              "rate": 95.3,
-              "previousRate": 94.2
+              "rate": 96.5,
+              "previousRate": 93.6
             }
           ],
           "typeRows": [
@@ -30750,17 +30783,17 @@
             {
               "date": "2026-10-14",
               "registered": 172,
-              "fixed": 158
+              "fixed": 157
             },
             {
               "date": "2026-10-15",
               "registered": 172,
-              "fixed": 162
+              "fixed": 161
             },
             {
               "date": "2026-10-16",
               "registered": 172,
-              "fixed": 164
+              "fixed": 166
             }
           ]
         },
@@ -31902,14 +31935,14 @@
         },
         {
           "version": "[Hanpass][EMVQR]",
-          "total": 19,
-          "open": 9,
-          "devDone": 4,
-          "qaRegression": 3,
+          "total": 20,
+          "open": 2,
+          "devDone": 1,
+          "qaRegression": 8,
           "backlogTransfer": 1,
-          "done": 2,
-          "scopeTotal": 19,
-          "doneRate": 52.6,
+          "done": 8,
+          "scopeTotal": 20,
+          "doneRate": 90.0,
           "latestSnapshot": "2026-10-16",
           "severityRows": [
             {
@@ -31925,36 +31958,36 @@
             },
             {
               "severity": "Major",
-              "open": 6,
-              "devDone": 2,
-              "qaRegression": 0,
+              "open": 1,
+              "devDone": 0,
+              "qaRegression": 4,
               "backlogTransfer": 1,
-              "done": 1,
+              "done": 4,
               "total": 10,
-              "rate": 40.0,
+              "rate": 90.0,
               "previousRate": 11.1
             },
             {
               "severity": "Minor",
-              "open": 3,
-              "devDone": 2,
-              "qaRegression": 1,
+              "open": 1,
+              "devDone": 1,
+              "qaRegression": 2,
               "backlogTransfer": 0,
-              "done": 0,
-              "total": 6,
-              "rate": 50.0,
-              "previousRate": 20.0
+              "done": 3,
+              "total": 7,
+              "rate": 85.7,
+              "previousRate": 0.0
             },
             {
               "severity": "합계",
-              "open": 9,
-              "devDone": 4,
-              "qaRegression": 3,
+              "open": 2,
+              "devDone": 1,
+              "qaRegression": 8,
               "backlogTransfer": 1,
-              "done": 2,
-              "total": 19,
-              "rate": 52.6,
-              "previousRate": 17.6
+              "done": 8,
+              "total": 20,
+              "rate": 90.0,
+              "previousRate": 11.8
             }
           ],
           "typeRows": [
@@ -31974,7 +32007,7 @@
             },
             {
               "type": "UX/UI",
-              "total": 6,
+              "total": 7,
               "severity": [
                 {
                   "label": "Major",
@@ -31982,7 +32015,7 @@
                 },
                 {
                   "label": "Minor",
-                  "count": 3
+                  "count": 4
                 }
               ]
             },
@@ -32036,26 +32069,26 @@
             {
               "date": "2026-10-15",
               "registered": 17,
-              "fixed": 3
+              "fixed": 2
             },
             {
               "date": "2026-10-16",
-              "registered": 19,
-              "fixed": 10
+              "registered": 20,
+              "fixed": 18
             }
           ]
         },
         {
           "version": "[Hanpass][앱개편]-백로그",
           "total": 18,
-          "open": 18,
+          "open": 17,
           "devDone": 0,
           "qaRegression": 0,
           "backlogTransfer": 0,
-          "done": 0,
+          "done": 1,
           "scopeTotal": 18,
-          "doneRate": 0.0,
-          "latestSnapshot": "2026-10-13",
+          "doneRate": 5.6,
+          "latestSnapshot": "2026-10-16",
           "severityRows": [
             {
               "severity": "Critical",
@@ -32081,24 +32114,24 @@
             },
             {
               "severity": "Minor",
-              "open": 15,
+              "open": 14,
               "devDone": 0,
               "qaRegression": 0,
               "backlogTransfer": 0,
-              "done": 0,
+              "done": 1,
               "total": 15,
-              "rate": 0.0,
+              "rate": 6.7,
               "previousRate": 0.0
             },
             {
               "severity": "합계",
-              "open": 18,
+              "open": 17,
               "devDone": 0,
               "qaRegression": 0,
               "backlogTransfer": 0,
-              "done": 0,
+              "done": 1,
               "total": 18,
-              "rate": 0.0,
+              "rate": 5.6,
               "previousRate": 0.0
             }
           ],
@@ -32455,7 +32488,7 @@
             {
               "date": "2026-10-16",
               "registered": 18,
-              "fixed": 0
+              "fixed": 1
             }
           ]
         },
@@ -32903,7 +32936,7 @@
           "done": 312,
           "scopeTotal": 313,
           "doneRate": 99.7,
-          "latestSnapshot": "2026-10-15",
+          "latestSnapshot": "2026-10-16",
           "severityRows": [
             {
               "severity": "Critical",
@@ -33375,65 +33408,65 @@
         },
         {
           "version": "[Hanpass][앱개편][Native]-LiveTest",
-          "total": 180,
-          "open": 29,
-          "devDone": 8,
-          "qaRegression": 0,
+          "total": 179,
+          "open": 24,
+          "devDone": 3,
+          "qaRegression": 2,
           "backlogTransfer": 0,
-          "done": 143,
-          "scopeTotal": 180,
-          "doneRate": 83.9,
+          "done": 150,
+          "scopeTotal": 179,
+          "doneRate": 86.6,
           "latestSnapshot": "2026-10-16",
           "severityRows": [
             {
               "severity": "Critical",
-              "open": 2,
-              "devDone": 2,
+              "open": 4,
+              "devDone": 0,
               "qaRegression": 0,
               "backlogTransfer": 0,
               "done": 13,
               "total": 17,
-              "rate": 88.2,
-              "previousRate": 88.2
+              "rate": 76.5,
+              "previousRate": 76.5
             },
             {
               "severity": "Major",
-              "open": 12,
-              "devDone": 4,
+              "open": 11,
+              "devDone": 3,
               "qaRegression": 0,
               "backlogTransfer": 0,
-              "done": 60,
-              "total": 76,
-              "rate": 84.2,
-              "previousRate": 82.9
+              "done": 64,
+              "total": 78,
+              "rate": 85.9,
+              "previousRate": 77.6
             },
             {
               "severity": "Minor",
-              "open": 12,
-              "devDone": 2,
-              "qaRegression": 0,
+              "open": 9,
+              "devDone": 0,
+              "qaRegression": 2,
               "backlogTransfer": 0,
-              "done": 69,
+              "done": 72,
               "total": 83,
-              "rate": 85.5,
-              "previousRate": 83.1
+              "rate": 89.2,
+              "previousRate": 80.7
             },
             {
               "severity": "합계",
-              "open": 29,
-              "devDone": 8,
-              "qaRegression": 0,
+              "open": 24,
+              "devDone": 3,
+              "qaRegression": 2,
               "backlogTransfer": 0,
-              "done": 143,
-              "total": 180,
-              "rate": 83.9,
-              "previousRate": 82.7
+              "done": 150,
+              "total": 179,
+              "rate": 86.6,
+              "previousRate": 79.1
             }
           ],
           "typeRows": [
             {
               "type": "기능",
-              "total": 69,
+              "total": 71,
               "severity": [
                 {
                   "label": "Critical",
@@ -33441,7 +33474,7 @@
                 },
                 {
                   "label": "Major",
-                  "count": 53
+                  "count": 55
                 },
                 {
                   "label": "Minor",
@@ -33520,16 +33553,6 @@
                 {
                   "label": "Minor",
                   "count": 5
-                }
-              ]
-            },
-            {
-              "type": "개선의견",
-              "total": 3,
-              "severity": [
-                {
-                  "label": "개선 의견",
-                  "count": 3
                 }
               ]
             },
@@ -33817,22 +33840,114 @@
             {
               "date": "2026-10-13",
               "registered": 172,
-              "fixed": 122
+              "fixed": 121
             },
             {
               "date": "2026-10-14",
               "registered": 174,
-              "fixed": 130
+              "fixed": 126
             },
             {
               "date": "2026-10-15",
-              "registered": 179,
-              "fixed": 148
+              "registered": 177,
+              "fixed": 140
             },
             {
               "date": "2026-10-16",
-              "registered": 180,
-              "fixed": 151
+              "registered": 179,
+              "fixed": 155
+            }
+          ]
+        },
+        {
+          "version": "[Hanpass][앱개편][개선의견]",
+          "total": 18,
+          "open": 18,
+          "devDone": 0,
+          "qaRegression": 0,
+          "backlogTransfer": 0,
+          "done": 0,
+          "scopeTotal": 18,
+          "doneRate": 0.0,
+          "latestSnapshot": "2026-10-16",
+          "severityRows": [
+            {
+              "severity": "Critical",
+              "open": 0,
+              "devDone": 0,
+              "qaRegression": 0,
+              "backlogTransfer": 0,
+              "done": 0,
+              "total": 0,
+              "rate": 0,
+              "previousRate": 0
+            },
+            {
+              "severity": "Major",
+              "open": 0,
+              "devDone": 0,
+              "qaRegression": 0,
+              "backlogTransfer": 0,
+              "done": 0,
+              "total": 0,
+              "rate": 0,
+              "previousRate": 0
+            },
+            {
+              "severity": "Minor",
+              "open": 0,
+              "devDone": 0,
+              "qaRegression": 0,
+              "backlogTransfer": 0,
+              "done": 0,
+              "total": 0,
+              "rate": 0,
+              "previousRate": 0
+            },
+            {
+              "severity": "합계",
+              "open": 18,
+              "devDone": 0,
+              "qaRegression": 0,
+              "backlogTransfer": 0,
+              "done": 0,
+              "total": 18,
+              "rate": 0.0,
+              "previousRate": 0.0
+            }
+          ],
+          "typeRows": [
+            {
+              "type": "개선의견",
+              "total": 13,
+              "severity": [
+                {
+                  "label": "개선 의견",
+                  "count": 13
+                }
+              ]
+            },
+            {
+              "type": "미지정",
+              "total": 5,
+              "severity": [
+                {
+                  "label": "개선 의견",
+                  "count": 5
+                }
+              ]
+            }
+          ],
+          "daily": [
+            {
+              "date": "2026-10-15",
+              "registered": 2,
+              "fixed": 0
+            },
+            {
+              "date": "2026-10-16",
+              "registered": 18,
+              "fixed": 0
             }
           ]
         },
@@ -41176,14 +41291,14 @@
           ]
         }
       ],
-      "defaultProjectVersion": "[Hanpass][EMVQR]",
+      "defaultProjectVersion": "[Hanpass][앱개편][개선의견]",
       "selectedVersion": "ALL",
       "distributions": {
         "ALL": {
           "status": [
             {
               "label": "등록",
-              "count": 223
+              "count": 225
             },
             {
               "label": "배정",
@@ -41191,15 +41306,15 @@
             },
             {
               "label": "진행중",
-              "count": 13
+              "count": 14
             },
             {
               "label": "QA확인",
-              "count": 280
+              "count": 289
             },
             {
               "label": "종료",
-              "count": 1441
+              "count": 1447
             }
           ],
           "severity": [
@@ -41209,11 +41324,11 @@
             },
             {
               "label": "Major",
-              "count": 749
+              "count": 751
             },
             {
               "label": "Minor",
-              "count": 1018
+              "count": 1019
             },
             {
               "label": "미지정",
@@ -41221,7 +41336,7 @@
             },
             {
               "label": "개선 의견",
-              "count": 26
+              "count": 41
             }
           ],
           "priority": [
@@ -41231,7 +41346,7 @@
             },
             {
               "label": "Medium",
-              "count": 1912
+              "count": 1930
             },
             {
               "label": "Low",
@@ -41434,30 +41549,30 @@
         {
           "date": "2026-10-13",
           "new": 29,
-          "fixed": 31,
-          "closed": 30,
+          "fixed": 30,
+          "closed": 29,
           "deltaNew": -1
         },
         {
           "date": "2026-10-14",
           "new": 15,
-          "fixed": 198,
-          "closed": 97,
+          "fixed": 194,
+          "closed": 93,
           "deltaNew": -14
         },
         {
           "date": "2026-10-15",
           "new": 9,
-          "fixed": 80,
-          "closed": 77,
+          "fixed": 75,
+          "closed": 72,
           "deltaNew": -6
         },
         {
           "date": "2026-10-16",
-          "new": 3,
-          "fixed": 11,
-          "closed": 6,
-          "deltaNew": -6
+          "new": 21,
+          "fixed": 36,
+          "closed": 22,
+          "deltaNew": 12
         }
       ],
       "reportBoard": {
@@ -41468,11 +41583,11 @@
           },
           {
             "label": "미완료",
-            "count": 0
+            "count": 1
           },
           {
             "label": "완료",
-            "count": 1
+            "count": 0
           },
           {
             "label": "결함 등록 완료",
@@ -41480,263 +41595,263 @@
           },
           {
             "label": "결함 아님",
-            "count": 1
+            "count": 0
           }
         ],
         "recent": [
           {
             "domain": "한패스",
-            "title": "다국어",
-            "status": "완료",
-            "processingStatus": "결함 아님",
-            "bugType": "미지정",
-            "platform": "AOS",
-            "reporter": "장민호 (Minho Jang)",
-            "createdAt": "2026-10-15T00:40:00.000Z",
-            "createdDate": "2026-10-15",
+            "title": "가상계좌 발급 시 '이용할 수 없는 기기입니다.' 팝업 노출",
+            "status": "확인중",
+            "processingStatus": "확인중",
+            "bugType": "문의",
+            "platform": "iOS",
+            "reporter": "채혜림 (Hey Rim Chae)",
+            "createdAt": "2026-10-16T01:56:00.000Z",
+            "createdDate": "2026-10-16",
             "qaLinked": 0,
-            "url": "https://app.notion.com/p/3fa73fbd195181dea298eaf773b91364"
+            "url": "https://app.notion.com/p/3fb73fbd19518191bbfad6b4b459e090"
           }
         ]
       },
       "recent": [
         {
-          "id": "ISSUE-2352",
-          "title": "[QR결제][공통]결제 금액 입력 화면 내 타이틀 기획서와 상이 ",
+          "id": "ISSUE-2385",
+          "title": "'입금전용계좌 확인' 현재 인도네시아어 번역",
           "status": "등록 (Registered)",
           "stage": "등록",
-          "severity": "Minor",
-          "defectType": "텍스트",
+          "severity": "개선 의견",
+          "defectType": "미지정",
           "priority": "Medium",
           "assignee": "미지정",
-          "version": "[Hanpass][EMVQR]",
-          "versionRaw": "[Hanpass][EMVQR]",
+          "version": "[Hanpass][앱개편][개선의견]",
+          "versionRaw": "[Hanpass][앱개편][개선의견]",
           "domain": "한패스",
           "os": "미지정",
-          "createdAt": "2026-10-16T01:02:00.000Z",
+          "createdAt": "2026-10-16T10:03:00.000Z",
           "createdDate": "2026-10-16",
           "fixedAt": "",
           "fixedDate": "",
           "closedAt": "",
           "closedDate": "",
-          "url": "https://app.notion.com/p/QR-3fb73fbd19518015ab1ce543357ea023",
-          "lastEditedAt": "2026-10-16T01:14:00.000Z"
+          "url": "https://app.notion.com/p/3fb73fbd195180d589aaf08e6531fa3b",
+          "lastEditedAt": "2026-10-16T10:04:00.000Z"
         },
         {
-          "id": "ISSUE-2351",
-          "title": "[QR결제] 빠른 QR 결제 OFF 상태로 앱 재설치 시 OFF 상태로 유지되는 현상 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Major",
-          "defectType": "UX/UI",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[Hanpass][EMVQR]",
-          "versionRaw": "[Hanpass][EMVQR]",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-10-16T00:52:00.000Z",
-          "createdDate": "2026-10-16",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/QR-QR-OFF-OFF-3fb73fbd195180feaf79d7b99c7957f6",
-          "lastEditedAt": "2026-10-16T01:31:00.000Z"
-        },
-        {
-          "id": "ISSUE-2350",
-          "title": "[환율][공통] 국가별 자국 통화 노출 변경 요청",
+          "id": "ISSUE-2383",
+          "title": "[내역관리]최초 진입 페이지 추가",
           "status": "등록 (Registered)",
           "stage": "등록",
           "severity": "개선 의견",
           "defectType": "개선의견",
           "priority": "Medium",
           "assignee": "미지정",
-          "version": "[Hanpass][앱개편][Native]-LiveTest",
-          "versionRaw": "[Hanpass][앱개편][Native]-LiveTest",
+          "version": "[Hanpass][앱개편][개선의견]",
+          "versionRaw": "[Hanpass][앱개편][개선의견]",
           "domain": "한패스",
           "os": "미지정",
-          "createdAt": "2026-10-16T00:11:00.000Z",
+          "createdAt": "2026-10-16T09:23:00.000Z",
           "createdDate": "2026-10-16",
           "fixedAt": "",
           "fixedDate": "",
           "closedAt": "",
           "closedDate": "",
-          "url": "https://app.notion.com/p/3fb73fbd195180979932da4e5a3a06f0",
-          "lastEditedAt": "2026-10-16T00:39:00.000Z"
+          "url": "https://app.notion.com/p/3fb73fbd1951803193aacefbb74a23e1",
+          "lastEditedAt": "2026-10-16T09:24:00.000Z"
         },
         {
-          "id": "ISSUE-2349",
-          "title": "[QR결제][iOS] QR 스캔 후 결제 금액 입력 화면 진입 시 키패드 자동으로 노출 안 되는 현상  ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Major",
-          "defectType": "기능",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[Hanpass][EMVQR]",
-          "versionRaw": "[Hanpass][EMVQR]",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-10-15T08:50:00.000Z",
-          "createdDate": "2026-10-15",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/QR-iOS-QR-3fa73fbd19518001916cdfae9e9b3663",
-          "lastEditedAt": "2026-10-16T01:04:00.000Z"
-        },
-        {
-          "id": "ISSUE-2347",
-          "title": "[QR결제][iOS] ‘결제 내역’ 진입 후 뒤로가기 시 홈 화면으로 이동하는 현상 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Major",
-          "defectType": "기능",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[Hanpass][EMVQR]",
-          "versionRaw": "[Hanpass][EMVQR]",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-10-15T08:35:00.000Z",
-          "createdDate": "2026-10-15",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/QR-iOS-3fa73fbd1951801c8121d08113a2c3c3",
-          "lastEditedAt": "2026-10-16T01:18:00.000Z"
-        },
-        {
-          "id": "ISSUE-2346",
-          "title": "[QR결제][iOS] ‘결제 내역’ 선택 시 ‘한패스 월렛’ 탭으로 이동하는 현상 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Major",
-          "defectType": "기능",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[Hanpass][EMVQR]",
-          "versionRaw": "[Hanpass][EMVQR]",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-10-15T08:29:00.000Z",
-          "createdDate": "2026-10-15",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/QR-iOS-3fa73fbd1951805d8726f9f79b4c4973",
-          "lastEditedAt": "2026-10-16T00:30:00.000Z"
-        },
-        {
-          "id": "ISSUE-2345",
-          "title": "[헬프데스크][AOS] 상담 언어선택 BS 내 우르두어, 아랍어 일부 문자가 생략되어 노출되는 현상 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "defectType": "텍스트",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[Hanpass][앱개편][Native]-LiveTest",
-          "versionRaw": "[Hanpass][앱개편][Native]-LiveTest",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-10-15T06:33:00.000Z",
-          "createdDate": "2026-10-15",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/AOS-BS-3fa73fbd1951800d8830d2f8e0423d41",
-          "lastEditedAt": "2026-10-15T08:49:00.000Z"
-        },
-        {
-          "id": "ISSUE-2344",
-          "title": "[헬프데스크][공통] 우르두어, 아랍어 선택 시 안내 문구 문장 순서가 잘못 노출되는 현상",
-          "status": "처리중 (In Progress)",
-          "stage": "진행중",
-          "severity": "Minor",
-          "defectType": "다국어",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[Hanpass][앱개편][Native]-LiveTest",
-          "versionRaw": "[Hanpass][앱개편][Native]-LiveTest",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-10-15T06:33:00.000Z",
-          "createdDate": "2026-10-15",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/3fa73fbd195180d5b937dd2cdd51908c",
-          "lastEditedAt": "2026-10-16T00:57:00.000Z"
-        },
-        {
-          "id": "ISSUE-2343",
-          "title": "[환율][공통]환율 화면의 그래프 데이터가 기획서에 정의된 기준과 다르게 노출되는 현상",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Major",
-          "defectType": "기능",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[Hanpass][앱개편][Native]-LiveTest",
-          "versionRaw": "[Hanpass][앱개편][Native]-LiveTest",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-10-15T06:00:00.000Z",
-          "createdDate": "2026-10-15",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/3fa73fbd195180a2b091c65ca12574e7",
-          "lastEditedAt": "2026-10-15T06:07:00.000Z"
-        },
-        {
-          "id": "ISSUE-2342",
-          "title": "[해외송금][송금주소록] 최근 송금 내역 탭 내 받는 방법 영역 기획서와 상이하게 노출되는 현상 ",
+          "id": "ISSUE-2381",
+          "title": "[내역관리]월렛 외 카테고리 -제거",
           "status": "등록 (Registered)",
           "stage": "등록",
           "severity": "개선 의견",
           "defectType": "개선의견",
           "priority": "Medium",
           "assignee": "미지정",
-          "version": "[Hanpass][앱개편][Native]-LiveTest",
-          "versionRaw": "[Hanpass][앱개편][Native]-LiveTest",
+          "version": "[Hanpass][앱개편][개선의견]",
+          "versionRaw": "[Hanpass][앱개편][개선의견]",
           "domain": "한패스",
           "os": "미지정",
-          "createdAt": "2026-10-15T05:23:00.000Z",
-          "createdDate": "2026-10-15",
+          "createdAt": "2026-10-16T07:37:00.000Z",
+          "createdDate": "2026-10-16",
           "fixedAt": "",
           "fixedDate": "",
           "closedAt": "",
           "closedDate": "",
-          "url": "https://app.notion.com/p/3fa73fbd1951803d9de6dd4936d21546",
-          "lastEditedAt": "2026-10-16T00:34:00.000Z"
+          "url": "https://app.notion.com/p/3fb73fbd1951802dbe50e53d3286e61e",
+          "lastEditedAt": "2026-10-16T07:39:00.000Z"
+        },
+        {
+          "id": "ISSUE-2379",
+          "title": "[환율] 받는 방법 선택 영역 내 최근 선택한 방법 노출에 대한 개선 의견 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "개선 의견",
+          "defectType": "개선의견",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[Hanpass][앱개편][개선의견]",
+          "versionRaw": "[Hanpass][앱개편][개선의견]",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-10-16T07:13:00.000Z",
+          "createdDate": "2026-10-16",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/3fb73fbd195180569d6fce1a82e1f3ee",
+          "lastEditedAt": "2026-10-16T07:29:00.000Z"
+        },
+        {
+          "id": "ISSUE-2378",
+          "title": "[환율][iOS] 국가가 중국인 계정으로 진입 시 ‘받는 방법’ Default 계좌이체로 노출 되는 현상 ",
+          "status": "개발 완료 (Dev Done)",
+          "stage": "종료",
+          "severity": "Major",
+          "defectType": "기능",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[Hanpass][앱개편][Native]-LiveTest",
+          "versionRaw": "[Hanpass][앱개편][Native]-LiveTest",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-10-16T07:10:00.000Z",
+          "createdDate": "2026-10-16",
+          "fixedAt": "2026-10-16T07:56:00.000Z",
+          "fixedDate": "2026-10-16",
+          "closedAt": "2026-10-16T07:56:00.000Z",
+          "closedDate": "2026-10-16",
+          "url": "https://app.notion.com/p/iOS-Default-3fb73fbd195180dd9ceaeb955436746a",
+          "lastEditedAt": "2026-10-16T07:56:00.000Z"
+        },
+        {
+          "id": "ISSUE-2376",
+          "title": "[해외송금][OverseasRemit_010] 최종 해외송금 정보 확인",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "개선 의견",
+          "defectType": "개선의견",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[Hanpass][앱개편][개선의견]",
+          "versionRaw": "[Hanpass][앱개편][개선의견]",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-10-16T06:28:00.000Z",
+          "createdDate": "2026-10-16",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/OverseasRemit_010-3fb73fbd19518052b2d0c4f1ae63f3a4",
+          "lastEditedAt": "2026-10-16T06:55:00.000Z"
+        },
+        {
+          "id": "ISSUE-2374",
+          "title": "[내역관리]해외송금 상세내역 (국내송금과 수수료, 쿠폰 노출 기준 정렬)",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "개선 의견",
+          "defectType": "개선의견",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[Hanpass][앱개편][개선의견]",
+          "versionRaw": "[Hanpass][앱개편][개선의견]",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-10-16T06:24:00.000Z",
+          "createdDate": "2026-10-16",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/3fb73fbd195180e492aec5dbb1559194",
+          "lastEditedAt": "2026-10-16T06:55:00.000Z"
+        },
+        {
+          "id": "ISSUE-2373",
+          "title": "[앱등록]앱등록 이미지 변경 필요",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "개선 의견",
+          "defectType": "개선의견",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[Hanpass][앱개편][개선의견]",
+          "versionRaw": "[Hanpass][앱개편][개선의견]",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-10-16T06:22:00.000Z",
+          "createdDate": "2026-10-16",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/3fb73fbd19518082a2d5d2a872125457",
+          "lastEditedAt": "2026-10-16T06:55:00.000Z"
+        },
+        {
+          "id": "ISSUE-2372",
+          "title": "메뉴 영문명 수정",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "개선 의견",
+          "defectType": "미지정",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[Hanpass][앱개편][개선의견]",
+          "versionRaw": "[Hanpass][앱개편][개선의견]",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-10-16T06:22:00.000Z",
+          "createdDate": "2026-10-16",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/3fb73fbd195180b89117f839e6c97775",
+          "lastEditedAt": "2026-10-16T06:55:00.000Z"
+        },
+        {
+          "id": "ISSUE-2370",
+          "title": "[홈][다국어] 국내송금 영역 전체 메뉴와 동일하게 표기에 대한 개선 의견 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "개선 의견",
+          "defectType": "개선의견",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[Hanpass][앱개편][개선의견]",
+          "versionRaw": "[Hanpass][앱개편][개선의견]",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-10-16T06:18:00.000Z",
+          "createdDate": "2026-10-16",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/3fb73fbd19518074ad59feca20790057",
+          "lastEditedAt": "2026-10-16T06:55:00.000Z"
         }
       ]
     },
     "한패스": {
       "summary": {
-        "total": 1512,
-        "new": 154,
-        "inProgress": 13,
+        "total": 1530,
+        "new": 158,
+        "inProgress": 14,
         "fixed": 0,
-        "closed": 1173,
-        "todayNew": 3,
-        "newDelta": -6
+        "closed": 1179,
+        "todayNew": 21,
+        "newDelta": 12
       },
       "funnel": [
         {
           "stage": "등록",
-          "count": 154,
-          "rate": 10.2,
+          "count": 158,
+          "rate": 10.3,
           "width": 13
         },
         {
@@ -41753,7 +41868,7 @@
         },
         {
           "stage": "진행중",
-          "count": 13,
+          "count": 14,
           "rate": 0.9,
           "width": 6
         },
@@ -41765,14 +41880,14 @@
         },
         {
           "stage": "QA확인",
-          "count": 171,
-          "rate": 11.3,
+          "count": 178,
+          "rate": 11.6,
           "width": 15
         },
         {
           "stage": "종료",
-          "count": 1173,
-          "rate": 77.6,
+          "count": 1179,
+          "rate": 77.1,
           "width": 100
         }
       ],
@@ -41962,30 +42077,30 @@
         {
           "date": "2026-10-13",
           "new": 24,
-          "fixed": 30,
-          "closed": 30,
+          "fixed": 29,
+          "closed": 29,
           "deltaNew": 11
         },
         {
           "date": "2026-10-14",
           "new": 15,
-          "fixed": 9,
-          "closed": 9,
+          "fixed": 6,
+          "closed": 6,
           "deltaNew": -9
         },
         {
           "date": "2026-10-15",
           "new": 9,
-          "fixed": 76,
-          "closed": 76,
+          "fixed": 71,
+          "closed": 71,
           "deltaNew": -6
         },
         {
           "date": "2026-10-16",
-          "new": 3,
-          "fixed": 9,
-          "closed": 6,
-          "deltaNew": -6
+          "new": 21,
+          "fixed": 31,
+          "closed": 21,
+          "deltaNew": 12
         }
       ],
       "versions": [
@@ -42679,21 +42794,21 @@
         },
         {
           "version": "[Hanpass][EMVQR]",
-          "total": 19,
+          "total": 20,
           "criticalMajor": 13,
-          "doneRate": 47.4,
+          "doneRate": 85.0,
           "status": [
             {
               "label": "등록",
-              "count": 10
-            },
-            {
-              "label": "QA확인",
               "count": 3
             },
             {
+              "label": "QA확인",
+              "count": 8
+            },
+            {
               "label": "종료",
-              "count": 6
+              "count": 9
             }
           ],
           "severity": [
@@ -42707,13 +42822,13 @@
             },
             {
               "label": "Minor",
-              "count": 6
+              "count": 7
             }
           ],
           "priority": [
             {
               "label": "Medium",
-              "count": 19
+              "count": 20
             }
           ]
         },
@@ -42721,15 +42836,19 @@
           "version": "[Hanpass][앱개편]-백로그",
           "total": 18,
           "criticalMajor": 3,
-          "doneRate": 0.0,
+          "doneRate": 5.6,
           "status": [
             {
               "label": "등록",
-              "count": 14
+              "count": 13
             },
             {
               "label": "진행중",
               "count": 4
+            },
+            {
+              "label": "종료",
+              "count": 1
             }
           ],
           "severity": [
@@ -42827,13 +42946,13 @@
         },
         {
           "version": "[Hanpass][앱개편][Native]-LiveTest",
-          "total": 180,
-          "criticalMajor": 93,
-          "doneRate": 83.9,
+          "total": 179,
+          "criticalMajor": 95,
+          "doneRate": 86.6,
           "status": [
             {
               "label": "등록",
-              "count": 20
+              "count": 14
             },
             {
               "label": "배정",
@@ -42841,11 +42960,15 @@
             },
             {
               "label": "진행중",
-              "count": 8
+              "count": 9
+            },
+            {
+              "label": "QA확인",
+              "count": 2
             },
             {
               "label": "종료",
-              "count": 151
+              "count": 153
             }
           ],
           "severity": [
@@ -42855,7 +42978,7 @@
             },
             {
               "label": "Major",
-              "count": 76
+              "count": 78
             },
             {
               "label": "Minor",
@@ -42863,13 +42986,37 @@
             },
             {
               "label": "개선 의견",
-              "count": 4
+              "count": 1
             }
           ],
           "priority": [
             {
               "label": "Medium",
-              "count": 180
+              "count": 179
+            }
+          ]
+        },
+        {
+          "version": "[Hanpass][앱개편][개선의견]",
+          "total": 18,
+          "criticalMajor": 0,
+          "doneRate": 0.0,
+          "status": [
+            {
+              "label": "등록",
+              "count": 18
+            }
+          ],
+          "severity": [
+            {
+              "label": "개선 의견",
+              "count": 18
+            }
+          ],
+          "priority": [
+            {
+              "label": "Medium",
+              "count": 18
             }
           ]
         },
@@ -43160,6 +43307,7 @@
           "[Hanpass][앱개편][BO] (완료)",
           "[Hanpass][앱개편][Native]-Dev",
           "[Hanpass][앱개편][Native]-LiveTest",
+          "[Hanpass][앱개편][개선의견]",
           "[게이미피케이션][혜택]포인트_2배_이벤트 (완료)",
           "[교통카드]SDK변경 (완료)",
           "[카카오뱅크]해외송금",
@@ -67057,14 +67205,14 @@
         },
         {
           "version": "[Hanpass][EMVQR]",
-          "total": 19,
-          "open": 9,
-          "devDone": 4,
-          "qaRegression": 3,
+          "total": 20,
+          "open": 2,
+          "devDone": 1,
+          "qaRegression": 8,
           "backlogTransfer": 1,
-          "done": 2,
-          "scopeTotal": 19,
-          "doneRate": 52.6,
+          "done": 8,
+          "scopeTotal": 20,
+          "doneRate": 90.0,
           "latestSnapshot": "2026-10-16",
           "severityRows": [
             {
@@ -67080,36 +67228,36 @@
             },
             {
               "severity": "Major",
-              "open": 6,
-              "devDone": 2,
-              "qaRegression": 0,
+              "open": 1,
+              "devDone": 0,
+              "qaRegression": 4,
               "backlogTransfer": 1,
-              "done": 1,
+              "done": 4,
               "total": 10,
-              "rate": 40.0,
+              "rate": 90.0,
               "previousRate": 11.1
             },
             {
               "severity": "Minor",
-              "open": 3,
-              "devDone": 2,
-              "qaRegression": 1,
+              "open": 1,
+              "devDone": 1,
+              "qaRegression": 2,
               "backlogTransfer": 0,
-              "done": 0,
-              "total": 6,
-              "rate": 50.0,
-              "previousRate": 20.0
+              "done": 3,
+              "total": 7,
+              "rate": 85.7,
+              "previousRate": 0.0
             },
             {
               "severity": "합계",
-              "open": 9,
-              "devDone": 4,
-              "qaRegression": 3,
+              "open": 2,
+              "devDone": 1,
+              "qaRegression": 8,
               "backlogTransfer": 1,
-              "done": 2,
-              "total": 19,
-              "rate": 52.6,
-              "previousRate": 17.6
+              "done": 8,
+              "total": 20,
+              "rate": 90.0,
+              "previousRate": 11.8
             }
           ],
           "typeRows": [
@@ -67129,7 +67277,7 @@
             },
             {
               "type": "UX/UI",
-              "total": 6,
+              "total": 7,
               "severity": [
                 {
                   "label": "Major",
@@ -67137,7 +67285,7 @@
                 },
                 {
                   "label": "Minor",
-                  "count": 3
+                  "count": 4
                 }
               ]
             },
@@ -67191,26 +67339,26 @@
             {
               "date": "2026-10-15",
               "registered": 17,
-              "fixed": 3
+              "fixed": 2
             },
             {
               "date": "2026-10-16",
-              "registered": 19,
-              "fixed": 10
+              "registered": 20,
+              "fixed": 18
             }
           ]
         },
         {
           "version": "[Hanpass][앱개편]-백로그",
           "total": 18,
-          "open": 18,
+          "open": 17,
           "devDone": 0,
           "qaRegression": 0,
           "backlogTransfer": 0,
-          "done": 0,
+          "done": 1,
           "scopeTotal": 18,
-          "doneRate": 0.0,
-          "latestSnapshot": "2026-10-13",
+          "doneRate": 5.6,
+          "latestSnapshot": "2026-10-16",
           "severityRows": [
             {
               "severity": "Critical",
@@ -67236,24 +67384,24 @@
             },
             {
               "severity": "Minor",
-              "open": 15,
+              "open": 14,
               "devDone": 0,
               "qaRegression": 0,
               "backlogTransfer": 0,
-              "done": 0,
+              "done": 1,
               "total": 15,
-              "rate": 0.0,
+              "rate": 6.7,
               "previousRate": 0.0
             },
             {
               "severity": "합계",
-              "open": 18,
+              "open": 17,
               "devDone": 0,
               "qaRegression": 0,
               "backlogTransfer": 0,
-              "done": 0,
+              "done": 1,
               "total": 18,
-              "rate": 0.0,
+              "rate": 5.6,
               "previousRate": 0.0
             }
           ],
@@ -67610,7 +67758,7 @@
             {
               "date": "2026-10-16",
               "registered": 18,
-              "fixed": 0
+              "fixed": 1
             }
           ]
         },
@@ -68058,7 +68206,7 @@
           "done": 312,
           "scopeTotal": 313,
           "doneRate": 99.7,
-          "latestSnapshot": "2026-10-15",
+          "latestSnapshot": "2026-10-16",
           "severityRows": [
             {
               "severity": "Critical",
@@ -68530,65 +68678,65 @@
         },
         {
           "version": "[Hanpass][앱개편][Native]-LiveTest",
-          "total": 180,
-          "open": 29,
-          "devDone": 8,
-          "qaRegression": 0,
+          "total": 179,
+          "open": 24,
+          "devDone": 3,
+          "qaRegression": 2,
           "backlogTransfer": 0,
-          "done": 143,
-          "scopeTotal": 180,
-          "doneRate": 83.9,
+          "done": 150,
+          "scopeTotal": 179,
+          "doneRate": 86.6,
           "latestSnapshot": "2026-10-16",
           "severityRows": [
             {
               "severity": "Critical",
-              "open": 2,
-              "devDone": 2,
+              "open": 4,
+              "devDone": 0,
               "qaRegression": 0,
               "backlogTransfer": 0,
               "done": 13,
               "total": 17,
-              "rate": 88.2,
-              "previousRate": 88.2
+              "rate": 76.5,
+              "previousRate": 76.5
             },
             {
               "severity": "Major",
-              "open": 12,
-              "devDone": 4,
+              "open": 11,
+              "devDone": 3,
               "qaRegression": 0,
               "backlogTransfer": 0,
-              "done": 60,
-              "total": 76,
-              "rate": 84.2,
-              "previousRate": 82.9
+              "done": 64,
+              "total": 78,
+              "rate": 85.9,
+              "previousRate": 77.6
             },
             {
               "severity": "Minor",
-              "open": 12,
-              "devDone": 2,
-              "qaRegression": 0,
+              "open": 9,
+              "devDone": 0,
+              "qaRegression": 2,
               "backlogTransfer": 0,
-              "done": 69,
+              "done": 72,
               "total": 83,
-              "rate": 85.5,
-              "previousRate": 83.1
+              "rate": 89.2,
+              "previousRate": 80.7
             },
             {
               "severity": "합계",
-              "open": 29,
-              "devDone": 8,
-              "qaRegression": 0,
+              "open": 24,
+              "devDone": 3,
+              "qaRegression": 2,
               "backlogTransfer": 0,
-              "done": 143,
-              "total": 180,
-              "rate": 83.9,
-              "previousRate": 82.7
+              "done": 150,
+              "total": 179,
+              "rate": 86.6,
+              "previousRate": 79.1
             }
           ],
           "typeRows": [
             {
               "type": "기능",
-              "total": 69,
+              "total": 71,
               "severity": [
                 {
                   "label": "Critical",
@@ -68596,7 +68744,7 @@
                 },
                 {
                   "label": "Major",
-                  "count": 53
+                  "count": 55
                 },
                 {
                   "label": "Minor",
@@ -68675,16 +68823,6 @@
                 {
                   "label": "Minor",
                   "count": 5
-                }
-              ]
-            },
-            {
-              "type": "개선의견",
-              "total": 3,
-              "severity": [
-                {
-                  "label": "개선 의견",
-                  "count": 3
                 }
               ]
             },
@@ -68972,22 +69110,114 @@
             {
               "date": "2026-10-13",
               "registered": 172,
-              "fixed": 122
+              "fixed": 121
             },
             {
               "date": "2026-10-14",
               "registered": 174,
-              "fixed": 130
+              "fixed": 126
             },
             {
               "date": "2026-10-15",
-              "registered": 179,
-              "fixed": 148
+              "registered": 177,
+              "fixed": 140
             },
             {
               "date": "2026-10-16",
-              "registered": 180,
-              "fixed": 151
+              "registered": 179,
+              "fixed": 155
+            }
+          ]
+        },
+        {
+          "version": "[Hanpass][앱개편][개선의견]",
+          "total": 18,
+          "open": 18,
+          "devDone": 0,
+          "qaRegression": 0,
+          "backlogTransfer": 0,
+          "done": 0,
+          "scopeTotal": 18,
+          "doneRate": 0.0,
+          "latestSnapshot": "2026-10-16",
+          "severityRows": [
+            {
+              "severity": "Critical",
+              "open": 0,
+              "devDone": 0,
+              "qaRegression": 0,
+              "backlogTransfer": 0,
+              "done": 0,
+              "total": 0,
+              "rate": 0,
+              "previousRate": 0
+            },
+            {
+              "severity": "Major",
+              "open": 0,
+              "devDone": 0,
+              "qaRegression": 0,
+              "backlogTransfer": 0,
+              "done": 0,
+              "total": 0,
+              "rate": 0,
+              "previousRate": 0
+            },
+            {
+              "severity": "Minor",
+              "open": 0,
+              "devDone": 0,
+              "qaRegression": 0,
+              "backlogTransfer": 0,
+              "done": 0,
+              "total": 0,
+              "rate": 0,
+              "previousRate": 0
+            },
+            {
+              "severity": "합계",
+              "open": 18,
+              "devDone": 0,
+              "qaRegression": 0,
+              "backlogTransfer": 0,
+              "done": 0,
+              "total": 18,
+              "rate": 0.0,
+              "previousRate": 0.0
+            }
+          ],
+          "typeRows": [
+            {
+              "type": "개선의견",
+              "total": 13,
+              "severity": [
+                {
+                  "label": "개선 의견",
+                  "count": 13
+                }
+              ]
+            },
+            {
+              "type": "미지정",
+              "total": 5,
+              "severity": [
+                {
+                  "label": "개선 의견",
+                  "count": 5
+                }
+              ]
+            }
+          ],
+          "daily": [
+            {
+              "date": "2026-10-15",
+              "registered": 2,
+              "fixed": 0
+            },
+            {
+              "date": "2026-10-16",
+              "registered": 18,
+              "fixed": 0
             }
           ]
         },
@@ -76331,14 +76561,14 @@
           ]
         }
       ],
-      "defaultProjectVersion": "[Hanpass][EMVQR]",
+      "defaultProjectVersion": "[Hanpass][앱개편][개선의견]",
       "selectedVersion": "ALL",
       "distributions": {
         "ALL": {
           "status": [
             {
               "label": "등록",
-              "count": 154
+              "count": 158
             },
             {
               "label": "배정",
@@ -76346,15 +76576,15 @@
             },
             {
               "label": "진행중",
-              "count": 13
+              "count": 14
             },
             {
               "label": "QA확인",
-              "count": 171
+              "count": 178
             },
             {
               "label": "종료",
-              "count": 1173
+              "count": 1179
             }
           ],
           "severity": [
@@ -76364,11 +76594,11 @@
             },
             {
               "label": "Major",
-              "count": 496
+              "count": 498
             },
             {
               "label": "Minor",
-              "count": 838
+              "count": 839
             },
             {
               "label": "미지정",
@@ -76376,7 +76606,7 @@
             },
             {
               "label": "개선 의견",
-              "count": 26
+              "count": 41
             }
           ],
           "priority": [
@@ -76386,7 +76616,7 @@
             },
             {
               "label": "Medium",
-              "count": 1467
+              "count": 1485
             },
             {
               "label": "Low",
@@ -76589,30 +76819,30 @@
         {
           "date": "2026-10-13",
           "new": 24,
-          "fixed": 30,
-          "closed": 30,
+          "fixed": 29,
+          "closed": 29,
           "deltaNew": 11
         },
         {
           "date": "2026-10-14",
           "new": 15,
-          "fixed": 9,
-          "closed": 9,
+          "fixed": 6,
+          "closed": 6,
           "deltaNew": -9
         },
         {
           "date": "2026-10-15",
           "new": 9,
-          "fixed": 76,
-          "closed": 76,
+          "fixed": 71,
+          "closed": 71,
           "deltaNew": -6
         },
         {
           "date": "2026-10-16",
-          "new": 3,
-          "fixed": 9,
-          "closed": 6,
-          "deltaNew": -6
+          "new": 21,
+          "fixed": 31,
+          "closed": 21,
+          "deltaNew": 12
         }
       ],
       "reportBoard": {
@@ -76623,11 +76853,11 @@
           },
           {
             "label": "미완료",
-            "count": 0
+            "count": 1
           },
           {
             "label": "완료",
-            "count": 1
+            "count": 0
           },
           {
             "label": "결함 등록 완료",
@@ -76635,252 +76865,252 @@
           },
           {
             "label": "결함 아님",
-            "count": 1
+            "count": 0
           }
         ],
         "recent": [
           {
             "domain": "한패스",
-            "title": "다국어",
-            "status": "완료",
-            "processingStatus": "결함 아님",
-            "bugType": "미지정",
-            "platform": "AOS",
-            "reporter": "장민호 (Minho Jang)",
-            "createdAt": "2026-10-15T00:40:00.000Z",
-            "createdDate": "2026-10-15",
+            "title": "가상계좌 발급 시 '이용할 수 없는 기기입니다.' 팝업 노출",
+            "status": "확인중",
+            "processingStatus": "확인중",
+            "bugType": "문의",
+            "platform": "iOS",
+            "reporter": "채혜림 (Hey Rim Chae)",
+            "createdAt": "2026-10-16T01:56:00.000Z",
+            "createdDate": "2026-10-16",
             "qaLinked": 0,
-            "url": "https://app.notion.com/p/3fa73fbd195181dea298eaf773b91364"
+            "url": "https://app.notion.com/p/3fb73fbd19518191bbfad6b4b459e090"
           }
         ]
       },
       "recent": [
         {
-          "id": "ISSUE-2352",
-          "title": "[QR결제][공통]결제 금액 입력 화면 내 타이틀 기획서와 상이 ",
+          "id": "ISSUE-2385",
+          "title": "'입금전용계좌 확인' 현재 인도네시아어 번역",
           "status": "등록 (Registered)",
           "stage": "등록",
-          "severity": "Minor",
-          "defectType": "텍스트",
+          "severity": "개선 의견",
+          "defectType": "미지정",
           "priority": "Medium",
           "assignee": "미지정",
-          "version": "[Hanpass][EMVQR]",
-          "versionRaw": "[Hanpass][EMVQR]",
+          "version": "[Hanpass][앱개편][개선의견]",
+          "versionRaw": "[Hanpass][앱개편][개선의견]",
           "domain": "한패스",
           "os": "미지정",
-          "createdAt": "2026-10-16T01:02:00.000Z",
+          "createdAt": "2026-10-16T10:03:00.000Z",
           "createdDate": "2026-10-16",
           "fixedAt": "",
           "fixedDate": "",
           "closedAt": "",
           "closedDate": "",
-          "url": "https://app.notion.com/p/QR-3fb73fbd19518015ab1ce543357ea023",
-          "lastEditedAt": "2026-10-16T01:14:00.000Z"
+          "url": "https://app.notion.com/p/3fb73fbd195180d589aaf08e6531fa3b",
+          "lastEditedAt": "2026-10-16T10:04:00.000Z"
         },
         {
-          "id": "ISSUE-2351",
-          "title": "[QR결제] 빠른 QR 결제 OFF 상태로 앱 재설치 시 OFF 상태로 유지되는 현상 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Major",
-          "defectType": "UX/UI",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[Hanpass][EMVQR]",
-          "versionRaw": "[Hanpass][EMVQR]",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-10-16T00:52:00.000Z",
-          "createdDate": "2026-10-16",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/QR-QR-OFF-OFF-3fb73fbd195180feaf79d7b99c7957f6",
-          "lastEditedAt": "2026-10-16T01:31:00.000Z"
-        },
-        {
-          "id": "ISSUE-2350",
-          "title": "[환율][공통] 국가별 자국 통화 노출 변경 요청",
+          "id": "ISSUE-2383",
+          "title": "[내역관리]최초 진입 페이지 추가",
           "status": "등록 (Registered)",
           "stage": "등록",
           "severity": "개선 의견",
           "defectType": "개선의견",
           "priority": "Medium",
           "assignee": "미지정",
-          "version": "[Hanpass][앱개편][Native]-LiveTest",
-          "versionRaw": "[Hanpass][앱개편][Native]-LiveTest",
+          "version": "[Hanpass][앱개편][개선의견]",
+          "versionRaw": "[Hanpass][앱개편][개선의견]",
           "domain": "한패스",
           "os": "미지정",
-          "createdAt": "2026-10-16T00:11:00.000Z",
+          "createdAt": "2026-10-16T09:23:00.000Z",
           "createdDate": "2026-10-16",
           "fixedAt": "",
           "fixedDate": "",
           "closedAt": "",
           "closedDate": "",
-          "url": "https://app.notion.com/p/3fb73fbd195180979932da4e5a3a06f0",
-          "lastEditedAt": "2026-10-16T00:39:00.000Z"
+          "url": "https://app.notion.com/p/3fb73fbd1951803193aacefbb74a23e1",
+          "lastEditedAt": "2026-10-16T09:24:00.000Z"
         },
         {
-          "id": "ISSUE-2349",
-          "title": "[QR결제][iOS] QR 스캔 후 결제 금액 입력 화면 진입 시 키패드 자동으로 노출 안 되는 현상  ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Major",
-          "defectType": "기능",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[Hanpass][EMVQR]",
-          "versionRaw": "[Hanpass][EMVQR]",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-10-15T08:50:00.000Z",
-          "createdDate": "2026-10-15",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/QR-iOS-QR-3fa73fbd19518001916cdfae9e9b3663",
-          "lastEditedAt": "2026-10-16T01:04:00.000Z"
-        },
-        {
-          "id": "ISSUE-2347",
-          "title": "[QR결제][iOS] ‘결제 내역’ 진입 후 뒤로가기 시 홈 화면으로 이동하는 현상 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Major",
-          "defectType": "기능",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[Hanpass][EMVQR]",
-          "versionRaw": "[Hanpass][EMVQR]",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-10-15T08:35:00.000Z",
-          "createdDate": "2026-10-15",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/QR-iOS-3fa73fbd1951801c8121d08113a2c3c3",
-          "lastEditedAt": "2026-10-16T01:18:00.000Z"
-        },
-        {
-          "id": "ISSUE-2346",
-          "title": "[QR결제][iOS] ‘결제 내역’ 선택 시 ‘한패스 월렛’ 탭으로 이동하는 현상 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Major",
-          "defectType": "기능",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[Hanpass][EMVQR]",
-          "versionRaw": "[Hanpass][EMVQR]",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-10-15T08:29:00.000Z",
-          "createdDate": "2026-10-15",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/QR-iOS-3fa73fbd1951805d8726f9f79b4c4973",
-          "lastEditedAt": "2026-10-16T00:30:00.000Z"
-        },
-        {
-          "id": "ISSUE-2345",
-          "title": "[헬프데스크][AOS] 상담 언어선택 BS 내 우르두어, 아랍어 일부 문자가 생략되어 노출되는 현상 ",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "defectType": "텍스트",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[Hanpass][앱개편][Native]-LiveTest",
-          "versionRaw": "[Hanpass][앱개편][Native]-LiveTest",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-10-15T06:33:00.000Z",
-          "createdDate": "2026-10-15",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/AOS-BS-3fa73fbd1951800d8830d2f8e0423d41",
-          "lastEditedAt": "2026-10-15T08:49:00.000Z"
-        },
-        {
-          "id": "ISSUE-2344",
-          "title": "[헬프데스크][공통] 우르두어, 아랍어 선택 시 안내 문구 문장 순서가 잘못 노출되는 현상",
-          "status": "처리중 (In Progress)",
-          "stage": "진행중",
-          "severity": "Minor",
-          "defectType": "다국어",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[Hanpass][앱개편][Native]-LiveTest",
-          "versionRaw": "[Hanpass][앱개편][Native]-LiveTest",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-10-15T06:33:00.000Z",
-          "createdDate": "2026-10-15",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/3fa73fbd195180d5b937dd2cdd51908c",
-          "lastEditedAt": "2026-10-16T00:57:00.000Z"
-        },
-        {
-          "id": "ISSUE-2343",
-          "title": "[환율][공통]환율 화면의 그래프 데이터가 기획서에 정의된 기준과 다르게 노출되는 현상",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Major",
-          "defectType": "기능",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[Hanpass][앱개편][Native]-LiveTest",
-          "versionRaw": "[Hanpass][앱개편][Native]-LiveTest",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-10-15T06:00:00.000Z",
-          "createdDate": "2026-10-15",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/3fa73fbd195180a2b091c65ca12574e7",
-          "lastEditedAt": "2026-10-15T06:07:00.000Z"
-        },
-        {
-          "id": "ISSUE-2342",
-          "title": "[해외송금][송금주소록] 최근 송금 내역 탭 내 받는 방법 영역 기획서와 상이하게 노출되는 현상 ",
+          "id": "ISSUE-2381",
+          "title": "[내역관리]월렛 외 카테고리 -제거",
           "status": "등록 (Registered)",
           "stage": "등록",
           "severity": "개선 의견",
           "defectType": "개선의견",
           "priority": "Medium",
           "assignee": "미지정",
-          "version": "[Hanpass][앱개편][Native]-LiveTest",
-          "versionRaw": "[Hanpass][앱개편][Native]-LiveTest",
+          "version": "[Hanpass][앱개편][개선의견]",
+          "versionRaw": "[Hanpass][앱개편][개선의견]",
           "domain": "한패스",
           "os": "미지정",
-          "createdAt": "2026-10-15T05:23:00.000Z",
-          "createdDate": "2026-10-15",
+          "createdAt": "2026-10-16T07:37:00.000Z",
+          "createdDate": "2026-10-16",
           "fixedAt": "",
           "fixedDate": "",
           "closedAt": "",
           "closedDate": "",
-          "url": "https://app.notion.com/p/3fa73fbd1951803d9de6dd4936d21546",
-          "lastEditedAt": "2026-10-16T00:34:00.000Z"
+          "url": "https://app.notion.com/p/3fb73fbd1951802dbe50e53d3286e61e",
+          "lastEditedAt": "2026-10-16T07:39:00.000Z"
+        },
+        {
+          "id": "ISSUE-2379",
+          "title": "[환율] 받는 방법 선택 영역 내 최근 선택한 방법 노출에 대한 개선 의견 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "개선 의견",
+          "defectType": "개선의견",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[Hanpass][앱개편][개선의견]",
+          "versionRaw": "[Hanpass][앱개편][개선의견]",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-10-16T07:13:00.000Z",
+          "createdDate": "2026-10-16",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/3fb73fbd195180569d6fce1a82e1f3ee",
+          "lastEditedAt": "2026-10-16T07:29:00.000Z"
+        },
+        {
+          "id": "ISSUE-2378",
+          "title": "[환율][iOS] 국가가 중국인 계정으로 진입 시 ‘받는 방법’ Default 계좌이체로 노출 되는 현상 ",
+          "status": "개발 완료 (Dev Done)",
+          "stage": "종료",
+          "severity": "Major",
+          "defectType": "기능",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[Hanpass][앱개편][Native]-LiveTest",
+          "versionRaw": "[Hanpass][앱개편][Native]-LiveTest",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-10-16T07:10:00.000Z",
+          "createdDate": "2026-10-16",
+          "fixedAt": "2026-10-16T07:56:00.000Z",
+          "fixedDate": "2026-10-16",
+          "closedAt": "2026-10-16T07:56:00.000Z",
+          "closedDate": "2026-10-16",
+          "url": "https://app.notion.com/p/iOS-Default-3fb73fbd195180dd9ceaeb955436746a",
+          "lastEditedAt": "2026-10-16T07:56:00.000Z"
+        },
+        {
+          "id": "ISSUE-2376",
+          "title": "[해외송금][OverseasRemit_010] 최종 해외송금 정보 확인",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "개선 의견",
+          "defectType": "개선의견",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[Hanpass][앱개편][개선의견]",
+          "versionRaw": "[Hanpass][앱개편][개선의견]",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-10-16T06:28:00.000Z",
+          "createdDate": "2026-10-16",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/OverseasRemit_010-3fb73fbd19518052b2d0c4f1ae63f3a4",
+          "lastEditedAt": "2026-10-16T06:55:00.000Z"
+        },
+        {
+          "id": "ISSUE-2374",
+          "title": "[내역관리]해외송금 상세내역 (국내송금과 수수료, 쿠폰 노출 기준 정렬)",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "개선 의견",
+          "defectType": "개선의견",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[Hanpass][앱개편][개선의견]",
+          "versionRaw": "[Hanpass][앱개편][개선의견]",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-10-16T06:24:00.000Z",
+          "createdDate": "2026-10-16",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/3fb73fbd195180e492aec5dbb1559194",
+          "lastEditedAt": "2026-10-16T06:55:00.000Z"
+        },
+        {
+          "id": "ISSUE-2373",
+          "title": "[앱등록]앱등록 이미지 변경 필요",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "개선 의견",
+          "defectType": "개선의견",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[Hanpass][앱개편][개선의견]",
+          "versionRaw": "[Hanpass][앱개편][개선의견]",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-10-16T06:22:00.000Z",
+          "createdDate": "2026-10-16",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/3fb73fbd19518082a2d5d2a872125457",
+          "lastEditedAt": "2026-10-16T06:55:00.000Z"
+        },
+        {
+          "id": "ISSUE-2372",
+          "title": "메뉴 영문명 수정",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "개선 의견",
+          "defectType": "미지정",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[Hanpass][앱개편][개선의견]",
+          "versionRaw": "[Hanpass][앱개편][개선의견]",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-10-16T06:22:00.000Z",
+          "createdDate": "2026-10-16",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/3fb73fbd195180b89117f839e6c97775",
+          "lastEditedAt": "2026-10-16T06:55:00.000Z"
+        },
+        {
+          "id": "ISSUE-2370",
+          "title": "[홈][다국어] 국내송금 영역 전체 메뉴와 동일하게 표기에 대한 개선 의견 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "개선 의견",
+          "defectType": "개선의견",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[Hanpass][앱개편][개선의견]",
+          "versionRaw": "[Hanpass][앱개편][개선의견]",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-10-16T06:18:00.000Z",
+          "createdDate": "2026-10-16",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/3fb73fbd19518074ad59feca20790057",
+          "lastEditedAt": "2026-10-16T06:55:00.000Z"
         }
       ]
     },
     "GoHanpass": {
       "summary": {
         "total": 446,
-        "new": 69,
+        "new": 67,
         "inProgress": 0,
         "fixed": 0,
         "closed": 268,
@@ -76890,9 +77120,9 @@
       "funnel": [
         {
           "stage": "등록",
-          "count": 69,
-          "rate": 15.5,
-          "width": 26
+          "count": 67,
+          "rate": 15.0,
+          "width": 25
         },
         {
           "stage": "검토",
@@ -76920,8 +77150,8 @@
         },
         {
           "stage": "QA확인",
-          "count": 109,
-          "rate": 24.4,
+          "count": 111,
+          "rate": 24.9,
           "width": 41
         },
         {
@@ -77124,8 +77354,8 @@
         {
           "date": "2026-10-14",
           "new": 0,
-          "fixed": 189,
-          "closed": 88,
+          "fixed": 188,
+          "closed": 87,
           "deltaNew": -5
         },
         {
@@ -77138,8 +77368,8 @@
         {
           "date": "2026-10-16",
           "new": 0,
-          "fixed": 2,
-          "closed": 0,
+          "fixed": 5,
+          "closed": 1,
           "deltaNew": 0
         }
       ],
@@ -77336,15 +77566,15 @@
           "version": "[G.H][Go.Hanpass][앱개편][APP]-1차 (완료)",
           "total": 172,
           "criticalMajor": 138,
-          "doneRate": 95.3,
+          "doneRate": 96.5,
           "status": [
             {
               "label": "등록",
-              "count": 8
+              "count": 6
             },
             {
               "label": "QA확인",
-              "count": 96
+              "count": 98
             },
             {
               "label": "종료",
@@ -81746,13 +81976,13 @@
         {
           "version": "[G.H][Go.Hanpass][앱개편][APP]-1차 (완료)",
           "total": 172,
-          "open": 8,
+          "open": 6,
           "devDone": 2,
-          "qaRegression": 96,
+          "qaRegression": 98,
           "backlogTransfer": 0,
           "done": 66,
           "scopeTotal": 172,
-          "doneRate": 95.3,
+          "doneRate": 96.5,
           "latestSnapshot": "2026-10-16",
           "severityRows": [
             {
@@ -81768,14 +81998,14 @@
             },
             {
               "severity": "Major",
-              "open": 6,
+              "open": 4,
               "devDone": 2,
-              "qaRegression": 64,
+              "qaRegression": 66,
               "backlogTransfer": 0,
               "done": 55,
               "total": 127,
-              "rate": 95.3,
-              "previousRate": 93.7
+              "rate": 96.9,
+              "previousRate": 92.9
             },
             {
               "severity": "Minor",
@@ -81790,14 +82020,14 @@
             },
             {
               "severity": "합계",
-              "open": 8,
+              "open": 6,
               "devDone": 2,
-              "qaRegression": 96,
+              "qaRegression": 98,
               "backlogTransfer": 0,
               "done": 66,
               "total": 172,
-              "rate": 95.3,
-              "previousRate": 94.2
+              "rate": 96.5,
+              "previousRate": 93.6
             }
           ],
           "typeRows": [
@@ -82058,17 +82288,17 @@
             {
               "date": "2026-10-14",
               "registered": 172,
-              "fixed": 158
+              "fixed": 157
             },
             {
               "date": "2026-10-15",
               "registered": 172,
-              "fixed": 162
+              "fixed": 161
             },
             {
               "date": "2026-10-16",
               "registered": 172,
-              "fixed": 164
+              "fixed": 166
             }
           ]
         },
@@ -83216,11 +83446,11 @@
           "status": [
             {
               "label": "등록",
-              "count": 69
+              "count": 67
             },
             {
               "label": "QA확인",
-              "count": 109
+              "count": 111
             },
             {
               "label": "종료",
@@ -83446,8 +83676,8 @@
         {
           "date": "2026-10-14",
           "new": 0,
-          "fixed": 189,
-          "closed": 88,
+          "fixed": 188,
+          "closed": 87,
           "deltaNew": -5
         },
         {
@@ -83460,8 +83690,8 @@
         {
           "date": "2026-10-16",
           "new": 0,
-          "fixed": 2,
-          "closed": 0,
+          "fixed": 5,
+          "closed": 1,
           "deltaNew": 0
         }
       ],

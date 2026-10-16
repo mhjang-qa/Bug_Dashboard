@@ -510,7 +510,7 @@
     </div>
   </div>
   <script id="dashboard-data" type="application/json">{
-  "generatedAt": "2026-10-15T13:38:10+00:00",
+  "generatedAt": "2026-10-16T00:01:48+00:00",
   "days": 30,
   "domainOrder": [
     "한패스",
@@ -519,20 +519,20 @@
   "domains": {
     "ALL": {
       "summary": {
-        "total": 1956,
-        "new": 224,
+        "total": 1955,
+        "new": 223,
         "inProgress": 12,
         "fixed": 0,
-        "closed": 1445,
-        "todayNew": 9,
-        "newDelta": -6
+        "closed": 1444,
+        "todayNew": 0,
+        "newDelta": -9
       },
       "funnel": [
         {
           "stage": "등록",
-          "count": 224,
-          "rate": 11.5,
-          "width": 16
+          "count": 223,
+          "rate": 11.4,
+          "width": 15
         },
         {
           "stage": "검토",
@@ -542,9 +542,9 @@
         },
         {
           "stage": "배정",
-          "count": 0,
-          "rate": 0.0,
-          "width": 0
+          "count": 1,
+          "rate": 0.1,
+          "width": 6
         },
         {
           "stage": "진행중",
@@ -566,25 +566,18 @@
         },
         {
           "stage": "종료",
-          "count": 1445,
+          "count": 1444,
           "rate": 73.9,
           "width": 100
         }
       ],
       "daily": [
         {
-          "date": "2026-09-16",
-          "new": 9,
-          "fixed": 9,
-          "closed": 9,
-          "deltaNew": 9
-        },
-        {
           "date": "2026-09-17",
           "new": 1,
           "fixed": 1,
           "closed": 1,
-          "deltaNew": -8
+          "deltaNew": 1
         },
         {
           "date": "2026-09-18",
@@ -624,8 +617,8 @@
         {
           "date": "2026-09-23",
           "new": 33,
-          "fixed": 76,
-          "closed": 54,
+          "fixed": 73,
+          "closed": 51,
           "deltaNew": 13
         },
         {
@@ -673,8 +666,8 @@
         {
           "date": "2026-09-30",
           "new": 43,
-          "fixed": 6,
-          "closed": 6,
+          "fixed": 3,
+          "closed": 3,
           "deltaNew": 13
         },
         {
@@ -757,33 +750,76 @@
         {
           "date": "2026-10-12",
           "new": 30,
-          "fixed": 54,
-          "closed": 52,
+          "fixed": 53,
+          "closed": 51,
           "deltaNew": 27
         },
         {
           "date": "2026-10-13",
-          "new": 30,
-          "fixed": 32,
-          "closed": 31,
-          "deltaNew": 0
+          "new": 29,
+          "fixed": 31,
+          "closed": 30,
+          "deltaNew": -1
         },
         {
           "date": "2026-10-14",
           "new": 15,
           "fixed": 200,
           "closed": 99,
-          "deltaNew": -15
+          "deltaNew": -14
         },
         {
           "date": "2026-10-15",
           "new": 9,
-          "fixed": 38,
-          "closed": 35,
+          "fixed": 87,
+          "closed": 84,
           "deltaNew": -6
+        },
+        {
+          "date": "2026-10-16",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": -9
         }
       ],
       "versions": [
+        {
+          "version": "6.0.0",
+          "total": 29,
+          "criticalMajor": 5,
+          "doneRate": 3.4,
+          "status": [
+            {
+              "label": "등록",
+              "count": 27
+            },
+            {
+              "label": "진행중",
+              "count": 1
+            },
+            {
+              "label": "종료",
+              "count": 1
+            }
+          ],
+          "severity": [
+            {
+              "label": "Major",
+              "count": 5
+            },
+            {
+              "label": "Minor",
+              "count": 24
+            }
+          ],
+          "priority": [
+            {
+              "label": "Medium",
+              "count": 29
+            }
+          ]
+        },
         {
           "version": "5.25.0 (완료)",
           "total": 11,
@@ -1766,13 +1802,13 @@
         },
         {
           "version": "[Hanpass][앱개편]-백로그",
-          "total": 19,
+          "total": 18,
           "criticalMajor": 3,
           "doneRate": 0.0,
           "status": [
             {
               "label": "등록",
-              "count": 15
+              "count": 14
             },
             {
               "label": "진행중",
@@ -1787,21 +1823,17 @@
             {
               "label": "Minor",
               "count": 15
-            },
-            {
-              "label": "미지정",
-              "count": 1
             }
           ],
           "priority": [
             {
               "label": "Medium",
-              "count": 19
+              "count": 18
             }
           ]
         },
         {
-          "version": "[Hanpass][앱개편][BO]",
+          "version": "[Hanpass][앱개편][BO] (완료)",
           "total": 48,
           "criticalMajor": 32,
           "doneRate": 100.0,
@@ -1880,11 +1912,15 @@
           "version": "[Hanpass][앱개편][Native]-LiveTest",
           "total": 179,
           "criticalMajor": 93,
-          "doneRate": 83.2,
+          "doneRate": 82.7,
           "status": [
             {
               "label": "등록",
               "count": 23
+            },
+            {
+              "label": "배정",
+              "count": 1
             },
             {
               "label": "진행중",
@@ -1892,7 +1928,7 @@
             },
             {
               "label": "종료",
-              "count": 149
+              "count": 148
             }
           ],
           "severity": [
@@ -1917,42 +1953,6 @@
             {
               "label": "Medium",
               "count": 179
-            }
-          ]
-        },
-        {
-          "version": "[Hanpass][앱개편][기획]",
-          "total": 29,
-          "criticalMajor": 5,
-          "doneRate": 3.4,
-          "status": [
-            {
-              "label": "등록",
-              "count": 27
-            },
-            {
-              "label": "진행중",
-              "count": 1
-            },
-            {
-              "label": "종료",
-              "count": 1
-            }
-          ],
-          "severity": [
-            {
-              "label": "Major",
-              "count": 5
-            },
-            {
-              "label": "Minor",
-              "count": 24
-            }
-          ],
-          "priority": [
-            {
-              "label": "Medium",
-              "count": 29
             }
           ]
         },
@@ -2219,6 +2219,7 @@
       ],
       "versionGroups": {
         "ALL": [
+          "6.0.0",
           "5.25.0 (완료)",
           "5.24.2 (완료)",
           "5.24.0 (완료)",
@@ -2248,10 +2249,9 @@
           "[G.H]추후 수정-백로그",
           "[Hanpass][EMVQR]",
           "[Hanpass][앱개편]-백로그",
-          "[Hanpass][앱개편][BO]",
+          "[Hanpass][앱개편][BO] (완료)",
           "[Hanpass][앱개편][Native]-Dev",
           "[Hanpass][앱개편][Native]-LiveTest",
-          "[Hanpass][앱개편][기획]",
           "[게이미피케이션][혜택]포인트_2배_이벤트 (완료)",
           "[교통카드]SDK변경 (완료)",
           "[카카오뱅크]해외송금",
@@ -2262,17 +2262,426 @@
           "Hanpass - Backlog"
         ],
         "RECENT": [
+          "6.0.0",
           "5.25.0 (완료)",
           "5.24.2 (완료)",
           "5.24.0 (완료)",
-          "5.23.2 (완료)",
-          "5.23.0 (완료)"
+          "5.23.2 (완료)"
         ],
         "BACKLOG": [
           "Hanpass - Backlog"
         ]
       },
       "projectProgress": [
+        {
+          "version": "6.0.0",
+          "total": 29,
+          "open": 28,
+          "devDone": 0,
+          "qaRegression": 0,
+          "backlogTransfer": 0,
+          "done": 1,
+          "scopeTotal": 29,
+          "doneRate": 3.4,
+          "latestSnapshot": "2026-10-15",
+          "severityRows": [
+            {
+              "severity": "Critical",
+              "open": 0,
+              "devDone": 0,
+              "qaRegression": 0,
+              "backlogTransfer": 0,
+              "done": 0,
+              "total": 0,
+              "rate": 0,
+              "previousRate": 0
+            },
+            {
+              "severity": "Major",
+              "open": 4,
+              "devDone": 0,
+              "qaRegression": 0,
+              "backlogTransfer": 0,
+              "done": 1,
+              "total": 5,
+              "rate": 20.0,
+              "previousRate": 20.0
+            },
+            {
+              "severity": "Minor",
+              "open": 24,
+              "devDone": 0,
+              "qaRegression": 0,
+              "backlogTransfer": 0,
+              "done": 0,
+              "total": 24,
+              "rate": 0.0,
+              "previousRate": 0.0
+            },
+            {
+              "severity": "합계",
+              "open": 28,
+              "devDone": 0,
+              "qaRegression": 0,
+              "backlogTransfer": 0,
+              "done": 1,
+              "total": 29,
+              "rate": 3.4,
+              "previousRate": 3.4
+            }
+          ],
+          "typeRows": [
+            {
+              "type": "UX/UI",
+              "total": 13,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 3
+                },
+                {
+                  "label": "Minor",
+                  "count": 10
+                }
+              ]
+            },
+            {
+              "type": "텍스트",
+              "total": 6,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 6
+                }
+              ]
+            },
+            {
+              "type": "기능",
+              "total": 5,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 1
+                },
+                {
+                  "label": "Minor",
+                  "count": 4
+                }
+              ]
+            },
+            {
+              "type": "기획-구현 불일치",
+              "total": 4,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 1
+                },
+                {
+                  "label": "Minor",
+                  "count": 3
+                }
+              ]
+            },
+            {
+              "type": "미지정",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 1
+                }
+              ]
+            }
+          ],
+          "daily": [
+            {
+              "date": "2026-08-21",
+              "registered": 1,
+              "fixed": 0
+            },
+            {
+              "date": "2026-08-22",
+              "registered": 2,
+              "fixed": 0
+            },
+            {
+              "date": "2026-08-23",
+              "registered": 15,
+              "fixed": 0
+            },
+            {
+              "date": "2026-08-24",
+              "registered": 22,
+              "fixed": 0
+            },
+            {
+              "date": "2026-08-25",
+              "registered": 23,
+              "fixed": 0
+            },
+            {
+              "date": "2026-08-26",
+              "registered": 25,
+              "fixed": 0
+            },
+            {
+              "date": "2026-08-27",
+              "registered": 27,
+              "fixed": 0
+            },
+            {
+              "date": "2026-08-28",
+              "registered": 27,
+              "fixed": 0
+            },
+            {
+              "date": "2026-08-29",
+              "registered": 27,
+              "fixed": 0
+            },
+            {
+              "date": "2026-08-30",
+              "registered": 27,
+              "fixed": 0
+            },
+            {
+              "date": "2026-08-31",
+              "registered": 27,
+              "fixed": 0
+            },
+            {
+              "date": "2026-09-01",
+              "registered": 27,
+              "fixed": 0
+            },
+            {
+              "date": "2026-09-02",
+              "registered": 27,
+              "fixed": 0
+            },
+            {
+              "date": "2026-09-03",
+              "registered": 27,
+              "fixed": 0
+            },
+            {
+              "date": "2026-09-04",
+              "registered": 27,
+              "fixed": 0
+            },
+            {
+              "date": "2026-09-05",
+              "registered": 27,
+              "fixed": 0
+            },
+            {
+              "date": "2026-09-06",
+              "registered": 27,
+              "fixed": 0
+            },
+            {
+              "date": "2026-09-07",
+              "registered": 27,
+              "fixed": 0
+            },
+            {
+              "date": "2026-09-08",
+              "registered": 27,
+              "fixed": 0
+            },
+            {
+              "date": "2026-09-09",
+              "registered": 27,
+              "fixed": 0
+            },
+            {
+              "date": "2026-09-10",
+              "registered": 27,
+              "fixed": 0
+            },
+            {
+              "date": "2026-09-11",
+              "registered": 27,
+              "fixed": 0
+            },
+            {
+              "date": "2026-09-12",
+              "registered": 27,
+              "fixed": 0
+            },
+            {
+              "date": "2026-09-13",
+              "registered": 27,
+              "fixed": 0
+            },
+            {
+              "date": "2026-09-14",
+              "registered": 29,
+              "fixed": 0
+            },
+            {
+              "date": "2026-09-15",
+              "registered": 29,
+              "fixed": 0
+            },
+            {
+              "date": "2026-09-16",
+              "registered": 29,
+              "fixed": 0
+            },
+            {
+              "date": "2026-09-17",
+              "registered": 29,
+              "fixed": 0
+            },
+            {
+              "date": "2026-09-18",
+              "registered": 29,
+              "fixed": 0
+            },
+            {
+              "date": "2026-09-19",
+              "registered": 29,
+              "fixed": 0
+            },
+            {
+              "date": "2026-09-20",
+              "registered": 29,
+              "fixed": 0
+            },
+            {
+              "date": "2026-09-21",
+              "registered": 29,
+              "fixed": 0
+            },
+            {
+              "date": "2026-09-22",
+              "registered": 29,
+              "fixed": 0
+            },
+            {
+              "date": "2026-09-23",
+              "registered": 29,
+              "fixed": 0
+            },
+            {
+              "date": "2026-09-24",
+              "registered": 29,
+              "fixed": 0
+            },
+            {
+              "date": "2026-09-25",
+              "registered": 29,
+              "fixed": 0
+            },
+            {
+              "date": "2026-09-26",
+              "registered": 29,
+              "fixed": 0
+            },
+            {
+              "date": "2026-09-27",
+              "registered": 29,
+              "fixed": 0
+            },
+            {
+              "date": "2026-09-28",
+              "registered": 29,
+              "fixed": 0
+            },
+            {
+              "date": "2026-09-29",
+              "registered": 29,
+              "fixed": 0
+            },
+            {
+              "date": "2026-09-30",
+              "registered": 29,
+              "fixed": 0
+            },
+            {
+              "date": "2026-10-01",
+              "registered": 29,
+              "fixed": 0
+            },
+            {
+              "date": "2026-10-02",
+              "registered": 29,
+              "fixed": 0
+            },
+            {
+              "date": "2026-10-03",
+              "registered": 29,
+              "fixed": 0
+            },
+            {
+              "date": "2026-10-04",
+              "registered": 29,
+              "fixed": 0
+            },
+            {
+              "date": "2026-10-05",
+              "registered": 29,
+              "fixed": 0
+            },
+            {
+              "date": "2026-10-06",
+              "registered": 29,
+              "fixed": 0
+            },
+            {
+              "date": "2026-10-07",
+              "registered": 29,
+              "fixed": 0
+            },
+            {
+              "date": "2026-10-08",
+              "registered": 29,
+              "fixed": 0
+            },
+            {
+              "date": "2026-10-09",
+              "registered": 29,
+              "fixed": 0
+            },
+            {
+              "date": "2026-10-10",
+              "registered": 29,
+              "fixed": 0
+            },
+            {
+              "date": "2026-10-11",
+              "registered": 29,
+              "fixed": 0
+            },
+            {
+              "date": "2026-10-12",
+              "registered": 29,
+              "fixed": 0
+            },
+            {
+              "date": "2026-10-13",
+              "registered": 29,
+              "fixed": 0
+            },
+            {
+              "date": "2026-10-14",
+              "registered": 29,
+              "fixed": 0
+            },
+            {
+              "date": "2026-10-15",
+              "registered": 29,
+              "fixed": 1
+            },
+            {
+              "date": "2026-10-16",
+              "registered": 29,
+              "fixed": 1
+            }
+          ]
+        },
         {
           "version": "5.25.0 (완료)",
           "total": 11,
@@ -2774,6 +3183,11 @@
               "date": "2026-10-15",
               "registered": 11,
               "fixed": 1
+            },
+            {
+              "date": "2026-10-16",
+              "registered": 11,
+              "fixed": 1
             }
           ]
         },
@@ -3124,6 +3538,11 @@
             },
             {
               "date": "2026-10-15",
+              "registered": 7,
+              "fixed": 2
+            },
+            {
+              "date": "2026-10-16",
               "registered": 7,
               "fixed": 2
             }
@@ -3690,6 +4109,11 @@
               "date": "2026-10-15",
               "registered": 20,
               "fixed": 20
+            },
+            {
+              "date": "2026-10-16",
+              "registered": 20,
+              "fixed": 20
             }
           ]
         },
@@ -4200,6 +4624,11 @@
             },
             {
               "date": "2026-10-15",
+              "registered": 3,
+              "fixed": 3
+            },
+            {
+              "date": "2026-10-16",
               "registered": 3,
               "fixed": 3
             }
@@ -4912,6 +5341,11 @@
             },
             {
               "date": "2026-10-15",
+              "registered": 26,
+              "fixed": 26
+            },
+            {
+              "date": "2026-10-16",
               "registered": 26,
               "fixed": 26
             }
@@ -5730,6 +6164,11 @@
             },
             {
               "date": "2026-10-15",
+              "registered": 34,
+              "fixed": 34
+            },
+            {
+              "date": "2026-10-16",
               "registered": 34,
               "fixed": 34
             }
@@ -6651,6 +7090,11 @@
             },
             {
               "date": "2026-10-15",
+              "registered": 9,
+              "fixed": 9
+            },
+            {
+              "date": "2026-10-16",
               "registered": 9,
               "fixed": 9
             }
@@ -7685,6 +8129,11 @@
             },
             {
               "date": "2026-10-15",
+              "registered": 117,
+              "fixed": 117
+            },
+            {
+              "date": "2026-10-16",
               "registered": 117,
               "fixed": 117
             }
@@ -8789,6 +9238,11 @@
             },
             {
               "date": "2026-10-15",
+              "registered": 82,
+              "fixed": 82
+            },
+            {
+              "date": "2026-10-16",
               "registered": 82,
               "fixed": 82
             }
@@ -10190,6 +10644,11 @@
             },
             {
               "date": "2026-10-15",
+              "registered": 24,
+              "fixed": 24
+            },
+            {
+              "date": "2026-10-16",
               "registered": 24,
               "fixed": 24
             }
@@ -11769,6 +12228,11 @@
             },
             {
               "date": "2026-10-15",
+              "registered": 103,
+              "fixed": 99
+            },
+            {
+              "date": "2026-10-16",
               "registered": 103,
               "fixed": 99
             }
@@ -13439,6 +13903,11 @@
             },
             {
               "date": "2026-10-15",
+              "registered": 68,
+              "fixed": 67
+            },
+            {
+              "date": "2026-10-16",
               "registered": 68,
               "fixed": 67
             }
@@ -15125,6 +15594,11 @@
             },
             {
               "date": "2026-10-15",
+              "registered": 4,
+              "fixed": 3
+            },
+            {
+              "date": "2026-10-16",
               "registered": 4,
               "fixed": 3
             }
@@ -17002,6 +17476,11 @@
               "date": "2026-10-15",
               "registered": 35,
               "fixed": 34
+            },
+            {
+              "date": "2026-10-16",
+              "registered": 35,
+              "fixed": 34
             }
           ]
         },
@@ -18837,6 +19316,11 @@
             },
             {
               "date": "2026-10-15",
+              "registered": 4,
+              "fixed": 4
+            },
+            {
+              "date": "2026-10-16",
               "registered": 4,
               "fixed": 4
             }
@@ -20954,6 +21438,11 @@
             },
             {
               "date": "2026-10-15",
+              "registered": 3,
+              "fixed": 3
+            },
+            {
+              "date": "2026-10-16",
               "registered": 3,
               "fixed": 3
             }
@@ -23211,6 +23700,11 @@
             },
             {
               "date": "2026-10-15",
+              "registered": 27,
+              "fixed": 23
+            },
+            {
+              "date": "2026-10-16",
               "registered": 27,
               "fixed": 23
             }
@@ -25645,6 +26139,11 @@
               "date": "2026-10-15",
               "registered": 33,
               "fixed": 30
+            },
+            {
+              "date": "2026-10-16",
+              "registered": 33,
+              "fixed": 30
             }
           ]
         },
@@ -26566,6 +27065,11 @@
               "date": "2026-10-15",
               "registered": 20,
               "fixed": 1
+            },
+            {
+              "date": "2026-10-16",
+              "registered": 20,
+              "fixed": 1
             }
           ]
         },
@@ -27245,6 +27749,11 @@
             },
             {
               "date": "2026-10-15",
+              "registered": 15,
+              "fixed": 15
+            },
+            {
+              "date": "2026-10-16",
               "registered": 15,
               "fixed": 15
             }
@@ -28189,6 +28698,11 @@
               "date": "2026-10-15",
               "registered": 55,
               "fixed": 54
+            },
+            {
+              "date": "2026-10-16",
+              "registered": 55,
+              "fixed": 54
             }
           ]
         },
@@ -28754,6 +29268,11 @@
             },
             {
               "date": "2026-10-15",
+              "registered": 5,
+              "fixed": 5
+            },
+            {
+              "date": "2026-10-16",
               "registered": 5,
               "fixed": 5
             }
@@ -29707,6 +30226,11 @@
               "date": "2026-10-15",
               "registered": 101,
               "fixed": 101
+            },
+            {
+              "date": "2026-10-16",
+              "registered": 101,
+              "fixed": 101
             }
           ]
         },
@@ -29899,6 +30423,11 @@
               "date": "2026-10-15",
               "registered": 37,
               "fixed": 30
+            },
+            {
+              "date": "2026-10-16",
+              "registered": 37,
+              "fixed": 30
             }
           ]
         },
@@ -29934,7 +30463,7 @@
               "done": 55,
               "total": 127,
               "rate": 96.9,
-              "previousRate": 92.1
+              "previousRate": 96.9
             },
             {
               "severity": "Minor",
@@ -29956,7 +30485,7 @@
               "done": 66,
               "total": 172,
               "rate": 96.5,
-              "previousRate": 93.0
+              "previousRate": 96.5
             }
           ],
           "typeRows": [
@@ -30223,6 +30752,11 @@
               "date": "2026-10-15",
               "registered": 172,
               "fixed": 166
+            },
+            {
+              "date": "2026-10-16",
+              "registered": 172,
+              "fixed": 166
             }
           ]
         },
@@ -30456,6 +30990,11 @@
             },
             {
               "date": "2026-10-15",
+              "registered": 34,
+              "fixed": 34
+            },
+            {
+              "date": "2026-10-16",
               "registered": 34,
               "fixed": 34
             }
@@ -31349,6 +31888,11 @@
               "date": "2026-10-15",
               "registered": 7,
               "fixed": 7
+            },
+            {
+              "date": "2026-10-16",
+              "registered": 7,
+              "fixed": 7
             }
           ]
         },
@@ -31362,7 +31906,7 @@
           "done": 3,
           "scopeTotal": 17,
           "doneRate": 47.1,
-          "latestSnapshot": "2026-10-15",
+          "latestSnapshot": "2026-10-16",
           "severityRows": [
             {
               "severity": "Critical",
@@ -31373,7 +31917,7 @@
               "done": 2,
               "total": 3,
               "rate": 66.7,
-              "previousRate": 0.0
+              "previousRate": 66.7
             },
             {
               "severity": "Major",
@@ -31384,7 +31928,7 @@
               "done": 1,
               "total": 9,
               "rate": 33.3,
-              "previousRate": 16.7
+              "previousRate": 33.3
             },
             {
               "severity": "Minor",
@@ -31395,7 +31939,7 @@
               "done": 0,
               "total": 5,
               "rate": 60.0,
-              "previousRate": 0.0
+              "previousRate": 60.0
             },
             {
               "severity": "합계",
@@ -31406,7 +31950,7 @@
               "done": 3,
               "total": 17,
               "rate": 47.1,
-              "previousRate": 7.7
+              "previousRate": 47.1
             }
           ],
           "typeRows": [
@@ -31479,20 +32023,25 @@
               "date": "2026-10-15",
               "registered": 17,
               "fixed": 8
+            },
+            {
+              "date": "2026-10-16",
+              "registered": 17,
+              "fixed": 8
             }
           ]
         },
         {
           "version": "[Hanpass][앱개편]-백로그",
-          "total": 19,
-          "open": 19,
+          "total": 18,
+          "open": 18,
           "devDone": 0,
           "qaRegression": 0,
           "backlogTransfer": 0,
           "done": 0,
-          "scopeTotal": 19,
+          "scopeTotal": 18,
           "doneRate": 0.0,
-          "latestSnapshot": "2026-10-14",
+          "latestSnapshot": "2026-10-13",
           "severityRows": [
             {
               "severity": "Critical",
@@ -31529,12 +32078,12 @@
             },
             {
               "severity": "합계",
-              "open": 19,
+              "open": 18,
               "devDone": 0,
               "qaRegression": 0,
               "backlogTransfer": 0,
               "done": 0,
-              "total": 19,
+              "total": 18,
               "rate": 0.0,
               "previousRate": 0.0
             }
@@ -31598,16 +32147,6 @@
               "severity": [
                 {
                   "label": "Minor",
-                  "count": 1
-                }
-              ]
-            },
-            {
-              "type": "미지정",
-              "total": 1,
-              "severity": [
-                {
-                  "label": "미지정",
                   "count": 1
                 }
               ]
@@ -31886,23 +32425,28 @@
             },
             {
               "date": "2026-10-13",
-              "registered": 19,
+              "registered": 18,
               "fixed": 0
             },
             {
               "date": "2026-10-14",
-              "registered": 19,
+              "registered": 18,
               "fixed": 0
             },
             {
               "date": "2026-10-15",
-              "registered": 19,
+              "registered": 18,
+              "fixed": 0
+            },
+            {
+              "date": "2026-10-16",
+              "registered": 18,
               "fixed": 0
             }
           ]
         },
         {
-          "version": "[Hanpass][앱개편][BO]",
+          "version": "[Hanpass][앱개편][BO] (완료)",
           "total": 48,
           "open": 0,
           "devDone": 0,
@@ -31911,7 +32455,7 @@
           "done": 48,
           "scopeTotal": 48,
           "doneRate": 100.0,
-          "latestSnapshot": "2026-10-12",
+          "latestSnapshot": "2026-10-15",
           "severityRows": [
             {
               "severity": "Critical",
@@ -32071,260 +32615,265 @@
             {
               "date": "2026-08-25",
               "registered": 38,
-              "fixed": 1
+              "fixed": 0
             },
             {
               "date": "2026-08-26",
               "registered": 39,
-              "fixed": 1
+              "fixed": 0
             },
             {
               "date": "2026-08-27",
               "registered": 39,
-              "fixed": 1
+              "fixed": 0
             },
             {
               "date": "2026-08-28",
               "registered": 39,
-              "fixed": 1
+              "fixed": 0
             },
             {
               "date": "2026-08-29",
               "registered": 39,
-              "fixed": 1
+              "fixed": 0
             },
             {
               "date": "2026-08-30",
               "registered": 39,
-              "fixed": 1
+              "fixed": 0
             },
             {
               "date": "2026-08-31",
               "registered": 39,
-              "fixed": 1
+              "fixed": 0
             },
             {
               "date": "2026-09-01",
               "registered": 39,
-              "fixed": 17
+              "fixed": 0
             },
             {
               "date": "2026-09-02",
               "registered": 41,
-              "fixed": 35
+              "fixed": 0
             },
             {
               "date": "2026-09-03",
               "registered": 41,
-              "fixed": 35
+              "fixed": 0
             },
             {
               "date": "2026-09-04",
               "registered": 48,
-              "fixed": 36
+              "fixed": 0
             },
             {
               "date": "2026-09-05",
               "registered": 48,
-              "fixed": 36
+              "fixed": 0
             },
             {
               "date": "2026-09-06",
               "registered": 48,
-              "fixed": 36
+              "fixed": 0
             },
             {
               "date": "2026-09-07",
               "registered": 48,
-              "fixed": 38
+              "fixed": 0
             },
             {
               "date": "2026-09-08",
               "registered": 48,
-              "fixed": 41
+              "fixed": 0
             },
             {
               "date": "2026-09-09",
               "registered": 48,
-              "fixed": 41
+              "fixed": 0
             },
             {
               "date": "2026-09-10",
               "registered": 48,
-              "fixed": 42
+              "fixed": 0
             },
             {
               "date": "2026-09-11",
               "registered": 48,
-              "fixed": 42
+              "fixed": 0
             },
             {
               "date": "2026-09-12",
               "registered": 48,
-              "fixed": 42
+              "fixed": 0
             },
             {
               "date": "2026-09-13",
               "registered": 48,
-              "fixed": 42
+              "fixed": 0
             },
             {
               "date": "2026-09-14",
               "registered": 48,
-              "fixed": 42
+              "fixed": 0
             },
             {
               "date": "2026-09-15",
               "registered": 48,
-              "fixed": 42
+              "fixed": 0
             },
             {
               "date": "2026-09-16",
               "registered": 48,
-              "fixed": 42
+              "fixed": 0
             },
             {
               "date": "2026-09-17",
               "registered": 48,
-              "fixed": 42
+              "fixed": 0
             },
             {
               "date": "2026-09-18",
               "registered": 48,
-              "fixed": 42
+              "fixed": 0
             },
             {
               "date": "2026-09-19",
               "registered": 48,
-              "fixed": 42
+              "fixed": 0
             },
             {
               "date": "2026-09-20",
               "registered": 48,
-              "fixed": 42
+              "fixed": 0
             },
             {
               "date": "2026-09-21",
               "registered": 48,
-              "fixed": 42
+              "fixed": 0
             },
             {
               "date": "2026-09-22",
               "registered": 48,
-              "fixed": 42
+              "fixed": 0
             },
             {
               "date": "2026-09-23",
               "registered": 48,
-              "fixed": 45
+              "fixed": 0
             },
             {
               "date": "2026-09-24",
               "registered": 48,
-              "fixed": 45
+              "fixed": 0
             },
             {
               "date": "2026-09-25",
               "registered": 48,
-              "fixed": 45
+              "fixed": 0
             },
             {
               "date": "2026-09-26",
               "registered": 48,
-              "fixed": 45
+              "fixed": 0
             },
             {
               "date": "2026-09-27",
               "registered": 48,
-              "fixed": 45
+              "fixed": 0
             },
             {
               "date": "2026-09-28",
               "registered": 48,
-              "fixed": 45
+              "fixed": 0
             },
             {
               "date": "2026-09-29",
               "registered": 48,
-              "fixed": 45
+              "fixed": 0
             },
             {
               "date": "2026-09-30",
               "registered": 48,
-              "fixed": 47
+              "fixed": 0
             },
             {
               "date": "2026-10-01",
               "registered": 48,
-              "fixed": 47
+              "fixed": 0
             },
             {
               "date": "2026-10-02",
               "registered": 48,
-              "fixed": 47
+              "fixed": 0
             },
             {
               "date": "2026-10-03",
               "registered": 48,
-              "fixed": 47
+              "fixed": 0
             },
             {
               "date": "2026-10-04",
               "registered": 48,
-              "fixed": 47
+              "fixed": 0
             },
             {
               "date": "2026-10-05",
               "registered": 48,
-              "fixed": 47
+              "fixed": 0
             },
             {
               "date": "2026-10-06",
               "registered": 48,
-              "fixed": 47
+              "fixed": 0
             },
             {
               "date": "2026-10-07",
               "registered": 48,
-              "fixed": 47
+              "fixed": 0
             },
             {
               "date": "2026-10-08",
               "registered": 48,
-              "fixed": 47
+              "fixed": 0
             },
             {
               "date": "2026-10-09",
               "registered": 48,
-              "fixed": 47
+              "fixed": 0
             },
             {
               "date": "2026-10-10",
               "registered": 48,
-              "fixed": 47
+              "fixed": 0
             },
             {
               "date": "2026-10-11",
               "registered": 48,
-              "fixed": 47
+              "fixed": 0
             },
             {
               "date": "2026-10-12",
               "registered": 48,
-              "fixed": 48
+              "fixed": 0
             },
             {
               "date": "2026-10-13",
               "registered": 48,
-              "fixed": 48
+              "fixed": 0
             },
             {
               "date": "2026-10-14",
               "registered": 48,
-              "fixed": 48
+              "fixed": 0
             },
             {
               "date": "2026-10-15",
+              "registered": 48,
+              "fixed": 48
+            },
+            {
+              "date": "2026-10-16",
               "registered": 48,
               "fixed": 48
             }
@@ -32351,7 +32900,7 @@
               "done": 9,
               "total": 9,
               "rate": 100.0,
-              "previousRate": 22.2
+              "previousRate": 100.0
             },
             {
               "severity": "Major",
@@ -32384,7 +32933,7 @@
               "done": 312,
               "total": 313,
               "rate": 99.7,
-              "previousRate": 97.4
+              "previousRate": 99.7
             }
           ],
           "typeRows": [
@@ -32802,19 +33351,24 @@
               "date": "2026-10-15",
               "registered": 313,
               "fixed": 312
+            },
+            {
+              "date": "2026-10-16",
+              "registered": 313,
+              "fixed": 312
             }
           ]
         },
         {
           "version": "[Hanpass][앱개편][Native]-LiveTest",
           "total": 179,
-          "open": 30,
-          "devDone": 9,
+          "open": 31,
+          "devDone": 8,
           "qaRegression": 0,
           "backlogTransfer": 0,
           "done": 140,
           "scopeTotal": 179,
-          "doneRate": 83.2,
+          "doneRate": 82.7,
           "latestSnapshot": "2026-10-15",
           "severityRows": [
             {
@@ -32826,7 +33380,7 @@
               "done": 13,
               "total": 17,
               "rate": 88.2,
-              "previousRate": 41.2
+              "previousRate": 88.2
             },
             {
               "severity": "Major",
@@ -32837,29 +33391,29 @@
               "done": 59,
               "total": 76,
               "rate": 82.9,
-              "previousRate": 78.7
+              "previousRate": 82.9
             },
             {
               "severity": "Minor",
-              "open": 13,
-              "devDone": 3,
+              "open": 14,
+              "devDone": 2,
               "qaRegression": 0,
               "backlogTransfer": 0,
               "done": 67,
               "total": 83,
-              "rate": 84.3,
-              "previousRate": 79.0
+              "rate": 83.1,
+              "previousRate": 83.1
             },
             {
               "severity": "합계",
-              "open": 30,
-              "devDone": 9,
+              "open": 31,
+              "devDone": 8,
               "qaRegression": 0,
               "backlogTransfer": 0,
               "done": 140,
               "total": 179,
-              "rate": 83.2,
-              "previousRate": 75.3
+              "rate": 82.7,
+              "previousRate": 82.7
             }
           ],
           "typeRows": [
@@ -32915,7 +33469,7 @@
             },
             {
               "type": "텍스트",
-              "total": 19,
+              "total": 18,
               "severity": [
                 {
                   "label": "Major",
@@ -32923,7 +33477,21 @@
                 },
                 {
                   "label": "Minor",
-                  "count": 17
+                  "count": 16
+                }
+              ]
+            },
+            {
+              "type": "기획서 수정",
+              "total": 7,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 1
+                },
+                {
+                  "label": "Minor",
+                  "count": 6
                 }
               ]
             },
@@ -32934,20 +33502,6 @@
                 {
                   "label": "Major",
                   "count": 2
-                },
-                {
-                  "label": "Minor",
-                  "count": 5
-                }
-              ]
-            },
-            {
-              "type": "기획서 수정",
-              "total": 6,
-              "severity": [
-                {
-                  "label": "Major",
-                  "count": 1
                 },
                 {
                   "label": "Minor",
@@ -33249,421 +33803,22 @@
             {
               "date": "2026-10-13",
               "registered": 172,
-              "fixed": 123
+              "fixed": 122
             },
             {
               "date": "2026-10-14",
               "registered": 174,
-              "fixed": 131
+              "fixed": 130
             },
             {
               "date": "2026-10-15",
               "registered": 179,
-              "fixed": 149
-            }
-          ]
-        },
-        {
-          "version": "[Hanpass][앱개편][기획]",
-          "total": 29,
-          "open": 28,
-          "devDone": 0,
-          "qaRegression": 0,
-          "backlogTransfer": 0,
-          "done": 1,
-          "scopeTotal": 29,
-          "doneRate": 3.4,
-          "latestSnapshot": "2026-09-30",
-          "severityRows": [
-            {
-              "severity": "Critical",
-              "open": 0,
-              "devDone": 0,
-              "qaRegression": 0,
-              "backlogTransfer": 0,
-              "done": 0,
-              "total": 0,
-              "rate": 0,
-              "previousRate": 0
+              "fixed": 148
             },
             {
-              "severity": "Major",
-              "open": 4,
-              "devDone": 0,
-              "qaRegression": 0,
-              "backlogTransfer": 0,
-              "done": 1,
-              "total": 5,
-              "rate": 20.0,
-              "previousRate": 20.0
-            },
-            {
-              "severity": "Minor",
-              "open": 24,
-              "devDone": 0,
-              "qaRegression": 0,
-              "backlogTransfer": 0,
-              "done": 0,
-              "total": 24,
-              "rate": 0.0,
-              "previousRate": 0.0
-            },
-            {
-              "severity": "합계",
-              "open": 28,
-              "devDone": 0,
-              "qaRegression": 0,
-              "backlogTransfer": 0,
-              "done": 1,
-              "total": 29,
-              "rate": 3.4,
-              "previousRate": 3.4
-            }
-          ],
-          "typeRows": [
-            {
-              "type": "UX/UI",
-              "total": 13,
-              "severity": [
-                {
-                  "label": "Major",
-                  "count": 3
-                },
-                {
-                  "label": "Minor",
-                  "count": 10
-                }
-              ]
-            },
-            {
-              "type": "텍스트",
-              "total": 6,
-              "severity": [
-                {
-                  "label": "Minor",
-                  "count": 6
-                }
-              ]
-            },
-            {
-              "type": "기능",
-              "total": 5,
-              "severity": [
-                {
-                  "label": "Major",
-                  "count": 1
-                },
-                {
-                  "label": "Minor",
-                  "count": 4
-                }
-              ]
-            },
-            {
-              "type": "기획-구현 불일치",
-              "total": 4,
-              "severity": [
-                {
-                  "label": "Major",
-                  "count": 1
-                },
-                {
-                  "label": "Minor",
-                  "count": 3
-                }
-              ]
-            },
-            {
-              "type": "미지정",
-              "total": 1,
-              "severity": [
-                {
-                  "label": "Minor",
-                  "count": 1
-                }
-              ]
-            }
-          ],
-          "daily": [
-            {
-              "date": "2026-08-21",
-              "registered": 1,
-              "fixed": 0
-            },
-            {
-              "date": "2026-08-22",
-              "registered": 2,
-              "fixed": 0
-            },
-            {
-              "date": "2026-08-23",
-              "registered": 15,
-              "fixed": 0
-            },
-            {
-              "date": "2026-08-24",
-              "registered": 22,
-              "fixed": 0
-            },
-            {
-              "date": "2026-08-25",
-              "registered": 23,
-              "fixed": 0
-            },
-            {
-              "date": "2026-08-26",
-              "registered": 25,
-              "fixed": 0
-            },
-            {
-              "date": "2026-08-27",
-              "registered": 27,
-              "fixed": 0
-            },
-            {
-              "date": "2026-08-28",
-              "registered": 27,
-              "fixed": 0
-            },
-            {
-              "date": "2026-08-29",
-              "registered": 27,
-              "fixed": 0
-            },
-            {
-              "date": "2026-08-30",
-              "registered": 27,
-              "fixed": 0
-            },
-            {
-              "date": "2026-08-31",
-              "registered": 27,
-              "fixed": 0
-            },
-            {
-              "date": "2026-09-01",
-              "registered": 27,
-              "fixed": 0
-            },
-            {
-              "date": "2026-09-02",
-              "registered": 27,
-              "fixed": 0
-            },
-            {
-              "date": "2026-09-03",
-              "registered": 27,
-              "fixed": 0
-            },
-            {
-              "date": "2026-09-04",
-              "registered": 27,
-              "fixed": 0
-            },
-            {
-              "date": "2026-09-05",
-              "registered": 27,
-              "fixed": 0
-            },
-            {
-              "date": "2026-09-06",
-              "registered": 27,
-              "fixed": 0
-            },
-            {
-              "date": "2026-09-07",
-              "registered": 27,
-              "fixed": 0
-            },
-            {
-              "date": "2026-09-08",
-              "registered": 27,
-              "fixed": 0
-            },
-            {
-              "date": "2026-09-09",
-              "registered": 27,
-              "fixed": 0
-            },
-            {
-              "date": "2026-09-10",
-              "registered": 27,
-              "fixed": 0
-            },
-            {
-              "date": "2026-09-11",
-              "registered": 27,
-              "fixed": 0
-            },
-            {
-              "date": "2026-09-12",
-              "registered": 27,
-              "fixed": 0
-            },
-            {
-              "date": "2026-09-13",
-              "registered": 27,
-              "fixed": 0
-            },
-            {
-              "date": "2026-09-14",
-              "registered": 29,
-              "fixed": 0
-            },
-            {
-              "date": "2026-09-15",
-              "registered": 29,
-              "fixed": 0
-            },
-            {
-              "date": "2026-09-16",
-              "registered": 29,
-              "fixed": 0
-            },
-            {
-              "date": "2026-09-17",
-              "registered": 29,
-              "fixed": 0
-            },
-            {
-              "date": "2026-09-18",
-              "registered": 29,
-              "fixed": 0
-            },
-            {
-              "date": "2026-09-19",
-              "registered": 29,
-              "fixed": 0
-            },
-            {
-              "date": "2026-09-20",
-              "registered": 29,
-              "fixed": 0
-            },
-            {
-              "date": "2026-09-21",
-              "registered": 29,
-              "fixed": 0
-            },
-            {
-              "date": "2026-09-22",
-              "registered": 29,
-              "fixed": 0
-            },
-            {
-              "date": "2026-09-23",
-              "registered": 29,
-              "fixed": 0
-            },
-            {
-              "date": "2026-09-24",
-              "registered": 29,
-              "fixed": 0
-            },
-            {
-              "date": "2026-09-25",
-              "registered": 29,
-              "fixed": 0
-            },
-            {
-              "date": "2026-09-26",
-              "registered": 29,
-              "fixed": 0
-            },
-            {
-              "date": "2026-09-27",
-              "registered": 29,
-              "fixed": 0
-            },
-            {
-              "date": "2026-09-28",
-              "registered": 29,
-              "fixed": 0
-            },
-            {
-              "date": "2026-09-29",
-              "registered": 29,
-              "fixed": 0
-            },
-            {
-              "date": "2026-09-30",
-              "registered": 29,
-              "fixed": 1
-            },
-            {
-              "date": "2026-10-01",
-              "registered": 29,
-              "fixed": 1
-            },
-            {
-              "date": "2026-10-02",
-              "registered": 29,
-              "fixed": 1
-            },
-            {
-              "date": "2026-10-03",
-              "registered": 29,
-              "fixed": 1
-            },
-            {
-              "date": "2026-10-04",
-              "registered": 29,
-              "fixed": 1
-            },
-            {
-              "date": "2026-10-05",
-              "registered": 29,
-              "fixed": 1
-            },
-            {
-              "date": "2026-10-06",
-              "registered": 29,
-              "fixed": 1
-            },
-            {
-              "date": "2026-10-07",
-              "registered": 29,
-              "fixed": 1
-            },
-            {
-              "date": "2026-10-08",
-              "registered": 29,
-              "fixed": 1
-            },
-            {
-              "date": "2026-10-09",
-              "registered": 29,
-              "fixed": 1
-            },
-            {
-              "date": "2026-10-10",
-              "registered": 29,
-              "fixed": 1
-            },
-            {
-              "date": "2026-10-11",
-              "registered": 29,
-              "fixed": 1
-            },
-            {
-              "date": "2026-10-12",
-              "registered": 29,
-              "fixed": 1
-            },
-            {
-              "date": "2026-10-13",
-              "registered": 29,
-              "fixed": 1
-            },
-            {
-              "date": "2026-10-14",
-              "registered": 29,
-              "fixed": 1
-            },
-            {
-              "date": "2026-10-15",
-              "registered": 29,
-              "fixed": 1
+              "date": "2026-10-16",
+              "registered": 179,
+              "fixed": 148
             }
           ]
         },
@@ -34078,6 +34233,11 @@
             },
             {
               "date": "2026-10-15",
+              "registered": 11,
+              "fixed": 11
+            },
+            {
+              "date": "2026-10-16",
               "registered": 11,
               "fixed": 11
             }
@@ -34676,6 +34836,11 @@
               "date": "2026-10-15",
               "registered": 7,
               "fixed": 4
+            },
+            {
+              "date": "2026-10-16",
+              "registered": 7,
+              "fixed": 4
             }
           ]
         },
@@ -35193,6 +35358,11 @@
               "date": "2026-10-15",
               "registered": 121,
               "fixed": 120
+            },
+            {
+              "date": "2026-10-16",
+              "registered": 121,
+              "fixed": 120
             }
           ]
         },
@@ -35580,6 +35750,11 @@
               "date": "2026-10-15",
               "registered": 131,
               "fixed": 130
+            },
+            {
+              "date": "2026-10-16",
+              "registered": 131,
+              "fixed": 130
             }
           ]
         },
@@ -35875,6 +36050,11 @@
             },
             {
               "date": "2026-10-15",
+              "registered": 1,
+              "fixed": 1
+            },
+            {
+              "date": "2026-10-16",
               "registered": 1,
               "fixed": 1
             }
@@ -37692,6 +37872,11 @@
             },
             {
               "date": "2026-10-15",
+              "registered": 3,
+              "fixed": 3
+            },
+            {
+              "date": "2026-10-16",
               "registered": 3,
               "fixed": 3
             }
@@ -40126,6 +40311,11 @@
               "date": "2026-10-15",
               "registered": 8,
               "fixed": 8
+            },
+            {
+              "date": "2026-10-16",
+              "registered": 8,
+              "fixed": 8
             }
           ]
         },
@@ -40963,6 +41153,11 @@
               "date": "2026-10-15",
               "registered": 13,
               "fixed": 10
+            },
+            {
+              "date": "2026-10-16",
+              "registered": 13,
+              "fixed": 10
             }
           ]
         }
@@ -40974,7 +41169,11 @@
           "status": [
             {
               "label": "등록",
-              "count": 224
+              "count": 223
+            },
+            {
+              "label": "배정",
+              "count": 1
             },
             {
               "label": "진행중",
@@ -40986,7 +41185,7 @@
             },
             {
               "label": "종료",
-              "count": 1445
+              "count": 1444
             }
           ],
           "severity": [
@@ -41004,7 +41203,7 @@
             },
             {
               "label": "미지정",
-              "count": 75
+              "count": 74
             },
             {
               "label": "개선 의견",
@@ -41018,7 +41217,7 @@
             },
             {
               "label": "Medium",
-              "count": 1910
+              "count": 1909
             },
             {
               "label": "Low",
@@ -41037,18 +41236,11 @@
       },
       "heatmap": [
         {
-          "date": "2026-09-16",
-          "new": 9,
-          "fixed": 9,
-          "closed": 9,
-          "deltaNew": 9
-        },
-        {
           "date": "2026-09-17",
           "new": 1,
           "fixed": 1,
           "closed": 1,
-          "deltaNew": -8
+          "deltaNew": 1
         },
         {
           "date": "2026-09-18",
@@ -41088,8 +41280,8 @@
         {
           "date": "2026-09-23",
           "new": 33,
-          "fixed": 76,
-          "closed": 54,
+          "fixed": 73,
+          "closed": 51,
           "deltaNew": 13
         },
         {
@@ -41137,8 +41329,8 @@
         {
           "date": "2026-09-30",
           "new": 43,
-          "fixed": 6,
-          "closed": 6,
+          "fixed": 3,
+          "closed": 3,
           "deltaNew": 13
         },
         {
@@ -41221,30 +41413,37 @@
         {
           "date": "2026-10-12",
           "new": 30,
-          "fixed": 54,
-          "closed": 52,
+          "fixed": 53,
+          "closed": 51,
           "deltaNew": 27
         },
         {
           "date": "2026-10-13",
-          "new": 30,
-          "fixed": 32,
-          "closed": 31,
-          "deltaNew": 0
+          "new": 29,
+          "fixed": 31,
+          "closed": 30,
+          "deltaNew": -1
         },
         {
           "date": "2026-10-14",
           "new": 15,
           "fixed": 200,
           "closed": 99,
-          "deltaNew": -15
+          "deltaNew": -14
         },
         {
           "date": "2026-10-15",
           "new": 9,
-          "fixed": 38,
-          "closed": 35,
+          "fixed": 87,
+          "closed": 84,
           "deltaNew": -6
+        },
+        {
+          "date": "2026-10-16",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": -9
         }
       ],
       "reportBoard": {
@@ -41307,7 +41506,7 @@
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/QR-iOS-QR-3fa73fbd19518001916cdfae9e9b3663",
-          "lastEditedAt": "2026-10-15T08:57:00.000Z"
+          "lastEditedAt": "2026-10-15T23:44:00.000Z"
         },
         {
           "id": "ISSUE-2347",
@@ -41329,7 +41528,7 @@
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/QR-iOS-3fa73fbd1951801c8121d08113a2c3c3",
-          "lastEditedAt": "2026-10-15T08:45:00.000Z"
+          "lastEditedAt": "2026-10-16T00:01:00.000Z"
         },
         {
           "id": "ISSUE-2346",
@@ -41351,7 +41550,7 @@
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/QR-iOS-3fa73fbd1951805d8726f9f79b4c4973",
-          "lastEditedAt": "2026-10-15T08:44:00.000Z"
+          "lastEditedAt": "2026-10-16T00:01:00.000Z"
         },
         {
           "id": "ISSUE-2345",
@@ -41511,19 +41710,19 @@
     },
     "한패스": {
       "summary": {
-        "total": 1510,
-        "new": 157,
+        "total": 1509,
+        "new": 156,
         "inProgress": 12,
         "fixed": 0,
-        "closed": 1173,
-        "todayNew": 9,
-        "newDelta": -6
+        "closed": 1172,
+        "todayNew": 0,
+        "newDelta": -9
       },
       "funnel": [
         {
           "stage": "등록",
-          "count": 157,
-          "rate": 10.4,
+          "count": 156,
+          "rate": 10.3,
           "width": 13
         },
         {
@@ -41534,9 +41733,9 @@
         },
         {
           "stage": "배정",
-          "count": 0,
-          "rate": 0.0,
-          "width": 0
+          "count": 1,
+          "rate": 0.1,
+          "width": 6
         },
         {
           "stage": "진행중",
@@ -41558,25 +41757,18 @@
         },
         {
           "stage": "종료",
-          "count": 1173,
+          "count": 1172,
           "rate": 77.7,
           "width": 100
         }
       ],
       "daily": [
         {
-          "date": "2026-09-16",
-          "new": 9,
-          "fixed": 9,
-          "closed": 9,
-          "deltaNew": 9
-        },
-        {
           "date": "2026-09-17",
           "new": 1,
           "fixed": 1,
           "closed": 1,
-          "deltaNew": -8
+          "deltaNew": 1
         },
         {
           "date": "2026-09-18",
@@ -41616,8 +41808,8 @@
         {
           "date": "2026-09-23",
           "new": 0,
-          "fixed": 76,
-          "closed": 54,
+          "fixed": 73,
+          "closed": 51,
           "deltaNew": 0
         },
         {
@@ -41665,8 +41857,8 @@
         {
           "date": "2026-09-30",
           "new": 31,
-          "fixed": 6,
-          "closed": 6,
+          "fixed": 3,
+          "closed": 3,
           "deltaNew": 12
         },
         {
@@ -41749,33 +41941,76 @@
         {
           "date": "2026-10-12",
           "new": 13,
-          "fixed": 51,
-          "closed": 51,
+          "fixed": 50,
+          "closed": 50,
           "deltaNew": 13
         },
         {
           "date": "2026-10-13",
-          "new": 25,
-          "fixed": 31,
-          "closed": 31,
-          "deltaNew": 12
+          "new": 24,
+          "fixed": 30,
+          "closed": 30,
+          "deltaNew": 11
         },
         {
           "date": "2026-10-14",
           "new": 15,
           "fixed": 9,
           "closed": 9,
-          "deltaNew": -10
+          "deltaNew": -9
         },
         {
           "date": "2026-10-15",
           "new": 9,
-          "fixed": 32,
-          "closed": 32,
+          "fixed": 81,
+          "closed": 81,
           "deltaNew": -6
+        },
+        {
+          "date": "2026-10-16",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": -9
         }
       ],
       "versions": [
+        {
+          "version": "6.0.0",
+          "total": 29,
+          "criticalMajor": 5,
+          "doneRate": 3.4,
+          "status": [
+            {
+              "label": "등록",
+              "count": 27
+            },
+            {
+              "label": "진행중",
+              "count": 1
+            },
+            {
+              "label": "종료",
+              "count": 1
+            }
+          ],
+          "severity": [
+            {
+              "label": "Major",
+              "count": 5
+            },
+            {
+              "label": "Minor",
+              "count": 24
+            }
+          ],
+          "priority": [
+            {
+              "label": "Medium",
+              "count": 29
+            }
+          ]
+        },
         {
           "version": "5.25.0 (완료)",
           "total": 11,
@@ -42466,13 +42701,13 @@
         },
         {
           "version": "[Hanpass][앱개편]-백로그",
-          "total": 19,
+          "total": 18,
           "criticalMajor": 3,
           "doneRate": 0.0,
           "status": [
             {
               "label": "등록",
-              "count": 15
+              "count": 14
             },
             {
               "label": "진행중",
@@ -42487,21 +42722,17 @@
             {
               "label": "Minor",
               "count": 15
-            },
-            {
-              "label": "미지정",
-              "count": 1
             }
           ],
           "priority": [
             {
               "label": "Medium",
-              "count": 19
+              "count": 18
             }
           ]
         },
         {
-          "version": "[Hanpass][앱개편][BO]",
+          "version": "[Hanpass][앱개편][BO] (완료)",
           "total": 48,
           "criticalMajor": 32,
           "doneRate": 100.0,
@@ -42580,11 +42811,15 @@
           "version": "[Hanpass][앱개편][Native]-LiveTest",
           "total": 179,
           "criticalMajor": 93,
-          "doneRate": 83.2,
+          "doneRate": 82.7,
           "status": [
             {
               "label": "등록",
               "count": 23
+            },
+            {
+              "label": "배정",
+              "count": 1
             },
             {
               "label": "진행중",
@@ -42592,7 +42827,7 @@
             },
             {
               "label": "종료",
-              "count": 149
+              "count": 148
             }
           ],
           "severity": [
@@ -42617,42 +42852,6 @@
             {
               "label": "Medium",
               "count": 179
-            }
-          ]
-        },
-        {
-          "version": "[Hanpass][앱개편][기획]",
-          "total": 29,
-          "criticalMajor": 5,
-          "doneRate": 3.4,
-          "status": [
-            {
-              "label": "등록",
-              "count": 27
-            },
-            {
-              "label": "진행중",
-              "count": 1
-            },
-            {
-              "label": "종료",
-              "count": 1
-            }
-          ],
-          "severity": [
-            {
-              "label": "Major",
-              "count": 5
-            },
-            {
-              "label": "Minor",
-              "count": 24
-            }
-          ],
-          "priority": [
-            {
-              "label": "Medium",
-              "count": 29
             }
           ]
         },
@@ -42919,6 +43118,7 @@
       ],
       "versionGroups": {
         "ALL": [
+          "6.0.0",
           "5.25.0 (완료)",
           "5.24.2 (완료)",
           "5.24.0 (완료)",
@@ -42939,10 +43139,9 @@
           "5.12.0 (완료)",
           "[Hanpass][EMVQR]",
           "[Hanpass][앱개편]-백로그",
-          "[Hanpass][앱개편][BO]",
+          "[Hanpass][앱개편][BO] (완료)",
           "[Hanpass][앱개편][Native]-Dev",
           "[Hanpass][앱개편][Native]-LiveTest",
-          "[Hanpass][앱개편][기획]",
           "[게이미피케이션][혜택]포인트_2배_이벤트 (완료)",
           "[교통카드]SDK변경 (완료)",
           "[카카오뱅크]해외송금",
@@ -42953,17 +43152,426 @@
           "Hanpass - Backlog"
         ],
         "RECENT": [
+          "6.0.0",
           "5.25.0 (완료)",
           "5.24.2 (완료)",
           "5.24.0 (완료)",
-          "5.23.2 (완료)",
-          "5.23.0 (완료)"
+          "5.23.2 (완료)"
         ],
         "BACKLOG": [
           "Hanpass - Backlog"
         ]
       },
       "projectProgress": [
+        {
+          "version": "6.0.0",
+          "total": 29,
+          "open": 28,
+          "devDone": 0,
+          "qaRegression": 0,
+          "backlogTransfer": 0,
+          "done": 1,
+          "scopeTotal": 29,
+          "doneRate": 3.4,
+          "latestSnapshot": "2026-10-15",
+          "severityRows": [
+            {
+              "severity": "Critical",
+              "open": 0,
+              "devDone": 0,
+              "qaRegression": 0,
+              "backlogTransfer": 0,
+              "done": 0,
+              "total": 0,
+              "rate": 0,
+              "previousRate": 0
+            },
+            {
+              "severity": "Major",
+              "open": 4,
+              "devDone": 0,
+              "qaRegression": 0,
+              "backlogTransfer": 0,
+              "done": 1,
+              "total": 5,
+              "rate": 20.0,
+              "previousRate": 20.0
+            },
+            {
+              "severity": "Minor",
+              "open": 24,
+              "devDone": 0,
+              "qaRegression": 0,
+              "backlogTransfer": 0,
+              "done": 0,
+              "total": 24,
+              "rate": 0.0,
+              "previousRate": 0.0
+            },
+            {
+              "severity": "합계",
+              "open": 28,
+              "devDone": 0,
+              "qaRegression": 0,
+              "backlogTransfer": 0,
+              "done": 1,
+              "total": 29,
+              "rate": 3.4,
+              "previousRate": 3.4
+            }
+          ],
+          "typeRows": [
+            {
+              "type": "UX/UI",
+              "total": 13,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 3
+                },
+                {
+                  "label": "Minor",
+                  "count": 10
+                }
+              ]
+            },
+            {
+              "type": "텍스트",
+              "total": 6,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 6
+                }
+              ]
+            },
+            {
+              "type": "기능",
+              "total": 5,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 1
+                },
+                {
+                  "label": "Minor",
+                  "count": 4
+                }
+              ]
+            },
+            {
+              "type": "기획-구현 불일치",
+              "total": 4,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 1
+                },
+                {
+                  "label": "Minor",
+                  "count": 3
+                }
+              ]
+            },
+            {
+              "type": "미지정",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 1
+                }
+              ]
+            }
+          ],
+          "daily": [
+            {
+              "date": "2026-08-21",
+              "registered": 1,
+              "fixed": 0
+            },
+            {
+              "date": "2026-08-22",
+              "registered": 2,
+              "fixed": 0
+            },
+            {
+              "date": "2026-08-23",
+              "registered": 15,
+              "fixed": 0
+            },
+            {
+              "date": "2026-08-24",
+              "registered": 22,
+              "fixed": 0
+            },
+            {
+              "date": "2026-08-25",
+              "registered": 23,
+              "fixed": 0
+            },
+            {
+              "date": "2026-08-26",
+              "registered": 25,
+              "fixed": 0
+            },
+            {
+              "date": "2026-08-27",
+              "registered": 27,
+              "fixed": 0
+            },
+            {
+              "date": "2026-08-28",
+              "registered": 27,
+              "fixed": 0
+            },
+            {
+              "date": "2026-08-29",
+              "registered": 27,
+              "fixed": 0
+            },
+            {
+              "date": "2026-08-30",
+              "registered": 27,
+              "fixed": 0
+            },
+            {
+              "date": "2026-08-31",
+              "registered": 27,
+              "fixed": 0
+            },
+            {
+              "date": "2026-09-01",
+              "registered": 27,
+              "fixed": 0
+            },
+            {
+              "date": "2026-09-02",
+              "registered": 27,
+              "fixed": 0
+            },
+            {
+              "date": "2026-09-03",
+              "registered": 27,
+              "fixed": 0
+            },
+            {
+              "date": "2026-09-04",
+              "registered": 27,
+              "fixed": 0
+            },
+            {
+              "date": "2026-09-05",
+              "registered": 27,
+              "fixed": 0
+            },
+            {
+              "date": "2026-09-06",
+              "registered": 27,
+              "fixed": 0
+            },
+            {
+              "date": "2026-09-07",
+              "registered": 27,
+              "fixed": 0
+            },
+            {
+              "date": "2026-09-08",
+              "registered": 27,
+              "fixed": 0
+            },
+            {
+              "date": "2026-09-09",
+              "registered": 27,
+              "fixed": 0
+            },
+            {
+              "date": "2026-09-10",
+              "registered": 27,
+              "fixed": 0
+            },
+            {
+              "date": "2026-09-11",
+              "registered": 27,
+              "fixed": 0
+            },
+            {
+              "date": "2026-09-12",
+              "registered": 27,
+              "fixed": 0
+            },
+            {
+              "date": "2026-09-13",
+              "registered": 27,
+              "fixed": 0
+            },
+            {
+              "date": "2026-09-14",
+              "registered": 29,
+              "fixed": 0
+            },
+            {
+              "date": "2026-09-15",
+              "registered": 29,
+              "fixed": 0
+            },
+            {
+              "date": "2026-09-16",
+              "registered": 29,
+              "fixed": 0
+            },
+            {
+              "date": "2026-09-17",
+              "registered": 29,
+              "fixed": 0
+            },
+            {
+              "date": "2026-09-18",
+              "registered": 29,
+              "fixed": 0
+            },
+            {
+              "date": "2026-09-19",
+              "registered": 29,
+              "fixed": 0
+            },
+            {
+              "date": "2026-09-20",
+              "registered": 29,
+              "fixed": 0
+            },
+            {
+              "date": "2026-09-21",
+              "registered": 29,
+              "fixed": 0
+            },
+            {
+              "date": "2026-09-22",
+              "registered": 29,
+              "fixed": 0
+            },
+            {
+              "date": "2026-09-23",
+              "registered": 29,
+              "fixed": 0
+            },
+            {
+              "date": "2026-09-24",
+              "registered": 29,
+              "fixed": 0
+            },
+            {
+              "date": "2026-09-25",
+              "registered": 29,
+              "fixed": 0
+            },
+            {
+              "date": "2026-09-26",
+              "registered": 29,
+              "fixed": 0
+            },
+            {
+              "date": "2026-09-27",
+              "registered": 29,
+              "fixed": 0
+            },
+            {
+              "date": "2026-09-28",
+              "registered": 29,
+              "fixed": 0
+            },
+            {
+              "date": "2026-09-29",
+              "registered": 29,
+              "fixed": 0
+            },
+            {
+              "date": "2026-09-30",
+              "registered": 29,
+              "fixed": 0
+            },
+            {
+              "date": "2026-10-01",
+              "registered": 29,
+              "fixed": 0
+            },
+            {
+              "date": "2026-10-02",
+              "registered": 29,
+              "fixed": 0
+            },
+            {
+              "date": "2026-10-03",
+              "registered": 29,
+              "fixed": 0
+            },
+            {
+              "date": "2026-10-04",
+              "registered": 29,
+              "fixed": 0
+            },
+            {
+              "date": "2026-10-05",
+              "registered": 29,
+              "fixed": 0
+            },
+            {
+              "date": "2026-10-06",
+              "registered": 29,
+              "fixed": 0
+            },
+            {
+              "date": "2026-10-07",
+              "registered": 29,
+              "fixed": 0
+            },
+            {
+              "date": "2026-10-08",
+              "registered": 29,
+              "fixed": 0
+            },
+            {
+              "date": "2026-10-09",
+              "registered": 29,
+              "fixed": 0
+            },
+            {
+              "date": "2026-10-10",
+              "registered": 29,
+              "fixed": 0
+            },
+            {
+              "date": "2026-10-11",
+              "registered": 29,
+              "fixed": 0
+            },
+            {
+              "date": "2026-10-12",
+              "registered": 29,
+              "fixed": 0
+            },
+            {
+              "date": "2026-10-13",
+              "registered": 29,
+              "fixed": 0
+            },
+            {
+              "date": "2026-10-14",
+              "registered": 29,
+              "fixed": 0
+            },
+            {
+              "date": "2026-10-15",
+              "registered": 29,
+              "fixed": 1
+            },
+            {
+              "date": "2026-10-16",
+              "registered": 29,
+              "fixed": 1
+            }
+          ]
+        },
         {
           "version": "5.25.0 (완료)",
           "total": 11,
@@ -43465,6 +44073,11 @@
               "date": "2026-10-15",
               "registered": 11,
               "fixed": 1
+            },
+            {
+              "date": "2026-10-16",
+              "registered": 11,
+              "fixed": 1
             }
           ]
         },
@@ -43815,6 +44428,11 @@
             },
             {
               "date": "2026-10-15",
+              "registered": 7,
+              "fixed": 2
+            },
+            {
+              "date": "2026-10-16",
               "registered": 7,
               "fixed": 2
             }
@@ -44381,6 +44999,11 @@
               "date": "2026-10-15",
               "registered": 20,
               "fixed": 20
+            },
+            {
+              "date": "2026-10-16",
+              "registered": 20,
+              "fixed": 20
             }
           ]
         },
@@ -44891,6 +45514,11 @@
             },
             {
               "date": "2026-10-15",
+              "registered": 3,
+              "fixed": 3
+            },
+            {
+              "date": "2026-10-16",
               "registered": 3,
               "fixed": 3
             }
@@ -45603,6 +46231,11 @@
             },
             {
               "date": "2026-10-15",
+              "registered": 26,
+              "fixed": 26
+            },
+            {
+              "date": "2026-10-16",
               "registered": 26,
               "fixed": 26
             }
@@ -46421,6 +47054,11 @@
             },
             {
               "date": "2026-10-15",
+              "registered": 34,
+              "fixed": 34
+            },
+            {
+              "date": "2026-10-16",
               "registered": 34,
               "fixed": 34
             }
@@ -47342,6 +47980,11 @@
             },
             {
               "date": "2026-10-15",
+              "registered": 9,
+              "fixed": 9
+            },
+            {
+              "date": "2026-10-16",
               "registered": 9,
               "fixed": 9
             }
@@ -48376,6 +49019,11 @@
             },
             {
               "date": "2026-10-15",
+              "registered": 117,
+              "fixed": 117
+            },
+            {
+              "date": "2026-10-16",
               "registered": 117,
               "fixed": 117
             }
@@ -49480,6 +50128,11 @@
             },
             {
               "date": "2026-10-15",
+              "registered": 82,
+              "fixed": 82
+            },
+            {
+              "date": "2026-10-16",
               "registered": 82,
               "fixed": 82
             }
@@ -50881,6 +51534,11 @@
             },
             {
               "date": "2026-10-15",
+              "registered": 24,
+              "fixed": 24
+            },
+            {
+              "date": "2026-10-16",
               "registered": 24,
               "fixed": 24
             }
@@ -52460,6 +53118,11 @@
             },
             {
               "date": "2026-10-15",
+              "registered": 103,
+              "fixed": 99
+            },
+            {
+              "date": "2026-10-16",
               "registered": 103,
               "fixed": 99
             }
@@ -54130,6 +54793,11 @@
             },
             {
               "date": "2026-10-15",
+              "registered": 68,
+              "fixed": 67
+            },
+            {
+              "date": "2026-10-16",
               "registered": 68,
               "fixed": 67
             }
@@ -55816,6 +56484,11 @@
             },
             {
               "date": "2026-10-15",
+              "registered": 4,
+              "fixed": 3
+            },
+            {
+              "date": "2026-10-16",
               "registered": 4,
               "fixed": 3
             }
@@ -57693,6 +58366,11 @@
               "date": "2026-10-15",
               "registered": 35,
               "fixed": 34
+            },
+            {
+              "date": "2026-10-16",
+              "registered": 35,
+              "fixed": 34
             }
           ]
         },
@@ -59528,6 +60206,11 @@
             },
             {
               "date": "2026-10-15",
+              "registered": 4,
+              "fixed": 4
+            },
+            {
+              "date": "2026-10-16",
               "registered": 4,
               "fixed": 4
             }
@@ -61645,6 +62328,11 @@
             },
             {
               "date": "2026-10-15",
+              "registered": 3,
+              "fixed": 3
+            },
+            {
+              "date": "2026-10-16",
               "registered": 3,
               "fixed": 3
             }
@@ -63902,6 +64590,11 @@
             },
             {
               "date": "2026-10-15",
+              "registered": 27,
+              "fixed": 23
+            },
+            {
+              "date": "2026-10-16",
               "registered": 27,
               "fixed": 23
             }
@@ -66336,6 +67029,11 @@
               "date": "2026-10-15",
               "registered": 33,
               "fixed": 30
+            },
+            {
+              "date": "2026-10-16",
+              "registered": 33,
+              "fixed": 30
             }
           ]
         },
@@ -66349,7 +67047,7 @@
           "done": 3,
           "scopeTotal": 17,
           "doneRate": 47.1,
-          "latestSnapshot": "2026-10-15",
+          "latestSnapshot": "2026-10-16",
           "severityRows": [
             {
               "severity": "Critical",
@@ -66360,7 +67058,7 @@
               "done": 2,
               "total": 3,
               "rate": 66.7,
-              "previousRate": 0.0
+              "previousRate": 66.7
             },
             {
               "severity": "Major",
@@ -66371,7 +67069,7 @@
               "done": 1,
               "total": 9,
               "rate": 33.3,
-              "previousRate": 16.7
+              "previousRate": 33.3
             },
             {
               "severity": "Minor",
@@ -66382,7 +67080,7 @@
               "done": 0,
               "total": 5,
               "rate": 60.0,
-              "previousRate": 0.0
+              "previousRate": 60.0
             },
             {
               "severity": "합계",
@@ -66393,7 +67091,7 @@
               "done": 3,
               "total": 17,
               "rate": 47.1,
-              "previousRate": 7.7
+              "previousRate": 47.1
             }
           ],
           "typeRows": [
@@ -66466,20 +67164,25 @@
               "date": "2026-10-15",
               "registered": 17,
               "fixed": 8
+            },
+            {
+              "date": "2026-10-16",
+              "registered": 17,
+              "fixed": 8
             }
           ]
         },
         {
           "version": "[Hanpass][앱개편]-백로그",
-          "total": 19,
-          "open": 19,
+          "total": 18,
+          "open": 18,
           "devDone": 0,
           "qaRegression": 0,
           "backlogTransfer": 0,
           "done": 0,
-          "scopeTotal": 19,
+          "scopeTotal": 18,
           "doneRate": 0.0,
-          "latestSnapshot": "2026-10-14",
+          "latestSnapshot": "2026-10-13",
           "severityRows": [
             {
               "severity": "Critical",
@@ -66516,12 +67219,12 @@
             },
             {
               "severity": "합계",
-              "open": 19,
+              "open": 18,
               "devDone": 0,
               "qaRegression": 0,
               "backlogTransfer": 0,
               "done": 0,
-              "total": 19,
+              "total": 18,
               "rate": 0.0,
               "previousRate": 0.0
             }
@@ -66585,16 +67288,6 @@
               "severity": [
                 {
                   "label": "Minor",
-                  "count": 1
-                }
-              ]
-            },
-            {
-              "type": "미지정",
-              "total": 1,
-              "severity": [
-                {
-                  "label": "미지정",
                   "count": 1
                 }
               ]
@@ -66873,23 +67566,28 @@
             },
             {
               "date": "2026-10-13",
-              "registered": 19,
+              "registered": 18,
               "fixed": 0
             },
             {
               "date": "2026-10-14",
-              "registered": 19,
+              "registered": 18,
               "fixed": 0
             },
             {
               "date": "2026-10-15",
-              "registered": 19,
+              "registered": 18,
+              "fixed": 0
+            },
+            {
+              "date": "2026-10-16",
+              "registered": 18,
               "fixed": 0
             }
           ]
         },
         {
-          "version": "[Hanpass][앱개편][BO]",
+          "version": "[Hanpass][앱개편][BO] (완료)",
           "total": 48,
           "open": 0,
           "devDone": 0,
@@ -66898,7 +67596,7 @@
           "done": 48,
           "scopeTotal": 48,
           "doneRate": 100.0,
-          "latestSnapshot": "2026-10-12",
+          "latestSnapshot": "2026-10-15",
           "severityRows": [
             {
               "severity": "Critical",
@@ -67058,260 +67756,265 @@
             {
               "date": "2026-08-25",
               "registered": 38,
-              "fixed": 1
+              "fixed": 0
             },
             {
               "date": "2026-08-26",
               "registered": 39,
-              "fixed": 1
+              "fixed": 0
             },
             {
               "date": "2026-08-27",
               "registered": 39,
-              "fixed": 1
+              "fixed": 0
             },
             {
               "date": "2026-08-28",
               "registered": 39,
-              "fixed": 1
+              "fixed": 0
             },
             {
               "date": "2026-08-29",
               "registered": 39,
-              "fixed": 1
+              "fixed": 0
             },
             {
               "date": "2026-08-30",
               "registered": 39,
-              "fixed": 1
+              "fixed": 0
             },
             {
               "date": "2026-08-31",
               "registered": 39,
-              "fixed": 1
+              "fixed": 0
             },
             {
               "date": "2026-09-01",
               "registered": 39,
-              "fixed": 17
+              "fixed": 0
             },
             {
               "date": "2026-09-02",
               "registered": 41,
-              "fixed": 35
+              "fixed": 0
             },
             {
               "date": "2026-09-03",
               "registered": 41,
-              "fixed": 35
+              "fixed": 0
             },
             {
               "date": "2026-09-04",
               "registered": 48,
-              "fixed": 36
+              "fixed": 0
             },
             {
               "date": "2026-09-05",
               "registered": 48,
-              "fixed": 36
+              "fixed": 0
             },
             {
               "date": "2026-09-06",
               "registered": 48,
-              "fixed": 36
+              "fixed": 0
             },
             {
               "date": "2026-09-07",
               "registered": 48,
-              "fixed": 38
+              "fixed": 0
             },
             {
               "date": "2026-09-08",
               "registered": 48,
-              "fixed": 41
+              "fixed": 0
             },
             {
               "date": "2026-09-09",
               "registered": 48,
-              "fixed": 41
+              "fixed": 0
             },
             {
               "date": "2026-09-10",
               "registered": 48,
-              "fixed": 42
+              "fixed": 0
             },
             {
               "date": "2026-09-11",
               "registered": 48,
-              "fixed": 42
+              "fixed": 0
             },
             {
               "date": "2026-09-12",
               "registered": 48,
-              "fixed": 42
+              "fixed": 0
             },
             {
               "date": "2026-09-13",
               "registered": 48,
-              "fixed": 42
+              "fixed": 0
             },
             {
               "date": "2026-09-14",
               "registered": 48,
-              "fixed": 42
+              "fixed": 0
             },
             {
               "date": "2026-09-15",
               "registered": 48,
-              "fixed": 42
+              "fixed": 0
             },
             {
               "date": "2026-09-16",
               "registered": 48,
-              "fixed": 42
+              "fixed": 0
             },
             {
               "date": "2026-09-17",
               "registered": 48,
-              "fixed": 42
+              "fixed": 0
             },
             {
               "date": "2026-09-18",
               "registered": 48,
-              "fixed": 42
+              "fixed": 0
             },
             {
               "date": "2026-09-19",
               "registered": 48,
-              "fixed": 42
+              "fixed": 0
             },
             {
               "date": "2026-09-20",
               "registered": 48,
-              "fixed": 42
+              "fixed": 0
             },
             {
               "date": "2026-09-21",
               "registered": 48,
-              "fixed": 42
+              "fixed": 0
             },
             {
               "date": "2026-09-22",
               "registered": 48,
-              "fixed": 42
+              "fixed": 0
             },
             {
               "date": "2026-09-23",
               "registered": 48,
-              "fixed": 45
+              "fixed": 0
             },
             {
               "date": "2026-09-24",
               "registered": 48,
-              "fixed": 45
+              "fixed": 0
             },
             {
               "date": "2026-09-25",
               "registered": 48,
-              "fixed": 45
+              "fixed": 0
             },
             {
               "date": "2026-09-26",
               "registered": 48,
-              "fixed": 45
+              "fixed": 0
             },
             {
               "date": "2026-09-27",
               "registered": 48,
-              "fixed": 45
+              "fixed": 0
             },
             {
               "date": "2026-09-28",
               "registered": 48,
-              "fixed": 45
+              "fixed": 0
             },
             {
               "date": "2026-09-29",
               "registered": 48,
-              "fixed": 45
+              "fixed": 0
             },
             {
               "date": "2026-09-30",
               "registered": 48,
-              "fixed": 47
+              "fixed": 0
             },
             {
               "date": "2026-10-01",
               "registered": 48,
-              "fixed": 47
+              "fixed": 0
             },
             {
               "date": "2026-10-02",
               "registered": 48,
-              "fixed": 47
+              "fixed": 0
             },
             {
               "date": "2026-10-03",
               "registered": 48,
-              "fixed": 47
+              "fixed": 0
             },
             {
               "date": "2026-10-04",
               "registered": 48,
-              "fixed": 47
+              "fixed": 0
             },
             {
               "date": "2026-10-05",
               "registered": 48,
-              "fixed": 47
+              "fixed": 0
             },
             {
               "date": "2026-10-06",
               "registered": 48,
-              "fixed": 47
+              "fixed": 0
             },
             {
               "date": "2026-10-07",
               "registered": 48,
-              "fixed": 47
+              "fixed": 0
             },
             {
               "date": "2026-10-08",
               "registered": 48,
-              "fixed": 47
+              "fixed": 0
             },
             {
               "date": "2026-10-09",
               "registered": 48,
-              "fixed": 47
+              "fixed": 0
             },
             {
               "date": "2026-10-10",
               "registered": 48,
-              "fixed": 47
+              "fixed": 0
             },
             {
               "date": "2026-10-11",
               "registered": 48,
-              "fixed": 47
+              "fixed": 0
             },
             {
               "date": "2026-10-12",
               "registered": 48,
-              "fixed": 48
+              "fixed": 0
             },
             {
               "date": "2026-10-13",
               "registered": 48,
-              "fixed": 48
+              "fixed": 0
             },
             {
               "date": "2026-10-14",
               "registered": 48,
-              "fixed": 48
+              "fixed": 0
             },
             {
               "date": "2026-10-15",
+              "registered": 48,
+              "fixed": 48
+            },
+            {
+              "date": "2026-10-16",
               "registered": 48,
               "fixed": 48
             }
@@ -67338,7 +68041,7 @@
               "done": 9,
               "total": 9,
               "rate": 100.0,
-              "previousRate": 22.2
+              "previousRate": 100.0
             },
             {
               "severity": "Major",
@@ -67371,7 +68074,7 @@
               "done": 312,
               "total": 313,
               "rate": 99.7,
-              "previousRate": 97.4
+              "previousRate": 99.7
             }
           ],
           "typeRows": [
@@ -67789,19 +68492,24 @@
               "date": "2026-10-15",
               "registered": 313,
               "fixed": 312
+            },
+            {
+              "date": "2026-10-16",
+              "registered": 313,
+              "fixed": 312
             }
           ]
         },
         {
           "version": "[Hanpass][앱개편][Native]-LiveTest",
           "total": 179,
-          "open": 30,
-          "devDone": 9,
+          "open": 31,
+          "devDone": 8,
           "qaRegression": 0,
           "backlogTransfer": 0,
           "done": 140,
           "scopeTotal": 179,
-          "doneRate": 83.2,
+          "doneRate": 82.7,
           "latestSnapshot": "2026-10-15",
           "severityRows": [
             {
@@ -67813,7 +68521,7 @@
               "done": 13,
               "total": 17,
               "rate": 88.2,
-              "previousRate": 41.2
+              "previousRate": 88.2
             },
             {
               "severity": "Major",
@@ -67824,29 +68532,29 @@
               "done": 59,
               "total": 76,
               "rate": 82.9,
-              "previousRate": 78.7
+              "previousRate": 82.9
             },
             {
               "severity": "Minor",
-              "open": 13,
-              "devDone": 3,
+              "open": 14,
+              "devDone": 2,
               "qaRegression": 0,
               "backlogTransfer": 0,
               "done": 67,
               "total": 83,
-              "rate": 84.3,
-              "previousRate": 79.0
+              "rate": 83.1,
+              "previousRate": 83.1
             },
             {
               "severity": "합계",
-              "open": 30,
-              "devDone": 9,
+              "open": 31,
+              "devDone": 8,
               "qaRegression": 0,
               "backlogTransfer": 0,
               "done": 140,
               "total": 179,
-              "rate": 83.2,
-              "previousRate": 75.3
+              "rate": 82.7,
+              "previousRate": 82.7
             }
           ],
           "typeRows": [
@@ -67902,7 +68610,7 @@
             },
             {
               "type": "텍스트",
-              "total": 19,
+              "total": 18,
               "severity": [
                 {
                   "label": "Major",
@@ -67910,7 +68618,21 @@
                 },
                 {
                   "label": "Minor",
-                  "count": 17
+                  "count": 16
+                }
+              ]
+            },
+            {
+              "type": "기획서 수정",
+              "total": 7,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 1
+                },
+                {
+                  "label": "Minor",
+                  "count": 6
                 }
               ]
             },
@@ -67921,20 +68643,6 @@
                 {
                   "label": "Major",
                   "count": 2
-                },
-                {
-                  "label": "Minor",
-                  "count": 5
-                }
-              ]
-            },
-            {
-              "type": "기획서 수정",
-              "total": 6,
-              "severity": [
-                {
-                  "label": "Major",
-                  "count": 1
                 },
                 {
                   "label": "Minor",
@@ -68236,421 +68944,22 @@
             {
               "date": "2026-10-13",
               "registered": 172,
-              "fixed": 123
+              "fixed": 122
             },
             {
               "date": "2026-10-14",
               "registered": 174,
-              "fixed": 131
+              "fixed": 130
             },
             {
               "date": "2026-10-15",
               "registered": 179,
-              "fixed": 149
-            }
-          ]
-        },
-        {
-          "version": "[Hanpass][앱개편][기획]",
-          "total": 29,
-          "open": 28,
-          "devDone": 0,
-          "qaRegression": 0,
-          "backlogTransfer": 0,
-          "done": 1,
-          "scopeTotal": 29,
-          "doneRate": 3.4,
-          "latestSnapshot": "2026-09-30",
-          "severityRows": [
-            {
-              "severity": "Critical",
-              "open": 0,
-              "devDone": 0,
-              "qaRegression": 0,
-              "backlogTransfer": 0,
-              "done": 0,
-              "total": 0,
-              "rate": 0,
-              "previousRate": 0
+              "fixed": 148
             },
             {
-              "severity": "Major",
-              "open": 4,
-              "devDone": 0,
-              "qaRegression": 0,
-              "backlogTransfer": 0,
-              "done": 1,
-              "total": 5,
-              "rate": 20.0,
-              "previousRate": 20.0
-            },
-            {
-              "severity": "Minor",
-              "open": 24,
-              "devDone": 0,
-              "qaRegression": 0,
-              "backlogTransfer": 0,
-              "done": 0,
-              "total": 24,
-              "rate": 0.0,
-              "previousRate": 0.0
-            },
-            {
-              "severity": "합계",
-              "open": 28,
-              "devDone": 0,
-              "qaRegression": 0,
-              "backlogTransfer": 0,
-              "done": 1,
-              "total": 29,
-              "rate": 3.4,
-              "previousRate": 3.4
-            }
-          ],
-          "typeRows": [
-            {
-              "type": "UX/UI",
-              "total": 13,
-              "severity": [
-                {
-                  "label": "Major",
-                  "count": 3
-                },
-                {
-                  "label": "Minor",
-                  "count": 10
-                }
-              ]
-            },
-            {
-              "type": "텍스트",
-              "total": 6,
-              "severity": [
-                {
-                  "label": "Minor",
-                  "count": 6
-                }
-              ]
-            },
-            {
-              "type": "기능",
-              "total": 5,
-              "severity": [
-                {
-                  "label": "Major",
-                  "count": 1
-                },
-                {
-                  "label": "Minor",
-                  "count": 4
-                }
-              ]
-            },
-            {
-              "type": "기획-구현 불일치",
-              "total": 4,
-              "severity": [
-                {
-                  "label": "Major",
-                  "count": 1
-                },
-                {
-                  "label": "Minor",
-                  "count": 3
-                }
-              ]
-            },
-            {
-              "type": "미지정",
-              "total": 1,
-              "severity": [
-                {
-                  "label": "Minor",
-                  "count": 1
-                }
-              ]
-            }
-          ],
-          "daily": [
-            {
-              "date": "2026-08-21",
-              "registered": 1,
-              "fixed": 0
-            },
-            {
-              "date": "2026-08-22",
-              "registered": 2,
-              "fixed": 0
-            },
-            {
-              "date": "2026-08-23",
-              "registered": 15,
-              "fixed": 0
-            },
-            {
-              "date": "2026-08-24",
-              "registered": 22,
-              "fixed": 0
-            },
-            {
-              "date": "2026-08-25",
-              "registered": 23,
-              "fixed": 0
-            },
-            {
-              "date": "2026-08-26",
-              "registered": 25,
-              "fixed": 0
-            },
-            {
-              "date": "2026-08-27",
-              "registered": 27,
-              "fixed": 0
-            },
-            {
-              "date": "2026-08-28",
-              "registered": 27,
-              "fixed": 0
-            },
-            {
-              "date": "2026-08-29",
-              "registered": 27,
-              "fixed": 0
-            },
-            {
-              "date": "2026-08-30",
-              "registered": 27,
-              "fixed": 0
-            },
-            {
-              "date": "2026-08-31",
-              "registered": 27,
-              "fixed": 0
-            },
-            {
-              "date": "2026-09-01",
-              "registered": 27,
-              "fixed": 0
-            },
-            {
-              "date": "2026-09-02",
-              "registered": 27,
-              "fixed": 0
-            },
-            {
-              "date": "2026-09-03",
-              "registered": 27,
-              "fixed": 0
-            },
-            {
-              "date": "2026-09-04",
-              "registered": 27,
-              "fixed": 0
-            },
-            {
-              "date": "2026-09-05",
-              "registered": 27,
-              "fixed": 0
-            },
-            {
-              "date": "2026-09-06",
-              "registered": 27,
-              "fixed": 0
-            },
-            {
-              "date": "2026-09-07",
-              "registered": 27,
-              "fixed": 0
-            },
-            {
-              "date": "2026-09-08",
-              "registered": 27,
-              "fixed": 0
-            },
-            {
-              "date": "2026-09-09",
-              "registered": 27,
-              "fixed": 0
-            },
-            {
-              "date": "2026-09-10",
-              "registered": 27,
-              "fixed": 0
-            },
-            {
-              "date": "2026-09-11",
-              "registered": 27,
-              "fixed": 0
-            },
-            {
-              "date": "2026-09-12",
-              "registered": 27,
-              "fixed": 0
-            },
-            {
-              "date": "2026-09-13",
-              "registered": 27,
-              "fixed": 0
-            },
-            {
-              "date": "2026-09-14",
-              "registered": 29,
-              "fixed": 0
-            },
-            {
-              "date": "2026-09-15",
-              "registered": 29,
-              "fixed": 0
-            },
-            {
-              "date": "2026-09-16",
-              "registered": 29,
-              "fixed": 0
-            },
-            {
-              "date": "2026-09-17",
-              "registered": 29,
-              "fixed": 0
-            },
-            {
-              "date": "2026-09-18",
-              "registered": 29,
-              "fixed": 0
-            },
-            {
-              "date": "2026-09-19",
-              "registered": 29,
-              "fixed": 0
-            },
-            {
-              "date": "2026-09-20",
-              "registered": 29,
-              "fixed": 0
-            },
-            {
-              "date": "2026-09-21",
-              "registered": 29,
-              "fixed": 0
-            },
-            {
-              "date": "2026-09-22",
-              "registered": 29,
-              "fixed": 0
-            },
-            {
-              "date": "2026-09-23",
-              "registered": 29,
-              "fixed": 0
-            },
-            {
-              "date": "2026-09-24",
-              "registered": 29,
-              "fixed": 0
-            },
-            {
-              "date": "2026-09-25",
-              "registered": 29,
-              "fixed": 0
-            },
-            {
-              "date": "2026-09-26",
-              "registered": 29,
-              "fixed": 0
-            },
-            {
-              "date": "2026-09-27",
-              "registered": 29,
-              "fixed": 0
-            },
-            {
-              "date": "2026-09-28",
-              "registered": 29,
-              "fixed": 0
-            },
-            {
-              "date": "2026-09-29",
-              "registered": 29,
-              "fixed": 0
-            },
-            {
-              "date": "2026-09-30",
-              "registered": 29,
-              "fixed": 1
-            },
-            {
-              "date": "2026-10-01",
-              "registered": 29,
-              "fixed": 1
-            },
-            {
-              "date": "2026-10-02",
-              "registered": 29,
-              "fixed": 1
-            },
-            {
-              "date": "2026-10-03",
-              "registered": 29,
-              "fixed": 1
-            },
-            {
-              "date": "2026-10-04",
-              "registered": 29,
-              "fixed": 1
-            },
-            {
-              "date": "2026-10-05",
-              "registered": 29,
-              "fixed": 1
-            },
-            {
-              "date": "2026-10-06",
-              "registered": 29,
-              "fixed": 1
-            },
-            {
-              "date": "2026-10-07",
-              "registered": 29,
-              "fixed": 1
-            },
-            {
-              "date": "2026-10-08",
-              "registered": 29,
-              "fixed": 1
-            },
-            {
-              "date": "2026-10-09",
-              "registered": 29,
-              "fixed": 1
-            },
-            {
-              "date": "2026-10-10",
-              "registered": 29,
-              "fixed": 1
-            },
-            {
-              "date": "2026-10-11",
-              "registered": 29,
-              "fixed": 1
-            },
-            {
-              "date": "2026-10-12",
-              "registered": 29,
-              "fixed": 1
-            },
-            {
-              "date": "2026-10-13",
-              "registered": 29,
-              "fixed": 1
-            },
-            {
-              "date": "2026-10-14",
-              "registered": 29,
-              "fixed": 1
-            },
-            {
-              "date": "2026-10-15",
-              "registered": 29,
-              "fixed": 1
+              "date": "2026-10-16",
+              "registered": 179,
+              "fixed": 148
             }
           ]
         },
@@ -69065,6 +69374,11 @@
             },
             {
               "date": "2026-10-15",
+              "registered": 11,
+              "fixed": 11
+            },
+            {
+              "date": "2026-10-16",
               "registered": 11,
               "fixed": 11
             }
@@ -69663,6 +69977,11 @@
               "date": "2026-10-15",
               "registered": 7,
               "fixed": 4
+            },
+            {
+              "date": "2026-10-16",
+              "registered": 7,
+              "fixed": 4
             }
           ]
         },
@@ -70180,6 +70499,11 @@
               "date": "2026-10-15",
               "registered": 121,
               "fixed": 120
+            },
+            {
+              "date": "2026-10-16",
+              "registered": 121,
+              "fixed": 120
             }
           ]
         },
@@ -70567,6 +70891,11 @@
               "date": "2026-10-15",
               "registered": 131,
               "fixed": 130
+            },
+            {
+              "date": "2026-10-16",
+              "registered": 131,
+              "fixed": 130
             }
           ]
         },
@@ -70862,6 +71191,11 @@
             },
             {
               "date": "2026-10-15",
+              "registered": 1,
+              "fixed": 1
+            },
+            {
+              "date": "2026-10-16",
               "registered": 1,
               "fixed": 1
             }
@@ -72679,6 +73013,11 @@
             },
             {
               "date": "2026-10-15",
+              "registered": 3,
+              "fixed": 3
+            },
+            {
+              "date": "2026-10-16",
               "registered": 3,
               "fixed": 3
             }
@@ -75113,6 +75452,11 @@
               "date": "2026-10-15",
               "registered": 8,
               "fixed": 8
+            },
+            {
+              "date": "2026-10-16",
+              "registered": 8,
+              "fixed": 8
             }
           ]
         },
@@ -75950,6 +76294,11 @@
               "date": "2026-10-15",
               "registered": 13,
               "fixed": 10
+            },
+            {
+              "date": "2026-10-16",
+              "registered": 13,
+              "fixed": 10
             }
           ]
         }
@@ -75961,7 +76310,11 @@
           "status": [
             {
               "label": "등록",
-              "count": 157
+              "count": 156
+            },
+            {
+              "label": "배정",
+              "count": 1
             },
             {
               "label": "진행중",
@@ -75973,7 +76326,7 @@
             },
             {
               "label": "종료",
-              "count": 1173
+              "count": 1172
             }
           ],
           "severity": [
@@ -75991,7 +76344,7 @@
             },
             {
               "label": "미지정",
-              "count": 75
+              "count": 74
             },
             {
               "label": "개선 의견",
@@ -76005,7 +76358,7 @@
             },
             {
               "label": "Medium",
-              "count": 1465
+              "count": 1464
             },
             {
               "label": "Low",
@@ -76024,18 +76377,11 @@
       },
       "heatmap": [
         {
-          "date": "2026-09-16",
-          "new": 9,
-          "fixed": 9,
-          "closed": 9,
-          "deltaNew": 9
-        },
-        {
           "date": "2026-09-17",
           "new": 1,
           "fixed": 1,
           "closed": 1,
-          "deltaNew": -8
+          "deltaNew": 1
         },
         {
           "date": "2026-09-18",
@@ -76075,8 +76421,8 @@
         {
           "date": "2026-09-23",
           "new": 0,
-          "fixed": 76,
-          "closed": 54,
+          "fixed": 73,
+          "closed": 51,
           "deltaNew": 0
         },
         {
@@ -76124,8 +76470,8 @@
         {
           "date": "2026-09-30",
           "new": 31,
-          "fixed": 6,
-          "closed": 6,
+          "fixed": 3,
+          "closed": 3,
           "deltaNew": 12
         },
         {
@@ -76208,30 +76554,37 @@
         {
           "date": "2026-10-12",
           "new": 13,
-          "fixed": 51,
-          "closed": 51,
+          "fixed": 50,
+          "closed": 50,
           "deltaNew": 13
         },
         {
           "date": "2026-10-13",
-          "new": 25,
-          "fixed": 31,
-          "closed": 31,
-          "deltaNew": 12
+          "new": 24,
+          "fixed": 30,
+          "closed": 30,
+          "deltaNew": 11
         },
         {
           "date": "2026-10-14",
           "new": 15,
           "fixed": 9,
           "closed": 9,
-          "deltaNew": -10
+          "deltaNew": -9
         },
         {
           "date": "2026-10-15",
           "new": 9,
-          "fixed": 32,
-          "closed": 32,
+          "fixed": 81,
+          "closed": 81,
           "deltaNew": -6
+        },
+        {
+          "date": "2026-10-16",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": -9
         }
       ],
       "reportBoard": {
@@ -76294,7 +76647,7 @@
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/QR-iOS-QR-3fa73fbd19518001916cdfae9e9b3663",
-          "lastEditedAt": "2026-10-15T08:57:00.000Z"
+          "lastEditedAt": "2026-10-15T23:44:00.000Z"
         },
         {
           "id": "ISSUE-2347",
@@ -76316,7 +76669,7 @@
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/QR-iOS-3fa73fbd1951801c8121d08113a2c3c3",
-          "lastEditedAt": "2026-10-15T08:45:00.000Z"
+          "lastEditedAt": "2026-10-16T00:01:00.000Z"
         },
         {
           "id": "ISSUE-2346",
@@ -76338,7 +76691,7 @@
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/QR-iOS-3fa73fbd1951805d8726f9f79b4c4973",
-          "lastEditedAt": "2026-10-15T08:44:00.000Z"
+          "lastEditedAt": "2026-10-16T00:01:00.000Z"
         },
         {
           "id": "ISSUE-2345",
@@ -76552,13 +76905,6 @@
       ],
       "daily": [
         {
-          "date": "2026-09-16",
-          "new": 0,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": 0
-        },
-        {
           "date": "2026-09-17",
           "new": 0,
           "fixed": 0,
@@ -76759,6 +77105,13 @@
           "new": 0,
           "fixed": 6,
           "closed": 3,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-10-16",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
           "deltaNew": 0
         }
       ],
@@ -77996,6 +78349,11 @@
               "date": "2026-10-15",
               "registered": 20,
               "fixed": 1
+            },
+            {
+              "date": "2026-10-16",
+              "registered": 20,
+              "fixed": 1
             }
           ]
         },
@@ -78675,6 +79033,11 @@
             },
             {
               "date": "2026-10-15",
+              "registered": 15,
+              "fixed": 15
+            },
+            {
+              "date": "2026-10-16",
               "registered": 15,
               "fixed": 15
             }
@@ -79619,6 +79982,11 @@
               "date": "2026-10-15",
               "registered": 55,
               "fixed": 54
+            },
+            {
+              "date": "2026-10-16",
+              "registered": 55,
+              "fixed": 54
             }
           ]
         },
@@ -80184,6 +80552,11 @@
             },
             {
               "date": "2026-10-15",
+              "registered": 5,
+              "fixed": 5
+            },
+            {
+              "date": "2026-10-16",
               "registered": 5,
               "fixed": 5
             }
@@ -81137,6 +81510,11 @@
               "date": "2026-10-15",
               "registered": 101,
               "fixed": 101
+            },
+            {
+              "date": "2026-10-16",
+              "registered": 101,
+              "fixed": 101
             }
           ]
         },
@@ -81329,6 +81707,11 @@
               "date": "2026-10-15",
               "registered": 37,
               "fixed": 30
+            },
+            {
+              "date": "2026-10-16",
+              "registered": 37,
+              "fixed": 30
             }
           ]
         },
@@ -81364,7 +81747,7 @@
               "done": 55,
               "total": 127,
               "rate": 96.9,
-              "previousRate": 92.1
+              "previousRate": 96.9
             },
             {
               "severity": "Minor",
@@ -81386,7 +81769,7 @@
               "done": 66,
               "total": 172,
               "rate": 96.5,
-              "previousRate": 93.0
+              "previousRate": 96.5
             }
           ],
           "typeRows": [
@@ -81653,6 +82036,11 @@
               "date": "2026-10-15",
               "registered": 172,
               "fixed": 166
+            },
+            {
+              "date": "2026-10-16",
+              "registered": 172,
+              "fixed": 166
             }
           ]
         },
@@ -81886,6 +82274,11 @@
             },
             {
               "date": "2026-10-15",
+              "registered": 34,
+              "fixed": 34
+            },
+            {
+              "date": "2026-10-16",
               "registered": 34,
               "fixed": 34
             }
@@ -82779,6 +83172,11 @@
               "date": "2026-10-15",
               "registered": 7,
               "fixed": 7
+            },
+            {
+              "date": "2026-10-16",
+              "registered": 7,
+              "fixed": 7
             }
           ]
         }
@@ -82828,13 +83226,6 @@
         }
       },
       "heatmap": [
-        {
-          "date": "2026-09-16",
-          "new": 0,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": 0
-        },
         {
           "date": "2026-09-17",
           "new": 0,
@@ -83036,6 +83427,13 @@
           "new": 0,
           "fixed": 6,
           "closed": 3,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-10-16",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
           "deltaNew": 0
         }
       ],

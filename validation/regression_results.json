@@ -1,10 +1,9 @@
 {
-  "snapshotGeneratedAt": "2026-10-20T01:10:00+00:00",
-  "defectNormalization": "identical to original code for all 1992 raw pages",
-  "allLegacyScopeAggregates": "identical for ALL, Hanpass, GoHanpass",
+  "snapshotGeneratedAt": "2026-10-20T02:19:09+00:00",
+  "allLegacyScopeAggregates": "identical to latest remote main on same snapshot",
   "totals": {
-    "ALL": 1992,
-    "한패스": 1546,
+    "ALL": 1993,
+    "한패스": 1547,
     "GoHanpass": 446
   },
   "unitTestsPassed": 12,
@@ -15,6 +14,5 @@
     "report-한패스": "ok",
     "report-GoHanpass": "ok"
   },
-  "actualConfiguredSecretsInHTML": false,
-  "remoteDeployment": "not performed"
+  "actualConfiguredSecretsInHTML": false
 }

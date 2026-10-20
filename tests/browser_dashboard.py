@@ -20,6 +20,8 @@ with sync_playwright() as playwright:
     page.goto(URL)
     page.wait_for_selector('#summary .card')
     snapshot = page.evaluate('DATA')
+    if all(s['status']=='ok' for s in snapshot['sources'].values()):
+        assert page.locator('#sourceStatus').is_hidden()
     typography=page.evaluate('''()=>({body:parseFloat(getComputedStyle(document.body).fontSize),heading:parseFloat(getComputedStyle(document.querySelector('.panel h2')).fontSize),kpi:parseFloat(getComputedStyle(document.querySelector('.card strong')).fontSize)})''')
     assert typography['body']>=13 and typography['heading']>=15 and typography['kpi']>=28,typography
     page.on('request', lambda request: requests.append(request.url))
@@ -174,6 +176,8 @@ with sync_playwright() as playwright:
     failure_url = URL.rsplit('/', 1)[0] + '/failed-source.html'
     page.route('**/failed-source.html', lambda route: route.fulfill(status=200, content_type='text/html', body=failed_html))
     page.goto(failure_url)
+    assert page.locator('#sourceStatus .source-badge.error').is_visible()
+    assert page.locator('#sourceStatus .source-badge').count()==1
     assert page.locator('#summary strong').first.inner_text() == str(failed['domains']['ALL']['summary']['total'])
     page.locator('[data-section="tasks"]').click()
     assert page.locator('#taskUpcomingList .qa-task-card').count() == sum(t['state'] == '예정' for t in failed['qaTasks']['data']['rows'])

@@ -22,7 +22,9 @@
     return '';
   };
   const labels = {defects:'결함 데이터',tasks:'QA 업무',quality:'QA 품질', 'report-한패스':'Hanpass 제보', 'report-GoHanpass':'Gohanpass 제보'};
-  $('sourceStatus').innerHTML = Object.entries(DATA.sources || {}).map(([key,s]) => `<span class="source-badge ${esc(s.status)}" title="마지막 성공: ${esc(s.syncedAt ? formatKstDateTime(s.syncedAt) : '없음')} · 최근 시도: ${esc(s.attemptedAt ? formatKstDateTime(s.attemptedAt) : '-')} ">${esc(labels[key] || key)} · ${s.status === 'ok' ? '정상' : s.status === 'stale' ? '갱신 실패 · 이전 데이터' : '조회 실패'}</span>`).join('');
+  $('sourceStatus').innerHTML = Object.entries(DATA.sources || {}).filter(([,s]) => s.status !== 'ok').map(([key,s]) => `<span class="source-badge ${esc(s.status)}" title="마지막 성공: ${esc(s.syncedAt ? formatKstDateTime(s.syncedAt) : '없음')} · 최근 시도: ${esc(s.attemptedAt ? formatKstDateTime(s.attemptedAt) : '-')} ">${esc(labels[key] || key)} · ${s.status === 'ok' ? '정상' : s.status === 'stale' ? '갱신 실패 · 이전 데이터' : '조회 실패'}</span>`).join('');
+
+  $('sourceStatus').hidden = !$('sourceStatus').childElementCount;
 
   const mappingNote = document.createElement('span');
   mappingNote.className = 'qa-help';

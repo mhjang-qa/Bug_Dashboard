@@ -3,10 +3,45 @@
   "consoleErrors": [],
   "tabSwitchRequests": [],
   "sourceFailureIsolation": "PASS",
+  "scrollFreeScreensChecked": 285,
+  "paginationCompleteness": "PASS",
   "viewports": [
-    1440,
-    768,
-    390
+    [
+      1440,
+      900
+    ],
+    [
+      1280,
+      720
+    ],
+    [
+      1024,
+      768
+    ],
+    [
+      768,
+      1024
+    ],
+    [
+      390,
+      844
+    ],
+    [
+      1366,
+      600
+    ],
+    [
+      1024,
+      600
+    ],
+    [
+      390,
+      667
+    ],
+    [
+      1280,
+      480
+    ]
   ],
   "result": "PASS"
 }

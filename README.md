@@ -97,3 +97,37 @@ python3 ../run_all_notion.py --defect-days 30
 ```
 
 실행 결과는 상위 프로젝트의 `notion_run_summary.json`에 `defect_dashboard` 단계로 기록됩니다.
+
+## 통합 QA Dashboard (2026-10-20)
+
+기존 결함 집계와 단일 HTML 배포 구조를 유지하면서 상단 메뉴를 `결함 현황 / QA 업무 진행 현황 / QA 품질 관리`로 확장했습니다. 결함 내부 분석 화면은 Select로 전환하며 모든 화면은 HTML에 포함된 동일 데이터 스냅샷을 사용합니다.
+
+- `qa_dashboard.py`: 실제 Notion 스키마 검증, QA 업무·품질 페이지 조회, 소스별 캐시 및 파생 지표
+- `qa_dashboard.js`, `qa_dashboard.css`: 기존 HTML에 인라인으로 포함되는 확장 화면
+- `data/`: 마지막 성공한 소스별 로컬 스냅샷. Git에서 제외하며 브라우저에 직접 제공하지 않습니다.
+- `tests/`: 상태·날짜·장애 격리 단위 테스트 및 Chromium 화면 검증
+- `QA_DASHBOARD_REPORT.md`: 분석 결과, 집계 기준, 검증 결과와 배포 절차
+
+추가 선택 환경변수:
+
+```bash
+export NOTION_QA_TASK_DB_ID="7ab73fbd195182da9862015f449308d5"
+export NOTION_QA_QUALITY_PAGE_ID="1fa73fbd195180a59f39d3ae80362936"
+```
+
+기존 `NOTION_TOKEN`을 재사용하며 해당 integration이 업무 DB, 연결된 QA 업무 페이지, 품질 관리 페이지를 읽을 수 있어야 합니다. DB ID를 바꾸어도 속성을 추정하지 않으며, 검증된 스키마가 다르면 해당 소스를 조회 실패로 표시합니다.
+
+```bash
+# 이 디렉터리에서 실행. 기존 기본값은 publish=True이므로 로컬 검토에는 명시적으로 지정합니다.
+python3 generate_defect_dashboard.py --no-publish
+python3 -m http.server 8765 --bind 127.0.0.1
+# http://127.0.0.1:8765/defect_dashboard_embed.html
+
+python3 -m unittest discover -s tests -v
+# 개발 환경에 Playwright와 Chromium이 설치되어 있을 때 실행
+python3 tests/browser_dashboard.py
+```
+
+검토 후 기존 방식으로 `python3 generate_defect_dashboard.py --publish`를 실행하면 생성된 단일 HTML이 Pages 저장소에 게시됩니다. 자동 동기화를 유지하려면 **HTML뿐 아니라 새 Python/JS/CSS 소스도 Bug_Dashboard 저장소에 반영**해야 합니다. 상위 workflow가 매번 원격 `Bug_Dashboard/main`을 가져오므로 로컬 수정만으로 Actions에는 적용되지 않습니다.
+
+소스 갱신 실패 시 마지막 성공 데이터가 있으면 그 시각과 함께 표시하며, 없으면 조회 불가로 표시합니다. `data/`는 로컬 캐시이므로 새 GitHub Actions runner에는 이전 캐시가 없습니다. runner 간 마지막 성공 데이터를 유지하려면 별도의 비공개 캐시 보존 설정이 필요합니다. 이번 변경에서는 기존 workflow·인증·스케줄을 수정하지 않았습니다.

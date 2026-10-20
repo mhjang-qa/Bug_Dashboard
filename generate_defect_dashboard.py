@@ -14,6 +14,9 @@ from collections import Counter, defaultdict
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any
+from types import SimpleNamespace
+
+import qa_dashboard
 
 
 SCRIPT_DIR = Path(__file__).resolve().parent
@@ -21,6 +24,7 @@ ROOT_DIR = SCRIPT_DIR.parent
 OUT_FILE = "defect_dashboard_embed.html"
 NOTION_VERSION = "2022-06-28"
 DEFAULT_DEFECT_DB_ID = "21473fbd1951800d8321fc2e34c2548e"
+REPORT_SOURCE_STATUS: dict[str, Any] = {}
 REPORT_DB_IDS = {
     "한패스": "36073fbd19518054b59ae4de5c74baeb",
     "GoHanpass": "36073fbd19518003b5caebbdb84839fb",
@@ -500,8 +504,12 @@ def normalize_report_page(page: dict[str, Any], domain: str) -> dict[str, Any]:
 def fetch_report_rows() -> dict[str, list[dict[str, Any]]]:
     rows_by_domain: dict[str, list[dict[str, Any]]] = {}
     for domain, db_id in REPORT_DB_IDS.items():
-        pages = fetch_database_pages(db_id, f"report-{domain}")
-        rows_by_domain[domain] = [normalize_report_page(page, domain) for page in pages]
+        result = qa_dashboard.sync_source(
+            SCRIPT_DIR / "data" / f"reports-{domain}.json",
+            lambda: [normalize_report_page(page, domain) for page in fetch_database_pages(db_id, f"report-{domain}")],
+        )
+        REPORT_SOURCE_STATUS[domain] = {k: v for k, v in result.items() if k != "data"}
+        rows_by_domain[domain] = result.get("data") or []
     return rows_by_domain
 
 
@@ -910,14 +918,14 @@ def build_payload(rows: list[dict[str, Any]], days: int) -> dict[str, Any]:
     }
 
 
-def build_html(payload: dict[str, Any]) -> str:
-    data_json = json.dumps(payload, ensure_ascii=False, indent=2).replace("</script", "<\\/script")
+def build_legacy_html(payload: dict[str, Any]) -> str:
+    data_json = json.dumps(payload, ensure_ascii=False, indent=2).replace("<", "\\u003c")
     return f"""<!doctype html>
 <html lang="ko">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>결함 대시보드</title>
+  <title>QA Dashboard</title>
   <style>
     :root {{
       color-scheme: light;
@@ -1312,23 +1320,31 @@ def build_html(payload: dict[str, Any]) -> str:
     <header>
       <div>
         <div class="hero-head">
-          <h1>결함 대시보드</h1>
+          <h1>QA DASHBOARD</h1>
           <button class="sync-btn" id="syncButton" type="button">동기화</button>
         </div>
-        <p class="lead">본 대시보드는 결함 등록, 검토, 배정, 수정 및 종료 현황을 기반으로 서비스 품질 흐름을 시각화한 내부 관리자 전용 화면입니다.</p>
+        <p class="lead">결함 현황, QA 업무와 일정을 한곳에서 확인하는 내부 품질 관리 대시보드입니다.</p>
         <div class="notice">승인된 담당자 외 접근·열람·수정·공유를 제한하며, 모든 결함 정보 및 이력 데이터는 내부 품질 관리 목적으로만 사용됩니다.</div>
         <div class="sync-meta" id="syncStatus"></div>
       </div>
       <div class="stamp" id="stamp"></div>
     </header>
-    <div class="domain-switch" id="domainSwitch" aria-label="도메인 분기"></div>
-    <nav class="tabs" aria-label="대시보드 탭">
-      <button class="tab active" data-view="overview">흐름 요약</button>
-      <button class="tab" data-view="trend">일별 추이</button>
-      <button class="tab" data-view="version">버전/분포</button>
-      <button class="tab" data-view="recent">최근 결함</button>
-      <button class="tab" data-view="project">프로젝트별 결함 현황</button>
+    <nav class="tabs global-tabs" aria-label="QA Dashboard 메뉴">
+      <button class="global-tab active" data-section="defects" aria-selected="true">결함 현황</button>
+      <button class="global-tab" data-section="tasks" aria-selected="false">QA 업무 진행 현황</button>
+      <button class="global-tab" data-section="quality" aria-selected="false">QA 품질 관리</button>
     </nav>
+    <div id="sourceStatus" class="source-status" aria-live="polite"></div>
+    <div id="defectControls" class="panel qa-controls">
+      <div><span class="meta">서비스</span><div class="domain-switch" id="domainSwitch" aria-label="서비스"></div></div>
+      <label for="analysisSelect">분석 화면
+        <select id="analysisSelect" class="project-select">
+          <option value="overview">흐름 요약</option><option value="trend">일별 추이</option>
+          <option value="version">버전 / 분포</option><option value="recent">최근 결함</option>
+          <option value="project">프로젝트별 결함 현황</option>
+        </select>
+      </label>
+    </div>
     <section class="summary" id="summary"></section>
     <main>
       <section class="view active" id="overview">
@@ -1664,8 +1680,8 @@ def build_html(payload: dict[str, Any]) -> str:
         "GoHanpass": DATA.domains["GoHanpass"].summary.total,
       }};
       const buttons = [
-        ...domainNames.map((name) => `<button class="domain-btn ${{selectedDomain === name ? "active" : ""}}" data-domain="${{name}}">${{name}} <span class="subtle">(${{scopeCounts[name] || 0}})</span></button>`),
         `<button class="domain-btn ${{selectedDomain === "ALL" ? "active" : ""}}" data-domain="ALL">전체 <span class="subtle">(${{scopeCounts.ALL || 0}})</span></button>`,
+        ...domainNames.map((name) => `<button class="domain-btn ${{selectedDomain === name ? "active" : ""}}" data-domain="${{name}}">${{name === "한패스" ? "Hanpass" : "Gohanpass"}} <span class="subtle">(${{scopeCounts[name] || 0}})</span></button>`),
       ];
       $("domainSwitch").innerHTML = buttons.join("");
       document.querySelectorAll(".domain-btn").forEach((button) => {{
@@ -1695,7 +1711,9 @@ def build_html(payload: dict[str, Any]) -> str:
         ["진행중", s.inProgress, "개발/수정 진행"],
         ["수정완료", s.fixed, "QA 확인 전후"],
         ["종료/완료", s.closed, "종료 단계"],
+        ["Critical", s.critical ?? 0, "전체 Critical 심각도"],
         ["금일 신규", s.todayNew, "오늘 등록 수"],
+        ["금일 종료", s.todayClosed ?? 0, "기존 종료일 보정 기준"],
         ["전일 대비", s.newDelta, s.newDelta > 0 ? "증가" : s.newDelta < 0 ? "감소" : "변동 없음"],
       ];
       $("summary").innerHTML = cards.map(([label, value, note]) => `
@@ -1715,7 +1733,7 @@ def build_html(payload: dict[str, Any]) -> str:
       `).join("");
     }}
 
-    function renderDaily(days = DATA.days) {{
+    function renderDaily(days = Number(document.querySelector(".range-btn.active")?.dataset.days || DATA.days)) {{
       const rows = currentScope().daily.slice(-days);
       const max = Math.max(...rows.flatMap((d) => [d.new, d.fixed, d.closed]), 1);
       $("dailyChart").innerHTML = rows.map((d) => `
@@ -2073,16 +2091,6 @@ def build_html(payload: dict[str, Any]) -> str:
       window.location.replace(url.toString());
     }}
 
-    document.querySelectorAll(".tab").forEach((button) => {{
-      button.addEventListener("click", () => {{
-        document.querySelectorAll(".tab").forEach((item) => item.classList.toggle("active", item === button));
-        document.querySelectorAll(".view").forEach((view) => view.classList.toggle("active", view.id === button.dataset.view));
-        if (button.dataset.view === "project") {{
-          renderProjectProgress();
-        }}
-      }});
-    }});
-
     document.querySelectorAll(".range-btn").forEach((button) => {{
       button.classList.toggle("active", Number(button.dataset.days) === DATA.days);
       button.addEventListener("click", () => {{
@@ -2122,6 +2130,10 @@ def build_html(payload: dict[str, Any]) -> str:
 </body>
 </html>
 """
+
+
+def build_html(payload: dict[str, Any]) -> str:
+    return qa_dashboard.integrate_html(build_legacy_html(payload), SimpleNamespace(**globals()))
 
 
 def run_git(args: list[str], cwd: Path, check: bool = True) -> subprocess.CompletedProcess[str]:
@@ -2193,10 +2205,17 @@ def main() -> int:
     if not output_path.is_absolute():
         output_path = SCRIPT_DIR / output_path
 
-    pages = fetch_pages()
-    rows = [normalize_page(page) for page in pages]
+    defect_source = qa_dashboard.sync_source(
+        SCRIPT_DIR / "data" / "defects.json",
+        lambda: [normalize_page(page) for page in fetch_pages()],
+    )
+    rows = defect_source.get("data") or []
     payload = build_payload(rows, args.days)
-    output_path.write_text(build_html(payload), encoding="utf-8")
+    payload["defectSource"] = {k: v for k, v in defect_source.items() if k != "data"}
+    payload = qa_dashboard.extend_payload(payload, rows, SimpleNamespace(**globals()))
+    payload["sources"].update({"report-" + k: v for k, v in REPORT_SOURCE_STATUS.items()})
+    html = build_html(payload)
+    output_path.write_text(html, encoding="utf-8")
     log(f"generated {output_path} with {len(rows)} rows")
     published = publish_html(output_path) if args.publish else False
     summary = {

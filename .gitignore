@@ -3,3 +3,8 @@ __pycache__/
 .DS_Store
 .env
 .publish/
+
+# Local successful snapshots contain internal QA records; publish only generated HTML.
+data/
+
+validation/*.png

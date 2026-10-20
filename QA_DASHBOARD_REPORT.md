@@ -1,0 +1,176 @@
+# 통합 QA Dashboard 작업 보고
+
+검증 기준: 2026-10-20 KST. 실제 Notion API 응답을 조회한 뒤 구현했으며 원본 Notion 데이터는 변경하지 않았습니다. 로컬 구현 및 검증 완료, 원격 게시·Actions 실행은 수행하지 않았습니다.
+
+## 1. 기존 프로젝트 분석 결과
+
+`Bug_Dashboard`는 별도 Git 저장소입니다. 기존 `generate_defect_dashboard.py`가 Notion 결함 DB와 Hanpass/GoHanpass 제보함 DB를 페이지네이션 조회하고, Python에서 서비스별 KPI·차트·프로젝트 상세를 집계한 후 단일 `defect_dashboard_embed.html`을 생성합니다. 차트는 기존 SVG/HTML 렌더링을 재사용합니다.
+
+상위 `run_all_notion.py`가 생성기를 호출합니다. `.github/workflows/run_all_notion.yml`은 KST 08:30/17:30 실행, 수동 실행, 기존 Secrets를 사용하며 매 실행 시 원격 Bug_Dashboard/main을 갱신합니다. 생성기의 기존 publish 함수는 `.publish/defect-dashboard` 체크아웃에 HTML을 복사하고 커밋·푸시합니다.
+
+운영 URL은 웹 도구로 직접 읽을 수 없었습니다. 분석·비교는 로컬 운영 소스, 기존 생성 HTML, 실제 Notion API 데이터를 근거로 수행했습니다.
+
+## 2. Notion DB 분석 결과
+
+### 결함 DB
+
+- DB: `21473fbd1951800d8321fc2e34c2548e`, 실제 데이터 1,992건.
+- 확인한 속성: `결함 제목` title, `상태` status, `심각도` select, `목표버전` select, `결함 유형` select, `조치 담당자` people, `우선순위` status, 생성 시각, 제보함 relation, 자기참조 `관련된 이슈` relation 등.
+- 실제 심각도: Critical / Major / Minor / 개선 의견.
+- 실제 상태: 등록 (Registered), 배정 (Assigned), 기획서 수정, 처리중 (In Progress), 개발 완료 (Dev Done), 결함 재발생 (Reopen), QA 검증 -회귀 (QA Verification), Known-Issue, 추척 관찰-백로그, 결함 아님 (Not an issue), 추후 수정 백로그 이관, 완료 (Done).
+- 서비스 전용 속성은 없습니다. 기존 `목표버전`의 `[G.H]`, `[Go.Hanpass]`, Hanpass 버전·기능명 및 제목 기반 분류를 보존했습니다. 모호한 11건(버전 없음 8건, 결함 아님 버전 3건)은 기존처럼 Hanpass에 포함됩니다. GoHanpass 제보함 relation이 있는 행과 기존 GoHanpass 판정이 충돌하는 사례는 이번 원본에서 0건입니다. 서비스별 완전한 정답 속성이 있다는 뜻은 아닙니다.
+
+### QA 업무 DB
+
+- DB: `7ab73fbd195182da9862015f449308d5`, 실제 데이터 15건.
+- 실제 속성: `이름` title, `선택` select, `날짜` date(range), `TC 개발 유/무` select, `TC 개수` number, `최소 테스트 예상 기간` rich_text, `우선순위` select, 선행/후속 작업 relation, `❤️‍🔥 QA 업무 진행 현황` relation.
+- 실제 상태: 테스트 진행중 / 1차 테스트 완료 / 테스트 예정 / **태스트 완료** / 테스트 중지. 원본 오탈자를 수정하지 않고 화면에서 완료로 분류했습니다.
+- 분류 결과: 진행중 2 / 예정 4 / 완료 6 / 단계 완료 1 / 중지 2. 지연·주의 2건은 이 분류와 중복되는 별도 지표입니다.
+- 담당자 전용 속성은 없지만 연결된 QA 업무 DB(`2a773fbd19518018af97e393d017f526`)에는 `담당자` people 속성이 있습니다. 실제 relation으로 연결된 페이지에 한해 담당자를 가져오고 출처를 표시합니다. 제목이 비슷하다는 이유로 연결하지 않습니다.
+- 서비스·퍼센트 진행률·Release 연결 속성은 없으므로 해당 지표는 만들지 않았습니다. TC 개수는 규모로 표시하며 수행률·통과율로 해석하지 않습니다.
+
+### IT Quality Assurance
+
+- Page: `1fa73fbd195180a59f39d3ae80362936`.
+- 최초 분석에서 333개 block의 구조·실제 내용을 확인했습니다. 실행 시 최대 3단계, 48개 컨테이너를 조회했고 하위 조회 실패는 0건입니다.
+- QA 업무 진행 현황, TC 진행 현황, 테스트 정보, 장애보고서, 서비스별 테스트 케이스 DB, 테스트 계획서·결과서·운영 배포 테스트·Test Design·Release 문서 등을 확인했습니다.
+- 하위 DB 17개는 구조·링크를 확인했습니다. 모든 DB의 행을 읽어 지표화한 것은 아닙니다. 검증하지 않은 DB에 근거한 통과율·Coverage·릴리즈 등급을 만들지 않았습니다.
+
+## 3. 변경된 Dashboard IA
+
+```
+QA DASHBOARD
+├─ 결함 현황
+│  ├─ 서비스: 전체 / Hanpass / Gohanpass
+│  └─ 분석 화면 Select: 흐름 요약 / 일별 추이 / 버전·분포 / 최근 결함 / 프로젝트별 현황
+├─ QA 업무 진행 현황
+│  ├─ 진행·예정·완료·주의 KPI, 상태/일정 필터
+│  ├─ 상태별 업무 목록, TC 준비, 실제 연결 담당자
+│  └─ 진행·예정 Timeline
+└─ QA 품질 관리
+   ├─ Executive Summary
+   ├─ 미해결 Critical/Major
+   ├─ 장기 미처리 결함
+   ├─ QA 일정·TC 준비 상태
+   └─ 주요 문서·링크
+```
+
+상단 메뉴는 sticky 처리했습니다. 각 화면 전환에는 Notion API 요청이 없습니다. 업무의 서비스 정보가 없으므로 품질 화면의 서비스 필터는 결함 지표에만 적용한다고 명시했습니다.
+
+## 4. 추가/수정 파일
+
+| 파일 | 내용 |
+| --- | --- |
+| generate_defect_dashboard.py | 기존 생성기에 신규 데이터·화면 통합, 제보함별 장애 격리, 분석 Select, Critical·금일 종료 KPI |
+| qa_dashboard.py | 실제 스키마 검증, QA 소스 동기화, 캐시, 파생 지표, Risk 정책 분리 |
+| qa_dashboard.js | 상단 탭, 업무 목록·필터·Timeline, 품질 관리 화면 |
+| qa_dashboard.css | 기존 색상·카드 스타일을 사용하는 반응형 확장 |
+| defect_dashboard_embed.html | 실제 데이터로 생성한 통합 화면 |
+| tests/test_qa_dashboard.py | 상태·날짜·스키마·캐시·장애 격리·JSON 보안 테스트 |
+| tests/browser_dashboard.py | 탭·분석·서비스·버전·링크·반응형·소스 실패 브라우저 검증 |
+| validation/browser_results.json | 브라우저 검증 결과 |
+| README.md / .gitignore | 실행 안내 및 내부 캐시·화면 캡처 Git 제외 |
+| QA_DASHBOARD_REPORT.md | 본 보고서 |
+
+`validation/*.png`에 실제 결함·업무·품질·태블릿·모바일 화면을 저장했습니다. 내부 데이터가 포함되어 Git에서는 제외했습니다.
+
+## 5. 결함 현황 변경사항
+
+- 기존 5개 분석 버튼을 Select로 변경하고 상단 3개 메뉴와 분리했습니다.
+- 서비스 표시명은 Hanpass/Gohanpass로 정리하되 내부 키와 분류·통계 기준은 유지했습니다.
+- 기존 KPI를 보존하고 Critical, 금일 종료를 추가했습니다.
+- 퍼널, 30일 히트맵, 제보함, 일별 차트, 버전 분포, 최근 10건, 프로젝트별 상세·완료버전 제외·버전 새로고침을 유지했습니다.
+- 서비스 전환 시 선택한 일별 기간이 유지되도록 수정했습니다.
+- 최근 결함 링크는 API의 실제 `https://app.notion.com/p/...` URL과 일치함을 확인했습니다.
+
+## 6. QA 업무 진행 현황 구현 내용
+
+상태별 카드·목록과 7/14/30일 일정 겹침 필터를 제공합니다. 기본은 전체 일정입니다. 기간 필터 적용 시 날짜 미정 업무는 해당 기간에 포함할 근거가 없어 제외되며, 전체 일정에서는 조회됩니다.
+
+지연은 실제 날짜의 **end**가 KST 기준 오늘보다 이전이면서 진행중·예정·단계 완료일 때만 파생 표시합니다. 시작일만 있는 업무에는 종료일을 만들지 않습니다. 완료·중지 업무는 지연에서 제외합니다. 원본 상태는 함께 표시합니다.
+
+Timeline은 오늘 −14일 ~ +30일이며 진행·예정·단계 완료 중 날짜가 있는 업무만 시간축에 표시합니다. 종료일이 없으면 시작일 위치만 표시합니다. 기간 밖 및 일정 미정 건수를 안내하고 전체 목록에서 원본을 열 수 있습니다.
+
+## 7. QA 품질 관리 구현 내용
+
+실제 데이터에 근거한 5개 영역을 제공합니다. 전체 서비스 기준 미해결 Critical 20건, Major 210건, 개발 완료·미검증 11건, 등록 후 30일 이상 미처리 272건입니다. 상세 목록은 최대 50건과 전체 건수를 구분해 표시합니다.
+
+미해결 판정은 기존 프로젝트 상세의 `is_done_row`, `is_backlog_transfer_row`, `is_dev_done_row`를 재사용합니다. 개발 완료는 최종 완료가 아닙니다. 장기 미처리는 상태 체류 시간이 아니라 등록 후 경과일 기준입니다.
+
+`release_risk()`로 향후 정책 수정 지점을 분리했습니다. 검증된 릴리즈 연결·배포 예정일이 없어 등급은 미산출하고 사유를 표시합니다. 자기참조 relation만으로 반복 발생 결함이라고 단정하지 않았습니다.
+
+## 8. 데이터 동기화 구조
+
+```
+Notion (기존 NOTION_TOKEN)
+ → 기존 Python 생성기 + qa_dashboard.py
+ → 소스별 로컬 data/*.json 성공 스냅샷
+ → 집계 및 QA 파생 지표
+ → JSON/JS/CSS를 인라인으로 포함한 단일 HTML
+ → 기존 GitHub Pages publish
+```
+
+결함 / 업무 / 품질 / 각 제보함의 성공·실패·마지막 성공 시각을 분리합니다. 실패 시 해당 소스의 이전 성공 스냅샷만 사용하고 stale을 표시합니다. 캐시가 없으면 조회 실패를 표시합니다. 내부 API 오류 응답 전체나 인증값은 HTML에 넣지 않습니다.
+
+로컬 캐시는 Git 제외입니다. 새 Actions runner에는 이전 로컬 캐시가 없으므로 runner 간 복구까지 원하면 별도의 비공개 캐시 보존 설정이 필요합니다. 이번 작업에서는 기존 Actions 설정을 변경하지 않았습니다.
+
+## 9. 기존 기능 영향도
+
+같은 1,992개 원본 행으로 변경 전 코드와 변경 후 코드를 비교했습니다. 정규화된 모든 행과 3개 scope의 기존 summary, funnel, daily, versions, versionGroups, projectProgress, distributions, heatmap, reportBoard, recent 및 기본 선택값이 동일했습니다. 생성 HTML에 들어간 집계도 같은 기준으로 비교했습니다.
+
+| 비교 기준 | 전체 | Hanpass | GoHanpass |
+| --- | ---: | ---: | ---: |
+| 기존 로컬 HTML (10/13) | 1,925 | 1,479 | 446 |
+| 기존 코드 + 10/20 동일 원본 | 1,992 | 1,546 | 446 |
+| 신규 코드 + 10/20 동일 원본 | 1,992 | 1,546 | 446 |
+
+기존 HTML 대비 67건 차이는 최신 원본에 추가된 Hanpass 데이터이며 집계 변경 때문이 아닙니다. 시간에 따라 달라지는 지표를 옛 HTML과 숫자만 비교하지 않았습니다.
+
+기존 환경변수, Notion API 버전, publish 위치·브랜치, workflow dispatch 방식, 통합 실행기와 GitHub Pages 파일명을 유지했습니다.
+
+## 10. 테스트 결과
+
+- Python 단위 테스트 12개 통과: 지연 경계일, 종료일 누락, 완료·중지·단계 완료, 미확인 상태, 미래 일정의 완료 상태 경고, KST 날짜, 캐시 보존, 스키마 변경 차단, Risk 미산출, 기존 상세 판정 재사용, JSON script 종료 주입 방지, 신규 소스 실패 시 기존 집계 유지.
+- 변경 전 코드와 실제 원본 기준 전체 집계 비교 통과.
+- Chromium: 상단 3개 탭, 5개 분석 화면, 서비스별 KPI, Target Version 및 완료버전 제외, 7일 필터 유지, 원본 Notion URL 일치 확인.
+- 업무 상태 필터, 일정 범위, Timeline, 품질 서비스 선택 확인.
+- QA 품질 소스 실패를 재현해 결함 1,992건과 업무 15건 및 탭 동작 유지 확인.
+- 화면 너비 1440 / 768 / 390px 검증, 태블릿·모바일 페이지 전체 가로 넘침 없음. 넓은 표는 내부 스크롤 처리.
+- 브라우저 JavaScript 오류 0건. 화면·필터 전환 중 네트워크 요청 0건. 기존 5분 주기 배포 갱신 감시와 명시적 동기화 요청은 유지.
+- 설정된 실제 Notion/PUBLISH 토큰이 생성 HTML에 포함되지 않음을 검사했습니다. JSON 안의 `<`를 Unicode escape하여 script 종료 삽입을 방지합니다.
+- Python 컴파일 및 JavaScript 문법 검사 통과.
+- 원격 GitHub Actions 실행·실제 Pages 배포 후 동작은 미검증입니다. 로컬 HTTP에서 배포와 동일한 단일 정적 HTML의 동작을 검증했습니다.
+
+## 11. 발견된 문제 / 추가 개선 권고
+
+1. **서비스 판정의 모호성:** 원본 결함 DB에 서비스 속성을 추가하면 11개 모호한 행을 명시적으로 분류할 수 있습니다. 이번에는 집계 기준 보존을 위해 재분류하지 않았습니다.
+2. **기존 상태 정규화:** `개발 완료 (Dev Done)`는 기존 summary/funnel에서 종료로 분류되지만 프로젝트 상세는 미검증으로 구분합니다. 이번에는 기존 집계를 보존했습니다. 향후 원본 상태 기준 통합 시 별도 승인된 지표 마이그레이션이 필요합니다.
+3. **기존 필드 매핑:** 실제 담당자는 `조치 담당자`, 고유 ID는 `ID ISSUE-2272`인데 기존 FIELD_MAP과 맞지 않는 부분이 있습니다. 기존 통계·렌더링을 유지하고 범위 밖 매핑 변경은 하지 않았습니다.
+4. **QA 입력 완전성:** 예정 4건은 일정 미정이며, 담당자 relation이 없는 업무가 있습니다. 미래 시작일인데 완료로 표시된 업무 1건은 화면에서 확인 필요로 표시합니다.
+5. **Release Risk 근거:** 업무↔릴리즈↔결함 연결과 확정 배포 예정일, 실제 검증 완료 정보가 확보되면 Risk 정책을 확장할 수 있습니다.
+6. **크롤링 범위:** QA 페이지 탐색은 최대 3단계이며, 발견한 모든 TC·장애 DB의 상세 행을 통계화하지 않았습니다. 문서 링크가 있다는 것과 해당 문서 내용의 지표 검증은 구분합니다.
+7. **배포 반영:** 상위 workflow는 원격 Bug_Dashboard/main을 가져옵니다. 생성 HTML만 수동 업로드하고 새 Python/JS/CSS를 반영하지 않으면 다음 자동 실행에 새 구조가 유지되지 않습니다.
+
+## 12. 실행 및 배포 방법
+
+`Bug_Dashboard` 디렉터리에서:
+
+```bash
+# 로컬 갱신: 기존 .env / NOTION_TOKEN 재사용
+python3 generate_defect_dashboard.py --no-publish
+
+# 로컬 확인
+python3 -m http.server 8765 --bind 127.0.0.1
+# http://127.0.0.1:8765/defect_dashboard_embed.html
+
+# 단위 테스트
+python3 -m unittest discover -s tests -v
+
+# Playwright/Chromium이 있는 개발 환경의 브라우저 검증
+python3 tests/browser_dashboard.py
+
+# 검토 후 기존 Pages 게시 방식 사용
+python3 generate_defect_dashboard.py --publish
+```
+
+자동화에 적용하려면 수정 생성기와 `qa_dashboard.py`, `qa_dashboard.js`, `qa_dashboard.css`, 문서·테스트를 Bug_Dashboard 원격 저장소에 반영한 뒤 기존 통합 실행 workflow를 실행합니다. Secrets 이름과 HTML 경로는 그대로입니다. 이번 작업에서는 원격 커밋·푸시·배포를 하지 않았습니다.

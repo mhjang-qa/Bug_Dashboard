@@ -1,0 +1,12 @@
+{
+  "browser": "Chromium",
+  "consoleErrors": [],
+  "tabSwitchRequests": [],
+  "sourceFailureIsolation": "PASS",
+  "viewports": [
+    1440,
+    768,
+    390
+  ],
+  "result": "PASS"
+}

@@ -165,7 +165,7 @@
     const gap=parseFloat(style.rowGap)||0;
     const panel=container.closest('.panel');
     const after=panel ? Array.from(panel.children).filter(n=>n.compareDocumentPosition(container)&Node.DOCUMENT_POSITION_PRECEDING).reduce((sum,n)=>sum+(n===container||n.contains(container)?0:n.getBoundingClientRect().height+6),0) : 0;
-    const headHeight=container.tagName==='TABLE' ? container.querySelector('thead')?.getBoundingClientRect().height||0 : container.querySelector('.qa-timeline-head')?.getBoundingClientRect().height||0;
+    const headHeight=container.tagName==='TABLE' ? container.querySelector('thead')?.getBoundingClientRect().height||0 : container.querySelector('.qa-timeline-head, h2')?.getBoundingClientRect().height||0;
     const available=innerHeight-container.getBoundingClientRect().top-22-after-headHeight;
     const take=Math.max(columns,Math.floor((available+gap)/(rowHeight+gap))*columns);
     const pages=Math.max(1,Math.ceil(items.length/take));
@@ -196,6 +196,21 @@
     if (section==='defects') {
       const view=$('analysisSelect').value;
       if (view==='overview'||view==='version') focusPanels($(view).querySelector('.grid'),'panels-'+view);
+      if(view==='overview') {
+        const wrap=$('heatmap').closest('.heatmap-wrap'), panel=wrap.closest('.panel');
+        let selector=$('overviewDetailSelect');
+        if(!selector) {
+          selector=document.createElement('select');selector.id='overviewDetailSelect';selector.setAttribute('aria-label','요약 상세 화면');
+          selector.innerHTML='<option value="heatmap">최근 30일 등록 히트맵</option><option value="reports">결함 제보 현황</option>';
+          wrap.before(selector);selector.onchange=scheduleFit;
+        }
+        const small=innerWidth<900&&innerHeight<750;
+        selector.hidden=!small;panel.querySelector('h2').hidden=small;
+        $('heatmap').hidden=small&&selector.value==='reports';
+        wrap.querySelector('.heatmap-scale').hidden=small&&selector.value==='reports';
+        wrap.querySelector('.report-board').hidden=small&&selector.value!=='reports';
+        wrap.querySelector('.report-board .panel-head').hidden=small;
+      }
       if (view==='version') {
         const dist=$('distributions');
         const boxes=Array.from(dist.children);
@@ -216,6 +231,8 @@
         }
         const mode=selector.value; $('projectSummary').hidden=['daily','type'].includes(mode);
         const tablePanel=$('projectProgressTable').closest('.panel'), chartPanel=$('projectCharts').closest('.panel');
+        tablePanel.querySelector('.panel-head').hidden=true;
+        selector.title=$('projectSnapshotLabel').textContent;
         tablePanel.hidden=!['status','severity'].includes(mode);chartPanel.hidden=!['daily','type'].includes(mode);
         $('projectProgressTable').querySelectorAll('.project-detail-section').forEach((n,i)=>n.hidden=i!==(mode==='severity'?1:0));
         $('projectCharts').hidden=mode!=='daily';$('projectTypeChart').hidden=mode!=='type';
@@ -231,7 +248,7 @@
       if(excess)chart.style.height=Math.max(60,chart.getBoundingClientRect().height-excess)+'px';
     });
     if(section==='tasks'&&taskView==='list') focusPanels(tasksPanel.querySelector('.qa-work-columns'),'task-columns');
-    const lists=[['versions','.version-item'],['reportList','.report-item'],['taskCurrentList','.qa-task-card'],['taskUpcomingList','.qa-task-card'],['qualityDocuments','li']];
+    const lists=[['funnel','.funnel-row'],['versions','.version-item'],['reportList','.report-item'],['taskCurrentList','.qa-task-card'],['taskUpcomingList','.qa-task-card'],['qualityDocuments','li']];
     for(const [id,sel] of lists) {
       const node=$(id);
       if(node?.getClientRects().length) {
@@ -244,6 +261,7 @@
       table.querySelectorAll('td,th').forEach(cell=>{if(!cell.title)cell.title=cell.textContent.trim();});
       paginateItems(table,Array.from(table.querySelectorAll('tbody > tr')),table.closest('[id]')?.id+'-table-'+i);
     });
+    document.querySelectorAll('.dist-list').forEach(node=>paginateItems(node,Array.from(node.querySelectorAll('.row')),'distribution-'+node.querySelector('h2')?.textContent));
     document.querySelectorAll('.project-pie-legend').forEach(node=>paginateItems(node,Array.from(node.children),'project-pie-legend'));
     document.querySelectorAll('.qa-timeline').forEach(node=>paginateItems(node,Array.from(node.querySelectorAll('.qa-timeline-row')),'timeline'));
     observe();

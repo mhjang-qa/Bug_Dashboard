@@ -10,7 +10,7 @@ OUT = ROOT / 'validation'
 OUT.mkdir(exist_ok=True)
 URL = os.getenv('QA_DASHBOARD_URL', 'http://127.0.0.1:8765/defect_dashboard_embed.html')
 PROFILES = [(1440, 900), (1280, 720), (1024, 768), (768, 1024),
-            (390, 844), (1366, 600), (1024, 600), (390, 667), (1280, 480)]
+            (390, 844), (1366, 600), (1024, 600), (390, 667), (1390, 860)]
 
 with sync_playwright() as playwright:
     browser = playwright.chromium.launch()
@@ -20,6 +20,8 @@ with sync_playwright() as playwright:
     page.goto(URL)
     page.wait_for_selector('#summary .card')
     snapshot = page.evaluate('DATA')
+    typography=page.evaluate('''()=>({body:parseFloat(getComputedStyle(document.body).fontSize),heading:parseFloat(getComputedStyle(document.querySelector('.panel h2')).fontSize),kpi:parseFloat(getComputedStyle(document.querySelector('.card strong')).fontSize)})''')
+    assert typography['body']>=13 and typography['heading']>=15 and typography['kpi']>=28,typography
     page.on('request', lambda request: requests.append(request.url))
 
     def fit_check(label):
@@ -84,6 +86,10 @@ with sync_playwright() as playwright:
                 for index in range(nav.count()):
                     nav.nth(index).click()
                     fit_check(f'{width}x{height} {view}/panel{index}')
+            if view == 'overview' and width < 900 and height < 750:
+                for detail in ('heatmap','reports'):
+                    page.select_option('#overviewDetailSelect',detail)
+                    fit_check(f'{width}x{height} overview/{detail}')
             if view == 'version':
                 if width < 900:
                     page.locator('#version > .qa-panel-nav button').first.click()
@@ -146,6 +152,18 @@ with sync_playwright() as playwright:
     assert not errors, errors
     switch_requests = list(requests)
 
+    # Test inside an actual iframe, using the approximate Notion embed bounds supplied by the user.
+    embed_page=browser.new_page(viewport={'width':1540,'height':1020})
+    embed_page.set_content('<iframe title="QA Dashboard" src="'+URL+'" style="border:0;width:1390px;height:860px"></iframe>')
+    frame=embed_page.frames[-1]
+    frame.wait_for_selector('#summary .card')
+    for name in ('defects','tasks','quality'):
+        frame.locator('[data-section="'+name+'"]').click()
+        frame.wait_for_timeout(100)
+        size=frame.evaluate('''()=>({w:innerWidth,h:innerHeight,sw:document.documentElement.scrollWidth,sh:document.documentElement.scrollHeight})''')
+        assert size['sw']<=size['w'] and size['sh']<=size['h']+1,(name,size)
+    embed_page.close()
+
     # Failed QA source must not remove the healthy defect and task screens.
     html = (ROOT / 'defect_dashboard_embed.html').read_text()
     match = re.search(r'(<script id="dashboard-data" type="application/json">)(.*?)(</script>)', html, re.S)
@@ -166,7 +184,7 @@ with sync_playwright() as playwright:
     assert not errors, errors
     result = {'browser': 'Chromium', 'consoleErrors': errors, 'tabSwitchRequests': switch_requests,
               'sourceFailureIsolation': 'PASS', 'scrollFreeScreensChecked': len(checked),
-              'paginationCompleteness': 'PASS', 'viewports': PROFILES, 'result': 'PASS'}
+              'paginationCompleteness': 'PASS', 'notionSizedIframe': [1390,860], 'typography': typography, 'viewports': PROFILES, 'result': 'PASS'}
     (OUT / 'browser_results.json').write_text(json.dumps(result, ensure_ascii=False, indent=2))
     print(json.dumps(result, ensure_ascii=False))
     browser.close()

@@ -3,8 +3,17 @@
   "consoleErrors": [],
   "tabSwitchRequests": [],
   "sourceFailureIsolation": "PASS",
-  "scrollFreeScreensChecked": 285,
+  "scrollFreeScreensChecked": 299,
   "paginationCompleteness": "PASS",
+  "notionSizedIframe": [
+    1390,
+    860
+  ],
+  "typography": {
+    "body": 13,
+    "heading": 15,
+    "kpi": 28
+  },
   "viewports": [
     [
       1440,
@@ -39,8 +48,8 @@
       667
     ],
     [
-      1280,
-      480
+      1390,
+      860
     ]
   ],
   "result": "PASS"

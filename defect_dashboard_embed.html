@@ -731,7 +731,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
     </div>
   </div>
   <script id="dashboard-data" type="application/json">{
-  "generatedAt": "2026-10-20T13:47:57+00:00",
+  "generatedAt": "2026-10-21T01:52:30+00:00",
   "days": 30,
   "domainOrder": [
     "한패스",
@@ -740,21 +740,21 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
   "domains": {
     "ALL": {
       "summary": {
-        "total": 1994,
-        "new": 221,
-        "inProgress": 18,
+        "total": 1997,
+        "new": 223,
+        "inProgress": 16,
         "fixed": 0,
-        "closed": 1458,
-        "todayNew": 7,
-        "newDelta": -5,
+        "closed": 1461,
+        "todayNew": 3,
+        "newDelta": -4,
         "critical": 94,
-        "todayClosed": 326
+        "todayClosed": 14
       },
       "funnel": [
         {
           "stage": "등록",
-          "count": 221,
-          "rate": 11.1,
+          "count": 223,
+          "rate": 11.2,
           "width": 15
         },
         {
@@ -771,8 +771,8 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
         },
         {
           "stage": "진행중",
-          "count": 18,
-          "rate": 0.9,
+          "count": 16,
+          "rate": 0.8,
           "width": 6
         },
         {
@@ -789,25 +789,18 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
         },
         {
           "stage": "종료",
-          "count": 1458,
-          "rate": 73.1,
+          "count": 1461,
+          "rate": 73.2,
           "width": 100
         }
       ],
       "daily": [
         {
-          "date": "2026-09-21",
-          "new": 24,
-          "fixed": 758,
-          "closed": 701,
-          "deltaNew": 24
-        },
-        {
           "date": "2026-09-22",
           "new": 20,
           "fixed": 3,
           "closed": 3,
-          "deltaNew": -4
+          "deltaNew": 20
         },
         {
           "date": "2026-09-23",
@@ -1001,29 +994,60 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
         {
           "date": "2026-10-20",
           "new": 7,
-          "fixed": 328,
-          "closed": 326,
+          "fixed": 317,
+          "closed": 315,
           "deltaNew": -5
+        },
+        {
+          "date": "2026-10-21",
+          "new": 3,
+          "fixed": 14,
+          "closed": 14,
+          "deltaNew": -4
         }
       ],
       "versions": [
         {
+          "version": "6.0.3",
+          "total": 2,
+          "criticalMajor": 1,
+          "doneRate": 0.0,
+          "status": [
+            {
+              "label": "등록",
+              "count": 2
+            }
+          ],
+          "severity": [
+            {
+              "label": "Major",
+              "count": 1
+            },
+            {
+              "label": "Minor",
+              "count": 1
+            }
+          ],
+          "priority": [
+            {
+              "label": "Medium",
+              "count": 2
+            }
+          ]
+        },
+        {
           "version": "6.0.2",
-          "total": 19,
-          "criticalMajor": 6,
-          "doneRate": 57.9,
+          "total": 20,
+          "criticalMajor": 8,
+          "doneRate": 70.0,
           "status": [
             {
               "label": "등록",
               "count": 6
             },
             {
-              "label": "진행중",
-              "count": 2
-            },
-            {
               "label": "종료",
-              "count": 11
+              "count": 14
             }
           ],
           "severity": [
@@ -1033,17 +1057,17 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "label": "Major",
-              "count": 4
+              "count": 6
             },
             {
               "label": "Minor",
-              "count": 13
+              "count": 12
             }
           ],
           "priority": [
             {
               "label": "Medium",
-              "count": 19
+              "count": 20
             }
           ]
         },
@@ -2510,6 +2534,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
       ],
       "versionGroups": {
         "ALL": [
+          "6.0.3",
           "6.0.2",
           "6.0.0",
           "5.25.0 (완료)",
@@ -2555,11 +2580,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "Hanpass - Backlog"
         ],
         "RECENT": [
+          "6.0.3",
           "6.0.2",
           "6.0.0",
           "5.25.0 (완료)",
-          "5.24.2 (완료)",
-          "5.24.0 (완료)"
+          "5.24.2 (완료)"
         ],
         "BACKLOG": [
           "Hanpass - Backlog"
@@ -2567,16 +2592,113 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
       },
       "projectProgress": [
         {
-          "version": "6.0.2",
-          "total": 19,
-          "open": 8,
-          "devDone": 10,
+          "version": "6.0.3",
+          "total": 2,
+          "open": 2,
+          "devDone": 0,
           "qaRegression": 0,
           "backlogTransfer": 0,
-          "done": 1,
-          "scopeTotal": 19,
-          "doneRate": 57.9,
-          "latestSnapshot": "2026-10-20",
+          "done": 0,
+          "scopeTotal": 2,
+          "doneRate": 0.0,
+          "latestSnapshot": "2026-10-21",
+          "severityRows": [
+            {
+              "severity": "Critical",
+              "open": 0,
+              "devDone": 0,
+              "qaRegression": 0,
+              "backlogTransfer": 0,
+              "done": 0,
+              "total": 0,
+              "rate": 0,
+              "previousRate": 0
+            },
+            {
+              "severity": "Major",
+              "open": 1,
+              "devDone": 0,
+              "qaRegression": 0,
+              "backlogTransfer": 0,
+              "done": 0,
+              "total": 1,
+              "rate": 0.0,
+              "previousRate": 0
+            },
+            {
+              "severity": "Minor",
+              "open": 1,
+              "devDone": 0,
+              "qaRegression": 0,
+              "backlogTransfer": 0,
+              "done": 0,
+              "total": 1,
+              "rate": 0.0,
+              "previousRate": 0.0
+            },
+            {
+              "severity": "합계",
+              "open": 2,
+              "devDone": 0,
+              "qaRegression": 0,
+              "backlogTransfer": 0,
+              "done": 0,
+              "total": 2,
+              "rate": 0.0,
+              "previousRate": 0.0
+            }
+          ],
+          "typeRows": [
+            {
+              "type": "기능",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "type": "다국어",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 1
+                }
+              ]
+            }
+          ],
+          "daily": [
+            {
+              "date": "2026-10-19",
+              "registered": 1,
+              "fixed": 0
+            },
+            {
+              "date": "2026-10-20",
+              "registered": 1,
+              "fixed": 0
+            },
+            {
+              "date": "2026-10-21",
+              "registered": 2,
+              "fixed": 0
+            }
+          ]
+        },
+        {
+          "version": "6.0.2",
+          "total": 20,
+          "open": 6,
+          "devDone": 12,
+          "qaRegression": 0,
+          "backlogTransfer": 0,
+          "done": 2,
+          "scopeTotal": 20,
+          "doneRate": 70.0,
+          "latestSnapshot": "2026-10-21",
           "severityRows": [
             {
               "severity": "Critical",
@@ -2591,35 +2713,35 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "severity": "Major",
-              "open": 0,
+              "open": 2,
               "devDone": 4,
               "qaRegression": 0,
               "backlogTransfer": 0,
               "done": 0,
-              "total": 4,
-              "rate": 100.0,
+              "total": 6,
+              "rate": 66.7,
               "previousRate": 0.0
             },
             {
               "severity": "Minor",
-              "open": 8,
-              "devDone": 4,
+              "open": 4,
+              "devDone": 6,
               "qaRegression": 0,
               "backlogTransfer": 0,
-              "done": 1,
-              "total": 13,
-              "rate": 38.5,
+              "done": 2,
+              "total": 12,
+              "rate": 66.7,
               "previousRate": 0.0
             },
             {
               "severity": "합계",
-              "open": 8,
-              "devDone": 10,
+              "open": 6,
+              "devDone": 12,
               "qaRegression": 0,
               "backlogTransfer": 0,
-              "done": 1,
-              "total": 19,
-              "rate": 57.9,
+              "done": 2,
+              "total": 20,
+              "rate": 70.0,
               "previousRate": 0.0
             }
           ],
@@ -2643,22 +2765,22 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               ]
             },
             {
+              "type": "기획-구현 불일치",
+              "total": 2,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 2
+                }
+              ]
+            },
+            {
               "type": "데이터 정합성",
               "total": 2,
               "severity": [
                 {
                   "label": "Minor",
                   "count": 2
-                }
-              ]
-            },
-            {
-              "type": "다국어",
-              "total": 1,
-              "severity": [
-                {
-                  "label": "Minor",
-                  "count": 1
                 }
               ]
             }
@@ -2681,13 +2803,18 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-10-19",
-              "registered": 13,
+              "registered": 12,
               "fixed": 0
             },
             {
               "date": "2026-10-20",
-              "registered": 19,
-              "fixed": 11
+              "registered": 18,
+              "fixed": 0
+            },
+            {
+              "date": "2026-10-21",
+              "registered": 20,
+              "fixed": 14
             }
           ]
         },
@@ -3115,6 +3242,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-10-20",
+              "registered": 29,
+              "fixed": 1
+            },
+            {
+              "date": "2026-10-21",
               "registered": 29,
               "fixed": 1
             }
@@ -3646,6 +3778,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-10-20",
               "registered": 11,
               "fixed": 1
+            },
+            {
+              "date": "2026-10-21",
+              "registered": 11,
+              "fixed": 1
             }
           ]
         },
@@ -4021,6 +4158,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-10-20",
+              "registered": 7,
+              "fixed": 2
+            },
+            {
+              "date": "2026-10-21",
               "registered": 7,
               "fixed": 2
             }
@@ -4612,6 +4754,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-10-20",
               "registered": 20,
               "fixed": 20
+            },
+            {
+              "date": "2026-10-21",
+              "registered": 20,
+              "fixed": 20
             }
           ]
         },
@@ -5147,6 +5294,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-10-20",
+              "registered": 3,
+              "fixed": 3
+            },
+            {
+              "date": "2026-10-21",
               "registered": 3,
               "fixed": 3
             }
@@ -5884,6 +6036,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-10-20",
+              "registered": 26,
+              "fixed": 26
+            },
+            {
+              "date": "2026-10-21",
               "registered": 26,
               "fixed": 26
             }
@@ -6727,6 +6884,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-10-20",
+              "registered": 34,
+              "fixed": 34
+            },
+            {
+              "date": "2026-10-21",
               "registered": 34,
               "fixed": 34
             }
@@ -7673,6 +7835,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-10-20",
+              "registered": 9,
+              "fixed": 9
+            },
+            {
+              "date": "2026-10-21",
               "registered": 9,
               "fixed": 9
             }
@@ -8732,6 +8899,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-10-20",
+              "registered": 117,
+              "fixed": 117
+            },
+            {
+              "date": "2026-10-21",
               "registered": 117,
               "fixed": 117
             }
@@ -9861,6 +10033,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-10-20",
+              "registered": 82,
+              "fixed": 82
+            },
+            {
+              "date": "2026-10-21",
               "registered": 82,
               "fixed": 82
             }
@@ -11287,6 +11464,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-10-20",
+              "registered": 24,
+              "fixed": 24
+            },
+            {
+              "date": "2026-10-21",
               "registered": 24,
               "fixed": 24
             }
@@ -12891,6 +13073,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-10-20",
+              "registered": 103,
+              "fixed": 99
+            },
+            {
+              "date": "2026-10-21",
               "registered": 103,
               "fixed": 99
             }
@@ -14586,6 +14773,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-10-20",
+              "registered": 68,
+              "fixed": 67
+            },
+            {
+              "date": "2026-10-21",
               "registered": 68,
               "fixed": 67
             }
@@ -16297,6 +16489,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-10-20",
+              "registered": 4,
+              "fixed": 3
+            },
+            {
+              "date": "2026-10-21",
               "registered": 4,
               "fixed": 3
             }
@@ -18199,6 +18396,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-10-20",
               "registered": 35,
               "fixed": 34
+            },
+            {
+              "date": "2026-10-21",
+              "registered": 35,
+              "fixed": 34
             }
           ]
         },
@@ -20059,6 +20261,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-10-20",
+              "registered": 4,
+              "fixed": 4
+            },
+            {
+              "date": "2026-10-21",
               "registered": 4,
               "fixed": 4
             }
@@ -22201,6 +22408,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-10-20",
+              "registered": 3,
+              "fixed": 3
+            },
+            {
+              "date": "2026-10-21",
               "registered": 3,
               "fixed": 3
             }
@@ -24483,6 +24695,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-10-20",
+              "registered": 27,
+              "fixed": 23
+            },
+            {
+              "date": "2026-10-21",
               "registered": 27,
               "fixed": 23
             }
@@ -26942,6 +27159,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-10-20",
               "registered": 33,
               "fixed": 30
+            },
+            {
+              "date": "2026-10-21",
+              "registered": 33,
+              "fixed": 30
             }
           ]
         },
@@ -27888,6 +28110,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-10-20",
               "registered": 20,
               "fixed": 1
+            },
+            {
+              "date": "2026-10-21",
+              "registered": 20,
+              "fixed": 1
             }
           ]
         },
@@ -28592,6 +28819,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-10-20",
+              "registered": 15,
+              "fixed": 15
+            },
+            {
+              "date": "2026-10-21",
               "registered": 15,
               "fixed": 15
             }
@@ -29561,6 +29793,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-10-20",
               "registered": 55,
               "fixed": 54
+            },
+            {
+              "date": "2026-10-21",
+              "registered": 55,
+              "fixed": 54
             }
           ]
         },
@@ -30151,6 +30388,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-10-20",
+              "registered": 5,
+              "fixed": 5
+            },
+            {
+              "date": "2026-10-21",
               "registered": 5,
               "fixed": 5
             }
@@ -31129,6 +31371,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-10-20",
               "registered": 101,
               "fixed": 101
+            },
+            {
+              "date": "2026-10-21",
+              "registered": 101,
+              "fixed": 101
             }
           ]
         },
@@ -31344,6 +31591,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-10-20",
+              "registered": 37,
+              "fixed": 30
+            },
+            {
+              "date": "2026-10-21",
               "registered": 37,
               "fixed": 30
             }
@@ -31695,6 +31947,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-10-20",
               "registered": 172,
               "fixed": 166
+            },
+            {
+              "date": "2026-10-21",
+              "registered": 172,
+              "fixed": 166
             }
           ]
         },
@@ -31953,6 +32210,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-10-20",
+              "registered": 34,
+              "fixed": 34
+            },
+            {
+              "date": "2026-10-21",
               "registered": 34,
               "fixed": 34
             }
@@ -32871,6 +33133,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-10-20",
               "registered": 7,
               "fixed": 7
+            },
+            {
+              "date": "2026-10-21",
+              "registered": 7,
+              "fixed": 7
             }
           ]
         },
@@ -33034,6 +33301,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-10-20",
+              "registered": 20,
+              "fixed": 19
+            },
+            {
+              "date": "2026-10-21",
               "registered": 20,
               "fixed": 19
             }
@@ -33468,6 +33740,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-10-20",
+              "registered": 18,
+              "fixed": 1
+            },
+            {
+              "date": "2026-10-21",
               "registered": 18,
               "fixed": 1
             }
@@ -33924,6 +34201,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-10-20",
               "registered": 48,
               "fixed": 48
+            },
+            {
+              "date": "2026-10-21",
+              "registered": 48,
+              "fixed": 48
             }
           ]
         },
@@ -33948,7 +34230,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "done": 9,
               "total": 9,
               "rate": 100.0,
-              "previousRate": 0.0
+              "previousRate": 100.0
             },
             {
               "severity": "Major",
@@ -33959,7 +34241,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "done": 114,
               "total": 114,
               "rate": 100.0,
-              "previousRate": 0.0
+              "previousRate": 100.0
             },
             {
               "severity": "Minor",
@@ -33970,7 +34252,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "done": 190,
               "total": 190,
               "rate": 100.0,
-              "previousRate": 0.0
+              "previousRate": 100.0
             },
             {
               "severity": "합계",
@@ -33981,7 +34263,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "done": 313,
               "total": 313,
               "rate": 100.0,
-              "previousRate": 0.0
+              "previousRate": 100.0
             }
           ],
           "typeRows": [
@@ -34424,6 +34706,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-10-20",
               "registered": 313,
               "fixed": 313
+            },
+            {
+              "date": "2026-10-21",
+              "registered": 313,
+              "fixed": 313
             }
           ]
         },
@@ -34448,7 +34735,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "done": 13,
               "total": 18,
               "rate": 88.9,
-              "previousRate": 77.8
+              "previousRate": 88.9
             },
             {
               "severity": "Major",
@@ -34459,7 +34746,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "done": 64,
               "total": 78,
               "rate": 84.6,
-              "previousRate": 83.3
+              "previousRate": 84.6
             },
             {
               "severity": "Minor",
@@ -34470,7 +34757,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "done": 73,
               "total": 83,
               "rate": 94.0,
-              "previousRate": 92.8
+              "previousRate": 94.0
             },
             {
               "severity": "합계",
@@ -34481,7 +34768,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "done": 151,
               "total": 180,
               "rate": 89.4,
-              "previousRate": 87.2
+              "previousRate": 89.4
             }
           ],
           "typeRows": [
@@ -34897,6 +35184,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-10-20",
               "registered": 180,
               "fixed": 161
+            },
+            {
+              "date": "2026-10-21",
+              "registered": 180,
+              "fixed": 161
             }
           ]
         },
@@ -35007,6 +35299,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-10-20",
+              "registered": 15,
+              "fixed": 0
+            },
+            {
+              "date": "2026-10-21",
               "registered": 15,
               "fixed": 0
             }
@@ -35448,6 +35745,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-10-20",
+              "registered": 11,
+              "fixed": 11
+            },
+            {
+              "date": "2026-10-21",
               "registered": 11,
               "fixed": 11
             }
@@ -36071,6 +36373,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-10-20",
               "registered": 7,
               "fixed": 4
+            },
+            {
+              "date": "2026-10-21",
+              "registered": 7,
+              "fixed": 4
             }
           ]
         },
@@ -36613,6 +36920,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-10-20",
               "registered": 121,
               "fixed": 120
+            },
+            {
+              "date": "2026-10-21",
+              "registered": 121,
+              "fixed": 120
             }
           ]
         },
@@ -37025,6 +37337,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-10-20",
               "registered": 131,
               "fixed": 130
+            },
+            {
+              "date": "2026-10-21",
+              "registered": 131,
+              "fixed": 130
             }
           ]
         },
@@ -37345,6 +37662,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-10-20",
+              "registered": 1,
+              "fixed": 1
+            },
+            {
+              "date": "2026-10-21",
               "registered": 1,
               "fixed": 1
             }
@@ -39189,6 +39511,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-10-20",
               "registered": 3,
               "fixed": 3
+            },
+            {
+              "date": "2026-10-21",
+              "registered": 3,
+              "fixed": 3
             }
           ]
         },
@@ -39246,7 +39573,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "done": 7,
               "total": 9,
               "rate": 88.9,
-              "previousRate": 100.0
+              "previousRate": 88.9
             }
           ],
           "typeRows": [
@@ -41646,6 +41973,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-10-20",
               "registered": 9,
               "fixed": 8
+            },
+            {
+              "date": "2026-10-21",
+              "registered": 9,
+              "fixed": 8
             }
           ]
         },
@@ -42508,22 +42840,27 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-10-20",
               "registered": 13,
               "fixed": 10
+            },
+            {
+              "date": "2026-10-21",
+              "registered": 13,
+              "fixed": 10
             }
           ]
         }
       ],
-      "defaultProjectVersion": "6.0.2",
+      "defaultProjectVersion": "6.0.3",
       "selectedVersion": "ALL",
       "distributions": {
         "ALL": {
           "status": [
             {
               "label": "등록",
-              "count": 221
+              "count": 223
             },
             {
               "label": "진행중",
-              "count": 18
+              "count": 16
             },
             {
               "label": "QA확인",
@@ -42531,7 +42868,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "label": "종료",
-              "count": 1458
+              "count": 1461
             }
           ],
           "severity": [
@@ -42541,7 +42878,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "label": "Major",
-              "count": 755
+              "count": 758
             },
             {
               "label": "Minor",
@@ -42563,7 +42900,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "label": "Medium",
-              "count": 1948
+              "count": 1951
             },
             {
               "label": "Low",
@@ -42582,18 +42919,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
       },
       "heatmap": [
         {
-          "date": "2026-09-21",
-          "new": 24,
-          "fixed": 758,
-          "closed": 701,
-          "deltaNew": 24
-        },
-        {
           "date": "2026-09-22",
           "new": 20,
           "fixed": 3,
           "closed": 3,
-          "deltaNew": -4
+          "deltaNew": 20
         },
         {
           "date": "2026-09-23",
@@ -42787,9 +43117,16 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
         {
           "date": "2026-10-20",
           "new": 7,
-          "fixed": 328,
-          "closed": 326,
+          "fixed": 317,
+          "closed": 315,
           "deltaNew": -5
+        },
+        {
+          "date": "2026-10-21",
+          "new": 3,
+          "fixed": 14,
+          "closed": 14,
+          "deltaNew": -4
         }
       ],
       "reportBoard": {
@@ -42846,10 +43183,76 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
       },
       "recent": [
         {
+          "id": "40073fbd-1951-8033-a01a-dfc501c946b9",
+          "title": "[환율][iOS] 국가 방글라데시, 받는 방법 ‘모바일 월렛’ 선택 시 ‘Top Rate’, ‘Top Speed’ 노출 되는 현상 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "defectType": "기능",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "6.0.3",
+          "versionRaw": "6.0.3",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-10-21T01:08:00.000Z",
+          "createdDate": "2026-10-21",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/iOS-Top-Rate-Top-Speed-40073fbd19518033a01adfc501c946b9",
+          "lastEditedAt": "2026-10-21T01:22:00.000Z"
+        },
+        {
+          "id": "40073fbd-1951-80a7-b7ca-c533e288eaf9",
+          "title": "[내역관리][공통] 연동계좌 상세 화면 내 ‘충전 대기 뱃지’ 미노출 현상 —작성중",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "defectType": "기획-구현 불일치",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "6.0.2",
+          "versionRaw": "[Hanpass][앱개편][Web][Post-Release] 6.0.2",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-10-21T00:55:00.000Z",
+          "createdDate": "2026-10-21",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/40073fbd195180a7b7cac533e288eaf9",
+          "lastEditedAt": "2026-10-21T01:50:00.000Z"
+        },
+        {
+          "id": "40073fbd-1951-8013-b716-ce403d9a263e",
+          "title": "[내역관리][AOS] 연동계좌 입금 상세 화면 내 ‘출금 계좌’ 영역 미노출 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "defectType": "기획-구현 불일치",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "6.0.2",
+          "versionRaw": "[Hanpass][앱개편][Web][Post-Release] 6.0.2",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-10-21T00:20:00.000Z",
+          "createdDate": "2026-10-21",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/AOS-40073fbd19518013b716ce403d9a263e",
+          "lastEditedAt": "2026-10-21T00:36:00.000Z"
+        },
+        {
           "id": "3ff73fbd-1951-8091-a384-fd73332a410f",
           "title": "[내역관리][QR송금][공통] QR송금 상세 화면의 ‘출금 월렛/수취 월렛’ 영역에 예금주명이 추가 노출되는 현상",
-          "status": "처리중 (In Progress)",
-          "stage": "진행중",
+          "status": "개발 완료 (Dev Done)",
+          "stage": "종료",
           "severity": "Minor",
           "defectType": "데이터 정합성",
           "priority": "Medium",
@@ -42860,18 +43263,18 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "os": "미지정",
           "createdAt": "2026-10-20T09:59:00.000Z",
           "createdDate": "2026-10-20",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
+          "fixedAt": "2026-10-21T00:31:00.000Z",
+          "fixedDate": "2026-10-21",
+          "closedAt": "2026-10-21T00:31:00.000Z",
+          "closedDate": "2026-10-21",
           "url": "https://app.notion.com/p/QR-QR-3ff73fbd19518091a384fd73332a410f",
-          "lastEditedAt": "2026-10-20T11:58:00.000Z"
+          "lastEditedAt": "2026-10-21T00:31:00.000Z"
         },
         {
           "id": "3ff73fbd-1951-80c6-b7e3-fdb139d0566b",
           "title": "[내역관리][기타충전][공통] 기타충전 상세 화면에서 ‘출금 계좌’ 정보가 미노출되는 현상",
-          "status": "등록 (Registered)",
-          "stage": "등록",
+          "status": "결함 아님 (Not an issue)",
+          "stage": "종료",
           "severity": "Minor",
           "defectType": "UX/UI",
           "priority": "Medium",
@@ -42882,12 +43285,12 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "os": "미지정",
           "createdAt": "2026-10-20T09:58:00.000Z",
           "createdDate": "2026-10-20",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
+          "fixedAt": "2026-10-21T00:13:00.000Z",
+          "fixedDate": "2026-10-21",
+          "closedAt": "2026-10-21T00:13:00.000Z",
+          "closedDate": "2026-10-21",
           "url": "https://app.notion.com/p/3ff73fbd195180c6b7e3fdb139d0566b",
-          "lastEditedAt": "2026-10-20T10:12:00.000Z"
+          "lastEditedAt": "2026-10-21T00:13:00.000Z"
         },
         {
           "id": "3ff73fbd-1951-808d-be35-d7bab1f04858",
@@ -42913,9 +43316,9 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
         },
         {
           "id": "3ff73fbd-1951-8049-abda-f221f17bedc8",
-          "title": "\n[내역관리][입금전용계좌][공통] 거래 상세 내역에서 ‘금액’ 항목이 ‘실충전금액’으로 상이하게 노출되는 현상\n",
-          "status": "처리중 (In Progress)",
-          "stage": "진행중",
+          "title": "\n[내역관리][입금전용계좌][공통] 거래 상세 내역에서 ‘금액’ 항목이 ‘실충전금액’으로 상이하게 노출되는 현상\n@장민호 (Minho Jang) 부장님 안녕하세요! \n라이브테스트서버 기준 배포 완료되었으니 확인 부탁드립니다.",
+          "status": "개발 완료 (Dev Done)",
+          "stage": "종료",
           "severity": "Minor",
           "defectType": "UX/UI",
           "priority": "Medium",
@@ -42926,12 +43329,12 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "os": "미지정",
           "createdAt": "2026-10-20T09:19:00.000Z",
           "createdDate": "2026-10-20",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
+          "fixedAt": "2026-10-21T00:37:00.000Z",
+          "fixedDate": "2026-10-21",
+          "closedAt": "2026-10-21T00:37:00.000Z",
+          "closedDate": "2026-10-21",
           "url": "https://app.notion.com/p/3ff73fbd19518049abdaf221f17bedc8",
-          "lastEditedAt": "2026-10-20T09:29:00.000Z"
+          "lastEditedAt": "2026-10-21T00:37:00.000Z"
         },
         {
           "id": "3ff73fbd-1951-8029-918b-de587cdb6838",
@@ -42957,7 +43360,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
         },
         {
           "id": "3ff73fbd-1951-80ba-a428-ecf560e928f2",
-          "title": "🟣 [내역관리][공통] 상단 금액과 하단 상세 내역과 안맞음",
+          "title": " [내역관리][공통] 상단 금액과 하단 상세 내역과 안맞음",
           "status": "개발 완료 (Dev Done)",
           "stage": "종료",
           "severity": "Critical",
@@ -42970,12 +43373,12 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "os": "미지정",
           "createdAt": "2026-10-20T02:11:00.000Z",
           "createdDate": "2026-10-20",
-          "fixedAt": "2026-10-20T09:37:00.000Z",
-          "fixedDate": "2026-10-20",
-          "closedAt": "2026-10-20T09:37:00.000Z",
-          "closedDate": "2026-10-20",
+          "fixedAt": "2026-10-21T01:46:00.000Z",
+          "fixedDate": "2026-10-21",
+          "closedAt": "2026-10-21T01:46:00.000Z",
+          "closedDate": "2026-10-21",
           "url": "https://app.notion.com/p/3ff73fbd195180baa428ecf560e928f2",
-          "lastEditedAt": "2026-10-20T09:37:00.000Z"
+          "lastEditedAt": "2026-10-21T01:46:00.000Z"
         },
         {
           "id": "3ff73fbd-1951-80c2-9d62-c0ad55fb3590",
@@ -42992,85 +43395,19 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "os": "미지정",
           "createdAt": "2026-10-20T00:34:00.000Z",
           "createdDate": "2026-10-20",
-          "fixedAt": "2026-10-20T09:42:00.000Z",
-          "fixedDate": "2026-10-20",
-          "closedAt": "2026-10-20T09:42:00.000Z",
-          "closedDate": "2026-10-20",
+          "fixedAt": "2026-10-21T00:27:00.000Z",
+          "fixedDate": "2026-10-21",
+          "closedAt": "2026-10-21T00:27:00.000Z",
+          "closedDate": "2026-10-21",
           "url": "https://app.notion.com/p/3ff73fbd195180c29d62c0ad55fb3590",
-          "lastEditedAt": "2026-10-20T09:42:00.000Z"
-        },
-        {
-          "id": "3fe73fbd-1951-80c8-b21b-d3c330796a5e",
-          "title": "🟣 [해외송금][내역관리][공통] 송금 신청 완료 건 상세 화면에서 ‘입금 만료일’이 미노출되는 현상",
-          "status": "개발 완료 (Dev Done)",
-          "stage": "종료",
-          "severity": "Major",
-          "defectType": "UX/UI",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "6.0.2",
-          "versionRaw": "[Hanpass][앱개편][Web][Post-Release] 6.0.2",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-10-19T08:16:00.000Z",
-          "createdDate": "2026-10-19",
-          "fixedAt": "2026-10-20T09:38:00.000Z",
-          "fixedDate": "2026-10-20",
-          "closedAt": "2026-10-20T09:38:00.000Z",
-          "closedDate": "2026-10-20",
-          "url": "https://app.notion.com/p/3fe73fbd195180c8b21bd3c330796a5e",
-          "lastEditedAt": "2026-10-20T09:38:00.000Z"
-        },
-        {
-          "id": "3fe73fbd-1951-8070-8637-f6b42d2cf0aa",
-          "title": "🟣 [월렛] 입금전용계좌번호 한도 표기 수정",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "defectType": "UX/UI",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "6.0.2",
-          "versionRaw": "[Hanpass][앱개편][Web][Post-Release] 6.0.2",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-10-19T04:53:00.000Z",
-          "createdDate": "2026-10-19",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/3fe73fbd195180708637f6b42d2cf0aa",
-          "lastEditedAt": "2026-10-20T09:38:00.000Z"
-        },
-        {
-          "id": "3fe73fbd-1951-809c-ad70-d1cfd5cc40a9",
-          "title": "🟣 [내역관리][공통] 수수료 - 부호 추가 필요",
-          "status": "결함 아님 (Not an issue)",
-          "stage": "종료",
-          "severity": "Minor",
-          "defectType": "UX/UI",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "6.0.2",
-          "versionRaw": "[Hanpass][앱개편][Web][Post-Release] 6.0.2",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-10-19T04:29:00.000Z",
-          "createdDate": "2026-10-19",
-          "fixedAt": "2026-10-20T09:42:00.000Z",
-          "fixedDate": "2026-10-20",
-          "closedAt": "2026-10-20T09:42:00.000Z",
-          "closedDate": "2026-10-20",
-          "url": "https://app.notion.com/p/3fe73fbd1951809cad70d1cfd5cc40a9",
-          "lastEditedAt": "2026-10-20T09:42:00.000Z"
+          "lastEditedAt": "2026-10-21T00:27:00.000Z"
         }
       ],
       "quality": {
         "unresolvedCritical": 21,
-        "unresolvedMajor": 206,
-        "awaitingVerification": 17,
-        "highCount": 227,
+        "unresolvedMajor": 209,
+        "awaitingVerification": 19,
+        "highCount": 230,
         "high": [
           {
             "title": "[SDK변경][Go.Hanpass]교통 카드 충전 시 금액 오충전 되는 현상  ",
@@ -43079,7 +43416,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Critical",
             "version": "[교통카드]SDK변경 (완료)",
             "domain": "한패스",
-            "ageDays": 103
+            "ageDays": 104
           },
           {
             "title": "[카카오뱅크][계좌등록] ‘PIN번호 설정’ 화면 이탈 시 PIN번호 미설정 상태로 계좌 등록되는 현상 ",
@@ -43088,7 +43425,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Critical",
             "version": "[카카오뱅크]해외송금",
             "domain": "한패스",
-            "ageDays": 76
+            "ageDays": 77
           },
           {
             "title": "[SDK변경][Go.Hanpass][iOS] PIN입력 화면 전환 때 상태바 제어 시 앱 크래시 현상 ",
@@ -43097,7 +43434,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Critical",
             "version": "[교통카드]SDK변경 (완료)",
             "domain": "한패스",
-            "ageDays": 34
+            "ageDays": 35
           },
           {
             "title": "[통합길찾기][경로목록][Mobile Web] ‘택시 호출 안내’ Bottom Sheet 닫기 시 백화되어 서비스 이용이 불가한 ",
@@ -43106,7 +43443,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Critical",
             "version": "[G.H][Go.Hanpass][앱개편][APP]-1차 (완료)",
             "domain": "GoHanpass",
-            "ageDays": 27
+            "ageDays": 28
           },
           {
             "title": "[마이페이지][공통] 무기명 계정에서 추가 인증 후 ‘여권 등록’ 화면으로 이동되지 않아 기명 전환이 불가한 현상",
@@ -43115,7 +43452,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Critical",
             "version": "[G.H][Go.Hanpass][앱개편][APP]-1차 (완료)",
             "domain": "GoHanpass",
-            "ageDays": 27
+            "ageDays": 28
           },
           {
             "title": "[K-Trip][공통] ‘상품 정보 및 금액 확인 팝업’ 취소 후 앱 재진입 시 팝업 미노출 및 정의되지 않은 화면 노출",
@@ -43124,7 +43461,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Critical",
             "version": "[G.H][Go.Hanpass][앱개편][APP]-1차 (완료)",
             "domain": "GoHanpass",
-            "ageDays": 20
+            "ageDays": 21
           },
           {
             "title": "[공항철도][공통] 교차 로그인 후 결제 및 화면 이탈 시 세션 만료가 즉시 처리되지 않는 현상",
@@ -43133,7 +43470,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Critical",
             "version": "[G.H][Go.Hanpass][앱개편][APP]-1차 (완료)",
             "domain": "GoHanpass",
-            "ageDays": 18
+            "ageDays": 19
           },
           {
             "title": "[로그인][공통] 제휴사 가입 계정으로 로그인 및 비인가 서비스 접근이 가능한 현상",
@@ -43142,7 +43479,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Critical",
             "version": "[G.H][Go.Hanpass][앱개편][APP]-1차 (완료)",
             "domain": "GoHanpass",
-            "ageDays": 18
+            "ageDays": 19
           },
           {
             "title": "[홈][Web] 저속 네트워크 환경에서 필수 JS Chunk 로딩 Timeout으로 서비스 진입이 불가능한 현상",
@@ -43151,7 +43488,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Critical",
             "version": "[G.H][Go.Hanpass][앱개편][APP]-1차 (완료)",
             "domain": "GoHanpass",
-            "ageDays": 14
+            "ageDays": 15
           },
           {
             "title": "[로그인][공통] 비밀번호 재설정 완료 후 변경된 비밀번호로 로그인 시 로그인이 해제되는 현상",
@@ -43160,7 +43497,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Critical",
             "version": "[G.H][Go.Hanpass][앱개편][APP]-1차 (완료)",
             "domain": "GoHanpass",
-            "ageDays": 12
+            "ageDays": 13
           },
           {
             "title": "[월렛충전][입금전용계좌] 셀카 인증 시 고객센터 문의 팝업이 노출되며 진행 불가한 현상",
@@ -43169,7 +43506,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Critical",
             "version": "[Hanpass][앱개편][Native]-LiveTest",
             "domain": "한패스",
-            "ageDays": 12
+            "ageDays": 13
           },
           {
             "title": "[월렛충전][외화충전] ‘결제 정보 입력’ 화면 내 보안 키패드 이용 불가 현상 (프로세스 진행 불가) ",
@@ -43178,7 +43515,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Critical",
             "version": "[Hanpass][앱개편][Native]-LiveTest",
             "domain": "한패스",
-            "ageDays": 12
+            "ageDays": 13
           },
           {
             "title": "[월렛][자동충전카드][공통] 자동 충전 설정 불가한 현상 ",
@@ -43187,7 +43524,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Critical",
             "version": "[G.H][Go.Hanpass][앱개편][APP]-1차 (완료)",
             "domain": "GoHanpass",
-            "ageDays": 12
+            "ageDays": 13
           },
           {
             "title": "[월렛충전][편의점충전][iOS] PIN 변경 진입 후 금액 입력 화면 재진입 시 프로세스 진행 불가 현상  ",
@@ -43196,7 +43533,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Critical",
             "version": "[Hanpass][앱개편][Native]-LiveTest",
             "domain": "한패스",
-            "ageDays": 12
+            "ageDays": 13
           },
           {
             "title": "[젠데스크][AOS] 폴더블 단말에서 화면 해상도에 따라 젠데스크 닫기가 불가능한 현상",
@@ -43205,7 +43542,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Critical",
             "version": "[G.H][Go.Hanpass][앱개편][APP]-1차 (완료)",
             "domain": "GoHanpass",
-            "ageDays": 8
+            "ageDays": 9
           },
           {
             "title": "[월렛충전][외화충전] ‘약관 동의 필요’ 문구 노출 및 프로세스 진행 불가 현상 ",
@@ -43214,7 +43551,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Critical",
             "version": "[Hanpass][앱개편][Native]-LiveTest",
             "domain": "한패스",
-            "ageDays": 8
+            "ageDays": 9
           },
           {
             "title": "[QR결제] QR 미노출 상태에서 ‘QR보기’ 시 QR 미노출 및 정의되지 않은 팝업 노출되는 현상 ",
@@ -43223,7 +43560,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Critical",
             "version": "[Hanpass][EMVQR] (완료)",
             "domain": "한패스",
-            "ageDays": 6
+            "ageDays": 7
           },
           {
             "title": "[QR결제] QR 미노출 및 생성 실패 팝업 노출되는 현상  ",
@@ -43232,7 +43569,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Critical",
             "version": "[Hanpass][EMVQR] (완료)",
             "domain": "한패스",
-            "ageDays": 6
+            "ageDays": 7
           },
           {
             "title": "[충전][해외발급카드] 충전 신청 후 PIN 입력 시 ‘데이터 암복호화오류’ 팝업 노출되며 충전 불가한 현상",
@@ -43241,7 +43578,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Critical",
             "version": "[Hanpass][앱개편][Native]-LiveTest",
             "domain": "한패스",
-            "ageDays": 2
+            "ageDays": 3
           },
           {
             "title": "🟣 [내역관리] 월렛, 해외송금 수동계좌 케이스 추가",
@@ -43250,16 +43587,16 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Critical",
             "version": "6.0.2",
             "domain": "한패스",
-            "ageDays": 1
+            "ageDays": 2
           },
           {
-            "title": "🟣 [내역관리][공통] 상단 금액과 하단 상세 내역과 안맞음",
+            "title": " [내역관리][공통] 상단 금액과 하단 상세 내역과 안맞음",
             "url": "https://app.notion.com/p/3ff73fbd195180baa428ecf560e928f2",
             "status": "개발 완료 (Dev Done)",
             "severity": "Critical",
             "version": "6.0.2",
             "domain": "한패스",
-            "ageDays": 0
+            "ageDays": 1
           },
           {
             "title": "[공통][구인구직][증명서 발급](외국인) 일부 증명서 발급 항목에서 발급 불가 오류 ",
@@ -43268,7 +43605,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "5.16.0 (완료)",
             "domain": "한패스",
-            "ageDays": 328
+            "ageDays": 329
           },
           {
             "title": "[대출비교] 국적 선택 팝업에서 대출 가능 국가가 아닌 전세계 국가 전체 노출됨",
@@ -43277,7 +43614,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "5.18.0 (완료)",
             "domain": "한패스",
-            "ageDays": 258
+            "ageDays": 259
           },
           {
             "title": "[대출비교] 여권 인증 경로로 대출 비교 진입 시 여권번호 영역에 외국인등록번호 자동 세팅됨",
@@ -43286,7 +43623,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "5.18.0 (완료)",
             "domain": "한패스",
-            "ageDays": 258
+            "ageDays": 259
           },
           {
             "title": "[대출비교] 카자흐스탄 대출비교 이용 불가 현상",
@@ -43295,7 +43632,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "5.18.0 (완료)",
             "domain": "한패스",
-            "ageDays": 258
+            "ageDays": 259
           },
           {
             "title": "[대출비교][공통] 1원인증 오입력 시 15분 역카운트 리셋 동작 OS별 상이(iOS 리셋 / AOS 미리셋) – 정책 확인 필요",
@@ -43304,7 +43641,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "5.18.0 (완료)",
             "domain": "한패스",
-            "ageDays": 257
+            "ageDays": 258
           },
           {
             "title": "[대출비교]전화번호 벨리데이션 오류 상태에서 다음 버튼 활성화 표출",
@@ -43313,7 +43650,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "5.18.0 (완료)",
             "domain": "한패스",
-            "ageDays": 257
+            "ageDays": 258
           },
           {
             "title": "[[대출비교] 승인 완료 / 승인 거절 시 앱푸시 미발송 현상",
@@ -43322,7 +43659,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "5.18.0 (완료)",
             "domain": "한패스",
-            "ageDays": 257
+            "ageDays": 258
           },
           {
             "title": "[대출비교]1원 인증번호 입력 시간 초과 후 계좌 재선택 화면에서 뒤로가기(\u003c) 시 만료된 1원인증 입력 화면이 재표출됨",
@@ -43331,7 +43668,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "5.18.0 (완료)",
             "domain": "한패스",
-            "ageDays": 257
+            "ageDays": 258
           },
           {
             "title": "[대출비교][iOS]셀피 인증 진입 시 카메라 접근 권한 미허용 상태에서도 권한 허용 팝업 미표출",
@@ -43340,7 +43677,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "5.18.0 (완료)",
             "domain": "한패스",
-            "ageDays": 257
+            "ageDays": 258
           },
           {
             "title": "[대출비교] 정보입력 화면의 이름, 국적이 출력되지 않는 현상",
@@ -43349,7 +43686,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "5.18.0 (완료)",
             "domain": "한패스",
-            "ageDays": 253
+            "ageDays": 254
           },
           {
             "title": "[대출비교] 1원 인증 인증번호 오입력  - 단말기 시스템 뒤로가기 및 좌측상단  \u003c 뒤로가기 선택 시 이전화면으로 돌아가지 않고 머물러 있는 현상",
@@ -43358,7 +43695,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "5.18.0 (완료)",
             "domain": "한패스",
-            "ageDays": 242
+            "ageDays": 243
           },
           {
             "title": "[K-Style_PICK][결제탭]  상단 '\u003c' 뒤로가기 → OS 뒤로가기 시 비정상 페이지 누적 현상",
@@ -43367,7 +43704,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "[G.H]v1.0.2-26.08 (완료)",
             "domain": "GoHanpass",
-            "ageDays": 161
+            "ageDays": 162
           },
           {
             "title": "[전체메뉴] 비로그인 상태로 K-Style PICK 진입 불가능 현상 ",
@@ -43376,7 +43713,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "[G.H]v1.0.2-26.08 (완료)",
             "domain": "GoHanpass",
-            "ageDays": 161
+            "ageDays": 162
           },
           {
             "title": "[관광객카드] 카드 등록 후 비밀번호 설정 시 ‘시스템 장애’ 팝업 노출 (카드 등록 불가)",
@@ -43385,7 +43722,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "[G.H]v1.0.2-26.06 (완료)",
             "domain": "GoHanpass",
-            "ageDays": 158
+            "ageDays": 159
           },
           {
             "title": "[타발_9PAY]추가 서류 제출 선택 - 송금인 촬영 준비 화면 내 인증서류 미노출",
@@ -43394,7 +43731,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "5.22.1 (완료)",
             "domain": "한패스",
-            "ageDays": 138
+            "ageDays": 139
           },
           {
             "title": "[타발_9PAY]‘신청 내용 확인’페이지 진입 시 오류 팝업 노출 되는 현상",
@@ -43403,7 +43740,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "5.22.1 (완료)",
             "domain": "한패스",
-            "ageDays": 137
+            "ageDays": 138
           },
           {
             "title": "[타발_9PAY]유효하지 않은 생년월일 입력 시 에러 팝업 노출 ",
@@ -43412,7 +43749,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "5.22.1 (완료)",
             "domain": "한패스",
-            "ageDays": 137
+            "ageDays": 138
           },
           {
             "title": "[타발_9PAY]본인 외, 베트남 신분증 선택 시 신분증 앞면, 증명서 필드 미노출 ",
@@ -43421,7 +43758,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "5.22.1 (완료)",
             "domain": "한패스",
-            "ageDays": 137
+            "ageDays": 138
           },
           {
             "title": "[타발_9PAY][iOS]신청 완료(QR 생성)페이지 내 우측 상단 ‘X’버튼 미노출",
@@ -43430,7 +43767,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "5.22.1 (완료)",
             "domain": "한패스",
-            "ageDays": 137
+            "ageDays": 138
           },
           {
             "title": "[타발_9PAY] 내역 관리 - 입금 만료일 초과 시에도 ‘입금 대기’ 상태로 노출되는 현상 ",
@@ -43439,7 +43776,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "5.22.1 (완료)",
             "domain": "한패스",
-            "ageDays": 134
+            "ageDays": 135
           },
           {
             "title": "[K-Style_PICK] 비로그인 시 ‘뷰티 정보 상세’ 페이지 접근 불가능 ",
@@ -43448,7 +43785,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "[G.H]v1.0.2-26.08 (완료)",
             "domain": "GoHanpass",
-            "ageDays": 130
+            "ageDays": 131
           },
           {
             "title": "[내쿠폰] ‘버스 예약’ 페이지 내 ‘뒤로가기’ 선택 시 이전 화면으로 이동 안 하는 현상",
@@ -43457,7 +43794,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "[G.H]v1.0.2-26.08 (완료)",
             "domain": "GoHanpass",
-            "ageDays": 123
+            "ageDays": 124
           },
           {
             "title": "[iOS]’사용자 위치 사용 권한’ 허용 후 앱 재진입 시 팝업 재노출 되는 현상",
@@ -43466,7 +43803,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "[G.H]v1.0.2-26.08 (완료)",
             "domain": "GoHanpass",
-            "ageDays": 119
+            "ageDays": 120
           },
           {
             "title": "[외화충전] 충전 시도 시 ‘월렛 보유 한도 팝업’ 노출 되며 충전 불가능 한 현상 ",
@@ -43475,7 +43812,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "Hanpass - Backlog",
             "domain": "한패스",
-            "ageDays": 116
+            "ageDays": 117
           },
           {
             "title": "[팝업노출][추가인증][iOS] 언어 변경 시 ‘카드 신청’ 팝업 내 ‘x’ 버튼 무반응 현상  ",
@@ -43484,7 +43821,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "[G.H]v1.0.2-26.08 (완료)",
             "domain": "GoHanpass",
-            "ageDays": 88
+            "ageDays": 89
           },
           {
             "title": "[팝업노출][추가인증][iOS] 언어 변경 시 ‘고객확인정보 등록’ 화면 내 ‘\u003c’ 뒤로가기 버튼 무반응 현상  ",
@@ -43493,7 +43830,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "[G.H]v1.0.2-26.08 (완료)",
             "domain": "GoHanpass",
-            "ageDays": 85
+            "ageDays": 86
           },
           {
             "title": "[HC][공통] ‘결제 확인’ 팝업 노출 후 뒤로가기 두 번 선택 시 이전 화면으로 이동하는 현상 ",
@@ -43502,7 +43839,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "5.25.0 (완료)",
             "domain": "한패스",
-            "ageDays": 81
+            "ageDays": 82
           },
           {
             "title": "[HC][공통] ‘가입 내역 없음’ 팝업 노출 상태에서 OS물리백/스와이프 시 팝업 미닫힘 및 이전 화면 이동 현상 ",
@@ -43511,7 +43848,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "5.25.0 (완료)",
             "domain": "한패스",
-            "ageDays": 81
+            "ageDays": 82
           },
           {
             "title": "[VENTAJA][AOS] 6자리 PIN 입력 페이지에서 다크모드 설정 시 키패드 오류 노출되는 현상 ",
@@ -43520,10 +43857,10 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "5.25.0 (완료)",
             "domain": "한패스",
-            "ageDays": 81
+            "ageDays": 82
           }
         ],
-        "agingCount": 272,
+        "agingCount": 279,
         "aging": [
           {
             "title": "[AOS][비밀번호변경] 비밀번호 재입력 시, 문구 수정 필요",
@@ -43532,7 +43869,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "미지정",
             "version": "5.12.0 (완료)",
             "domain": "한패스",
-            "ageDays": 454
+            "ageDays": 455
           },
           {
             "title": "[호주][방글라데시] 이메일 회원가입 후, 한국 회원 계정 등록 가능한 문제 ",
@@ -43541,7 +43878,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "미지정",
             "version": "5.12.0 (완료)",
             "domain": "한패스",
-            "ageDays": 449
+            "ageDays": 450
           },
           {
             "title": "[AOS][비밀번호변경] 회원상태 거절에서 비밀번호변경 선택 시, 강제종료",
@@ -43550,7 +43887,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "미지정",
             "version": "5.12.0 (완료)",
             "domain": "한패스",
-            "ageDays": 441
+            "ageDays": 442
           },
           {
             "title": "[AOS]통합QR결제 팝업 버튼 문구 변경 건.",
@@ -43559,7 +43896,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "미지정",
             "version": "5.13.0 (완료)",
             "domain": "한패스",
-            "ageDays": 420
+            "ageDays": 421
           },
           {
             "title": "[AOS][알림함] 앱푸시 알림 제목이 1줄만 노출됨",
@@ -43568,7 +43905,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "미지정",
             "version": "5.13.0 (완료)",
             "domain": "한패스",
-            "ageDays": 419
+            "ageDays": 420
           },
           {
             "title": "[iOS][교통충전] 추가된 안내문구 글머리기호&여백 수정 필요 (1)",
@@ -43577,7 +43914,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "미지정",
             "version": "5.13.0 (완료)",
             "domain": "한패스",
-            "ageDays": 418
+            "ageDays": 419
           },
           {
             "title": "[AOS][교통충전] 추가된 안내문구 글머리기호&여백 수정 필요",
@@ -43586,7 +43923,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "미지정",
             "version": "5.13.0 (완료)",
             "domain": "한패스",
-            "ageDays": 418
+            "ageDays": 419
           },
           {
             "title": "[공통][구인구직][증명서 발급](외국인) 일부 증명서 발급 항목에서 발급 불가 오류 ",
@@ -43595,7 +43932,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "5.16.0 (완료)",
             "domain": "한패스",
-            "ageDays": 328
+            "ageDays": 329
           },
           {
             "title": "[AOS][iOS] 해외배송&픽업 서비스 이용동의 - 제3자 개인정보제공동의 상세페이지 체크박스 미체크 되는 현상",
@@ -43604,7 +43941,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Minor",
             "version": "5.16.1 (완료)",
             "domain": "한패스",
-            "ageDays": 315
+            "ageDays": 316
           },
           {
             "title": "[구인구직] (네트워크 오류 시) 지원취소 버튼 탭 시 오류팝업 가이드문구가 없는 현상 ",
@@ -43613,7 +43950,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Minor",
             "version": "5.17.0 (완료)",
             "domain": "한패스",
-            "ageDays": 298
+            "ageDays": 299
           },
           {
             "title": "[대출비교]연간소득정보 입력 시 잘못된 금액 포맷(0,000,000) 입력 가능 및 0원 입력 시 벨리데이션 미동작",
@@ -43622,7 +43959,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Minor",
             "version": "5.18.0 (완료)",
             "domain": "한패스",
-            "ageDays": 258
+            "ageDays": 259
           },
           {
             "title": "[대출비교] 정보입력화면 - 휴대폰번호 입력 필드 기획서와 상이함",
@@ -43631,7 +43968,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Minor",
             "version": "5.18.0 (완료)",
             "domain": "한패스",
-            "ageDays": 258
+            "ageDays": 259
           },
           {
             "title": "[대출비교] 정보입력화면 - 여권 번호 입력 - 15자리 이상 입력되는 현상",
@@ -43640,7 +43977,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Minor",
             "version": "5.18.0 (완료)",
             "domain": "한패스",
-            "ageDays": 258
+            "ageDays": 259
           },
           {
             "title": "[대출비교] 비자 타입 선택 시, 바텀시트 노출 상태에서 인터랙션 영역(Interaction Area) 상태 유지로 인한 영역 노출",
@@ -43649,7 +43986,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Minor",
             "version": "5.18.0 (완료)",
             "domain": "한패스",
-            "ageDays": 258
+            "ageDays": 259
           },
           {
             "title": "[대출비교] 비자 타입 선택 바텀시트에서 기획서 기준 노출 순서 미적용",
@@ -43658,7 +43995,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Minor",
             "version": "5.18.0 (완료)",
             "domain": "한패스",
-            "ageDays": 258
+            "ageDays": 259
           },
           {
             "title": "[대출비교] 비자 타입 선택 바텀시트 타이틀 문구가 기획서와 상이함",
@@ -43667,7 +44004,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Minor",
             "version": "5.18.0 (완료)",
             "domain": "한패스",
-            "ageDays": 258
+            "ageDays": 259
           },
           {
             "title": "[대출비교] 국적 선택 팝업에서 대출 가능 국가가 아닌 전세계 국가 전체 노출됨",
@@ -43676,7 +44013,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "5.18.0 (완료)",
             "domain": "한패스",
-            "ageDays": 258
+            "ageDays": 259
           },
           {
             "title": "[대출비교] 외국인등록번호 13자리 입력 시 ‘-’(대시) 미표출",
@@ -43685,7 +44022,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Minor",
             "version": "5.18.0 (완료)",
             "domain": "한패스",
-            "ageDays": 258
+            "ageDays": 259
           },
           {
             "title": "[대출비교] 여권 인증 경로로 대출 비교 진입 시 여권번호 영역에 외국인등록번호 자동 세팅됨",
@@ -43694,7 +44031,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "5.18.0 (완료)",
             "domain": "한패스",
-            "ageDays": 258
+            "ageDays": 259
           },
           {
             "title": "[대출비교] 정보 입력 화면 - 이름 Place holder → “이름” 으로 노출되는 현상",
@@ -43703,7 +44040,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Minor",
             "version": "5.18.0 (완료)",
             "domain": "한패스",
-            "ageDays": 258
+            "ageDays": 259
           },
           {
             "title": "[대출비교] 카자흐스탄 대출비교 이용 불가 현상",
@@ -43712,7 +44049,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "5.18.0 (완료)",
             "domain": "한패스",
-            "ageDays": 258
+            "ageDays": 259
           },
           {
             "title": "[대출비교]약관 동의 후 ‘다음’ 선택 시 회색 로딩 화면 노출 현상",
@@ -43721,7 +44058,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Minor",
             "version": "5.18.0 (완료)",
             "domain": "한패스",
-            "ageDays": 258
+            "ageDays": 259
           },
           {
             "title": "[대출비교]이용약관 스크롤 영역이 줄어드는 현상",
@@ -43730,7 +44067,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Minor",
             "version": "5.18.0 (완료)",
             "domain": "한패스",
-            "ageDays": 258
+            "ageDays": 259
           },
           {
             "title": "[대출비교][약관안내_동의] 대출신청 내역 링크 버튼 롱 프레스/드래그 시 메뉴명 미노출 현상",
@@ -43739,7 +44076,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Minor",
             "version": "5.18.0 (완료)",
             "domain": "한패스",
-            "ageDays": 258
+            "ageDays": 259
           },
           {
             "title": "[대출비교][안내 약관_동의] 화면 문구 띄어쓰기 오류",
@@ -43748,7 +44085,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "개선 의견",
             "version": "5.18.0 (완료)",
             "domain": "한패스",
-            "ageDays": 258
+            "ageDays": 259
           },
           {
             "title": "[대출비교][공통] 회원상태 일시정지 상태 - 대출 비교 선택 시 이용불가 팝업 내 거절사유 null 로 노출됨",
@@ -43757,7 +44094,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Minor",
             "version": "5.18.0 (완료)",
             "domain": "한패스",
-            "ageDays": 258
+            "ageDays": 259
           },
           {
             "title": "[대출비교] 인증번호 불일치 팝업 [확인] 선택 - 시스템 뒤로가기 “1원입금 완료“팝업 내 확인 버튼이 영어로 노출",
@@ -43766,7 +44103,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Minor",
             "version": "5.18.0 (완료)",
             "domain": "한패스",
-            "ageDays": 257
+            "ageDays": 258
           },
           {
             "title": "[대출비교] 1원인증 시간 만료 후 계좌선택 화면에서 뒤로가기(\u003c) 선택 시 404 에러 표출",
@@ -43775,7 +44112,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Minor",
             "version": "5.18.0 (완료)",
             "domain": "한패스",
-            "ageDays": 257
+            "ageDays": 258
           },
           {
             "title": "[대출비교] 인증번호 입력필드 선택(인증번호 미입력) - 키패드 [이동] 선택 시 로딩되는 현상",
@@ -43784,7 +44121,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Minor",
             "version": "5.18.0 (완료)",
             "domain": "한패스",
-            "ageDays": 257
+            "ageDays": 258
           },
           {
             "title": "[대출비교][공통] 1원인증 오입력 시 15분 역카운트 리셋 동작 OS별 상이(iOS 리셋 / AOS 미리셋) – 정책 확인 필요",
@@ -43793,7 +44130,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "5.18.0 (완료)",
             "domain": "한패스",
-            "ageDays": 257
+            "ageDays": 258
           },
           {
             "title": "[대출비교] 베트남 언어 설정 시 1원 인증 화면에서 입력시간 초과 안내 한글 표출",
@@ -43802,7 +44139,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Minor",
             "version": "5.18.0 (완료)",
             "domain": "한패스",
-            "ageDays": 257
+            "ageDays": 258
           },
           {
             "title": "[대출비교]전화번호 벨리데이션 오류 상태에서 다음 버튼 활성화 표출",
@@ -43811,7 +44148,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "5.18.0 (완료)",
             "domain": "한패스",
-            "ageDays": 257
+            "ageDays": 258
           },
           {
             "title": "[[대출비교] 승인 완료 / 승인 거절 시 앱푸시 미발송 현상",
@@ -43820,7 +44157,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "5.18.0 (완료)",
             "domain": "한패스",
-            "ageDays": 257
+            "ageDays": 258
           },
           {
             "title": "[대출비교] 정보입력화면(외국인등록번호 필드, 휴대전화번호 필드, 연간소득) 삭제 및 수정 시 커서가 뒤로 가는 현상\n\n",
@@ -43829,7 +44166,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Minor",
             "version": "5.18.0 (완료)",
             "domain": "한패스",
-            "ageDays": 257
+            "ageDays": 258
           },
           {
             "title": "[대출비교]1원 인증번호 입력 시간 초과 후 계좌 재선택 화면에서 뒤로가기(\u003c) 시 만료된 1원인증 입력 화면이 재표출됨",
@@ -43838,7 +44175,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "5.18.0 (완료)",
             "domain": "한패스",
-            "ageDays": 257
+            "ageDays": 258
           },
           {
             "title": "[대출비교] 소득정보 입력 화면에서 ‘입사일자’ 항목이 ‘입사일시’로 잘못 노출됨",
@@ -43847,7 +44184,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Minor",
             "version": "5.18.0 (완료)",
             "domain": "한패스",
-            "ageDays": 257
+            "ageDays": 258
           },
           {
             "title": "[대출비교][공통] 중국어(간체) 비자 타입 선택 목록에서 E-10 표기 시 하이픈(-) 누락",
@@ -43856,7 +44193,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Minor",
             "version": "5.18.0 (완료)",
             "domain": "한패스",
-            "ageDays": 257
+            "ageDays": 258
           },
           {
             "title": "[대출비교] 모든 가심사 부결 화면에서 ‘메인으로 이동’ 버튼 선택 시 앱 메인이 아닌 대출비교 첫 화면으로 이동됨",
@@ -43865,7 +44202,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Minor",
             "version": "5.18.0 (완료)",
             "domain": "한패스",
-            "ageDays": 257
+            "ageDays": 258
           },
           {
             "title": "[대출비교][iOS]셀피 인증 진입 시 카메라 접근 권한 미허용 상태에서도 권한 허용 팝업 미표출",
@@ -43874,7 +44211,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "5.18.0 (완료)",
             "domain": "한패스",
-            "ageDays": 257
+            "ageDays": 258
           },
           {
             "title": "[대출비교] 대출비교 안내화면 - AOS 시스템 뒤로가기 \u003c 2번 선택해야 한패스 홈으로 이동하는 현상",
@@ -43883,7 +44220,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Minor",
             "version": "5.18.0 (완료)",
             "domain": "한패스",
-            "ageDays": 256
+            "ageDays": 257
           },
           {
             "title": "[대출비교] 비자 타입 목록 일부만 싱할라어로 표출되는 현상",
@@ -43892,7 +44229,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Minor",
             "version": "5.18.0 (완료)",
             "domain": "한패스",
-            "ageDays": 256
+            "ageDays": 257
           },
           {
             "title": "[대출비교] 대출신청 내역 없음 화면 안내 문구 미표출",
@@ -43901,7 +44238,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Minor",
             "version": "5.18.0 (완료)",
             "domain": "한패스",
-            "ageDays": 256
+            "ageDays": 257
           },
           {
             "title": "[대출비교] 상환방법 안내 문구 띄어쓰기 오류",
@@ -43910,7 +44247,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Minor",
             "version": "5.18.0 (완료)",
             "domain": "한패스",
-            "ageDays": 256
+            "ageDays": 257
           },
           {
             "title": "[대출비교] 1원인증-인증번호 숫자3자리 입력 시 키패드 내려가지 않는 현상",
@@ -43919,7 +44256,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Minor",
             "version": "5.18.0 (완료)",
             "domain": "한패스",
-            "ageDays": 256
+            "ageDays": 257
           },
           {
             "title": "[대출비교] 정보입력 화면의 이름, 국적이 출력되지 않는 현상",
@@ -43928,7 +44265,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "5.18.0 (완료)",
             "domain": "한패스",
-            "ageDays": 253
+            "ageDays": 254
           },
           {
             "title": "[대출비교] 1원 인증 인증번호 오입력  - 단말기 시스템 뒤로가기 및 좌측상단  \u003c 뒤로가기 선택 시 이전화면으로 돌아가지 않고 머물러 있는 현상",
@@ -43937,7 +44274,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "5.18.0 (완료)",
             "domain": "한패스",
-            "ageDays": 242
+            "ageDays": 243
           },
           {
             "title": "[전체메뉴] 좌/우 슬라이드 시 메뉴 패널 한 번 더 노출 되는 현상",
@@ -43946,7 +44283,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Minor",
             "version": "[G.H]v1.0.2-26.08 (완료)",
             "domain": "GoHanpass",
-            "ageDays": 161
+            "ageDays": 162
           },
           {
             "title": "[K-Style_PICK][결제탭]  상단 '\u003c' 뒤로가기 → OS 뒤로가기 시 비정상 페이지 누적 현상",
@@ -43955,7 +44292,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "[G.H]v1.0.2-26.08 (완료)",
             "domain": "GoHanpass",
-            "ageDays": 161
+            "ageDays": 162
           },
           {
             "title": "[전체메뉴] 비로그인 상태로 K-Style PICK 진입 불가능 현상 ",
@@ -43964,7 +44301,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "[G.H]v1.0.2-26.08 (완료)",
             "domain": "GoHanpass",
-            "ageDays": 161
+            "ageDays": 162
           },
           {
             "title": "[권한][AOS] 위치 권한 팝업 미허용 시 위치 권한 팝업 한 번 더 노출되는 현상 (iOS 미발생)",
@@ -43973,7 +44310,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Minor",
             "version": "[G.H]v1.0.2-26.08 (완료)",
             "domain": "GoHanpass",
-            "ageDays": 160
+            "ageDays": 161
           }
         ],
         "agingDays": 30,
@@ -43985,21 +44322,21 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
     },
     "한패스": {
       "summary": {
-        "total": 1548,
-        "new": 154,
-        "inProgress": 18,
+        "total": 1551,
+        "new": 156,
+        "inProgress": 16,
         "fixed": 0,
-        "closed": 1190,
-        "todayNew": 7,
-        "newDelta": -5,
+        "closed": 1193,
+        "todayNew": 3,
+        "newDelta": -4,
         "critical": 81,
-        "todayClosed": 326
+        "todayClosed": 14
       },
       "funnel": [
         {
           "stage": "등록",
-          "count": 154,
-          "rate": 9.9,
+          "count": 156,
+          "rate": 10.1,
           "width": 13
         },
         {
@@ -44016,8 +44353,8 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
         },
         {
           "stage": "진행중",
-          "count": 18,
-          "rate": 1.2,
+          "count": 16,
+          "rate": 1.0,
           "width": 6
         },
         {
@@ -44034,19 +44371,12 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
         },
         {
           "stage": "종료",
-          "count": 1190,
+          "count": 1193,
           "rate": 76.9,
           "width": 100
         }
       ],
       "daily": [
-        {
-          "date": "2026-09-21",
-          "new": 0,
-          "fixed": 582,
-          "closed": 525,
-          "deltaNew": 0
-        },
         {
           "date": "2026-09-22",
           "new": 0,
@@ -44246,29 +44576,60 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
         {
           "date": "2026-10-20",
           "new": 7,
-          "fixed": 328,
-          "closed": 326,
+          "fixed": 317,
+          "closed": 315,
           "deltaNew": -5
+        },
+        {
+          "date": "2026-10-21",
+          "new": 3,
+          "fixed": 14,
+          "closed": 14,
+          "deltaNew": -4
         }
       ],
       "versions": [
         {
+          "version": "6.0.3",
+          "total": 2,
+          "criticalMajor": 1,
+          "doneRate": 0.0,
+          "status": [
+            {
+              "label": "등록",
+              "count": 2
+            }
+          ],
+          "severity": [
+            {
+              "label": "Major",
+              "count": 1
+            },
+            {
+              "label": "Minor",
+              "count": 1
+            }
+          ],
+          "priority": [
+            {
+              "label": "Medium",
+              "count": 2
+            }
+          ]
+        },
+        {
           "version": "6.0.2",
-          "total": 19,
-          "criticalMajor": 6,
-          "doneRate": 57.9,
+          "total": 20,
+          "criticalMajor": 8,
+          "doneRate": 70.0,
           "status": [
             {
               "label": "등록",
               "count": 6
             },
             {
-              "label": "진행중",
-              "count": 2
-            },
-            {
               "label": "종료",
-              "count": 11
+              "count": 14
             }
           ],
           "severity": [
@@ -44278,17 +44639,17 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "label": "Major",
-              "count": 4
+              "count": 6
             },
             {
               "label": "Minor",
-              "count": 13
+              "count": 12
             }
           ],
           "priority": [
             {
               "label": "Medium",
-              "count": 19
+              "count": 20
             }
           ]
         },
@@ -45463,6 +45824,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
       ],
       "versionGroups": {
         "ALL": [
+          "6.0.3",
           "6.0.2",
           "6.0.0",
           "5.25.0 (완료)",
@@ -45499,11 +45861,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "Hanpass - Backlog"
         ],
         "RECENT": [
+          "6.0.3",
           "6.0.2",
           "6.0.0",
           "5.25.0 (완료)",
-          "5.24.2 (완료)",
-          "5.24.0 (완료)"
+          "5.24.2 (완료)"
         ],
         "BACKLOG": [
           "Hanpass - Backlog"
@@ -45511,16 +45873,113 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
       },
       "projectProgress": [
         {
-          "version": "6.0.2",
-          "total": 19,
-          "open": 8,
-          "devDone": 10,
+          "version": "6.0.3",
+          "total": 2,
+          "open": 2,
+          "devDone": 0,
           "qaRegression": 0,
           "backlogTransfer": 0,
-          "done": 1,
-          "scopeTotal": 19,
-          "doneRate": 57.9,
-          "latestSnapshot": "2026-10-20",
+          "done": 0,
+          "scopeTotal": 2,
+          "doneRate": 0.0,
+          "latestSnapshot": "2026-10-21",
+          "severityRows": [
+            {
+              "severity": "Critical",
+              "open": 0,
+              "devDone": 0,
+              "qaRegression": 0,
+              "backlogTransfer": 0,
+              "done": 0,
+              "total": 0,
+              "rate": 0,
+              "previousRate": 0
+            },
+            {
+              "severity": "Major",
+              "open": 1,
+              "devDone": 0,
+              "qaRegression": 0,
+              "backlogTransfer": 0,
+              "done": 0,
+              "total": 1,
+              "rate": 0.0,
+              "previousRate": 0
+            },
+            {
+              "severity": "Minor",
+              "open": 1,
+              "devDone": 0,
+              "qaRegression": 0,
+              "backlogTransfer": 0,
+              "done": 0,
+              "total": 1,
+              "rate": 0.0,
+              "previousRate": 0.0
+            },
+            {
+              "severity": "합계",
+              "open": 2,
+              "devDone": 0,
+              "qaRegression": 0,
+              "backlogTransfer": 0,
+              "done": 0,
+              "total": 2,
+              "rate": 0.0,
+              "previousRate": 0.0
+            }
+          ],
+          "typeRows": [
+            {
+              "type": "기능",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "type": "다국어",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 1
+                }
+              ]
+            }
+          ],
+          "daily": [
+            {
+              "date": "2026-10-19",
+              "registered": 1,
+              "fixed": 0
+            },
+            {
+              "date": "2026-10-20",
+              "registered": 1,
+              "fixed": 0
+            },
+            {
+              "date": "2026-10-21",
+              "registered": 2,
+              "fixed": 0
+            }
+          ]
+        },
+        {
+          "version": "6.0.2",
+          "total": 20,
+          "open": 6,
+          "devDone": 12,
+          "qaRegression": 0,
+          "backlogTransfer": 0,
+          "done": 2,
+          "scopeTotal": 20,
+          "doneRate": 70.0,
+          "latestSnapshot": "2026-10-21",
           "severityRows": [
             {
               "severity": "Critical",
@@ -45535,35 +45994,35 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "severity": "Major",
-              "open": 0,
+              "open": 2,
               "devDone": 4,
               "qaRegression": 0,
               "backlogTransfer": 0,
               "done": 0,
-              "total": 4,
-              "rate": 100.0,
+              "total": 6,
+              "rate": 66.7,
               "previousRate": 0.0
             },
             {
               "severity": "Minor",
-              "open": 8,
-              "devDone": 4,
+              "open": 4,
+              "devDone": 6,
               "qaRegression": 0,
               "backlogTransfer": 0,
-              "done": 1,
-              "total": 13,
-              "rate": 38.5,
+              "done": 2,
+              "total": 12,
+              "rate": 66.7,
               "previousRate": 0.0
             },
             {
               "severity": "합계",
-              "open": 8,
-              "devDone": 10,
+              "open": 6,
+              "devDone": 12,
               "qaRegression": 0,
               "backlogTransfer": 0,
-              "done": 1,
-              "total": 19,
-              "rate": 57.9,
+              "done": 2,
+              "total": 20,
+              "rate": 70.0,
               "previousRate": 0.0
             }
           ],
@@ -45587,22 +46046,22 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               ]
             },
             {
+              "type": "기획-구현 불일치",
+              "total": 2,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 2
+                }
+              ]
+            },
+            {
               "type": "데이터 정합성",
               "total": 2,
               "severity": [
                 {
                   "label": "Minor",
                   "count": 2
-                }
-              ]
-            },
-            {
-              "type": "다국어",
-              "total": 1,
-              "severity": [
-                {
-                  "label": "Minor",
-                  "count": 1
                 }
               ]
             }
@@ -45625,13 +46084,18 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-10-19",
-              "registered": 13,
+              "registered": 12,
               "fixed": 0
             },
             {
               "date": "2026-10-20",
-              "registered": 19,
-              "fixed": 11
+              "registered": 18,
+              "fixed": 0
+            },
+            {
+              "date": "2026-10-21",
+              "registered": 20,
+              "fixed": 14
             }
           ]
         },
@@ -46059,6 +46523,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-10-20",
+              "registered": 29,
+              "fixed": 1
+            },
+            {
+              "date": "2026-10-21",
               "registered": 29,
               "fixed": 1
             }
@@ -46590,6 +47059,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-10-20",
               "registered": 11,
               "fixed": 1
+            },
+            {
+              "date": "2026-10-21",
+              "registered": 11,
+              "fixed": 1
             }
           ]
         },
@@ -46965,6 +47439,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-10-20",
+              "registered": 7,
+              "fixed": 2
+            },
+            {
+              "date": "2026-10-21",
               "registered": 7,
               "fixed": 2
             }
@@ -47556,6 +48035,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-10-20",
               "registered": 20,
               "fixed": 20
+            },
+            {
+              "date": "2026-10-21",
+              "registered": 20,
+              "fixed": 20
             }
           ]
         },
@@ -48091,6 +48575,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-10-20",
+              "registered": 3,
+              "fixed": 3
+            },
+            {
+              "date": "2026-10-21",
               "registered": 3,
               "fixed": 3
             }
@@ -48828,6 +49317,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-10-20",
+              "registered": 26,
+              "fixed": 26
+            },
+            {
+              "date": "2026-10-21",
               "registered": 26,
               "fixed": 26
             }
@@ -49671,6 +50165,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-10-20",
+              "registered": 34,
+              "fixed": 34
+            },
+            {
+              "date": "2026-10-21",
               "registered": 34,
               "fixed": 34
             }
@@ -50617,6 +51116,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-10-20",
+              "registered": 9,
+              "fixed": 9
+            },
+            {
+              "date": "2026-10-21",
               "registered": 9,
               "fixed": 9
             }
@@ -51676,6 +52180,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-10-20",
+              "registered": 117,
+              "fixed": 117
+            },
+            {
+              "date": "2026-10-21",
               "registered": 117,
               "fixed": 117
             }
@@ -52805,6 +53314,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-10-20",
+              "registered": 82,
+              "fixed": 82
+            },
+            {
+              "date": "2026-10-21",
               "registered": 82,
               "fixed": 82
             }
@@ -54231,6 +54745,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-10-20",
+              "registered": 24,
+              "fixed": 24
+            },
+            {
+              "date": "2026-10-21",
               "registered": 24,
               "fixed": 24
             }
@@ -55835,6 +56354,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-10-20",
+              "registered": 103,
+              "fixed": 99
+            },
+            {
+              "date": "2026-10-21",
               "registered": 103,
               "fixed": 99
             }
@@ -57530,6 +58054,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-10-20",
+              "registered": 68,
+              "fixed": 67
+            },
+            {
+              "date": "2026-10-21",
               "registered": 68,
               "fixed": 67
             }
@@ -59241,6 +59770,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-10-20",
+              "registered": 4,
+              "fixed": 3
+            },
+            {
+              "date": "2026-10-21",
               "registered": 4,
               "fixed": 3
             }
@@ -61143,6 +61677,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-10-20",
               "registered": 35,
               "fixed": 34
+            },
+            {
+              "date": "2026-10-21",
+              "registered": 35,
+              "fixed": 34
             }
           ]
         },
@@ -63003,6 +63542,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-10-20",
+              "registered": 4,
+              "fixed": 4
+            },
+            {
+              "date": "2026-10-21",
               "registered": 4,
               "fixed": 4
             }
@@ -65145,6 +65689,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-10-20",
+              "registered": 3,
+              "fixed": 3
+            },
+            {
+              "date": "2026-10-21",
               "registered": 3,
               "fixed": 3
             }
@@ -67427,6 +67976,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-10-20",
+              "registered": 27,
+              "fixed": 23
+            },
+            {
+              "date": "2026-10-21",
               "registered": 27,
               "fixed": 23
             }
@@ -69886,6 +70440,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-10-20",
               "registered": 33,
               "fixed": 30
+            },
+            {
+              "date": "2026-10-21",
+              "registered": 33,
+              "fixed": 30
             }
           ]
         },
@@ -70049,6 +70608,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-10-20",
+              "registered": 20,
+              "fixed": 19
+            },
+            {
+              "date": "2026-10-21",
               "registered": 20,
               "fixed": 19
             }
@@ -70483,6 +71047,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-10-20",
+              "registered": 18,
+              "fixed": 1
+            },
+            {
+              "date": "2026-10-21",
               "registered": 18,
               "fixed": 1
             }
@@ -70939,6 +71508,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-10-20",
               "registered": 48,
               "fixed": 48
+            },
+            {
+              "date": "2026-10-21",
+              "registered": 48,
+              "fixed": 48
             }
           ]
         },
@@ -70963,7 +71537,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "done": 9,
               "total": 9,
               "rate": 100.0,
-              "previousRate": 0.0
+              "previousRate": 100.0
             },
             {
               "severity": "Major",
@@ -70974,7 +71548,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "done": 114,
               "total": 114,
               "rate": 100.0,
-              "previousRate": 0.0
+              "previousRate": 100.0
             },
             {
               "severity": "Minor",
@@ -70985,7 +71559,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "done": 190,
               "total": 190,
               "rate": 100.0,
-              "previousRate": 0.0
+              "previousRate": 100.0
             },
             {
               "severity": "합계",
@@ -70996,7 +71570,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "done": 313,
               "total": 313,
               "rate": 100.0,
-              "previousRate": 0.0
+              "previousRate": 100.0
             }
           ],
           "typeRows": [
@@ -71439,6 +72013,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-10-20",
               "registered": 313,
               "fixed": 313
+            },
+            {
+              "date": "2026-10-21",
+              "registered": 313,
+              "fixed": 313
             }
           ]
         },
@@ -71463,7 +72042,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "done": 13,
               "total": 18,
               "rate": 88.9,
-              "previousRate": 77.8
+              "previousRate": 88.9
             },
             {
               "severity": "Major",
@@ -71474,7 +72053,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "done": 64,
               "total": 78,
               "rate": 84.6,
-              "previousRate": 83.3
+              "previousRate": 84.6
             },
             {
               "severity": "Minor",
@@ -71485,7 +72064,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "done": 73,
               "total": 83,
               "rate": 94.0,
-              "previousRate": 92.8
+              "previousRate": 94.0
             },
             {
               "severity": "합계",
@@ -71496,7 +72075,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "done": 151,
               "total": 180,
               "rate": 89.4,
-              "previousRate": 87.2
+              "previousRate": 89.4
             }
           ],
           "typeRows": [
@@ -71912,6 +72491,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-10-20",
               "registered": 180,
               "fixed": 161
+            },
+            {
+              "date": "2026-10-21",
+              "registered": 180,
+              "fixed": 161
             }
           ]
         },
@@ -72022,6 +72606,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-10-20",
+              "registered": 15,
+              "fixed": 0
+            },
+            {
+              "date": "2026-10-21",
               "registered": 15,
               "fixed": 0
             }
@@ -72463,6 +73052,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-10-20",
+              "registered": 11,
+              "fixed": 11
+            },
+            {
+              "date": "2026-10-21",
               "registered": 11,
               "fixed": 11
             }
@@ -73086,6 +73680,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-10-20",
               "registered": 7,
               "fixed": 4
+            },
+            {
+              "date": "2026-10-21",
+              "registered": 7,
+              "fixed": 4
             }
           ]
         },
@@ -73628,6 +74227,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-10-20",
               "registered": 121,
               "fixed": 120
+            },
+            {
+              "date": "2026-10-21",
+              "registered": 121,
+              "fixed": 120
             }
           ]
         },
@@ -74040,6 +74644,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-10-20",
               "registered": 131,
               "fixed": 130
+            },
+            {
+              "date": "2026-10-21",
+              "registered": 131,
+              "fixed": 130
             }
           ]
         },
@@ -74360,6 +74969,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-10-20",
+              "registered": 1,
+              "fixed": 1
+            },
+            {
+              "date": "2026-10-21",
               "registered": 1,
               "fixed": 1
             }
@@ -76204,6 +76818,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-10-20",
               "registered": 3,
               "fixed": 3
+            },
+            {
+              "date": "2026-10-21",
+              "registered": 3,
+              "fixed": 3
             }
           ]
         },
@@ -76261,7 +76880,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "done": 7,
               "total": 9,
               "rate": 88.9,
-              "previousRate": 100.0
+              "previousRate": 88.9
             }
           ],
           "typeRows": [
@@ -78661,6 +79280,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-10-20",
               "registered": 9,
               "fixed": 8
+            },
+            {
+              "date": "2026-10-21",
+              "registered": 9,
+              "fixed": 8
             }
           ]
         },
@@ -79523,22 +80147,27 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-10-20",
               "registered": 13,
               "fixed": 10
+            },
+            {
+              "date": "2026-10-21",
+              "registered": 13,
+              "fixed": 10
             }
           ]
         }
       ],
-      "defaultProjectVersion": "6.0.2",
+      "defaultProjectVersion": "6.0.3",
       "selectedVersion": "ALL",
       "distributions": {
         "ALL": {
           "status": [
             {
               "label": "등록",
-              "count": 154
+              "count": 156
             },
             {
               "label": "진행중",
-              "count": 18
+              "count": 16
             },
             {
               "label": "QA확인",
@@ -79546,7 +80175,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "label": "종료",
-              "count": 1190
+              "count": 1193
             }
           ],
           "severity": [
@@ -79556,7 +80185,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "label": "Major",
-              "count": 502
+              "count": 505
             },
             {
               "label": "Minor",
@@ -79578,7 +80207,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "label": "Medium",
-              "count": 1503
+              "count": 1506
             },
             {
               "label": "Low",
@@ -79596,13 +80225,6 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
         }
       },
       "heatmap": [
-        {
-          "date": "2026-09-21",
-          "new": 0,
-          "fixed": 582,
-          "closed": 525,
-          "deltaNew": 0
-        },
         {
           "date": "2026-09-22",
           "new": 0,
@@ -79802,9 +80424,16 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
         {
           "date": "2026-10-20",
           "new": 7,
-          "fixed": 328,
-          "closed": 326,
+          "fixed": 317,
+          "closed": 315,
           "deltaNew": -5
+        },
+        {
+          "date": "2026-10-21",
+          "new": 3,
+          "fixed": 14,
+          "closed": 14,
+          "deltaNew": -4
         }
       ],
       "reportBoard": {
@@ -79861,10 +80490,76 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
       },
       "recent": [
         {
+          "id": "40073fbd-1951-8033-a01a-dfc501c946b9",
+          "title": "[환율][iOS] 국가 방글라데시, 받는 방법 ‘모바일 월렛’ 선택 시 ‘Top Rate’, ‘Top Speed’ 노출 되는 현상 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "defectType": "기능",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "6.0.3",
+          "versionRaw": "6.0.3",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-10-21T01:08:00.000Z",
+          "createdDate": "2026-10-21",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/iOS-Top-Rate-Top-Speed-40073fbd19518033a01adfc501c946b9",
+          "lastEditedAt": "2026-10-21T01:22:00.000Z"
+        },
+        {
+          "id": "40073fbd-1951-80a7-b7ca-c533e288eaf9",
+          "title": "[내역관리][공통] 연동계좌 상세 화면 내 ‘충전 대기 뱃지’ 미노출 현상 —작성중",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "defectType": "기획-구현 불일치",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "6.0.2",
+          "versionRaw": "[Hanpass][앱개편][Web][Post-Release] 6.0.2",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-10-21T00:55:00.000Z",
+          "createdDate": "2026-10-21",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/40073fbd195180a7b7cac533e288eaf9",
+          "lastEditedAt": "2026-10-21T01:50:00.000Z"
+        },
+        {
+          "id": "40073fbd-1951-8013-b716-ce403d9a263e",
+          "title": "[내역관리][AOS] 연동계좌 입금 상세 화면 내 ‘출금 계좌’ 영역 미노출 ",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "defectType": "기획-구현 불일치",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "6.0.2",
+          "versionRaw": "[Hanpass][앱개편][Web][Post-Release] 6.0.2",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-10-21T00:20:00.000Z",
+          "createdDate": "2026-10-21",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/AOS-40073fbd19518013b716ce403d9a263e",
+          "lastEditedAt": "2026-10-21T00:36:00.000Z"
+        },
+        {
           "id": "3ff73fbd-1951-8091-a384-fd73332a410f",
           "title": "[내역관리][QR송금][공통] QR송금 상세 화면의 ‘출금 월렛/수취 월렛’ 영역에 예금주명이 추가 노출되는 현상",
-          "status": "처리중 (In Progress)",
-          "stage": "진행중",
+          "status": "개발 완료 (Dev Done)",
+          "stage": "종료",
           "severity": "Minor",
           "defectType": "데이터 정합성",
           "priority": "Medium",
@@ -79875,18 +80570,18 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "os": "미지정",
           "createdAt": "2026-10-20T09:59:00.000Z",
           "createdDate": "2026-10-20",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
+          "fixedAt": "2026-10-21T00:31:00.000Z",
+          "fixedDate": "2026-10-21",
+          "closedAt": "2026-10-21T00:31:00.000Z",
+          "closedDate": "2026-10-21",
           "url": "https://app.notion.com/p/QR-QR-3ff73fbd19518091a384fd73332a410f",
-          "lastEditedAt": "2026-10-20T11:58:00.000Z"
+          "lastEditedAt": "2026-10-21T00:31:00.000Z"
         },
         {
           "id": "3ff73fbd-1951-80c6-b7e3-fdb139d0566b",
           "title": "[내역관리][기타충전][공통] 기타충전 상세 화면에서 ‘출금 계좌’ 정보가 미노출되는 현상",
-          "status": "등록 (Registered)",
-          "stage": "등록",
+          "status": "결함 아님 (Not an issue)",
+          "stage": "종료",
           "severity": "Minor",
           "defectType": "UX/UI",
           "priority": "Medium",
@@ -79897,12 +80592,12 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "os": "미지정",
           "createdAt": "2026-10-20T09:58:00.000Z",
           "createdDate": "2026-10-20",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
+          "fixedAt": "2026-10-21T00:13:00.000Z",
+          "fixedDate": "2026-10-21",
+          "closedAt": "2026-10-21T00:13:00.000Z",
+          "closedDate": "2026-10-21",
           "url": "https://app.notion.com/p/3ff73fbd195180c6b7e3fdb139d0566b",
-          "lastEditedAt": "2026-10-20T10:12:00.000Z"
+          "lastEditedAt": "2026-10-21T00:13:00.000Z"
         },
         {
           "id": "3ff73fbd-1951-808d-be35-d7bab1f04858",
@@ -79928,9 +80623,9 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
         },
         {
           "id": "3ff73fbd-1951-8049-abda-f221f17bedc8",
-          "title": "\n[내역관리][입금전용계좌][공통] 거래 상세 내역에서 ‘금액’ 항목이 ‘실충전금액’으로 상이하게 노출되는 현상\n",
-          "status": "처리중 (In Progress)",
-          "stage": "진행중",
+          "title": "\n[내역관리][입금전용계좌][공통] 거래 상세 내역에서 ‘금액’ 항목이 ‘실충전금액’으로 상이하게 노출되는 현상\n@장민호 (Minho Jang) 부장님 안녕하세요! \n라이브테스트서버 기준 배포 완료되었으니 확인 부탁드립니다.",
+          "status": "개발 완료 (Dev Done)",
+          "stage": "종료",
           "severity": "Minor",
           "defectType": "UX/UI",
           "priority": "Medium",
@@ -79941,12 +80636,12 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "os": "미지정",
           "createdAt": "2026-10-20T09:19:00.000Z",
           "createdDate": "2026-10-20",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
+          "fixedAt": "2026-10-21T00:37:00.000Z",
+          "fixedDate": "2026-10-21",
+          "closedAt": "2026-10-21T00:37:00.000Z",
+          "closedDate": "2026-10-21",
           "url": "https://app.notion.com/p/3ff73fbd19518049abdaf221f17bedc8",
-          "lastEditedAt": "2026-10-20T09:29:00.000Z"
+          "lastEditedAt": "2026-10-21T00:37:00.000Z"
         },
         {
           "id": "3ff73fbd-1951-8029-918b-de587cdb6838",
@@ -79972,7 +80667,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
         },
         {
           "id": "3ff73fbd-1951-80ba-a428-ecf560e928f2",
-          "title": "🟣 [내역관리][공통] 상단 금액과 하단 상세 내역과 안맞음",
+          "title": " [내역관리][공통] 상단 금액과 하단 상세 내역과 안맞음",
           "status": "개발 완료 (Dev Done)",
           "stage": "종료",
           "severity": "Critical",
@@ -79985,12 +80680,12 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "os": "미지정",
           "createdAt": "2026-10-20T02:11:00.000Z",
           "createdDate": "2026-10-20",
-          "fixedAt": "2026-10-20T09:37:00.000Z",
-          "fixedDate": "2026-10-20",
-          "closedAt": "2026-10-20T09:37:00.000Z",
-          "closedDate": "2026-10-20",
+          "fixedAt": "2026-10-21T01:46:00.000Z",
+          "fixedDate": "2026-10-21",
+          "closedAt": "2026-10-21T01:46:00.000Z",
+          "closedDate": "2026-10-21",
           "url": "https://app.notion.com/p/3ff73fbd195180baa428ecf560e928f2",
-          "lastEditedAt": "2026-10-20T09:37:00.000Z"
+          "lastEditedAt": "2026-10-21T01:46:00.000Z"
         },
         {
           "id": "3ff73fbd-1951-80c2-9d62-c0ad55fb3590",
@@ -80007,85 +80702,19 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "os": "미지정",
           "createdAt": "2026-10-20T00:34:00.000Z",
           "createdDate": "2026-10-20",
-          "fixedAt": "2026-10-20T09:42:00.000Z",
-          "fixedDate": "2026-10-20",
-          "closedAt": "2026-10-20T09:42:00.000Z",
-          "closedDate": "2026-10-20",
+          "fixedAt": "2026-10-21T00:27:00.000Z",
+          "fixedDate": "2026-10-21",
+          "closedAt": "2026-10-21T00:27:00.000Z",
+          "closedDate": "2026-10-21",
           "url": "https://app.notion.com/p/3ff73fbd195180c29d62c0ad55fb3590",
-          "lastEditedAt": "2026-10-20T09:42:00.000Z"
-        },
-        {
-          "id": "3fe73fbd-1951-80c8-b21b-d3c330796a5e",
-          "title": "🟣 [해외송금][내역관리][공통] 송금 신청 완료 건 상세 화면에서 ‘입금 만료일’이 미노출되는 현상",
-          "status": "개발 완료 (Dev Done)",
-          "stage": "종료",
-          "severity": "Major",
-          "defectType": "UX/UI",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "6.0.2",
-          "versionRaw": "[Hanpass][앱개편][Web][Post-Release] 6.0.2",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-10-19T08:16:00.000Z",
-          "createdDate": "2026-10-19",
-          "fixedAt": "2026-10-20T09:38:00.000Z",
-          "fixedDate": "2026-10-20",
-          "closedAt": "2026-10-20T09:38:00.000Z",
-          "closedDate": "2026-10-20",
-          "url": "https://app.notion.com/p/3fe73fbd195180c8b21bd3c330796a5e",
-          "lastEditedAt": "2026-10-20T09:38:00.000Z"
-        },
-        {
-          "id": "3fe73fbd-1951-8070-8637-f6b42d2cf0aa",
-          "title": "🟣 [월렛] 입금전용계좌번호 한도 표기 수정",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "defectType": "UX/UI",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "6.0.2",
-          "versionRaw": "[Hanpass][앱개편][Web][Post-Release] 6.0.2",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-10-19T04:53:00.000Z",
-          "createdDate": "2026-10-19",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/3fe73fbd195180708637f6b42d2cf0aa",
-          "lastEditedAt": "2026-10-20T09:38:00.000Z"
-        },
-        {
-          "id": "3fe73fbd-1951-809c-ad70-d1cfd5cc40a9",
-          "title": "🟣 [내역관리][공통] 수수료 - 부호 추가 필요",
-          "status": "결함 아님 (Not an issue)",
-          "stage": "종료",
-          "severity": "Minor",
-          "defectType": "UX/UI",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "6.0.2",
-          "versionRaw": "[Hanpass][앱개편][Web][Post-Release] 6.0.2",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-10-19T04:29:00.000Z",
-          "createdDate": "2026-10-19",
-          "fixedAt": "2026-10-20T09:42:00.000Z",
-          "fixedDate": "2026-10-20",
-          "closedAt": "2026-10-20T09:42:00.000Z",
-          "closedDate": "2026-10-20",
-          "url": "https://app.notion.com/p/3fe73fbd1951809cad70d1cfd5cc40a9",
-          "lastEditedAt": "2026-10-20T09:42:00.000Z"
+          "lastEditedAt": "2026-10-21T00:27:00.000Z"
         }
       ],
       "quality": {
         "unresolvedCritical": 12,
-        "unresolvedMajor": 109,
-        "awaitingVerification": 13,
-        "highCount": 121,
+        "unresolvedMajor": 112,
+        "awaitingVerification": 15,
+        "highCount": 124,
         "high": [
           {
             "title": "[SDK변경][Go.Hanpass]교통 카드 충전 시 금액 오충전 되는 현상  ",
@@ -80094,7 +80723,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Critical",
             "version": "[교통카드]SDK변경 (완료)",
             "domain": "한패스",
-            "ageDays": 103
+            "ageDays": 104
           },
           {
             "title": "[카카오뱅크][계좌등록] ‘PIN번호 설정’ 화면 이탈 시 PIN번호 미설정 상태로 계좌 등록되는 현상 ",
@@ -80103,7 +80732,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Critical",
             "version": "[카카오뱅크]해외송금",
             "domain": "한패스",
-            "ageDays": 76
+            "ageDays": 77
           },
           {
             "title": "[SDK변경][Go.Hanpass][iOS] PIN입력 화면 전환 때 상태바 제어 시 앱 크래시 현상 ",
@@ -80112,7 +80741,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Critical",
             "version": "[교통카드]SDK변경 (완료)",
             "domain": "한패스",
-            "ageDays": 34
+            "ageDays": 35
           },
           {
             "title": "[월렛충전][입금전용계좌] 셀카 인증 시 고객센터 문의 팝업이 노출되며 진행 불가한 현상",
@@ -80121,7 +80750,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Critical",
             "version": "[Hanpass][앱개편][Native]-LiveTest",
             "domain": "한패스",
-            "ageDays": 12
+            "ageDays": 13
           },
           {
             "title": "[월렛충전][외화충전] ‘결제 정보 입력’ 화면 내 보안 키패드 이용 불가 현상 (프로세스 진행 불가) ",
@@ -80130,7 +80759,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Critical",
             "version": "[Hanpass][앱개편][Native]-LiveTest",
             "domain": "한패스",
-            "ageDays": 12
+            "ageDays": 13
           },
           {
             "title": "[월렛충전][편의점충전][iOS] PIN 변경 진입 후 금액 입력 화면 재진입 시 프로세스 진행 불가 현상  ",
@@ -80139,7 +80768,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Critical",
             "version": "[Hanpass][앱개편][Native]-LiveTest",
             "domain": "한패스",
-            "ageDays": 12
+            "ageDays": 13
           },
           {
             "title": "[월렛충전][외화충전] ‘약관 동의 필요’ 문구 노출 및 프로세스 진행 불가 현상 ",
@@ -80148,7 +80777,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Critical",
             "version": "[Hanpass][앱개편][Native]-LiveTest",
             "domain": "한패스",
-            "ageDays": 8
+            "ageDays": 9
           },
           {
             "title": "[QR결제] QR 미노출 상태에서 ‘QR보기’ 시 QR 미노출 및 정의되지 않은 팝업 노출되는 현상 ",
@@ -80157,7 +80786,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Critical",
             "version": "[Hanpass][EMVQR] (완료)",
             "domain": "한패스",
-            "ageDays": 6
+            "ageDays": 7
           },
           {
             "title": "[QR결제] QR 미노출 및 생성 실패 팝업 노출되는 현상  ",
@@ -80166,7 +80795,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Critical",
             "version": "[Hanpass][EMVQR] (완료)",
             "domain": "한패스",
-            "ageDays": 6
+            "ageDays": 7
           },
           {
             "title": "[충전][해외발급카드] 충전 신청 후 PIN 입력 시 ‘데이터 암복호화오류’ 팝업 노출되며 충전 불가한 현상",
@@ -80175,7 +80804,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Critical",
             "version": "[Hanpass][앱개편][Native]-LiveTest",
             "domain": "한패스",
-            "ageDays": 2
+            "ageDays": 3
           },
           {
             "title": "🟣 [내역관리] 월렛, 해외송금 수동계좌 케이스 추가",
@@ -80184,16 +80813,16 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Critical",
             "version": "6.0.2",
             "domain": "한패스",
-            "ageDays": 1
+            "ageDays": 2
           },
           {
-            "title": "🟣 [내역관리][공통] 상단 금액과 하단 상세 내역과 안맞음",
+            "title": " [내역관리][공통] 상단 금액과 하단 상세 내역과 안맞음",
             "url": "https://app.notion.com/p/3ff73fbd195180baa428ecf560e928f2",
             "status": "개발 완료 (Dev Done)",
             "severity": "Critical",
             "version": "6.0.2",
             "domain": "한패스",
-            "ageDays": 0
+            "ageDays": 1
           },
           {
             "title": "[공통][구인구직][증명서 발급](외국인) 일부 증명서 발급 항목에서 발급 불가 오류 ",
@@ -80202,7 +80831,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "5.16.0 (완료)",
             "domain": "한패스",
-            "ageDays": 328
+            "ageDays": 329
           },
           {
             "title": "[대출비교] 국적 선택 팝업에서 대출 가능 국가가 아닌 전세계 국가 전체 노출됨",
@@ -80211,7 +80840,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "5.18.0 (완료)",
             "domain": "한패스",
-            "ageDays": 258
+            "ageDays": 259
           },
           {
             "title": "[대출비교] 여권 인증 경로로 대출 비교 진입 시 여권번호 영역에 외국인등록번호 자동 세팅됨",
@@ -80220,7 +80849,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "5.18.0 (완료)",
             "domain": "한패스",
-            "ageDays": 258
+            "ageDays": 259
           },
           {
             "title": "[대출비교] 카자흐스탄 대출비교 이용 불가 현상",
@@ -80229,7 +80858,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "5.18.0 (완료)",
             "domain": "한패스",
-            "ageDays": 258
+            "ageDays": 259
           },
           {
             "title": "[대출비교][공통] 1원인증 오입력 시 15분 역카운트 리셋 동작 OS별 상이(iOS 리셋 / AOS 미리셋) – 정책 확인 필요",
@@ -80238,7 +80867,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "5.18.0 (완료)",
             "domain": "한패스",
-            "ageDays": 257
+            "ageDays": 258
           },
           {
             "title": "[대출비교]전화번호 벨리데이션 오류 상태에서 다음 버튼 활성화 표출",
@@ -80247,7 +80876,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "5.18.0 (완료)",
             "domain": "한패스",
-            "ageDays": 257
+            "ageDays": 258
           },
           {
             "title": "[[대출비교] 승인 완료 / 승인 거절 시 앱푸시 미발송 현상",
@@ -80256,7 +80885,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "5.18.0 (완료)",
             "domain": "한패스",
-            "ageDays": 257
+            "ageDays": 258
           },
           {
             "title": "[대출비교]1원 인증번호 입력 시간 초과 후 계좌 재선택 화면에서 뒤로가기(\u003c) 시 만료된 1원인증 입력 화면이 재표출됨",
@@ -80265,7 +80894,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "5.18.0 (완료)",
             "domain": "한패스",
-            "ageDays": 257
+            "ageDays": 258
           },
           {
             "title": "[대출비교][iOS]셀피 인증 진입 시 카메라 접근 권한 미허용 상태에서도 권한 허용 팝업 미표출",
@@ -80274,7 +80903,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "5.18.0 (완료)",
             "domain": "한패스",
-            "ageDays": 257
+            "ageDays": 258
           },
           {
             "title": "[대출비교] 정보입력 화면의 이름, 국적이 출력되지 않는 현상",
@@ -80283,7 +80912,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "5.18.0 (완료)",
             "domain": "한패스",
-            "ageDays": 253
+            "ageDays": 254
           },
           {
             "title": "[대출비교] 1원 인증 인증번호 오입력  - 단말기 시스템 뒤로가기 및 좌측상단  \u003c 뒤로가기 선택 시 이전화면으로 돌아가지 않고 머물러 있는 현상",
@@ -80292,7 +80921,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "5.18.0 (완료)",
             "domain": "한패스",
-            "ageDays": 242
+            "ageDays": 243
           },
           {
             "title": "[타발_9PAY]추가 서류 제출 선택 - 송금인 촬영 준비 화면 내 인증서류 미노출",
@@ -80301,7 +80930,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "5.22.1 (완료)",
             "domain": "한패스",
-            "ageDays": 138
+            "ageDays": 139
           },
           {
             "title": "[타발_9PAY]‘신청 내용 확인’페이지 진입 시 오류 팝업 노출 되는 현상",
@@ -80310,7 +80939,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "5.22.1 (완료)",
             "domain": "한패스",
-            "ageDays": 137
+            "ageDays": 138
           },
           {
             "title": "[타발_9PAY]유효하지 않은 생년월일 입력 시 에러 팝업 노출 ",
@@ -80319,7 +80948,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "5.22.1 (완료)",
             "domain": "한패스",
-            "ageDays": 137
+            "ageDays": 138
           },
           {
             "title": "[타발_9PAY]본인 외, 베트남 신분증 선택 시 신분증 앞면, 증명서 필드 미노출 ",
@@ -80328,7 +80957,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "5.22.1 (완료)",
             "domain": "한패스",
-            "ageDays": 137
+            "ageDays": 138
           },
           {
             "title": "[타발_9PAY][iOS]신청 완료(QR 생성)페이지 내 우측 상단 ‘X’버튼 미노출",
@@ -80337,7 +80966,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "5.22.1 (완료)",
             "domain": "한패스",
-            "ageDays": 137
+            "ageDays": 138
           },
           {
             "title": "[타발_9PAY] 내역 관리 - 입금 만료일 초과 시에도 ‘입금 대기’ 상태로 노출되는 현상 ",
@@ -80346,7 +80975,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "5.22.1 (완료)",
             "domain": "한패스",
-            "ageDays": 134
+            "ageDays": 135
           },
           {
             "title": "[외화충전] 충전 시도 시 ‘월렛 보유 한도 팝업’ 노출 되며 충전 불가능 한 현상 ",
@@ -80355,7 +80984,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "Hanpass - Backlog",
             "domain": "한패스",
-            "ageDays": 116
+            "ageDays": 117
           },
           {
             "title": "[HC][공통] ‘결제 확인’ 팝업 노출 후 뒤로가기 두 번 선택 시 이전 화면으로 이동하는 현상 ",
@@ -80364,7 +80993,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "5.25.0 (완료)",
             "domain": "한패스",
-            "ageDays": 81
+            "ageDays": 82
           },
           {
             "title": "[HC][공통] ‘가입 내역 없음’ 팝업 노출 상태에서 OS물리백/스와이프 시 팝업 미닫힘 및 이전 화면 이동 현상 ",
@@ -80373,7 +81002,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "5.25.0 (완료)",
             "domain": "한패스",
-            "ageDays": 81
+            "ageDays": 82
           },
           {
             "title": "[VENTAJA][AOS] 6자리 PIN 입력 페이지에서 다크모드 설정 시 키패드 오류 노출되는 현상 ",
@@ -80382,7 +81011,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "5.25.0 (완료)",
             "domain": "한패스",
-            "ageDays": 81
+            "ageDays": 82
           },
           {
             "title": "[BO] ‘가입대상자 정보 상세’ 화면 내 정보 미수정 후 ‘저장’ 시 빈 팝업 및 에러 페이지 노출 현상  ",
@@ -80391,7 +81020,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "5.25.0 (완료)",
             "domain": "한패스",
-            "ageDays": 81
+            "ageDays": 82
           },
           {
             "title": "[카카오뱅크][회원가입] ‘주소 입력’ 화면 내 뒤로가기 시 ‘상품 상세 설명’ 화면 이동 현상  ",
@@ -80400,7 +81029,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "[카카오뱅크]해외송금",
             "domain": "한패스",
-            "ageDays": 77
+            "ageDays": 78
           },
           {
             "title": "[카카오뱅크][회원가입] ‘개인정보 확인’ 화면 내 이름 필드 입력 불가 현상",
@@ -80409,7 +81038,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "[카카오뱅크]해외송금",
             "domain": "한패스",
-            "ageDays": 77
+            "ageDays": 78
           },
           {
             "title": "[카카오뱅크][회원가입] ‘개인정보 확인’ 화면 내 에러 팝업 중복 노출되는 현상",
@@ -80418,7 +81047,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "[카카오뱅크]해외송금",
             "domain": "한패스",
-            "ageDays": 77
+            "ageDays": 78
           },
           {
             "title": "[카카오뱅크][회원가입][공통] ‘촬영준비 화면’ 내 항목 재선택 시 재촬영 불가 현상 ",
@@ -80427,7 +81056,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "[카카오뱅크]해외송금",
             "domain": "한패스",
-            "ageDays": 77
+            "ageDays": 78
           },
           {
             "title": "[카카오뱅크][신분증촬영준비] 항목 미입력 시 에러 팝업 미노출 되는 현상 ",
@@ -80436,7 +81065,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "[카카오뱅크]해외송금",
             "domain": "한패스",
-            "ageDays": 77
+            "ageDays": 78
           },
           {
             "title": "[카카오뱅크] ‘이용약관 상세’ 화면 내 OS 물리백 시 무반응 현상 ",
@@ -80445,7 +81074,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "[카카오뱅크]해외송금",
             "domain": "한패스",
-            "ageDays": 77
+            "ageDays": 78
           },
           {
             "title": "[HC][Web] ‘메뉴 선택’ 화면 내 ‘\u003c’ 뒤로가기 버튼 무반응 현상 ",
@@ -80454,7 +81083,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "5.25.0 (완료)",
             "domain": "한패스",
-            "ageDays": 77
+            "ageDays": 78
           },
           {
             "title": "[카카오뱅크][계좌등록][공통] ‘PIN 재입력’ 화면 내 뒤로가기 시 ‘1원 인증’ 화면 이동 현상 ",
@@ -80463,7 +81092,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "[카카오뱅크]해외송금",
             "domain": "한패스",
-            "ageDays": 76
+            "ageDays": 77
           },
           {
             "title": "[카카오뱅크][해외송금]수취인 QR 스캔하기 화면 내 ‘QR 이미지 가져오기’ 선택 시 무반응인 현상 ",
@@ -80472,7 +81101,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "[카카오뱅크]해외송금",
             "domain": "한패스",
-            "ageDays": 76
+            "ageDays": 77
           },
           {
             "title": "[카카오뱅크][계좌등록] ‘PIN 설정’ 화면 내 뒤로가기 시 ‘입금자명 바텀시트’ 노출 상태 및 닫기 불가 ",
@@ -80481,7 +81110,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "[카카오뱅크]해외송금",
             "domain": "한패스",
-            "ageDays": 76
+            "ageDays": 77
           },
           {
             "title": "[카카오뱅크][해외송금] ’수취인의 QR 스캔하기’ 화면에서 물리백 선택 시 이전 화면으로 이동 안 하는 현상  ",
@@ -80490,7 +81119,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "[카카오뱅크]해외송금",
             "domain": "한패스",
-            "ageDays": 76
+            "ageDays": 77
           },
           {
             "title": "[카카오뱅크][계좌등록][공통] PIN번호 오류횟수 초과 시 ‘등록실패’ 화면 미이동 현상 ",
@@ -80499,7 +81128,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "[카카오뱅크]해외송금",
             "domain": "한패스",
-            "ageDays": 76
+            "ageDays": 77
           },
           {
             "title": "[카카오뱅크][계좌등록][공통] 네트워크 비활성화 상태로 PIN번호 입력 시 빈 에러 팝업 노출",
@@ -80508,7 +81137,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "[카카오뱅크]해외송금",
             "domain": "한패스",
-            "ageDays": 76
+            "ageDays": 77
           },
           {
             "title": "[카카오뱅크][해외송금] ‘송금 신청 정보 입력’ 화면 내 ‘상세주소’ 영어 입력 시 다음 단계 진입 불가한 현상 ",
@@ -80517,7 +81146,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "[카카오뱅크]해외송금",
             "domain": "한패스",
-            "ageDays": 76
+            "ageDays": 77
           },
           {
             "title": "[카카오뱅크][해외송금] 고객센터 진입 후 물리백 선택 시 무반응인 현상  ",
@@ -80526,7 +81155,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "[카카오뱅크]해외송금",
             "domain": "한패스",
-            "ageDays": 76
+            "ageDays": 77
           },
           {
             "title": "[카카오뱅크][계좌등록] ‘송금 신청 실패’ 화면 내 ‘확인’ 버튼 선택 시 에러 팝업 지속적 노출",
@@ -80535,7 +81164,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "[카카오뱅크]해외송금",
             "domain": "한패스",
-            "ageDays": 76
+            "ageDays": 77
           }
         ],
         "agingCount": 252,
@@ -80547,7 +81176,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "미지정",
             "version": "5.12.0 (완료)",
             "domain": "한패스",
-            "ageDays": 454
+            "ageDays": 455
           },
           {
             "title": "[호주][방글라데시] 이메일 회원가입 후, 한국 회원 계정 등록 가능한 문제 ",
@@ -80556,7 +81185,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "미지정",
             "version": "5.12.0 (완료)",
             "domain": "한패스",
-            "ageDays": 449
+            "ageDays": 450
           },
           {
             "title": "[AOS][비밀번호변경] 회원상태 거절에서 비밀번호변경 선택 시, 강제종료",
@@ -80565,7 +81194,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "미지정",
             "version": "5.12.0 (완료)",
             "domain": "한패스",
-            "ageDays": 441
+            "ageDays": 442
           },
           {
             "title": "[AOS]통합QR결제 팝업 버튼 문구 변경 건.",
@@ -80574,7 +81203,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "미지정",
             "version": "5.13.0 (완료)",
             "domain": "한패스",
-            "ageDays": 420
+            "ageDays": 421
           },
           {
             "title": "[AOS][알림함] 앱푸시 알림 제목이 1줄만 노출됨",
@@ -80583,7 +81212,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "미지정",
             "version": "5.13.0 (완료)",
             "domain": "한패스",
-            "ageDays": 419
+            "ageDays": 420
           },
           {
             "title": "[iOS][교통충전] 추가된 안내문구 글머리기호&여백 수정 필요 (1)",
@@ -80592,7 +81221,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "미지정",
             "version": "5.13.0 (완료)",
             "domain": "한패스",
-            "ageDays": 418
+            "ageDays": 419
           },
           {
             "title": "[AOS][교통충전] 추가된 안내문구 글머리기호&여백 수정 필요",
@@ -80601,7 +81230,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "미지정",
             "version": "5.13.0 (완료)",
             "domain": "한패스",
-            "ageDays": 418
+            "ageDays": 419
           },
           {
             "title": "[공통][구인구직][증명서 발급](외국인) 일부 증명서 발급 항목에서 발급 불가 오류 ",
@@ -80610,7 +81239,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "5.16.0 (완료)",
             "domain": "한패스",
-            "ageDays": 328
+            "ageDays": 329
           },
           {
             "title": "[AOS][iOS] 해외배송&픽업 서비스 이용동의 - 제3자 개인정보제공동의 상세페이지 체크박스 미체크 되는 현상",
@@ -80619,7 +81248,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Minor",
             "version": "5.16.1 (완료)",
             "domain": "한패스",
-            "ageDays": 315
+            "ageDays": 316
           },
           {
             "title": "[구인구직] (네트워크 오류 시) 지원취소 버튼 탭 시 오류팝업 가이드문구가 없는 현상 ",
@@ -80628,7 +81257,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Minor",
             "version": "5.17.0 (완료)",
             "domain": "한패스",
-            "ageDays": 298
+            "ageDays": 299
           },
           {
             "title": "[대출비교]연간소득정보 입력 시 잘못된 금액 포맷(0,000,000) 입력 가능 및 0원 입력 시 벨리데이션 미동작",
@@ -80637,7 +81266,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Minor",
             "version": "5.18.0 (완료)",
             "domain": "한패스",
-            "ageDays": 258
+            "ageDays": 259
           },
           {
             "title": "[대출비교] 정보입력화면 - 휴대폰번호 입력 필드 기획서와 상이함",
@@ -80646,7 +81275,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Minor",
             "version": "5.18.0 (완료)",
             "domain": "한패스",
-            "ageDays": 258
+            "ageDays": 259
           },
           {
             "title": "[대출비교] 정보입력화면 - 여권 번호 입력 - 15자리 이상 입력되는 현상",
@@ -80655,7 +81284,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Minor",
             "version": "5.18.0 (완료)",
             "domain": "한패스",
-            "ageDays": 258
+            "ageDays": 259
           },
           {
             "title": "[대출비교] 비자 타입 선택 시, 바텀시트 노출 상태에서 인터랙션 영역(Interaction Area) 상태 유지로 인한 영역 노출",
@@ -80664,7 +81293,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Minor",
             "version": "5.18.0 (완료)",
             "domain": "한패스",
-            "ageDays": 258
+            "ageDays": 259
           },
           {
             "title": "[대출비교] 비자 타입 선택 바텀시트에서 기획서 기준 노출 순서 미적용",
@@ -80673,7 +81302,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Minor",
             "version": "5.18.0 (완료)",
             "domain": "한패스",
-            "ageDays": 258
+            "ageDays": 259
           },
           {
             "title": "[대출비교] 비자 타입 선택 바텀시트 타이틀 문구가 기획서와 상이함",
@@ -80682,7 +81311,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Minor",
             "version": "5.18.0 (완료)",
             "domain": "한패스",
-            "ageDays": 258
+            "ageDays": 259
           },
           {
             "title": "[대출비교] 국적 선택 팝업에서 대출 가능 국가가 아닌 전세계 국가 전체 노출됨",
@@ -80691,7 +81320,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "5.18.0 (완료)",
             "domain": "한패스",
-            "ageDays": 258
+            "ageDays": 259
           },
           {
             "title": "[대출비교] 외국인등록번호 13자리 입력 시 ‘-’(대시) 미표출",
@@ -80700,7 +81329,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Minor",
             "version": "5.18.0 (완료)",
             "domain": "한패스",
-            "ageDays": 258
+            "ageDays": 259
           },
           {
             "title": "[대출비교] 여권 인증 경로로 대출 비교 진입 시 여권번호 영역에 외국인등록번호 자동 세팅됨",
@@ -80709,7 +81338,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "5.18.0 (완료)",
             "domain": "한패스",
-            "ageDays": 258
+            "ageDays": 259
           },
           {
             "title": "[대출비교] 정보 입력 화면 - 이름 Place holder → “이름” 으로 노출되는 현상",
@@ -80718,7 +81347,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Minor",
             "version": "5.18.0 (완료)",
             "domain": "한패스",
-            "ageDays": 258
+            "ageDays": 259
           },
           {
             "title": "[대출비교] 카자흐스탄 대출비교 이용 불가 현상",
@@ -80727,7 +81356,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "5.18.0 (완료)",
             "domain": "한패스",
-            "ageDays": 258
+            "ageDays": 259
           },
           {
             "title": "[대출비교]약관 동의 후 ‘다음’ 선택 시 회색 로딩 화면 노출 현상",
@@ -80736,7 +81365,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Minor",
             "version": "5.18.0 (완료)",
             "domain": "한패스",
-            "ageDays": 258
+            "ageDays": 259
           },
           {
             "title": "[대출비교]이용약관 스크롤 영역이 줄어드는 현상",
@@ -80745,7 +81374,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Minor",
             "version": "5.18.0 (완료)",
             "domain": "한패스",
-            "ageDays": 258
+            "ageDays": 259
           },
           {
             "title": "[대출비교][약관안내_동의] 대출신청 내역 링크 버튼 롱 프레스/드래그 시 메뉴명 미노출 현상",
@@ -80754,7 +81383,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Minor",
             "version": "5.18.0 (완료)",
             "domain": "한패스",
-            "ageDays": 258
+            "ageDays": 259
           },
           {
             "title": "[대출비교][안내 약관_동의] 화면 문구 띄어쓰기 오류",
@@ -80763,7 +81392,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "개선 의견",
             "version": "5.18.0 (완료)",
             "domain": "한패스",
-            "ageDays": 258
+            "ageDays": 259
           },
           {
             "title": "[대출비교][공통] 회원상태 일시정지 상태 - 대출 비교 선택 시 이용불가 팝업 내 거절사유 null 로 노출됨",
@@ -80772,7 +81401,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Minor",
             "version": "5.18.0 (완료)",
             "domain": "한패스",
-            "ageDays": 258
+            "ageDays": 259
           },
           {
             "title": "[대출비교] 인증번호 불일치 팝업 [확인] 선택 - 시스템 뒤로가기 “1원입금 완료“팝업 내 확인 버튼이 영어로 노출",
@@ -80781,7 +81410,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Minor",
             "version": "5.18.0 (완료)",
             "domain": "한패스",
-            "ageDays": 257
+            "ageDays": 258
           },
           {
             "title": "[대출비교] 1원인증 시간 만료 후 계좌선택 화면에서 뒤로가기(\u003c) 선택 시 404 에러 표출",
@@ -80790,7 +81419,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Minor",
             "version": "5.18.0 (완료)",
             "domain": "한패스",
-            "ageDays": 257
+            "ageDays": 258
           },
           {
             "title": "[대출비교] 인증번호 입력필드 선택(인증번호 미입력) - 키패드 [이동] 선택 시 로딩되는 현상",
@@ -80799,7 +81428,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Minor",
             "version": "5.18.0 (완료)",
             "domain": "한패스",
-            "ageDays": 257
+            "ageDays": 258
           },
           {
             "title": "[대출비교][공통] 1원인증 오입력 시 15분 역카운트 리셋 동작 OS별 상이(iOS 리셋 / AOS 미리셋) – 정책 확인 필요",
@@ -80808,7 +81437,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "5.18.0 (완료)",
             "domain": "한패스",
-            "ageDays": 257
+            "ageDays": 258
           },
           {
             "title": "[대출비교] 베트남 언어 설정 시 1원 인증 화면에서 입력시간 초과 안내 한글 표출",
@@ -80817,7 +81446,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Minor",
             "version": "5.18.0 (완료)",
             "domain": "한패스",
-            "ageDays": 257
+            "ageDays": 258
           },
           {
             "title": "[대출비교]전화번호 벨리데이션 오류 상태에서 다음 버튼 활성화 표출",
@@ -80826,7 +81455,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "5.18.0 (완료)",
             "domain": "한패스",
-            "ageDays": 257
+            "ageDays": 258
           },
           {
             "title": "[[대출비교] 승인 완료 / 승인 거절 시 앱푸시 미발송 현상",
@@ -80835,7 +81464,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "5.18.0 (완료)",
             "domain": "한패스",
-            "ageDays": 257
+            "ageDays": 258
           },
           {
             "title": "[대출비교] 정보입력화면(외국인등록번호 필드, 휴대전화번호 필드, 연간소득) 삭제 및 수정 시 커서가 뒤로 가는 현상\n\n",
@@ -80844,7 +81473,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Minor",
             "version": "5.18.0 (완료)",
             "domain": "한패스",
-            "ageDays": 257
+            "ageDays": 258
           },
           {
             "title": "[대출비교]1원 인증번호 입력 시간 초과 후 계좌 재선택 화면에서 뒤로가기(\u003c) 시 만료된 1원인증 입력 화면이 재표출됨",
@@ -80853,7 +81482,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "5.18.0 (완료)",
             "domain": "한패스",
-            "ageDays": 257
+            "ageDays": 258
           },
           {
             "title": "[대출비교] 소득정보 입력 화면에서 ‘입사일자’ 항목이 ‘입사일시’로 잘못 노출됨",
@@ -80862,7 +81491,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Minor",
             "version": "5.18.0 (완료)",
             "domain": "한패스",
-            "ageDays": 257
+            "ageDays": 258
           },
           {
             "title": "[대출비교][공통] 중국어(간체) 비자 타입 선택 목록에서 E-10 표기 시 하이픈(-) 누락",
@@ -80871,7 +81500,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Minor",
             "version": "5.18.0 (완료)",
             "domain": "한패스",
-            "ageDays": 257
+            "ageDays": 258
           },
           {
             "title": "[대출비교] 모든 가심사 부결 화면에서 ‘메인으로 이동’ 버튼 선택 시 앱 메인이 아닌 대출비교 첫 화면으로 이동됨",
@@ -80880,7 +81509,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Minor",
             "version": "5.18.0 (완료)",
             "domain": "한패스",
-            "ageDays": 257
+            "ageDays": 258
           },
           {
             "title": "[대출비교][iOS]셀피 인증 진입 시 카메라 접근 권한 미허용 상태에서도 권한 허용 팝업 미표출",
@@ -80889,7 +81518,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "5.18.0 (완료)",
             "domain": "한패스",
-            "ageDays": 257
+            "ageDays": 258
           },
           {
             "title": "[대출비교] 대출비교 안내화면 - AOS 시스템 뒤로가기 \u003c 2번 선택해야 한패스 홈으로 이동하는 현상",
@@ -80898,7 +81527,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Minor",
             "version": "5.18.0 (완료)",
             "domain": "한패스",
-            "ageDays": 256
+            "ageDays": 257
           },
           {
             "title": "[대출비교] 비자 타입 목록 일부만 싱할라어로 표출되는 현상",
@@ -80907,7 +81536,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Minor",
             "version": "5.18.0 (완료)",
             "domain": "한패스",
-            "ageDays": 256
+            "ageDays": 257
           },
           {
             "title": "[대출비교] 대출신청 내역 없음 화면 안내 문구 미표출",
@@ -80916,7 +81545,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Minor",
             "version": "5.18.0 (완료)",
             "domain": "한패스",
-            "ageDays": 256
+            "ageDays": 257
           },
           {
             "title": "[대출비교] 상환방법 안내 문구 띄어쓰기 오류",
@@ -80925,7 +81554,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Minor",
             "version": "5.18.0 (완료)",
             "domain": "한패스",
-            "ageDays": 256
+            "ageDays": 257
           },
           {
             "title": "[대출비교] 1원인증-인증번호 숫자3자리 입력 시 키패드 내려가지 않는 현상",
@@ -80934,7 +81563,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Minor",
             "version": "5.18.0 (완료)",
             "domain": "한패스",
-            "ageDays": 256
+            "ageDays": 257
           },
           {
             "title": "[대출비교] 정보입력 화면의 이름, 국적이 출력되지 않는 현상",
@@ -80943,7 +81572,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "5.18.0 (완료)",
             "domain": "한패스",
-            "ageDays": 253
+            "ageDays": 254
           },
           {
             "title": "[대출비교] 1원 인증 인증번호 오입력  - 단말기 시스템 뒤로가기 및 좌측상단  \u003c 뒤로가기 선택 시 이전화면으로 돌아가지 않고 머물러 있는 현상",
@@ -80952,7 +81581,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "5.18.0 (완료)",
             "domain": "한패스",
-            "ageDays": 242
+            "ageDays": 243
           },
           {
             "title": "[타발_9PAY][iOS] 이용 약관 [필수] → ‘[Required]’ 로 노출",
@@ -80961,7 +81590,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Minor",
             "version": "5.22.1 (완료)",
             "domain": "한패스",
-            "ageDays": 140
+            "ageDays": 141
           },
           {
             "title": "[타발_9PAY]송금인 촬영 준비 화면 내 타이틀 문구 기획서와 상이",
@@ -80970,7 +81599,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Minor",
             "version": "5.22.1 (완료)",
             "domain": "한패스",
-            "ageDays": 140
+            "ageDays": 141
           },
           {
             "title": "[타발_9PAY]송금인 정보 입력 화면 내 신분증 정보 영역 상이",
@@ -80979,7 +81608,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Minor",
             "version": "5.22.1 (완료)",
             "domain": "한패스",
-            "ageDays": 140
+            "ageDays": 141
           },
           {
             "title": "[타발_9PAY]송금인 정보 입력 화면 내 주민등록증 - 인라인 에러 문구 불일치 ",
@@ -80988,7 +81617,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Minor",
             "version": "5.22.1 (완료)",
             "domain": "한패스",
-            "ageDays": 140
+            "ageDays": 141
           }
         ],
         "agingDays": 30,
@@ -81056,18 +81685,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
       ],
       "daily": [
         {
-          "date": "2026-09-21",
-          "new": 24,
-          "fixed": 176,
-          "closed": 176,
-          "deltaNew": 24
-        },
-        {
           "date": "2026-09-22",
           "new": 20,
           "fixed": 0,
           "closed": 0,
-          "deltaNew": -4
+          "deltaNew": 20
         },
         {
           "date": "2026-09-23",
@@ -81260,6 +81882,13 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
         },
         {
           "date": "2026-10-20",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-10-21",
           "new": 0,
           "fixed": 0,
           "closed": 0,
@@ -82525,6 +83154,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-10-20",
               "registered": 20,
               "fixed": 1
+            },
+            {
+              "date": "2026-10-21",
+              "registered": 20,
+              "fixed": 1
             }
           ]
         },
@@ -83229,6 +83863,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-10-20",
+              "registered": 15,
+              "fixed": 15
+            },
+            {
+              "date": "2026-10-21",
               "registered": 15,
               "fixed": 15
             }
@@ -84198,6 +84837,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-10-20",
               "registered": 55,
               "fixed": 54
+            },
+            {
+              "date": "2026-10-21",
+              "registered": 55,
+              "fixed": 54
             }
           ]
         },
@@ -84788,6 +85432,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-10-20",
+              "registered": 5,
+              "fixed": 5
+            },
+            {
+              "date": "2026-10-21",
               "registered": 5,
               "fixed": 5
             }
@@ -85766,6 +86415,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-10-20",
               "registered": 101,
               "fixed": 101
+            },
+            {
+              "date": "2026-10-21",
+              "registered": 101,
+              "fixed": 101
             }
           ]
         },
@@ -85981,6 +86635,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-10-20",
+              "registered": 37,
+              "fixed": 30
+            },
+            {
+              "date": "2026-10-21",
               "registered": 37,
               "fixed": 30
             }
@@ -86332,6 +86991,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-10-20",
               "registered": 172,
               "fixed": 166
+            },
+            {
+              "date": "2026-10-21",
+              "registered": 172,
+              "fixed": 166
             }
           ]
         },
@@ -86590,6 +87254,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-10-20",
+              "registered": 34,
+              "fixed": 34
+            },
+            {
+              "date": "2026-10-21",
               "registered": 34,
               "fixed": 34
             }
@@ -87508,6 +88177,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-10-20",
               "registered": 7,
               "fixed": 7
+            },
+            {
+              "date": "2026-10-21",
+              "registered": 7,
+              "fixed": 7
             }
           ]
         }
@@ -87558,18 +88232,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
       },
       "heatmap": [
         {
-          "date": "2026-09-21",
-          "new": 24,
-          "fixed": 176,
-          "closed": 176,
-          "deltaNew": 24
-        },
-        {
           "date": "2026-09-22",
           "new": 20,
           "fixed": 0,
           "closed": 0,
-          "deltaNew": -4
+          "deltaNew": 20
         },
         {
           "date": "2026-09-23",
@@ -87762,6 +88429,13 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
         },
         {
           "date": "2026-10-20",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-10-21",
           "new": 0,
           "fixed": 0,
           "closed": 0,
@@ -88028,7 +88702,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Critical",
             "version": "[G.H][Go.Hanpass][앱개편][APP]-1차 (완료)",
             "domain": "GoHanpass",
-            "ageDays": 27
+            "ageDays": 28
           },
           {
             "title": "[마이페이지][공통] 무기명 계정에서 추가 인증 후 ‘여권 등록’ 화면으로 이동되지 않아 기명 전환이 불가한 현상",
@@ -88037,7 +88711,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Critical",
             "version": "[G.H][Go.Hanpass][앱개편][APP]-1차 (완료)",
             "domain": "GoHanpass",
-            "ageDays": 27
+            "ageDays": 28
           },
           {
             "title": "[K-Trip][공통] ‘상품 정보 및 금액 확인 팝업’ 취소 후 앱 재진입 시 팝업 미노출 및 정의되지 않은 화면 노출",
@@ -88046,7 +88720,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Critical",
             "version": "[G.H][Go.Hanpass][앱개편][APP]-1차 (완료)",
             "domain": "GoHanpass",
-            "ageDays": 20
+            "ageDays": 21
           },
           {
             "title": "[공항철도][공통] 교차 로그인 후 결제 및 화면 이탈 시 세션 만료가 즉시 처리되지 않는 현상",
@@ -88055,7 +88729,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Critical",
             "version": "[G.H][Go.Hanpass][앱개편][APP]-1차 (완료)",
             "domain": "GoHanpass",
-            "ageDays": 18
+            "ageDays": 19
           },
           {
             "title": "[로그인][공통] 제휴사 가입 계정으로 로그인 및 비인가 서비스 접근이 가능한 현상",
@@ -88064,7 +88738,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Critical",
             "version": "[G.H][Go.Hanpass][앱개편][APP]-1차 (완료)",
             "domain": "GoHanpass",
-            "ageDays": 18
+            "ageDays": 19
           },
           {
             "title": "[홈][Web] 저속 네트워크 환경에서 필수 JS Chunk 로딩 Timeout으로 서비스 진입이 불가능한 현상",
@@ -88073,7 +88747,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Critical",
             "version": "[G.H][Go.Hanpass][앱개편][APP]-1차 (완료)",
             "domain": "GoHanpass",
-            "ageDays": 14
+            "ageDays": 15
           },
           {
             "title": "[로그인][공통] 비밀번호 재설정 완료 후 변경된 비밀번호로 로그인 시 로그인이 해제되는 현상",
@@ -88082,7 +88756,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Critical",
             "version": "[G.H][Go.Hanpass][앱개편][APP]-1차 (완료)",
             "domain": "GoHanpass",
-            "ageDays": 12
+            "ageDays": 13
           },
           {
             "title": "[월렛][자동충전카드][공통] 자동 충전 설정 불가한 현상 ",
@@ -88091,7 +88765,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Critical",
             "version": "[G.H][Go.Hanpass][앱개편][APP]-1차 (완료)",
             "domain": "GoHanpass",
-            "ageDays": 12
+            "ageDays": 13
           },
           {
             "title": "[젠데스크][AOS] 폴더블 단말에서 화면 해상도에 따라 젠데스크 닫기가 불가능한 현상",
@@ -88100,7 +88774,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Critical",
             "version": "[G.H][Go.Hanpass][앱개편][APP]-1차 (완료)",
             "domain": "GoHanpass",
-            "ageDays": 8
+            "ageDays": 9
           },
           {
             "title": "[K-Style_PICK][결제탭]  상단 '\u003c' 뒤로가기 → OS 뒤로가기 시 비정상 페이지 누적 현상",
@@ -88109,7 +88783,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "[G.H]v1.0.2-26.08 (완료)",
             "domain": "GoHanpass",
-            "ageDays": 161
+            "ageDays": 162
           },
           {
             "title": "[전체메뉴] 비로그인 상태로 K-Style PICK 진입 불가능 현상 ",
@@ -88118,7 +88792,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "[G.H]v1.0.2-26.08 (완료)",
             "domain": "GoHanpass",
-            "ageDays": 161
+            "ageDays": 162
           },
           {
             "title": "[관광객카드] 카드 등록 후 비밀번호 설정 시 ‘시스템 장애’ 팝업 노출 (카드 등록 불가)",
@@ -88127,7 +88801,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "[G.H]v1.0.2-26.06 (완료)",
             "domain": "GoHanpass",
-            "ageDays": 158
+            "ageDays": 159
           },
           {
             "title": "[K-Style_PICK] 비로그인 시 ‘뷰티 정보 상세’ 페이지 접근 불가능 ",
@@ -88136,7 +88810,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "[G.H]v1.0.2-26.08 (완료)",
             "domain": "GoHanpass",
-            "ageDays": 130
+            "ageDays": 131
           },
           {
             "title": "[내쿠폰] ‘버스 예약’ 페이지 내 ‘뒤로가기’ 선택 시 이전 화면으로 이동 안 하는 현상",
@@ -88145,7 +88819,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "[G.H]v1.0.2-26.08 (완료)",
             "domain": "GoHanpass",
-            "ageDays": 123
+            "ageDays": 124
           },
           {
             "title": "[iOS]’사용자 위치 사용 권한’ 허용 후 앱 재진입 시 팝업 재노출 되는 현상",
@@ -88154,7 +88828,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "[G.H]v1.0.2-26.08 (완료)",
             "domain": "GoHanpass",
-            "ageDays": 119
+            "ageDays": 120
           },
           {
             "title": "[팝업노출][추가인증][iOS] 언어 변경 시 ‘카드 신청’ 팝업 내 ‘x’ 버튼 무반응 현상  ",
@@ -88163,7 +88837,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "[G.H]v1.0.2-26.08 (완료)",
             "domain": "GoHanpass",
-            "ageDays": 88
+            "ageDays": 89
           },
           {
             "title": "[팝업노출][추가인증][iOS] 언어 변경 시 ‘고객확인정보 등록’ 화면 내 ‘\u003c’ 뒤로가기 버튼 무반응 현상  ",
@@ -88172,7 +88846,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "[G.H]v1.0.2-26.08 (완료)",
             "domain": "GoHanpass",
-            "ageDays": 85
+            "ageDays": 86
           },
           {
             "title": "[운영관리][온보딩관리] 사용 중인 노출 순서 선택 시 중복 안내 팝업이 미노출되는 현상 ",
@@ -88181,7 +88855,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "[G.H][Go.Hanpass][앱개편][BO]-1차 (완료)",
             "domain": "GoHanpass",
-            "ageDays": 29
+            "ageDays": 30
           },
           {
             "title": "[운영관리][메인배너수정] 미지원 이미지 형식인 WEBP 파일이 등록되는 현상",
@@ -88190,7 +88864,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "[G.H][Go.Hanpass][앱개편][BO]-1차 (완료)",
             "domain": "GoHanpass",
-            "ageDays": 29
+            "ageDays": 30
           },
           {
             "title": "[운영관리][메인배너관리] 미지원 이미지 형식인 WEBP 파일이 등록되는 현상 ",
@@ -88199,7 +88873,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "[G.H][Go.Hanpass][앱개편][BO]-1차 (완료)",
             "domain": "GoHanpass",
-            "ageDays": 29
+            "ageDays": 30
           },
           {
             "title": "[홈 관리][추천여행지관리] WEBP 이미지 등록 시 시스템 오류 코드가 노출되는 현상",
@@ -88208,7 +88882,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "[G.H][Go.Hanpass][앱개편][BO]-1차 (완료)",
             "domain": "GoHanpass",
-            "ageDays": 29
+            "ageDays": 30
           },
           {
             "title": "[홈][MOVE] 추천 여행지 검색 결과가 2건 이상인 경우 첫 번째 목록이 자동 선택되는 현상 ",
@@ -88217,7 +88891,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "[G.H][Go.Hanpass][앱개편][APP]-1차 (완료)",
             "domain": "GoHanpass",
-            "ageDays": 28
+            "ageDays": 29
           },
           {
             "title": "[시스템관리][전체메뉴관리] 노출 순서를 ‘비노출’로 설정 시 메뉴 수정이 불가한 현상 ",
@@ -88226,7 +88900,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "[G.H][Go.Hanpass][앱개편][BO]-1차 (완료)",
             "domain": "GoHanpass",
-            "ageDays": 28
+            "ageDays": 29
           },
           {
             "title": "[시스템관리][전체메뉴관리] 노출 순서를 ‘비노출’로 설정 시 메뉴 등록이 불가한 현상 ",
@@ -88235,7 +88909,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "[G.H][Go.Hanpass][앱개편][BO]-1차 (완료)",
             "domain": "GoHanpass",
-            "ageDays": 28
+            "ageDays": 29
           },
           {
             "title": "[통합길찾기] 출발지와 도착지가 동일할 경우 토스트 팝업 미노출 되는 현상 ",
@@ -88244,7 +88918,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "[G.H][Go.Hanpass][앱개편][APP]-1차 (완료)",
             "domain": "GoHanpass",
-            "ageDays": 28
+            "ageDays": 29
           },
           {
             "title": "[통합길찾기]경로 상세 화면에서 경로 라인 일부가 상세 팝업에 가려지는 현상",
@@ -88253,7 +88927,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "[G.H][Go.Hanpass][앱개편][APP]-1차 (완료)",
             "domain": "GoHanpass",
-            "ageDays": 28
+            "ageDays": 29
           },
           {
             "title": "[통합길찾기][iOS] 기기 위치 서비스 OFF 상태에서 ‘현재 위치’ 버튼이 미노출되는 현상",
@@ -88262,7 +88936,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "[G.H][Go.Hanpass][앱개편][APP]-1차 (완료)",
             "domain": "GoHanpass",
-            "ageDays": 28
+            "ageDays": 29
           },
           {
             "title": "[온보딩][풀팝업][AOS] OS 물리백 선택 시 팝업이 닫히지 않고 앱이 종료되는 현상 ",
@@ -88271,7 +88945,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "[G.H][Go.Hanpass][앱개편][APP]-1차 (완료)",
             "domain": "GoHanpass",
-            "ageDays": 28
+            "ageDays": 29
           },
           {
             "title": "[홈][EXPLORE][공통]  K-Festival 목록 내 Translate 선택 시 무반응인 현상 ",
@@ -88280,7 +88954,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "[G.H][Go.Hanpass][앱개편][APP]-1차 (완료)",
             "domain": "GoHanpass",
-            "ageDays": 27
+            "ageDays": 28
           },
           {
             "title": "[홈][PAY][공통] 월렛 영역 ‘>’ 아이콘 선택 시 ‘월렛 내역 조회’ 화면으로 이동하는 현상",
@@ -88289,7 +88963,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "[G.H][Go.Hanpass][앱개편][APP]-1차 (완료)",
             "domain": "GoHanpass",
-            "ageDays": 27
+            "ageDays": 28
           },
           {
             "title": "[통합길찾기][근처장소][공통] 평점이 동일한 경우 리뷰 수 기준으로 정렬되지 않는 현상",
@@ -88298,7 +88972,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "[G.H][Go.Hanpass][앱개편][APP]-1차 (완료)",
             "domain": "GoHanpass",
-            "ageDays": 27
+            "ageDays": 28
           },
           {
             "title": "[홈][PAY][공통] 등록된 카드가 존재하는 경우에도 ‘내 카드’ 영역이 미노출되는 현상",
@@ -88307,7 +88981,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "[G.H][Go.Hanpass][앱개편][APP]-1차 (완료)",
             "domain": "GoHanpass",
-            "ageDays": 27
+            "ageDays": 28
           },
           {
             "title": "[통합길찾기][경로상세][공통] CTA 화면에서 뒤로가기 후 경로 상세 화면의 종료 버튼이 동작하지 않는 현상",
@@ -88316,7 +88990,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "[G.H][Go.Hanpass][앱개편][APP]-1차 (완료)",
             "domain": "GoHanpass",
-            "ageDays": 27
+            "ageDays": 28
           },
           {
             "title": "[해외송금][공통] ‘송금신청정보 입력’ 화면에서 입력 필드가 중복 노출되는 현상",
@@ -88325,7 +88999,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "[G.H]추후 수정-백로그",
             "domain": "GoHanpass",
-            "ageDays": 27
+            "ageDays": 28
           },
           {
             "title": "[홈][MOVE][공통] 메인 이벤트 배너가 1건인 경우에도 인디케이터가 노출되는 현상",
@@ -88334,7 +89008,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "[G.H][Go.Hanpass][앱개편][APP]-1차 (완료)",
             "domain": "GoHanpass",
-            "ageDays": 27
+            "ageDays": 28
           },
           {
             "title": "[마이페이지][내쿠폰][공통] ‘내 쿠폰’ 화면에서 뒤로가기가 동작하지 않는 현상",
@@ -88343,7 +89017,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "[G.H][Go.Hanpass][앱개편][APP]-1차 (완료)",
             "domain": "GoHanpass",
-            "ageDays": 27
+            "ageDays": 28
           },
           {
             "title": "[마이페이지][공통] ‘내 정보 관리’ 화면에서 뒤로가기가 동작하지 않는 현상",
@@ -88352,7 +89026,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "[G.H][Go.Hanpass][앱개편][APP]-1차 (완료)",
             "domain": "GoHanpass",
-            "ageDays": 27
+            "ageDays": 28
           },
           {
             "title": "[홈][MOVE][공통] ‘추천 여행지’ 노출 건수가 0건인 경우에도 해당 영역이 노출되는 현상",
@@ -88361,7 +89035,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "[G.H][Go.Hanpass][앱개편][APP]-1차 (완료)",
             "domain": "GoHanpass",
-            "ageDays": 27
+            "ageDays": 28
           },
           {
             "title": "[날씨][공통] ‘이번주 날씨’ 영역에 날씨 정보가 미노출되는 현상",
@@ -88370,7 +89044,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "[G.H][Go.Hanpass][앱개편][APP]-1차 (완료)",
             "domain": "GoHanpass",
-            "ageDays": 27
+            "ageDays": 28
           },
           {
             "title": "[공항철도][예약자정보][공통] 등록된 영문 중간 이름(Middle Name)이 미노출되는 현상",
@@ -88379,7 +89053,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "[G.H][Go.Hanpass][앱개편][APP]-1차 (완료)",
             "domain": "GoHanpass",
-            "ageDays": 22
+            "ageDays": 23
           },
           {
             "title": "[공항철도][정산내역] 주문번호 선택 시 예약 상세 화면으로 이동하지 않는 현상",
@@ -88388,7 +89062,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "[G.H][Go.Hanpass][앱개편][BO]-1차 (완료)",
             "domain": "GoHanpass",
-            "ageDays": 22
+            "ageDays": 23
           },
           {
             "title": "[공항철도][티켓관리] 매입가 수정 완료 시 완료 토스트가 미노출되는 현상",
@@ -88397,7 +89071,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "[G.H][Go.Hanpass][앱개편][BO]-1차 (완료)",
             "domain": "GoHanpass",
-            "ageDays": 22
+            "ageDays": 23
           },
           {
             "title": "[마이페이지][공통] 알림 없을 시에도 알림 아이콘 뱃지 노출 되는 현상 ",
@@ -88406,7 +89080,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "[G.H][Go.Hanpass][앱개편][APP]-1차 (완료)",
             "domain": "GoHanpass",
-            "ageDays": 22
+            "ageDays": 23
           },
           {
             "title": "[날씨][공통] ‘오늘 날씨’ 영역의 강수확률이 지역과 관계없이 0%로 고정 노출되는 현상",
@@ -88415,7 +89089,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "[G.H][Go.Hanpass][앱개편][APP]-1차 (완료)",
             "domain": "GoHanpass",
-            "ageDays": 22
+            "ageDays": 23
           },
           {
             "title": "[프로모션배너][공통] 전체보기 화면에서 프로모션명이 말줄임 처리되어 노출되는 현상",
@@ -88424,7 +89098,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "[G.H][Go.Hanpass][앱개편][APP]-1차 (완료)",
             "domain": "GoHanpass",
-            "ageDays": 22
+            "ageDays": 23
           },
           {
             "title": "[통합길찾기][경로상세][공통] 소요시간 영역 내 ‘최적 경로’ 및 ‘최소예상요금’ 라벨이 미노출되는 현상",
@@ -88433,7 +89107,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "[G.H][Go.Hanpass][앱개편][APP]-1차 (완료)",
             "domain": "GoHanpass",
-            "ageDays": 22
+            "ageDays": 23
           },
           {
             "title": "[통합길찾기][경로상세][공통] 구간별 소요시간이 미노출되는 현상",
@@ -88442,7 +89116,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "[G.H][Go.Hanpass][앱개편][APP]-1차 (완료)",
             "domain": "GoHanpass",
-            "ageDays": 22
+            "ageDays": 23
           },
           {
             "title": "[설정][로그인비밀번호변경][무기명][공통] 부가 정보 입력 화면에서 뒤로가기 시 홈 화면으로 이동하는 현상",
@@ -88451,7 +89125,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "[G.H][Go.Hanpass][앱개편][APP]-1차 (완료)",
             "domain": "GoHanpass",
-            "ageDays": 22
+            "ageDays": 23
           },
           {
             "title": "[마이페이지][내정보관리][공통] PIN 변경 선택 시 ‘비밀번호 변경’ Bottom Sheet가 노출되는 현상",
@@ -88460,7 +89134,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "[G.H][Go.Hanpass][앱개편][APP]-1차 (완료)",
             "domain": "GoHanpass",
-            "ageDays": 22
+            "ageDays": 23
           },
           {
             "title": "[공항철도][예약자정보][공통] 이메일 형식에 대한 유효성 검증이 동작하지 않는 현상",
@@ -88469,10 +89143,10 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "[G.H][Go.Hanpass][앱개편][APP]-1차 (완료)",
             "domain": "GoHanpass",
-            "ageDays": 21
+            "ageDays": 22
           }
         ],
-        "agingCount": 20,
+        "agingCount": 27,
         "aging": [
           {
             "title": "[전체메뉴] 좌/우 슬라이드 시 메뉴 패널 한 번 더 노출 되는 현상",
@@ -88481,7 +89155,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Minor",
             "version": "[G.H]v1.0.2-26.08 (완료)",
             "domain": "GoHanpass",
-            "ageDays": 161
+            "ageDays": 162
           },
           {
             "title": "[K-Style_PICK][결제탭]  상단 '\u003c' 뒤로가기 → OS 뒤로가기 시 비정상 페이지 누적 현상",
@@ -88490,7 +89164,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "[G.H]v1.0.2-26.08 (완료)",
             "domain": "GoHanpass",
-            "ageDays": 161
+            "ageDays": 162
           },
           {
             "title": "[전체메뉴] 비로그인 상태로 K-Style PICK 진입 불가능 현상 ",
@@ -88499,7 +89173,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "[G.H]v1.0.2-26.08 (완료)",
             "domain": "GoHanpass",
-            "ageDays": 161
+            "ageDays": 162
           },
           {
             "title": "[권한][AOS] 위치 권한 팝업 미허용 시 위치 권한 팝업 한 번 더 노출되는 현상 (iOS 미발생)",
@@ -88508,7 +89182,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Minor",
             "version": "[G.H]v1.0.2-26.08 (완료)",
             "domain": "GoHanpass",
-            "ageDays": 160
+            "ageDays": 161
           },
           {
             "title": "[관광객카드] 카드 등록 후 비밀번호 설정 시 ‘시스템 장애’ 팝업 노출 (카드 등록 불가)",
@@ -88517,7 +89191,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "[G.H]v1.0.2-26.06 (완료)",
             "domain": "GoHanpass",
-            "ageDays": 158
+            "ageDays": 159
           },
           {
             "title": "[회원가입][인증번호입력]’다시받기’ 선택 후 3분 카운팅 초과 시 ‘인증번호 입력 시간 초과 팝업’ 미노출  ",
@@ -88526,7 +89200,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Minor",
             "version": "[G.H]v1.0.2-26.08 (완료)",
             "domain": "GoHanpass",
-            "ageDays": 131
+            "ageDays": 132
           },
           {
             "title": "[K-Style_PICK] 비로그인 시 ‘뷰티 정보 상세’ 페이지 접근 불가능 ",
@@ -88535,7 +89209,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "[G.H]v1.0.2-26.08 (완료)",
             "domain": "GoHanpass",
-            "ageDays": 130
+            "ageDays": 131
           },
           {
             "title": "[BI] 버스, KTX 결제 팝업 내 네이밍 변경 안 되어있는 현상 ",
@@ -88544,7 +89218,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Minor",
             "version": "[G.H]v1.0.2-26.08 (완료)",
             "domain": "GoHanpass",
-            "ageDays": 125
+            "ageDays": 126
           },
           {
             "title": "[BI][관광객카드] ‘카드 디자인 선택’ 화면 내 네이밍 변경 안 되어 있는 현상 ",
@@ -88553,7 +89227,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Minor",
             "version": "[G.H]v1.0.2-26.08 (완료)",
             "domain": "GoHanpass",
-            "ageDays": 125
+            "ageDays": 126
           },
           {
             "title": "[BI][고객센터] 자주 묻는 질문 내 카테고리 명칭 수정 안 되어 있는 현상",
@@ -88562,7 +89236,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Minor",
             "version": "[G.H]v1.0.2-26.08 (완료)",
             "domain": "GoHanpass",
-            "ageDays": 125
+            "ageDays": 126
           },
           {
             "title": " [챗봇] 키패드 열려있는 상태로 화면 스크롤 시 전 화면 노출 및 선택 가능 현상 ",
@@ -88571,7 +89245,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Minor",
             "version": "[G.H]v1.0.2-26.08 (완료)",
             "domain": "GoHanpass",
-            "ageDays": 124
+            "ageDays": 125
           },
           {
             "title": "[iOS]월렛 영역 내 아이콘 비정상 노출 되는 현상",
@@ -88580,7 +89254,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Minor",
             "version": "[G.H]v1.0.2-26.08 (완료)",
             "domain": "GoHanpass",
-            "ageDays": 124
+            "ageDays": 125
           },
           {
             "title": "[K-Style_PICK] ‘길찾기’ 버튼 포커싱 오류",
@@ -88589,7 +89263,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Minor",
             "version": "[G.H]v1.0.2-26.08 (완료)",
             "domain": "GoHanpass",
-            "ageDays": 123
+            "ageDays": 124
           },
           {
             "title": "[내쿠폰] ‘버스 예약’ 페이지 내 ‘뒤로가기’ 선택 시 이전 화면으로 이동 안 하는 현상",
@@ -88598,7 +89272,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "[G.H]v1.0.2-26.08 (완료)",
             "domain": "GoHanpass",
-            "ageDays": 123
+            "ageDays": 124
           },
           {
             "title": "[iOS]’사용자 위치 사용 권한’ 허용 후 앱 재진입 시 팝업 재노출 되는 현상",
@@ -88607,7 +89281,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "[G.H]v1.0.2-26.08 (완료)",
             "domain": "GoHanpass",
-            "ageDays": 119
+            "ageDays": 120
           },
           {
             "title": "[기명무기명][회원가입][다국어] 우르두어 설정 시 영문 노출 현상",
@@ -88616,7 +89290,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Minor",
             "version": "[G.H]v1.0.2-26.08 (완료)",
             "domain": "GoHanpass",
-            "ageDays": 99
+            "ageDays": 100
           },
           {
             "title": "[기명무기명][공통] 일시정지 상태 계정으로 해외송금 진입 시 ‘거절 사유 : 꼭 확인해주세요!’로 노출 되는 현상",
@@ -88625,7 +89299,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Minor",
             "version": "[G.H]v1.0.2-26.08 (완료)",
             "domain": "GoHanpass",
-            "ageDays": 98
+            "ageDays": 99
           },
           {
             "title": "[팝업노출][추가인증][iOS] 언어 변경 시 ‘카드 신청’ 팝업 내 ‘x’ 버튼 무반응 현상  ",
@@ -88634,7 +89308,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "[G.H]v1.0.2-26.08 (완료)",
             "domain": "GoHanpass",
-            "ageDays": 88
+            "ageDays": 89
           },
           {
             "title": "[추가인증][다국어] 중국어 번체 설정 시 ‘주소 사진 업로드 안내 팝업’ 내 ‘취소’ 버튼 영어로 나오는 현상 ",
@@ -88643,7 +89317,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Minor",
             "version": "[G.H]v1.0.2-26.08 (완료)",
             "domain": "GoHanpass",
-            "ageDays": 88
+            "ageDays": 89
           },
           {
             "title": "[팝업노출][추가인증][iOS] 언어 변경 시 ‘고객확인정보 등록’ 화면 내 ‘\u003c’ 뒤로가기 버튼 무반응 현상  ",
@@ -88652,7 +89326,70 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "severity": "Major",
             "version": "[G.H]v1.0.2-26.08 (완료)",
             "domain": "GoHanpass",
-            "ageDays": 85
+            "ageDays": 86
+          },
+          {
+            "title": "[K-Trip][전시관리] ‘전시 후보 상품’ 내 ‘상품 구분’ 셀렉트 박스 항목이 기획서와 상이하게 노출되는 현상 ",
+            "url": "https://app.notion.com/p/K-Trip-3e273fbd19518017baacdb2ca24bac2c",
+            "status": "QA 검증 -회귀 (QA Verification)",
+            "severity": "Minor",
+            "version": "[G.H][Go.Hanpass][앱개편][BO]-1차 (완료)",
+            "domain": "GoHanpass",
+            "ageDays": 30
+          },
+          {
+            "title": "[운영관리][온보딩관리] 사용 중인 노출 순서 선택 시 중복 안내 팝업이 미노출되는 현상 ",
+            "url": "https://app.notion.com/p/3e273fbd19518024a1e6fa1470def3ce",
+            "status": "QA 검증 -회귀 (QA Verification)",
+            "severity": "Major",
+            "version": "[G.H][Go.Hanpass][앱개편][BO]-1차 (완료)",
+            "domain": "GoHanpass",
+            "ageDays": 30
+          },
+          {
+            "title": "[운영관리][메인배너수정] 미지원 이미지 형식인 WEBP 파일이 등록되는 현상",
+            "url": "https://app.notion.com/p/WEBP-3e273fbd195180eaa7dad6ad6826733f",
+            "status": "QA 검증 -회귀 (QA Verification)",
+            "severity": "Major",
+            "version": "[G.H][Go.Hanpass][앱개편][BO]-1차 (완료)",
+            "domain": "GoHanpass",
+            "ageDays": 30
+          },
+          {
+            "title": "[운영관리][메인배너관리] 미지원 이미지 형식인 WEBP 파일이 등록되는 현상 ",
+            "url": "https://app.notion.com/p/WEBP-3e273fbd19518010822fd1418a0ac96f",
+            "status": "QA 검증 -회귀 (QA Verification)",
+            "severity": "Major",
+            "version": "[G.H][Go.Hanpass][앱개편][BO]-1차 (완료)",
+            "domain": "GoHanpass",
+            "ageDays": 30
+          },
+          {
+            "title": "[운영관리][메인배너관리] 이미지 등록 제한 안내 문구에 미지원 형식인 ‘WEBP’가 노출되는 현상",
+            "url": "https://app.notion.com/p/WEBP-3e273fbd195180d0a69dc1b354f71b03",
+            "status": "QA 검증 -회귀 (QA Verification)",
+            "severity": "Minor",
+            "version": "[G.H][Go.Hanpass][앱개편][BO]-1차 (완료)",
+            "domain": "GoHanpass",
+            "ageDays": 30
+          },
+          {
+            "title": "[홈 관리][추천여행지관리] 이미지 등록 제한 안내 문구에 미지원 형식인 ‘WEBP’가 노출되는 현상 ",
+            "url": "https://app.notion.com/p/WEBP-3e273fbd19518058bf41c04a6ce3203b",
+            "status": "QA 검증 -회귀 (QA Verification)",
+            "severity": "Minor",
+            "version": "[G.H][Go.Hanpass][앱개편][BO]-1차 (완료)",
+            "domain": "GoHanpass",
+            "ageDays": 30
+          },
+          {
+            "title": "[홈 관리][추천여행지관리] WEBP 이미지 등록 시 시스템 오류 코드가 노출되는 현상",
+            "url": "https://app.notion.com/p/WEBP-3e273fbd1951801bbe7bc30d121ff85a",
+            "status": "QA 검증 -회귀 (QA Verification)",
+            "severity": "Major",
+            "version": "[G.H][Go.Hanpass][앱개편][BO]-1차 (완료)",
+            "domain": "GoHanpass",
+            "ageDays": 30
           }
         ],
         "agingDays": 30,
@@ -88665,13 +89402,13 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
   },
   "defectSource": {
     "status": "ok",
-    "syncedAt": "2026-10-20T22:47:55+09:00",
-    "attemptedAt": "2026-10-20T22:47:55+09:00"
+    "syncedAt": "2026-10-21T10:52:28+09:00",
+    "attemptedAt": "2026-10-21T10:52:28+09:00"
   },
   "qaTasks": {
     "status": "ok",
-    "syncedAt": "2026-10-20T22:48:02+09:00",
-    "attemptedAt": "2026-10-20T22:48:02+09:00",
+    "syncedAt": "2026-10-21T10:52:33+09:00",
+    "attemptedAt": "2026-10-21T10:52:33+09:00",
     "data": {
       "rows": [
         {
@@ -88683,7 +89420,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "overdue": true,
           "start": "2026-08-13",
           "end": "2026-08-24",
-          "dday": -68,
+          "dday": -69,
           "tcState": "TC 개발 완료",
           "tcCount": 9000,
           "priority": "🔴",
@@ -88708,10 +89445,10 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "url": "https://app.notion.com/p/Hanpass-Live-3c973fbd195180a7ba1cea55067d98c9",
           "status": "테스트 진행중",
           "state": "진행중",
-          "overdue": false,
+          "overdue": true,
           "start": "2026-08-25",
           "end": "2026-10-20",
-          "dday": -56,
+          "dday": -57,
           "tcState": "TC 개발 중",
           "tcCount": 13313,
           "priority": "🔴",
@@ -88741,7 +89478,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "overdue": false,
           "start": "2026-08-25",
           "end": "2026-08-26",
-          "dday": -56,
+          "dday": -57,
           "tcState": "TC 개발 완료",
           "tcCount": 600,
           "priority": "🔴",
@@ -88769,7 +89506,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "overdue": false,
           "start": "2026-08-31",
           "end": "2026-09-07",
-          "dday": -50,
+          "dday": -51,
           "tcState": "TC 개발 완료",
           "tcCount": 6000,
           "priority": "🔴",
@@ -88799,7 +89536,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "overdue": false,
           "start": "2026-09-01",
           "end": "",
-          "dday": -49,
+          "dday": -50,
           "tcState": "TC 개발 완료",
           "tcCount": 14,
           "priority": "🔵",
@@ -88820,7 +89557,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "overdue": false,
           "start": "2026-09-08",
           "end": "2026-09-11",
-          "dday": -42,
+          "dday": -43,
           "tcState": "미지정",
           "tcCount": null,
           "priority": "🔴",
@@ -88841,7 +89578,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "overdue": false,
           "start": "2026-09-22",
           "end": "2026-10-13",
-          "dday": -28,
+          "dday": -29,
           "tcState": "TC 개발 완료",
           "tcCount": 9522,
           "priority": "🔵",
@@ -88871,7 +89608,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "overdue": false,
           "start": "2026-10-14",
           "end": "2026-10-19",
-          "dday": -6,
+          "dday": -7,
           "tcState": "TC 개발 완료",
           "tcCount": 415,
           "priority": "",
@@ -88890,7 +89627,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "overdue": false,
           "start": "2026-10-21",
           "end": "2026-10-27",
-          "dday": 1,
+          "dday": 0,
           "tcState": "TC 개발 완료",
           "tcCount": 3900,
           "priority": "🔵",
@@ -88909,9 +89646,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "predecessors": [
             "3c973fbd-1951-80a7-ba1c-ea55067d98c9"
           ],
-          "warnings": [
-            "완료 상태와 미래 시작일 확인 필요"
-          ]
+          "warnings": []
         },
         {
           "id": "63473fbd-1951-8245-b226-81eeb79d0a53",
@@ -89053,8 +89788,8 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
   },
   "qaQuality": {
     "status": "ok",
-    "syncedAt": "2026-10-20T22:48:29+09:00",
-    "attemptedAt": "2026-10-20T22:48:29+09:00",
+    "syncedAt": "2026-10-21T10:52:58+09:00",
+    "attemptedAt": "2026-10-21T10:52:58+09:00",
     "data": {
       "sourceUrl": "https://www.notion.so/1fa73fbd195180a59f39d3ae80362936",
       "documents": [
@@ -89201,28 +89936,28 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
   "sources": {
     "defects": {
       "status": "ok",
-      "syncedAt": "2026-10-20T22:47:55+09:00",
-      "attemptedAt": "2026-10-20T22:47:55+09:00"
+      "syncedAt": "2026-10-21T10:52:28+09:00",
+      "attemptedAt": "2026-10-21T10:52:28+09:00"
     },
     "tasks": {
       "status": "ok",
-      "syncedAt": "2026-10-20T22:48:02+09:00",
-      "attemptedAt": "2026-10-20T22:48:02+09:00"
+      "syncedAt": "2026-10-21T10:52:33+09:00",
+      "attemptedAt": "2026-10-21T10:52:33+09:00"
     },
     "quality": {
       "status": "ok",
-      "syncedAt": "2026-10-20T22:48:29+09:00",
-      "attemptedAt": "2026-10-20T22:48:29+09:00"
+      "syncedAt": "2026-10-21T10:52:58+09:00",
+      "attemptedAt": "2026-10-21T10:52:58+09:00"
     },
     "report-한패스": {
       "status": "ok",
-      "syncedAt": "2026-10-20T22:47:55+09:00",
-      "attemptedAt": "2026-10-20T22:47:55+09:00"
+      "syncedAt": "2026-10-21T10:52:28+09:00",
+      "attemptedAt": "2026-10-21T10:52:28+09:00"
     },
     "report-GoHanpass": {
       "status": "ok",
-      "syncedAt": "2026-10-20T22:47:56+09:00",
-      "attemptedAt": "2026-10-20T22:47:56+09:00"
+      "syncedAt": "2026-10-21T10:52:29+09:00",
+      "attemptedAt": "2026-10-21T10:52:29+09:00"
     }
   }
 }</script>

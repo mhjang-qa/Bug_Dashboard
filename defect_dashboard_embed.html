@@ -731,7 +731,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
     </div>
   </div>
   <script id="dashboard-data" type="application/json">{
-  "generatedAt": "2026-11-10T16:33:51+00:00",
+  "generatedAt": "2026-11-11T02:56:26+00:00",
   "days": 30,
   "domainOrder": [
     "한패스",
@@ -740,20 +740,20 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
   "domains": {
     "ALL": {
       "summary": {
-        "total": 2109,
-        "new": 233,
-        "inProgress": 14,
+        "total": 2113,
+        "new": 232,
+        "inProgress": 13,
         "fixed": 0,
-        "closed": 1572,
-        "todayNew": 24,
-        "newDelta": 8,
+        "closed": 1578,
+        "todayNew": 4,
+        "newDelta": -20,
         "critical": 104,
-        "todayClosed": 7
+        "todayClosed": 6
       },
       "funnel": [
         {
           "stage": "등록",
-          "count": 233,
+          "count": 232,
           "rate": 11.0,
           "width": 15
         },
@@ -771,8 +771,8 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
         },
         {
           "stage": "진행중",
-          "count": 14,
-          "rate": 0.7,
+          "count": 13,
+          "rate": 0.6,
           "width": 6
         },
         {
@@ -784,30 +784,23 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
         {
           "stage": "QA확인",
           "count": 290,
-          "rate": 13.8,
+          "rate": 13.7,
           "width": 18
         },
         {
           "stage": "종료",
-          "count": 1572,
-          "rate": 74.5,
+          "count": 1578,
+          "rate": 74.7,
           "width": 100
         }
       ],
       "daily": [
         {
-          "date": "2026-10-12",
-          "new": 30,
-          "fixed": 3,
-          "closed": 1,
-          "deltaNew": 30
-        },
-        {
           "date": "2026-10-13",
           "new": 29,
           "fixed": 1,
           "closed": 0,
-          "deltaNew": -1
+          "deltaNew": 29
         },
         {
           "date": "2026-10-14",
@@ -1004,6 +997,13 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "fixed": 7,
           "closed": 7,
           "deltaNew": 8
+        },
+        {
+          "date": "2026-11-11",
+          "new": 4,
+          "fixed": 6,
+          "closed": 6,
+          "deltaNew": -20
         }
       ],
       "versions": [
@@ -2317,21 +2317,21 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
         },
         {
           "version": "[Hanpass][카드개편][BO]",
-          "total": 60,
-          "criticalMajor": 29,
-          "doneRate": 76.7,
+          "total": 61,
+          "criticalMajor": 30,
+          "doneRate": 85.2,
           "status": [
             {
               "label": "등록",
-              "count": 9
-            },
-            {
-              "label": "진행중",
               "count": 5
             },
             {
+              "label": "진행중",
+              "count": 4
+            },
+            {
               "label": "종료",
-              "count": 46
+              "count": 52
             }
           ],
           "severity": [
@@ -2341,7 +2341,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "label": "Major",
-              "count": 25
+              "count": 26
             },
             {
               "label": "Minor",
@@ -2351,7 +2351,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "priority": [
             {
               "label": "Medium",
-              "count": 59
+              "count": 60
             },
             {
               "label": "Low",
@@ -2361,13 +2361,13 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
         },
         {
           "version": "[Hanpass][카드개편][FO]",
-          "total": 13,
-          "criticalMajor": 9,
+          "total": 16,
+          "criticalMajor": 11,
           "doneRate": 0.0,
           "status": [
             {
               "label": "등록",
-              "count": 13
+              "count": 16
             }
           ],
           "severity": [
@@ -2381,17 +2381,17 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "label": "Major",
-              "count": 7
+              "count": 9
             },
             {
               "label": "Minor",
-              "count": 4
+              "count": 5
             }
           ],
           "priority": [
             {
               "label": "Medium",
-              "count": 13
+              "count": 16
             }
           ]
         },
@@ -3091,6 +3091,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-10",
               "registered": 7,
               "fixed": 6
+            },
+            {
+              "date": "2026-11-11",
+              "registered": 7,
+              "fixed": 6
             }
           ]
         },
@@ -3126,7 +3131,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "done": 9,
               "total": 14,
               "rate": 85.7,
-              "previousRate": 78.6
+              "previousRate": 85.7
             },
             {
               "severity": "Minor",
@@ -3148,7 +3153,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "done": 19,
               "total": 26,
               "rate": 88.5,
-              "previousRate": 84.6
+              "previousRate": 88.5
             }
           ],
           "typeRows": [
@@ -3333,6 +3338,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-10",
+              "registered": 26,
+              "fixed": 23
+            },
+            {
+              "date": "2026-11-11",
               "registered": 26,
               "fixed": 23
             }
@@ -3867,6 +3877,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-10",
+              "registered": 29,
+              "fixed": 1
+            },
+            {
+              "date": "2026-11-11",
               "registered": 29,
               "fixed": 1
             }
@@ -4503,6 +4518,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-10",
               "registered": 11,
               "fixed": 1
+            },
+            {
+              "date": "2026-11-11",
+              "registered": 11,
+              "fixed": 1
             }
           ]
         },
@@ -4983,6 +5003,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-10",
+              "registered": 7,
+              "fixed": 2
+            },
+            {
+              "date": "2026-11-11",
               "registered": 7,
               "fixed": 2
             }
@@ -5679,6 +5704,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-10",
               "registered": 20,
               "fixed": 20
+            },
+            {
+              "date": "2026-11-11",
+              "registered": 20,
+              "fixed": 20
             }
           ]
         },
@@ -6319,6 +6349,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-10",
+              "registered": 3,
+              "fixed": 3
+            },
+            {
+              "date": "2026-11-11",
               "registered": 3,
               "fixed": 3
             }
@@ -7161,6 +7196,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-10",
+              "registered": 26,
+              "fixed": 26
+            },
+            {
+              "date": "2026-11-11",
               "registered": 26,
               "fixed": 26
             }
@@ -8109,6 +8149,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-10",
+              "registered": 34,
+              "fixed": 34
+            },
+            {
+              "date": "2026-11-11",
               "registered": 34,
               "fixed": 34
             }
@@ -9160,6 +9205,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-10",
+              "registered": 9,
+              "fixed": 9
+            },
+            {
+              "date": "2026-11-11",
               "registered": 9,
               "fixed": 9
             }
@@ -10324,6 +10374,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-10",
+              "registered": 117,
+              "fixed": 117
+            },
+            {
+              "date": "2026-11-11",
               "registered": 117,
               "fixed": 117
             }
@@ -11558,6 +11613,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-10",
+              "registered": 82,
+              "fixed": 82
+            },
+            {
+              "date": "2026-11-11",
               "registered": 82,
               "fixed": 82
             }
@@ -13089,6 +13149,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-10",
+              "registered": 24,
+              "fixed": 24
+            },
+            {
+              "date": "2026-11-11",
               "registered": 24,
               "fixed": 24
             }
@@ -14798,6 +14863,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-10",
+              "registered": 103,
+              "fixed": 99
+            },
+            {
+              "date": "2026-11-11",
               "registered": 103,
               "fixed": 99
             }
@@ -16598,6 +16668,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-10",
+              "registered": 68,
+              "fixed": 67
+            },
+            {
+              "date": "2026-11-11",
               "registered": 68,
               "fixed": 67
             }
@@ -18414,6 +18489,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-10",
+              "registered": 4,
+              "fixed": 3
+            },
+            {
+              "date": "2026-11-11",
               "registered": 4,
               "fixed": 3
             }
@@ -20421,6 +20501,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-10",
               "registered": 35,
               "fixed": 34
+            },
+            {
+              "date": "2026-11-11",
+              "registered": 35,
+              "fixed": 34
             }
           ]
         },
@@ -22386,6 +22471,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-10",
+              "registered": 4,
+              "fixed": 4
+            },
+            {
+              "date": "2026-11-11",
               "registered": 4,
               "fixed": 4
             }
@@ -24633,6 +24723,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-10",
+              "registered": 3,
+              "fixed": 3
+            },
+            {
+              "date": "2026-11-11",
               "registered": 3,
               "fixed": 3
             }
@@ -27020,6 +27115,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-10",
+              "registered": 27,
+              "fixed": 23
+            },
+            {
+              "date": "2026-11-11",
               "registered": 27,
               "fixed": 23
             }
@@ -29584,6 +29684,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-10",
               "registered": 33,
               "fixed": 30
+            },
+            {
+              "date": "2026-11-11",
+              "registered": 33,
+              "fixed": 30
             }
           ]
         },
@@ -30635,6 +30740,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-10",
               "registered": 20,
               "fixed": 1
+            },
+            {
+              "date": "2026-11-11",
+              "registered": 20,
+              "fixed": 1
             }
           ]
         },
@@ -31444,6 +31554,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-10",
+              "registered": 15,
+              "fixed": 15
+            },
+            {
+              "date": "2026-11-11",
               "registered": 15,
               "fixed": 15
             }
@@ -32518,6 +32633,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-10",
               "registered": 55,
               "fixed": 54
+            },
+            {
+              "date": "2026-11-11",
+              "registered": 55,
+              "fixed": 54
             }
           ]
         },
@@ -33213,6 +33333,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-10",
+              "registered": 5,
+              "fixed": 5
+            },
+            {
+              "date": "2026-11-11",
               "registered": 5,
               "fixed": 5
             }
@@ -34296,6 +34421,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-10",
               "registered": 101,
               "fixed": 101
+            },
+            {
+              "date": "2026-11-11",
+              "registered": 101,
+              "fixed": 101
             }
           ]
         },
@@ -34616,6 +34746,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-10",
+              "registered": 37,
+              "fixed": 30
+            },
+            {
+              "date": "2026-11-11",
               "registered": 37,
               "fixed": 30
             }
@@ -35072,6 +35207,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-10",
               "registered": 172,
               "fixed": 166
+            },
+            {
+              "date": "2026-11-11",
+              "registered": 172,
+              "fixed": 166
             }
           ]
         },
@@ -35435,6 +35575,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-10",
+              "registered": 34,
+              "fixed": 34
+            },
+            {
+              "date": "2026-11-11",
               "registered": 34,
               "fixed": 34
             }
@@ -36458,6 +36603,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-10",
               "registered": 7,
               "fixed": 7
+            },
+            {
+              "date": "2026-11-11",
+              "registered": 7,
+              "fixed": 7
             }
           ]
         },
@@ -36726,6 +36876,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-10",
+              "registered": 20,
+              "fixed": 19
+            },
+            {
+              "date": "2026-11-11",
               "registered": 20,
               "fixed": 19
             }
@@ -37269,6 +37424,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-10",
+              "registered": 26,
+              "fixed": 7
+            },
+            {
+              "date": "2026-11-11",
               "registered": 26,
               "fixed": 7
             }
@@ -37828,6 +37988,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-10",
+              "registered": 48,
+              "fixed": 48
+            },
+            {
+              "date": "2026-11-11",
               "registered": 48,
               "fixed": 48
             }
@@ -38435,6 +38600,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-10",
               "registered": 313,
               "fixed": 313
+            },
+            {
+              "date": "2026-11-11",
+              "registered": 313,
+              "fixed": 313
             }
           ]
         },
@@ -39009,6 +39179,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-10",
               "registered": 165,
               "fixed": 164
+            },
+            {
+              "date": "2026-11-11",
+              "registered": 165,
+              "fixed": 164
             }
           ]
         },
@@ -39224,6 +39399,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-10",
+              "registered": 15,
+              "fixed": 0
+            },
+            {
+              "date": "2026-11-11",
               "registered": 15,
               "fixed": 0
             }
@@ -39540,20 +39720,25 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-10",
               "registered": 36,
               "fixed": 33
+            },
+            {
+              "date": "2026-11-11",
+              "registered": 36,
+              "fixed": 33
             }
           ]
         },
         {
           "version": "[Hanpass][카드개편][BO]",
-          "total": 60,
-          "open": 14,
-          "devDone": 45,
+          "total": 61,
+          "open": 9,
+          "devDone": 51,
           "qaRegression": 0,
           "backlogTransfer": 0,
           "done": 1,
-          "scopeTotal": 60,
-          "doneRate": 76.7,
-          "latestSnapshot": "2026-11-10",
+          "scopeTotal": 61,
+          "doneRate": 85.2,
+          "latestSnapshot": "2026-11-11",
           "severityRows": [
             {
               "severity": "Critical",
@@ -39568,36 +39753,36 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "severity": "Major",
-              "open": 6,
-              "devDone": 19,
+              "open": 4,
+              "devDone": 22,
               "qaRegression": 0,
               "backlogTransfer": 0,
               "done": 0,
-              "total": 25,
-              "rate": 76.0,
-              "previousRate": 80.0
+              "total": 26,
+              "rate": 84.6,
+              "previousRate": 76.0
             },
             {
               "severity": "Minor",
-              "open": 4,
-              "devDone": 26,
+              "open": 1,
+              "devDone": 29,
               "qaRegression": 0,
               "backlogTransfer": 0,
               "done": 1,
               "total": 31,
-              "rate": 87.1,
-              "previousRate": 88.9
+              "rate": 96.8,
+              "previousRate": 87.1
             },
             {
               "severity": "합계",
-              "open": 14,
-              "devDone": 45,
+              "open": 9,
+              "devDone": 51,
               "qaRegression": 0,
               "backlogTransfer": 0,
               "done": 1,
-              "total": 60,
-              "rate": 76.7,
-              "previousRate": 81.6
+              "total": 61,
+              "rate": 85.2,
+              "previousRate": 76.7
             }
           ],
           "typeRows": [
@@ -39612,22 +39797,8 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               ]
             },
             {
-              "type": "기획-구현 불일치",
-              "total": 19,
-              "severity": [
-                {
-                  "label": "Major",
-                  "count": 10
-                },
-                {
-                  "label": "Minor",
-                  "count": 9
-                }
-              ]
-            },
-            {
               "type": "기능",
-              "total": 16,
+              "total": 17,
               "severity": [
                 {
                   "label": "Critical",
@@ -39635,11 +39806,39 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
                 },
                 {
                   "label": "Major",
-                  "count": 11
+                  "count": 12
                 },
                 {
                   "label": "Minor",
                   "count": 1
+                }
+              ]
+            },
+            {
+              "type": "기획-구현 불일치",
+              "total": 16,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 9
+                },
+                {
+                  "label": "Minor",
+                  "count": 7
+                }
+              ]
+            },
+            {
+              "type": "기획서 수정",
+              "total": 3,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 1
+                },
+                {
+                  "label": "Minor",
+                  "count": 2
                 }
               ]
             },
@@ -39709,20 +39908,25 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-10",
               "registered": 60,
               "fixed": 46
+            },
+            {
+              "date": "2026-11-11",
+              "registered": 61,
+              "fixed": 52
             }
           ]
         },
         {
           "version": "[Hanpass][카드개편][FO]",
-          "total": 13,
-          "open": 13,
+          "total": 16,
+          "open": 16,
           "devDone": 0,
           "qaRegression": 0,
           "backlogTransfer": 0,
           "done": 0,
-          "scopeTotal": 13,
+          "scopeTotal": 16,
           "doneRate": 0.0,
-          "latestSnapshot": "2026-11-10",
+          "latestSnapshot": "2026-11-11",
           "severityRows": [
             {
               "severity": "Critical",
@@ -39733,46 +39937,46 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "done": 0,
               "total": 1,
               "rate": 0.0,
-              "previousRate": 0
+              "previousRate": 0.0
             },
             {
               "severity": "Major",
-              "open": 7,
+              "open": 9,
               "devDone": 0,
               "qaRegression": 0,
               "backlogTransfer": 0,
               "done": 0,
-              "total": 7,
+              "total": 9,
               "rate": 0.0,
-              "previousRate": 0
+              "previousRate": 0.0
             },
             {
               "severity": "Minor",
-              "open": 4,
+              "open": 5,
               "devDone": 0,
               "qaRegression": 0,
               "backlogTransfer": 0,
               "done": 0,
-              "total": 4,
+              "total": 5,
               "rate": 0.0,
-              "previousRate": 0
+              "previousRate": 0.0
             },
             {
               "severity": "합계",
-              "open": 13,
+              "open": 16,
               "devDone": 0,
               "qaRegression": 0,
               "backlogTransfer": 0,
               "done": 0,
-              "total": 13,
+              "total": 16,
               "rate": 0.0,
-              "previousRate": 0
+              "previousRate": 0.0
             }
           ],
           "typeRows": [
             {
               "type": "기능",
-              "total": 8,
+              "total": 10,
               "severity": [
                 {
                   "label": "Blocker",
@@ -39784,13 +39988,13 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
                 },
                 {
                   "label": "Major",
-                  "count": 6
+                  "count": 8
                 }
               ]
             },
             {
               "type": "UX/UI",
-              "total": 3,
+              "total": 4,
               "severity": [
                 {
                   "label": "Major",
@@ -39798,7 +40002,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
                 },
                 {
                   "label": "Minor",
-                  "count": 2
+                  "count": 3
                 }
               ]
             },
@@ -39817,6 +40021,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             {
               "date": "2026-11-10",
               "registered": 13,
+              "fixed": 0
+            },
+            {
+              "date": "2026-11-11",
+              "registered": 16,
               "fixed": 0
             }
           ]
@@ -40362,6 +40571,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-10",
+              "registered": 11,
+              "fixed": 11
+            },
+            {
+              "date": "2026-11-11",
               "registered": 11,
               "fixed": 11
             }
@@ -41090,6 +41304,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-10",
               "registered": 7,
               "fixed": 5
+            },
+            {
+              "date": "2026-11-11",
+              "registered": 7,
+              "fixed": 5
             }
           ]
         },
@@ -41737,6 +41956,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-10",
               "registered": 121,
               "fixed": 120
+            },
+            {
+              "date": "2026-11-11",
+              "registered": 121,
+              "fixed": 120
             }
           ]
         },
@@ -42254,6 +42478,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-10",
               "registered": 131,
               "fixed": 130
+            },
+            {
+              "date": "2026-11-11",
+              "registered": 131,
+              "fixed": 130
             }
           ]
         },
@@ -42679,6 +42908,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-10",
+              "registered": 1,
+              "fixed": 1
+            },
+            {
+              "date": "2026-11-11",
               "registered": 1,
               "fixed": 1
             }
@@ -44626,6 +44860,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-10",
+              "registered": 3,
+              "fixed": 3
+            },
+            {
+              "date": "2026-11-11",
               "registered": 3,
               "fixed": 3
             }
@@ -47190,6 +47429,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-10",
               "registered": 8,
               "fixed": 8
+            },
+            {
+              "date": "2026-11-11",
+              "registered": 8,
+              "fixed": 8
             }
           ]
         },
@@ -48157,22 +48401,27 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-10",
               "registered": 13,
               "fixed": 10
+            },
+            {
+              "date": "2026-11-11",
+              "registered": 13,
+              "fixed": 10
             }
           ]
         }
       ],
-      "defaultProjectVersion": "[Hanpass][카드개편][BO]",
+      "defaultProjectVersion": "[Hanpass][카드개편][FO]",
       "selectedVersion": "ALL",
       "distributions": {
         "ALL": {
           "status": [
             {
               "label": "등록",
-              "count": 233
+              "count": 232
             },
             {
               "label": "진행중",
-              "count": 14
+              "count": 13
             },
             {
               "label": "QA확인",
@@ -48180,7 +48429,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "label": "종료",
-              "count": 1572
+              "count": 1578
             }
           ],
           "severity": [
@@ -48194,11 +48443,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "label": "Major",
-              "count": 813
+              "count": 816
             },
             {
               "label": "Minor",
-              "count": 1079
+              "count": 1080
             },
             {
               "label": "미지정",
@@ -48216,7 +48465,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "label": "Medium",
-              "count": 2062
+              "count": 2066
             },
             {
               "label": "Low",
@@ -48235,18 +48484,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
       },
       "heatmap": [
         {
-          "date": "2026-10-12",
-          "new": 30,
-          "fixed": 3,
-          "closed": 1,
-          "deltaNew": 30
-        },
-        {
           "date": "2026-10-13",
           "new": 29,
           "fixed": 1,
           "closed": 0,
-          "deltaNew": -1
+          "deltaNew": 29
         },
         {
           "date": "2026-10-14",
@@ -48443,6 +48685,13 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "fixed": 7,
           "closed": 7,
           "deltaNew": 8
+        },
+        {
+          "date": "2026-11-11",
+          "new": 4,
+          "fixed": 6,
+          "closed": 6,
+          "deltaNew": -20
         }
       ],
       "reportBoard": {
@@ -48499,10 +48748,98 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
       },
       "recent": [
         {
-          "id": "41473fbd-1951-80ad-a4a7-e9bb52e002bd",
-          "title": "[카드신청][BO] APP에서 KB카드 신청 완료 후 발급접수내역에 신규 신청 건이 노출되지 않는 현상",
+          "id": "41573fbd-1951-807e-899b-ce079892268f",
+          "title": "[카드관리][공통] 카드 정보 보기 화면에서 카드 비밀번호가 기획서에 정의된 2자리를 초과하여 4자리까지 입력되는 현상",
           "status": "등록 (Registered)",
           "stage": "등록",
+          "severity": "Major",
+          "defectType": "기능",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[Hanpass][카드개편][FO]",
+          "versionRaw": "[Hanpass][카드개편][FO]",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-11-11T02:49:00.000Z",
+          "createdDate": "2026-11-11",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/2-4-41573fbd1951807e899bce079892268f",
+          "lastEditedAt": "2026-11-11T02:53:00.000Z"
+        },
+        {
+          "id": "41573fbd-1951-803b-84af-e83e74b57628",
+          "title": "[카드관리][공통] 카드 정보 보기 화면의 카드 비밀번호 Placeholder가 기획서와 상이하게 노출되는 현상",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Minor",
+          "defectType": "UX/UI",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[Hanpass][카드개편][FO]",
+          "versionRaw": "[Hanpass][카드개편][FO]",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-11-11T02:47:00.000Z",
+          "createdDate": "2026-11-11",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/Placeholder-41573fbd1951803b84afe83e74b57628",
+          "lastEditedAt": "2026-11-11T02:53:00.000Z"
+        },
+        {
+          "id": "41573fbd-1951-8022-a749-f19c2ddf5c5a",
+          "title": "[카드목록][공통]비로그인 상태에서 접근 불가능한 현상",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "defectType": "기능",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[Hanpass][카드개편][FO]",
+          "versionRaw": "[Hanpass][카드개편][FO]",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-11-11T01:28:00.000Z",
+          "createdDate": "2026-11-11",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/41573fbd19518022a749f19c2ddf5c5a",
+          "lastEditedAt": "2026-11-11T01:36:00.000Z"
+        },
+        {
+          "id": "41573fbd-1951-80f9-9fda-e350e94027e7",
+          "title": "[상품정보 관리][상품정보 등록][BO]상품정보등록 저장 실패하는 현상",
+          "status": "개발 완료 (Dev Done)",
+          "stage": "종료",
+          "severity": "Major",
+          "defectType": "기능",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[Hanpass][카드개편][BO]",
+          "versionRaw": "[Hanpass][카드개편][BO]",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-11-11T00:55:00.000Z",
+          "createdDate": "2026-11-11",
+          "fixedAt": "2026-11-11T02:04:00.000Z",
+          "fixedDate": "2026-11-11",
+          "closedAt": "2026-11-11T02:04:00.000Z",
+          "closedDate": "2026-11-11",
+          "url": "https://app.notion.com/p/BO-41573fbd195180f99fdae350e94027e7",
+          "lastEditedAt": "2026-11-11T02:04:00.000Z"
+        },
+        {
+          "id": "41473fbd-1951-80ad-a4a7-e9bb52e002bd",
+          "title": "[카드신청][BO] APP에서 KB카드 신청 완료 후 발급접수내역에 신규 신청 건이 노출되지 않는 현상",
+          "status": "처리중 (In Progress)",
+          "stage": "진행중",
           "severity": "Critical",
           "defectType": "기능",
           "priority": "Medium",
@@ -48518,7 +48855,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/BO-APP-KB-41473fbd195180ada4a7e9bb52e002bd",
-          "lastEditedAt": "2026-11-10T09:08:00.000Z"
+          "lastEditedAt": "2026-11-11T00:43:00.000Z"
         },
         {
           "id": "41473fbd-1951-8049-afe3-da7c04068340",
@@ -48567,8 +48904,8 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
         {
           "id": "41473fbd-1951-80b3-adc3-ca81b5fff740",
           "title": "[상품/가맹점][카드번호 관리][BO] 카드번호 신청 정보 저장 시 정의되지 않은 'insertCardBaseNo Fail' 오류가 노출되는 현상",
-          "status": "처리중 (In Progress)",
-          "stage": "진행중",
+          "status": "개발 완료 (Dev Done)",
+          "stage": "종료",
           "severity": "Major",
           "defectType": "기능",
           "priority": "Medium",
@@ -48579,12 +48916,12 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "os": "미지정",
           "createdAt": "2026-11-10T07:59:00.000Z",
           "createdDate": "2026-11-10",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
+          "fixedAt": "2026-11-11T02:04:00.000Z",
+          "fixedDate": "2026-11-11",
+          "closedAt": "2026-11-11T02:04:00.000Z",
+          "closedDate": "2026-11-11",
           "url": "https://app.notion.com/p/BO-insertCardBaseNo-Fail-41473fbd195180b3adc3ca81b5fff740",
-          "lastEditedAt": "2026-11-10T08:54:00.000Z"
+          "lastEditedAt": "2026-11-11T02:04:00.000Z"
         },
         {
           "id": "41473fbd-1951-80a1-bea2-e061269fda56",
@@ -48628,102 +48965,14 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/BO-Select-Box-41473fbd19518000b331def0845c09d4",
-          "lastEditedAt": "2026-11-10T08:54:00.000Z"
-        },
-        {
-          "id": "41473fbd-1951-8097-8cec-ee02507cf854",
-          "title": "[상품/가맹점][카드번호 관리][BO] 카드번호 신청 팝업의 입력 필드 배치 및 버튼 위치가 기획서와 상이한 현상",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "defectType": "UX/UI",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[Hanpass][카드개편][BO]",
-          "versionRaw": "[Hanpass][카드개편][BO]",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-11-10T07:37:00.000Z",
-          "createdDate": "2026-11-10",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/BO-41473fbd195180978cecee02507cf854",
-          "lastEditedAt": "2026-11-10T07:39:00.000Z"
-        },
-        {
-          "id": "41473fbd-1951-80df-ade7-e062eb50c28b",
-          "title": "[카드신청][공통] 카드 이름 입력 길이 제한 및 Validation 기준 미정의로 후속 PIN 설정 단계에서 신청정보 오류가 발생하는 현상",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Major",
-          "defectType": "기능",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[Hanpass][카드개편][FO]",
-          "versionRaw": "[Hanpass][카드개편][FO]",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-11-10T07:07:00.000Z",
-          "createdDate": "2026-11-10",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/Validation-PIN-41473fbd195180dfade7e062eb50c28b",
-          "lastEditedAt": "2026-11-10T07:11:00.000Z"
-        },
-        {
-          "id": "41473fbd-1951-8074-855b-d16b0856b771",
-          "title": "[회원/카드][발급접수내역][BO] 국내발급 엑셀 다운로드 시 출력 항목 및 컬럼 순서가 기획서와 상이한 현상",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "defectType": "기획 확인 요청",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[Hanpass][카드개편][BO]",
-          "versionRaw": "[Hanpass][카드개편][BO]",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-11-10T06:42:00.000Z",
-          "createdDate": "2026-11-10",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/BO-41473fbd19518074855bd16b0856b771",
-          "lastEditedAt": "2026-11-10T07:00:00.000Z"
-        },
-        {
-          "id": "41473fbd-1951-8019-a682-f457ce5cd9ea",
-          "title": "[회원/카드][발급접수내역][BO] 발급 취소 처리 후 국내발급 접수상세 재진입 시 발급 처리 선택값이 유지되지 않는 현상",
-          "status": "개발 완료 (Dev Done)",
-          "stage": "종료",
-          "severity": "Major",
-          "defectType": "기능",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[Hanpass][카드개편][BO]",
-          "versionRaw": "[Hanpass][카드개편][BO]",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-11-10T06:36:00.000Z",
-          "createdDate": "2026-11-10",
-          "fixedAt": "2026-11-10T06:55:00.000Z",
-          "fixedDate": "2026-11-10",
-          "closedAt": "2026-11-10T06:55:00.000Z",
-          "closedDate": "2026-11-10",
-          "url": "https://app.notion.com/p/BO-41473fbd19518019a682f457ce5cd9ea",
-          "lastEditedAt": "2026-11-10T06:55:00.000Z"
+          "lastEditedAt": "2026-11-11T00:29:00.000Z"
         }
       ],
       "quality": {
         "unresolvedCritical": 18,
-        "unresolvedMajor": 230,
-        "awaitingVerification": 53,
-        "highCount": 248,
+        "unresolvedMajor": 233,
+        "awaitingVerification": 59,
+        "highCount": 251,
         "high": [
           {
             "title": "[SDK변경][Go.Hanpass][iOS] PIN입력 화면 전환 때 상태바 제어 시 앱 크래시 현상 ",
@@ -48863,7 +49112,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           {
             "title": "[카드신청][BO] APP에서 KB카드 신청 완료 후 발급접수내역에 신규 신청 건이 노출되지 않는 현상",
             "url": "https://app.notion.com/p/BO-APP-KB-41473fbd195180ada4a7e9bb52e002bd",
-            "status": "등록 (Registered)",
+            "status": "처리중 (In Progress)",
             "severity": "Critical",
             "version": "[Hanpass][카드개편][BO]",
             "domain": "한패스",
@@ -49638,21 +49887,21 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
     },
     "한패스": {
       "summary": {
-        "total": 1663,
-        "new": 166,
-        "inProgress": 14,
+        "total": 1667,
+        "new": 165,
+        "inProgress": 13,
         "fixed": 0,
-        "closed": 1304,
-        "todayNew": 24,
-        "newDelta": 8,
+        "closed": 1310,
+        "todayNew": 4,
+        "newDelta": -20,
         "critical": 91,
-        "todayClosed": 7
+        "todayClosed": 6
       },
       "funnel": [
         {
           "stage": "등록",
-          "count": 166,
-          "rate": 10.0,
+          "count": 165,
+          "rate": 9.9,
           "width": 13
         },
         {
@@ -49669,7 +49918,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
         },
         {
           "stage": "진행중",
-          "count": 14,
+          "count": 13,
           "rate": 0.8,
           "width": 6
         },
@@ -49682,30 +49931,23 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
         {
           "stage": "QA확인",
           "count": 179,
-          "rate": 10.8,
+          "rate": 10.7,
           "width": 14
         },
         {
           "stage": "종료",
-          "count": 1304,
-          "rate": 78.4,
+          "count": 1310,
+          "rate": 78.6,
           "width": 100
         }
       ],
       "daily": [
         {
-          "date": "2026-10-12",
-          "new": 13,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": 13
-        },
-        {
           "date": "2026-10-13",
           "new": 24,
           "fixed": 0,
           "closed": 0,
-          "deltaNew": 11
+          "deltaNew": 24
         },
         {
           "date": "2026-10-14",
@@ -49902,6 +50144,13 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "fixed": 7,
           "closed": 7,
           "deltaNew": 8
+        },
+        {
+          "date": "2026-11-11",
+          "new": 4,
+          "fixed": 6,
+          "closed": 6,
+          "deltaNew": -20
         }
       ],
       "versions": [
@@ -50923,21 +51172,21 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
         },
         {
           "version": "[Hanpass][카드개편][BO]",
-          "total": 60,
-          "criticalMajor": 29,
-          "doneRate": 76.7,
+          "total": 61,
+          "criticalMajor": 30,
+          "doneRate": 85.2,
           "status": [
             {
               "label": "등록",
-              "count": 9
-            },
-            {
-              "label": "진행중",
               "count": 5
             },
             {
+              "label": "진행중",
+              "count": 4
+            },
+            {
               "label": "종료",
-              "count": 46
+              "count": 52
             }
           ],
           "severity": [
@@ -50947,7 +51196,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "label": "Major",
-              "count": 25
+              "count": 26
             },
             {
               "label": "Minor",
@@ -50957,7 +51206,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "priority": [
             {
               "label": "Medium",
-              "count": 59
+              "count": 60
             },
             {
               "label": "Low",
@@ -50967,13 +51216,13 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
         },
         {
           "version": "[Hanpass][카드개편][FO]",
-          "total": 13,
-          "criticalMajor": 9,
+          "total": 16,
+          "criticalMajor": 11,
           "doneRate": 0.0,
           "status": [
             {
               "label": "등록",
-              "count": 13
+              "count": 16
             }
           ],
           "severity": [
@@ -50987,17 +51236,17 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "label": "Major",
-              "count": 7
+              "count": 9
             },
             {
               "label": "Minor",
-              "count": 4
+              "count": 5
             }
           ],
           "priority": [
             {
               "label": "Medium",
-              "count": 13
+              "count": 16
             }
           ]
         },
@@ -51688,6 +51937,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-10",
               "registered": 7,
               "fixed": 6
+            },
+            {
+              "date": "2026-11-11",
+              "registered": 7,
+              "fixed": 6
             }
           ]
         },
@@ -51723,7 +51977,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "done": 9,
               "total": 14,
               "rate": 85.7,
-              "previousRate": 78.6
+              "previousRate": 85.7
             },
             {
               "severity": "Minor",
@@ -51745,7 +51999,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "done": 19,
               "total": 26,
               "rate": 88.5,
-              "previousRate": 84.6
+              "previousRate": 88.5
             }
           ],
           "typeRows": [
@@ -51930,6 +52184,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-10",
+              "registered": 26,
+              "fixed": 23
+            },
+            {
+              "date": "2026-11-11",
               "registered": 26,
               "fixed": 23
             }
@@ -52464,6 +52723,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-10",
+              "registered": 29,
+              "fixed": 1
+            },
+            {
+              "date": "2026-11-11",
               "registered": 29,
               "fixed": 1
             }
@@ -53100,6 +53364,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-10",
               "registered": 11,
               "fixed": 1
+            },
+            {
+              "date": "2026-11-11",
+              "registered": 11,
+              "fixed": 1
             }
           ]
         },
@@ -53580,6 +53849,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-10",
+              "registered": 7,
+              "fixed": 2
+            },
+            {
+              "date": "2026-11-11",
               "registered": 7,
               "fixed": 2
             }
@@ -54276,6 +54550,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-10",
               "registered": 20,
               "fixed": 20
+            },
+            {
+              "date": "2026-11-11",
+              "registered": 20,
+              "fixed": 20
             }
           ]
         },
@@ -54916,6 +55195,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-10",
+              "registered": 3,
+              "fixed": 3
+            },
+            {
+              "date": "2026-11-11",
               "registered": 3,
               "fixed": 3
             }
@@ -55758,6 +56042,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-10",
+              "registered": 26,
+              "fixed": 26
+            },
+            {
+              "date": "2026-11-11",
               "registered": 26,
               "fixed": 26
             }
@@ -56706,6 +56995,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-10",
+              "registered": 34,
+              "fixed": 34
+            },
+            {
+              "date": "2026-11-11",
               "registered": 34,
               "fixed": 34
             }
@@ -57757,6 +58051,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-10",
+              "registered": 9,
+              "fixed": 9
+            },
+            {
+              "date": "2026-11-11",
               "registered": 9,
               "fixed": 9
             }
@@ -58921,6 +59220,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-10",
+              "registered": 117,
+              "fixed": 117
+            },
+            {
+              "date": "2026-11-11",
               "registered": 117,
               "fixed": 117
             }
@@ -60155,6 +60459,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-10",
+              "registered": 82,
+              "fixed": 82
+            },
+            {
+              "date": "2026-11-11",
               "registered": 82,
               "fixed": 82
             }
@@ -61686,6 +61995,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-10",
+              "registered": 24,
+              "fixed": 24
+            },
+            {
+              "date": "2026-11-11",
               "registered": 24,
               "fixed": 24
             }
@@ -63395,6 +63709,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-10",
+              "registered": 103,
+              "fixed": 99
+            },
+            {
+              "date": "2026-11-11",
               "registered": 103,
               "fixed": 99
             }
@@ -65195,6 +65514,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-10",
+              "registered": 68,
+              "fixed": 67
+            },
+            {
+              "date": "2026-11-11",
               "registered": 68,
               "fixed": 67
             }
@@ -67011,6 +67335,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-10",
+              "registered": 4,
+              "fixed": 3
+            },
+            {
+              "date": "2026-11-11",
               "registered": 4,
               "fixed": 3
             }
@@ -69018,6 +69347,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-10",
               "registered": 35,
               "fixed": 34
+            },
+            {
+              "date": "2026-11-11",
+              "registered": 35,
+              "fixed": 34
             }
           ]
         },
@@ -70983,6 +71317,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-10",
+              "registered": 4,
+              "fixed": 4
+            },
+            {
+              "date": "2026-11-11",
               "registered": 4,
               "fixed": 4
             }
@@ -73230,6 +73569,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-10",
+              "registered": 3,
+              "fixed": 3
+            },
+            {
+              "date": "2026-11-11",
               "registered": 3,
               "fixed": 3
             }
@@ -75617,6 +75961,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-10",
+              "registered": 27,
+              "fixed": 23
+            },
+            {
+              "date": "2026-11-11",
               "registered": 27,
               "fixed": 23
             }
@@ -78181,6 +78530,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-10",
               "registered": 33,
               "fixed": 30
+            },
+            {
+              "date": "2026-11-11",
+              "registered": 33,
+              "fixed": 30
             }
           ]
         },
@@ -78449,6 +78803,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-10",
+              "registered": 20,
+              "fixed": 19
+            },
+            {
+              "date": "2026-11-11",
               "registered": 20,
               "fixed": 19
             }
@@ -78992,6 +79351,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-10",
+              "registered": 26,
+              "fixed": 7
+            },
+            {
+              "date": "2026-11-11",
               "registered": 26,
               "fixed": 7
             }
@@ -79551,6 +79915,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-10",
+              "registered": 48,
+              "fixed": 48
+            },
+            {
+              "date": "2026-11-11",
               "registered": 48,
               "fixed": 48
             }
@@ -80158,6 +80527,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-10",
               "registered": 313,
               "fixed": 313
+            },
+            {
+              "date": "2026-11-11",
+              "registered": 313,
+              "fixed": 313
             }
           ]
         },
@@ -80732,6 +81106,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-10",
               "registered": 165,
               "fixed": 164
+            },
+            {
+              "date": "2026-11-11",
+              "registered": 165,
+              "fixed": 164
             }
           ]
         },
@@ -80947,6 +81326,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-10",
+              "registered": 15,
+              "fixed": 0
+            },
+            {
+              "date": "2026-11-11",
               "registered": 15,
               "fixed": 0
             }
@@ -81263,20 +81647,25 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-10",
               "registered": 36,
               "fixed": 33
+            },
+            {
+              "date": "2026-11-11",
+              "registered": 36,
+              "fixed": 33
             }
           ]
         },
         {
           "version": "[Hanpass][카드개편][BO]",
-          "total": 60,
-          "open": 14,
-          "devDone": 45,
+          "total": 61,
+          "open": 9,
+          "devDone": 51,
           "qaRegression": 0,
           "backlogTransfer": 0,
           "done": 1,
-          "scopeTotal": 60,
-          "doneRate": 76.7,
-          "latestSnapshot": "2026-11-10",
+          "scopeTotal": 61,
+          "doneRate": 85.2,
+          "latestSnapshot": "2026-11-11",
           "severityRows": [
             {
               "severity": "Critical",
@@ -81291,36 +81680,36 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "severity": "Major",
-              "open": 6,
-              "devDone": 19,
+              "open": 4,
+              "devDone": 22,
               "qaRegression": 0,
               "backlogTransfer": 0,
               "done": 0,
-              "total": 25,
-              "rate": 76.0,
-              "previousRate": 80.0
+              "total": 26,
+              "rate": 84.6,
+              "previousRate": 76.0
             },
             {
               "severity": "Minor",
-              "open": 4,
-              "devDone": 26,
+              "open": 1,
+              "devDone": 29,
               "qaRegression": 0,
               "backlogTransfer": 0,
               "done": 1,
               "total": 31,
-              "rate": 87.1,
-              "previousRate": 88.9
+              "rate": 96.8,
+              "previousRate": 87.1
             },
             {
               "severity": "합계",
-              "open": 14,
-              "devDone": 45,
+              "open": 9,
+              "devDone": 51,
               "qaRegression": 0,
               "backlogTransfer": 0,
               "done": 1,
-              "total": 60,
-              "rate": 76.7,
-              "previousRate": 81.6
+              "total": 61,
+              "rate": 85.2,
+              "previousRate": 76.7
             }
           ],
           "typeRows": [
@@ -81335,22 +81724,8 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               ]
             },
             {
-              "type": "기획-구현 불일치",
-              "total": 19,
-              "severity": [
-                {
-                  "label": "Major",
-                  "count": 10
-                },
-                {
-                  "label": "Minor",
-                  "count": 9
-                }
-              ]
-            },
-            {
               "type": "기능",
-              "total": 16,
+              "total": 17,
               "severity": [
                 {
                   "label": "Critical",
@@ -81358,11 +81733,39 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
                 },
                 {
                   "label": "Major",
-                  "count": 11
+                  "count": 12
                 },
                 {
                   "label": "Minor",
                   "count": 1
+                }
+              ]
+            },
+            {
+              "type": "기획-구현 불일치",
+              "total": 16,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 9
+                },
+                {
+                  "label": "Minor",
+                  "count": 7
+                }
+              ]
+            },
+            {
+              "type": "기획서 수정",
+              "total": 3,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 1
+                },
+                {
+                  "label": "Minor",
+                  "count": 2
                 }
               ]
             },
@@ -81432,20 +81835,25 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-10",
               "registered": 60,
               "fixed": 46
+            },
+            {
+              "date": "2026-11-11",
+              "registered": 61,
+              "fixed": 52
             }
           ]
         },
         {
           "version": "[Hanpass][카드개편][FO]",
-          "total": 13,
-          "open": 13,
+          "total": 16,
+          "open": 16,
           "devDone": 0,
           "qaRegression": 0,
           "backlogTransfer": 0,
           "done": 0,
-          "scopeTotal": 13,
+          "scopeTotal": 16,
           "doneRate": 0.0,
-          "latestSnapshot": "2026-11-10",
+          "latestSnapshot": "2026-11-11",
           "severityRows": [
             {
               "severity": "Critical",
@@ -81456,46 +81864,46 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "done": 0,
               "total": 1,
               "rate": 0.0,
-              "previousRate": 0
+              "previousRate": 0.0
             },
             {
               "severity": "Major",
-              "open": 7,
+              "open": 9,
               "devDone": 0,
               "qaRegression": 0,
               "backlogTransfer": 0,
               "done": 0,
-              "total": 7,
+              "total": 9,
               "rate": 0.0,
-              "previousRate": 0
+              "previousRate": 0.0
             },
             {
               "severity": "Minor",
-              "open": 4,
+              "open": 5,
               "devDone": 0,
               "qaRegression": 0,
               "backlogTransfer": 0,
               "done": 0,
-              "total": 4,
+              "total": 5,
               "rate": 0.0,
-              "previousRate": 0
+              "previousRate": 0.0
             },
             {
               "severity": "합계",
-              "open": 13,
+              "open": 16,
               "devDone": 0,
               "qaRegression": 0,
               "backlogTransfer": 0,
               "done": 0,
-              "total": 13,
+              "total": 16,
               "rate": 0.0,
-              "previousRate": 0
+              "previousRate": 0.0
             }
           ],
           "typeRows": [
             {
               "type": "기능",
-              "total": 8,
+              "total": 10,
               "severity": [
                 {
                   "label": "Blocker",
@@ -81507,13 +81915,13 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
                 },
                 {
                   "label": "Major",
-                  "count": 6
+                  "count": 8
                 }
               ]
             },
             {
               "type": "UX/UI",
-              "total": 3,
+              "total": 4,
               "severity": [
                 {
                   "label": "Major",
@@ -81521,7 +81929,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
                 },
                 {
                   "label": "Minor",
-                  "count": 2
+                  "count": 3
                 }
               ]
             },
@@ -81540,6 +81948,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             {
               "date": "2026-11-10",
               "registered": 13,
+              "fixed": 0
+            },
+            {
+              "date": "2026-11-11",
+              "registered": 16,
               "fixed": 0
             }
           ]
@@ -82085,6 +82498,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-10",
+              "registered": 11,
+              "fixed": 11
+            },
+            {
+              "date": "2026-11-11",
               "registered": 11,
               "fixed": 11
             }
@@ -82813,6 +83231,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-10",
               "registered": 7,
               "fixed": 5
+            },
+            {
+              "date": "2026-11-11",
+              "registered": 7,
+              "fixed": 5
             }
           ]
         },
@@ -83460,6 +83883,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-10",
               "registered": 121,
               "fixed": 120
+            },
+            {
+              "date": "2026-11-11",
+              "registered": 121,
+              "fixed": 120
             }
           ]
         },
@@ -83977,6 +84405,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-10",
               "registered": 131,
               "fixed": 130
+            },
+            {
+              "date": "2026-11-11",
+              "registered": 131,
+              "fixed": 130
             }
           ]
         },
@@ -84402,6 +84835,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-10",
+              "registered": 1,
+              "fixed": 1
+            },
+            {
+              "date": "2026-11-11",
               "registered": 1,
               "fixed": 1
             }
@@ -86349,6 +86787,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-10",
+              "registered": 3,
+              "fixed": 3
+            },
+            {
+              "date": "2026-11-11",
               "registered": 3,
               "fixed": 3
             }
@@ -88913,6 +89356,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-10",
               "registered": 8,
               "fixed": 8
+            },
+            {
+              "date": "2026-11-11",
+              "registered": 8,
+              "fixed": 8
             }
           ]
         },
@@ -89880,22 +90328,27 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-10",
               "registered": 13,
               "fixed": 10
+            },
+            {
+              "date": "2026-11-11",
+              "registered": 13,
+              "fixed": 10
             }
           ]
         }
       ],
-      "defaultProjectVersion": "[Hanpass][카드개편][BO]",
+      "defaultProjectVersion": "[Hanpass][카드개편][FO]",
       "selectedVersion": "ALL",
       "distributions": {
         "ALL": {
           "status": [
             {
               "label": "등록",
-              "count": 166
+              "count": 165
             },
             {
               "label": "진행중",
-              "count": 14
+              "count": 13
             },
             {
               "label": "QA확인",
@@ -89903,7 +90356,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "label": "종료",
-              "count": 1304
+              "count": 1310
             }
           ],
           "severity": [
@@ -89917,11 +90370,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "label": "Major",
-              "count": 560
+              "count": 563
             },
             {
               "label": "Minor",
-              "count": 899
+              "count": 900
             },
             {
               "label": "미지정",
@@ -89939,7 +90392,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "label": "Medium",
-              "count": 1617
+              "count": 1621
             },
             {
               "label": "Low",
@@ -89958,18 +90411,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
       },
       "heatmap": [
         {
-          "date": "2026-10-12",
-          "new": 13,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": 13
-        },
-        {
           "date": "2026-10-13",
           "new": 24,
           "fixed": 0,
           "closed": 0,
-          "deltaNew": 11
+          "deltaNew": 24
         },
         {
           "date": "2026-10-14",
@@ -90166,6 +90612,13 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "fixed": 7,
           "closed": 7,
           "deltaNew": 8
+        },
+        {
+          "date": "2026-11-11",
+          "new": 4,
+          "fixed": 6,
+          "closed": 6,
+          "deltaNew": -20
         }
       ],
       "reportBoard": {
@@ -90222,10 +90675,98 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
       },
       "recent": [
         {
-          "id": "41473fbd-1951-80ad-a4a7-e9bb52e002bd",
-          "title": "[카드신청][BO] APP에서 KB카드 신청 완료 후 발급접수내역에 신규 신청 건이 노출되지 않는 현상",
+          "id": "41573fbd-1951-807e-899b-ce079892268f",
+          "title": "[카드관리][공통] 카드 정보 보기 화면에서 카드 비밀번호가 기획서에 정의된 2자리를 초과하여 4자리까지 입력되는 현상",
           "status": "등록 (Registered)",
           "stage": "등록",
+          "severity": "Major",
+          "defectType": "기능",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[Hanpass][카드개편][FO]",
+          "versionRaw": "[Hanpass][카드개편][FO]",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-11-11T02:49:00.000Z",
+          "createdDate": "2026-11-11",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/2-4-41573fbd1951807e899bce079892268f",
+          "lastEditedAt": "2026-11-11T02:53:00.000Z"
+        },
+        {
+          "id": "41573fbd-1951-803b-84af-e83e74b57628",
+          "title": "[카드관리][공통] 카드 정보 보기 화면의 카드 비밀번호 Placeholder가 기획서와 상이하게 노출되는 현상",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Minor",
+          "defectType": "UX/UI",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[Hanpass][카드개편][FO]",
+          "versionRaw": "[Hanpass][카드개편][FO]",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-11-11T02:47:00.000Z",
+          "createdDate": "2026-11-11",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/Placeholder-41573fbd1951803b84afe83e74b57628",
+          "lastEditedAt": "2026-11-11T02:53:00.000Z"
+        },
+        {
+          "id": "41573fbd-1951-8022-a749-f19c2ddf5c5a",
+          "title": "[카드목록][공통]비로그인 상태에서 접근 불가능한 현상",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "defectType": "기능",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[Hanpass][카드개편][FO]",
+          "versionRaw": "[Hanpass][카드개편][FO]",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-11-11T01:28:00.000Z",
+          "createdDate": "2026-11-11",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/41573fbd19518022a749f19c2ddf5c5a",
+          "lastEditedAt": "2026-11-11T01:36:00.000Z"
+        },
+        {
+          "id": "41573fbd-1951-80f9-9fda-e350e94027e7",
+          "title": "[상품정보 관리][상품정보 등록][BO]상품정보등록 저장 실패하는 현상",
+          "status": "개발 완료 (Dev Done)",
+          "stage": "종료",
+          "severity": "Major",
+          "defectType": "기능",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[Hanpass][카드개편][BO]",
+          "versionRaw": "[Hanpass][카드개편][BO]",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-11-11T00:55:00.000Z",
+          "createdDate": "2026-11-11",
+          "fixedAt": "2026-11-11T02:04:00.000Z",
+          "fixedDate": "2026-11-11",
+          "closedAt": "2026-11-11T02:04:00.000Z",
+          "closedDate": "2026-11-11",
+          "url": "https://app.notion.com/p/BO-41573fbd195180f99fdae350e94027e7",
+          "lastEditedAt": "2026-11-11T02:04:00.000Z"
+        },
+        {
+          "id": "41473fbd-1951-80ad-a4a7-e9bb52e002bd",
+          "title": "[카드신청][BO] APP에서 KB카드 신청 완료 후 발급접수내역에 신규 신청 건이 노출되지 않는 현상",
+          "status": "처리중 (In Progress)",
+          "stage": "진행중",
           "severity": "Critical",
           "defectType": "기능",
           "priority": "Medium",
@@ -90241,7 +90782,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/BO-APP-KB-41473fbd195180ada4a7e9bb52e002bd",
-          "lastEditedAt": "2026-11-10T09:08:00.000Z"
+          "lastEditedAt": "2026-11-11T00:43:00.000Z"
         },
         {
           "id": "41473fbd-1951-8049-afe3-da7c04068340",
@@ -90290,8 +90831,8 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
         {
           "id": "41473fbd-1951-80b3-adc3-ca81b5fff740",
           "title": "[상품/가맹점][카드번호 관리][BO] 카드번호 신청 정보 저장 시 정의되지 않은 'insertCardBaseNo Fail' 오류가 노출되는 현상",
-          "status": "처리중 (In Progress)",
-          "stage": "진행중",
+          "status": "개발 완료 (Dev Done)",
+          "stage": "종료",
           "severity": "Major",
           "defectType": "기능",
           "priority": "Medium",
@@ -90302,12 +90843,12 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "os": "미지정",
           "createdAt": "2026-11-10T07:59:00.000Z",
           "createdDate": "2026-11-10",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
+          "fixedAt": "2026-11-11T02:04:00.000Z",
+          "fixedDate": "2026-11-11",
+          "closedAt": "2026-11-11T02:04:00.000Z",
+          "closedDate": "2026-11-11",
           "url": "https://app.notion.com/p/BO-insertCardBaseNo-Fail-41473fbd195180b3adc3ca81b5fff740",
-          "lastEditedAt": "2026-11-10T08:54:00.000Z"
+          "lastEditedAt": "2026-11-11T02:04:00.000Z"
         },
         {
           "id": "41473fbd-1951-80a1-bea2-e061269fda56",
@@ -90351,102 +90892,14 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "closedAt": "",
           "closedDate": "",
           "url": "https://app.notion.com/p/BO-Select-Box-41473fbd19518000b331def0845c09d4",
-          "lastEditedAt": "2026-11-10T08:54:00.000Z"
-        },
-        {
-          "id": "41473fbd-1951-8097-8cec-ee02507cf854",
-          "title": "[상품/가맹점][카드번호 관리][BO] 카드번호 신청 팝업의 입력 필드 배치 및 버튼 위치가 기획서와 상이한 현상",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "defectType": "UX/UI",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[Hanpass][카드개편][BO]",
-          "versionRaw": "[Hanpass][카드개편][BO]",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-11-10T07:37:00.000Z",
-          "createdDate": "2026-11-10",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/BO-41473fbd195180978cecee02507cf854",
-          "lastEditedAt": "2026-11-10T07:39:00.000Z"
-        },
-        {
-          "id": "41473fbd-1951-80df-ade7-e062eb50c28b",
-          "title": "[카드신청][공통] 카드 이름 입력 길이 제한 및 Validation 기준 미정의로 후속 PIN 설정 단계에서 신청정보 오류가 발생하는 현상",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Major",
-          "defectType": "기능",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[Hanpass][카드개편][FO]",
-          "versionRaw": "[Hanpass][카드개편][FO]",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-11-10T07:07:00.000Z",
-          "createdDate": "2026-11-10",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/Validation-PIN-41473fbd195180dfade7e062eb50c28b",
-          "lastEditedAt": "2026-11-10T07:11:00.000Z"
-        },
-        {
-          "id": "41473fbd-1951-8074-855b-d16b0856b771",
-          "title": "[회원/카드][발급접수내역][BO] 국내발급 엑셀 다운로드 시 출력 항목 및 컬럼 순서가 기획서와 상이한 현상",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Minor",
-          "defectType": "기획 확인 요청",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[Hanpass][카드개편][BO]",
-          "versionRaw": "[Hanpass][카드개편][BO]",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-11-10T06:42:00.000Z",
-          "createdDate": "2026-11-10",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/BO-41473fbd19518074855bd16b0856b771",
-          "lastEditedAt": "2026-11-10T07:00:00.000Z"
-        },
-        {
-          "id": "41473fbd-1951-8019-a682-f457ce5cd9ea",
-          "title": "[회원/카드][발급접수내역][BO] 발급 취소 처리 후 국내발급 접수상세 재진입 시 발급 처리 선택값이 유지되지 않는 현상",
-          "status": "개발 완료 (Dev Done)",
-          "stage": "종료",
-          "severity": "Major",
-          "defectType": "기능",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[Hanpass][카드개편][BO]",
-          "versionRaw": "[Hanpass][카드개편][BO]",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-11-10T06:36:00.000Z",
-          "createdDate": "2026-11-10",
-          "fixedAt": "2026-11-10T06:55:00.000Z",
-          "fixedDate": "2026-11-10",
-          "closedAt": "2026-11-10T06:55:00.000Z",
-          "closedDate": "2026-11-10",
-          "url": "https://app.notion.com/p/BO-41473fbd19518019a682f457ce5cd9ea",
-          "lastEditedAt": "2026-11-10T06:55:00.000Z"
+          "lastEditedAt": "2026-11-11T00:29:00.000Z"
         }
       ],
       "quality": {
         "unresolvedCritical": 9,
-        "unresolvedMajor": 133,
-        "awaitingVerification": 49,
-        "highCount": 142,
+        "unresolvedMajor": 136,
+        "awaitingVerification": 55,
+        "highCount": 145,
         "high": [
           {
             "title": "[SDK변경][Go.Hanpass][iOS] PIN입력 화면 전환 때 상태바 제어 시 앱 크래시 현상 ",
@@ -90505,7 +90958,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           {
             "title": "[카드신청][BO] APP에서 KB카드 신청 완료 후 발급접수내역에 신규 신청 건이 노출되지 않는 현상",
             "url": "https://app.notion.com/p/BO-APP-KB-41473fbd195180ada4a7e9bb52e002bd",
-            "status": "등록 (Registered)",
+            "status": "처리중 (In Progress)",
             "severity": "Critical",
             "version": "[Hanpass][카드개편][BO]",
             "domain": "한패스",
@@ -91417,18 +91870,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
       ],
       "daily": [
         {
-          "date": "2026-10-12",
-          "new": 17,
-          "fixed": 3,
-          "closed": 1,
-          "deltaNew": 17
-        },
-        {
           "date": "2026-10-13",
           "new": 5,
           "fixed": 1,
           "closed": 0,
-          "deltaNew": -12
+          "deltaNew": 5
         },
         {
           "date": "2026-10-14",
@@ -91621,6 +92067,13 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
         },
         {
           "date": "2026-11-10",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-11-11",
           "new": 0,
           "fixed": 0,
           "closed": 0,
@@ -92991,6 +93444,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-10",
               "registered": 20,
               "fixed": 1
+            },
+            {
+              "date": "2026-11-11",
+              "registered": 20,
+              "fixed": 1
             }
           ]
         },
@@ -93800,6 +94258,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-10",
+              "registered": 15,
+              "fixed": 15
+            },
+            {
+              "date": "2026-11-11",
               "registered": 15,
               "fixed": 15
             }
@@ -94874,6 +95337,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-10",
               "registered": 55,
               "fixed": 54
+            },
+            {
+              "date": "2026-11-11",
+              "registered": 55,
+              "fixed": 54
             }
           ]
         },
@@ -95569,6 +96037,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-10",
+              "registered": 5,
+              "fixed": 5
+            },
+            {
+              "date": "2026-11-11",
               "registered": 5,
               "fixed": 5
             }
@@ -96652,6 +97125,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-10",
               "registered": 101,
               "fixed": 101
+            },
+            {
+              "date": "2026-11-11",
+              "registered": 101,
+              "fixed": 101
             }
           ]
         },
@@ -96972,6 +97450,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-10",
+              "registered": 37,
+              "fixed": 30
+            },
+            {
+              "date": "2026-11-11",
               "registered": 37,
               "fixed": 30
             }
@@ -97428,6 +97911,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-10",
               "registered": 172,
               "fixed": 166
+            },
+            {
+              "date": "2026-11-11",
+              "registered": 172,
+              "fixed": 166
             }
           ]
         },
@@ -97791,6 +98279,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-10",
+              "registered": 34,
+              "fixed": 34
+            },
+            {
+              "date": "2026-11-11",
               "registered": 34,
               "fixed": 34
             }
@@ -98814,6 +99307,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-10",
               "registered": 7,
               "fixed": 7
+            },
+            {
+              "date": "2026-11-11",
+              "registered": 7,
+              "fixed": 7
             }
           ]
         }
@@ -98864,18 +99362,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
       },
       "heatmap": [
         {
-          "date": "2026-10-12",
-          "new": 17,
-          "fixed": 3,
-          "closed": 1,
-          "deltaNew": 17
-        },
-        {
           "date": "2026-10-13",
           "new": 5,
           "fixed": 1,
           "closed": 0,
-          "deltaNew": -12
+          "deltaNew": 5
         },
         {
           "date": "2026-10-14",
@@ -99068,6 +99559,13 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
         },
         {
           "date": "2026-11-10",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-11-11",
           "new": 0,
           "fixed": 0,
           "closed": 0,
@@ -100241,13 +100739,13 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
   },
   "defectSource": {
     "status": "ok",
-    "syncedAt": "2026-11-11T01:33:49+09:00",
-    "attemptedAt": "2026-11-11T01:33:49+09:00"
+    "syncedAt": "2026-11-11T11:56:25+09:00",
+    "attemptedAt": "2026-11-11T11:56:25+09:00"
   },
   "qaTasks": {
     "status": "ok",
-    "syncedAt": "2026-11-11T01:33:55+09:00",
-    "attemptedAt": "2026-11-11T01:33:55+09:00",
+    "syncedAt": "2026-11-11T11:56:31+09:00",
+    "attemptedAt": "2026-11-11T11:56:31+09:00",
     "data": {
       "rows": [
         {
@@ -100281,9 +100779,9 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "id": "3c973fbd-1951-80a7-ba1c-ea55067d98c9",
           "title": "Hanpass 앱개편 테스트 - (Live)",
           "url": "https://app.notion.com/p/Hanpass-Live-3c973fbd195180a7ba1cea55067d98c9",
-          "status": "테스트 진행중",
-          "state": "진행중",
-          "overdue": true,
+          "status": "태스트 완료",
+          "state": "완료",
+          "overdue": false,
           "start": "2026-08-25",
           "end": "2026-11-08",
           "dday": -78,
@@ -100456,8 +100954,8 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "id": "40173fbd-1951-8073-b5fa-ec163a5a1961",
           "title": "[한패스][앱개편]충전/ATM 출금 필드 테스트",
           "url": "https://app.notion.com/p/ATM-40173fbd19518073b5faec163a5a1961",
-          "status": "테스트 진행중",
-          "state": "진행중",
+          "status": "1차 테스트 완료",
+          "state": "단계 완료",
           "overdue": true,
           "start": "2026-10-23",
           "end": "2026-10-30",
@@ -100475,13 +100973,13 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "id": "40173fbd-1951-8043-b047-da89a002ef1f",
           "title": "한패스 카드 테스트 (매입사 변경 및 서비스 리뉴얼)",
           "url": "https://app.notion.com/p/40173fbd19518043b047da89a002ef1f",
-          "status": "테스트 예정",
-          "state": "예정",
+          "status": "테스트 진행중",
+          "state": "진행중",
           "overdue": false,
-          "start": "2026-11-02",
-          "end": "2026-11-20",
-          "dday": -9,
-          "tcState": "TC 개발예정",
+          "start": "2026-11-03",
+          "end": "2026-11-27",
+          "dday": -8,
+          "tcState": "TC 개발 완료",
           "tcCount": null,
           "priority": "🔴",
           "owners": [],
@@ -100490,30 +100988,6 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "predecessors": [
             "40173fbd-1951-8073-b5fa-ec163a5a1961"
           ],
-          "warnings": []
-        },
-        {
-          "id": "40873fbd-1951-8026-8d24-dbd9cbc1fb1d",
-          "title": "[한패스 앱] 티머니 SDK 연동 신규 개발",
-          "url": "https://app.notion.com/p/SDK-40873fbd195180268d24dbd9cbc1fb1d",
-          "status": "테스트 예정",
-          "state": "예정",
-          "overdue": false,
-          "start": "2026-11-06",
-          "end": "2026-11-12",
-          "dday": -5,
-          "tcState": "TC 개발 완료",
-          "tcCount": 232,
-          "priority": "🔵",
-          "owners": [],
-          "ownerSource": "담당자 정보 없음",
-          "relations": [
-            {
-              "id": "40873fbd-1951-80e4-be00-e07bcdd41fa1",
-              "url": "https://www.notion.so/40873fbd195180e4be00e07bcdd41fa1"
-            }
-          ],
-          "predecessors": [],
           "warnings": []
         },
         {
@@ -100543,6 +101017,30 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "predecessors": [
             "3c973fbd-1951-80a7-ba1c-ea55067d98c9"
           ],
+          "warnings": []
+        },
+        {
+          "id": "40873fbd-1951-8026-8d24-dbd9cbc1fb1d",
+          "title": "[한패스 앱] 티머니 SDK 연동 신규 개발",
+          "url": "https://app.notion.com/p/SDK-40873fbd195180268d24dbd9cbc1fb1d",
+          "status": "테스트 진행중",
+          "state": "진행중",
+          "overdue": false,
+          "start": "2026-11-10",
+          "end": "2026-11-13",
+          "dday": -1,
+          "tcState": "TC 개발 완료",
+          "tcCount": 232,
+          "priority": "🔵",
+          "owners": [],
+          "ownerSource": "담당자 정보 없음",
+          "relations": [
+            {
+              "id": "40873fbd-1951-80e4-be00-e07bcdd41fa1",
+              "url": "https://www.notion.so/40873fbd195180e4be00e07bcdd41fa1"
+            }
+          ],
+          "predecessors": [],
           "warnings": []
         },
         {
@@ -100704,8 +101202,8 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
   },
   "qaQuality": {
     "status": "ok",
-    "syncedAt": "2026-11-11T01:34:21+09:00",
-    "attemptedAt": "2026-11-11T01:34:21+09:00",
+    "syncedAt": "2026-11-11T11:56:56+09:00",
+    "attemptedAt": "2026-11-11T11:56:56+09:00",
     "data": {
       "sourceUrl": "https://www.notion.so/1fa73fbd195180a59f39d3ae80362936",
       "documents": [
@@ -100843,28 +101341,28 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
   "sources": {
     "defects": {
       "status": "ok",
-      "syncedAt": "2026-11-11T01:33:49+09:00",
-      "attemptedAt": "2026-11-11T01:33:49+09:00"
+      "syncedAt": "2026-11-11T11:56:25+09:00",
+      "attemptedAt": "2026-11-11T11:56:25+09:00"
     },
     "tasks": {
       "status": "ok",
-      "syncedAt": "2026-11-11T01:33:55+09:00",
-      "attemptedAt": "2026-11-11T01:33:55+09:00"
+      "syncedAt": "2026-11-11T11:56:31+09:00",
+      "attemptedAt": "2026-11-11T11:56:31+09:00"
     },
     "quality": {
       "status": "ok",
-      "syncedAt": "2026-11-11T01:34:21+09:00",
-      "attemptedAt": "2026-11-11T01:34:21+09:00"
+      "syncedAt": "2026-11-11T11:56:56+09:00",
+      "attemptedAt": "2026-11-11T11:56:56+09:00"
     },
     "report-한패스": {
       "status": "ok",
-      "syncedAt": "2026-11-11T01:33:50+09:00",
-      "attemptedAt": "2026-11-11T01:33:50+09:00"
+      "syncedAt": "2026-11-11T11:56:25+09:00",
+      "attemptedAt": "2026-11-11T11:56:25+09:00"
     },
     "report-GoHanpass": {
       "status": "ok",
-      "syncedAt": "2026-11-11T01:33:50+09:00",
-      "attemptedAt": "2026-11-11T01:33:50+09:00"
+      "syncedAt": "2026-11-11T11:56:26+09:00",
+      "attemptedAt": "2026-11-11T11:56:26+09:00"
     }
   }
 }</script>

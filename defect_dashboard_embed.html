@@ -731,7 +731,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
     </div>
   </div>
   <script id="dashboard-data" type="application/json">{
-  "generatedAt": "2026-11-13T03:32:15+00:00",
+  "generatedAt": "2026-11-13T08:18:30+00:00",
   "days": 30,
   "domainOrder": [
     "한패스",
@@ -740,20 +740,20 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
   "domains": {
     "ALL": {
       "summary": {
-        "total": 2139,
-        "new": 221,
-        "inProgress": 17,
+        "total": 2152,
+        "new": 222,
+        "inProgress": 22,
         "fixed": 0,
-        "closed": 1611,
-        "todayNew": 1,
-        "newDelta": 0,
+        "closed": 1618,
+        "todayNew": 14,
+        "newDelta": 13,
         "critical": 109,
-        "todayClosed": 11
+        "todayClosed": 18
       },
       "funnel": [
         {
           "stage": "등록",
-          "count": 221,
+          "count": 222,
           "rate": 10.3,
           "width": 14
         },
@@ -771,8 +771,8 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
         },
         {
           "stage": "진행중",
-          "count": 17,
-          "rate": 0.8,
+          "count": 22,
+          "rate": 1.0,
           "width": 6
         },
         {
@@ -784,13 +784,13 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
         {
           "stage": "QA확인",
           "count": 290,
-          "rate": 13.6,
+          "rate": 13.5,
           "width": 18
         },
         {
           "stage": "종료",
-          "count": 1611,
-          "rate": 75.3,
+          "count": 1618,
+          "rate": 75.2,
           "width": 100
         }
       ],
@@ -1000,13 +1000,37 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
         },
         {
           "date": "2026-11-13",
-          "new": 1,
-          "fixed": 11,
-          "closed": 11,
-          "deltaNew": 0
+          "new": 14,
+          "fixed": 18,
+          "closed": 18,
+          "deltaNew": 13
         }
       ],
       "versions": [
+        {
+          "version": "6.0.6",
+          "total": 1,
+          "criticalMajor": 0,
+          "doneRate": 0.0,
+          "status": [
+            {
+              "label": "등록",
+              "count": 1
+            }
+          ],
+          "severity": [
+            {
+              "label": "미지정",
+              "count": 1
+            }
+          ],
+          "priority": [
+            {
+              "label": "Medium",
+              "count": 1
+            }
+          ]
+        },
         {
           "version": "6.0.5 (완료)",
           "total": 7,
@@ -2317,9 +2341,9 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
         },
         {
           "version": "[Hanpass][카드개편][BO]",
-          "total": 67,
-          "criticalMajor": 33,
-          "doneRate": 92.5,
+          "total": 79,
+          "criticalMajor": 39,
+          "doneRate": 83.5,
           "status": [
             {
               "label": "등록",
@@ -2327,11 +2351,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "label": "진행중",
-              "count": 2
+              "count": 10
             },
             {
               "label": "종료",
-              "count": 62
+              "count": 66
             }
           ],
           "severity": [
@@ -2341,17 +2365,17 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "label": "Major",
-              "count": 29
+              "count": 35
             },
             {
               "label": "Minor",
-              "count": 34
+              "count": 40
             }
           ],
           "priority": [
             {
               "label": "Medium",
-              "count": 66
+              "count": 78
             },
             {
               "label": "Low",
@@ -2363,7 +2387,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "version": "[Hanpass][카드개편][FO]",
           "total": 36,
           "criticalMajor": 25,
-          "doneRate": 61.1,
+          "doneRate": 69.4,
           "status": [
             {
               "label": "등록",
@@ -2371,11 +2395,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "label": "진행중",
-              "count": 6
+              "count": 3
             },
             {
               "label": "종료",
-              "count": 22
+              "count": 25
             }
           ],
           "severity": [
@@ -2666,6 +2690,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
       ],
       "versionGroups": {
         "ALL": [
+          "6.0.6",
           "6.0.5 (완료)",
           "6.0.3",
           "6.0.0",
@@ -2715,17 +2740,94 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "Hanpass - Backlog"
         ],
         "RECENT": [
+          "6.0.6",
           "6.0.5 (완료)",
           "6.0.3",
           "6.0.0",
-          "5.25.0 (완료)",
-          "5.24.2 (완료)"
+          "5.25.0 (완료)"
         ],
         "BACKLOG": [
           "Hanpass - Backlog"
         ]
       },
       "projectProgress": [
+        {
+          "version": "6.0.6",
+          "total": 1,
+          "open": 1,
+          "devDone": 0,
+          "qaRegression": 0,
+          "backlogTransfer": 0,
+          "done": 0,
+          "scopeTotal": 1,
+          "doneRate": 0.0,
+          "latestSnapshot": "2026-11-13",
+          "severityRows": [
+            {
+              "severity": "Critical",
+              "open": 0,
+              "devDone": 0,
+              "qaRegression": 0,
+              "backlogTransfer": 0,
+              "done": 0,
+              "total": 0,
+              "rate": 0,
+              "previousRate": 0
+            },
+            {
+              "severity": "Major",
+              "open": 0,
+              "devDone": 0,
+              "qaRegression": 0,
+              "backlogTransfer": 0,
+              "done": 0,
+              "total": 0,
+              "rate": 0,
+              "previousRate": 0
+            },
+            {
+              "severity": "Minor",
+              "open": 0,
+              "devDone": 0,
+              "qaRegression": 0,
+              "backlogTransfer": 0,
+              "done": 0,
+              "total": 0,
+              "rate": 0,
+              "previousRate": 0
+            },
+            {
+              "severity": "합계",
+              "open": 1,
+              "devDone": 0,
+              "qaRegression": 0,
+              "backlogTransfer": 0,
+              "done": 0,
+              "total": 1,
+              "rate": 0.0,
+              "previousRate": 0
+            }
+          ],
+          "typeRows": [
+            {
+              "type": "미지정",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "미지정",
+                  "count": 1
+                }
+              ]
+            }
+          ],
+          "daily": [
+            {
+              "date": "2026-11-13",
+              "registered": 1,
+              "fixed": 0
+            }
+          ]
+        },
         {
           "version": "6.0.5 (완료)",
           "total": 7,
@@ -40108,14 +40210,14 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
         },
         {
           "version": "[Hanpass][카드개편][BO]",
-          "total": 67,
-          "open": 5,
-          "devDone": 60,
+          "total": 79,
+          "open": 13,
+          "devDone": 63,
           "qaRegression": 0,
           "backlogTransfer": 0,
-          "done": 2,
-          "scopeTotal": 67,
-          "doneRate": 92.5,
+          "done": 3,
+          "scopeTotal": 79,
+          "doneRate": 83.5,
           "latestSnapshot": "2026-11-13",
           "severityRows": [
             {
@@ -40131,52 +40233,52 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "severity": "Major",
-              "open": 2,
-              "devDone": 27,
+              "open": 6,
+              "devDone": 29,
               "qaRegression": 0,
               "backlogTransfer": 0,
               "done": 0,
-              "total": 29,
-              "rate": 93.1,
+              "total": 35,
+              "rate": 82.9,
               "previousRate": 93.1
             },
             {
               "severity": "Minor",
-              "open": 1,
-              "devDone": 31,
+              "open": 5,
+              "devDone": 32,
               "qaRegression": 0,
               "backlogTransfer": 0,
-              "done": 2,
-              "total": 34,
-              "rate": 97.1,
+              "done": 3,
+              "total": 40,
+              "rate": 87.5,
               "previousRate": 91.2
             },
             {
               "severity": "합계",
-              "open": 5,
-              "devDone": 60,
+              "open": 13,
+              "devDone": 63,
               "qaRegression": 0,
               "backlogTransfer": 0,
-              "done": 2,
-              "total": 67,
-              "rate": 92.5,
+              "done": 3,
+              "total": 79,
+              "rate": 83.5,
               "previousRate": 86.6
             }
           ],
           "typeRows": [
             {
               "type": "UX/UI",
-              "total": 22,
+              "total": 25,
               "severity": [
                 {
                   "label": "Minor",
-                  "count": 22
+                  "count": 25
                 }
               ]
             },
             {
               "type": "기능",
-              "total": 19,
+              "total": 23,
               "severity": [
                 {
                   "label": "Critical",
@@ -40184,7 +40286,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
                 },
                 {
                   "label": "Major",
-                  "count": 14
+                  "count": 18
                 },
                 {
                   "label": "Minor",
@@ -40194,7 +40296,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "type": "기획-구현 불일치",
-              "total": 17,
+              "total": 20,
               "severity": [
                 {
                   "label": "Major",
@@ -40202,7 +40304,21 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
                 },
                 {
                   "label": "Minor",
-                  "count": 7
+                  "count": 10
+                }
+              ]
+            },
+            {
+              "type": "예외 케이스 미처리",
+              "total": 5,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 4
+                },
+                {
+                  "label": "Minor",
+                  "count": 1
                 }
               ]
             },
@@ -40217,20 +40333,6 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
                 {
                   "label": "Minor",
                   "count": 2
-                }
-              ]
-            },
-            {
-              "type": "예외 케이스 미처리",
-              "total": 3,
-              "severity": [
-                {
-                  "label": "Major",
-                  "count": 2
-                },
-                {
-                  "label": "Minor",
-                  "count": 1
                 }
               ]
             },
@@ -40303,21 +40405,21 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-13",
-              "registered": 67,
-              "fixed": 62
+              "registered": 79,
+              "fixed": 66
             }
           ]
         },
         {
           "version": "[Hanpass][카드개편][FO]",
           "total": 36,
-          "open": 14,
-          "devDone": 22,
+          "open": 11,
+          "devDone": 25,
           "qaRegression": 0,
           "backlogTransfer": 0,
           "done": 0,
           "scopeTotal": 36,
-          "doneRate": 61.1,
+          "doneRate": 69.4,
           "latestSnapshot": "2026-11-13",
           "severityRows": [
             {
@@ -40333,13 +40435,13 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "severity": "Major",
-              "open": 10,
-              "devDone": 6,
+              "open": 8,
+              "devDone": 8,
               "qaRegression": 0,
               "backlogTransfer": 0,
               "done": 0,
               "total": 16,
-              "rate": 37.5,
+              "rate": 50.0,
               "previousRate": 31.2
             },
             {
@@ -40355,13 +40457,13 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "severity": "합계",
-              "open": 14,
-              "devDone": 22,
+              "open": 11,
+              "devDone": 25,
               "qaRegression": 0,
               "backlogTransfer": 0,
               "done": 0,
               "total": 36,
-              "rate": 61.1,
+              "rate": 69.4,
               "previousRate": 42.9
             }
           ],
@@ -40446,7 +40548,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             {
               "date": "2026-11-13",
               "registered": 36,
-              "fixed": 22
+              "fixed": 25
             }
           ]
         },
@@ -48910,18 +49012,18 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           ]
         }
       ],
-      "defaultProjectVersion": "[Hanpass][카드개편][FO]",
+      "defaultProjectVersion": "[Hanpass][카드개편][BO]",
       "selectedVersion": "ALL",
       "distributions": {
         "ALL": {
           "status": [
             {
               "label": "등록",
-              "count": 221
+              "count": 222
             },
             {
               "label": "진행중",
-              "count": 17
+              "count": 22
             },
             {
               "label": "QA확인",
@@ -48929,7 +49031,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "label": "종료",
-              "count": 1611
+              "count": 1618
             }
           ],
           "severity": [
@@ -48943,15 +49045,15 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "label": "Major",
-              "count": 826
+              "count": 832
             },
             {
               "label": "Minor",
-              "count": 1089
+              "count": 1095
             },
             {
               "label": "미지정",
-              "count": 74
+              "count": 75
             },
             {
               "label": "개선 의견",
@@ -48965,7 +49067,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "label": "Medium",
-              "count": 2092
+              "count": 2105
             },
             {
               "label": "Low",
@@ -49188,10 +49290,10 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
         },
         {
           "date": "2026-11-13",
-          "new": 1,
-          "fixed": 11,
-          "closed": 11,
-          "deltaNew": 0
+          "new": 14,
+          "fixed": 18,
+          "closed": 18,
+          "deltaNew": 13
         }
       ],
       "reportBoard": {
@@ -49248,30 +49350,8 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
       },
       "recent": [
         {
-          "id": "41773fbd-1951-8020-af5b-e26854db9467",
-          "title": "[한패스 KB카드][공통] 카드 메뉴 진입 시 로그인 연결 확인 오류로 서비스 진입이 불가능한 현상",
-          "status": "개발 완료 (Dev Done)",
-          "stage": "종료",
-          "severity": "Critical",
-          "defectType": "기능",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[Hanpass][카드개편][FO]",
-          "versionRaw": "[Hanpass][카드개편][FO]",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-11-13T01:18:00.000Z",
-          "createdDate": "2026-11-13",
-          "fixedAt": "2026-11-13T02:09:00.000Z",
-          "fixedDate": "2026-11-13",
-          "closedAt": "2026-11-13T02:09:00.000Z",
-          "closedDate": "2026-11-13",
-          "url": "https://app.notion.com/p/KB-41773fbd19518020af5be26854db9467",
-          "lastEditedAt": "2026-11-13T02:09:00.000Z"
-        },
-        {
-          "id": "41673fbd-1951-8029-bd34-c78484f7cf0b",
-          "title": "[발급접수내역][BO]해외발급 접수 상세화면 - CI 정보 업데이트 시 오류팝업 발생하는 현상",
+          "id": "41773fbd-1951-8093-bb00-cccfd8e6d513",
+          "title": "[계정별 카드발급현황][BO] 발급일에 유효한 날짜를 숫자로 직접 입력 시 날짜 유효성 검증 오류 팝업이 노출되는 현상",
           "status": "등록 (Registered)",
           "stage": "등록",
           "severity": "Major",
@@ -49282,65 +49362,43 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "versionRaw": "[Hanpass][카드개편][BO]",
           "domain": "한패스",
           "os": "미지정",
-          "createdAt": "2026-11-12T02:14:00.000Z",
-          "createdDate": "2026-11-12",
+          "createdAt": "2026-11-13T08:14:00.000Z",
+          "createdDate": "2026-11-13",
           "fixedAt": "",
           "fixedDate": "",
           "closedAt": "",
           "closedDate": "",
-          "url": "https://app.notion.com/p/BO-CI-41673fbd19518029bd34c78484f7cf0b",
-          "lastEditedAt": "2026-11-12T23:52:00.000Z"
+          "url": "https://app.notion.com/p/BO-41773fbd19518093bb00cccfd8e6d513",
+          "lastEditedAt": "2026-11-13T08:16:00.000Z"
         },
         {
-          "id": "41573fbd-1951-8011-be46-fbfcf3ffe47a",
-          "title": "[카드관리][공통] 당월 카드 결제 실적이 없는 계정에서 카드 실적 및 카드 혜택 영역 전체가 미노출되는 현상",
-          "status": "개발 완료 (Dev Done)",
-          "stage": "종료",
-          "severity": "Critical",
-          "defectType": "기능",
+          "id": "41773fbd-1951-8020-9274-ff941db81e31",
+          "title": "[환급대기 다국어]",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "미지정",
+          "defectType": "미지정",
           "priority": "Medium",
           "assignee": "미지정",
-          "version": "[Hanpass][카드개편][FO]",
-          "versionRaw": "[Hanpass][카드개편][FO]",
+          "version": "6.0.6",
+          "versionRaw": "6.0.6",
           "domain": "한패스",
           "os": "미지정",
-          "createdAt": "2026-11-11T09:26:00.000Z",
-          "createdDate": "2026-11-11",
-          "fixedAt": "2026-11-12T07:08:00.000Z",
-          "fixedDate": "2026-11-12",
-          "closedAt": "2026-11-12T07:08:00.000Z",
-          "closedDate": "2026-11-12",
-          "url": "https://app.notion.com/p/41573fbd19518011be46fbfcf3ffe47a",
-          "lastEditedAt": "2026-11-12T07:08:00.000Z"
+          "createdAt": "2026-11-13T08:14:00.000Z",
+          "createdDate": "2026-11-13",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/41773fbd195180209274ff941db81e31",
+          "lastEditedAt": "2026-11-13T08:18:00.000Z"
         },
         {
-          "id": "41573fbd-1951-800a-85e7-fd9222474ef9",
-          "title": "[카드관리][공통] 카드 결제 실적이 존재함에도 카드 실적 및 카드 혜택 영역이 미노출되는 현상",
+          "id": "41773fbd-1951-8084-a477-eb53161e1490",
+          "title": "[연회비대상내역][BO] 조회 결과 목록의 카드번호가 기획서와 상이하게 마스킹 처리되어 노출되는 현상",
           "status": "개발 완료 (Dev Done)",
           "stage": "종료",
-          "severity": "Critical",
-          "defectType": "기능",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[Hanpass][카드개편][FO]",
-          "versionRaw": "[Hanpass][카드개편][FO]",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-11-11T09:20:00.000Z",
-          "createdDate": "2026-11-11",
-          "fixedAt": "2026-11-12T03:34:00.000Z",
-          "fixedDate": "2026-11-12",
-          "closedAt": "2026-11-12T03:34:00.000Z",
-          "closedDate": "2026-11-12",
-          "url": "https://app.notion.com/p/41573fbd1951800a85e7fd9222474ef9",
-          "lastEditedAt": "2026-11-12T03:34:00.000Z"
-        },
-        {
-          "id": "41573fbd-1951-80f4-bad2-f80584fae08b",
-          "title": "[발급접수내역][간편결제사 연동][BO] 간편결제사 연동 선택 시 기획서에 정의되지 않은 안내 팝업이 노출되는 현상",
-          "status": "개발 완료 (Dev Done)",
-          "stage": "종료",
-          "severity": "Major",
+          "severity": "Minor",
           "defectType": "기획-구현 불일치",
           "priority": "Medium",
           "assignee": "미지정",
@@ -49348,131 +49406,175 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "versionRaw": "[Hanpass][카드개편][BO]",
           "domain": "한패스",
           "os": "미지정",
-          "createdAt": "2026-11-11T08:08:00.000Z",
-          "createdDate": "2026-11-11",
-          "fixedAt": "2026-11-12T00:53:00.000Z",
-          "fixedDate": "2026-11-12",
-          "closedAt": "2026-11-12T00:53:00.000Z",
-          "closedDate": "2026-11-12",
-          "url": "https://app.notion.com/p/BO-41573fbd195180f4bad2f80584fae08b",
-          "lastEditedAt": "2026-11-12T00:53:00.000Z"
+          "createdAt": "2026-11-13T07:42:00.000Z",
+          "createdDate": "2026-11-13",
+          "fixedAt": "2026-11-13T08:15:00.000Z",
+          "fixedDate": "2026-11-13",
+          "closedAt": "2026-11-13T08:15:00.000Z",
+          "closedDate": "2026-11-13",
+          "url": "https://app.notion.com/p/BO-41773fbd19518084a477eb53161e1490",
+          "lastEditedAt": "2026-11-13T08:15:00.000Z"
         },
         {
-          "id": "41573fbd-1951-8018-b5c2-d4fcd07e928c",
-          "title": "[카드상세][공통]이용안내 Bottom Sheet 내 충전한도의 금액표기 및 충전한도 문구 미표기 되는 현상",
-          "status": "등록 (Registered)",
-          "stage": "등록",
+          "id": "41773fbd-1951-802f-9071-fd66a7fadbf4",
+          "title": "[연회비대상내역][BO] 상세 팝업의 카드번호 마스킹 처리 기준이 기획서와 상이한 현상",
+          "status": "결함 아님 (Not an issue)",
+          "stage": "종료",
           "severity": "Minor",
-          "defectType": "UX/UI",
+          "defectType": "기획-구현 불일치",
           "priority": "Medium",
           "assignee": "미지정",
-          "version": "[Hanpass][카드개편][FO]",
-          "versionRaw": "[Hanpass][카드개편][FO]",
+          "version": "[Hanpass][카드개편][BO]",
+          "versionRaw": "[Hanpass][카드개편][BO]",
           "domain": "한패스",
           "os": "미지정",
-          "createdAt": "2026-11-11T07:53:00.000Z",
-          "createdDate": "2026-11-11",
+          "createdAt": "2026-11-13T07:39:00.000Z",
+          "createdDate": "2026-11-13",
+          "fixedAt": "2026-11-13T08:03:00.000Z",
+          "fixedDate": "2026-11-13",
+          "closedAt": "2026-11-13T08:03:00.000Z",
+          "closedDate": "2026-11-13",
+          "url": "https://app.notion.com/p/BO-41773fbd1951802f9071fd66a7fadbf4",
+          "lastEditedAt": "2026-11-13T08:03:00.000Z"
+        },
+        {
+          "id": "41773fbd-1951-8075-b492-f35d162aae3e",
+          "title": "[연회비대상내역][BO] 상세 팝업의 카드상품코드 항목에 기획서와 상이하게 숫자 코드가 노출되는 현상",
+          "status": "처리중 (In Progress)",
+          "stage": "진행중",
+          "severity": "Minor",
+          "defectType": "기획-구현 불일치",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[Hanpass][카드개편][BO]",
+          "versionRaw": "[Hanpass][카드개편][BO]",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-11-13T07:34:00.000Z",
+          "createdDate": "2026-11-13",
           "fixedAt": "",
           "fixedDate": "",
           "closedAt": "",
           "closedDate": "",
-          "url": "https://app.notion.com/p/Bottom-Sheet-41573fbd19518018b5c2d4fcd07e928c",
-          "lastEditedAt": "2026-11-12T08:22:00.000Z"
+          "url": "https://app.notion.com/p/BO-41773fbd19518075b492f35d162aae3e",
+          "lastEditedAt": "2026-11-13T07:56:00.000Z"
         },
         {
-          "id": "41573fbd-1951-806c-97df-ceee5f976968",
-          "title": "[카드관리][공통] 카드 설정 영역에 '카드 비밀번호 변경', '카드 재발급', '카드 사용 등록' 메뉴가 노출되지 않는 현상",
+          "id": "41773fbd-1951-8037-b9d5-f9759fe7767b",
+          "title": "[승인/사고][BO]사고보상내역 메뉴 노출이 안되는 현상",
+          "status": "개발 완료 (Dev Done)",
+          "stage": "종료",
+          "severity": "Major",
+          "defectType": "기능",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[Hanpass][카드개편][BO]",
+          "versionRaw": "[Hanpass][카드개편][BO]",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-11-13T04:55:00.000Z",
+          "createdDate": "2026-11-13",
+          "fixedAt": "2026-11-13T07:37:00.000Z",
+          "fixedDate": "2026-11-13",
+          "closedAt": "2026-11-13T07:37:00.000Z",
+          "closedDate": "2026-11-13",
+          "url": "https://app.notion.com/p/BO-41773fbd19518037b9d5f9759fe7767b",
+          "lastEditedAt": "2026-11-13T07:37:00.000Z"
+        },
+        {
+          "id": "41773fbd-1951-80a3-b833-d95528f5ab19",
+          "title": "[연회비대상내역][BO] 입력 구분 미선택 상태에서 Validation 팝업 노출 후에도 검색이 실행되는 현상",
           "status": "처리중 (In Progress)",
           "stage": "진행중",
           "severity": "Major",
-          "defectType": "기획-구현 불일치",
+          "defectType": "예외 케이스 미처리",
           "priority": "Medium",
           "assignee": "미지정",
-          "version": "[Hanpass][카드개편][FO]",
-          "versionRaw": "[Hanpass][카드개편][FO]",
+          "version": "[Hanpass][카드개편][BO]",
+          "versionRaw": "[Hanpass][카드개편][BO]",
           "domain": "한패스",
           "os": "미지정",
-          "createdAt": "2026-11-11T07:50:00.000Z",
-          "createdDate": "2026-11-11",
+          "createdAt": "2026-11-13T02:42:00.000Z",
+          "createdDate": "2026-11-13",
           "fixedAt": "",
           "fixedDate": "",
           "closedAt": "",
           "closedDate": "",
-          "url": "https://app.notion.com/p/41573fbd1951806c97dfceee5f976968",
-          "lastEditedAt": "2026-11-12T03:32:00.000Z"
+          "url": "https://app.notion.com/p/BO-Validation-41773fbd195180a3b833d95528f5ab19",
+          "lastEditedAt": "2026-11-13T08:10:00.000Z"
         },
         {
-          "id": "41573fbd-1951-807c-bc9d-db55bedabece",
-          "title": "[카드관리][공통] 기존 카드 보유 및 신규 카드 신청 완료 계정에서 카드 관리 진입 시 '신청완료' 상태 화면이 아닌 '정상' 상태 화면으로 이동하는 현상",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Major",
-          "defectType": "기능",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[Hanpass][카드개편][FO]",
-          "versionRaw": "[Hanpass][카드개편][FO]",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-11-11T06:45:00.000Z",
-          "createdDate": "2026-11-11",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/41573fbd1951807cbc9ddb55bedabece",
-          "lastEditedAt": "2026-11-11T07:27:00.000Z"
-        },
-        {
-          "id": "41573fbd-1951-80d2-953e-e999ea73e9c5",
-          "title": "[한패스 KB카드][공통] 뒤로가기 선택 시 기획서에 정의된 홈 화면이 아닌 전체 메뉴 화면으로 이동하는 현상",
-          "status": "개발 완료 (Dev Done)",
-          "stage": "종료",
-          "severity": "Minor",
-          "defectType": "기능",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[Hanpass][카드개편][FO]",
-          "versionRaw": "[Hanpass][카드개편][FO]",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-11-11T06:28:00.000Z",
-          "createdDate": "2026-11-11",
-          "fixedAt": "2026-11-12T07:35:00.000Z",
-          "fixedDate": "2026-11-12",
-          "closedAt": "2026-11-12T07:35:00.000Z",
-          "closedDate": "2026-11-12",
-          "url": "https://app.notion.com/p/KB-41573fbd195180d2953ee999ea73e9c5",
-          "lastEditedAt": "2026-11-12T07:35:00.000Z"
-        },
-        {
-          "id": "41573fbd-1951-8018-a8f3-c49b055e3fc1",
-          "title": "[카드상세][공통]대상 가맹점 확인하기 버튼 아이콘 미노출 현상",
-          "status": "개발 완료 (Dev Done)",
-          "stage": "종료",
+          "id": "41773fbd-1951-8063-90c0-fa54f13af686",
+          "title": "[연회비대상내역][BO] 최초 청구일자 입력 필드의 Placeholder가 잘려 노출되는 현상",
+          "status": "처리중 (In Progress)",
+          "stage": "진행중",
           "severity": "Minor",
           "defectType": "UX/UI",
           "priority": "Medium",
           "assignee": "미지정",
-          "version": "[Hanpass][카드개편][FO]",
-          "versionRaw": "[Hanpass][카드개편][FO]",
+          "version": "[Hanpass][카드개편][BO]",
+          "versionRaw": "[Hanpass][카드개편][BO]",
           "domain": "한패스",
           "os": "미지정",
-          "createdAt": "2026-11-11T06:02:00.000Z",
-          "createdDate": "2026-11-11",
-          "fixedAt": "2026-11-12T08:20:00.000Z",
-          "fixedDate": "2026-11-12",
-          "closedAt": "2026-11-12T08:20:00.000Z",
-          "closedDate": "2026-11-12",
-          "url": "https://app.notion.com/p/41573fbd19518018a8f3c49b055e3fc1",
-          "lastEditedAt": "2026-11-12T08:20:00.000Z"
+          "createdAt": "2026-11-13T02:35:00.000Z",
+          "createdDate": "2026-11-13",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/BO-Placeholder-41773fbd1951806390c0fa54f13af686",
+          "lastEditedAt": "2026-11-13T08:10:00.000Z"
+        },
+        {
+          "id": "41773fbd-1951-8092-b5b8-e5166c1ed927",
+          "title": "[1차카드 발급신청 현황][BO] 신청수량 최대 입력 자리수 미정의 및 초과 입력 시 저장 실패 팝업이 노출되는 현상",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "defectType": "예외 케이스 미처리",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[Hanpass][카드개편][BO]",
+          "versionRaw": "[Hanpass][카드개편][BO]",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-11-13T02:25:00.000Z",
+          "createdDate": "2026-11-13",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/1-BO-41773fbd19518092b5b8e5166c1ed927",
+          "lastEditedAt": "2026-11-13T07:18:00.000Z"
+        },
+        {
+          "id": "41773fbd-1951-80a0-b48a-d901522f7cae",
+          "title": "[1차카드 발급신청 현황][BO] 카드상품을 기본값으로 변경 시 종속된 하위 입력 항목이 초기화되지 않는 현상",
+          "status": "처리중 (In Progress)",
+          "stage": "진행중",
+          "severity": "Major",
+          "defectType": "기능",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[Hanpass][카드개편][BO]",
+          "versionRaw": "[Hanpass][카드개편][BO]",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-11-13T01:47:00.000Z",
+          "createdDate": "2026-11-13",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/1-BO-41773fbd195180a0b48ad901522f7cae",
+          "lastEditedAt": "2026-11-13T08:10:00.000Z"
         }
       ],
       "quality": {
         "unresolvedCritical": 23,
-        "unresolvedMajor": 243,
-        "awaitingVerification": 91,
-        "highCount": 266,
+        "unresolvedMajor": 249,
+        "awaitingVerification": 97,
+        "highCount": 272,
         "high": [
           {
             "title": "[SDK변경][Go.Hanpass][iOS] PIN입력 화면 전환 때 상태바 제어 시 앱 크래시 현상 ",
@@ -50387,20 +50489,20 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
     },
     "한패스": {
       "summary": {
-        "total": 1693,
-        "new": 154,
-        "inProgress": 17,
+        "total": 1706,
+        "new": 155,
+        "inProgress": 22,
         "fixed": 0,
-        "closed": 1343,
-        "todayNew": 1,
-        "newDelta": 0,
+        "closed": 1350,
+        "todayNew": 14,
+        "newDelta": 13,
         "critical": 96,
-        "todayClosed": 11
+        "todayClosed": 18
       },
       "funnel": [
         {
           "stage": "등록",
-          "count": 154,
+          "count": 155,
           "rate": 9.1,
           "width": 11
         },
@@ -50418,8 +50520,8 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
         },
         {
           "stage": "진행중",
-          "count": 17,
-          "rate": 1.0,
+          "count": 22,
+          "rate": 1.3,
           "width": 6
         },
         {
@@ -50431,13 +50533,13 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
         {
           "stage": "QA확인",
           "count": 179,
-          "rate": 10.6,
+          "rate": 10.5,
           "width": 13
         },
         {
           "stage": "종료",
-          "count": 1343,
-          "rate": 79.3,
+          "count": 1350,
+          "rate": 79.1,
           "width": 100
         }
       ],
@@ -50647,13 +50749,37 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
         },
         {
           "date": "2026-11-13",
-          "new": 1,
-          "fixed": 11,
-          "closed": 11,
-          "deltaNew": 0
+          "new": 14,
+          "fixed": 18,
+          "closed": 18,
+          "deltaNew": 13
         }
       ],
       "versions": [
+        {
+          "version": "6.0.6",
+          "total": 1,
+          "criticalMajor": 0,
+          "doneRate": 0.0,
+          "status": [
+            {
+              "label": "등록",
+              "count": 1
+            }
+          ],
+          "severity": [
+            {
+              "label": "미지정",
+              "count": 1
+            }
+          ],
+          "priority": [
+            {
+              "label": "Medium",
+              "count": 1
+            }
+          ]
+        },
         {
           "version": "6.0.5 (완료)",
           "total": 7,
@@ -51672,9 +51798,9 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
         },
         {
           "version": "[Hanpass][카드개편][BO]",
-          "total": 67,
-          "criticalMajor": 33,
-          "doneRate": 92.5,
+          "total": 79,
+          "criticalMajor": 39,
+          "doneRate": 83.5,
           "status": [
             {
               "label": "등록",
@@ -51682,11 +51808,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "label": "진행중",
-              "count": 2
+              "count": 10
             },
             {
               "label": "종료",
-              "count": 62
+              "count": 66
             }
           ],
           "severity": [
@@ -51696,17 +51822,17 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "label": "Major",
-              "count": 29
+              "count": 35
             },
             {
               "label": "Minor",
-              "count": 34
+              "count": 40
             }
           ],
           "priority": [
             {
               "label": "Medium",
-              "count": 66
+              "count": 78
             },
             {
               "label": "Low",
@@ -51718,7 +51844,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "version": "[Hanpass][카드개편][FO]",
           "total": 36,
           "criticalMajor": 25,
-          "doneRate": 61.1,
+          "doneRate": 69.4,
           "status": [
             {
               "label": "등록",
@@ -51726,11 +51852,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "label": "진행중",
-              "count": 6
+              "count": 3
             },
             {
               "label": "종료",
-              "count": 22
+              "count": 25
             }
           ],
           "severity": [
@@ -52021,6 +52147,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
       ],
       "versionGroups": {
         "ALL": [
+          "6.0.6",
           "6.0.5 (완료)",
           "6.0.3",
           "6.0.0",
@@ -52061,17 +52188,94 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "Hanpass - Backlog"
         ],
         "RECENT": [
+          "6.0.6",
           "6.0.5 (완료)",
           "6.0.3",
           "6.0.0",
-          "5.25.0 (완료)",
-          "5.24.2 (완료)"
+          "5.25.0 (완료)"
         ],
         "BACKLOG": [
           "Hanpass - Backlog"
         ]
       },
       "projectProgress": [
+        {
+          "version": "6.0.6",
+          "total": 1,
+          "open": 1,
+          "devDone": 0,
+          "qaRegression": 0,
+          "backlogTransfer": 0,
+          "done": 0,
+          "scopeTotal": 1,
+          "doneRate": 0.0,
+          "latestSnapshot": "2026-11-13",
+          "severityRows": [
+            {
+              "severity": "Critical",
+              "open": 0,
+              "devDone": 0,
+              "qaRegression": 0,
+              "backlogTransfer": 0,
+              "done": 0,
+              "total": 0,
+              "rate": 0,
+              "previousRate": 0
+            },
+            {
+              "severity": "Major",
+              "open": 0,
+              "devDone": 0,
+              "qaRegression": 0,
+              "backlogTransfer": 0,
+              "done": 0,
+              "total": 0,
+              "rate": 0,
+              "previousRate": 0
+            },
+            {
+              "severity": "Minor",
+              "open": 0,
+              "devDone": 0,
+              "qaRegression": 0,
+              "backlogTransfer": 0,
+              "done": 0,
+              "total": 0,
+              "rate": 0,
+              "previousRate": 0
+            },
+            {
+              "severity": "합계",
+              "open": 1,
+              "devDone": 0,
+              "qaRegression": 0,
+              "backlogTransfer": 0,
+              "done": 0,
+              "total": 1,
+              "rate": 0.0,
+              "previousRate": 0
+            }
+          ],
+          "typeRows": [
+            {
+              "type": "미지정",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "미지정",
+                  "count": 1
+                }
+              ]
+            }
+          ],
+          "daily": [
+            {
+              "date": "2026-11-13",
+              "registered": 1,
+              "fixed": 0
+            }
+          ]
+        },
         {
           "version": "6.0.5 (완료)",
           "total": 7,
@@ -82445,14 +82649,14 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
         },
         {
           "version": "[Hanpass][카드개편][BO]",
-          "total": 67,
-          "open": 5,
-          "devDone": 60,
+          "total": 79,
+          "open": 13,
+          "devDone": 63,
           "qaRegression": 0,
           "backlogTransfer": 0,
-          "done": 2,
-          "scopeTotal": 67,
-          "doneRate": 92.5,
+          "done": 3,
+          "scopeTotal": 79,
+          "doneRate": 83.5,
           "latestSnapshot": "2026-11-13",
           "severityRows": [
             {
@@ -82468,52 +82672,52 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "severity": "Major",
-              "open": 2,
-              "devDone": 27,
+              "open": 6,
+              "devDone": 29,
               "qaRegression": 0,
               "backlogTransfer": 0,
               "done": 0,
-              "total": 29,
-              "rate": 93.1,
+              "total": 35,
+              "rate": 82.9,
               "previousRate": 93.1
             },
             {
               "severity": "Minor",
-              "open": 1,
-              "devDone": 31,
+              "open": 5,
+              "devDone": 32,
               "qaRegression": 0,
               "backlogTransfer": 0,
-              "done": 2,
-              "total": 34,
-              "rate": 97.1,
+              "done": 3,
+              "total": 40,
+              "rate": 87.5,
               "previousRate": 91.2
             },
             {
               "severity": "합계",
-              "open": 5,
-              "devDone": 60,
+              "open": 13,
+              "devDone": 63,
               "qaRegression": 0,
               "backlogTransfer": 0,
-              "done": 2,
-              "total": 67,
-              "rate": 92.5,
+              "done": 3,
+              "total": 79,
+              "rate": 83.5,
               "previousRate": 86.6
             }
           ],
           "typeRows": [
             {
               "type": "UX/UI",
-              "total": 22,
+              "total": 25,
               "severity": [
                 {
                   "label": "Minor",
-                  "count": 22
+                  "count": 25
                 }
               ]
             },
             {
               "type": "기능",
-              "total": 19,
+              "total": 23,
               "severity": [
                 {
                   "label": "Critical",
@@ -82521,7 +82725,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
                 },
                 {
                   "label": "Major",
-                  "count": 14
+                  "count": 18
                 },
                 {
                   "label": "Minor",
@@ -82531,7 +82735,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "type": "기획-구현 불일치",
-              "total": 17,
+              "total": 20,
               "severity": [
                 {
                   "label": "Major",
@@ -82539,7 +82743,21 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
                 },
                 {
                   "label": "Minor",
-                  "count": 7
+                  "count": 10
+                }
+              ]
+            },
+            {
+              "type": "예외 케이스 미처리",
+              "total": 5,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 4
+                },
+                {
+                  "label": "Minor",
+                  "count": 1
                 }
               ]
             },
@@ -82554,20 +82772,6 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
                 {
                   "label": "Minor",
                   "count": 2
-                }
-              ]
-            },
-            {
-              "type": "예외 케이스 미처리",
-              "total": 3,
-              "severity": [
-                {
-                  "label": "Major",
-                  "count": 2
-                },
-                {
-                  "label": "Minor",
-                  "count": 1
                 }
               ]
             },
@@ -82640,21 +82844,21 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-13",
-              "registered": 67,
-              "fixed": 62
+              "registered": 79,
+              "fixed": 66
             }
           ]
         },
         {
           "version": "[Hanpass][카드개편][FO]",
           "total": 36,
-          "open": 14,
-          "devDone": 22,
+          "open": 11,
+          "devDone": 25,
           "qaRegression": 0,
           "backlogTransfer": 0,
           "done": 0,
           "scopeTotal": 36,
-          "doneRate": 61.1,
+          "doneRate": 69.4,
           "latestSnapshot": "2026-11-13",
           "severityRows": [
             {
@@ -82670,13 +82874,13 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "severity": "Major",
-              "open": 10,
-              "devDone": 6,
+              "open": 8,
+              "devDone": 8,
               "qaRegression": 0,
               "backlogTransfer": 0,
               "done": 0,
               "total": 16,
-              "rate": 37.5,
+              "rate": 50.0,
               "previousRate": 31.2
             },
             {
@@ -82692,13 +82896,13 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "severity": "합계",
-              "open": 14,
-              "devDone": 22,
+              "open": 11,
+              "devDone": 25,
               "qaRegression": 0,
               "backlogTransfer": 0,
               "done": 0,
               "total": 36,
-              "rate": 61.1,
+              "rate": 69.4,
               "previousRate": 42.9
             }
           ],
@@ -82783,7 +82987,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             {
               "date": "2026-11-13",
               "registered": 36,
-              "fixed": 22
+              "fixed": 25
             }
           ]
         },
@@ -91247,18 +91451,18 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           ]
         }
       ],
-      "defaultProjectVersion": "[Hanpass][카드개편][FO]",
+      "defaultProjectVersion": "[Hanpass][카드개편][BO]",
       "selectedVersion": "ALL",
       "distributions": {
         "ALL": {
           "status": [
             {
               "label": "등록",
-              "count": 154
+              "count": 155
             },
             {
               "label": "진행중",
-              "count": 17
+              "count": 22
             },
             {
               "label": "QA확인",
@@ -91266,7 +91470,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "label": "종료",
-              "count": 1343
+              "count": 1350
             }
           ],
           "severity": [
@@ -91280,15 +91484,15 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "label": "Major",
-              "count": 573
+              "count": 579
             },
             {
               "label": "Minor",
-              "count": 909
+              "count": 915
             },
             {
               "label": "미지정",
-              "count": 74
+              "count": 75
             },
             {
               "label": "개선 의견",
@@ -91302,7 +91506,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "label": "Medium",
-              "count": 1647
+              "count": 1660
             },
             {
               "label": "Low",
@@ -91525,10 +91729,10 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
         },
         {
           "date": "2026-11-13",
-          "new": 1,
-          "fixed": 11,
-          "closed": 11,
-          "deltaNew": 0
+          "new": 14,
+          "fixed": 18,
+          "closed": 18,
+          "deltaNew": 13
         }
       ],
       "reportBoard": {
@@ -91585,30 +91789,8 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
       },
       "recent": [
         {
-          "id": "41773fbd-1951-8020-af5b-e26854db9467",
-          "title": "[한패스 KB카드][공통] 카드 메뉴 진입 시 로그인 연결 확인 오류로 서비스 진입이 불가능한 현상",
-          "status": "개발 완료 (Dev Done)",
-          "stage": "종료",
-          "severity": "Critical",
-          "defectType": "기능",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[Hanpass][카드개편][FO]",
-          "versionRaw": "[Hanpass][카드개편][FO]",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-11-13T01:18:00.000Z",
-          "createdDate": "2026-11-13",
-          "fixedAt": "2026-11-13T02:09:00.000Z",
-          "fixedDate": "2026-11-13",
-          "closedAt": "2026-11-13T02:09:00.000Z",
-          "closedDate": "2026-11-13",
-          "url": "https://app.notion.com/p/KB-41773fbd19518020af5be26854db9467",
-          "lastEditedAt": "2026-11-13T02:09:00.000Z"
-        },
-        {
-          "id": "41673fbd-1951-8029-bd34-c78484f7cf0b",
-          "title": "[발급접수내역][BO]해외발급 접수 상세화면 - CI 정보 업데이트 시 오류팝업 발생하는 현상",
+          "id": "41773fbd-1951-8093-bb00-cccfd8e6d513",
+          "title": "[계정별 카드발급현황][BO] 발급일에 유효한 날짜를 숫자로 직접 입력 시 날짜 유효성 검증 오류 팝업이 노출되는 현상",
           "status": "등록 (Registered)",
           "stage": "등록",
           "severity": "Major",
@@ -91619,65 +91801,43 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "versionRaw": "[Hanpass][카드개편][BO]",
           "domain": "한패스",
           "os": "미지정",
-          "createdAt": "2026-11-12T02:14:00.000Z",
-          "createdDate": "2026-11-12",
+          "createdAt": "2026-11-13T08:14:00.000Z",
+          "createdDate": "2026-11-13",
           "fixedAt": "",
           "fixedDate": "",
           "closedAt": "",
           "closedDate": "",
-          "url": "https://app.notion.com/p/BO-CI-41673fbd19518029bd34c78484f7cf0b",
-          "lastEditedAt": "2026-11-12T23:52:00.000Z"
+          "url": "https://app.notion.com/p/BO-41773fbd19518093bb00cccfd8e6d513",
+          "lastEditedAt": "2026-11-13T08:16:00.000Z"
         },
         {
-          "id": "41573fbd-1951-8011-be46-fbfcf3ffe47a",
-          "title": "[카드관리][공통] 당월 카드 결제 실적이 없는 계정에서 카드 실적 및 카드 혜택 영역 전체가 미노출되는 현상",
-          "status": "개발 완료 (Dev Done)",
-          "stage": "종료",
-          "severity": "Critical",
-          "defectType": "기능",
+          "id": "41773fbd-1951-8020-9274-ff941db81e31",
+          "title": "[환급대기 다국어]",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "미지정",
+          "defectType": "미지정",
           "priority": "Medium",
           "assignee": "미지정",
-          "version": "[Hanpass][카드개편][FO]",
-          "versionRaw": "[Hanpass][카드개편][FO]",
+          "version": "6.0.6",
+          "versionRaw": "6.0.6",
           "domain": "한패스",
           "os": "미지정",
-          "createdAt": "2026-11-11T09:26:00.000Z",
-          "createdDate": "2026-11-11",
-          "fixedAt": "2026-11-12T07:08:00.000Z",
-          "fixedDate": "2026-11-12",
-          "closedAt": "2026-11-12T07:08:00.000Z",
-          "closedDate": "2026-11-12",
-          "url": "https://app.notion.com/p/41573fbd19518011be46fbfcf3ffe47a",
-          "lastEditedAt": "2026-11-12T07:08:00.000Z"
+          "createdAt": "2026-11-13T08:14:00.000Z",
+          "createdDate": "2026-11-13",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/41773fbd195180209274ff941db81e31",
+          "lastEditedAt": "2026-11-13T08:18:00.000Z"
         },
         {
-          "id": "41573fbd-1951-800a-85e7-fd9222474ef9",
-          "title": "[카드관리][공통] 카드 결제 실적이 존재함에도 카드 실적 및 카드 혜택 영역이 미노출되는 현상",
+          "id": "41773fbd-1951-8084-a477-eb53161e1490",
+          "title": "[연회비대상내역][BO] 조회 결과 목록의 카드번호가 기획서와 상이하게 마스킹 처리되어 노출되는 현상",
           "status": "개발 완료 (Dev Done)",
           "stage": "종료",
-          "severity": "Critical",
-          "defectType": "기능",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[Hanpass][카드개편][FO]",
-          "versionRaw": "[Hanpass][카드개편][FO]",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-11-11T09:20:00.000Z",
-          "createdDate": "2026-11-11",
-          "fixedAt": "2026-11-12T03:34:00.000Z",
-          "fixedDate": "2026-11-12",
-          "closedAt": "2026-11-12T03:34:00.000Z",
-          "closedDate": "2026-11-12",
-          "url": "https://app.notion.com/p/41573fbd1951800a85e7fd9222474ef9",
-          "lastEditedAt": "2026-11-12T03:34:00.000Z"
-        },
-        {
-          "id": "41573fbd-1951-80f4-bad2-f80584fae08b",
-          "title": "[발급접수내역][간편결제사 연동][BO] 간편결제사 연동 선택 시 기획서에 정의되지 않은 안내 팝업이 노출되는 현상",
-          "status": "개발 완료 (Dev Done)",
-          "stage": "종료",
-          "severity": "Major",
+          "severity": "Minor",
           "defectType": "기획-구현 불일치",
           "priority": "Medium",
           "assignee": "미지정",
@@ -91685,131 +91845,175 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "versionRaw": "[Hanpass][카드개편][BO]",
           "domain": "한패스",
           "os": "미지정",
-          "createdAt": "2026-11-11T08:08:00.000Z",
-          "createdDate": "2026-11-11",
-          "fixedAt": "2026-11-12T00:53:00.000Z",
-          "fixedDate": "2026-11-12",
-          "closedAt": "2026-11-12T00:53:00.000Z",
-          "closedDate": "2026-11-12",
-          "url": "https://app.notion.com/p/BO-41573fbd195180f4bad2f80584fae08b",
-          "lastEditedAt": "2026-11-12T00:53:00.000Z"
+          "createdAt": "2026-11-13T07:42:00.000Z",
+          "createdDate": "2026-11-13",
+          "fixedAt": "2026-11-13T08:15:00.000Z",
+          "fixedDate": "2026-11-13",
+          "closedAt": "2026-11-13T08:15:00.000Z",
+          "closedDate": "2026-11-13",
+          "url": "https://app.notion.com/p/BO-41773fbd19518084a477eb53161e1490",
+          "lastEditedAt": "2026-11-13T08:15:00.000Z"
         },
         {
-          "id": "41573fbd-1951-8018-b5c2-d4fcd07e928c",
-          "title": "[카드상세][공통]이용안내 Bottom Sheet 내 충전한도의 금액표기 및 충전한도 문구 미표기 되는 현상",
-          "status": "등록 (Registered)",
-          "stage": "등록",
+          "id": "41773fbd-1951-802f-9071-fd66a7fadbf4",
+          "title": "[연회비대상내역][BO] 상세 팝업의 카드번호 마스킹 처리 기준이 기획서와 상이한 현상",
+          "status": "결함 아님 (Not an issue)",
+          "stage": "종료",
           "severity": "Minor",
-          "defectType": "UX/UI",
+          "defectType": "기획-구현 불일치",
           "priority": "Medium",
           "assignee": "미지정",
-          "version": "[Hanpass][카드개편][FO]",
-          "versionRaw": "[Hanpass][카드개편][FO]",
+          "version": "[Hanpass][카드개편][BO]",
+          "versionRaw": "[Hanpass][카드개편][BO]",
           "domain": "한패스",
           "os": "미지정",
-          "createdAt": "2026-11-11T07:53:00.000Z",
-          "createdDate": "2026-11-11",
+          "createdAt": "2026-11-13T07:39:00.000Z",
+          "createdDate": "2026-11-13",
+          "fixedAt": "2026-11-13T08:03:00.000Z",
+          "fixedDate": "2026-11-13",
+          "closedAt": "2026-11-13T08:03:00.000Z",
+          "closedDate": "2026-11-13",
+          "url": "https://app.notion.com/p/BO-41773fbd1951802f9071fd66a7fadbf4",
+          "lastEditedAt": "2026-11-13T08:03:00.000Z"
+        },
+        {
+          "id": "41773fbd-1951-8075-b492-f35d162aae3e",
+          "title": "[연회비대상내역][BO] 상세 팝업의 카드상품코드 항목에 기획서와 상이하게 숫자 코드가 노출되는 현상",
+          "status": "처리중 (In Progress)",
+          "stage": "진행중",
+          "severity": "Minor",
+          "defectType": "기획-구현 불일치",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[Hanpass][카드개편][BO]",
+          "versionRaw": "[Hanpass][카드개편][BO]",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-11-13T07:34:00.000Z",
+          "createdDate": "2026-11-13",
           "fixedAt": "",
           "fixedDate": "",
           "closedAt": "",
           "closedDate": "",
-          "url": "https://app.notion.com/p/Bottom-Sheet-41573fbd19518018b5c2d4fcd07e928c",
-          "lastEditedAt": "2026-11-12T08:22:00.000Z"
+          "url": "https://app.notion.com/p/BO-41773fbd19518075b492f35d162aae3e",
+          "lastEditedAt": "2026-11-13T07:56:00.000Z"
         },
         {
-          "id": "41573fbd-1951-806c-97df-ceee5f976968",
-          "title": "[카드관리][공통] 카드 설정 영역에 '카드 비밀번호 변경', '카드 재발급', '카드 사용 등록' 메뉴가 노출되지 않는 현상",
+          "id": "41773fbd-1951-8037-b9d5-f9759fe7767b",
+          "title": "[승인/사고][BO]사고보상내역 메뉴 노출이 안되는 현상",
+          "status": "개발 완료 (Dev Done)",
+          "stage": "종료",
+          "severity": "Major",
+          "defectType": "기능",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[Hanpass][카드개편][BO]",
+          "versionRaw": "[Hanpass][카드개편][BO]",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-11-13T04:55:00.000Z",
+          "createdDate": "2026-11-13",
+          "fixedAt": "2026-11-13T07:37:00.000Z",
+          "fixedDate": "2026-11-13",
+          "closedAt": "2026-11-13T07:37:00.000Z",
+          "closedDate": "2026-11-13",
+          "url": "https://app.notion.com/p/BO-41773fbd19518037b9d5f9759fe7767b",
+          "lastEditedAt": "2026-11-13T07:37:00.000Z"
+        },
+        {
+          "id": "41773fbd-1951-80a3-b833-d95528f5ab19",
+          "title": "[연회비대상내역][BO] 입력 구분 미선택 상태에서 Validation 팝업 노출 후에도 검색이 실행되는 현상",
           "status": "처리중 (In Progress)",
           "stage": "진행중",
           "severity": "Major",
-          "defectType": "기획-구현 불일치",
+          "defectType": "예외 케이스 미처리",
           "priority": "Medium",
           "assignee": "미지정",
-          "version": "[Hanpass][카드개편][FO]",
-          "versionRaw": "[Hanpass][카드개편][FO]",
+          "version": "[Hanpass][카드개편][BO]",
+          "versionRaw": "[Hanpass][카드개편][BO]",
           "domain": "한패스",
           "os": "미지정",
-          "createdAt": "2026-11-11T07:50:00.000Z",
-          "createdDate": "2026-11-11",
+          "createdAt": "2026-11-13T02:42:00.000Z",
+          "createdDate": "2026-11-13",
           "fixedAt": "",
           "fixedDate": "",
           "closedAt": "",
           "closedDate": "",
-          "url": "https://app.notion.com/p/41573fbd1951806c97dfceee5f976968",
-          "lastEditedAt": "2026-11-12T03:32:00.000Z"
+          "url": "https://app.notion.com/p/BO-Validation-41773fbd195180a3b833d95528f5ab19",
+          "lastEditedAt": "2026-11-13T08:10:00.000Z"
         },
         {
-          "id": "41573fbd-1951-807c-bc9d-db55bedabece",
-          "title": "[카드관리][공통] 기존 카드 보유 및 신규 카드 신청 완료 계정에서 카드 관리 진입 시 '신청완료' 상태 화면이 아닌 '정상' 상태 화면으로 이동하는 현상",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Major",
-          "defectType": "기능",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[Hanpass][카드개편][FO]",
-          "versionRaw": "[Hanpass][카드개편][FO]",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-11-11T06:45:00.000Z",
-          "createdDate": "2026-11-11",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/41573fbd1951807cbc9ddb55bedabece",
-          "lastEditedAt": "2026-11-11T07:27:00.000Z"
-        },
-        {
-          "id": "41573fbd-1951-80d2-953e-e999ea73e9c5",
-          "title": "[한패스 KB카드][공통] 뒤로가기 선택 시 기획서에 정의된 홈 화면이 아닌 전체 메뉴 화면으로 이동하는 현상",
-          "status": "개발 완료 (Dev Done)",
-          "stage": "종료",
-          "severity": "Minor",
-          "defectType": "기능",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[Hanpass][카드개편][FO]",
-          "versionRaw": "[Hanpass][카드개편][FO]",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-11-11T06:28:00.000Z",
-          "createdDate": "2026-11-11",
-          "fixedAt": "2026-11-12T07:35:00.000Z",
-          "fixedDate": "2026-11-12",
-          "closedAt": "2026-11-12T07:35:00.000Z",
-          "closedDate": "2026-11-12",
-          "url": "https://app.notion.com/p/KB-41573fbd195180d2953ee999ea73e9c5",
-          "lastEditedAt": "2026-11-12T07:35:00.000Z"
-        },
-        {
-          "id": "41573fbd-1951-8018-a8f3-c49b055e3fc1",
-          "title": "[카드상세][공통]대상 가맹점 확인하기 버튼 아이콘 미노출 현상",
-          "status": "개발 완료 (Dev Done)",
-          "stage": "종료",
+          "id": "41773fbd-1951-8063-90c0-fa54f13af686",
+          "title": "[연회비대상내역][BO] 최초 청구일자 입력 필드의 Placeholder가 잘려 노출되는 현상",
+          "status": "처리중 (In Progress)",
+          "stage": "진행중",
           "severity": "Minor",
           "defectType": "UX/UI",
           "priority": "Medium",
           "assignee": "미지정",
-          "version": "[Hanpass][카드개편][FO]",
-          "versionRaw": "[Hanpass][카드개편][FO]",
+          "version": "[Hanpass][카드개편][BO]",
+          "versionRaw": "[Hanpass][카드개편][BO]",
           "domain": "한패스",
           "os": "미지정",
-          "createdAt": "2026-11-11T06:02:00.000Z",
-          "createdDate": "2026-11-11",
-          "fixedAt": "2026-11-12T08:20:00.000Z",
-          "fixedDate": "2026-11-12",
-          "closedAt": "2026-11-12T08:20:00.000Z",
-          "closedDate": "2026-11-12",
-          "url": "https://app.notion.com/p/41573fbd19518018a8f3c49b055e3fc1",
-          "lastEditedAt": "2026-11-12T08:20:00.000Z"
+          "createdAt": "2026-11-13T02:35:00.000Z",
+          "createdDate": "2026-11-13",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/BO-Placeholder-41773fbd1951806390c0fa54f13af686",
+          "lastEditedAt": "2026-11-13T08:10:00.000Z"
+        },
+        {
+          "id": "41773fbd-1951-8092-b5b8-e5166c1ed927",
+          "title": "[1차카드 발급신청 현황][BO] 신청수량 최대 입력 자리수 미정의 및 초과 입력 시 저장 실패 팝업이 노출되는 현상",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "defectType": "예외 케이스 미처리",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[Hanpass][카드개편][BO]",
+          "versionRaw": "[Hanpass][카드개편][BO]",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-11-13T02:25:00.000Z",
+          "createdDate": "2026-11-13",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/1-BO-41773fbd19518092b5b8e5166c1ed927",
+          "lastEditedAt": "2026-11-13T07:18:00.000Z"
+        },
+        {
+          "id": "41773fbd-1951-80a0-b48a-d901522f7cae",
+          "title": "[1차카드 발급신청 현황][BO] 카드상품을 기본값으로 변경 시 종속된 하위 입력 항목이 초기화되지 않는 현상",
+          "status": "처리중 (In Progress)",
+          "stage": "진행중",
+          "severity": "Major",
+          "defectType": "기능",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[Hanpass][카드개편][BO]",
+          "versionRaw": "[Hanpass][카드개편][BO]",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-11-13T01:47:00.000Z",
+          "createdDate": "2026-11-13",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/1-BO-41773fbd195180a0b48ad901522f7cae",
+          "lastEditedAt": "2026-11-13T08:10:00.000Z"
         }
       ],
       "quality": {
         "unresolvedCritical": 14,
-        "unresolvedMajor": 146,
-        "awaitingVerification": 87,
-        "highCount": 160,
+        "unresolvedMajor": 152,
+        "awaitingVerification": 93,
+        "highCount": 166,
         "high": [
           {
             "title": "[SDK변경][Go.Hanpass][iOS] PIN입력 화면 전환 때 상태바 제어 시 앱 크래시 현상 ",
@@ -101739,13 +101943,13 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
   },
   "defectSource": {
     "status": "ok",
-    "syncedAt": "2026-11-13T12:32:14+09:00",
-    "attemptedAt": "2026-11-13T12:32:14+09:00"
+    "syncedAt": "2026-11-13T17:18:28+09:00",
+    "attemptedAt": "2026-11-13T17:18:28+09:00"
   },
   "qaTasks": {
     "status": "ok",
-    "syncedAt": "2026-11-13T12:32:19+09:00",
-    "attemptedAt": "2026-11-13T12:32:19+09:00",
+    "syncedAt": "2026-11-13T17:18:35+09:00",
+    "attemptedAt": "2026-11-13T17:18:35+09:00",
     "data": {
       "rows": [
         {
@@ -101799,9 +102003,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "url": "https://www.notion.so/3ab73fbd195180ba8799cc9f8faf32e3"
             }
           ],
-          "predecessors": [
-            "82273fbd-1951-8278-aa19-81e034c986c0"
-          ],
+          "predecessors": [],
           "warnings": []
         },
         {
@@ -101855,9 +102057,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "url": "https://www.notion.so/38973fbd1951805fb868f953f6e804a1"
             }
           ],
-          "predecessors": [
-            "82273fbd-1951-8278-aa19-81e034c986c0"
-          ],
+          "predecessors": [],
           "warnings": []
         },
         {
@@ -101876,9 +102076,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "owners": [],
           "ownerSource": "담당자 정보 없음",
           "relations": [],
-          "predecessors": [
-            "82273fbd-1951-8278-aa19-81e034c986c0"
-          ],
+          "predecessors": [],
           "warnings": []
         },
         {
@@ -101897,9 +102095,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "owners": [],
           "ownerSource": "담당자 정보 없음",
           "relations": [],
-          "predecessors": [
-            "bb473fbd-1951-8266-b356-018ce993a5ff"
-          ],
+          "predecessors": [],
           "warnings": []
         },
         {
@@ -101926,9 +102122,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "url": "https://www.notion.so/3d673fbd19518084a3ecd1470826c974"
             }
           ],
-          "predecessors": [
-            "77e73fbd-1951-83ec-8ec8-81ea630e51f4"
-          ],
+          "predecessors": [],
           "warnings": []
         },
         {
@@ -101985,9 +102179,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "owners": [],
           "ownerSource": "담당자 정보 없음",
           "relations": [],
-          "predecessors": [
-            "40173fbd-1951-8073-b5fa-ec163a5a1961"
-          ],
+          "predecessors": [],
           "warnings": []
         },
         {
@@ -102014,9 +102206,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "url": "https://www.notion.so/38973fbd1951804ebaadead08c258c60"
             }
           ],
-          "predecessors": [
-            "3c973fbd-1951-80a7-ba1c-ea55067d98c9"
-          ],
+          "predecessors": [],
           "warnings": []
         },
         {
@@ -102041,6 +102231,33 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             }
           ],
           "predecessors": [],
+          "warnings": []
+        },
+        {
+          "id": "41773fbd-1951-80f7-aa2e-ce6e668ea17e",
+          "title": "v6.0.6 테스트",
+          "url": "https://app.notion.com/p/v6-0-6-41773fbd195180f7aa2ece6e668ea17e",
+          "status": "테스트 진행중",
+          "state": "진행중",
+          "overdue": false,
+          "start": "2026-11-13",
+          "end": "2026-11-16",
+          "dday": 0,
+          "tcState": "TC 개발 완료",
+          "tcCount": null,
+          "priority": "🔵",
+          "owners": [],
+          "ownerSource": "담당자 정보 없음",
+          "relations": [
+            {
+              "id": "41773fbd-1951-8148-b844-d49f5bee4887",
+              "url": "https://www.notion.so/41773fbd19518148b844d49f5bee4887"
+            }
+          ],
+          "predecessors": [
+            "41773fbd-1951-814b-9806-d5b63ce12ea2",
+            "41773fbd-1951-8194-8a5a-c36081ec8d21"
+          ],
           "warnings": []
         },
         {
@@ -102148,7 +102365,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "start": "",
           "end": "",
           "dday": null,
-          "tcState": "TC 개발 중",
+          "tcState": "TC 개발 완료",
           "tcCount": null,
           "priority": "",
           "owners": [],
@@ -102202,8 +102419,8 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
   },
   "qaQuality": {
     "status": "ok",
-    "syncedAt": "2026-11-13T12:32:46+09:00",
-    "attemptedAt": "2026-11-13T12:32:46+09:00",
+    "syncedAt": "2026-11-13T17:19:01+09:00",
+    "attemptedAt": "2026-11-13T17:19:01+09:00",
     "data": {
       "sourceUrl": "https://www.notion.so/1fa73fbd195180a59f39d3ae80362936",
       "documents": [
@@ -102341,28 +102558,28 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
   "sources": {
     "defects": {
       "status": "ok",
-      "syncedAt": "2026-11-13T12:32:14+09:00",
-      "attemptedAt": "2026-11-13T12:32:14+09:00"
+      "syncedAt": "2026-11-13T17:18:28+09:00",
+      "attemptedAt": "2026-11-13T17:18:28+09:00"
     },
     "tasks": {
       "status": "ok",
-      "syncedAt": "2026-11-13T12:32:19+09:00",
-      "attemptedAt": "2026-11-13T12:32:19+09:00"
+      "syncedAt": "2026-11-13T17:18:35+09:00",
+      "attemptedAt": "2026-11-13T17:18:35+09:00"
     },
     "quality": {
       "status": "ok",
-      "syncedAt": "2026-11-13T12:32:46+09:00",
-      "attemptedAt": "2026-11-13T12:32:46+09:00"
+      "syncedAt": "2026-11-13T17:19:01+09:00",
+      "attemptedAt": "2026-11-13T17:19:01+09:00"
     },
     "report-한패스": {
       "status": "ok",
-      "syncedAt": "2026-11-13T12:32:14+09:00",
-      "attemptedAt": "2026-11-13T12:32:14+09:00"
+      "syncedAt": "2026-11-13T17:18:29+09:00",
+      "attemptedAt": "2026-11-13T17:18:29+09:00"
     },
     "report-GoHanpass": {
       "status": "ok",
-      "syncedAt": "2026-11-13T12:32:15+09:00",
-      "attemptedAt": "2026-11-13T12:32:15+09:00"
+      "syncedAt": "2026-11-13T17:18:29+09:00",
+      "attemptedAt": "2026-11-13T17:18:29+09:00"
     }
   }
 }</script>

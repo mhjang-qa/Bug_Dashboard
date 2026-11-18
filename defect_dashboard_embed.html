@@ -731,7 +731,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
     </div>
   </div>
   <script id="dashboard-data" type="application/json">{
-  "generatedAt": "2026-11-17T17:47:22+00:00",
+  "generatedAt": "2026-11-18T04:39:27+00:00",
   "days": 30,
   "domainOrder": [
     "한패스",
@@ -740,21 +740,21 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
   "domains": {
     "ALL": {
       "summary": {
-        "total": 2200,
-        "new": 224,
+        "total": 2203,
+        "new": 219,
         "inProgress": 18,
         "fixed": 0,
-        "closed": 1669,
-        "todayNew": 17,
-        "newDelta": -13,
+        "closed": 1661,
+        "todayNew": 3,
+        "newDelta": -14,
         "critical": 111,
-        "todayClosed": 20
+        "todayClosed": 11
       },
       "funnel": [
         {
           "stage": "등록",
-          "count": 224,
-          "rate": 10.2,
+          "count": 219,
+          "rate": 9.9,
           "width": 13
         },
         {
@@ -783,31 +783,24 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
         },
         {
           "stage": "QA확인",
-          "count": 289,
-          "rate": 13.1,
-          "width": 17
+          "count": 305,
+          "rate": 13.8,
+          "width": 18
         },
         {
           "stage": "종료",
-          "count": 1669,
-          "rate": 75.9,
+          "count": 1661,
+          "rate": 75.4,
           "width": 100
         }
       ],
       "daily": [
         {
-          "date": "2026-10-19",
-          "new": 10,
-          "fixed": 18,
-          "closed": 8,
-          "deltaNew": 10
-        },
-        {
           "date": "2026-10-20",
           "new": 6,
           "fixed": 313,
           "closed": 313,
-          "deltaNew": -4
+          "deltaNew": 6
         },
         {
           "date": "2026-10-21",
@@ -917,15 +910,15 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
         {
           "date": "2026-11-05",
           "new": 14,
-          "fixed": 1,
-          "closed": 1,
+          "fixed": 0,
+          "closed": 0,
           "deltaNew": 5
         },
         {
           "date": "2026-11-06",
           "new": 15,
-          "fixed": 22,
-          "closed": 22,
+          "fixed": 7,
+          "closed": 7,
           "deltaNew": 1
         },
         {
@@ -959,8 +952,8 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
         {
           "date": "2026-11-11",
           "new": 20,
-          "fixed": 12,
-          "closed": 12,
+          "fixed": 9,
+          "closed": 9,
           "deltaNew": -12
         },
         {
@@ -1004,6 +997,13 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "fixed": 20,
           "closed": 20,
           "deltaNew": -13
+        },
+        {
+          "date": "2026-11-18",
+          "new": 3,
+          "fixed": 27,
+          "closed": 11,
+          "deltaNew": -14
         }
       ],
       "versions": [
@@ -2128,6 +2128,34 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           ]
         },
         {
+          "version": "[Hanpass][산타이벤트]",
+          "total": 3,
+          "criticalMajor": 0,
+          "doneRate": 0.0,
+          "status": [
+            {
+              "label": "등록",
+              "count": 3
+            }
+          ],
+          "severity": [
+            {
+              "label": "Minor",
+              "count": 2
+            },
+            {
+              "label": "미지정",
+              "count": 1
+            }
+          ],
+          "priority": [
+            {
+              "label": "Medium",
+              "count": 3
+            }
+          ]
+        },
+        {
           "version": "[Hanpass][앱개편]-백로그",
           "total": 26,
           "criticalMajor": 7,
@@ -2343,19 +2371,23 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "version": "[Hanpass][카드개편][BO]",
           "total": 122,
           "criticalMajor": 67,
-          "doneRate": 86.9,
+          "doneRate": 93.4,
           "status": [
             {
               "label": "등록",
-              "count": 10
+              "count": 2
             },
             {
               "label": "진행중",
               "count": 6
             },
             {
+              "label": "QA확인",
+              "count": 16
+            },
+            {
               "label": "종료",
-              "count": 106
+              "count": 98
             }
           ],
           "severity": [
@@ -2722,6 +2754,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "[G.H][Go.Hanpass][앱개편][BO]-1차 (완료)",
           "[G.H]추후 수정-백로그",
           "[Hanpass][EMVQR] (완료)",
+          "[Hanpass][산타이벤트]",
           "[Hanpass][앱개편]-백로그",
           "[Hanpass][앱개편][BO] (완료)",
           "[Hanpass][앱개편][Native]-Dev (완료)",
@@ -2843,6 +2876,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-17",
+              "registered": 4,
+              "fixed": 4
+            },
+            {
+              "date": "2026-11-18",
               "registered": 4,
               "fixed": 4
             }
@@ -3256,6 +3294,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-17",
               "registered": 7,
               "fixed": 6
+            },
+            {
+              "date": "2026-11-18",
+              "registered": 7,
+              "fixed": 6
             }
           ]
         },
@@ -3533,6 +3576,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-17",
+              "registered": 26,
+              "fixed": 23
+            },
+            {
+              "date": "2026-11-18",
               "registered": 26,
               "fixed": 23
             }
@@ -4102,6 +4150,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-17",
+              "registered": 29,
+              "fixed": 1
+            },
+            {
+              "date": "2026-11-18",
               "registered": 29,
               "fixed": 1
             }
@@ -4773,6 +4826,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-17",
               "registered": 11,
               "fixed": 1
+            },
+            {
+              "date": "2026-11-18",
+              "registered": 11,
+              "fixed": 1
             }
           ]
         },
@@ -5288,6 +5346,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-17",
+              "registered": 7,
+              "fixed": 2
+            },
+            {
+              "date": "2026-11-18",
               "registered": 7,
               "fixed": 2
             }
@@ -6019,6 +6082,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-17",
               "registered": 20,
               "fixed": 20
+            },
+            {
+              "date": "2026-11-18",
+              "registered": 20,
+              "fixed": 20
             }
           ]
         },
@@ -6091,7 +6159,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               ]
             },
             {
-              "type": "기획서 수정",
+              "type": "기획서 수정 요청",
               "total": 1,
               "severity": [
                 {
@@ -6694,6 +6762,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-17",
+              "registered": 3,
+              "fixed": 3
+            },
+            {
+              "date": "2026-11-18",
               "registered": 3,
               "fixed": 3
             }
@@ -7571,6 +7644,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-17",
+              "registered": 26,
+              "fixed": 26
+            },
+            {
+              "date": "2026-11-18",
               "registered": 26,
               "fixed": 26
             }
@@ -8554,6 +8632,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-17",
+              "registered": 34,
+              "fixed": 34
+            },
+            {
+              "date": "2026-11-18",
               "registered": 34,
               "fixed": 34
             }
@@ -9642,6 +9725,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-17",
               "registered": 9,
               "fixed": 9
+            },
+            {
+              "date": "2026-11-18",
+              "registered": 9,
+              "fixed": 9
             }
           ]
         },
@@ -9740,7 +9828,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               ]
             },
             {
-              "type": "기획서 수정",
+              "type": "기획서 수정 요청",
               "total": 12,
               "severity": [
                 {
@@ -10839,6 +10927,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-17",
+              "registered": 117,
+              "fixed": 117
+            },
+            {
+              "date": "2026-11-18",
               "registered": 117,
               "fixed": 117
             }
@@ -12108,6 +12201,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-17",
+              "registered": 82,
+              "fixed": 82
+            },
+            {
+              "date": "2026-11-18",
               "registered": 82,
               "fixed": 82
             }
@@ -13674,6 +13772,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-17",
+              "registered": 24,
+              "fixed": 24
+            },
+            {
+              "date": "2026-11-18",
               "registered": 24,
               "fixed": 24
             }
@@ -15418,6 +15521,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-17",
+              "registered": 103,
+              "fixed": 99
+            },
+            {
+              "date": "2026-11-18",
               "registered": 103,
               "fixed": 99
             }
@@ -17253,6 +17361,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-17",
+              "registered": 68,
+              "fixed": 67
+            },
+            {
+              "date": "2026-11-18",
               "registered": 68,
               "fixed": 67
             }
@@ -19104,6 +19217,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-17",
+              "registered": 4,
+              "fixed": 3
+            },
+            {
+              "date": "2026-11-18",
               "registered": 4,
               "fixed": 3
             }
@@ -21146,6 +21264,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-17",
               "registered": 35,
               "fixed": 34
+            },
+            {
+              "date": "2026-11-18",
+              "registered": 35,
+              "fixed": 34
             }
           ]
         },
@@ -23146,6 +23269,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-17",
+              "registered": 4,
+              "fixed": 4
+            },
+            {
+              "date": "2026-11-18",
               "registered": 4,
               "fixed": 4
             }
@@ -25428,6 +25556,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-17",
+              "registered": 3,
+              "fixed": 3
+            },
+            {
+              "date": "2026-11-18",
               "registered": 3,
               "fixed": 3
             }
@@ -27852,6 +27985,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-17",
               "registered": 27,
               "fixed": 23
+            },
+            {
+              "date": "2026-11-18",
+              "registered": 27,
+              "fixed": 23
             }
           ]
         },
@@ -27909,7 +28047,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "done": 32,
               "total": 33,
               "rate": 97.0,
-              "previousRate": 90.9
+              "previousRate": 97.0
             }
           ],
           "typeRows": [
@@ -30449,6 +30587,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-17",
               "registered": 33,
               "fixed": 32
+            },
+            {
+              "date": "2026-11-18",
+              "registered": 33,
+              "fixed": 32
             }
           ]
         },
@@ -31535,6 +31678,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-17",
               "registered": 20,
               "fixed": 1
+            },
+            {
+              "date": "2026-11-18",
+              "registered": 20,
+              "fixed": 1
             }
           ]
         },
@@ -32381,6 +32529,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-17",
               "registered": 15,
               "fixed": 15
+            },
+            {
+              "date": "2026-11-18",
+              "registered": 15,
+              "fixed": 15
             }
           ]
         },
@@ -32523,7 +32676,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               ]
             },
             {
-              "type": "기획서 수정",
+              "type": "기획서 수정 요청",
               "total": 1,
               "severity": [
                 {
@@ -33488,6 +33641,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-17",
               "registered": 55,
               "fixed": 54
+            },
+            {
+              "date": "2026-11-18",
+              "registered": 55,
+              "fixed": 54
             }
           ]
         },
@@ -34218,6 +34376,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-17",
+              "registered": 5,
+              "fixed": 5
+            },
+            {
+              "date": "2026-11-18",
               "registered": 5,
               "fixed": 5
             }
@@ -35336,6 +35499,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-17",
               "registered": 101,
               "fixed": 101
+            },
+            {
+              "date": "2026-11-18",
+              "registered": 101,
+              "fixed": 101
             }
           ]
         },
@@ -35398,7 +35566,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           ],
           "typeRows": [
             {
-              "type": "기획서 수정",
+              "type": "기획서 수정 요청",
               "total": 28,
               "severity": [
                 {
@@ -35693,6 +35861,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-17",
               "registered": 37,
               "fixed": 30
+            },
+            {
+              "date": "2026-11-18",
+              "registered": 37,
+              "fixed": 30
             }
           ]
         },
@@ -35773,7 +35946,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               ]
             },
             {
-              "type": "기획서 수정",
+              "type": "기획서 수정 요청",
               "total": 42,
               "severity": [
                 {
@@ -36182,6 +36355,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-17",
               "registered": 172,
               "fixed": 166
+            },
+            {
+              "date": "2026-11-18",
+              "registered": 172,
+              "fixed": 166
             }
           ]
         },
@@ -36244,7 +36422,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           ],
           "typeRows": [
             {
-              "type": "기획서 수정",
+              "type": "기획서 수정 요청",
               "total": 18,
               "severity": [
                 {
@@ -36580,6 +36758,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-17",
+              "registered": 34,
+              "fixed": 34
+            },
+            {
+              "date": "2026-11-18",
               "registered": 34,
               "fixed": 34
             }
@@ -37638,6 +37821,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-17",
               "registered": 7,
               "fixed": 7
+            },
+            {
+              "date": "2026-11-18",
+              "registered": 7,
+              "fixed": 7
             }
           ]
         },
@@ -37738,7 +37926,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               ]
             },
             {
-              "type": "기획서 수정",
+              "type": "기획서 수정 요청",
               "total": 1,
               "severity": [
                 {
@@ -37943,6 +38131,108 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-17",
               "registered": 20,
               "fixed": 19
+            },
+            {
+              "date": "2026-11-18",
+              "registered": 20,
+              "fixed": 19
+            }
+          ]
+        },
+        {
+          "version": "[Hanpass][산타이벤트]",
+          "total": 3,
+          "open": 3,
+          "devDone": 0,
+          "qaRegression": 0,
+          "backlogTransfer": 0,
+          "done": 0,
+          "scopeTotal": 3,
+          "doneRate": 0.0,
+          "latestSnapshot": "2026-11-18",
+          "severityRows": [
+            {
+              "severity": "Critical",
+              "open": 0,
+              "devDone": 0,
+              "qaRegression": 0,
+              "backlogTransfer": 0,
+              "done": 0,
+              "total": 0,
+              "rate": 0,
+              "previousRate": 0
+            },
+            {
+              "severity": "Major",
+              "open": 0,
+              "devDone": 0,
+              "qaRegression": 0,
+              "backlogTransfer": 0,
+              "done": 0,
+              "total": 0,
+              "rate": 0,
+              "previousRate": 0
+            },
+            {
+              "severity": "Minor",
+              "open": 2,
+              "devDone": 0,
+              "qaRegression": 0,
+              "backlogTransfer": 0,
+              "done": 0,
+              "total": 2,
+              "rate": 0.0,
+              "previousRate": 0
+            },
+            {
+              "severity": "합계",
+              "open": 3,
+              "devDone": 0,
+              "qaRegression": 0,
+              "backlogTransfer": 0,
+              "done": 0,
+              "total": 3,
+              "rate": 0.0,
+              "previousRate": 0
+            }
+          ],
+          "typeRows": [
+            {
+              "type": "UX/UI",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "type": "기획서 수정 요청",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "type": "미지정",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "미지정",
+                  "count": 1
+                }
+              ]
+            }
+          ],
+          "daily": [
+            {
+              "date": "2026-11-18",
+              "registered": 3,
+              "fixed": 0
             }
           ]
         },
@@ -38519,6 +38809,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-17",
+              "registered": 26,
+              "fixed": 7
+            },
+            {
+              "date": "2026-11-18",
               "registered": 26,
               "fixed": 7
             }
@@ -39115,6 +39410,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-17",
               "registered": 48,
               "fixed": 48
+            },
+            {
+              "date": "2026-11-18",
+              "registered": 48,
+              "fixed": 48
             }
           ]
         },
@@ -39237,7 +39537,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               ]
             },
             {
-              "type": "기획서 수정",
+              "type": "기획서 수정 요청",
               "total": 11,
               "severity": [
                 {
@@ -39755,6 +40055,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-17",
               "registered": 313,
               "fixed": 313
+            },
+            {
+              "date": "2026-11-18",
+              "registered": 313,
+              "fixed": 313
             }
           ]
         },
@@ -39877,7 +40182,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               ]
             },
             {
-              "type": "기획서 수정",
+              "type": "기획서 수정 요청",
               "total": 7,
               "severity": [
                 {
@@ -40364,6 +40669,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-17",
               "registered": 165,
               "fixed": 164
+            },
+            {
+              "date": "2026-11-18",
+              "registered": 165,
+              "fixed": 164
             }
           ]
         },
@@ -40616,6 +40926,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-17",
               "registered": 15,
               "fixed": 0
+            },
+            {
+              "date": "2026-11-18",
+              "registered": 15,
+              "fixed": 0
             }
           ]
         },
@@ -40710,7 +41025,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               ]
             },
             {
-              "type": "기획서 수정",
+              "type": "기획서 수정 요청",
               "total": 1,
               "severity": [
                 {
@@ -40965,64 +41280,69 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-17",
               "registered": 36,
               "fixed": 34
+            },
+            {
+              "date": "2026-11-18",
+              "registered": 36,
+              "fixed": 34
             }
           ]
         },
         {
           "version": "[Hanpass][카드개편][BO]",
           "total": 122,
-          "open": 16,
-          "devDone": 103,
-          "qaRegression": 0,
+          "open": 8,
+          "devDone": 95,
+          "qaRegression": 16,
           "backlogTransfer": 0,
           "done": 3,
           "scopeTotal": 122,
-          "doneRate": 86.9,
-          "latestSnapshot": "2026-11-17",
+          "doneRate": 93.4,
+          "latestSnapshot": "2026-11-18",
           "severityRows": [
             {
               "severity": "Critical",
-              "open": 1,
-              "devDone": 4,
+              "open": 0,
+              "devDone": 5,
               "qaRegression": 0,
               "backlogTransfer": 0,
               "done": 1,
               "total": 6,
-              "rate": 83.3,
-              "previousRate": 75.0
+              "rate": 100.0,
+              "previousRate": 83.3
             },
             {
               "severity": "Major",
-              "open": 11,
-              "devDone": 50,
-              "qaRegression": 0,
+              "open": 7,
+              "devDone": 52,
+              "qaRegression": 2,
               "backlogTransfer": 0,
               "done": 0,
               "total": 61,
-              "rate": 82.0,
-              "previousRate": 77.8
+              "rate": 88.5,
+              "previousRate": 77.0
             },
             {
               "severity": "Minor",
-              "open": 4,
-              "devDone": 49,
-              "qaRegression": 0,
+              "open": 1,
+              "devDone": 38,
+              "qaRegression": 14,
               "backlogTransfer": 0,
               "done": 2,
               "total": 55,
-              "rate": 92.7,
-              "previousRate": 93.6
+              "rate": 98.2,
+              "previousRate": 63.6
             },
             {
               "severity": "합계",
-              "open": 16,
-              "devDone": 103,
-              "qaRegression": 0,
+              "open": 8,
+              "devDone": 95,
+              "qaRegression": 16,
               "backlogTransfer": 0,
               "done": 3,
               "total": 122,
-              "rate": 86.9,
-              "previousRate": 84.8
+              "rate": 93.4,
+              "previousRate": 71.3
             }
           ],
           "typeRows": [
@@ -41097,7 +41417,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               ]
             },
             {
-              "type": "기획서 수정",
+              "type": "기획서 수정 요청",
               "total": 4,
               "severity": [
                 {
@@ -41130,67 +41450,72 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             {
               "date": "2026-11-05",
               "registered": 20,
-              "fixed": 1
+              "fixed": 0
             },
             {
               "date": "2026-11-06",
               "registered": 34,
-              "fixed": 23
+              "fixed": 7
             },
             {
               "date": "2026-11-07",
               "registered": 34,
-              "fixed": 23
+              "fixed": 7
             },
             {
               "date": "2026-11-08",
               "registered": 34,
-              "fixed": 23
+              "fixed": 7
             },
             {
               "date": "2026-11-09",
               "registered": 49,
-              "fixed": 37
+              "fixed": 21
             },
             {
               "date": "2026-11-10",
               "registered": 60,
-              "fixed": 43
+              "fixed": 27
             },
             {
               "date": "2026-11-11",
               "registered": 66,
-              "fixed": 55
+              "fixed": 36
             },
             {
               "date": "2026-11-12",
               "registered": 67,
-              "fixed": 58
+              "fixed": 39
             },
             {
               "date": "2026-11-13",
               "registered": 80,
-              "fixed": 71
+              "fixed": 52
             },
             {
               "date": "2026-11-14",
               "registered": 80,
-              "fixed": 71
+              "fixed": 52
             },
             {
               "date": "2026-11-15",
               "registered": 80,
-              "fixed": 71
+              "fixed": 52
             },
             {
               "date": "2026-11-16",
               "registered": 105,
-              "fixed": 89
+              "fixed": 70
             },
             {
               "date": "2026-11-17",
               "registered": 122,
-              "fixed": 106
+              "fixed": 87
+            },
+            {
+              "date": "2026-11-18",
+              "registered": 122,
+              "fixed": 114
             }
           ]
         },
@@ -41351,6 +41676,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-17",
+              "registered": 38,
+              "fixed": 29
+            },
+            {
+              "date": "2026-11-18",
               "registered": 38,
               "fixed": 29
             }
@@ -41932,6 +42262,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-17",
+              "registered": 11,
+              "fixed": 11
+            },
+            {
+              "date": "2026-11-18",
               "registered": 11,
               "fixed": 11
             }
@@ -42695,6 +43030,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-17",
               "registered": 7,
               "fixed": 5
+            },
+            {
+              "date": "2026-11-18",
+              "registered": 7,
+              "fixed": 5
             }
           ]
         },
@@ -42730,7 +43070,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "done": 7,
               "total": 59,
               "rate": 98.3,
-              "previousRate": 96.6
+              "previousRate": 98.3
             },
             {
               "severity": "Minor",
@@ -42752,7 +43092,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "done": 13,
               "total": 121,
               "rate": 99.2,
-              "previousRate": 98.3
+              "previousRate": 99.2
             }
           ],
           "typeRows": [
@@ -42809,7 +43149,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               ]
             },
             {
-              "type": "기획서 수정",
+              "type": "기획서 수정 요청",
               "total": 6,
               "severity": [
                 {
@@ -43377,6 +43717,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-17",
               "registered": 121,
               "fixed": 120
+            },
+            {
+              "date": "2026-11-18",
+              "registered": 121,
+              "fixed": 120
             }
           ]
         },
@@ -43505,7 +43850,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               ]
             },
             {
-              "type": "기획서 수정",
+              "type": "기획서 수정 요청",
               "total": 5,
               "severity": [
                 {
@@ -43927,6 +44272,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-17",
+              "registered": 131,
+              "fixed": 130
+            },
+            {
+              "date": "2026-11-18",
               "registered": 131,
               "fixed": 130
             }
@@ -44389,6 +44739,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-17",
+              "registered": 1,
+              "fixed": 1
+            },
+            {
+              "date": "2026-11-18",
               "registered": 1,
               "fixed": 1
             }
@@ -46371,6 +46726,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-17",
+              "registered": 3,
+              "fixed": 3
+            },
+            {
+              "date": "2026-11-18",
               "registered": 3,
               "fixed": 3
             }
@@ -48970,6 +49330,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-17",
               "registered": 8,
               "fixed": 8
+            },
+            {
+              "date": "2026-11-18",
+              "registered": 8,
+              "fixed": 8
             }
           ]
         },
@@ -49972,18 +50337,23 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-17",
               "registered": 13,
               "fixed": 10
+            },
+            {
+              "date": "2026-11-18",
+              "registered": 13,
+              "fixed": 10
             }
           ]
         }
       ],
-      "defaultProjectVersion": "[Hanpass][카드개편][BO]",
+      "defaultProjectVersion": "[Hanpass][산타이벤트]",
       "selectedVersion": "ALL",
       "distributions": {
         "ALL": {
           "status": [
             {
               "label": "등록",
-              "count": 224
+              "count": 219
             },
             {
               "label": "진행중",
@@ -49991,11 +50361,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "label": "QA확인",
-              "count": 289
+              "count": 305
             },
             {
               "label": "종료",
-              "count": 1669
+              "count": 1661
             }
           ],
           "severity": [
@@ -50013,11 +50383,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "label": "Minor",
-              "count": 1116
+              "count": 1118
             },
             {
               "label": "미지정",
-              "count": 74
+              "count": 75
             },
             {
               "label": "개선 의견",
@@ -50031,7 +50401,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "label": "Medium",
-              "count": 2153
+              "count": 2156
             },
             {
               "label": "Low",
@@ -50050,18 +50420,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
       },
       "heatmap": [
         {
-          "date": "2026-10-19",
-          "new": 10,
-          "fixed": 18,
-          "closed": 8,
-          "deltaNew": 10
-        },
-        {
           "date": "2026-10-20",
           "new": 6,
           "fixed": 313,
           "closed": 313,
-          "deltaNew": -4
+          "deltaNew": 6
         },
         {
           "date": "2026-10-21",
@@ -50171,15 +50534,15 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
         {
           "date": "2026-11-05",
           "new": 14,
-          "fixed": 1,
-          "closed": 1,
+          "fixed": 0,
+          "closed": 0,
           "deltaNew": 5
         },
         {
           "date": "2026-11-06",
           "new": 15,
-          "fixed": 22,
-          "closed": 22,
+          "fixed": 7,
+          "closed": 7,
           "deltaNew": 1
         },
         {
@@ -50213,8 +50576,8 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
         {
           "date": "2026-11-11",
           "new": 20,
-          "fixed": 12,
-          "closed": 12,
+          "fixed": 9,
+          "closed": 9,
           "deltaNew": -12
         },
         {
@@ -50258,6 +50621,13 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "fixed": 20,
           "closed": 20,
           "deltaNew": -13
+        },
+        {
+          "date": "2026-11-18",
+          "new": 3,
+          "fixed": 27,
+          "closed": 11,
+          "deltaNew": -14
         }
       ],
       "reportBoard": {
@@ -50301,10 +50671,76 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
       },
       "recent": [
         {
-          "id": "41b73fbd-1951-80ac-90fb-e2059199cc07",
-          "title": "[승인망 통제 관리][BO] 상단 초기화 후 재검색 시 수동 설정 입력값이 초기화되지 않는 현상",
+          "id": "41c73fbd-1951-80b4-9a99-c9b6e4f505d3",
+          "title": "제목 없음",
           "status": "등록 (Registered)",
           "stage": "등록",
+          "severity": "미지정",
+          "defectType": "미지정",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[Hanpass][산타이벤트]",
+          "versionRaw": "[Hanpass][산타이벤트]",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-11-18T02:51:00.000Z",
+          "createdDate": "2026-11-18",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/41c73fbd195180b49a99c9b6e4f505d3",
+          "lastEditedAt": "2026-11-18T02:51:00.000Z"
+        },
+        {
+          "id": "41c73fbd-1951-80e7-b69f-e9e2fadd88d2",
+          "title": "[산타][이용방법][공통] Bottom Sheet 진입 시 닫기(X) 버튼에 포커스가 적용된 상태로 노출되는 현상",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Minor",
+          "defectType": "UX/UI",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[Hanpass][산타이벤트]",
+          "versionRaw": "[Hanpass][산타이벤트]",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-11-18T02:37:00.000Z",
+          "createdDate": "2026-11-18",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/Bottom-Sheet-X-41c73fbd195180e7b69fe9e2fadd88d2",
+          "lastEditedAt": "2026-11-18T02:51:00.000Z"
+        },
+        {
+          "id": "41c73fbd-1951-808c-99c4-db61c8ac946f",
+          "title": "[산타][마이페이지][공통] 무기명 회원의 산타 메뉴 진입 시 노출되는 화면에 대한 기획 정의 누락",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Minor",
+          "defectType": "기획서 수정 요청",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[Hanpass][산타이벤트]",
+          "versionRaw": "[Hanpass][산타이벤트]",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-11-18T02:07:00.000Z",
+          "createdDate": "2026-11-18",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/41c73fbd1951808c99c4db61c8ac946f",
+          "lastEditedAt": "2026-11-18T02:25:00.000Z"
+        },
+        {
+          "id": "41b73fbd-1951-80ac-90fb-e2059199cc07",
+          "title": "[승인망 통제 관리][BO] 상단 초기화 후 재검색 시 수동 설정 입력값이 초기화되지 않는 현상",
+          "status": "개발 완료 (Dev Done)",
+          "stage": "종료",
           "severity": "Major",
           "defectType": "기능",
           "priority": "Medium",
@@ -50315,18 +50751,18 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "os": "미지정",
           "createdAt": "2026-11-17T09:32:00.000Z",
           "createdDate": "2026-11-17",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
+          "fixedAt": "2026-11-18T01:10:00.000Z",
+          "fixedDate": "2026-11-18",
+          "closedAt": "2026-11-18T01:10:00.000Z",
+          "closedDate": "2026-11-18",
           "url": "https://app.notion.com/p/BO-41b73fbd195180ac90fbe2059199cc07",
-          "lastEditedAt": "2026-11-17T09:47:00.000Z"
+          "lastEditedAt": "2026-11-18T01:10:00.000Z"
         },
         {
           "id": "41b73fbd-1951-80ee-bc41-de5a27330012",
           "title": "\n[승인망 통제 관리][BO] 수동 설정 시 사유 200Byte 초과 입력 후 저장되지 않는 현상",
-          "status": "등록 (Registered)",
-          "stage": "등록",
+          "status": "개발 완료 (Dev Done)",
+          "stage": "종료",
           "severity": "Major",
           "defectType": "기능",
           "priority": "Medium",
@@ -50337,18 +50773,18 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "os": "미지정",
           "createdAt": "2026-11-17T09:16:00.000Z",
           "createdDate": "2026-11-17",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
+          "fixedAt": "2026-11-18T01:11:00.000Z",
+          "fixedDate": "2026-11-18",
+          "closedAt": "2026-11-18T01:11:00.000Z",
+          "closedDate": "2026-11-18",
           "url": "https://app.notion.com/p/BO-200Byte-41b73fbd195180eebc41de5a27330012",
-          "lastEditedAt": "2026-11-17T09:47:00.000Z"
+          "lastEditedAt": "2026-11-18T01:11:00.000Z"
         },
         {
           "id": "41b73fbd-1951-807b-a8fd-ef36eb682704",
           "title": "[승인망 통제 관리][BO] 적용일 시작일·종료일 입력 필드의 Placeholder가 잘려 노출되는 현상",
-          "status": "등록 (Registered)",
-          "stage": "등록",
+          "status": "개발 완료 (Dev Done)",
+          "stage": "종료",
           "severity": "Minor",
           "defectType": "UX/UI",
           "priority": "Medium",
@@ -50359,18 +50795,18 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "os": "미지정",
           "createdAt": "2026-11-17T09:02:00.000Z",
           "createdDate": "2026-11-17",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
+          "fixedAt": "2026-11-18T01:11:00.000Z",
+          "fixedDate": "2026-11-18",
+          "closedAt": "2026-11-18T01:11:00.000Z",
+          "closedDate": "2026-11-18",
           "url": "https://app.notion.com/p/BO-Placeholder-41b73fbd1951807ba8fdef36eb682704",
-          "lastEditedAt": "2026-11-17T09:47:00.000Z"
+          "lastEditedAt": "2026-11-18T01:11:00.000Z"
         },
         {
           "id": "41b73fbd-1951-80f1-a961-e7cf1ba4d754",
           "title": "[배치관리][BO] 배치정보 등록 시 필수 항목인 작업일시를 미입력해도 정상 저장되는 현상",
-          "status": "등록 (Registered)",
-          "stage": "등록",
+          "status": "개발 완료 (Dev Done)",
+          "stage": "종료",
           "severity": "Major",
           "defectType": "기능",
           "priority": "Medium",
@@ -50381,18 +50817,18 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "os": "미지정",
           "createdAt": "2026-11-17T08:02:00.000Z",
           "createdDate": "2026-11-17",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
+          "fixedAt": "2026-11-18T01:10:00.000Z",
+          "fixedDate": "2026-11-18",
+          "closedAt": "2026-11-18T01:10:00.000Z",
+          "closedDate": "2026-11-18",
           "url": "https://app.notion.com/p/BO-41b73fbd195180f1a961e7cf1ba4d754",
-          "lastEditedAt": "2026-11-17T09:47:00.000Z"
+          "lastEditedAt": "2026-11-18T01:10:00.000Z"
         },
         {
           "id": "41b73fbd-1951-8031-a8e5-e4832a9b58b3",
           "title": "[배치관리][BO] 배치정보 등록 팝업의 '취소' 및 '저장' 버튼이 기획서와 달리 중앙 정렬되는 현상",
-          "status": "등록 (Registered)",
-          "stage": "등록",
+          "status": "개발 완료 (Dev Done)",
+          "stage": "종료",
           "severity": "Minor",
           "defectType": "UX/UI",
           "priority": "Medium",
@@ -50403,18 +50839,18 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "os": "미지정",
           "createdAt": "2026-11-17T07:58:00.000Z",
           "createdDate": "2026-11-17",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
+          "fixedAt": "2026-11-18T01:10:00.000Z",
+          "fixedDate": "2026-11-18",
+          "closedAt": "2026-11-18T01:10:00.000Z",
+          "closedDate": "2026-11-18",
           "url": "https://app.notion.com/p/BO-41b73fbd19518031a8e5e4832a9b58b3",
-          "lastEditedAt": "2026-11-17T09:47:00.000Z"
+          "lastEditedAt": "2026-11-18T01:10:00.000Z"
         },
         {
           "id": "41b73fbd-1951-8025-b3e5-c81dcd654e98",
           "title": "[배치관리][BO] 배치정보 등록 화면의 작업일시 입력 필드 내 * 표시가 중앙 정렬되지 않는 현상",
-          "status": "등록 (Registered)",
-          "stage": "등록",
+          "status": "개발 완료 (Dev Done)",
+          "stage": "종료",
           "severity": "Minor",
           "defectType": "UX/UI",
           "priority": "Medium",
@@ -50425,18 +50861,18 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "os": "미지정",
           "createdAt": "2026-11-17T07:56:00.000Z",
           "createdDate": "2026-11-17",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
+          "fixedAt": "2026-11-18T01:11:00.000Z",
+          "fixedDate": "2026-11-18",
+          "closedAt": "2026-11-18T01:11:00.000Z",
+          "closedDate": "2026-11-18",
           "url": "https://app.notion.com/p/BO-41b73fbd19518025b3e5c81dcd654e98",
-          "lastEditedAt": "2026-11-17T09:47:00.000Z"
+          "lastEditedAt": "2026-11-18T01:11:00.000Z"
         },
         {
           "id": "41b73fbd-1951-8035-889d-d34ff5e22f28",
           "title": "[배치관리][BO] 배치정보 등록 시 작업일시 필수 입력 Validation 문구가 노출되지 않는 현상",
-          "status": "등록 (Registered)",
-          "stage": "등록",
+          "status": "개발 완료 (Dev Done)",
+          "stage": "종료",
           "severity": "Major",
           "defectType": "기획-구현 불일치",
           "priority": "Medium",
@@ -50447,84 +50883,18 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "os": "미지정",
           "createdAt": "2026-11-17T07:55:00.000Z",
           "createdDate": "2026-11-17",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
+          "fixedAt": "2026-11-18T01:11:00.000Z",
+          "fixedDate": "2026-11-18",
+          "closedAt": "2026-11-18T01:11:00.000Z",
+          "closedDate": "2026-11-18",
           "url": "https://app.notion.com/p/BO-Validation-41b73fbd19518035889dd34ff5e22f28",
-          "lastEditedAt": "2026-11-17T09:46:00.000Z"
-        },
-        {
-          "id": "41b73fbd-1951-8091-8376-d63f0b208fe2",
-          "title": "[배치 관리][BO] 배치 수동 실행 시 처리 기준일자에 미래일자를 선택할 수 없도록 제한 요청",
-          "status": "개발 완료 (Dev Done)",
-          "stage": "종료",
-          "severity": "Minor",
-          "defectType": "기능",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[Hanpass][카드개편][BO]",
-          "versionRaw": "[Hanpass][카드개편][BO]",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-11-17T07:44:00.000Z",
-          "createdDate": "2026-11-17",
-          "fixedAt": "2026-11-17T08:34:00.000Z",
-          "fixedDate": "2026-11-17",
-          "closedAt": "2026-11-17T08:34:00.000Z",
-          "closedDate": "2026-11-17",
-          "url": "https://app.notion.com/p/BO-41b73fbd195180918376d63f0b208fe2",
-          "lastEditedAt": "2026-11-17T08:34:00.000Z"
-        },
-        {
-          "id": "41b73fbd-1951-80b6-b3f2-e078c546a353",
-          "title": "[영업일 관리][BO] 엑셀 다운로드 양식에 데이터 입력 후 업로드 시 오류 알럿이 발생하며 영업일 정보 등록이 불가능한 현상",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Critical",
-          "defectType": "기능",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[Hanpass][카드개편][BO]",
-          "versionRaw": "[Hanpass][카드개편][BO]",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-11-17T07:41:00.000Z",
-          "createdDate": "2026-11-17",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/BO-41b73fbd195180b6b3f2e078c546a353",
-          "lastEditedAt": "2026-11-17T07:49:00.000Z"
-        },
-        {
-          "id": "41b73fbd-1951-8034-96e7-d5827921ec38",
-          "title": "[영업일 관리][BO] 영업일 등록/수정 화면의 요일 Select Box 항목이 기획서와 상이하게 노출되는 현상",
-          "status": "개발 완료 (Dev Done)",
-          "stage": "종료",
-          "severity": "Minor",
-          "defectType": "기획-구현 불일치",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[Hanpass][카드개편][BO]",
-          "versionRaw": "[Hanpass][카드개편][BO]",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-11-17T04:34:00.000Z",
-          "createdDate": "2026-11-17",
-          "fixedAt": "2026-11-17T07:49:00.000Z",
-          "fixedDate": "2026-11-17",
-          "closedAt": "2026-11-17T07:49:00.000Z",
-          "closedDate": "2026-11-17",
-          "url": "https://app.notion.com/p/BO-Select-Box-41b73fbd1951803496e7d5827921ec38",
-          "lastEditedAt": "2026-11-17T07:49:00.000Z"
+          "lastEditedAt": "2026-11-18T01:11:00.000Z"
         }
       ],
       "quality": {
         "unresolvedCritical": 24,
         "unresolvedMajor": 274,
-        "awaitingVerification": 141,
+        "awaitingVerification": 133,
         "highCount": 298,
         "high": [
           {
@@ -50728,7 +51098,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           {
             "title": "[영업일 관리][BO] 엑셀 다운로드 양식에 데이터 입력 후 업로드 시 오류 알럿이 발생하며 영업일 정보 등록이 불가능한 현상",
             "url": "https://app.notion.com/p/BO-41b73fbd195180b6b3f2e078c546a353",
-            "status": "등록 (Registered)",
+            "status": "개발 완료 (Dev Done)",
             "severity": "Critical",
             "version": "[Hanpass][카드개편][BO]",
             "domain": "한패스",
@@ -51440,21 +51810,21 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
     },
     "한패스": {
       "summary": {
-        "total": 1754,
-        "new": 157,
+        "total": 1757,
+        "new": 152,
         "inProgress": 18,
         "fixed": 0,
-        "closed": 1401,
-        "todayNew": 17,
-        "newDelta": -13,
+        "closed": 1393,
+        "todayNew": 3,
+        "newDelta": -14,
         "critical": 98,
-        "todayClosed": 20
+        "todayClosed": 11
       },
       "funnel": [
         {
           "stage": "등록",
-          "count": 157,
-          "rate": 9.0,
+          "count": 152,
+          "rate": 8.7,
           "width": 11
         },
         {
@@ -51483,31 +51853,24 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
         },
         {
           "stage": "QA확인",
-          "count": 178,
-          "rate": 10.1,
-          "width": 13
+          "count": 194,
+          "rate": 11.0,
+          "width": 14
         },
         {
           "stage": "종료",
-          "count": 1401,
-          "rate": 79.9,
+          "count": 1393,
+          "rate": 79.3,
           "width": 100
         }
       ],
       "daily": [
         {
-          "date": "2026-10-19",
-          "new": 10,
-          "fixed": 18,
-          "closed": 8,
-          "deltaNew": 10
-        },
-        {
           "date": "2026-10-20",
           "new": 6,
           "fixed": 313,
           "closed": 313,
-          "deltaNew": -4
+          "deltaNew": 6
         },
         {
           "date": "2026-10-21",
@@ -51617,15 +51980,15 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
         {
           "date": "2026-11-05",
           "new": 14,
-          "fixed": 1,
-          "closed": 1,
+          "fixed": 0,
+          "closed": 0,
           "deltaNew": 5
         },
         {
           "date": "2026-11-06",
           "new": 15,
-          "fixed": 22,
-          "closed": 22,
+          "fixed": 7,
+          "closed": 7,
           "deltaNew": 1
         },
         {
@@ -51659,8 +52022,8 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
         {
           "date": "2026-11-11",
           "new": 20,
-          "fixed": 12,
-          "closed": 12,
+          "fixed": 9,
+          "closed": 9,
           "deltaNew": -12
         },
         {
@@ -51704,6 +52067,13 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "fixed": 20,
           "closed": 20,
           "deltaNew": -13
+        },
+        {
+          "date": "2026-11-18",
+          "new": 3,
+          "fixed": 27,
+          "closed": 11,
+          "deltaNew": -14
         }
       ],
       "versions": [
@@ -52536,6 +52906,34 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           ]
         },
         {
+          "version": "[Hanpass][산타이벤트]",
+          "total": 3,
+          "criticalMajor": 0,
+          "doneRate": 0.0,
+          "status": [
+            {
+              "label": "등록",
+              "count": 3
+            }
+          ],
+          "severity": [
+            {
+              "label": "Minor",
+              "count": 2
+            },
+            {
+              "label": "미지정",
+              "count": 1
+            }
+          ],
+          "priority": [
+            {
+              "label": "Medium",
+              "count": 3
+            }
+          ]
+        },
+        {
           "version": "[Hanpass][앱개편]-백로그",
           "total": 26,
           "criticalMajor": 7,
@@ -52751,19 +53149,23 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "version": "[Hanpass][카드개편][BO]",
           "total": 122,
           "criticalMajor": 67,
-          "doneRate": 86.9,
+          "doneRate": 93.4,
           "status": [
             {
               "label": "등록",
-              "count": 10
+              "count": 2
             },
             {
               "label": "진행중",
               "count": 6
             },
             {
+              "label": "QA확인",
+              "count": 16
+            },
+            {
               "label": "종료",
-              "count": 106
+              "count": 98
             }
           ],
           "severity": [
@@ -53121,6 +53523,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "5.13.0 (완료)",
           "5.12.0 (완료)",
           "[Hanpass][EMVQR] (완료)",
+          "[Hanpass][산타이벤트]",
           "[Hanpass][앱개편]-백로그",
           "[Hanpass][앱개편][BO] (완료)",
           "[Hanpass][앱개편][Native]-Dev (완료)",
@@ -53242,6 +53645,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-17",
+              "registered": 4,
+              "fixed": 4
+            },
+            {
+              "date": "2026-11-18",
               "registered": 4,
               "fixed": 4
             }
@@ -53655,6 +54063,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-17",
               "registered": 7,
               "fixed": 6
+            },
+            {
+              "date": "2026-11-18",
+              "registered": 7,
+              "fixed": 6
             }
           ]
         },
@@ -53932,6 +54345,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-17",
+              "registered": 26,
+              "fixed": 23
+            },
+            {
+              "date": "2026-11-18",
               "registered": 26,
               "fixed": 23
             }
@@ -54501,6 +54919,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-17",
+              "registered": 29,
+              "fixed": 1
+            },
+            {
+              "date": "2026-11-18",
               "registered": 29,
               "fixed": 1
             }
@@ -55172,6 +55595,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-17",
               "registered": 11,
               "fixed": 1
+            },
+            {
+              "date": "2026-11-18",
+              "registered": 11,
+              "fixed": 1
             }
           ]
         },
@@ -55687,6 +56115,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-17",
+              "registered": 7,
+              "fixed": 2
+            },
+            {
+              "date": "2026-11-18",
               "registered": 7,
               "fixed": 2
             }
@@ -56418,6 +56851,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-17",
               "registered": 20,
               "fixed": 20
+            },
+            {
+              "date": "2026-11-18",
+              "registered": 20,
+              "fixed": 20
             }
           ]
         },
@@ -56490,7 +56928,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               ]
             },
             {
-              "type": "기획서 수정",
+              "type": "기획서 수정 요청",
               "total": 1,
               "severity": [
                 {
@@ -57093,6 +57531,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-17",
+              "registered": 3,
+              "fixed": 3
+            },
+            {
+              "date": "2026-11-18",
               "registered": 3,
               "fixed": 3
             }
@@ -57970,6 +58413,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-17",
+              "registered": 26,
+              "fixed": 26
+            },
+            {
+              "date": "2026-11-18",
               "registered": 26,
               "fixed": 26
             }
@@ -58953,6 +59401,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-17",
+              "registered": 34,
+              "fixed": 34
+            },
+            {
+              "date": "2026-11-18",
               "registered": 34,
               "fixed": 34
             }
@@ -60041,6 +60494,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-17",
               "registered": 9,
               "fixed": 9
+            },
+            {
+              "date": "2026-11-18",
+              "registered": 9,
+              "fixed": 9
             }
           ]
         },
@@ -60139,7 +60597,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               ]
             },
             {
-              "type": "기획서 수정",
+              "type": "기획서 수정 요청",
               "total": 12,
               "severity": [
                 {
@@ -61238,6 +61696,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-17",
+              "registered": 117,
+              "fixed": 117
+            },
+            {
+              "date": "2026-11-18",
               "registered": 117,
               "fixed": 117
             }
@@ -62507,6 +62970,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-17",
+              "registered": 82,
+              "fixed": 82
+            },
+            {
+              "date": "2026-11-18",
               "registered": 82,
               "fixed": 82
             }
@@ -64073,6 +64541,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-17",
+              "registered": 24,
+              "fixed": 24
+            },
+            {
+              "date": "2026-11-18",
               "registered": 24,
               "fixed": 24
             }
@@ -65817,6 +66290,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-17",
+              "registered": 103,
+              "fixed": 99
+            },
+            {
+              "date": "2026-11-18",
               "registered": 103,
               "fixed": 99
             }
@@ -67652,6 +68130,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-17",
+              "registered": 68,
+              "fixed": 67
+            },
+            {
+              "date": "2026-11-18",
               "registered": 68,
               "fixed": 67
             }
@@ -69503,6 +69986,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-17",
+              "registered": 4,
+              "fixed": 3
+            },
+            {
+              "date": "2026-11-18",
               "registered": 4,
               "fixed": 3
             }
@@ -71545,6 +72033,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-17",
               "registered": 35,
               "fixed": 34
+            },
+            {
+              "date": "2026-11-18",
+              "registered": 35,
+              "fixed": 34
             }
           ]
         },
@@ -73545,6 +74038,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-17",
+              "registered": 4,
+              "fixed": 4
+            },
+            {
+              "date": "2026-11-18",
               "registered": 4,
               "fixed": 4
             }
@@ -75827,6 +76325,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-17",
+              "registered": 3,
+              "fixed": 3
+            },
+            {
+              "date": "2026-11-18",
               "registered": 3,
               "fixed": 3
             }
@@ -78251,6 +78754,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-17",
               "registered": 27,
               "fixed": 23
+            },
+            {
+              "date": "2026-11-18",
+              "registered": 27,
+              "fixed": 23
             }
           ]
         },
@@ -78308,7 +78816,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "done": 32,
               "total": 33,
               "rate": 97.0,
-              "previousRate": 90.9
+              "previousRate": 97.0
             }
           ],
           "typeRows": [
@@ -80848,6 +81356,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-17",
               "registered": 33,
               "fixed": 32
+            },
+            {
+              "date": "2026-11-18",
+              "registered": 33,
+              "fixed": 32
             }
           ]
         },
@@ -80948,7 +81461,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               ]
             },
             {
-              "type": "기획서 수정",
+              "type": "기획서 수정 요청",
               "total": 1,
               "severity": [
                 {
@@ -81153,6 +81666,108 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-17",
               "registered": 20,
               "fixed": 19
+            },
+            {
+              "date": "2026-11-18",
+              "registered": 20,
+              "fixed": 19
+            }
+          ]
+        },
+        {
+          "version": "[Hanpass][산타이벤트]",
+          "total": 3,
+          "open": 3,
+          "devDone": 0,
+          "qaRegression": 0,
+          "backlogTransfer": 0,
+          "done": 0,
+          "scopeTotal": 3,
+          "doneRate": 0.0,
+          "latestSnapshot": "2026-11-18",
+          "severityRows": [
+            {
+              "severity": "Critical",
+              "open": 0,
+              "devDone": 0,
+              "qaRegression": 0,
+              "backlogTransfer": 0,
+              "done": 0,
+              "total": 0,
+              "rate": 0,
+              "previousRate": 0
+            },
+            {
+              "severity": "Major",
+              "open": 0,
+              "devDone": 0,
+              "qaRegression": 0,
+              "backlogTransfer": 0,
+              "done": 0,
+              "total": 0,
+              "rate": 0,
+              "previousRate": 0
+            },
+            {
+              "severity": "Minor",
+              "open": 2,
+              "devDone": 0,
+              "qaRegression": 0,
+              "backlogTransfer": 0,
+              "done": 0,
+              "total": 2,
+              "rate": 0.0,
+              "previousRate": 0
+            },
+            {
+              "severity": "합계",
+              "open": 3,
+              "devDone": 0,
+              "qaRegression": 0,
+              "backlogTransfer": 0,
+              "done": 0,
+              "total": 3,
+              "rate": 0.0,
+              "previousRate": 0
+            }
+          ],
+          "typeRows": [
+            {
+              "type": "UX/UI",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "type": "기획서 수정 요청",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Minor",
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "type": "미지정",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "미지정",
+                  "count": 1
+                }
+              ]
+            }
+          ],
+          "daily": [
+            {
+              "date": "2026-11-18",
+              "registered": 3,
+              "fixed": 0
             }
           ]
         },
@@ -81729,6 +82344,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-17",
+              "registered": 26,
+              "fixed": 7
+            },
+            {
+              "date": "2026-11-18",
               "registered": 26,
               "fixed": 7
             }
@@ -82325,6 +82945,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-17",
               "registered": 48,
               "fixed": 48
+            },
+            {
+              "date": "2026-11-18",
+              "registered": 48,
+              "fixed": 48
             }
           ]
         },
@@ -82447,7 +83072,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               ]
             },
             {
-              "type": "기획서 수정",
+              "type": "기획서 수정 요청",
               "total": 11,
               "severity": [
                 {
@@ -82965,6 +83590,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-17",
               "registered": 313,
               "fixed": 313
+            },
+            {
+              "date": "2026-11-18",
+              "registered": 313,
+              "fixed": 313
             }
           ]
         },
@@ -83087,7 +83717,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               ]
             },
             {
-              "type": "기획서 수정",
+              "type": "기획서 수정 요청",
               "total": 7,
               "severity": [
                 {
@@ -83574,6 +84204,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-17",
               "registered": 165,
               "fixed": 164
+            },
+            {
+              "date": "2026-11-18",
+              "registered": 165,
+              "fixed": 164
             }
           ]
         },
@@ -83826,6 +84461,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-17",
               "registered": 15,
               "fixed": 0
+            },
+            {
+              "date": "2026-11-18",
+              "registered": 15,
+              "fixed": 0
             }
           ]
         },
@@ -83920,7 +84560,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               ]
             },
             {
-              "type": "기획서 수정",
+              "type": "기획서 수정 요청",
               "total": 1,
               "severity": [
                 {
@@ -84175,64 +84815,69 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-17",
               "registered": 36,
               "fixed": 34
+            },
+            {
+              "date": "2026-11-18",
+              "registered": 36,
+              "fixed": 34
             }
           ]
         },
         {
           "version": "[Hanpass][카드개편][BO]",
           "total": 122,
-          "open": 16,
-          "devDone": 103,
-          "qaRegression": 0,
+          "open": 8,
+          "devDone": 95,
+          "qaRegression": 16,
           "backlogTransfer": 0,
           "done": 3,
           "scopeTotal": 122,
-          "doneRate": 86.9,
-          "latestSnapshot": "2026-11-17",
+          "doneRate": 93.4,
+          "latestSnapshot": "2026-11-18",
           "severityRows": [
             {
               "severity": "Critical",
-              "open": 1,
-              "devDone": 4,
+              "open": 0,
+              "devDone": 5,
               "qaRegression": 0,
               "backlogTransfer": 0,
               "done": 1,
               "total": 6,
-              "rate": 83.3,
-              "previousRate": 75.0
+              "rate": 100.0,
+              "previousRate": 83.3
             },
             {
               "severity": "Major",
-              "open": 11,
-              "devDone": 50,
-              "qaRegression": 0,
+              "open": 7,
+              "devDone": 52,
+              "qaRegression": 2,
               "backlogTransfer": 0,
               "done": 0,
               "total": 61,
-              "rate": 82.0,
-              "previousRate": 77.8
+              "rate": 88.5,
+              "previousRate": 77.0
             },
             {
               "severity": "Minor",
-              "open": 4,
-              "devDone": 49,
-              "qaRegression": 0,
+              "open": 1,
+              "devDone": 38,
+              "qaRegression": 14,
               "backlogTransfer": 0,
               "done": 2,
               "total": 55,
-              "rate": 92.7,
-              "previousRate": 93.6
+              "rate": 98.2,
+              "previousRate": 63.6
             },
             {
               "severity": "합계",
-              "open": 16,
-              "devDone": 103,
-              "qaRegression": 0,
+              "open": 8,
+              "devDone": 95,
+              "qaRegression": 16,
               "backlogTransfer": 0,
               "done": 3,
               "total": 122,
-              "rate": 86.9,
-              "previousRate": 84.8
+              "rate": 93.4,
+              "previousRate": 71.3
             }
           ],
           "typeRows": [
@@ -84307,7 +84952,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               ]
             },
             {
-              "type": "기획서 수정",
+              "type": "기획서 수정 요청",
               "total": 4,
               "severity": [
                 {
@@ -84340,67 +84985,72 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             {
               "date": "2026-11-05",
               "registered": 20,
-              "fixed": 1
+              "fixed": 0
             },
             {
               "date": "2026-11-06",
               "registered": 34,
-              "fixed": 23
+              "fixed": 7
             },
             {
               "date": "2026-11-07",
               "registered": 34,
-              "fixed": 23
+              "fixed": 7
             },
             {
               "date": "2026-11-08",
               "registered": 34,
-              "fixed": 23
+              "fixed": 7
             },
             {
               "date": "2026-11-09",
               "registered": 49,
-              "fixed": 37
+              "fixed": 21
             },
             {
               "date": "2026-11-10",
               "registered": 60,
-              "fixed": 43
+              "fixed": 27
             },
             {
               "date": "2026-11-11",
               "registered": 66,
-              "fixed": 55
+              "fixed": 36
             },
             {
               "date": "2026-11-12",
               "registered": 67,
-              "fixed": 58
+              "fixed": 39
             },
             {
               "date": "2026-11-13",
               "registered": 80,
-              "fixed": 71
+              "fixed": 52
             },
             {
               "date": "2026-11-14",
               "registered": 80,
-              "fixed": 71
+              "fixed": 52
             },
             {
               "date": "2026-11-15",
               "registered": 80,
-              "fixed": 71
+              "fixed": 52
             },
             {
               "date": "2026-11-16",
               "registered": 105,
-              "fixed": 89
+              "fixed": 70
             },
             {
               "date": "2026-11-17",
               "registered": 122,
-              "fixed": 106
+              "fixed": 87
+            },
+            {
+              "date": "2026-11-18",
+              "registered": 122,
+              "fixed": 114
             }
           ]
         },
@@ -84561,6 +85211,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-17",
+              "registered": 38,
+              "fixed": 29
+            },
+            {
+              "date": "2026-11-18",
               "registered": 38,
               "fixed": 29
             }
@@ -85142,6 +85797,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-17",
+              "registered": 11,
+              "fixed": 11
+            },
+            {
+              "date": "2026-11-18",
               "registered": 11,
               "fixed": 11
             }
@@ -85905,6 +86565,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-17",
               "registered": 7,
               "fixed": 5
+            },
+            {
+              "date": "2026-11-18",
+              "registered": 7,
+              "fixed": 5
             }
           ]
         },
@@ -85940,7 +86605,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "done": 7,
               "total": 59,
               "rate": 98.3,
-              "previousRate": 96.6
+              "previousRate": 98.3
             },
             {
               "severity": "Minor",
@@ -85962,7 +86627,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "done": 13,
               "total": 121,
               "rate": 99.2,
-              "previousRate": 98.3
+              "previousRate": 99.2
             }
           ],
           "typeRows": [
@@ -86019,7 +86684,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               ]
             },
             {
-              "type": "기획서 수정",
+              "type": "기획서 수정 요청",
               "total": 6,
               "severity": [
                 {
@@ -86587,6 +87252,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-17",
               "registered": 121,
               "fixed": 120
+            },
+            {
+              "date": "2026-11-18",
+              "registered": 121,
+              "fixed": 120
             }
           ]
         },
@@ -86715,7 +87385,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               ]
             },
             {
-              "type": "기획서 수정",
+              "type": "기획서 수정 요청",
               "total": 5,
               "severity": [
                 {
@@ -87137,6 +87807,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-17",
+              "registered": 131,
+              "fixed": 130
+            },
+            {
+              "date": "2026-11-18",
               "registered": 131,
               "fixed": 130
             }
@@ -87599,6 +88274,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-17",
+              "registered": 1,
+              "fixed": 1
+            },
+            {
+              "date": "2026-11-18",
               "registered": 1,
               "fixed": 1
             }
@@ -89581,6 +90261,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-17",
+              "registered": 3,
+              "fixed": 3
+            },
+            {
+              "date": "2026-11-18",
               "registered": 3,
               "fixed": 3
             }
@@ -92180,6 +92865,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-17",
               "registered": 8,
               "fixed": 8
+            },
+            {
+              "date": "2026-11-18",
+              "registered": 8,
+              "fixed": 8
             }
           ]
         },
@@ -93182,18 +93872,23 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-17",
               "registered": 13,
               "fixed": 10
+            },
+            {
+              "date": "2026-11-18",
+              "registered": 13,
+              "fixed": 10
             }
           ]
         }
       ],
-      "defaultProjectVersion": "[Hanpass][카드개편][BO]",
+      "defaultProjectVersion": "[Hanpass][산타이벤트]",
       "selectedVersion": "ALL",
       "distributions": {
         "ALL": {
           "status": [
             {
               "label": "등록",
-              "count": 157
+              "count": 152
             },
             {
               "label": "진행중",
@@ -93201,11 +93896,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "label": "QA확인",
-              "count": 178
+              "count": 194
             },
             {
               "label": "종료",
-              "count": 1401
+              "count": 1393
             }
           ],
           "severity": [
@@ -93223,11 +93918,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "label": "Minor",
-              "count": 936
+              "count": 938
             },
             {
               "label": "미지정",
-              "count": 74
+              "count": 75
             },
             {
               "label": "개선 의견",
@@ -93241,7 +93936,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "label": "Medium",
-              "count": 1708
+              "count": 1711
             },
             {
               "label": "Low",
@@ -93260,18 +93955,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
       },
       "heatmap": [
         {
-          "date": "2026-10-19",
-          "new": 10,
-          "fixed": 18,
-          "closed": 8,
-          "deltaNew": 10
-        },
-        {
           "date": "2026-10-20",
           "new": 6,
           "fixed": 313,
           "closed": 313,
-          "deltaNew": -4
+          "deltaNew": 6
         },
         {
           "date": "2026-10-21",
@@ -93381,15 +94069,15 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
         {
           "date": "2026-11-05",
           "new": 14,
-          "fixed": 1,
-          "closed": 1,
+          "fixed": 0,
+          "closed": 0,
           "deltaNew": 5
         },
         {
           "date": "2026-11-06",
           "new": 15,
-          "fixed": 22,
-          "closed": 22,
+          "fixed": 7,
+          "closed": 7,
           "deltaNew": 1
         },
         {
@@ -93423,8 +94111,8 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
         {
           "date": "2026-11-11",
           "new": 20,
-          "fixed": 12,
-          "closed": 12,
+          "fixed": 9,
+          "closed": 9,
           "deltaNew": -12
         },
         {
@@ -93468,6 +94156,13 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "fixed": 20,
           "closed": 20,
           "deltaNew": -13
+        },
+        {
+          "date": "2026-11-18",
+          "new": 3,
+          "fixed": 27,
+          "closed": 11,
+          "deltaNew": -14
         }
       ],
       "reportBoard": {
@@ -93511,10 +94206,76 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
       },
       "recent": [
         {
-          "id": "41b73fbd-1951-80ac-90fb-e2059199cc07",
-          "title": "[승인망 통제 관리][BO] 상단 초기화 후 재검색 시 수동 설정 입력값이 초기화되지 않는 현상",
+          "id": "41c73fbd-1951-80b4-9a99-c9b6e4f505d3",
+          "title": "제목 없음",
           "status": "등록 (Registered)",
           "stage": "등록",
+          "severity": "미지정",
+          "defectType": "미지정",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[Hanpass][산타이벤트]",
+          "versionRaw": "[Hanpass][산타이벤트]",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-11-18T02:51:00.000Z",
+          "createdDate": "2026-11-18",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/41c73fbd195180b49a99c9b6e4f505d3",
+          "lastEditedAt": "2026-11-18T02:51:00.000Z"
+        },
+        {
+          "id": "41c73fbd-1951-80e7-b69f-e9e2fadd88d2",
+          "title": "[산타][이용방법][공통] Bottom Sheet 진입 시 닫기(X) 버튼에 포커스가 적용된 상태로 노출되는 현상",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Minor",
+          "defectType": "UX/UI",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[Hanpass][산타이벤트]",
+          "versionRaw": "[Hanpass][산타이벤트]",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-11-18T02:37:00.000Z",
+          "createdDate": "2026-11-18",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/Bottom-Sheet-X-41c73fbd195180e7b69fe9e2fadd88d2",
+          "lastEditedAt": "2026-11-18T02:51:00.000Z"
+        },
+        {
+          "id": "41c73fbd-1951-808c-99c4-db61c8ac946f",
+          "title": "[산타][마이페이지][공통] 무기명 회원의 산타 메뉴 진입 시 노출되는 화면에 대한 기획 정의 누락",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Minor",
+          "defectType": "기획서 수정 요청",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "[Hanpass][산타이벤트]",
+          "versionRaw": "[Hanpass][산타이벤트]",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-11-18T02:07:00.000Z",
+          "createdDate": "2026-11-18",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/41c73fbd1951808c99c4db61c8ac946f",
+          "lastEditedAt": "2026-11-18T02:25:00.000Z"
+        },
+        {
+          "id": "41b73fbd-1951-80ac-90fb-e2059199cc07",
+          "title": "[승인망 통제 관리][BO] 상단 초기화 후 재검색 시 수동 설정 입력값이 초기화되지 않는 현상",
+          "status": "개발 완료 (Dev Done)",
+          "stage": "종료",
           "severity": "Major",
           "defectType": "기능",
           "priority": "Medium",
@@ -93525,18 +94286,18 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "os": "미지정",
           "createdAt": "2026-11-17T09:32:00.000Z",
           "createdDate": "2026-11-17",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
+          "fixedAt": "2026-11-18T01:10:00.000Z",
+          "fixedDate": "2026-11-18",
+          "closedAt": "2026-11-18T01:10:00.000Z",
+          "closedDate": "2026-11-18",
           "url": "https://app.notion.com/p/BO-41b73fbd195180ac90fbe2059199cc07",
-          "lastEditedAt": "2026-11-17T09:47:00.000Z"
+          "lastEditedAt": "2026-11-18T01:10:00.000Z"
         },
         {
           "id": "41b73fbd-1951-80ee-bc41-de5a27330012",
           "title": "\n[승인망 통제 관리][BO] 수동 설정 시 사유 200Byte 초과 입력 후 저장되지 않는 현상",
-          "status": "등록 (Registered)",
-          "stage": "등록",
+          "status": "개발 완료 (Dev Done)",
+          "stage": "종료",
           "severity": "Major",
           "defectType": "기능",
           "priority": "Medium",
@@ -93547,18 +94308,18 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "os": "미지정",
           "createdAt": "2026-11-17T09:16:00.000Z",
           "createdDate": "2026-11-17",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
+          "fixedAt": "2026-11-18T01:11:00.000Z",
+          "fixedDate": "2026-11-18",
+          "closedAt": "2026-11-18T01:11:00.000Z",
+          "closedDate": "2026-11-18",
           "url": "https://app.notion.com/p/BO-200Byte-41b73fbd195180eebc41de5a27330012",
-          "lastEditedAt": "2026-11-17T09:47:00.000Z"
+          "lastEditedAt": "2026-11-18T01:11:00.000Z"
         },
         {
           "id": "41b73fbd-1951-807b-a8fd-ef36eb682704",
           "title": "[승인망 통제 관리][BO] 적용일 시작일·종료일 입력 필드의 Placeholder가 잘려 노출되는 현상",
-          "status": "등록 (Registered)",
-          "stage": "등록",
+          "status": "개발 완료 (Dev Done)",
+          "stage": "종료",
           "severity": "Minor",
           "defectType": "UX/UI",
           "priority": "Medium",
@@ -93569,18 +94330,18 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "os": "미지정",
           "createdAt": "2026-11-17T09:02:00.000Z",
           "createdDate": "2026-11-17",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
+          "fixedAt": "2026-11-18T01:11:00.000Z",
+          "fixedDate": "2026-11-18",
+          "closedAt": "2026-11-18T01:11:00.000Z",
+          "closedDate": "2026-11-18",
           "url": "https://app.notion.com/p/BO-Placeholder-41b73fbd1951807ba8fdef36eb682704",
-          "lastEditedAt": "2026-11-17T09:47:00.000Z"
+          "lastEditedAt": "2026-11-18T01:11:00.000Z"
         },
         {
           "id": "41b73fbd-1951-80f1-a961-e7cf1ba4d754",
           "title": "[배치관리][BO] 배치정보 등록 시 필수 항목인 작업일시를 미입력해도 정상 저장되는 현상",
-          "status": "등록 (Registered)",
-          "stage": "등록",
+          "status": "개발 완료 (Dev Done)",
+          "stage": "종료",
           "severity": "Major",
           "defectType": "기능",
           "priority": "Medium",
@@ -93591,18 +94352,18 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "os": "미지정",
           "createdAt": "2026-11-17T08:02:00.000Z",
           "createdDate": "2026-11-17",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
+          "fixedAt": "2026-11-18T01:10:00.000Z",
+          "fixedDate": "2026-11-18",
+          "closedAt": "2026-11-18T01:10:00.000Z",
+          "closedDate": "2026-11-18",
           "url": "https://app.notion.com/p/BO-41b73fbd195180f1a961e7cf1ba4d754",
-          "lastEditedAt": "2026-11-17T09:47:00.000Z"
+          "lastEditedAt": "2026-11-18T01:10:00.000Z"
         },
         {
           "id": "41b73fbd-1951-8031-a8e5-e4832a9b58b3",
           "title": "[배치관리][BO] 배치정보 등록 팝업의 '취소' 및 '저장' 버튼이 기획서와 달리 중앙 정렬되는 현상",
-          "status": "등록 (Registered)",
-          "stage": "등록",
+          "status": "개발 완료 (Dev Done)",
+          "stage": "종료",
           "severity": "Minor",
           "defectType": "UX/UI",
           "priority": "Medium",
@@ -93613,18 +94374,18 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "os": "미지정",
           "createdAt": "2026-11-17T07:58:00.000Z",
           "createdDate": "2026-11-17",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
+          "fixedAt": "2026-11-18T01:10:00.000Z",
+          "fixedDate": "2026-11-18",
+          "closedAt": "2026-11-18T01:10:00.000Z",
+          "closedDate": "2026-11-18",
           "url": "https://app.notion.com/p/BO-41b73fbd19518031a8e5e4832a9b58b3",
-          "lastEditedAt": "2026-11-17T09:47:00.000Z"
+          "lastEditedAt": "2026-11-18T01:10:00.000Z"
         },
         {
           "id": "41b73fbd-1951-8025-b3e5-c81dcd654e98",
           "title": "[배치관리][BO] 배치정보 등록 화면의 작업일시 입력 필드 내 * 표시가 중앙 정렬되지 않는 현상",
-          "status": "등록 (Registered)",
-          "stage": "등록",
+          "status": "개발 완료 (Dev Done)",
+          "stage": "종료",
           "severity": "Minor",
           "defectType": "UX/UI",
           "priority": "Medium",
@@ -93635,18 +94396,18 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "os": "미지정",
           "createdAt": "2026-11-17T07:56:00.000Z",
           "createdDate": "2026-11-17",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
+          "fixedAt": "2026-11-18T01:11:00.000Z",
+          "fixedDate": "2026-11-18",
+          "closedAt": "2026-11-18T01:11:00.000Z",
+          "closedDate": "2026-11-18",
           "url": "https://app.notion.com/p/BO-41b73fbd19518025b3e5c81dcd654e98",
-          "lastEditedAt": "2026-11-17T09:47:00.000Z"
+          "lastEditedAt": "2026-11-18T01:11:00.000Z"
         },
         {
           "id": "41b73fbd-1951-8035-889d-d34ff5e22f28",
           "title": "[배치관리][BO] 배치정보 등록 시 작업일시 필수 입력 Validation 문구가 노출되지 않는 현상",
-          "status": "등록 (Registered)",
-          "stage": "등록",
+          "status": "개발 완료 (Dev Done)",
+          "stage": "종료",
           "severity": "Major",
           "defectType": "기획-구현 불일치",
           "priority": "Medium",
@@ -93657,84 +94418,18 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "os": "미지정",
           "createdAt": "2026-11-17T07:55:00.000Z",
           "createdDate": "2026-11-17",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
+          "fixedAt": "2026-11-18T01:11:00.000Z",
+          "fixedDate": "2026-11-18",
+          "closedAt": "2026-11-18T01:11:00.000Z",
+          "closedDate": "2026-11-18",
           "url": "https://app.notion.com/p/BO-Validation-41b73fbd19518035889dd34ff5e22f28",
-          "lastEditedAt": "2026-11-17T09:46:00.000Z"
-        },
-        {
-          "id": "41b73fbd-1951-8091-8376-d63f0b208fe2",
-          "title": "[배치 관리][BO] 배치 수동 실행 시 처리 기준일자에 미래일자를 선택할 수 없도록 제한 요청",
-          "status": "개발 완료 (Dev Done)",
-          "stage": "종료",
-          "severity": "Minor",
-          "defectType": "기능",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[Hanpass][카드개편][BO]",
-          "versionRaw": "[Hanpass][카드개편][BO]",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-11-17T07:44:00.000Z",
-          "createdDate": "2026-11-17",
-          "fixedAt": "2026-11-17T08:34:00.000Z",
-          "fixedDate": "2026-11-17",
-          "closedAt": "2026-11-17T08:34:00.000Z",
-          "closedDate": "2026-11-17",
-          "url": "https://app.notion.com/p/BO-41b73fbd195180918376d63f0b208fe2",
-          "lastEditedAt": "2026-11-17T08:34:00.000Z"
-        },
-        {
-          "id": "41b73fbd-1951-80b6-b3f2-e078c546a353",
-          "title": "[영업일 관리][BO] 엑셀 다운로드 양식에 데이터 입력 후 업로드 시 오류 알럿이 발생하며 영업일 정보 등록이 불가능한 현상",
-          "status": "등록 (Registered)",
-          "stage": "등록",
-          "severity": "Critical",
-          "defectType": "기능",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[Hanpass][카드개편][BO]",
-          "versionRaw": "[Hanpass][카드개편][BO]",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-11-17T07:41:00.000Z",
-          "createdDate": "2026-11-17",
-          "fixedAt": "",
-          "fixedDate": "",
-          "closedAt": "",
-          "closedDate": "",
-          "url": "https://app.notion.com/p/BO-41b73fbd195180b6b3f2e078c546a353",
-          "lastEditedAt": "2026-11-17T07:49:00.000Z"
-        },
-        {
-          "id": "41b73fbd-1951-8034-96e7-d5827921ec38",
-          "title": "[영업일 관리][BO] 영업일 등록/수정 화면의 요일 Select Box 항목이 기획서와 상이하게 노출되는 현상",
-          "status": "개발 완료 (Dev Done)",
-          "stage": "종료",
-          "severity": "Minor",
-          "defectType": "기획-구현 불일치",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[Hanpass][카드개편][BO]",
-          "versionRaw": "[Hanpass][카드개편][BO]",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-11-17T04:34:00.000Z",
-          "createdDate": "2026-11-17",
-          "fixedAt": "2026-11-17T07:49:00.000Z",
-          "fixedDate": "2026-11-17",
-          "closedAt": "2026-11-17T07:49:00.000Z",
-          "closedDate": "2026-11-17",
-          "url": "https://app.notion.com/p/BO-Select-Box-41b73fbd1951803496e7d5827921ec38",
-          "lastEditedAt": "2026-11-17T07:49:00.000Z"
+          "lastEditedAt": "2026-11-18T01:11:00.000Z"
         }
       ],
       "quality": {
         "unresolvedCritical": 15,
         "unresolvedMajor": 177,
-        "awaitingVerification": 137,
+        "awaitingVerification": 129,
         "highCount": 192,
         "high": [
           {
@@ -93857,7 +94552,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           {
             "title": "[영업일 관리][BO] 엑셀 다운로드 양식에 데이터 입력 후 업로드 시 오류 알럿이 발생하며 영업일 정보 등록이 불가능한 현상",
             "url": "https://app.notion.com/p/BO-41b73fbd195180b6b3f2e078c546a353",
-            "status": "등록 (Registered)",
+            "status": "개발 완료 (Dev Done)",
             "severity": "Critical",
             "version": "[Hanpass][카드개편][BO]",
             "domain": "한패스",
@@ -94706,13 +95401,6 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
       ],
       "daily": [
         {
-          "date": "2026-10-19",
-          "new": 0,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": 0
-        },
-        {
           "date": "2026-10-20",
           "new": 0,
           "fixed": 0,
@@ -94910,6 +95598,13 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
         },
         {
           "date": "2026-11-17",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-11-18",
           "new": 0,
           "fixed": 0,
           "closed": 0,
@@ -96315,6 +97010,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-17",
               "registered": 20,
               "fixed": 1
+            },
+            {
+              "date": "2026-11-18",
+              "registered": 20,
+              "fixed": 1
             }
           ]
         },
@@ -97161,6 +97861,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-17",
               "registered": 15,
               "fixed": 15
+            },
+            {
+              "date": "2026-11-18",
+              "registered": 15,
+              "fixed": 15
             }
           ]
         },
@@ -97303,7 +98008,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               ]
             },
             {
-              "type": "기획서 수정",
+              "type": "기획서 수정 요청",
               "total": 1,
               "severity": [
                 {
@@ -98268,6 +98973,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-17",
               "registered": 55,
               "fixed": 54
+            },
+            {
+              "date": "2026-11-18",
+              "registered": 55,
+              "fixed": 54
             }
           ]
         },
@@ -98998,6 +99708,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-17",
+              "registered": 5,
+              "fixed": 5
+            },
+            {
+              "date": "2026-11-18",
               "registered": 5,
               "fixed": 5
             }
@@ -100116,6 +100831,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-17",
               "registered": 101,
               "fixed": 101
+            },
+            {
+              "date": "2026-11-18",
+              "registered": 101,
+              "fixed": 101
             }
           ]
         },
@@ -100178,7 +100898,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           ],
           "typeRows": [
             {
-              "type": "기획서 수정",
+              "type": "기획서 수정 요청",
               "total": 28,
               "severity": [
                 {
@@ -100473,6 +101193,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-17",
               "registered": 37,
               "fixed": 30
+            },
+            {
+              "date": "2026-11-18",
+              "registered": 37,
+              "fixed": 30
             }
           ]
         },
@@ -100553,7 +101278,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               ]
             },
             {
-              "type": "기획서 수정",
+              "type": "기획서 수정 요청",
               "total": 42,
               "severity": [
                 {
@@ -100962,6 +101687,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-17",
               "registered": 172,
               "fixed": 166
+            },
+            {
+              "date": "2026-11-18",
+              "registered": 172,
+              "fixed": 166
             }
           ]
         },
@@ -101024,7 +101754,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           ],
           "typeRows": [
             {
-              "type": "기획서 수정",
+              "type": "기획서 수정 요청",
               "total": 18,
               "severity": [
                 {
@@ -101360,6 +102090,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-17",
+              "registered": 34,
+              "fixed": 34
+            },
+            {
+              "date": "2026-11-18",
               "registered": 34,
               "fixed": 34
             }
@@ -102418,6 +103153,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-17",
               "registered": 7,
               "fixed": 7
+            },
+            {
+              "date": "2026-11-18",
+              "registered": 7,
+              "fixed": 7
             }
           ]
         }
@@ -102467,13 +103207,6 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
         }
       },
       "heatmap": [
-        {
-          "date": "2026-10-19",
-          "new": 0,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": 0
-        },
         {
           "date": "2026-10-20",
           "new": 0,
@@ -102676,6 +103409,13 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "fixed": 0,
           "closed": 0,
           "deltaNew": 0
+        },
+        {
+          "date": "2026-11-18",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
         }
       ],
       "reportBoard": {
@@ -102864,7 +103604,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "status": "완료 (Done)",
           "stage": "종료",
           "severity": "Major",
-          "defectType": "기획서 수정",
+          "defectType": "기획서 수정 요청",
           "priority": "Medium",
           "assignee": "미지정",
           "version": "[G.H][Go.Hanpass][앱개편][APP]-1차 (완료)",
@@ -102886,7 +103626,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "status": "QA 검증 -회귀 (QA Verification)",
           "stage": "QA확인",
           "severity": "Major",
-          "defectType": "기획서 수정",
+          "defectType": "기획서 수정 요청",
           "priority": "Medium",
           "assignee": "미지정",
           "version": "[G.H][Go.Hanpass][앱개편][APP]-1차 (완료)",
@@ -102908,7 +103648,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "status": "완료 (Done)",
           "stage": "종료",
           "severity": "Major",
-          "defectType": "기획서 수정",
+          "defectType": "기획서 수정 요청",
           "priority": "Medium",
           "assignee": "미지정",
           "version": "[G.H][Go.Hanpass][앱개편][APP]-1차 (완료)",
@@ -103845,13 +104585,13 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
   },
   "defectSource": {
     "status": "ok",
-    "syncedAt": "2026-11-18T02:47:21+09:00",
-    "attemptedAt": "2026-11-18T02:47:21+09:00"
+    "syncedAt": "2026-11-18T13:39:25+09:00",
+    "attemptedAt": "2026-11-18T13:39:25+09:00"
   },
   "qaTasks": {
     "status": "ok",
-    "syncedAt": "2026-11-18T02:47:28+09:00",
-    "attemptedAt": "2026-11-18T02:47:28+09:00",
+    "syncedAt": "2026-11-18T13:39:32+09:00",
+    "attemptedAt": "2026-11-18T13:39:32+09:00",
     "data": {
       "rows": [
         {
@@ -104185,8 +104925,8 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "id": "41b73fbd-1951-8083-af15-d844457d08c1",
           "title": "[광주.전남]산타 이벤트 테스트",
           "url": "https://app.notion.com/p/41b73fbd19518083af15d844457d08c1",
-          "status": "테스트 예정",
-          "state": "예정",
+          "status": "테스트 진행중",
+          "state": "진행중",
           "overdue": false,
           "start": "2026-11-19",
           "end": "2026-11-23",
@@ -104347,8 +105087,8 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
   },
   "qaQuality": {
     "status": "ok",
-    "syncedAt": "2026-11-18T02:47:57+09:00",
-    "attemptedAt": "2026-11-18T02:47:57+09:00",
+    "syncedAt": "2026-11-18T13:39:56+09:00",
+    "attemptedAt": "2026-11-18T13:39:56+09:00",
     "data": {
       "sourceUrl": "https://www.notion.so/1fa73fbd195180a59f39d3ae80362936",
       "documents": [
@@ -104475,28 +105215,28 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
   "sources": {
     "defects": {
       "status": "ok",
-      "syncedAt": "2026-11-18T02:47:21+09:00",
-      "attemptedAt": "2026-11-18T02:47:21+09:00"
+      "syncedAt": "2026-11-18T13:39:25+09:00",
+      "attemptedAt": "2026-11-18T13:39:25+09:00"
     },
     "tasks": {
       "status": "ok",
-      "syncedAt": "2026-11-18T02:47:28+09:00",
-      "attemptedAt": "2026-11-18T02:47:28+09:00"
+      "syncedAt": "2026-11-18T13:39:32+09:00",
+      "attemptedAt": "2026-11-18T13:39:32+09:00"
     },
     "quality": {
       "status": "ok",
-      "syncedAt": "2026-11-18T02:47:57+09:00",
-      "attemptedAt": "2026-11-18T02:47:57+09:00"
+      "syncedAt": "2026-11-18T13:39:56+09:00",
+      "attemptedAt": "2026-11-18T13:39:56+09:00"
     },
     "report-한패스": {
       "status": "ok",
-      "syncedAt": "2026-11-18T02:47:21+09:00",
-      "attemptedAt": "2026-11-18T02:47:21+09:00"
+      "syncedAt": "2026-11-18T13:39:26+09:00",
+      "attemptedAt": "2026-11-18T13:39:26+09:00"
     },
     "report-GoHanpass": {
       "status": "ok",
-      "syncedAt": "2026-11-18T02:47:22+09:00",
-      "attemptedAt": "2026-11-18T02:47:22+09:00"
+      "syncedAt": "2026-11-18T13:39:26+09:00",
+      "attemptedAt": "2026-11-18T13:39:26+09:00"
     }
   }
 }</script>

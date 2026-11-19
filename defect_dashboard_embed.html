@@ -731,7 +731,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
     </div>
   </div>
   <script id="dashboard-data" type="application/json">{
-  "generatedAt": "2026-11-18T17:28:10+00:00",
+  "generatedAt": "2026-11-19T04:24:32+00:00",
   "days": 30,
   "domainOrder": [
     "한패스",
@@ -740,20 +740,20 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
   "domains": {
     "ALL": {
       "summary": {
-        "total": 2205,
-        "new": 216,
+        "total": 2206,
+        "new": 217,
         "inProgress": 18,
         "fixed": 0,
-        "closed": 1623,
-        "todayNew": 5,
-        "newDelta": -12,
+        "closed": 1609,
+        "todayNew": 1,
+        "newDelta": -4,
         "critical": 113,
-        "todayClosed": 9
+        "todayClosed": 0
       },
       "funnel": [
         {
           "stage": "등록",
-          "count": 216,
+          "count": 217,
           "rate": 9.8,
           "width": 13
         },
@@ -783,31 +783,24 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
         },
         {
           "stage": "QA확인",
-          "count": 348,
-          "rate": 15.8,
-          "width": 21
+          "count": 362,
+          "rate": 16.4,
+          "width": 22
         },
         {
           "stage": "종료",
-          "count": 1623,
-          "rate": 73.6,
+          "count": 1609,
+          "rate": 72.9,
           "width": 100
         }
       ],
       "daily": [
         {
-          "date": "2026-10-20",
-          "new": 6,
-          "fixed": 313,
-          "closed": 313,
-          "deltaNew": 6
-        },
-        {
           "date": "2026-10-21",
           "new": 8,
           "fixed": 0,
           "closed": 0,
-          "deltaNew": 2
+          "deltaNew": 8
         },
         {
           "date": "2026-10-22",
@@ -952,15 +945,15 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
         {
           "date": "2026-11-11",
           "new": 20,
-          "fixed": 3,
-          "closed": 3,
+          "fixed": 0,
+          "closed": 0,
           "deltaNew": -12
         },
         {
           "date": "2026-11-12",
           "new": 1,
-          "fixed": 17,
-          "closed": 17,
+          "fixed": 15,
+          "closed": 15,
           "deltaNew": -19
         },
         {
@@ -994,16 +987,23 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
         {
           "date": "2026-11-17",
           "new": 17,
-          "fixed": 20,
-          "closed": 20,
+          "fixed": 19,
+          "closed": 19,
           "deltaNew": -13
         },
         {
           "date": "2026-11-18",
           "new": 5,
-          "fixed": 68,
-          "closed": 9,
+          "fixed": 60,
+          "closed": 1,
           "deltaNew": -12
+        },
+        {
+          "date": "2026-11-19",
+          "new": 1,
+          "fixed": 15,
+          "closed": 0,
+          "deltaNew": -4
         }
       ],
       "versions": [
@@ -2383,11 +2383,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "label": "QA확인",
-              "count": 54
+              "count": 68
             },
             {
               "label": "종료",
-              "count": 60
+              "count": 46
             }
           ],
           "severity": [
@@ -2660,6 +2660,30 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           ]
         },
         {
+          "version": "인도네시아 QR결제",
+          "total": 1,
+          "criticalMajor": 1,
+          "doneRate": 0.0,
+          "status": [
+            {
+              "label": "등록",
+              "count": 1
+            }
+          ],
+          "severity": [
+            {
+              "label": "Major",
+              "count": 1
+            }
+          ],
+          "priority": [
+            {
+              "label": "Medium",
+              "count": 1
+            }
+          ]
+        },
+        {
           "version": "미지정",
           "total": 8,
           "criticalMajor": 0,
@@ -2769,6 +2793,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "[콕뱅크] (완료)",
           "[포인트] 해외송금 미션 중단 (완료)",
           "결함 아님 - Done (완료)",
+          "인도네시아 QR결제",
           "미지정",
           "Hanpass - Backlog"
         ],
@@ -2881,6 +2906,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-18",
+              "registered": 4,
+              "fixed": 4
+            },
+            {
+              "date": "2026-11-19",
               "registered": 4,
               "fixed": 4
             }
@@ -3299,6 +3329,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-18",
               "registered": 7,
               "fixed": 6
+            },
+            {
+              "date": "2026-11-19",
+              "registered": 7,
+              "fixed": 6
             }
           ]
         },
@@ -3581,6 +3616,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-18",
+              "registered": 26,
+              "fixed": 23
+            },
+            {
+              "date": "2026-11-19",
               "registered": 26,
               "fixed": 23
             }
@@ -4155,6 +4195,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-18",
+              "registered": 29,
+              "fixed": 1
+            },
+            {
+              "date": "2026-11-19",
               "registered": 29,
               "fixed": 1
             }
@@ -4831,6 +4876,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-18",
               "registered": 11,
               "fixed": 1
+            },
+            {
+              "date": "2026-11-19",
+              "registered": 11,
+              "fixed": 1
             }
           ]
         },
@@ -5351,6 +5401,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-18",
+              "registered": 7,
+              "fixed": 2
+            },
+            {
+              "date": "2026-11-19",
               "registered": 7,
               "fixed": 2
             }
@@ -6087,6 +6142,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-18",
               "registered": 20,
               "fixed": 20
+            },
+            {
+              "date": "2026-11-19",
+              "registered": 20,
+              "fixed": 20
             }
           ]
         },
@@ -6767,6 +6827,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-18",
+              "registered": 3,
+              "fixed": 3
+            },
+            {
+              "date": "2026-11-19",
               "registered": 3,
               "fixed": 3
             }
@@ -7649,6 +7714,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-18",
+              "registered": 26,
+              "fixed": 26
+            },
+            {
+              "date": "2026-11-19",
               "registered": 26,
               "fixed": 26
             }
@@ -8637,6 +8707,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-18",
+              "registered": 34,
+              "fixed": 34
+            },
+            {
+              "date": "2026-11-19",
               "registered": 34,
               "fixed": 34
             }
@@ -9728,6 +9803,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-18",
+              "registered": 9,
+              "fixed": 9
+            },
+            {
+              "date": "2026-11-19",
               "registered": 9,
               "fixed": 9
             }
@@ -10932,6 +11012,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-18",
+              "registered": 117,
+              "fixed": 117
+            },
+            {
+              "date": "2026-11-19",
               "registered": 117,
               "fixed": 117
             }
@@ -12206,6 +12291,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-18",
+              "registered": 82,
+              "fixed": 82
+            },
+            {
+              "date": "2026-11-19",
               "registered": 82,
               "fixed": 82
             }
@@ -13779,6 +13869,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-18",
               "registered": 24,
               "fixed": 24
+            },
+            {
+              "date": "2026-11-19",
+              "registered": 24,
+              "fixed": 24
             }
           ]
         },
@@ -13792,7 +13887,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "done": 55,
           "scopeTotal": 103,
           "doneRate": 96.1,
-          "latestSnapshot": "2026-09-21",
+          "latestSnapshot": "2026-11-19",
           "severityRows": [
             {
               "severity": "Critical",
@@ -13814,7 +13909,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "done": 9,
               "total": 21,
               "rate": 90.5,
-              "previousRate": 90.5
+              "previousRate": 85.7
             },
             {
               "severity": "Minor",
@@ -13836,7 +13931,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "done": 55,
               "total": 103,
               "rate": 96.1,
-              "previousRate": 96.1
+              "previousRate": 95.1
             }
           ],
           "typeRows": [
@@ -13860,7 +13955,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "type": "기능",
-              "total": 31,
+              "total": 32,
               "severity": [
                 {
                   "label": "Critical",
@@ -13868,7 +13963,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
                 },
                 {
                   "label": "Major",
-                  "count": 14
+                  "count": 15
                 },
                 {
                   "label": "Minor",
@@ -13938,16 +14033,6 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "severity": [
                 {
                   "label": "Minor",
-                  "count": 1
-                }
-              ]
-            },
-            {
-              "type": "미지정",
-              "total": 1,
-              "severity": [
-                {
-                  "label": "Major",
                   "count": 1
                 }
               ]
@@ -15237,295 +15322,300 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             {
               "date": "2026-09-21",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-09-22",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-09-23",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-09-24",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-09-25",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-09-26",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-09-27",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-09-28",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-09-29",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-09-30",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-10-01",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-10-02",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-10-03",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-10-04",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-10-05",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-10-06",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-10-07",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-10-08",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-10-09",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-10-10",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-10-11",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-10-12",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-10-13",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-10-14",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-10-15",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-10-16",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-10-17",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-10-18",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-10-19",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-10-20",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-10-21",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-10-22",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-10-23",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-10-24",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-10-25",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-10-26",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-10-27",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-10-28",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-10-29",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-10-30",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-10-31",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-11-01",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-11-02",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-11-03",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-11-04",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-11-05",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-11-06",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-11-07",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-11-08",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-11-09",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-11-10",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-11-11",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-11-12",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-11-13",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-11-14",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-11-15",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-11-16",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-11-17",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-11-18",
+              "registered": 103,
+              "fixed": 98
+            },
+            {
+              "date": "2026-11-19",
               "registered": 103,
               "fixed": 99
             }
@@ -17366,6 +17456,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-18",
+              "registered": 68,
+              "fixed": 67
+            },
+            {
+              "date": "2026-11-19",
               "registered": 68,
               "fixed": 67
             }
@@ -19222,6 +19317,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-18",
+              "registered": 4,
+              "fixed": 3
+            },
+            {
+              "date": "2026-11-19",
               "registered": 4,
               "fixed": 3
             }
@@ -21269,6 +21369,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-18",
               "registered": 35,
               "fixed": 34
+            },
+            {
+              "date": "2026-11-19",
+              "registered": 35,
+              "fixed": 34
             }
           ]
         },
@@ -23274,6 +23379,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-18",
+              "registered": 4,
+              "fixed": 4
+            },
+            {
+              "date": "2026-11-19",
               "registered": 4,
               "fixed": 4
             }
@@ -25561,6 +25671,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-18",
+              "registered": 3,
+              "fixed": 3
+            },
+            {
+              "date": "2026-11-19",
               "registered": 3,
               "fixed": 3
             }
@@ -27988,6 +28103,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-18",
+              "registered": 27,
+              "fixed": 23
+            },
+            {
+              "date": "2026-11-19",
               "registered": 27,
               "fixed": 23
             }
@@ -30592,6 +30712,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-18",
               "registered": 33,
               "fixed": 32
+            },
+            {
+              "date": "2026-11-19",
+              "registered": 33,
+              "fixed": 32
             }
           ]
         },
@@ -31683,6 +31808,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-18",
               "registered": 20,
               "fixed": 1
+            },
+            {
+              "date": "2026-11-19",
+              "registered": 20,
+              "fixed": 1
             }
           ]
         },
@@ -32532,6 +32662,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-18",
+              "registered": 15,
+              "fixed": 15
+            },
+            {
+              "date": "2026-11-19",
               "registered": 15,
               "fixed": 15
             }
@@ -33646,6 +33781,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-18",
               "registered": 55,
               "fixed": 54
+            },
+            {
+              "date": "2026-11-19",
+              "registered": 55,
+              "fixed": 54
             }
           ]
         },
@@ -34381,6 +34521,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-18",
+              "registered": 5,
+              "fixed": 5
+            },
+            {
+              "date": "2026-11-19",
               "registered": 5,
               "fixed": 5
             }
@@ -35504,6 +35649,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-18",
               "registered": 101,
               "fixed": 101
+            },
+            {
+              "date": "2026-11-19",
+              "registered": 101,
+              "fixed": 101
             }
           ]
         },
@@ -35864,6 +36014,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-18",
+              "registered": 37,
+              "fixed": 30
+            },
+            {
+              "date": "2026-11-19",
               "registered": 37,
               "fixed": 30
             }
@@ -36360,6 +36515,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-18",
               "registered": 172,
               "fixed": 166
+            },
+            {
+              "date": "2026-11-19",
+              "registered": 172,
+              "fixed": 166
             }
           ]
         },
@@ -36763,6 +36923,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-18",
+              "registered": 34,
+              "fixed": 34
+            },
+            {
+              "date": "2026-11-19",
               "registered": 34,
               "fixed": 34
             }
@@ -37826,6 +37991,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-18",
               "registered": 7,
               "fixed": 7
+            },
+            {
+              "date": "2026-11-19",
+              "registered": 7,
+              "fixed": 7
             }
           ]
         },
@@ -38136,6 +38306,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-18",
               "registered": 20,
               "fixed": 19
+            },
+            {
+              "date": "2026-11-19",
+              "registered": 20,
+              "fixed": 19
             }
           ]
         },
@@ -38160,7 +38335,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "done": 0,
               "total": 2,
               "rate": 100.0,
-              "previousRate": 0
+              "previousRate": 100.0
             },
             {
               "severity": "Major",
@@ -38182,7 +38357,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "done": 0,
               "total": 3,
               "rate": 100.0,
-              "previousRate": 0
+              "previousRate": 100.0
             },
             {
               "severity": "합계",
@@ -38193,7 +38368,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "done": 0,
               "total": 5,
               "rate": 100.0,
-              "previousRate": 0
+              "previousRate": 100.0
             }
           ],
           "typeRows": [
@@ -38231,6 +38406,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "daily": [
             {
               "date": "2026-11-18",
+              "registered": 5,
+              "fixed": 5
+            },
+            {
+              "date": "2026-11-19",
               "registered": 5,
               "fixed": 5
             }
@@ -38814,6 +38994,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-18",
+              "registered": 26,
+              "fixed": 7
+            },
+            {
+              "date": "2026-11-19",
               "registered": 26,
               "fixed": 7
             }
@@ -39413,6 +39598,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-18",
+              "registered": 48,
+              "fixed": 48
+            },
+            {
+              "date": "2026-11-19",
               "registered": 48,
               "fixed": 48
             }
@@ -40060,6 +40250,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-18",
               "registered": 313,
               "fixed": 313
+            },
+            {
+              "date": "2026-11-19",
+              "registered": 313,
+              "fixed": 313
             }
           ]
         },
@@ -40674,6 +40869,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-18",
               "registered": 165,
               "fixed": 164
+            },
+            {
+              "date": "2026-11-19",
+              "registered": 165,
+              "fixed": 164
             }
           ]
         },
@@ -40929,6 +41129,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-18",
+              "registered": 15,
+              "fixed": 0
+            },
+            {
+              "date": "2026-11-19",
               "registered": 15,
               "fixed": 0
             }
@@ -41285,6 +41490,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-18",
               "registered": 36,
               "fixed": 34
+            },
+            {
+              "date": "2026-11-19",
+              "registered": 36,
+              "fixed": 34
             }
           ]
         },
@@ -41292,13 +41502,13 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "version": "[Hanpass][카드개편][BO]",
           "total": 122,
           "open": 8,
-          "devDone": 57,
-          "qaRegression": 54,
+          "devDone": 43,
+          "qaRegression": 68,
           "backlogTransfer": 0,
           "done": 3,
           "scopeTotal": 122,
           "doneRate": 93.4,
-          "latestSnapshot": "2026-11-18",
+          "latestSnapshot": "2026-11-19",
           "severityRows": [
             {
               "severity": "Critical",
@@ -41309,40 +41519,40 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "done": 1,
               "total": 6,
               "rate": 100.0,
-              "previousRate": 50.0
+              "previousRate": 100.0
             },
             {
               "severity": "Major",
               "open": 7,
-              "devDone": 31,
-              "qaRegression": 23,
+              "devDone": 23,
+              "qaRegression": 31,
               "backlogTransfer": 0,
               "done": 0,
               "total": 61,
               "rate": 88.5,
-              "previousRate": 42.6
+              "previousRate": 75.4
             },
             {
               "severity": "Minor",
               "open": 1,
-              "devDone": 23,
-              "qaRegression": 29,
+              "devDone": 17,
+              "qaRegression": 35,
               "backlogTransfer": 0,
               "done": 2,
               "total": 55,
               "rate": 98.2,
-              "previousRate": 40.0
+              "previousRate": 87.3
             },
             {
               "severity": "합계",
               "open": 8,
-              "devDone": 57,
-              "qaRegression": 54,
+              "devDone": 43,
+              "qaRegression": 68,
               "backlogTransfer": 0,
               "done": 3,
               "total": 122,
               "rate": 93.4,
-              "previousRate": 41.8
+              "previousRate": 82.0
             }
           ],
           "typeRows": [
@@ -41480,40 +41690,45 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             {
               "date": "2026-11-11",
               "registered": 66,
-              "fixed": 3
+              "fixed": 0
             },
             {
               "date": "2026-11-12",
               "registered": 67,
-              "fixed": 5
+              "fixed": 0
             },
             {
               "date": "2026-11-13",
               "registered": 80,
-              "fixed": 16
+              "fixed": 11
             },
             {
               "date": "2026-11-14",
               "registered": 80,
-              "fixed": 16
+              "fixed": 11
             },
             {
               "date": "2026-11-15",
               "registered": 80,
-              "fixed": 16
+              "fixed": 11
             },
             {
               "date": "2026-11-16",
               "registered": 105,
-              "fixed": 34
+              "fixed": 29
             },
             {
               "date": "2026-11-17",
               "registered": 122,
-              "fixed": 51
+              "fixed": 45
             },
             {
               "date": "2026-11-18",
+              "registered": 122,
+              "fixed": 100
+            },
+            {
+              "date": "2026-11-19",
               "registered": 122,
               "fixed": 114
             }
@@ -41681,6 +41896,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-18",
+              "registered": 38,
+              "fixed": 29
+            },
+            {
+              "date": "2026-11-19",
               "registered": 38,
               "fixed": 29
             }
@@ -42267,6 +42487,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-18",
+              "registered": 11,
+              "fixed": 11
+            },
+            {
+              "date": "2026-11-19",
               "registered": 11,
               "fixed": 11
             }
@@ -43035,6 +43260,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-18",
               "registered": 7,
               "fixed": 5
+            },
+            {
+              "date": "2026-11-19",
+              "registered": 7,
+              "fixed": 5
             }
           ]
         },
@@ -43722,6 +43952,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-18",
               "registered": 121,
               "fixed": 120
+            },
+            {
+              "date": "2026-11-19",
+              "registered": 121,
+              "fixed": 120
             }
           ]
         },
@@ -44279,6 +44514,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-18",
               "registered": 131,
               "fixed": 130
+            },
+            {
+              "date": "2026-11-19",
+              "registered": 131,
+              "fixed": 130
             }
           ]
         },
@@ -44744,6 +44984,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-18",
+              "registered": 1,
+              "fixed": 1
+            },
+            {
+              "date": "2026-11-19",
               "registered": 1,
               "fixed": 1
             }
@@ -46733,6 +46978,88 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-18",
               "registered": 3,
               "fixed": 3
+            },
+            {
+              "date": "2026-11-19",
+              "registered": 3,
+              "fixed": 3
+            }
+          ]
+        },
+        {
+          "version": "인도네시아 QR결제",
+          "total": 1,
+          "open": 1,
+          "devDone": 0,
+          "qaRegression": 0,
+          "backlogTransfer": 0,
+          "done": 0,
+          "scopeTotal": 1,
+          "doneRate": 0.0,
+          "latestSnapshot": "2026-11-19",
+          "severityRows": [
+            {
+              "severity": "Critical",
+              "open": 0,
+              "devDone": 0,
+              "qaRegression": 0,
+              "backlogTransfer": 0,
+              "done": 0,
+              "total": 0,
+              "rate": 0,
+              "previousRate": 0
+            },
+            {
+              "severity": "Major",
+              "open": 1,
+              "devDone": 0,
+              "qaRegression": 0,
+              "backlogTransfer": 0,
+              "done": 0,
+              "total": 1,
+              "rate": 0.0,
+              "previousRate": 0
+            },
+            {
+              "severity": "Minor",
+              "open": 0,
+              "devDone": 0,
+              "qaRegression": 0,
+              "backlogTransfer": 0,
+              "done": 0,
+              "total": 0,
+              "rate": 0,
+              "previousRate": 0
+            },
+            {
+              "severity": "합계",
+              "open": 1,
+              "devDone": 0,
+              "qaRegression": 0,
+              "backlogTransfer": 0,
+              "done": 0,
+              "total": 1,
+              "rate": 0.0,
+              "previousRate": 0
+            }
+          ],
+          "typeRows": [
+            {
+              "type": "UX/UI",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 1
+                }
+              ]
+            }
+          ],
+          "daily": [
+            {
+              "date": "2026-11-19",
+              "registered": 1,
+              "fixed": 0
             }
           ]
         },
@@ -49335,6 +49662,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-18",
               "registered": 8,
               "fixed": 8
+            },
+            {
+              "date": "2026-11-19",
+              "registered": 8,
+              "fixed": 8
             }
           ]
         },
@@ -50342,18 +50674,23 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-18",
               "registered": 13,
               "fixed": 10
+            },
+            {
+              "date": "2026-11-19",
+              "registered": 13,
+              "fixed": 10
             }
           ]
         }
       ],
-      "defaultProjectVersion": "[Hanpass][산타이벤트]",
+      "defaultProjectVersion": "인도네시아 QR결제",
       "selectedVersion": "ALL",
       "distributions": {
         "ALL": {
           "status": [
             {
               "label": "등록",
-              "count": 216
+              "count": 217
             },
             {
               "label": "진행중",
@@ -50361,11 +50698,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "label": "QA확인",
-              "count": 348
+              "count": 362
             },
             {
               "label": "종료",
-              "count": 1623
+              "count": 1609
             }
           ],
           "severity": [
@@ -50379,7 +50716,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "label": "Major",
-              "count": 858
+              "count": 859
             },
             {
               "label": "Minor",
@@ -50401,7 +50738,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "label": "Medium",
-              "count": 2158
+              "count": 2159
             },
             {
               "label": "Low",
@@ -50420,18 +50757,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
       },
       "heatmap": [
         {
-          "date": "2026-10-20",
-          "new": 6,
-          "fixed": 313,
-          "closed": 313,
-          "deltaNew": 6
-        },
-        {
           "date": "2026-10-21",
           "new": 8,
           "fixed": 0,
           "closed": 0,
-          "deltaNew": 2
+          "deltaNew": 8
         },
         {
           "date": "2026-10-22",
@@ -50576,15 +50906,15 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
         {
           "date": "2026-11-11",
           "new": 20,
-          "fixed": 3,
-          "closed": 3,
+          "fixed": 0,
+          "closed": 0,
           "deltaNew": -12
         },
         {
           "date": "2026-11-12",
           "new": 1,
-          "fixed": 17,
-          "closed": 17,
+          "fixed": 15,
+          "closed": 15,
           "deltaNew": -19
         },
         {
@@ -50618,23 +50948,30 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
         {
           "date": "2026-11-17",
           "new": 17,
-          "fixed": 20,
-          "closed": 20,
+          "fixed": 19,
+          "closed": 19,
           "deltaNew": -13
         },
         {
           "date": "2026-11-18",
           "new": 5,
-          "fixed": 68,
-          "closed": 9,
+          "fixed": 60,
+          "closed": 1,
           "deltaNew": -12
+        },
+        {
+          "date": "2026-11-19",
+          "new": 1,
+          "fixed": 15,
+          "closed": 0,
+          "deltaNew": -4
         }
       ],
       "reportBoard": {
         "summary": [
           {
             "label": "최근 30일 제보",
-            "count": 1
+            "count": 0
           },
           {
             "label": "미완료",
@@ -50642,7 +50979,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           },
           {
             "label": "완료",
-            "count": 1
+            "count": 0
           },
           {
             "label": "결함 등록 완료",
@@ -50650,26 +50987,34 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           },
           {
             "label": "결함 아님",
-            "count": 1
+            "count": 0
           }
         ],
-        "recent": [
-          {
-            "domain": "한패스",
-            "title": "Test en",
-            "status": "완료",
-            "processingStatus": "결함 아님",
-            "bugType": "중복",
-            "platform": "AOS",
-            "reporter": "미지정",
-            "createdAt": "2026-10-20T00:27:00.000Z",
-            "createdDate": "2026-10-20",
-            "qaLinked": 0,
-            "url": "https://app.notion.com/p/Test-en-3ff73fbd195181e0b89fe926ae0f5636"
-          }
-        ]
+        "recent": []
       },
       "recent": [
+        {
+          "id": "41d73fbd-1951-805c-9897-e8681c6cfbd6",
+          "title": "[인도네시아QR][공통]이용약관 노출되지 않는 현상",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "defectType": "UX/UI",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "인도네시아 QR결제",
+          "versionRaw": "인도네시아 QR결제",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-11-19T03:05:00.000Z",
+          "createdDate": "2026-11-19",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/QR-41d73fbd1951805c9897e8681c6cfbd6",
+          "lastEditedAt": "2026-11-19T03:15:00.000Z"
+        },
         {
           "id": "41c73fbd-1951-8009-a9a8-d9923f7760b2",
           "title": "[산타의 선물][공통] 피추천인 기명 전환 완료 후에도 승인 대기 상태 유지 및 양쪽 계정 리워드 미지급 현상",
@@ -50783,8 +51128,8 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
         {
           "id": "41b73fbd-1951-80ac-90fb-e2059199cc07",
           "title": "[승인망 통제 관리][BO] 상단 초기화 후 재검색 시 수동 설정 입력값이 초기화되지 않는 현상",
-          "status": "개발 완료 (Dev Done)",
-          "stage": "종료",
+          "status": "QA 검증 -회귀 (QA Verification)",
+          "stage": "QA확인",
           "severity": "Major",
           "defectType": "기능",
           "priority": "Medium",
@@ -50795,18 +51140,18 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "os": "미지정",
           "createdAt": "2026-11-17T09:32:00.000Z",
           "createdDate": "2026-11-17",
-          "fixedAt": "2026-11-18T01:10:00.000Z",
-          "fixedDate": "2026-11-18",
-          "closedAt": "2026-11-18T01:10:00.000Z",
-          "closedDate": "2026-11-18",
+          "fixedAt": "2026-11-19T02:27:00.000Z",
+          "fixedDate": "2026-11-19",
+          "closedAt": "",
+          "closedDate": "",
           "url": "https://app.notion.com/p/BO-41b73fbd195180ac90fbe2059199cc07",
-          "lastEditedAt": "2026-11-18T01:10:00.000Z"
+          "lastEditedAt": "2026-11-19T02:27:00.000Z"
         },
         {
           "id": "41b73fbd-1951-80ee-bc41-de5a27330012",
           "title": "\n[승인망 통제 관리][BO] 수동 설정 시 사유 200Byte 초과 입력 후 저장되지 않는 현상",
-          "status": "개발 완료 (Dev Done)",
-          "stage": "종료",
+          "status": "QA 검증 -회귀 (QA Verification)",
+          "stage": "QA확인",
           "severity": "Major",
           "defectType": "기능",
           "priority": "Medium",
@@ -50817,18 +51162,18 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "os": "미지정",
           "createdAt": "2026-11-17T09:16:00.000Z",
           "createdDate": "2026-11-17",
-          "fixedAt": "2026-11-18T01:11:00.000Z",
-          "fixedDate": "2026-11-18",
-          "closedAt": "2026-11-18T01:11:00.000Z",
-          "closedDate": "2026-11-18",
+          "fixedAt": "2026-11-19T02:32:00.000Z",
+          "fixedDate": "2026-11-19",
+          "closedAt": "",
+          "closedDate": "",
           "url": "https://app.notion.com/p/BO-200Byte-41b73fbd195180eebc41de5a27330012",
-          "lastEditedAt": "2026-11-18T01:11:00.000Z"
+          "lastEditedAt": "2026-11-19T02:32:00.000Z"
         },
         {
           "id": "41b73fbd-1951-807b-a8fd-ef36eb682704",
           "title": "[승인망 통제 관리][BO] 적용일 시작일·종료일 입력 필드의 Placeholder가 잘려 노출되는 현상",
-          "status": "개발 완료 (Dev Done)",
-          "stage": "종료",
+          "status": "QA 검증 -회귀 (QA Verification)",
+          "stage": "QA확인",
           "severity": "Minor",
           "defectType": "UX/UI",
           "priority": "Medium",
@@ -50839,18 +51184,18 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "os": "미지정",
           "createdAt": "2026-11-17T09:02:00.000Z",
           "createdDate": "2026-11-17",
-          "fixedAt": "2026-11-18T01:11:00.000Z",
-          "fixedDate": "2026-11-18",
-          "closedAt": "2026-11-18T01:11:00.000Z",
-          "closedDate": "2026-11-18",
+          "fixedAt": "2026-11-19T02:34:00.000Z",
+          "fixedDate": "2026-11-19",
+          "closedAt": "",
+          "closedDate": "",
           "url": "https://app.notion.com/p/BO-Placeholder-41b73fbd1951807ba8fdef36eb682704",
-          "lastEditedAt": "2026-11-18T01:11:00.000Z"
+          "lastEditedAt": "2026-11-19T02:34:00.000Z"
         },
         {
           "id": "41b73fbd-1951-80f1-a961-e7cf1ba4d754",
           "title": "[배치관리][BO] 배치정보 등록 시 필수 항목인 작업일시를 미입력해도 정상 저장되는 현상",
-          "status": "개발 완료 (Dev Done)",
-          "stage": "종료",
+          "status": "QA 검증 -회귀 (QA Verification)",
+          "stage": "QA확인",
           "severity": "Major",
           "defectType": "기능",
           "priority": "Medium",
@@ -50861,41 +51206,19 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "os": "미지정",
           "createdAt": "2026-11-17T08:02:00.000Z",
           "createdDate": "2026-11-17",
-          "fixedAt": "2026-11-18T01:10:00.000Z",
-          "fixedDate": "2026-11-18",
-          "closedAt": "2026-11-18T01:10:00.000Z",
-          "closedDate": "2026-11-18",
+          "fixedAt": "2026-11-19T02:46:00.000Z",
+          "fixedDate": "2026-11-19",
+          "closedAt": "",
+          "closedDate": "",
           "url": "https://app.notion.com/p/BO-41b73fbd195180f1a961e7cf1ba4d754",
-          "lastEditedAt": "2026-11-18T01:10:00.000Z"
-        },
-        {
-          "id": "41b73fbd-1951-8031-a8e5-e4832a9b58b3",
-          "title": "[배치관리][BO] 배치정보 등록 팝업의 '취소' 및 '저장' 버튼이 기획서와 달리 중앙 정렬되는 현상",
-          "status": "개발 완료 (Dev Done)",
-          "stage": "종료",
-          "severity": "Minor",
-          "defectType": "UX/UI",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[Hanpass][카드개편][BO]",
-          "versionRaw": "[Hanpass][카드개편][BO]",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-11-17T07:58:00.000Z",
-          "createdDate": "2026-11-17",
-          "fixedAt": "2026-11-18T01:10:00.000Z",
-          "fixedDate": "2026-11-18",
-          "closedAt": "2026-11-18T01:10:00.000Z",
-          "closedDate": "2026-11-18",
-          "url": "https://app.notion.com/p/BO-41b73fbd19518031a8e5e4832a9b58b3",
-          "lastEditedAt": "2026-11-18T01:10:00.000Z"
+          "lastEditedAt": "2026-11-19T02:46:00.000Z"
         }
       ],
       "quality": {
         "unresolvedCritical": 26,
-        "unresolvedMajor": 274,
-        "awaitingVerification": 95,
-        "highCount": 300,
+        "unresolvedMajor": 275,
+        "awaitingVerification": 81,
+        "highCount": 301,
         "high": [
           {
             "title": "[SDK변경][Go.Hanpass][iOS] PIN입력 화면 전환 때 상태바 제어 시 앱 크래시 현상 ",
@@ -51186,7 +51509,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "ageDays": 287
           },
           {
-            "title": "[[대출비교] 승인 완료 / 승인 거절 시 앱푸시 미발송 현상",
+            "title": "[대출비교] 승인 완료 / 승인 거절 시 앱푸시 미발송 현상",
             "url": "https://app.notion.com/p/2fe73fbd1951804ba063f0af11a13f54",
             "status": "등록 (Registered)",
             "severity": "Major",
@@ -51621,7 +51944,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "ageDays": 287
           },
           {
-            "title": "[[대출비교] 승인 완료 / 승인 거절 시 앱푸시 미발송 현상",
+            "title": "[대출비교] 승인 완료 / 승인 거절 시 앱푸시 미발송 현상",
             "url": "https://app.notion.com/p/2fe73fbd1951804ba063f0af11a13f54",
             "status": "등록 (Registered)",
             "severity": "Major",
@@ -51810,20 +52133,20 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
     },
     "한패스": {
       "summary": {
-        "total": 1759,
-        "new": 149,
+        "total": 1760,
+        "new": 150,
         "inProgress": 18,
         "fixed": 0,
-        "closed": 1355,
-        "todayNew": 5,
-        "newDelta": -12,
+        "closed": 1341,
+        "todayNew": 1,
+        "newDelta": -4,
         "critical": 100,
-        "todayClosed": 9
+        "todayClosed": 0
       },
       "funnel": [
         {
           "stage": "등록",
-          "count": 149,
+          "count": 150,
           "rate": 8.5,
           "width": 11
         },
@@ -51853,31 +52176,24 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
         },
         {
           "stage": "QA확인",
-          "count": 237,
-          "rate": 13.5,
-          "width": 17
+          "count": 251,
+          "rate": 14.3,
+          "width": 19
         },
         {
           "stage": "종료",
-          "count": 1355,
-          "rate": 77.0,
+          "count": 1341,
+          "rate": 76.2,
           "width": 100
         }
       ],
       "daily": [
         {
-          "date": "2026-10-20",
-          "new": 6,
-          "fixed": 313,
-          "closed": 313,
-          "deltaNew": 6
-        },
-        {
           "date": "2026-10-21",
           "new": 8,
           "fixed": 0,
           "closed": 0,
-          "deltaNew": 2
+          "deltaNew": 8
         },
         {
           "date": "2026-10-22",
@@ -52022,15 +52338,15 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
         {
           "date": "2026-11-11",
           "new": 20,
-          "fixed": 3,
-          "closed": 3,
+          "fixed": 0,
+          "closed": 0,
           "deltaNew": -12
         },
         {
           "date": "2026-11-12",
           "new": 1,
-          "fixed": 17,
-          "closed": 17,
+          "fixed": 15,
+          "closed": 15,
           "deltaNew": -19
         },
         {
@@ -52064,16 +52380,23 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
         {
           "date": "2026-11-17",
           "new": 17,
-          "fixed": 20,
-          "closed": 20,
+          "fixed": 19,
+          "closed": 19,
           "deltaNew": -13
         },
         {
           "date": "2026-11-18",
           "new": 5,
-          "fixed": 68,
-          "closed": 9,
+          "fixed": 60,
+          "closed": 1,
           "deltaNew": -12
+        },
+        {
+          "date": "2026-11-19",
+          "new": 1,
+          "fixed": 15,
+          "closed": 0,
+          "deltaNew": -4
         }
       ],
       "versions": [
@@ -53161,11 +53484,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "label": "QA확인",
-              "count": 54
+              "count": 68
             },
             {
               "label": "종료",
-              "count": 60
+              "count": 46
             }
           ],
           "severity": [
@@ -53438,6 +53761,30 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           ]
         },
         {
+          "version": "인도네시아 QR결제",
+          "total": 1,
+          "criticalMajor": 1,
+          "doneRate": 0.0,
+          "status": [
+            {
+              "label": "등록",
+              "count": 1
+            }
+          ],
+          "severity": [
+            {
+              "label": "Major",
+              "count": 1
+            }
+          ],
+          "priority": [
+            {
+              "label": "Medium",
+              "count": 1
+            }
+          ]
+        },
+        {
           "version": "미지정",
           "total": 8,
           "criticalMajor": 0,
@@ -53538,6 +53885,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "[콕뱅크] (완료)",
           "[포인트] 해외송금 미션 중단 (완료)",
           "결함 아님 - Done (완료)",
+          "인도네시아 QR결제",
           "미지정",
           "Hanpass - Backlog"
         ],
@@ -53650,6 +53998,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-18",
+              "registered": 4,
+              "fixed": 4
+            },
+            {
+              "date": "2026-11-19",
               "registered": 4,
               "fixed": 4
             }
@@ -54068,6 +54421,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-18",
               "registered": 7,
               "fixed": 6
+            },
+            {
+              "date": "2026-11-19",
+              "registered": 7,
+              "fixed": 6
             }
           ]
         },
@@ -54350,6 +54708,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-18",
+              "registered": 26,
+              "fixed": 23
+            },
+            {
+              "date": "2026-11-19",
               "registered": 26,
               "fixed": 23
             }
@@ -54924,6 +55287,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-18",
+              "registered": 29,
+              "fixed": 1
+            },
+            {
+              "date": "2026-11-19",
               "registered": 29,
               "fixed": 1
             }
@@ -55600,6 +55968,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-18",
               "registered": 11,
               "fixed": 1
+            },
+            {
+              "date": "2026-11-19",
+              "registered": 11,
+              "fixed": 1
             }
           ]
         },
@@ -56120,6 +56493,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-18",
+              "registered": 7,
+              "fixed": 2
+            },
+            {
+              "date": "2026-11-19",
               "registered": 7,
               "fixed": 2
             }
@@ -56856,6 +57234,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-18",
               "registered": 20,
               "fixed": 20
+            },
+            {
+              "date": "2026-11-19",
+              "registered": 20,
+              "fixed": 20
             }
           ]
         },
@@ -57536,6 +57919,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-18",
+              "registered": 3,
+              "fixed": 3
+            },
+            {
+              "date": "2026-11-19",
               "registered": 3,
               "fixed": 3
             }
@@ -58418,6 +58806,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-18",
+              "registered": 26,
+              "fixed": 26
+            },
+            {
+              "date": "2026-11-19",
               "registered": 26,
               "fixed": 26
             }
@@ -59406,6 +59799,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-18",
+              "registered": 34,
+              "fixed": 34
+            },
+            {
+              "date": "2026-11-19",
               "registered": 34,
               "fixed": 34
             }
@@ -60497,6 +60895,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-18",
+              "registered": 9,
+              "fixed": 9
+            },
+            {
+              "date": "2026-11-19",
               "registered": 9,
               "fixed": 9
             }
@@ -61701,6 +62104,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-18",
+              "registered": 117,
+              "fixed": 117
+            },
+            {
+              "date": "2026-11-19",
               "registered": 117,
               "fixed": 117
             }
@@ -62975,6 +63383,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-18",
+              "registered": 82,
+              "fixed": 82
+            },
+            {
+              "date": "2026-11-19",
               "registered": 82,
               "fixed": 82
             }
@@ -64548,6 +64961,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-18",
               "registered": 24,
               "fixed": 24
+            },
+            {
+              "date": "2026-11-19",
+              "registered": 24,
+              "fixed": 24
             }
           ]
         },
@@ -64561,7 +64979,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "done": 55,
           "scopeTotal": 103,
           "doneRate": 96.1,
-          "latestSnapshot": "2026-09-21",
+          "latestSnapshot": "2026-11-19",
           "severityRows": [
             {
               "severity": "Critical",
@@ -64583,7 +65001,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "done": 9,
               "total": 21,
               "rate": 90.5,
-              "previousRate": 90.5
+              "previousRate": 85.7
             },
             {
               "severity": "Minor",
@@ -64605,7 +65023,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "done": 55,
               "total": 103,
               "rate": 96.1,
-              "previousRate": 96.1
+              "previousRate": 95.1
             }
           ],
           "typeRows": [
@@ -64629,7 +65047,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "type": "기능",
-              "total": 31,
+              "total": 32,
               "severity": [
                 {
                   "label": "Critical",
@@ -64637,7 +65055,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
                 },
                 {
                   "label": "Major",
-                  "count": 14
+                  "count": 15
                 },
                 {
                   "label": "Minor",
@@ -64707,16 +65125,6 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "severity": [
                 {
                   "label": "Minor",
-                  "count": 1
-                }
-              ]
-            },
-            {
-              "type": "미지정",
-              "total": 1,
-              "severity": [
-                {
-                  "label": "Major",
                   "count": 1
                 }
               ]
@@ -66006,295 +66414,300 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             {
               "date": "2026-09-21",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-09-22",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-09-23",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-09-24",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-09-25",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-09-26",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-09-27",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-09-28",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-09-29",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-09-30",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-10-01",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-10-02",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-10-03",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-10-04",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-10-05",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-10-06",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-10-07",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-10-08",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-10-09",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-10-10",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-10-11",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-10-12",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-10-13",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-10-14",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-10-15",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-10-16",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-10-17",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-10-18",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-10-19",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-10-20",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-10-21",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-10-22",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-10-23",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-10-24",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-10-25",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-10-26",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-10-27",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-10-28",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-10-29",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-10-30",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-10-31",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-11-01",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-11-02",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-11-03",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-11-04",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-11-05",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-11-06",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-11-07",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-11-08",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-11-09",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-11-10",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-11-11",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-11-12",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-11-13",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-11-14",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-11-15",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-11-16",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-11-17",
               "registered": 103,
-              "fixed": 99
+              "fixed": 98
             },
             {
               "date": "2026-11-18",
+              "registered": 103,
+              "fixed": 98
+            },
+            {
+              "date": "2026-11-19",
               "registered": 103,
               "fixed": 99
             }
@@ -68135,6 +68548,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-18",
+              "registered": 68,
+              "fixed": 67
+            },
+            {
+              "date": "2026-11-19",
               "registered": 68,
               "fixed": 67
             }
@@ -69991,6 +70409,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-18",
+              "registered": 4,
+              "fixed": 3
+            },
+            {
+              "date": "2026-11-19",
               "registered": 4,
               "fixed": 3
             }
@@ -72038,6 +72461,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-18",
               "registered": 35,
               "fixed": 34
+            },
+            {
+              "date": "2026-11-19",
+              "registered": 35,
+              "fixed": 34
             }
           ]
         },
@@ -74043,6 +74471,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-18",
+              "registered": 4,
+              "fixed": 4
+            },
+            {
+              "date": "2026-11-19",
               "registered": 4,
               "fixed": 4
             }
@@ -76330,6 +76763,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-18",
+              "registered": 3,
+              "fixed": 3
+            },
+            {
+              "date": "2026-11-19",
               "registered": 3,
               "fixed": 3
             }
@@ -78757,6 +79195,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-18",
+              "registered": 27,
+              "fixed": 23
+            },
+            {
+              "date": "2026-11-19",
               "registered": 27,
               "fixed": 23
             }
@@ -81361,6 +81804,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-18",
               "registered": 33,
               "fixed": 32
+            },
+            {
+              "date": "2026-11-19",
+              "registered": 33,
+              "fixed": 32
             }
           ]
         },
@@ -81671,6 +82119,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-18",
               "registered": 20,
               "fixed": 19
+            },
+            {
+              "date": "2026-11-19",
+              "registered": 20,
+              "fixed": 19
             }
           ]
         },
@@ -81695,7 +82148,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "done": 0,
               "total": 2,
               "rate": 100.0,
-              "previousRate": 0
+              "previousRate": 100.0
             },
             {
               "severity": "Major",
@@ -81717,7 +82170,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "done": 0,
               "total": 3,
               "rate": 100.0,
-              "previousRate": 0
+              "previousRate": 100.0
             },
             {
               "severity": "합계",
@@ -81728,7 +82181,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "done": 0,
               "total": 5,
               "rate": 100.0,
-              "previousRate": 0
+              "previousRate": 100.0
             }
           ],
           "typeRows": [
@@ -81766,6 +82219,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "daily": [
             {
               "date": "2026-11-18",
+              "registered": 5,
+              "fixed": 5
+            },
+            {
+              "date": "2026-11-19",
               "registered": 5,
               "fixed": 5
             }
@@ -82349,6 +82807,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-18",
+              "registered": 26,
+              "fixed": 7
+            },
+            {
+              "date": "2026-11-19",
               "registered": 26,
               "fixed": 7
             }
@@ -82948,6 +83411,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-18",
+              "registered": 48,
+              "fixed": 48
+            },
+            {
+              "date": "2026-11-19",
               "registered": 48,
               "fixed": 48
             }
@@ -83595,6 +84063,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-18",
               "registered": 313,
               "fixed": 313
+            },
+            {
+              "date": "2026-11-19",
+              "registered": 313,
+              "fixed": 313
             }
           ]
         },
@@ -84209,6 +84682,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-18",
               "registered": 165,
               "fixed": 164
+            },
+            {
+              "date": "2026-11-19",
+              "registered": 165,
+              "fixed": 164
             }
           ]
         },
@@ -84464,6 +84942,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-18",
+              "registered": 15,
+              "fixed": 0
+            },
+            {
+              "date": "2026-11-19",
               "registered": 15,
               "fixed": 0
             }
@@ -84820,6 +85303,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-18",
               "registered": 36,
               "fixed": 34
+            },
+            {
+              "date": "2026-11-19",
+              "registered": 36,
+              "fixed": 34
             }
           ]
         },
@@ -84827,13 +85315,13 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "version": "[Hanpass][카드개편][BO]",
           "total": 122,
           "open": 8,
-          "devDone": 57,
-          "qaRegression": 54,
+          "devDone": 43,
+          "qaRegression": 68,
           "backlogTransfer": 0,
           "done": 3,
           "scopeTotal": 122,
           "doneRate": 93.4,
-          "latestSnapshot": "2026-11-18",
+          "latestSnapshot": "2026-11-19",
           "severityRows": [
             {
               "severity": "Critical",
@@ -84844,40 +85332,40 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "done": 1,
               "total": 6,
               "rate": 100.0,
-              "previousRate": 50.0
+              "previousRate": 100.0
             },
             {
               "severity": "Major",
               "open": 7,
-              "devDone": 31,
-              "qaRegression": 23,
+              "devDone": 23,
+              "qaRegression": 31,
               "backlogTransfer": 0,
               "done": 0,
               "total": 61,
               "rate": 88.5,
-              "previousRate": 42.6
+              "previousRate": 75.4
             },
             {
               "severity": "Minor",
               "open": 1,
-              "devDone": 23,
-              "qaRegression": 29,
+              "devDone": 17,
+              "qaRegression": 35,
               "backlogTransfer": 0,
               "done": 2,
               "total": 55,
               "rate": 98.2,
-              "previousRate": 40.0
+              "previousRate": 87.3
             },
             {
               "severity": "합계",
               "open": 8,
-              "devDone": 57,
-              "qaRegression": 54,
+              "devDone": 43,
+              "qaRegression": 68,
               "backlogTransfer": 0,
               "done": 3,
               "total": 122,
               "rate": 93.4,
-              "previousRate": 41.8
+              "previousRate": 82.0
             }
           ],
           "typeRows": [
@@ -85015,40 +85503,45 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             {
               "date": "2026-11-11",
               "registered": 66,
-              "fixed": 3
+              "fixed": 0
             },
             {
               "date": "2026-11-12",
               "registered": 67,
-              "fixed": 5
+              "fixed": 0
             },
             {
               "date": "2026-11-13",
               "registered": 80,
-              "fixed": 16
+              "fixed": 11
             },
             {
               "date": "2026-11-14",
               "registered": 80,
-              "fixed": 16
+              "fixed": 11
             },
             {
               "date": "2026-11-15",
               "registered": 80,
-              "fixed": 16
+              "fixed": 11
             },
             {
               "date": "2026-11-16",
               "registered": 105,
-              "fixed": 34
+              "fixed": 29
             },
             {
               "date": "2026-11-17",
               "registered": 122,
-              "fixed": 51
+              "fixed": 45
             },
             {
               "date": "2026-11-18",
+              "registered": 122,
+              "fixed": 100
+            },
+            {
+              "date": "2026-11-19",
               "registered": 122,
               "fixed": 114
             }
@@ -85216,6 +85709,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-18",
+              "registered": 38,
+              "fixed": 29
+            },
+            {
+              "date": "2026-11-19",
               "registered": 38,
               "fixed": 29
             }
@@ -85802,6 +86300,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-18",
+              "registered": 11,
+              "fixed": 11
+            },
+            {
+              "date": "2026-11-19",
               "registered": 11,
               "fixed": 11
             }
@@ -86570,6 +87073,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-18",
               "registered": 7,
               "fixed": 5
+            },
+            {
+              "date": "2026-11-19",
+              "registered": 7,
+              "fixed": 5
             }
           ]
         },
@@ -87257,6 +87765,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-18",
               "registered": 121,
               "fixed": 120
+            },
+            {
+              "date": "2026-11-19",
+              "registered": 121,
+              "fixed": 120
             }
           ]
         },
@@ -87814,6 +88327,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-18",
               "registered": 131,
               "fixed": 130
+            },
+            {
+              "date": "2026-11-19",
+              "registered": 131,
+              "fixed": 130
             }
           ]
         },
@@ -88279,6 +88797,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-18",
+              "registered": 1,
+              "fixed": 1
+            },
+            {
+              "date": "2026-11-19",
               "registered": 1,
               "fixed": 1
             }
@@ -90268,6 +90791,88 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-18",
               "registered": 3,
               "fixed": 3
+            },
+            {
+              "date": "2026-11-19",
+              "registered": 3,
+              "fixed": 3
+            }
+          ]
+        },
+        {
+          "version": "인도네시아 QR결제",
+          "total": 1,
+          "open": 1,
+          "devDone": 0,
+          "qaRegression": 0,
+          "backlogTransfer": 0,
+          "done": 0,
+          "scopeTotal": 1,
+          "doneRate": 0.0,
+          "latestSnapshot": "2026-11-19",
+          "severityRows": [
+            {
+              "severity": "Critical",
+              "open": 0,
+              "devDone": 0,
+              "qaRegression": 0,
+              "backlogTransfer": 0,
+              "done": 0,
+              "total": 0,
+              "rate": 0,
+              "previousRate": 0
+            },
+            {
+              "severity": "Major",
+              "open": 1,
+              "devDone": 0,
+              "qaRegression": 0,
+              "backlogTransfer": 0,
+              "done": 0,
+              "total": 1,
+              "rate": 0.0,
+              "previousRate": 0
+            },
+            {
+              "severity": "Minor",
+              "open": 0,
+              "devDone": 0,
+              "qaRegression": 0,
+              "backlogTransfer": 0,
+              "done": 0,
+              "total": 0,
+              "rate": 0,
+              "previousRate": 0
+            },
+            {
+              "severity": "합계",
+              "open": 1,
+              "devDone": 0,
+              "qaRegression": 0,
+              "backlogTransfer": 0,
+              "done": 0,
+              "total": 1,
+              "rate": 0.0,
+              "previousRate": 0
+            }
+          ],
+          "typeRows": [
+            {
+              "type": "UX/UI",
+              "total": 1,
+              "severity": [
+                {
+                  "label": "Major",
+                  "count": 1
+                }
+              ]
+            }
+          ],
+          "daily": [
+            {
+              "date": "2026-11-19",
+              "registered": 1,
+              "fixed": 0
             }
           ]
         },
@@ -92870,6 +93475,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-18",
               "registered": 8,
               "fixed": 8
+            },
+            {
+              "date": "2026-11-19",
+              "registered": 8,
+              "fixed": 8
             }
           ]
         },
@@ -93877,18 +94487,23 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-18",
               "registered": 13,
               "fixed": 10
+            },
+            {
+              "date": "2026-11-19",
+              "registered": 13,
+              "fixed": 10
             }
           ]
         }
       ],
-      "defaultProjectVersion": "[Hanpass][산타이벤트]",
+      "defaultProjectVersion": "인도네시아 QR결제",
       "selectedVersion": "ALL",
       "distributions": {
         "ALL": {
           "status": [
             {
               "label": "등록",
-              "count": 149
+              "count": 150
             },
             {
               "label": "진행중",
@@ -93896,11 +94511,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "label": "QA확인",
-              "count": 237
+              "count": 251
             },
             {
               "label": "종료",
-              "count": 1355
+              "count": 1341
             }
           ],
           "severity": [
@@ -93914,7 +94529,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "label": "Major",
-              "count": 605
+              "count": 606
             },
             {
               "label": "Minor",
@@ -93936,7 +94551,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "label": "Medium",
-              "count": 1713
+              "count": 1714
             },
             {
               "label": "Low",
@@ -93955,18 +94570,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
       },
       "heatmap": [
         {
-          "date": "2026-10-20",
-          "new": 6,
-          "fixed": 313,
-          "closed": 313,
-          "deltaNew": 6
-        },
-        {
           "date": "2026-10-21",
           "new": 8,
           "fixed": 0,
           "closed": 0,
-          "deltaNew": 2
+          "deltaNew": 8
         },
         {
           "date": "2026-10-22",
@@ -94111,15 +94719,15 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
         {
           "date": "2026-11-11",
           "new": 20,
-          "fixed": 3,
-          "closed": 3,
+          "fixed": 0,
+          "closed": 0,
           "deltaNew": -12
         },
         {
           "date": "2026-11-12",
           "new": 1,
-          "fixed": 17,
-          "closed": 17,
+          "fixed": 15,
+          "closed": 15,
           "deltaNew": -19
         },
         {
@@ -94153,23 +94761,30 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
         {
           "date": "2026-11-17",
           "new": 17,
-          "fixed": 20,
-          "closed": 20,
+          "fixed": 19,
+          "closed": 19,
           "deltaNew": -13
         },
         {
           "date": "2026-11-18",
           "new": 5,
-          "fixed": 68,
-          "closed": 9,
+          "fixed": 60,
+          "closed": 1,
           "deltaNew": -12
+        },
+        {
+          "date": "2026-11-19",
+          "new": 1,
+          "fixed": 15,
+          "closed": 0,
+          "deltaNew": -4
         }
       ],
       "reportBoard": {
         "summary": [
           {
             "label": "최근 30일 제보",
-            "count": 1
+            "count": 0
           },
           {
             "label": "미완료",
@@ -94177,7 +94792,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           },
           {
             "label": "완료",
-            "count": 1
+            "count": 0
           },
           {
             "label": "결함 등록 완료",
@@ -94185,26 +94800,34 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           },
           {
             "label": "결함 아님",
-            "count": 1
+            "count": 0
           }
         ],
-        "recent": [
-          {
-            "domain": "한패스",
-            "title": "Test en",
-            "status": "완료",
-            "processingStatus": "결함 아님",
-            "bugType": "중복",
-            "platform": "AOS",
-            "reporter": "미지정",
-            "createdAt": "2026-10-20T00:27:00.000Z",
-            "createdDate": "2026-10-20",
-            "qaLinked": 0,
-            "url": "https://app.notion.com/p/Test-en-3ff73fbd195181e0b89fe926ae0f5636"
-          }
-        ]
+        "recent": []
       },
       "recent": [
+        {
+          "id": "41d73fbd-1951-805c-9897-e8681c6cfbd6",
+          "title": "[인도네시아QR][공통]이용약관 노출되지 않는 현상",
+          "status": "등록 (Registered)",
+          "stage": "등록",
+          "severity": "Major",
+          "defectType": "UX/UI",
+          "priority": "Medium",
+          "assignee": "미지정",
+          "version": "인도네시아 QR결제",
+          "versionRaw": "인도네시아 QR결제",
+          "domain": "한패스",
+          "os": "미지정",
+          "createdAt": "2026-11-19T03:05:00.000Z",
+          "createdDate": "2026-11-19",
+          "fixedAt": "",
+          "fixedDate": "",
+          "closedAt": "",
+          "closedDate": "",
+          "url": "https://app.notion.com/p/QR-41d73fbd1951805c9897e8681c6cfbd6",
+          "lastEditedAt": "2026-11-19T03:15:00.000Z"
+        },
         {
           "id": "41c73fbd-1951-8009-a9a8-d9923f7760b2",
           "title": "[산타의 선물][공통] 피추천인 기명 전환 완료 후에도 승인 대기 상태 유지 및 양쪽 계정 리워드 미지급 현상",
@@ -94318,8 +94941,8 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
         {
           "id": "41b73fbd-1951-80ac-90fb-e2059199cc07",
           "title": "[승인망 통제 관리][BO] 상단 초기화 후 재검색 시 수동 설정 입력값이 초기화되지 않는 현상",
-          "status": "개발 완료 (Dev Done)",
-          "stage": "종료",
+          "status": "QA 검증 -회귀 (QA Verification)",
+          "stage": "QA확인",
           "severity": "Major",
           "defectType": "기능",
           "priority": "Medium",
@@ -94330,18 +94953,18 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "os": "미지정",
           "createdAt": "2026-11-17T09:32:00.000Z",
           "createdDate": "2026-11-17",
-          "fixedAt": "2026-11-18T01:10:00.000Z",
-          "fixedDate": "2026-11-18",
-          "closedAt": "2026-11-18T01:10:00.000Z",
-          "closedDate": "2026-11-18",
+          "fixedAt": "2026-11-19T02:27:00.000Z",
+          "fixedDate": "2026-11-19",
+          "closedAt": "",
+          "closedDate": "",
           "url": "https://app.notion.com/p/BO-41b73fbd195180ac90fbe2059199cc07",
-          "lastEditedAt": "2026-11-18T01:10:00.000Z"
+          "lastEditedAt": "2026-11-19T02:27:00.000Z"
         },
         {
           "id": "41b73fbd-1951-80ee-bc41-de5a27330012",
           "title": "\n[승인망 통제 관리][BO] 수동 설정 시 사유 200Byte 초과 입력 후 저장되지 않는 현상",
-          "status": "개발 완료 (Dev Done)",
-          "stage": "종료",
+          "status": "QA 검증 -회귀 (QA Verification)",
+          "stage": "QA확인",
           "severity": "Major",
           "defectType": "기능",
           "priority": "Medium",
@@ -94352,18 +94975,18 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "os": "미지정",
           "createdAt": "2026-11-17T09:16:00.000Z",
           "createdDate": "2026-11-17",
-          "fixedAt": "2026-11-18T01:11:00.000Z",
-          "fixedDate": "2026-11-18",
-          "closedAt": "2026-11-18T01:11:00.000Z",
-          "closedDate": "2026-11-18",
+          "fixedAt": "2026-11-19T02:32:00.000Z",
+          "fixedDate": "2026-11-19",
+          "closedAt": "",
+          "closedDate": "",
           "url": "https://app.notion.com/p/BO-200Byte-41b73fbd195180eebc41de5a27330012",
-          "lastEditedAt": "2026-11-18T01:11:00.000Z"
+          "lastEditedAt": "2026-11-19T02:32:00.000Z"
         },
         {
           "id": "41b73fbd-1951-807b-a8fd-ef36eb682704",
           "title": "[승인망 통제 관리][BO] 적용일 시작일·종료일 입력 필드의 Placeholder가 잘려 노출되는 현상",
-          "status": "개발 완료 (Dev Done)",
-          "stage": "종료",
+          "status": "QA 검증 -회귀 (QA Verification)",
+          "stage": "QA확인",
           "severity": "Minor",
           "defectType": "UX/UI",
           "priority": "Medium",
@@ -94374,18 +94997,18 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "os": "미지정",
           "createdAt": "2026-11-17T09:02:00.000Z",
           "createdDate": "2026-11-17",
-          "fixedAt": "2026-11-18T01:11:00.000Z",
-          "fixedDate": "2026-11-18",
-          "closedAt": "2026-11-18T01:11:00.000Z",
-          "closedDate": "2026-11-18",
+          "fixedAt": "2026-11-19T02:34:00.000Z",
+          "fixedDate": "2026-11-19",
+          "closedAt": "",
+          "closedDate": "",
           "url": "https://app.notion.com/p/BO-Placeholder-41b73fbd1951807ba8fdef36eb682704",
-          "lastEditedAt": "2026-11-18T01:11:00.000Z"
+          "lastEditedAt": "2026-11-19T02:34:00.000Z"
         },
         {
           "id": "41b73fbd-1951-80f1-a961-e7cf1ba4d754",
           "title": "[배치관리][BO] 배치정보 등록 시 필수 항목인 작업일시를 미입력해도 정상 저장되는 현상",
-          "status": "개발 완료 (Dev Done)",
-          "stage": "종료",
+          "status": "QA 검증 -회귀 (QA Verification)",
+          "stage": "QA확인",
           "severity": "Major",
           "defectType": "기능",
           "priority": "Medium",
@@ -94396,41 +95019,19 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "os": "미지정",
           "createdAt": "2026-11-17T08:02:00.000Z",
           "createdDate": "2026-11-17",
-          "fixedAt": "2026-11-18T01:10:00.000Z",
-          "fixedDate": "2026-11-18",
-          "closedAt": "2026-11-18T01:10:00.000Z",
-          "closedDate": "2026-11-18",
+          "fixedAt": "2026-11-19T02:46:00.000Z",
+          "fixedDate": "2026-11-19",
+          "closedAt": "",
+          "closedDate": "",
           "url": "https://app.notion.com/p/BO-41b73fbd195180f1a961e7cf1ba4d754",
-          "lastEditedAt": "2026-11-18T01:10:00.000Z"
-        },
-        {
-          "id": "41b73fbd-1951-8031-a8e5-e4832a9b58b3",
-          "title": "[배치관리][BO] 배치정보 등록 팝업의 '취소' 및 '저장' 버튼이 기획서와 달리 중앙 정렬되는 현상",
-          "status": "개발 완료 (Dev Done)",
-          "stage": "종료",
-          "severity": "Minor",
-          "defectType": "UX/UI",
-          "priority": "Medium",
-          "assignee": "미지정",
-          "version": "[Hanpass][카드개편][BO]",
-          "versionRaw": "[Hanpass][카드개편][BO]",
-          "domain": "한패스",
-          "os": "미지정",
-          "createdAt": "2026-11-17T07:58:00.000Z",
-          "createdDate": "2026-11-17",
-          "fixedAt": "2026-11-18T01:10:00.000Z",
-          "fixedDate": "2026-11-18",
-          "closedAt": "2026-11-18T01:10:00.000Z",
-          "closedDate": "2026-11-18",
-          "url": "https://app.notion.com/p/BO-41b73fbd19518031a8e5e4832a9b58b3",
-          "lastEditedAt": "2026-11-18T01:10:00.000Z"
+          "lastEditedAt": "2026-11-19T02:46:00.000Z"
         }
       ],
       "quality": {
         "unresolvedCritical": 17,
-        "unresolvedMajor": 177,
-        "awaitingVerification": 91,
-        "highCount": 194,
+        "unresolvedMajor": 178,
+        "awaitingVerification": 77,
+        "highCount": 195,
         "high": [
           {
             "title": "[SDK변경][Go.Hanpass][iOS] PIN입력 화면 전환 때 상태바 제어 시 앱 크래시 현상 ",
@@ -94640,7 +95241,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "ageDays": 287
           },
           {
-            "title": "[[대출비교] 승인 완료 / 승인 거절 시 앱푸시 미발송 현상",
+            "title": "[대출비교] 승인 완료 / 승인 거절 시 앱푸시 미발송 현상",
             "url": "https://app.notion.com/p/2fe73fbd1951804ba063f0af11a13f54",
             "status": "등록 (Registered)",
             "severity": "Major",
@@ -95156,7 +95757,7 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             "ageDays": 287
           },
           {
-            "title": "[[대출비교] 승인 완료 / 승인 거절 시 앱푸시 미발송 현상",
+            "title": "[대출비교] 승인 완료 / 승인 거절 시 앱푸시 미발송 현상",
             "url": "https://app.notion.com/p/2fe73fbd1951804ba063f0af11a13f54",
             "status": "등록 (Registered)",
             "severity": "Major",
@@ -95401,13 +96002,6 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
       ],
       "daily": [
         {
-          "date": "2026-10-20",
-          "new": 0,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": 0
-        },
-        {
           "date": "2026-10-21",
           "new": 0,
           "fixed": 0,
@@ -95605,6 +96199,13 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
         },
         {
           "date": "2026-11-18",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-11-19",
           "new": 0,
           "fixed": 0,
           "closed": 0,
@@ -97015,6 +97616,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-18",
               "registered": 20,
               "fixed": 1
+            },
+            {
+              "date": "2026-11-19",
+              "registered": 20,
+              "fixed": 1
             }
           ]
         },
@@ -97864,6 +98470,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-18",
+              "registered": 15,
+              "fixed": 15
+            },
+            {
+              "date": "2026-11-19",
               "registered": 15,
               "fixed": 15
             }
@@ -98978,6 +99589,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-18",
               "registered": 55,
               "fixed": 54
+            },
+            {
+              "date": "2026-11-19",
+              "registered": 55,
+              "fixed": 54
             }
           ]
         },
@@ -99713,6 +100329,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-18",
+              "registered": 5,
+              "fixed": 5
+            },
+            {
+              "date": "2026-11-19",
               "registered": 5,
               "fixed": 5
             }
@@ -100836,6 +101457,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-18",
               "registered": 101,
               "fixed": 101
+            },
+            {
+              "date": "2026-11-19",
+              "registered": 101,
+              "fixed": 101
             }
           ]
         },
@@ -101196,6 +101822,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-18",
+              "registered": 37,
+              "fixed": 30
+            },
+            {
+              "date": "2026-11-19",
               "registered": 37,
               "fixed": 30
             }
@@ -101692,6 +102323,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-18",
               "registered": 172,
               "fixed": 166
+            },
+            {
+              "date": "2026-11-19",
+              "registered": 172,
+              "fixed": 166
             }
           ]
         },
@@ -102095,6 +102731,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
             },
             {
               "date": "2026-11-18",
+              "registered": 34,
+              "fixed": 34
+            },
+            {
+              "date": "2026-11-19",
               "registered": 34,
               "fixed": 34
             }
@@ -103158,6 +103799,11 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
               "date": "2026-11-18",
               "registered": 7,
               "fixed": 7
+            },
+            {
+              "date": "2026-11-19",
+              "registered": 7,
+              "fixed": 7
             }
           ]
         }
@@ -103207,13 +103853,6 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
         }
       },
       "heatmap": [
-        {
-          "date": "2026-10-20",
-          "new": 0,
-          "fixed": 0,
-          "closed": 0,
-          "deltaNew": 0
-        },
         {
           "date": "2026-10-21",
           "new": 0,
@@ -103412,6 +104051,13 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
         },
         {
           "date": "2026-11-18",
+          "new": 0,
+          "fixed": 0,
+          "closed": 0,
+          "deltaNew": 0
+        },
+        {
+          "date": "2026-11-19",
           "new": 0,
           "fixed": 0,
           "closed": 0,
@@ -104585,13 +105231,13 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
   },
   "defectSource": {
     "status": "ok",
-    "syncedAt": "2026-11-19T02:28:09+09:00",
-    "attemptedAt": "2026-11-19T02:28:09+09:00"
+    "syncedAt": "2026-11-19T13:24:30+09:00",
+    "attemptedAt": "2026-11-19T13:24:30+09:00"
   },
   "qaTasks": {
     "status": "ok",
-    "syncedAt": "2026-11-19T02:28:15+09:00",
-    "attemptedAt": "2026-11-19T02:28:15+09:00",
+    "syncedAt": "2026-11-19T13:24:37+09:00",
+    "attemptedAt": "2026-11-19T13:24:37+09:00",
     "data": {
       "rows": [
         {
@@ -104925,8 +105571,8 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
           "id": "41b73fbd-1951-8083-af15-d844457d08c1",
           "title": "[광주.전남]산타 이벤트 테스트",
           "url": "https://app.notion.com/p/41b73fbd19518083af15d844457d08c1",
-          "status": "테스트 진행중",
-          "state": "진행중",
+          "status": "태스트 완료",
+          "state": "완료",
           "overdue": false,
           "start": "2026-11-19",
           "end": "2026-11-23",
@@ -105091,8 +105737,8 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
   },
   "qaQuality": {
     "status": "ok",
-    "syncedAt": "2026-11-19T02:28:39+09:00",
-    "attemptedAt": "2026-11-19T02:28:39+09:00",
+    "syncedAt": "2026-11-19T13:25:02+09:00",
+    "attemptedAt": "2026-11-19T13:25:02+09:00",
     "data": {
       "sourceUrl": "https://www.notion.so/1fa73fbd195180a59f39d3ae80362936",
       "documents": [
@@ -105219,28 +105865,28 @@ th, td, .qa-table th, .qa-table td { min-width: 0 !important; padding: 8px 7px; 
   "sources": {
     "defects": {
       "status": "ok",
-      "syncedAt": "2026-11-19T02:28:09+09:00",
-      "attemptedAt": "2026-11-19T02:28:09+09:00"
+      "syncedAt": "2026-11-19T13:24:30+09:00",
+      "attemptedAt": "2026-11-19T13:24:30+09:00"
     },
     "tasks": {
       "status": "ok",
-      "syncedAt": "2026-11-19T02:28:15+09:00",
-      "attemptedAt": "2026-11-19T02:28:15+09:00"
+      "syncedAt": "2026-11-19T13:24:37+09:00",
+      "attemptedAt": "2026-11-19T13:24:37+09:00"
     },
     "quality": {
       "status": "ok",
-      "syncedAt": "2026-11-19T02:28:39+09:00",
-      "attemptedAt": "2026-11-19T02:28:39+09:00"
+      "syncedAt": "2026-11-19T13:25:02+09:00",
+      "attemptedAt": "2026-11-19T13:25:02+09:00"
     },
     "report-한패스": {
       "status": "ok",
-      "syncedAt": "2026-11-19T02:28:09+09:00",
-      "attemptedAt": "2026-11-19T02:28:09+09:00"
+      "syncedAt": "2026-11-19T13:24:31+09:00",
+      "attemptedAt": "2026-11-19T13:24:31+09:00"
     },
     "report-GoHanpass": {
       "status": "ok",
-      "syncedAt": "2026-11-19T02:28:10+09:00",
-      "attemptedAt": "2026-11-19T02:28:10+09:00"
+      "syncedAt": "2026-11-19T13:24:31+09:00",
+      "attemptedAt": "2026-11-19T13:24:31+09:00"
     }
   }
 }</script>

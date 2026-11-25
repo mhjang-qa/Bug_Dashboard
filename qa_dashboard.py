@@ -8,6 +8,8 @@ from __future__ import annotations
 import json
 import os
 import time
+import os
+import tempfile
 from collections import Counter
 from datetime import datetime, date
 from pathlib import Path
@@ -31,34 +33,58 @@ def now():
     return datetime.now(KST).isoformat(timespec='seconds')
 
 
-def atomic_json(path, value):
+def atomic_text(path, text):
+    path = Path(path)
     path.parent.mkdir(parents=True, exist_ok=True)
-    tmp = path.with_suffix('.tmp')
-    tmp.write_text(json.dumps(value, ensure_ascii=False), encoding='utf-8')
-    tmp.replace(path)
+    fd, tmp = tempfile.mkstemp(prefix='.' + path.name, dir=path.parent)
+    try:
+        with os.fdopen(fd, 'w', encoding='utf-8') as stream:
+            stream.write(text)
+            stream.flush()
+            os.fsync(stream.fileno())
+        os.replace(tmp, path)
+    finally:
+        if os.path.exists(tmp):
+            os.unlink(tmp)
 
 
-def sync_source(path, fetch):
-    """A failure retains only this source's previous successful snapshot."""
+def atomic_json(path, value):
+    atomic_text(path, json.dumps(value, ensure_ascii=False, allow_nan=False))
+
+
+def sync_source(path, fetch, identity=None):
+    """Cache each source independently; never overwrite good data on failed reads."""
+    attempted = now()
     try:
         data = fetch()
-        result = {'status': 'ok', 'syncedAt': now(), 'attemptedAt': now(), 'data': data}
-        atomic_json(path, result)
+        if not isinstance(data, (list, dict)):
+            raise ValueError('invalid source result')
+        skipped = getattr(data, 'skipped', 0)
+        if isinstance(data, dict):
+            skipped += data.get('partialFailures', 0)
+        result = {'status': 'partial' if skipped else 'ok', 'syncedAt': now(),
+                  'attemptedAt': attempted, 'data': data, 'identity': identity,
+                  'excludedRows': skipped}
+        if not skipped:
+            atomic_json(path, result)
         return result
     except Exception as exc:
         previous = {}
         try:
             previous = json.loads(path.read_text(encoding='utf-8'))
+            if not isinstance(previous, dict) or previous.get('identity') != identity or previous.get('status') != 'ok':
+                previous = {}
         except (OSError, ValueError):
             pass
         result = {
-            'status': 'stale' if 'data' in previous else 'error',
-            'syncedAt': previous.get('syncedAt'), 'attemptedAt': now(),
+            'status': 'stale' if isinstance(previous.get('data'), (list, dict)) else 'error',
+            'syncedAt': previous.get('syncedAt'), 'attemptedAt': attempted,
             'error': '동기화 실패 · 권한, 연결 및 서버 로그 확인',
-            'data': previous.get('data'),
+            'errorCode': getattr(exc, 'code', type(exc).__name__),
+            'httpStatus': getattr(exc, 'status', None),
+            'data': previous.get('data'), 'identity': identity,
         }
-        # Only the exception class is logged; API responses need not be public.
-        print(f'[qa-dashboard] {path.stem}: {type(exc).__name__}', flush=True)
+        print(f'[qa-dashboard] source={path.stem} status={result["status"]} http={result["httpStatus"]} code={result["errorCode"]}', flush=True)
         return result
 
 
@@ -114,7 +140,7 @@ def normalize_tasks(pages, text, related=None, today=None):
 
 def fetch_tasks(api):
     db = os.getenv('NOTION_QA_TASK_DB_ID', TASK_DB)
-    schema = api.notion_request('/databases/' + db)
+    schema = api.database_schema(db)
     validate_schema(schema, {'이름': 'title', '선택': 'select', '날짜': 'date', 'TC 개발 유/무': 'select', 'TC 개수': 'number', TASK_RELATION: 'relation'})
     pages = api.fetch_database_pages(db, 'qa-tasks')
     parents, parent_errors = {}, []
@@ -202,8 +228,8 @@ def release_risk():
 
 def extend_payload(payload, rows, api):
     cache = api.SCRIPT_DIR / 'data'
-    tasks = sync_source(cache / 'qa_tasks.json', lambda: fetch_tasks(api))
-    quality = sync_source(cache / 'qa_quality.json', lambda: fetch_quality(api))
+    tasks = sync_source(cache / 'qa_tasks.json', lambda: fetch_tasks(api), identity=os.getenv('NOTION_QA_TASK_DB_ID', TASK_DB))
+    quality = sync_source(cache / 'qa_quality.json', lambda: fetch_quality(api), identity=os.getenv('NOTION_QA_QUALITY_PAGE_ID', QUALITY_PAGE))
     if tasks.get('data'):
         today = datetime.now(KST).date().isoformat()
         for task in tasks['data']['rows']:
@@ -217,7 +243,7 @@ def extend_payload(payload, rows, api):
         subset = rows if domain == 'ALL' else [r for r in rows if r['domain'] == domain]
         scope['quality'] = quality_metrics(subset, api)
         scope['summary']['critical'] = sum(r['severity'] == 'Critical' for r in subset)
-        scope['summary']['todayClosed'] = sum(r['closedDate'] == datetime.now().date().isoformat() for r in subset)
+        scope['summary']['todayClosed'] = sum(r['closedDate'] == datetime.now(KST).date().isoformat() for r in subset)
     return payload
 
 

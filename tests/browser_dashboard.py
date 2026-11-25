@@ -186,8 +186,37 @@ with sync_playwright() as playwright:
     assert '데이터를 조회하지 못했습니다' in page.locator('#qaQualityPanel').inner_text()
     fit_check('failed source')
     assert not errors, errors
+    # Failure must never masquerade as zero; stale snapshots retain actual figures.
+    unavailable = json.loads(match[2])
+    unavailable['sources']['defects'] = {'status':'error','syncedAt':None,'attemptedAt':unavailable['generatedAt']}
+    for domain in ('한패스','GoHanpass'):
+        unavailable['sources']['report-'+domain] = {'status':'error','syncedAt':None}
+    unavailable_html = html[:match.start(2)] + json.dumps(unavailable, ensure_ascii=False).replace('<', r'\u003c') + html[match.end(2):]
+    page.route('**/failed-defects.html', lambda route: route.fulfill(status=200, content_type='text/html', body=unavailable_html))
+    page.goto(URL.rsplit('/',1)[0]+'/failed-defects.html')
+    assert all('—' in text for text in page.locator('#domainSwitch button').all_inner_texts())
+    for view, containers in {'overview':['funnel','heatmap','reportSummary','reportList'], 'trend':['dailyChart'], 'version':['versions','distributions'], 'recent':['recentList'], 'project':['projectSummary','projectProgressTable']}.items():
+        page.select_option('#analysisSelect',view)
+        for cid in containers:
+            assert '—' in page.locator('#'+cid).inner_text(), (view,cid)
+            assert '0건' not in page.locator('#'+cid).inner_text(), (view,cid)
+    page.locator('[data-section="tasks"]').click()
+    assert page.locator('#taskUpcomingList .qa-task-card').count() == sum(t['state']=='예정' for t in unavailable['qaTasks']['data']['rows'])
+    page.locator('#syncButton').click()
+    assert page.locator('#syncModal').is_visible()
+    assert page.locator('input[type="password"]').count()==0
+    assert '직접 실행할 수 없습니다' in page.locator('#syncModal').inner_text()
+    page.locator('#syncCancelButton').click()
+
+    stale = json.loads(match[2]); stale['sources']['defects']['status']='stale'
+    stale_html = html[:match.start(2)] + json.dumps(stale, ensure_ascii=False).replace('<', r'\u003c') + html[match.end(2):]
+    page.route('**/stale-defects.html', lambda route: route.fulfill(status=200, content_type='text/html', body=stale_html))
+    page.goto(URL.rsplit('/',1)[0]+'/stale-defects.html')
+    assert page.locator('#summary strong').first.inner_text()==str(stale['domains']['ALL']['summary']['total'])
+    assert '이전 데이터' in page.locator('#sourceStatus').inner_text()
+    assert not errors,errors
     result = {'browser': 'Chromium', 'consoleErrors': errors, 'tabSwitchRequests': switch_requests,
-              'sourceFailureIsolation': 'PASS', 'scrollFreeScreensChecked': len(checked),
+              'sourceFailureIsolation': 'PASS', 'failedMetricsUseDash':'PASS', 'staleCountsPreserved':'PASS', 'syncNoBrowserToken':'PASS', 'scrollFreeScreensChecked': len(checked),
               'paginationCompleteness': 'PASS', 'notionSizedIframe': [1390,860], 'typography': typography, 'viewports': PROFILES, 'result': 'PASS'}
     (OUT / 'browser_results.json').write_text(json.dumps(result, ensure_ascii=False, indent=2))
     print(json.dumps(result, ensure_ascii=False))

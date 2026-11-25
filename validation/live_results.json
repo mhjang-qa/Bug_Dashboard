@@ -1,0 +1,50 @@
+{
+  "verifiedAt": "2026-11-25T11:33:09+09:00",
+  "readOnly": true,
+  "published": false,
+  "legacyAPI": {
+    "version": "2022-06-28",
+    "status": 400,
+    "code": "validation_error",
+    "errorType": "multiple_data_sources_for_database"
+  },
+  "queryAPI": {
+    "version": "2025-09-03",
+    "status": 200,
+    "databaseId": "21473fbd1951800d8321fc2e34c2548e",
+    "dataSourceId": "21473fbd-1951-808b-ad5d-000b0217526f",
+    "pages": 23,
+    "rawRows": 2252,
+    "normalizedRows": 2252,
+    "excludedRows": 0
+  },
+  "domains": {
+    "ALL": 2252,
+    "한패스": 1806,
+    "GoHanpass": 446
+  },
+  "reportSources": {
+    "한패스": {
+      "rawRows": 2,
+      "recent30": 0
+    },
+    "GoHanpass": {
+      "rawRows": 6,
+      "recent30": 0
+    }
+  },
+  "recentDefects30": 226,
+  "taskRows": 24,
+  "qualityDocuments": 12,
+  "unitTests": {
+    "dashboardPassed": 30,
+    "runnerPassed": 3,
+    "liveOptInSkippedByDefault": 1
+  },
+  "liveIntegrationTests": {
+    "passed": 1,
+    "result": "Notion raw rows == normalized rows == dashboard total"
+  },
+  "productionWorkflowAfterFix": "NOT RUN - user approval required",
+  "productionPagesAfterFix": "NOT DEPLOYED - user approval required"
+}

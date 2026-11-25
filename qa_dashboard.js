@@ -18,11 +18,12 @@
   const card = (label,value,note='') => `<article class="card"><span>${esc(label)}</span><strong>${esc(value)}</strong><em>${esc(note)}</em></article>`;
   const sourceNotice = source => {
     if (!source || source.status === 'error') return '<div class="empty">데이터를 조회하지 못했습니다. Notion 접근 권한과 동기화 상태를 확인해 주세요.</div>';
+    if (source.status === 'partial') return '<p class="qa-warning">일부 데이터 처리 실패 · 조회된 데이터만 표시합니다.</p>';
     if (source.status === 'stale') return `<p class="qa-warning">동기화 실패 · 마지막 성공 데이터 표시 (${esc(formatKstDateTime(source.syncedAt))})</p>`;
     return '';
   };
   const labels = {defects:'결함 데이터',tasks:'QA 업무',quality:'QA 품질', 'report-한패스':'Hanpass 제보', 'report-GoHanpass':'Gohanpass 제보'};
-  $('sourceStatus').innerHTML = Object.entries(DATA.sources || {}).filter(([,s]) => s.status !== 'ok').map(([key,s]) => `<span class="source-badge ${esc(s.status)}" title="마지막 성공: ${esc(s.syncedAt ? formatKstDateTime(s.syncedAt) : '없음')} · 최근 시도: ${esc(s.attemptedAt ? formatKstDateTime(s.attemptedAt) : '-')} ">${esc(labels[key] || key)} · ${s.status === 'ok' ? '정상' : s.status === 'stale' ? '갱신 실패 · 이전 데이터' : '조회 실패'}</span>`).join('');
+  $('sourceStatus').innerHTML = Object.entries(DATA.sources || {}).filter(([,s]) => s.status !== 'ok').map(([key,s]) => `<span class="source-badge ${esc(s.status)}" title="마지막 성공: ${esc(s.syncedAt ? formatKstDateTime(s.syncedAt) : '없음')} · 최근 시도: ${esc(s.attemptedAt ? formatKstDateTime(s.attemptedAt) : '-')} ">${esc(labels[key] || key)} · ${s.status === 'ok' ? '정상' : s.status === 'stale' ? '갱신 실패 · 이전 데이터' : s.status === 'partial' ? '일부 조회 실패' : '조회 실패'}</span>`).join('');
 
   $('sourceStatus').hidden = !$('sourceStatus').childElementCount;
 
@@ -274,7 +275,7 @@
   addEventListener('resize',scheduleFit);
   document.addEventListener('click',e=>{if(e.target.closest('[data-domain],[data-version-mode]')){resetPages();scheduleFit();}});
   if (DATA.sources?.defects?.status === 'error') {
-    $('defectControls').insertAdjacentHTML('afterend', '<p class="qa-warning">결함 데이터를 조회하지 못했습니다. 아래 빈 차트의 0건은 실제 결함 건수가 아닙니다.</p>');
+    $('defectControls').insertAdjacentHTML('afterend', '<p class="qa-warning">결함 데이터를 조회하지 못했습니다. 조회할 수 없는 지표는 —로 표시합니다.</p>');
   }
   showSection();
 })();

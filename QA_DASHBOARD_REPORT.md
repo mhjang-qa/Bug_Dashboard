@@ -1,3 +1,105 @@
+# 2026-11-25 결함 조회 장애 수정 결과
+
+실제 Notion 읽기 전용 검증과 로컬 수정·회귀 테스트를 완료했습니다. 원격 Push 및 운영 배포는 수행하지 않았습니다. 기존 프로젝트 원본은 변경하지 않고 두 저장소의 별도 체크아웃에서 수정했습니다.
+
+## 원인과 최초 확인 지점
+
+- 최초 실패 위치는 `fetch_database_pages` → `POST /v1/databases/{database_id}/query`입니다.
+- 기존 `Notion-Version: 2022-06-28`에서 **400 / validation_error / multiple_data_sources_for_database**를 실제 재현했습니다. 응답은 `Databases with multiple data sources are not supported in this API version.`입니다.
+- 결함 DB `21473fbd-1951-800d-8321-fc2e34c2548e`에 `QA_ISSUES`와 `New data source` 두 소스가 있습니다. 올바른 QA_ISSUES 소스는 `21473fbd-1951-808b-ad5d-000b0217526f`입니다. 임의로 새 소스나 티켓을 만들지 않았습니다.
+- `2025-09-03`의 DB 메타데이터 조회 및 data source query는 200입니다. [Notion 공식 마이그레이션 가이드](https://developers.notion.com/guides/get-started/upgrade-guide-2025-09-03)는 기존 API의 다중 소스 DB 조회 실패와 DB → data source ID 검색 절차를 명시합니다.
+- 마지막 확인된 정상 산출물은 `909f022`, 2026-11-24 **16:02:33 KST**, 2,234건입니다. 첫 실패 산출물은 `926341b`, 2026-11-25 **04:38:58 KST**입니다. 데이터 소스가 추가된 정확한 사용자 조작 시각은 확인하지 않았습니다.
+- 정상/실패 구간의 Python·JS·CSS 코드 차이는 없습니다. 외부 Notion DB 구성 변경으로 기존 API의 호환성 제한에 걸린 사례입니다.
+- 기존 `sync_source`는 예외를 상태값으로 바꾸지만 main은 `data or []`를 통계로 만들어 0건 HTML을 덮어쓰고 업로드했습니다. 정상 수집과 HTML 생성 성공을 분리하지 않은 것이 2차 원인입니다.
+- 최근 [운영 Actions](https://github.com/mhjang-qa/run_all_notion/actions/runs/45515784176)는 전체 failure였습니다. 별도 heatmap 단계도 동일한 400으로 실패한 반면, dashboard 단계는 `with 0 rows` HTML을 생성·업로드했습니다. 따라서 전체 workflow가 성공했다는 의미로 분석하지 않았습니다.
+
+## 수정 전후 및 실제 데이터 정합성
+
+| 항목 | 수정 전 최신 배포 스냅샷 | 수정 후 실제 API/로컬 화면 |
+|---|---:|---:|
+| 결함 전체 | 조회 실패인데 0 표시 | 2,252 |
+| Hanpass | 조회 실패인데 0 표시 | 1,806 |
+| Gohanpass | 조회 실패인데 0 표시 | 446 |
+| 결함 페이지네이션 | 첫 요청 400 | 23페이지, 마지막 52건 |
+| 파싱 제외 | 전체 실패 | 0 |
+| 최근 30일 결함 | 조회 불가 | 226 |
+| QA 업무 | 정상 | 24 |
+| 품질 문서 링크 | 정상 | 12 |
+
+원본 Page ID 2,252개가 중복 없이 수집됐고, 정규화 2,252개 및 대시보드 전체 합계가 일치합니다. Hanpass + Gohanpass = 전체이며 기존 목표버전·제목 기반 서비스 분류 규칙은 유지했습니다. 서비스가 모호한 항목을 Hanpass로 분류하는 기존 규칙의 한계도 화면 안내에 유지했습니다.
+
+제보 DB는 별도 소스입니다. 실제 원본은 Hanpass 2건 / Gohanpass 6건이며, KST 최근 30일에 해당하는 제보는 둘 다 0건입니다. 이 0건은 정상 조회 결과입니다. 결함 수와 제보 수를 합치거나 임의의 데이터로 채우지 않았습니다.
+
+실제 API 검증에는 기존 로컬 인증 파일을 읽기만 했습니다. Notion 원본·인증 파일 수정, 메시지 발송, 토큰 출력은 하지 않았습니다. API 원문과 상세 결함은 Git 제외 `data/`에만 보관합니다. 공개 가능한 검증 요약은 `validation/live_results.json`입니다.
+
+## 구현 변경
+
+| 파일 | 변경 |
+|---|---|
+| `notion_api.py` | 읽기 전용 transport, 2025-09-03, 소스 소속 검증, 모호한 소스 선택 차단, 페이지네이션·커서 검증, 제한 재시도·안전 로그 |
+| `generate_defect_dashboard.py` | 명시적 QA_ISSUES 조회, 행별 파싱 격리·제외 집계, KST 날짜·30일 경계, 소스 상태 검사, 원자적 HTML 교체, 실패 종료/배포 차단, 프로세스 잠금, 기본 publish=False |
+| `qa_dashboard.py` | 소스별 성공 캐시, DB 식별자 검증, 마지막 시도/성공 시각, 안전한 임시 파일·교체, 실패 진단 메타데이터 |
+| `qa_dashboard.js` | 부분/실패/이전 데이터 구분 안내, 기존 정상 메뉴 유지 |
+| `qa_dashboard.css` | 수집·시도·생성 시각이 모바일 화면을 넓히지 않도록 줄바꿈 |
+| `defect_dashboard_embed.html` | 실제 수집된 검증 스냅샷으로 재생성 |
+| `tests/test_pipeline.py` | API·수집·집계·보존·잠금·배포 차단 테스트 |
+| `tests/test_live_notion.py` | opt-in 읽기 전용 실제 API 원본/집계 정합성 검사 |
+| `tests/browser_dashboard.py` | 기존 메뉴·모바일·iframe 검사 유지, 실패 지표 —·이전 수치·토큰 없는 동기화 검사 추가 |
+| `README.md`, `validation/*results.json` | 실행·운영 정책·검증 결과 |
+| 상위 `notion_hit/generate_heatmap.py` | 동일 DB 오류를 공통 notion_api 모듈 재사용으로 해결 |
+| 상위 `.github/workflows/run_all_notion.yml` | 직렬 실행, 회귀 테스트 선행, 성공 소스 암호화 캐시 복원/보존 |
+| 상위 `.github/scripts/dashboard_cache.py` | 공개 캐시에 원문을 남기지 않도록 암호화+HMAC 인증, 허용 파일만 복원 |
+| 상위 `tests/test_dashboard_resilience.py`, `.gitignore` | 암호화 변조·상위 실패 전파·히트맵 소스 선택 검사, 캐시 Git 제외 |
+
+수집 소스 하나라도 ok가 아니면 운영 HTML을 교체하지 않고 exit 1로 종료합니다. 정상 DB는 소스별 캐시에 독립적으로 보존하며 실패 미리보기 `data/failed-dashboard.html`에는 해당 DB의 이전 정상 데이터 또는 조회 가능한 목록을 보여줍니다. `data/last-attempt.json`에 안전한 시도 결과를 남깁니다. 부분 데이터가 완전한 최신 데이터로 배포되지 않도록 publish에서도 상태를 다시 검증합니다.
+
+정적 Pages는 실패 실행의 로컬 상태 파일을 읽을 수 없습니다. 실패 이후 운영 화면에는 마지막 성공 HTML과 성공 시각이 유지됩니다. 최신 실패 결과는 Actions에서 확인합니다. 실패 미리보기 및 원문 캐시를 공개 배포하지 않습니다.
+
+## 동기화 동작
+
+PAT를 브라우저에서 받아 GitHub API에 직접 보내던 코드를 제거했습니다. 동기화 버튼은 GitHub workflow 화면으로 안내하고, 사용자가 로그인 후 Run workflow를 선택해 실제 수집을 실행합니다. 페이지에서 GitHub 실행 화면을 여는 것만으로 요청·성공으로 표시하지 않습니다. 이전 세션 토큰도 제거합니다.
+
+새로고침 감시는 생성 시각뿐 아니라 모든 소스의 성공 상태를 확인합니다. 수집 성공·마지막 시도·HTML 생성 시각을 별도로 표시합니다. 기존 외부 실행 서버가 없어 Pages 내 직접 dispatch 및 작업 상태 API는 제공하지 않았습니다. 실제 실행·진행/실패 확인은 GitHub Actions 인증 화면에서 수행합니다.
+
+## 자동 테스트 결과
+
+- 오프라인 단위 테스트 **33개 PASS** (dashboard 30 + runner 3).
+- 기본 테스트에서 실제 API 테스트 1개는 의도적으로 SKIP. 별도 opt-in 실행에서 **실제 API 통합 테스트 1개 PASS** (23.4초).
+- Chromium **9개 해상도 / 297개 레이아웃·페이지 이동 검사 PASS**, Notion 크기 iframe 1390×860 PASS. 콘솔 오류 0, 메뉴 전환 데이터 요청 0.
+- 실패 차트 — 표시, 정상 업무 메뉴 보존, 이전 성공 수치 유지, 토큰 입력 제거 검사 PASS.
+- workflow YAML 구문 검사 PASS. 수정 후 운영 workflow 및 Pages 배포는 승인 전이므로 미실행입니다.
+
+| TC | 결과 및 범위 |
+|---|---|
+| TC_001 | PASS · mock transport + 실제 API 200 |
+| TC_002 | PASS · 401 무재시도, 소스 캐시 보존 단위 테스트 |
+| TC_003 | PASS · 400/403/404 무재시도 및 안전 오류 기록 |
+| TC_004 | PASS · 429/503/네트워크 제한 재시도 mock, 실제 장애 유발 미수행 |
+| TC_005 | PASS · 정상 빈 결과는 ok/0건, 실제 최근 30일 제보 0건 확인 |
+| TC_006 | PASS · 출력 보존·exit 1·publish 미호출, 브라우저 — 표시 |
+| TC_007 | PASS · 한 DB 실패 시 다른 DB 최신 자료 + 실패 DB 이전 성공 자료 유지 |
+| TC_008 | PASS · malformed 속성 fallback/행별 제외·건수 기록 |
+| TC_009 | PASS · cursor 경계 mock + 실제 23페이지 전체 조회 |
+| TC_010 | PASS · 서비스 분류·합계 보존 및 실제 원본 정합성 |
+| TC_011 | PASS · UTC→KST 자정·30일 시작/종료·미래 날짜 경계 |
+| TC_012 | PASS · 정적 환경 안내 및 토큰 제거, 로그인 후 Run workflow는 운영 승인 후 확인 |
+| TC_013 | PASS · 원자적 replace 실패 시 기존 HTML 유지 |
+| TC_014 | PASS · 비정상 소스 publish 차단/상위 실패 전파 mock. 실제 배포 실패 유발은 미수행 |
+| TC_015 | PASS · 전체 메뉴·필터·퍼널·히트맵·제보·추이·버전·프로젝트·업무·품질·Notion 링크 회귀 |
+| TC_016 | PASS · 실제 Notion 2,252 = 정규화 2,252 = 전체 집계 2,252 |
+
+## 배포 상태와 남은 운영 검증
+
+1. **미배포**입니다. 첨부 요청의 “운영 배포 및 원격 Push는 사용자 승인 없이 수행하지 않는다” 조건을 지켰습니다.
+2. 먼저 Bug_Dashboard 소스와 검증된 HTML을 반영하고, 다음 run_all_notion 공통 히트맵 어댑터·workflow·캐시 스크립트를 반영해야 합니다. 상위 workflow는 매번 Bug_Dashboard/main 최신 코드를 가져옵니다.
+3. 승인 후 실제 workflow 1회, 소스 캐시 복원 1회, Pages 배포와 운영 URL 수치를 확인해야 합니다. GitHub Secrets 값은 읽을 수 없으며 실제 실행 결과로 확인합니다.
+4. 캐시 소실·토큰 교체 시 재수집하며, 수집 실패 시에는 기존 성공 배포물을 보존합니다. 데이터 소스가 추가되더라도 명시 ID가 DB에 속하는 한 해당 QA_ISSUES만 조회합니다.
+5. 별도 히트맵 어댑터는 단위 테스트를 통과했고 사용하는 공통 transport는 실제 API에서 검증했습니다. 상위의 전체 HQI/monitor/heatmap 운영 동시 실행은 미실행입니다.
+
+---
+
+아래는 기존 보고서 기록입니다.
+
 # 통합 QA Dashboard 작업 보고
 
 검증 기준: 2026-10-20 KST. 실제 Notion API 응답을 조회한 뒤 구현했으며 원본 Notion 데이터는 변경하지 않았습니다. 로컬 구현 및 검증 완료, 원격 게시·Actions 실행은 수행하지 않았습니다.

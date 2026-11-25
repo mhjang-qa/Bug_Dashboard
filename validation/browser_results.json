@@ -3,7 +3,10 @@
   "consoleErrors": [],
   "tabSwitchRequests": [],
   "sourceFailureIsolation": "PASS",
-  "scrollFreeScreensChecked": 299,
+  "failedMetricsUseDash": "PASS",
+  "staleCountsPreserved": "PASS",
+  "syncNoBrowserToken": "PASS",
+  "scrollFreeScreensChecked": 297,
   "paginationCompleteness": "PASS",
   "notionSizedIframe": [
     1390,

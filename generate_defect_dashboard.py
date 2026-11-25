@@ -2,6 +2,8 @@
 from __future__ import annotations
 
 import argparse
+import fcntl
+from contextlib import contextmanager
 import json
 import os
 import re
@@ -17,6 +19,10 @@ from typing import Any
 from types import SimpleNamespace
 
 import qa_dashboard
+import notion_api
+from zoneinfo import ZoneInfo
+
+KST = ZoneInfo("Asia/Seoul")
 
 
 SCRIPT_DIR = Path(__file__).resolve().parent
@@ -102,51 +108,23 @@ def database_id() -> str:
 
 
 def notion_request(path: str, payload: dict[str, Any] | None = None) -> dict[str, Any]:
-    token = os.getenv("NOTION_TOKEN", "").strip()
-    if not token:
-        raise StepError("NOTION_TOKEN is required.")
+    return notion_api.request(path, payload)
 
-    data = None
-    method = "GET"
-    if payload is not None:
-        data = json.dumps(payload).encode("utf-8")
-        method = "POST"
 
-    request = urllib.request.Request(
-        f"https://api.notion.com/v1{path}",
-        data=data,
-        method=method,
-        headers={
-            "Authorization": f"Bearer {token}",
-            "Notion-Version": os.getenv("NOTION_VERSION", NOTION_VERSION),
-            "Content-Type": "application/json",
-        },
-    )
-
-    try:
-        with urllib.request.urlopen(request, timeout=40) as response:
-            return json.loads(response.read().decode("utf-8"))
-    except urllib.error.HTTPError as exc:
-        body = exc.read().decode("utf-8", errors="replace")
-        raise StepError(f"Notion API error {exc.code}: {body}") from exc
-    except urllib.error.URLError as exc:
-        raise StepError(f"Notion API request failed: {exc.reason}") from exc
+def defect_source_id() -> str:
+    # Verified QA_ISSUES source; never select an arbitrary source from a multi-source DB.
+    default = "21473fbd-1951-808b-ad5d-000b0217526f" if database_id().replace('-', '') == DEFAULT_DEFECT_DB_ID else ""
+    return os.getenv("NOTION_DEFECT_DATA_SOURCE_ID", default)
 
 
 def fetch_database_pages(db_id: str, label: str) -> list[dict[str, Any]]:
-    log(f"query Notion database: {label} ({db_id})")
-    pages: list[dict[str, Any]] = []
-    payload: dict[str, Any] = {"page_size": 100}
-    page_no = 1
-    while True:
-        data = notion_request(f"/databases/{db_id}/query", payload)
-        chunk = data.get("results", [])
-        pages.extend(chunk)
-        log(f"fetched page {page_no}: {len(chunk)} rows, total {len(pages)}")
-        if not data.get("has_more"):
-            return pages
-        payload["start_cursor"] = data.get("next_cursor")
-        page_no += 1
+    explicit = defect_source_id() if db_id == database_id() else ""
+    return notion_api.query(SimpleNamespace(**globals()), db_id, label, explicit)
+
+
+def database_schema(db_id: str):
+    sid = notion_api.source_id(SimpleNamespace(**globals()), db_id)
+    return notion_request('/data_sources/' + sid)
 
 
 def fetch_pages() -> list[dict[str, Any]]:
@@ -154,10 +132,14 @@ def fetch_pages() -> list[dict[str, Any]]:
 
 
 def plain_text(prop: dict[str, Any] | None) -> str:
-    if not prop:
+    if not isinstance(prop, dict) or not prop:
         return ""
     prop_type = prop.get("type")
     value = prop.get(prop_type) if prop_type else None
+    if prop_type in {"title", "rich_text", "multi_select", "people"}:
+        value = [v for v in value if isinstance(v, dict)] if isinstance(value, list) else []
+    elif prop_type in {"select", "status", "unique_id", "date", "formula", "rollup"}:
+        value = value if isinstance(value, dict) else {}
     if prop_type in ("title", "rich_text"):
         return "".join(part.get("plain_text", "") for part in value or [])
     if prop_type in ("select", "status"):
@@ -207,7 +189,7 @@ def first_value(properties: dict[str, Any], key: str) -> str:
     # type == "title"인 프로퍼티를 자동 탐색하여 fallback
     if key == "title":
         for prop in properties.values():
-            if prop.get("type") == "title":
+            if isinstance(prop, dict) and prop.get("type") == "title":
                 value = plain_text(prop)
                 if value:
                     return value
@@ -223,11 +205,11 @@ def parse_dt(value: str | None) -> datetime | None:
             text = text[:-1] + "+00:00"
         parsed = datetime.fromisoformat(text)
         if parsed.tzinfo is None:
-            parsed = parsed.replace(tzinfo=timezone.utc)
-        return parsed.astimezone()
+            parsed = parsed.replace(tzinfo=KST)
+        return parsed.astimezone(KST)
     except ValueError:
         try:
-            return datetime.strptime(text[:10], "%Y-%m-%d").replace(tzinfo=timezone.utc).astimezone()
+            return datetime.strptime(text[:10], "%Y-%m-%d").replace(tzinfo=KST)
         except ValueError:
             return None
 
@@ -478,7 +460,24 @@ def is_recent_date(value: str, days: int) -> bool:
     parsed = parse_dt(value)
     if not parsed:
         return False
-    return parsed.date() >= (datetime.now().date() - timedelta(days=days - 1))
+    return (datetime.now(KST).date() - timedelta(days=days - 1)) <= parsed.date() <= datetime.now(KST).date()
+
+
+class NormalizedRows(list):
+    skipped = 0
+
+
+def normalize_rows(pages, parser):
+    rows = NormalizedRows()
+    reasons = Counter()
+    for page in pages:
+        try:
+            rows.append(parser(page))
+        except (ValueError, TypeError, AttributeError, KeyError, OverflowError) as exc:
+            rows.skipped += 1
+            reasons[type(exc).__name__] += 1
+    log(f'normalization input={len(pages)} success={len(rows)} excluded={rows.skipped} reasons={dict(reasons)}')
+    return rows
 
 
 def normalize_report_page(page: dict[str, Any], domain: str) -> dict[str, Any]:
@@ -506,7 +505,8 @@ def fetch_report_rows() -> dict[str, list[dict[str, Any]]]:
     for domain, db_id in REPORT_DB_IDS.items():
         result = qa_dashboard.sync_source(
             SCRIPT_DIR / "data" / f"reports-{domain}.json",
-            lambda: [normalize_report_page(page, domain) for page in fetch_database_pages(db_id, f"report-{domain}")],
+            lambda: normalize_rows(fetch_database_pages(db_id, f"report-{domain}"), lambda page: normalize_report_page(page, domain)),
+            identity=db_id,
         )
         REPORT_SOURCE_STATUS[domain] = {k: v for k, v in result.items() if k != "data"}
         rows_by_domain[domain] = result.get("data") or []
@@ -534,7 +534,7 @@ def build_report_board(rows: list[dict[str, Any]], days: int = 30) -> dict[str, 
 
 
 def daily_range(days: int) -> list[date]:
-    today = datetime.now().date()
+    today = datetime.now(KST).date()
     return [today - timedelta(days=offset) for offset in range(days - 1, -1, -1)]
 
 
@@ -647,7 +647,7 @@ def build_project_daily(rows: list[dict[str, Any]], days: int) -> list[dict[str,
     created = Counter(row.get("createdDate") for row in rows if row.get("createdDate"))
     fixed = Counter(completion_date(row) for row in rows if completion_date(row))
     created_dates = [datetime.fromisoformat(row["createdDate"]).date() for row in rows if row.get("createdDate")]
-    today = datetime.now().date()
+    today = datetime.now(KST).date()
     if created_dates:
         date_range = [
             min(created_dates) + timedelta(days=offset)
@@ -719,7 +719,7 @@ def project_status_counts(rows: list[dict[str, Any]], cutoff: str | None = None)
 
 
 def build_project_severity_rows(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
-    yesterday = (datetime.now().date() - timedelta(days=1)).isoformat()
+    yesterday = (datetime.now(KST).date() - timedelta(days=1)).isoformat()
     result: list[dict[str, Any]] = []
     for severity in ["Critical", "Major", "Minor"]:
         items = [row for row in rows if row.get("severity") == severity]
@@ -837,8 +837,8 @@ def build_version_groups(versions: list[dict[str, Any]]) -> dict[str, list[str]]
 
 
 def build_scope_payload(rows: list[dict[str, Any]], days: int, report_board: dict[str, Any]) -> dict[str, Any]:
-    today = datetime.now().date().isoformat()
-    yesterday = (datetime.now().date() - timedelta(days=1)).isoformat()
+    today = datetime.now(KST).date().isoformat()
+    yesterday = (datetime.now(KST).date() - timedelta(days=1)).isoformat()
     total = len(rows)
     stage_counts = Counter(row["stage"] for row in rows)
     max_stage_count = max(stage_counts.values(), default=1)
@@ -1425,17 +1425,13 @@ def build_legacy_html(payload: dict[str, Any]) -> str:
     <div class="sync-dialog" role="dialog" aria-modal="true" aria-labelledby="syncDialogTitle">
       <div>
         <h2 id="syncDialogTitle">통합 실행기 동기화</h2>
-        <p>GitHub Actions로 <code>run_all_notion.py</code> 실행을 요청합니다. 토큰은 브라우저 세션에만 저장됩니다.</p>
-      </div>
-      <div class="sync-field">
-        <label for="syncTokenInput">GitHub Personal Access Token</label>
-        <input id="syncTokenInput" type="password" placeholder="workflow dispatch 권한이 있는 토큰">
+        <p>GitHub Actions에서 로그인 후 Run workflow를 선택하면 실제 수집이 시작됩니다. 이 정적 화면에서는 직접 실행할 수 없습니다.</p>
       </div>
       <p>대상 저장소: <a class="sync-link" href="https://github.com/mhjang-qa/run_all_notion" target="_blank" rel="noreferrer">mhjang-qa/run_all_notion</a></p>
       <div class="sync-feedback" id="syncDialogStatus"></div>
       <div class="sync-actions">
         <button class="sync-action-btn" id="syncCancelButton" type="button">취소</button>
-        <button class="sync-action-btn primary" id="syncSubmitButton" type="button">실행 요청</button>
+        <button class="sync-action-btn primary" id="syncSubmitButton" type="button">GitHub에서 동기화 실행</button>
       </div>
     </div>
   </div>
@@ -1496,14 +1492,10 @@ def build_legacy_html(payload: dict[str, Any]) -> str:
       return relative ? `${{formatted}} (${{relative}})` : formatted;
     }};
     const SYNC_CONFIG = {{
-      owner: "mhjang-qa",
-      repo: "run_all_notion",
-      workflow: "run_all_notion.yml",
-      ref: "main",
-      sessionKey: "run_all_notion_dispatch_token",
-      actionsUrl: "https://github.com/mhjang-qa/run_all_notion/actions",
-      repoUrl: "https://github.com/mhjang-qa/run_all_notion",
+      actionsUrl: "https://github.com/mhjang-qa/run_all_notion/actions/workflows/run_all_notion.yml",
     }};
+    // Remove credentials left by the retired browser-based dispatcher.
+    sessionStorage.removeItem("run_all_notion_dispatch_token");
     const domainNames = ["한패스", "GoHanpass"];
     const versionModeLabels = {{
       ALL: "전체",
@@ -1515,7 +1507,7 @@ def build_legacy_html(payload: dict[str, Any]) -> str:
     let selectedVersionMode = "RECENT";
     let selectedProjectVersion = currentScope().defaultProjectVersion || "";
     let excludeCompletedProjectVersions = false;
-    $("stamp").textContent = `생성: ${{formatKstDateTimeWithRelative(DATA.generatedAt)}} · 기준 ${{DATA.days}}일`;
+    $("stamp").textContent = `수집 성공: ${{DATA.sources?.defects?.syncedAt ? formatKstDateTime(DATA.sources.defects.syncedAt) : "없음"}} · 시도: ${{DATA.sources?.defects?.attemptedAt ? formatKstDateTime(DATA.sources.defects.attemptedAt) : "없음"}} · 생성: ${{formatKstDateTime(DATA.generatedAt)}}`;
 
     function setSyncStatus(message, tone = "") {{
       const node = $("syncStatus");
@@ -1527,91 +1519,25 @@ def build_legacy_html(payload: dict[str, Any]) -> str:
     }}
 
     function openSyncModal() {{
-      $("syncTokenInput").value = sessionStorage.getItem(SYNC_CONFIG.sessionKey) || "";
       $("syncModal").hidden = false;
-      window.setTimeout(() => $("syncTokenInput").focus(), 0);
+      setSyncStatus("정적 화면에서는 직접 실행할 수 없습니다. GitHub에서 Run workflow를 선택하세요. 실행 결과는 Actions에서 확인하세요.");
     }}
 
     function closeSyncModal() {{
       $("syncModal").hidden = true;
     }}
 
-    async function requestWorkflowSync(token) {{
-      const workflowUrl = `https://api.github.com/repos/${{SYNC_CONFIG.owner}}/${{SYNC_CONFIG.repo}}/actions/workflows/${{SYNC_CONFIG.workflow}}`;
-      const headers = {{
-        "Accept": "application/vnd.github+json",
-        "Authorization": `Bearer ${{token}}`,
-        "X-GitHub-Api-Version": "2022-11-28",
-        "Content-Type": "application/json",
-      }};
-      const workflowResponse = await fetch(workflowUrl, {{ headers, cache: "no-store" }});
-      if (!workflowResponse.ok) return workflowResponse;
-      const workflow = await workflowResponse.json();
-      if (workflow.state === "disabled_inactivity") {{
-        setSyncStatus("저장소 비활동으로 중지된 동기화를 다시 활성화하는 중입니다.", "loading");
-        const enabled = await fetch(`${{workflowUrl}}/enable`, {{ method: "PUT", headers }});
-        if (!enabled.ok) {{
-          throw new Error(`자동 중지된 워크플로를 활성화하지 못했습니다 (${{enabled.status}}). GitHub Actions에서 활성화하거나 토큰의 Actions 쓰기 권한을 확인해 주세요.`);
-        }}
-      }} else if (workflow.state !== "active") {{
-        throw new Error("동기화 워크플로가 비활성화되어 있습니다. GitHub Actions에서 중지 사유를 확인한 뒤 활성화해 주세요.");
-      }}
-      return fetch(`${{workflowUrl}}/dispatches`, {{
-        method: "POST",
-        headers,
-        body: JSON.stringify({{ ref: SYNC_CONFIG.ref }}),
-      }});
+    function dispatchSync() {{
+      window.open(SYNC_CONFIG.actionsUrl, "_blank", "noopener,noreferrer");
+      setSyncStatus("GitHub 실행 화면을 열었습니다. 아직 동기화가 요청된 것은 아닙니다. Run workflow 실행 후 결과를 확인하세요.");
     }}
 
-    async function dispatchSync() {{
-      const token = $("syncTokenInput").value.trim();
-      if (!token) {{
-        setSyncStatus("GitHub 토큰을 입력해야 동기화를 요청할 수 있습니다.", "error");
-        $("syncTokenInput").focus();
-        return;
+    function unavailable(ids, source = DATA.sources?.defects) {{
+      if (source?.status !== "error") return false;
+      for (const id of ids) {{
+        if ($(id)) $(id).innerHTML = '<div class="empty unavailable"><strong>—</strong> 조회 실패</div>';
       }}
-
-      sessionStorage.setItem(SYNC_CONFIG.sessionKey, token);
-      $("syncSubmitButton").disabled = true;
-      $("syncCancelButton").disabled = true;
-      $("syncButton").disabled = true;
-      $("syncSubmitButton").textContent = "실행 요청 중...";
-      setSyncStatus("동기화 요청을 전송하는 중입니다.", "loading");
-
-      try {{
-        const response = await requestWorkflowSync(token);
-
-        if (response.status === 204) {{
-          closeSyncModal();
-          setSyncStatus(`동기화 요청을 보냈습니다. 완료 후 화면을 자동으로 새로고침합니다. <a class="sync-link" href="${{SYNC_CONFIG.actionsUrl}}" target="_blank" rel="noreferrer">GitHub Actions</a>`, "success");
-          waitForDashboardRefresh(30);
-          return;
-        }}
-
-        let message = `GitHub 요청 실패 (${{response.status}})`;
-        try {{
-          const data = await response.json();
-          if (data.message) {{
-            message = esc(data.message);
-          }}
-        }} catch (_) {{}}
-
-        if (response.status === 404) {{
-          message = `워크플로를 찾지 못했습니다. <a class="sync-link" href="${{SYNC_CONFIG.repoUrl}}" target="_blank" rel="noreferrer">run_all_notion 저장소</a>에 <code>.github/workflows/${{SYNC_CONFIG.workflow}}</code>가 있어야 합니다.`;
-        }}
-        if (response.status === 401 || response.status === 403) {{
-          message = "GitHub 토큰의 유효기간과 대상 저장소의 Actions 읽기/쓰기 권한을 확인해 주세요.";
-        }}
-
-        setSyncStatus(message, "error");
-      }} catch (error) {{
-        setSyncStatus(`동기화 요청 중 오류가 발생했습니다: ${{esc(error.message)}}`, "error");
-      }} finally {{
-        $("syncSubmitButton").disabled = false;
-        $("syncCancelButton").disabled = false;
-        $("syncButton").disabled = false;
-        $("syncSubmitButton").textContent = "실행 요청";
-      }}
+      return true;
     }}
 
     function currentScope() {{
@@ -1628,7 +1554,9 @@ def build_legacy_html(payload: dict[str, Any]) -> str:
       const raw = doc.getElementById("dashboard-data")?.textContent || "";
       if (!raw.trim()) return "";
       try {{
-        return JSON.parse(raw).generatedAt || "";
+        const snapshot = JSON.parse(raw);
+        const sources = Object.values(snapshot.sources || {{}});
+        return sources.length && sources.every(s => s.status === "ok") ? snapshot.generatedAt : "";
       }} catch (_) {{
         return "";
       }}
@@ -1680,8 +1608,8 @@ def build_legacy_html(payload: dict[str, Any]) -> str:
         "GoHanpass": DATA.domains["GoHanpass"].summary.total,
       }};
       const buttons = [
-        `<button class="domain-btn ${{selectedDomain === "ALL" ? "active" : ""}}" data-domain="ALL">전체 <span class="subtle">(${{scopeCounts.ALL || 0}})</span></button>`,
-        ...domainNames.map((name) => `<button class="domain-btn ${{selectedDomain === name ? "active" : ""}}" data-domain="${{name}}">${{name === "한패스" ? "Hanpass" : "Gohanpass"}} <span class="subtle">(${{scopeCounts[name] || 0}})</span></button>`),
+        `<button class="domain-btn ${{selectedDomain === "ALL" ? "active" : ""}}" data-domain="ALL">전체 <span class="subtle">(${{DATA.sources?.defects?.status === "error" ? "—" : scopeCounts.ALL}})</span></button>`,
+        ...domainNames.map((name) => `<button class="domain-btn ${{selectedDomain === name ? "active" : ""}}" data-domain="${{name}}">${{name === "한패스" ? "Hanpass" : "Gohanpass"}} <span class="subtle">(${{DATA.sources?.defects?.status === "error" ? "—" : scopeCounts[name]}})</span></button>`),
       ];
       $("domainSwitch").innerHTML = buttons.join("");
       document.querySelectorAll(".domain-btn").forEach((button) => {{
@@ -1704,6 +1632,7 @@ def build_legacy_html(payload: dict[str, Any]) -> str:
     }}
 
     function renderSummary() {{
+      if (unavailable(["summary"])) return;
       const s = currentScope().summary;
       const cards = [
         ["전체 결함", s.total, "Notion DB 전체 조회 기준"],
@@ -1722,6 +1651,7 @@ def build_legacy_html(payload: dict[str, Any]) -> str:
     }}
 
     function renderFunnel() {{
+      if (unavailable(["funnel"])) return;
       const funnel = currentScope().funnel;
       const max = Math.max(...funnel.map((d) => d.count), 1);
       $("funnel").innerHTML = funnel.map((d) => `
@@ -1734,6 +1664,7 @@ def build_legacy_html(payload: dict[str, Any]) -> str:
     }}
 
     function renderDaily(days = Number(document.querySelector(".range-btn.active")?.dataset.days || DATA.days)) {{
+      if (unavailable(["dailyChart", "trendNote"])) return;
       const rows = currentScope().daily.slice(-days);
       const max = Math.max(...rows.flatMap((d) => [d.new, d.fixed, d.closed]), 1);
       $("dailyChart").innerHTML = rows.map((d) => `
@@ -1752,6 +1683,7 @@ def build_legacy_html(payload: dict[str, Any]) -> str:
     }}
 
     function renderHeatmap() {{
+      if (unavailable(["heatmap"])) return;
       const heatmap = currentScope().heatmap;
       const max = Math.max(...heatmap.map((d) => d.new), 1);
       $("heatmap").innerHTML = heatmap.map((d) => {{
@@ -1762,11 +1694,14 @@ def build_legacy_html(payload: dict[str, Any]) -> str:
 
     function renderReportBoard() {{
       const reportBoard = currentScope().reportBoard;
+      const reportSources = (selectedDomain === "ALL" ? domainNames : [selectedDomain]).map(name => DATA.sources?.["report-" + name]);
+      const failedReports = reportSources.some(s => s?.status === "error");
+      const staleReports = reportSources.some(s => s && s.status !== "ok");
       $("reportBoardScope").textContent = `${{selectedDomain === "ALL" ? "전체" : selectedDomain}} · 최근 30일`;
       $("reportSummary").innerHTML = reportBoard.summary.map((item) => `
         <article class="report-card">
           <span>${{esc(item.label)}}</span>
-          <strong>${{esc(item.count)}}</strong>
+          <strong>${{failedReports ? "—" : esc(item.count)}}</strong>
         </article>
       `).join("");
       $("reportList").innerHTML = reportBoard.recent.length ? reportBoard.recent.map((item) => `
@@ -1778,9 +1713,13 @@ def build_legacy_html(payload: dict[str, Any]) -> str:
           <div class="report-badge">${{esc(formatDisplayDateTime(item.createdDate || item.createdAt))}}</div>
         </a>
       `).join("") : `<div class="empty">최근 30일 제보 내역이 없습니다.</div>`;
+      if (staleReports) $("reportList").insertAdjacentHTML("afterbegin", '<p class="qa-warning">제보 일부 조회 실패 · 조회된 데이터 또는 마지막 성공 데이터를 표시합니다.</p>');
+      if (failedReports && !reportBoard.recent.length) $("reportList").innerHTML = '<div class="empty">— 제보 조회 실패</div>';
+
     }}
 
     function renderVersions() {{
+      if (unavailable(["versions", "versionControls"])) return;
       const scope = currentScope();
       const versionByName = new Map(scope.versions.map((item) => [item.version, item]));
       const groupNames = (scope.versionGroups && scope.versionGroups[selectedVersionMode]) || scope.versions.map((item) => item.version);
@@ -1833,6 +1772,7 @@ def build_legacy_html(payload: dict[str, Any]) -> str:
     }}
 
     function renderDistributions() {{
+      if (unavailable(["distributions"])) return;
       const scope = currentScope();
       const version = selectedVersion === "ALL" ? null : scope.versions.find((item) => item.version === selectedVersion);
       const d = version || scope.distributions.ALL;
@@ -1846,6 +1786,7 @@ def build_legacy_html(payload: dict[str, Any]) -> str:
     }}
 
     function renderRecent() {{
+      if (unavailable(["recentList"])) return;
       const recent = currentScope().recent;
       if (!recent.length) {{
         $("recentList").innerHTML = `<div class="empty">최근 결함 데이터가 없습니다.</div>`;
@@ -1972,6 +1913,7 @@ def build_legacy_html(payload: dict[str, Any]) -> str:
     }}
 
     function renderProjectProgress() {{
+      if (unavailable(["projectSummary", "projectProgressTable", "projectCharts", "projectTypeChart", "projectSnapshotLabel"])) return;
       $("projectTypeChart").innerHTML = "";
       const items = currentScope().projectProgress || [];
       if (!items.length) {{
@@ -2146,7 +2088,7 @@ def run_git(args: list[str], cwd: Path, check: bool = True) -> subprocess.Comple
         check=False,
     )
     if check and result.returncode != 0:
-        raise StepError(f"git {' '.join(args)} failed: {result.stderr.strip() or result.stdout.strip()}")
+        raise StepError(f"git operation={args[0]} exit={result.returncode}")
     return result
 
 
@@ -2161,12 +2103,19 @@ def ensure_publish_repo(repo_url: str, publish_dir: Path, branch: str) -> None:
     branch_check = run_git(["rev-parse", "--verify", branch], cwd=publish_dir, check=False)
     if branch_check.returncode == 0:
         run_git(["checkout", branch], cwd=publish_dir)
-        run_git(["pull", "--ff-only", "origin", branch], cwd=publish_dir, check=False)
+        run_git(["pull", "--ff-only", "origin", branch], cwd=publish_dir)
     else:
         run_git(["checkout", "-B", branch], cwd=publish_dir)
 
 
 def publish_html(output_path: Path) -> bool:
+    raw = re.search(r'<script id="dashboard-data" type="application/json">(.*?)</script>', output_path.read_text(encoding='utf-8'), re.S)
+    if not raw:
+        raise StepError('missing dashboard payload')
+    payload = json.loads(raw[1])
+    validate_payload(payload)
+    if not payload.get('sources') or any(v.get('status') != 'ok' for v in payload['sources'].values()):
+        raise StepError('publish blocked: source collection incomplete')
     repo_url = os.getenv("DEFECT_DASHBOARD_REPO_URL", DEFAULT_REPO_URL).strip()
     if not repo_url:
         log("publish skipped: DEFECT_DASHBOARD_REPO_URL is not set")
@@ -2174,8 +2123,8 @@ def publish_html(output_path: Path) -> bool:
     branch = os.getenv("DEFECT_DASHBOARD_BRANCH", DEFAULT_BRANCH).strip() or DEFAULT_BRANCH
     publish_dir = Path(os.getenv("DEFECT_DASHBOARD_PUBLISH_DIR", str(SCRIPT_DIR / ".publish" / "defect-dashboard")))
     ensure_publish_repo(repo_url, publish_dir, branch)
-    shutil.copy2(output_path, publish_dir / output_path.name)
-    run_git(["add", "-A"], cwd=publish_dir)
+    qa_dashboard.atomic_text(publish_dir / output_path.name, output_path.read_text(encoding="utf-8"))
+    run_git(["add", "--", output_path.name], cwd=publish_dir)
     diff = run_git(["diff", "--cached", "--quiet"], cwd=publish_dir, check=False)
     if diff.returncode == 0:
         log("no GitHub changes to publish")
@@ -2183,8 +2132,37 @@ def publish_html(output_path: Path) -> bool:
     timestamp = datetime.now(timezone.utc).astimezone().strftime("%Y-%m-%d %H:%M:%S")
     run_git(["commit", "-m", f"Update defect dashboard {timestamp}"], cwd=publish_dir)
     run_git(["push", "-u", "origin", branch], cwd=publish_dir)
-    log(f"published to {repo_url}")
+    log("publish completed")
     return True
+
+
+def validate_payload(payload):
+    domains = payload['domains']
+    counts = [domains[k]['summary']['total'] for k in ('ALL', '한패스', 'GoHanpass')]
+    if any(not isinstance(n, int) or n < 0 for n in counts) or counts[0] != counts[1] + counts[2]:
+        raise StepError('aggregate validation failed')
+    # JSON serialization is checked before any output is replaced.
+    json.dumps(payload, allow_nan=False)
+
+
+@contextmanager
+def generation_lock():
+    directory = SCRIPT_DIR / 'data'
+    directory.mkdir(exist_ok=True)
+    with (directory / '.sync.lock').open('a') as stream:
+        try:
+            fcntl.flock(stream, fcntl.LOCK_EX | fcntl.LOCK_NB)
+        except BlockingIOError:
+            raise StepError('sync already running') from None
+        try:
+            yield
+        finally:
+            fcntl.flock(stream, fcntl.LOCK_UN)
+
+
+def main():
+    with generation_lock():
+        return generate()
 
 
 def parse_args() -> argparse.Namespace:
@@ -2194,11 +2172,12 @@ def parse_args() -> argparse.Namespace:
     group = parser.add_mutually_exclusive_group()
     group.add_argument("--publish", dest="publish", action="store_true", help="Commit/push to GitHub Pages repo if configured.")
     group.add_argument("--no-publish", dest="publish", action="store_false", help="Generate locally only.")
-    parser.set_defaults(publish=True)
+    parser.set_defaults(publish=False)
     return parser.parse_args()
 
 
-def main() -> int:
+def generate() -> int:
+    log("collection started " + qa_dashboard.now())
     load_env()
     args = parse_args()
     output_path = Path(args.output)
@@ -2207,15 +2186,27 @@ def main() -> int:
 
     defect_source = qa_dashboard.sync_source(
         SCRIPT_DIR / "data" / "defects.json",
-        lambda: [normalize_page(page) for page in fetch_pages()],
+        lambda: normalize_rows(fetch_pages(), normalize_page),
+        identity=database_id() + ":" + defect_source_id(),
     )
     rows = defect_source.get("data") or []
     payload = build_payload(rows, args.days)
     payload["defectSource"] = {k: v for k, v in defect_source.items() if k != "data"}
     payload = qa_dashboard.extend_payload(payload, rows, SimpleNamespace(**globals()))
     payload["sources"].update({"report-" + k: v for k, v in REPORT_SOURCE_STATUS.items()})
+    payload["generatedAt"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
     html = build_html(payload)
-    output_path.write_text(html, encoding="utf-8")
+    validate_payload(payload)
+    log("validation passed; domains=" + json.dumps(dict(Counter(r["domain"] for r in rows)), ensure_ascii=False) + " recent30=" + str(sum(is_recent_date(r["createdAt"], 30) for r in rows)))
+    failed = [key for key, value in payload['sources'].items() if value['status'] != 'ok']
+    qa_dashboard.atomic_json(SCRIPT_DIR / 'data' / 'last-attempt.json', {
+        'attemptedAt': qa_dashboard.now(), 'generatedAt': payload['generatedAt'],
+        'sources': payload['sources'], 'publishable': not failed})
+    if failed:
+        qa_dashboard.atomic_text(SCRIPT_DIR / 'data' / 'failed-dashboard.html', html)
+        log('collection failed; output preserved; publish blocked; sources=' + ','.join(failed))
+        return 1
+    qa_dashboard.atomic_text(output_path, html)
     log(f"generated {output_path} with {len(rows)} rows")
     published = publish_html(output_path) if args.publish else False
     summary = {
@@ -2226,6 +2217,7 @@ def main() -> int:
         "generatedAt": payload["generatedAt"],
         "summary": payload["domains"]["ALL"]["summary"],
     }
+    log("collection finished " + qa_dashboard.now())
     print(json.dumps(summary, ensure_ascii=False, indent=2))
     return 0
 

@@ -1,7 +1,7 @@
 {
   "verifiedAt": "2026-11-25T11:33:09+09:00",
   "readOnly": true,
-  "published": false,
+  "published": true,
   "legacyAPI": {
     "version": "2022-06-28",
     "status": 400,
@@ -45,6 +45,7 @@
     "passed": 1,
     "result": "Notion raw rows == normalized rows == dashboard total"
   },
-  "productionWorkflowAfterFix": "NOT RUN - user approval required",
-  "productionPagesAfterFix": "NOT DEPLOYED - user approval required"
+  "productionWorkflowAfterFix": "SUCCESS - see deployment_results.json",
+  "productionPagesAfterFix": "DEPLOYED AND VERIFIED - see deployment_results.json",
+  "initialLiveValidationPublished": false
 }

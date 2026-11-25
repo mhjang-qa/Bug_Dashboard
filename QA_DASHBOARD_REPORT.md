@@ -1,3 +1,20 @@
+# 2026-11-25 운영 배포 완료 기록
+
+사용자의 “푸시 배포” 승인 후 두 저장소 main에 수정본을 반영하고 실제 운영 검증을 완료했습니다. 아래 개발 단계의 미배포·승인 대기 기록은 이 기록 이전 시점의 이력입니다.
+
+- Bug_Dashboard 소스 반영 `3a762fa`, 상위 run_all_notion 반영 `84714b4`.
+- [첫 운영 동기화](https://github.com/mhjang-qa/run_all_notion/actions/runs/45543913940) **SUCCESS**.
+- [캐시 복원 후 운영 재실행](https://github.com/mhjang-qa/run_all_notion/actions/runs/45544144550) **SUCCESS**.
+- 실제 runner에서 5개 소스의 암호화 캐시 복원 및 재보존을 확인했습니다. 테스트 fixture의 캐시 로그와 실제 운영 복원 로그를 구분해 확인했습니다.
+- [Pages 배포](https://github.com/mhjang-qa/Bug_Dashboard/actions/runs/45544325515) **SUCCESS**.
+- [운영 대시보드](https://mhjang-qa.github.io/Bug_Dashboard/defect_dashboard_embed.html) HTTP 200, 모든 소스 ok, PAT 입력 제거 확인.
+- 운영 재수집에서 새 결함 1건이 반영되어 전체 **2,253** / Hanpass **1,807** / Gohanpass **446**입니다. 개발 단계 검증의 2,252건 이후 추가된 데이터이며 하드코딩하지 않았습니다.
+- 실제 운영 URL에서 9개 해상도·Notion iframe·메뉴·페이지 이동 **297개 검사 PASS**, 콘솔 오류 0.
+- GitHub 인증·Notion Secrets를 변경하지 않았으며, 새 Bot이나 Notion 원본 데이터 변경은 하지 않았습니다.
+- 배포별 상세 수치·시각·커밋은 `validation/deployment_results.json`에 기록했습니다.
+
+---
+
 # 2026-11-25 결함 조회 장애 수정 결과
 
 실제 Notion 읽기 전용 검증과 로컬 수정·회귀 테스트를 완료했습니다. 원격 Push 및 운영 배포는 수행하지 않았습니다. 기존 프로젝트 원본은 변경하지 않고 두 저장소의 별도 체크아웃에서 수정했습니다.

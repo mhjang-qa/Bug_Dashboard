@@ -1,0 +1,45 @@
+{
+  "verifiedAt": "2026-11-25T04:06:34+00:00",
+  "published": true,
+  "dashboardUrl": "https://mhjang-qa.github.io/Bug_Dashboard/defect_dashboard_embed.html",
+  "dashboardDataCommit": "07d8b22d9ef10727db7888c522846550796d1e4f",
+  "runnerCommit": "84714b444ba4339605b212ee7e84c0293f77a21f",
+  "domains": {
+    "ALL": 2253,
+    "한패스": 1807,
+    "GoHanpass": 446
+  },
+  "generatedAt": "2026-11-25T04:05:01+00:00",
+  "sources": {
+    "defects": "ok",
+    "tasks": "ok",
+    "quality": "ok",
+    "report-한패스": "ok",
+    "report-GoHanpass": "ok"
+  },
+  "productionRuns": [
+    {
+      "url": "https://github.com/mhjang-qa/run_all_notion/actions/runs/45543913940",
+      "result": "success"
+    },
+    {
+      "url": "https://github.com/mhjang-qa/run_all_notion/actions/runs/45544144550",
+      "result": "success"
+    }
+  ],
+  "pagesDeployment": {
+    "url": "https://github.com/mhjang-qa/Bug_Dashboard/actions/runs/45544325515",
+    "result": "success"
+  },
+  "encryptedCache": {
+    "restoredSourceCount": 5,
+    "preservedSourceCount": 5,
+    "result": "success"
+  },
+  "browser": {
+    "url": "https://mhjang-qa.github.io/Bug_Dashboard/defect_dashboard_embed.html",
+    "checks": 297,
+    "result": "PASS",
+    "consoleErrors": 0
+  }
+}
